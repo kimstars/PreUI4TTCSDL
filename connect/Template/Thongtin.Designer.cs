@@ -104,9 +104,9 @@ namespace connect.Template
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(96, 337);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(203, 28);
+            this.label7.Size = new System.Drawing.Size(206, 28);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Từ ngày : 03/03/2021";
+            this.label7.Text = "Từ ngày : 03/03/2022";
             // 
             // label8
             // 
