@@ -89,6 +89,12 @@
     <Compile Include="Template\FrmInfo.Designer.cs">
       <DependentUpon>FrmInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\Thongtin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\Thongtin.Designer.cs">
+      <DependentUpon>Thongtin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <EmbeddedResource Include="Template\FrmInfo.resx">
       <DependentUpon>FrmInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\Thongtin.resx">
+      <DependentUpon>Thongtin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +248,8 @@
       <DependentUpon>modelThuVien.edmx</DependentUpon>
       <LastGenOutput>modelThuVien.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8_info_30px.png" />
+    <None Include="Resources\icons8_settings_24px.png" />
     <None Include="Resources\icons8_book_64px_1.png" />
     <None Include="Resources\icons8_people_100px.png" />
     <None Include="Resources\icons8_password_16px.png" />

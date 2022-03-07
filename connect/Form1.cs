@@ -17,30 +17,7 @@ namespace connect
             InitializeComponent();
         }
 
-        private void hideSubMenu()
-        {
-           
-            if (PaneLoginSub.Visible == true)
-            {
-                PaneLoginSub.Visible = false;
-            }
-            hideChildForm();
-
-        }
-
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
-            }
-
-        }
+        
         private void hideChildForm()
         {
             FrmLogin1.Visible = false;
@@ -50,34 +27,33 @@ namespace connect
         
         private void btnquanlysachkho_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
         }
 
         private void btnQLsachtra_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
         }
 
         private void btnQLsachnhap_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
         }
 
         private void btnQLsachmuon_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            showSubMenu(PaneLoginSub);
+            LoginTick.Start();
 
-      
         }
 
         private void btnLoginDG_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
 
             FrmLogin1.Visible = true;
 
@@ -85,12 +61,12 @@ namespace connect
 
         private void btnloginNV_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
         }
 
         private void btnLoginQL_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -118,7 +94,79 @@ namespace connect
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
+            PaneLogin.Height = PaneLogin.MinimumSize.Height;
 
+        }
+
+
+        bool sidebarExpand;
+        private void sidebartick_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                PanelMenuBar.Width -= 100;
+                if(PanelMenuBar.Width == PanelMenuBar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebartick.Stop();
+                }
+            }
+            else
+            {
+                PanelMenuBar.Width += 100;
+                if(PanelMenuBar.Width == PanelMenuBar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebartick.Stop();
+                }
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            sidebartick.Start();
+        }
+        bool LoginCollapse;
+
+        private void LoginTick_Tick(object sender, EventArgs e)
+        {
+        
+            if (LoginCollapse)
+            {
+                PaneLogin.Height -= 100;
+                if (PaneLogin.Height == PaneLogin.MinimumSize.Height)
+                {
+                    LoginCollapse = false;
+                    LoginTick.Stop();
+                }
+            }
+            else
+            {
+                PaneLogin.Height += 100;
+                if (PaneLogin.Height == PaneLogin.MaximumSize.Height)
+                {
+                    LoginCollapse = true;
+                    LoginTick.Stop();
+                }
+            }
+        }
+
+
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+        }
+
+        private void btnThongtin_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            sidebartick.Start();
         }
     }
 }

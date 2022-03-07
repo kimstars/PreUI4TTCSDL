@@ -140,7 +140,7 @@ namespace connect
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPassword.PlaceholderText = "Password";
+            this.txtPassword.PlaceholderText = "      Password";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(238, 42);
@@ -168,7 +168,7 @@ namespace connect
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtUsername.PlaceholderText = "Username";
+            this.txtUsername.PlaceholderText = "      Username";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.Size = new System.Drawing.Size(237, 42);

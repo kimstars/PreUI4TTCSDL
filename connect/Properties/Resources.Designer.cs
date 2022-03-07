@@ -173,6 +173,16 @@ namespace connect.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_30px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_info_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_library_64__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-library-64 (2)", resourceCulture);
@@ -236,6 +246,16 @@ namespace connect.Properties {
         internal static System.Drawing.Bitmap icons8_search_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_search_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_settings_24px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_settings_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
