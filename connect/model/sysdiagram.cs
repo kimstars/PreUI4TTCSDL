@@ -7,18 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class THONGTINMUONTRA
+    public partial class sysdiagram
     {
-        public string MaMuonTra { get; set; }
-        public string MaSach { get; set; }
-        public Nullable<System.DateTime> NgayTra { get; set; }
-    
-        public virtual CUONSACH CUONSACH { get; set; }
-        public virtual PHIEUMUONTRA PHIEUMUONTRA { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -7,24 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NHAXUATBAN
+    public partial class BIENBANVIPHAM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NHAXUATBAN()
+        public BIENBANVIPHAM()
         {
-            this.DAUSACHes = new HashSet<DAUSACH>();
+            this.CUONSACHes = new HashSet<CUONSACH>();
         }
     
-        public string MaNhaXuatBan { get; set; }
-        public string TenNhaXuatBan { get; set; }
-        public string DiaChi { get; set; }
+        public string MaViPham { get; set; }
+        public string MaDocGia { get; set; }
+        public string MaNhanVien { get; set; }
+        public string LyDo { get; set; }
+        public Nullable<long> TienPhat { get; set; }
+        public string TinhTrangSach { get; set; }
     
+        public virtual DOCGIA DOCGIA { get; set; }
+        public virtual NHANVIEN NHANVIEN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DAUSACH> DAUSACHes { get; set; }
+        public virtual ICollection<CUONSACH> CUONSACHes { get; set; }
     }
 }

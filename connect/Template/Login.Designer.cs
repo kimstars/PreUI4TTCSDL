@@ -51,7 +51,7 @@ namespace connect
             // 
             this.lbMsg.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lbMsg.Appearance.Options.UseForeColor = true;
-            this.lbMsg.Location = new System.Drawing.Point(34, 197);
+            this.lbMsg.Location = new System.Drawing.Point(33, 209);
             this.lbMsg.Name = "lbMsg";
             this.lbMsg.Size = new System.Drawing.Size(0, 16);
             this.lbMsg.TabIndex = 7;
@@ -73,7 +73,7 @@ namespace connect
             this.btnToggle.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.Parent = this.btnToggle;
-            this.btnToggle.Location = new System.Drawing.Point(34, 228);
+            this.btnToggle.Location = new System.Drawing.Point(34, 241);
             this.btnToggle.Name = "btnToggle";
             this.btnToggle.ShadowDecoration.Parent = this.btnToggle;
             this.btnToggle.Size = new System.Drawing.Size(35, 20);
@@ -177,7 +177,7 @@ namespace connect
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 231);
+            this.label2.Location = new System.Drawing.Point(75, 244);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(236, 17);
             this.label2.TabIndex = 20;

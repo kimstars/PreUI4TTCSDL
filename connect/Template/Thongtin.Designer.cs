@@ -132,11 +132,11 @@ namespace connect.Template
             this.pictureBox1.Image = global::connect.Properties.Resources.icons8_library_64__2_;
             this.pictureBox1.Location = new System.Drawing.Point(229, 86);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(102, 77);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // frmThongtin
+            // Thongtin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,7 +150,7 @@ namespace connect.Template
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmThongtin";
+            this.Name = "Thongtin";
             this.Size = new System.Drawing.Size(521, 542);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

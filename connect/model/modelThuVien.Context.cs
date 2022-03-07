@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Data.Entity;

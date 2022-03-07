@@ -21,6 +21,7 @@ namespace connect
         private void hideChildForm()
         {
             FrmLogin1.Visible = false;
+            frmThongtin.Visible = false;
         }
 
 
@@ -53,7 +54,7 @@ namespace connect
 
         private void btnLoginDG_Click(object sender, EventArgs e)
         {
-            
+            hideChildForm();
 
             FrmLogin1.Visible = true;
 
@@ -162,6 +163,7 @@ namespace connect
         private void btnThongtin_Click(object sender, EventArgs e)
         {
             hideChildForm();
+            frmThongtin.Visible = true;
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class THONGTINNHAPSACH
+    public partial class THONGTINMUONTRA
     {
-        public string MaPhieuNhap { get; set; }
-        public string MaDauSach { get; set; }
-        public int SoLuongSach { get; set; }
+        public string MaMuonTra { get; set; }
+        public string MaSach { get; set; }
+        public Nullable<System.DateTime> NgayTra { get; set; }
     
-        public virtual DAUSACH DAUSACH { get; set; }
-        public virtual PHIEUNHAP PHIEUNHAP { get; set; }
+        public virtual CUONSACH CUONSACH { get; set; }
+        public virtual PHIEUMUONTRA PHIEUMUONTRA { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace connect
 {
     public partial class Login : DevExpress.XtraEditors.XtraUserControl
     {
-        private model1.THUVIEN123Entities2 db = daoo.dbService.db;
+        private model.THUVIEN123Entities2 db = daoo.dbService.db;
         public Login()
         {
             InitializeComponent();
@@ -90,7 +90,7 @@ namespace connect
                     return;
                 }
 
-                model1.DOCGIA nv = db.DOCGIAs.Where(p => p.MaDocGia == user).FirstOrDefault();
+                model.DOCGIA nv = db.DOCGIAs.Where(p => p.MaDocGia == user).FirstOrDefault();
 
                 if (nv.MatKhau != pass)
                 {

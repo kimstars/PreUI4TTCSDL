@@ -48,10 +48,11 @@ namespace connect
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.FrmLogin1 = new connect.Login();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.LoginTick = new System.Windows.Forms.Timer(this.components);
+            this.FrmLogin1 = new connect.Login();
+            this.frmThongtin = new connect.Template.Thongtin();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -327,13 +328,6 @@ namespace connect
             this.guna2ControlBox4.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox4.TabIndex = 9;
             // 
-            // FrmLogin1
-            // 
-            this.FrmLogin1.Location = new System.Drawing.Point(518, 50);
-            this.FrmLogin1.Name = "FrmLogin1";
-            this.FrmLogin1.Size = new System.Drawing.Size(518, 532);
-            this.FrmLogin1.TabIndex = 7;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -355,11 +349,27 @@ namespace connect
             // 
             this.LoginTick.Tick += new System.EventHandler(this.LoginTick_Tick);
             // 
+            // FrmLogin1
+            // 
+            this.FrmLogin1.Location = new System.Drawing.Point(518, 50);
+            this.FrmLogin1.Name = "FrmLogin1";
+            this.FrmLogin1.Size = new System.Drawing.Size(518, 532);
+            this.FrmLogin1.TabIndex = 7;
+            // 
+            // frmThongtin
+            // 
+            this.frmThongtin.Location = new System.Drawing.Point(409, 31);
+            this.frmThongtin.Name = "frmThongtin";
+            this.frmThongtin.Size = new System.Drawing.Size(521, 542);
+            this.frmThongtin.TabIndex = 11;
+            this.frmThongtin.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 658);
+            this.Controls.Add(this.frmThongtin);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.FrmLogin1);
@@ -402,5 +412,6 @@ namespace connect
         private System.Windows.Forms.Panel PaneLogin;
         private System.Windows.Forms.Timer sidebartick;
         private System.Windows.Forms.Timer LoginTick;
+        private Template.Thongtin frmThongtin;
     }
 }

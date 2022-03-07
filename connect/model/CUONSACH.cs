@@ -7,34 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DOCGIA
+    public partial class CUONSACH
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DOCGIA()
+        public CUONSACH()
         {
+            this.THONGTINMUONTRAs = new HashSet<THONGTINMUONTRA>();
             this.BIENBANVIPHAMs = new HashSet<BIENBANVIPHAM>();
-            this.PHIEUMUONTRAs = new HashSet<PHIEUMUONTRA>();
         }
     
-        public string MaDocGia { get; set; }
-        public string TenDocGia { get; set; }
-        public string DiaChi { get; set; }
-        public System.DateTime NgaySinh { get; set; }
-        public bool GioiTinh { get; set; }
-        public string SDT { get; set; }
-        public string CMND { get; set; }
-        public System.DateTime NgayDangKi { get; set; }
-        public string TenDangNhap { get; set; }
-        public string MatKhau { get; set; }
+        public string MaSach { get; set; }
+        public string MaDauSach { get; set; }
+        public string ViTriSach { get; set; }
+        public string TinhTrangMoiCu { get; set; }
+        public bool TrangThai { get; set; }
     
+        public virtual DAUSACH DAUSACH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINMUONTRA> THONGTINMUONTRAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BIENBANVIPHAM> BIENBANVIPHAMs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUMUONTRA> PHIEUMUONTRAs { get; set; }
     }
 }

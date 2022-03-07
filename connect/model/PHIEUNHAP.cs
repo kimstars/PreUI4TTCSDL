@@ -7,23 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TACGIA
+    public partial class PHIEUNHAP
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TACGIA()
+        public PHIEUNHAP()
         {
-            this.DAUSACHes = new HashSet<DAUSACH>();
+            this.THONGTINNHAPSACHes = new HashSet<THONGTINNHAPSACH>();
         }
     
-        public string MaTacGia { get; set; }
-        public string TenTacGia { get; set; }
+        public string MaPhieuNhap { get; set; }
+        public string MaNhanVien { get; set; }
+        public System.DateTime NgayNhap { get; set; }
     
+        public virtual NHANVIEN NHANVIEN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DAUSACH> DAUSACHes { get; set; }
+        public virtual ICollection<THONGTINNHAPSACH> THONGTINNHAPSACHes { get; set; }
     }
 }

@@ -7,30 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace connect.model1
+namespace connect.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NHANVIEN
+    public partial class DOCGIA
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NHANVIEN()
+        public DOCGIA()
         {
             this.BIENBANVIPHAMs = new HashSet<BIENBANVIPHAM>();
             this.PHIEUMUONTRAs = new HashSet<PHIEUMUONTRA>();
-            this.PHIEUNHAPs = new HashSet<PHIEUNHAP>();
         }
     
-        public string MaNhanVien { get; set; }
-        public string TenNhanVien { get; set; }
-        public string ChucVu { get; set; }
+        public string MaDocGia { get; set; }
+        public string TenDocGia { get; set; }
+        public string DiaChi { get; set; }
         public System.DateTime NgaySinh { get; set; }
         public bool GioiTinh { get; set; }
-        public string DiaChi { get; set; }
-        public string Email { get; set; }
         public string SDT { get; set; }
         public string CMND { get; set; }
+        public System.DateTime NgayDangKi { get; set; }
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
     
@@ -38,7 +36,5 @@ namespace connect.model1
         public virtual ICollection<BIENBANVIPHAM> BIENBANVIPHAMs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUMUONTRA> PHIEUMUONTRAs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUNHAP> PHIEUNHAPs { get; set; }
     }
 }

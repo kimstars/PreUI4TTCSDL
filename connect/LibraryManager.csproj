@@ -101,55 +101,55 @@
     <Compile Include="Template\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="model1\BIENBANVIPHAM.cs">
+    <Compile Include="model\BIENBANVIPHAM.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\CUONSACH.cs">
+    <Compile Include="model\CUONSACH.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\DAUSACH.cs">
+    <Compile Include="model\DAUSACH.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\DOCGIA.cs">
+    <Compile Include="model\DOCGIA.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\modelThuVien.Context.cs">
+    <Compile Include="model\modelThuVien.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>modelThuVien.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\modelThuVien.cs">
+    <Compile Include="model\modelThuVien.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\modelThuVien.Designer.cs">
+    <Compile Include="model\modelThuVien.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>modelThuVien.edmx</DependentUpon>
     </Compile>
-    <Compile Include="model1\NHANVIEN.cs">
+    <Compile Include="model\NHANVIEN.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\NHAXUATBAN.cs">
+    <Compile Include="model\NHAXUATBAN.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\PHIEUMUONTRA.cs">
+    <Compile Include="model\PHIEUMUONTRA.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\PHIEUNHAP.cs">
+    <Compile Include="model\PHIEUNHAP.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\sysdiagram.cs">
+    <Compile Include="model\sysdiagram.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\TACGIA.cs">
+    <Compile Include="model\TACGIA.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\THONGTINMUONTRA.cs">
+    <Compile Include="model\THONGTINMUONTRA.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="model1\THONGTINNHAPSACH.cs">
+    <Compile Include="model\THONGTINNHAPSACH.cs">
       <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -198,11 +198,11 @@
     <EmbeddedResource Include="Template\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="model1\modelThuVien.edmx">
+    <EntityDeploy Include="model\modelThuVien.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>modelThuVien.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="model1\modelThuVien.edmx.diagram">
+    <None Include="model\modelThuVien.edmx.diagram">
       <DependentUpon>modelThuVien.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -238,12 +238,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="model1\modelThuVien.Context.tt">
+    <Content Include="model\modelThuVien.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>modelThuVien.edmx</DependentUpon>
       <LastGenOutput>modelThuVien.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="model1\modelThuVien.tt">
+    <Content Include="model\modelThuVien.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>modelThuVien.edmx</DependentUpon>
       <LastGenOutput>modelThuVien.cs</LastGenOutput>

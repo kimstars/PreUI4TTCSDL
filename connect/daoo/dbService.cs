@@ -11,7 +11,7 @@ namespace connect.daoo
 {
     class dbService
     {
-        public static model1.THUVIEN123Entities2 db = new model1.THUVIEN123Entities2();
+        public static model.THUVIEN123Entities2 db = new model.THUVIEN123Entities2();
 
         public static void Reload()
         {
