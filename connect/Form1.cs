@@ -48,7 +48,11 @@ namespace connect
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginTick.Start();
+            if (sidebarExpand)
+            {
+                LoginTick.Start();
+
+            }
 
         }
 
@@ -72,15 +76,15 @@ namespace connect
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (PanelMenuBar.Visible == false)
-            {
-                PanelMenuBar.Visible = true;
+            //if (PanelMenuBar.Visible == false)
+            //{
+            //    PanelMenuBar.Visible = true;
 
-            }
-            else
-            {
-                PanelMenuBar.Visible = false;
-            }
+            //}
+            //else
+            //{
+            //    PanelMenuBar.Visible = false;
+            //}
         }
 
         private void separatorControl1_Click(object sender, EventArgs e)

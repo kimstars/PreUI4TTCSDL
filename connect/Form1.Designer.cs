@@ -51,14 +51,17 @@ namespace connect
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.LoginTick = new System.Windows.Forms.Timer(this.components);
-            this.FrmLogin1 = new connect.Login();
             this.frmThongtin = new connect.Template.Thongtin();
+            this.FrmLogin1 = new connect.Login();
+            this.Paneltoolbar = new System.Windows.Forms.Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Paneltoolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -309,7 +312,7 @@ namespace connect
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1031, 14);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(778, 16);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
@@ -322,7 +325,7 @@ namespace connect
             this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox4.HoverState.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox4.Location = new System.Drawing.Point(1091, 14);
+            this.guna2ControlBox4.Location = new System.Drawing.Point(838, 16);
             this.guna2ControlBox4.Name = "guna2ControlBox4";
             this.guna2ControlBox4.ShadowDecoration.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.Size = new System.Drawing.Size(45, 30);
@@ -349,29 +352,43 @@ namespace connect
             // 
             this.LoginTick.Tick += new System.EventHandler(this.LoginTick_Tick);
             // 
-            // FrmLogin1
-            // 
-            this.FrmLogin1.Location = new System.Drawing.Point(518, 50);
-            this.FrmLogin1.Name = "FrmLogin1";
-            this.FrmLogin1.Size = new System.Drawing.Size(518, 532);
-            this.FrmLogin1.TabIndex = 7;
-            // 
             // frmThongtin
             // 
-            this.frmThongtin.Location = new System.Drawing.Point(409, 31);
+            this.frmThongtin.Location = new System.Drawing.Point(420, 78);
             this.frmThongtin.Name = "frmThongtin";
             this.frmThongtin.Size = new System.Drawing.Size(521, 542);
             this.frmThongtin.TabIndex = 11;
             this.frmThongtin.Visible = false;
+            // 
+            // FrmLogin1
+            // 
+            this.FrmLogin1.Location = new System.Drawing.Point(447, 78);
+            this.FrmLogin1.Name = "FrmLogin1";
+            this.FrmLogin1.Size = new System.Drawing.Size(518, 532);
+            this.FrmLogin1.TabIndex = 7;
+            // 
+            // Paneltoolbar
+            // 
+            this.Paneltoolbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Paneltoolbar.Controls.Add(this.guna2ControlBox3);
+            this.Paneltoolbar.Controls.Add(this.guna2ControlBox4);
+            this.Paneltoolbar.Location = new System.Drawing.Point(253, 0);
+            this.Paneltoolbar.Name = "Paneltoolbar";
+            this.Paneltoolbar.Size = new System.Drawing.Size(894, 78);
+            this.Paneltoolbar.TabIndex = 12;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.Paneltoolbar;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 658);
+            this.Controls.Add(this.Paneltoolbar);
             this.Controls.Add(this.frmThongtin);
-            this.Controls.Add(this.guna2ControlBox3);
-            this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.FrmLogin1);
             this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -385,6 +402,7 @@ namespace connect
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Paneltoolbar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -413,5 +431,7 @@ namespace connect
         private System.Windows.Forms.Timer sidebartick;
         private System.Windows.Forms.Timer LoginTick;
         private Template.Thongtin frmThongtin;
+        private System.Windows.Forms.Panel Paneltoolbar;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
