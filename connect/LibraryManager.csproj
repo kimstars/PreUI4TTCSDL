@@ -40,7 +40,11 @@
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -70,12 +74,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="daoo\dbService.cs" />
-    <Compile Include="DBservice.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanvien.Designer.cs">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\DateTimePickerKiet.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Template\FrmHome.cs">
       <SubType>UserControl</SubType>
@@ -83,11 +95,17 @@
     <Compile Include="Template\FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\FrmInfo.cs">
+    <Compile Include="Template\InfoDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Template\FrmInfo.Designer.cs">
-      <DependentUpon>FrmInfo.cs</DependentUpon>
+    <Compile Include="Template\InfoDG.Designer.cs">
+      <DependentUpon>InfoDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\InfoNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\InfoNV.Designer.cs">
+      <DependentUpon>InfoNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\Thongtin.cs">
       <SubType>UserControl</SubType>
@@ -166,17 +184,24 @@
     <Compile Include="FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDocGia.resx">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanvien.resx">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\FrmInfo.resx">
-      <DependentUpon>FrmInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Template\InfoDG.resx">
+      <DependentUpon>InfoDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\InfoNV.resx">
+      <DependentUpon>InfoNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\Thongtin.resx">
       <DependentUpon>Thongtin.cs</DependentUpon>
@@ -248,6 +273,12 @@
       <DependentUpon>modelThuVien.edmx</DependentUpon>
       <LastGenOutput>modelThuVien.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\calendarWhite.png" />
+    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\icons8_ab_testing_48px.png" />
+    <None Include="Resources\icons8_potion_100px.png" />
+    <None Include="Resources\icons8_tick_box_48px.png" />
+    <None Include="Resources\icons8_man_with_moleskine_50px.png" />
     <None Include="Resources\icons8_info_30px.png" />
     <None Include="Resources\icons8_settings_24px.png" />
     <None Include="Resources\icons8_book_64px_1.png" />

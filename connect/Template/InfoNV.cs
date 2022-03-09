@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace connect.Template
 {
-    public partial class FrmInfo : UserControl
+    public partial class InfoNV : UserControl
     {
-        public FrmInfo()
+        public InfoNV()
         {
             InitializeComponent();
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

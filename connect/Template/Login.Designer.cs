@@ -90,6 +90,7 @@ namespace connect
             this.btnSubmit.BorderRadius = 21;
             this.btnSubmit.CheckedState.Parent = this.btnSubmit;
             this.btnSubmit.CustomImages.Parent = this.btnSubmit;
+            this.btnSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
@@ -104,10 +105,12 @@ namespace connect
             // guna2Button3
             // 
             this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
             this.guna2Button3.BorderRadius = 21;
+            this.guna2Button3.BorderThickness = 2;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
@@ -145,6 +148,7 @@ namespace connect
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(238, 42);
             this.txtPassword.TabIndex = 12;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 

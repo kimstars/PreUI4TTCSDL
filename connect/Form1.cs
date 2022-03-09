@@ -22,6 +22,7 @@ namespace connect
         {
             FrmLogin1.Visible = false;
             frmThongtin.Visible = false;
+            frminfoDG.Visible = false;
         }
 
 
@@ -173,6 +174,11 @@ namespace connect
         private void label2_Click(object sender, EventArgs e)
         {
             sidebartick.Start();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            frminfoDG.Visible = true;
         }
     }
 }
