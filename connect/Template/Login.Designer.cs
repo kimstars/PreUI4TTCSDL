@@ -62,7 +62,7 @@ namespace connect
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(69, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 34);
+            this.label1.Size = new System.Drawing.Size(138, 28);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đăng nhập";
             // 
@@ -183,7 +183,7 @@ namespace connect
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(75, 244);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 17);
+            this.label2.Size = new System.Drawing.Size(213, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Đồng ý chấp hành Nội quy thư viện?";
             // 
@@ -192,7 +192,7 @@ namespace connect
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(75, 341);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 17);
+            this.label3.Size = new System.Drawing.Size(128, 16);
             this.label3.TabIndex = 21;
             this.label3.Text = "Bạn quên mật khẩu ?";
             // 

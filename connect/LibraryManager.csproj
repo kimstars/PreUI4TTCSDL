@@ -107,6 +107,12 @@
     <Compile Include="Template\InfoNV.Designer.cs">
       <DependentUpon>InfoNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\QLInfoDocgia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\QLInfoDocgia.Designer.cs">
+      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Thongtin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="Template\InfoNV.resx">
       <DependentUpon>InfoNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\QLInfoDocgia.resx">
+      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\Thongtin.resx">
       <DependentUpon>Thongtin.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +282,15 @@
       <DependentUpon>modelThuVien.edmx</DependentUpon>
       <LastGenOutput>modelThuVien.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8_edit_property_26px.png" />
+    <None Include="Resources\icons8_Delete_30px.png" />
+    <None Include="Resources\icons8_add_30px.png" />
+    <None Include="Resources\icons8_back_to_24px.png" />
+    <None Include="Resources\icons8_menu_rounded_24px_2.png" />
+    <None Include="Resources\icons8_menu_rounded_24px_1.png" />
+    <None Include="Resources\icons8_menu_rounded_24px.png" />
+    <None Include="Resources\icons8_book_reading_30px.png" />
+    <None Include="Resources\icons8_cancel_48px.png" />
     <None Include="Resources\calendarWhite.png" />
     <None Include="Resources\calendarDark.png" />
     <None Include="Resources\icons8_ab_testing_48px.png" />

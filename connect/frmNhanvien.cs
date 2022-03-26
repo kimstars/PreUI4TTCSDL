@@ -74,5 +74,93 @@ namespace connect
         {
 
         }
+        bool QuanLyExpand;
+
+        private void btnQLSach_Click(object sender, EventArgs e)
+        {
+            if (QuanLyExpand)
+            {
+                QuanLyTickTime.Start();
+
+            }
+        }
+
+        private void QuanLyTickTime_Tick(object sender, EventArgs e)
+        {
+            opencloseBarDoc(PanelQLsach, QuanLyExpand, QuanLyTickTime);
+        }
+        bool sidebarExpand;
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sidebarTickTime.Start();
+
+            }
+        }
+
+        private void opencloseBarDoc(Panel thisPanel,bool thisExpand,Timer thisTick)
+        {
+            if (thisExpand)
+            {
+                thisPanel.Height -= 100;
+                if (thisPanel.Height == thisPanel.MinimumSize.Height)
+                {
+                    thisExpand = false;
+                    thisTick.Stop();
+                }
+            }
+            else
+            {
+                thisPanel.Height += 100;
+                if (thisPanel.Height == thisPanel.MaximumSize.Height)
+                {
+                    thisExpand = true;
+                    thisTick.Stop();
+                }
+            }
+        }
+        private void opencloseBarNgang(Panel thisPanel, bool thisExpand, Timer thisTick)
+        {
+            if (thisExpand)
+            {
+                thisPanel.Height -= 100;
+                if (thisPanel.Height == thisPanel.MinimumSize.Height)
+                {
+                    thisExpand = false;
+                    thisTick.Stop();
+                }
+            }
+            else
+            {
+                thisPanel.Height += 100;
+                if (thisPanel.Height == thisPanel.MaximumSize.Height)
+                {
+                    thisExpand = true;
+                    thisTick.Stop();
+                }
+            }
+        }
+
+        private void sidebarTickTime_Tick(object sender, EventArgs e)
+        {
+            opencloseBarNgang(PanelMenuBar, sidebarExpand, sidebarTickTime);
+        }
+
+        bool infoExpand;
+        private void avtPicture_Click(object sender, EventArgs e)
+        {
+            if (infoExpand)
+            {
+                infoUserTick.Start();
+
+            }
+        }
+
+        private void infoUserTick_Tick(object sender, EventArgs e)
+        {
+            opencloseBarDoc(panelInfoUser, infoExpand, infoUserTick);
+        }
     }
 }
