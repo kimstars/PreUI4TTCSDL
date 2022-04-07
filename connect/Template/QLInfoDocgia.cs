@@ -134,7 +134,7 @@ namespace connect.Template
             string MaDocGia = GenerateMa("DG");
             string HoTen = txtHoten.Text;
             string NgaySinh = birthdayPicker.Text;
-            string gender = radioGender.Text;
+            string gender = selectGender.Text;
             string DiaChi = txtDiachi.Text;
             string sdt = txtSDT.Text;
             string soCMND = txtCMND.Text;
@@ -159,7 +159,7 @@ namespace connect.Template
                 txtMaDG.Text = "";
                 txtHoten.Text = "";
                 birthdayPicker.Text = "";
-                radioGender.Text = "";
+                selectGender.Text = "";
                 txtDiachi.Text = "";
                 txtSDT.Text = "";
                 txtCMND.Text = "";
@@ -217,7 +217,7 @@ namespace connect.Template
                 txtMaDG.Text = item.SubItems[0].Text;
                 txtHoten.Text = item.SubItems[1].Text;
                 birthdayPicker.Text = item.SubItems[2].Text;
-                radioGender.Text = item.SubItems[3].Text;
+                selectGender.Text = item.SubItems[3].Text;
                 txtDiachi.Text = item.SubItems[4].Text;
                 txtSDT.Text = item.SubItems[5].Text;
                 txtCMND.Text = item.SubItems[6].Text;
@@ -234,7 +234,7 @@ namespace connect.Template
             string MaDocGia = txtMaDG.Text;
             string HoTen = txtHoten.Text;
             string NgaySinh = birthdayPicker.Text;
-            string gender = radioGender.Text;
+            string gender = selectGender.Text;
             string DiaChi = txtDiachi.Text;
             string sdt = txtSDT.Text;
             string soCMND = txtCMND.Text;
@@ -258,7 +258,7 @@ namespace connect.Template
                 txtMaDG.Text = "";
                 txtHoten.Text = "";
                 birthdayPicker.Text = "";
-                radioGender.Text = "";
+                selectGender.Text = "";
                 txtDiachi.Text = "";
                 txtSDT.Text = "";
                 txtCMND.Text = "";
