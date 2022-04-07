@@ -30,6 +30,7 @@ namespace connect
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -57,7 +58,7 @@ namespace connect
             this.frmThongtin = new connect.Template.Thongtin();
             this.FrmLogin1 = new connect.Login();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.qlInfoDocgia1 = new connect.Template.QLInfoDocgia();
+            this.formQLInfo = new connect.Template.QLInfoDocgia();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -359,7 +360,7 @@ namespace connect
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(916, 13);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1107, 13);
             this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
@@ -373,7 +374,7 @@ namespace connect
             this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox4.HoverState.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox4.Location = new System.Drawing.Point(960, 13);
+            this.guna2ControlBox4.Location = new System.Drawing.Point(1151, 13);
             this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox4.Name = "guna2ControlBox4";
             this.guna2ControlBox4.ShadowDecoration.Parent = this.guna2ControlBox4;
@@ -390,14 +391,13 @@ namespace connect
             // 
             // Paneltoolbar
             // 
-            this.Paneltoolbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Paneltoolbar.Controls.Add(this.guna2ControlBox3);
             this.Paneltoolbar.Controls.Add(this.guna2ControlBox4);
-            this.Paneltoolbar.Location = new System.Drawing.Point(190, 0);
+            this.Paneltoolbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Paneltoolbar.Location = new System.Drawing.Point(0, 0);
             this.Paneltoolbar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Paneltoolbar.Name = "Paneltoolbar";
-            this.Paneltoolbar.Size = new System.Drawing.Size(1002, 42);
+            this.Paneltoolbar.Size = new System.Drawing.Size(1193, 42);
             this.Paneltoolbar.TabIndex = 12;
             // 
             // guna2DragControl1
@@ -434,25 +434,27 @@ namespace connect
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // qlInfoDocgia1
+            // formQLInfo
             // 
-            this.qlInfoDocgia1.Location = new System.Drawing.Point(190, 42);
-            this.qlInfoDocgia1.Name = "qlInfoDocgia1";
-            this.qlInfoDocgia1.Size = new System.Drawing.Size(1003, 613);
-            this.qlInfoDocgia1.TabIndex = 14;
+            this.formQLInfo.Location = new System.Drawing.Point(190, 42);
+            this.formQLInfo.Name = "formQLInfo";
+            this.formQLInfo.Size = new System.Drawing.Size(1003, 662);
+            this.formQLInfo.TabIndex = 14;
+            this.formQLInfo.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 704);
-            this.Controls.Add(this.qlInfoDocgia1);
+            this.Controls.Add(this.PanelMenuBar);
+            this.Controls.Add(this.formQLInfo);
             this.Controls.Add(this.frminfoDG);
             this.Controls.Add(this.Paneltoolbar);
             this.Controls.Add(this.frmThongtin);
             this.Controls.Add(this.FrmLogin1);
-            this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -497,6 +499,6 @@ namespace connect
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Template.InfoDG frminfoDG;
-        private Template.QLInfoDocgia qlInfoDocgia1;
+        private Template.QLInfoDocgia formQLInfo;
     }
 }

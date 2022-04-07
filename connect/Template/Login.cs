@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace connect
 {
-    public partial class Login : DevExpress.XtraEditors.XtraUserControl
+    public partial class Login : UserControl
     {
         private model.THUVIEN123Entities2 db = daoo.dbService.db;
         public Login()
@@ -48,7 +48,7 @@ namespace connect
             if(user.Trim() == string.Empty)
             {
 
-                dxErrorProvider1.SetError(lbMsg, "ko được để trống!!");
+                errorProvider1.SetError(lbMsg, "ko được để trống!!");
                 lbMsg.Text = "Bạn phải nhập Tên đăng nhập!!";
                 check1 = false;
             }
@@ -60,12 +60,12 @@ namespace connect
 
             if (pass.Trim() == string.Empty)
             {
-                dxErrorProvider1.SetError(lbMsg, "ko được để trống!!");
+                errorProvider1.SetError(lbMsg, "ko được để trống!!");
                 lbMsg.Text = "Bạn phải nhập mật khẩu!!";
                 check2 = false;
             }else if (!CheckPassword(pass))
             {
-                dxErrorProvider1.SetError(lbMsg, "ko được để trống!!");
+                errorProvider1.SetError(lbMsg, "ko được để trống!!");
                 check2 = false;
             }
             else

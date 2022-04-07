@@ -198,7 +198,7 @@ namespace connect.Template
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
-            this.txtCMND.PlaceholderText = "";
+            this.txtCMND.PlaceholderText = "Nhập số CMND";
             this.txtCMND.SelectedText = "";
             this.txtCMND.ShadowDecoration.Parent = this.txtCMND;
             this.txtCMND.Size = new System.Drawing.Size(170, 34);
@@ -235,7 +235,7 @@ namespace connect.Template
             this.txtHoten.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.PasswordChar = '\0';
-            this.txtHoten.PlaceholderText = "";
+            this.txtHoten.PlaceholderText = "Nhập tên độc giả";
             this.txtHoten.SelectedText = "";
             this.txtHoten.ShadowDecoration.Parent = this.txtHoten;
             this.txtHoten.Size = new System.Drawing.Size(170, 34);
@@ -273,7 +273,7 @@ namespace connect.Template
             this.txtMaDG.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
-            this.txtMaDG.PlaceholderText = "";
+            this.txtMaDG.PlaceholderText = "Nhập mã độc giả";
             this.txtMaDG.SelectedText = "";
             this.txtMaDG.ShadowDecoration.Parent = this.txtMaDG;
             this.txtMaDG.Size = new System.Drawing.Size(170, 34);
@@ -298,7 +298,7 @@ namespace connect.Template
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
-            this.txtDiachi.PlaceholderText = "";
+            this.txtDiachi.PlaceholderText = "Nhập địa chỉ";
             this.txtDiachi.SelectedText = "";
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
             this.txtDiachi.Size = new System.Drawing.Size(170, 34);
@@ -393,7 +393,7 @@ namespace connect.Template
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
-            this.txtSDT.PlaceholderText = "";
+            this.txtSDT.PlaceholderText = "Nhập số điện thoại";
             this.txtSDT.SelectedText = "";
             this.txtSDT.ShadowDecoration.Parent = this.txtSDT;
             this.txtSDT.Size = new System.Drawing.Size(170, 34);
@@ -506,7 +506,7 @@ namespace connect.Template
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(170, 34);
@@ -554,7 +554,7 @@ namespace connect.Template
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.PlaceholderText = "Tên đăng nhập";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.Size = new System.Drawing.Size(170, 34);

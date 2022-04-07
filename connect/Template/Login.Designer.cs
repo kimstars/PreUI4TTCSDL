@@ -30,8 +30,6 @@ namespace connect
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.lbMsg = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.btnToggle = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
@@ -40,29 +38,18 @@ namespace connect
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
+            this.lbMsg = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
-            // 
-            // lbMsg
-            // 
-            this.lbMsg.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Appearance.Options.UseForeColor = true;
-            this.lbMsg.Location = new System.Drawing.Point(33, 209);
-            this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(0, 16);
-            this.lbMsg.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 34);
+            this.label1.Location = new System.Drawing.Point(79, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 28);
+            this.label1.Size = new System.Drawing.Size(169, 34);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đăng nhập";
             // 
@@ -73,10 +60,10 @@ namespace connect
             this.btnToggle.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.Parent = this.btnToggle;
-            this.btnToggle.Location = new System.Drawing.Point(34, 241);
+            this.btnToggle.Location = new System.Drawing.Point(38, 262);
             this.btnToggle.Name = "btnToggle";
             this.btnToggle.ShadowDecoration.Parent = this.btnToggle;
-            this.btnToggle.Size = new System.Drawing.Size(35, 20);
+            this.btnToggle.Size = new System.Drawing.Size(40, 20);
             this.btnToggle.TabIndex = 13;
             this.btnToggle.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnToggle.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -94,10 +81,10 @@ namespace connect
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
-            this.btnSubmit.Location = new System.Drawing.Point(33, 277);
+            this.btnSubmit.Location = new System.Drawing.Point(39, 305);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
-            this.btnSubmit.Size = new System.Drawing.Size(237, 45);
+            this.btnSubmit.Size = new System.Drawing.Size(271, 45);
             this.btnSubmit.TabIndex = 15;
             this.btnSubmit.Text = "Đăng nhập";
             this.btnSubmit.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -114,10 +101,10 @@ namespace connect
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(33, 375);
+            this.guna2Button3.Location = new System.Drawing.Point(38, 398);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(237, 45);
+            this.guna2Button3.Size = new System.Drawing.Size(271, 45);
             this.guna2Button3.TabIndex = 18;
             this.guna2Button3.Text = "Đăng ký";
             // 
@@ -138,15 +125,15 @@ namespace connect
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = global::connect.Properties.Resources.icons8_password_16px;
-            this.txtPassword.Location = new System.Drawing.Point(32, 160);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(37, 160);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtPassword.PlaceholderText = "      Password";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(238, 42);
+            this.txtPassword.Size = new System.Drawing.Size(272, 42);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -167,39 +154,54 @@ namespace connect
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::connect.Properties.Resources.icons8_user_50px_1;
-            this.txtUsername.Location = new System.Drawing.Point(32, 110);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(37, 110);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtUsername.PlaceholderText = "      Username";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(237, 42);
+            this.txtUsername.Size = new System.Drawing.Size(271, 42);
             this.txtUsername.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 244);
+            this.label2.Location = new System.Drawing.Point(86, 265);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 16);
+            this.label2.Size = new System.Drawing.Size(238, 17);
             this.label2.TabIndex = 20;
             this.label2.Text = "Đồng ý chấp hành Nội quy thư viện?";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 341);
+            this.label3.Location = new System.Drawing.Point(86, 362);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 16);
+            this.label3.Size = new System.Drawing.Size(143, 17);
             this.label3.TabIndex = 21;
             this.label3.Text = "Bạn quên mật khẩu ?";
             // 
+            // lbMsg
+            // 
+            this.lbMsg.AutoSize = true;
+            this.lbMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbMsg.Location = new System.Drawing.Point(36, 228);
+            this.lbMsg.Name = "lbMsg";
+            this.lbMsg.Size = new System.Drawing.Size(12, 17);
+            this.lbMsg.TabIndex = 22;
+            this.lbMsg.Text = ".";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbMsg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Button3);
@@ -208,18 +210,15 @@ namespace connect
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbMsg);
             this.Name = "Login";
-            this.Size = new System.Drawing.Size(355, 496);
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
+            this.Size = new System.Drawing.Size(406, 496);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
-        private DevExpress.XtraEditors.LabelControl lbMsg;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
@@ -228,5 +227,7 @@ namespace connect
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbMsg;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

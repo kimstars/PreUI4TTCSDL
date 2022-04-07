@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using System.Data.SqlClient;
+
 
 namespace connect.Template
 {
     public partial class QLInfoDocgia : UserControl
     {
+        string strCon = @"Data Source=CHU-TUAN-KIET\SQLEXPRESS;Initial Catalog=learnQLSV;Integrated Security=True";
+        SqlConnection sqlCon = null;
         public QLInfoDocgia()
         {
             InitializeComponent();
@@ -123,14 +127,11 @@ namespace connect.Template
             }
         }
 
-        private void sendData()
-        {
-            
-        }
+        
 
         private void btnAddInfo_Click(object sender, EventArgs e)
         {
-            string MaDocGia = txtMaDG.Text;
+            string MaDocGia = GenerateMa("DG");
             string HoTen = txtHoten.Text;
             string NgaySinh = birthdayPicker.Text;
             string gender = radioGender.Text;
@@ -166,11 +167,38 @@ namespace connect.Template
                 txtUsername.Text = "";
                 txtPassword.Text = "";
 
+                //string query = "INSERT INTO DOCGIA (ID,  Sname, age, Address, classname) VALUES (@ID,  @Sname, @age, @Address, @classname)";
+                //SqlCommand sqlCmd = new SqlCommand();
+                //sqlCmd.Connection = sqlCon;
+                //sqlCmd.CommandType = CommandType.Text;
+                //sqlCmd.CommandText = query;
+                //sqlCmd.Parameters.AddWithValue("@ID", id);
+                //sqlCmd.Parameters.AddWithValue("@Sname", name);
+                //sqlCmd.Parameters.AddWithValue("@age", age);
+                //sqlCmd.Parameters.AddWithValue("@Address", address);
+                //sqlCmd.Parameters.AddWithValue("@classname", classname);
+                //try
+                //{
+                //    int recordsAffected = sqlCmd.ExecuteNonQuery();
+                //    MessageBox.Show("Insert 1 row done!!");
+                //}
+                //catch (SqlException)
+                //{
+                //    MessageBox.Show("error sql", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    // error here
+                //}
+                //finally
+                //{
+                //    sqlCon.Close();
+                //}
+
                 MessageBox.Show(
                 "Nhập thông tin thành công !!",
                 "Thông báo",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+
             }
 
             btnDeleteInfo.Visible = false;
@@ -215,15 +243,16 @@ namespace connect.Template
             string password = HashPass(txtPassword.Text);
             if (validateAll(ref MaDocGia, HoTen, gender, DiaChi, sdt, soCMND, username, password))
             {
-                item.SubItems[0].Text = HoTen;
-                item.SubItems[0].Text = NgaySinh;
-                item.SubItems[0].Text = gender;
-                item.SubItems[0].Text = DiaChi;
-                item.SubItems[0].Text = sdt;
-                item.SubItems[0].Text = soCMND;
-                item.SubItems[0].Text = ngayDK;
-                item.SubItems[0].Text = username;
-                item.SubItems[0].Text = password;
+                item.SubItems[0].Text = MaDocGia;
+                item.SubItems[1].Text = HoTen;
+                item.SubItems[2].Text = NgaySinh;
+                item.SubItems[3].Text = gender;
+                item.SubItems[4].Text = DiaChi;
+                item.SubItems[5].Text = sdt;
+                item.SubItems[6].Text = soCMND;
+                item.SubItems[7].Text = ngayDK;
+                item.SubItems[8].Text = username;
+                item.SubItems[9].Text = password;
 
 
                 txtMaDG.Text = "";

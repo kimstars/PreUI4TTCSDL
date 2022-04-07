@@ -178,7 +178,8 @@ namespace connect
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            frminfoDG.Visible = true;
+            //frminfoDG.Visible = true;
+            formQLInfo.Visible = true;
         }
     }
 }
