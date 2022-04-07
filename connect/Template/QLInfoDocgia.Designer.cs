@@ -32,6 +32,7 @@ namespace connect.Template
             this.panelInput = new System.Windows.Forms.Panel();
             this.btnDeleteInfo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.selectGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ngayDKPicker = new connect.Template.DateTimePickerKiet();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace connect.Template
             this.btnEditInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddInfo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbMsg = new DevExpress.XtraEditors.LabelControl();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,8 +66,8 @@ namespace connect.Template
             this.dateReg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmnd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.user = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pass = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.selectGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lbMsg = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panelInput.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -96,7 +96,7 @@ namespace connect.Template
             this.btnDeleteInfo.ForeColor = System.Drawing.Color.White;
             this.btnDeleteInfo.HoverState.Parent = this.btnDeleteInfo;
             this.btnDeleteInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteInfo.Location = new System.Drawing.Point(575, 300);
+            this.btnDeleteInfo.Location = new System.Drawing.Point(933, 305);
             this.btnDeleteInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteInfo.Name = "btnDeleteInfo";
             this.btnDeleteInfo.ShadowDecoration.Parent = this.btnDeleteInfo;
@@ -127,12 +127,35 @@ namespace connect.Template
             this.guna2Panel1.Controls.Add(this.txtSDT);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(446, 15);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(726, 270);
             this.guna2Panel1.TabIndex = 15;
+            // 
+            // selectGender
+            // 
+            this.selectGender.BackColor = System.Drawing.Color.Transparent;
+            this.selectGender.BorderRadius = 6;
+            this.selectGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.selectGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectGender.FocusedColor = System.Drawing.Color.Empty;
+            this.selectGender.FocusedState.Parent = this.selectGender;
+            this.selectGender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.selectGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.selectGender.FormattingEnabled = true;
+            this.selectGender.HoverState.Parent = this.selectGender;
+            this.selectGender.ItemHeight = 30;
+            this.selectGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.selectGender.ItemsAppearance.Parent = this.selectGender;
+            this.selectGender.Location = new System.Drawing.Point(475, 80);
+            this.selectGender.Name = "selectGender";
+            this.selectGender.ShadowDecoration.Parent = this.selectGender;
+            this.selectGender.Size = new System.Drawing.Size(201, 36);
+            this.selectGender.TabIndex = 18;
             // 
             // ngayDKPicker
             // 
@@ -145,7 +168,7 @@ namespace connect.Template
             this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngayDKPicker.Location = new System.Drawing.Point(475, 134);
-            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
             this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
             this.ngayDKPicker.Name = "ngayDKPicker";
             this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
@@ -191,7 +214,7 @@ namespace connect.Template
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(475, 202);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "Nhập số CMND";
@@ -227,7 +250,7 @@ namespace connect.Template
             this.txtHoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoten.HoverState.Parent = this.txtHoten;
             this.txtHoten.Location = new System.Drawing.Point(136, 74);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(5);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.PasswordChar = '\0';
             this.txtHoten.PlaceholderText = "Nhập tên độc giả";
@@ -264,7 +287,7 @@ namespace connect.Template
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.HoverState.Parent = this.txtMaDG;
             this.txtMaDG.Location = new System.Drawing.Point(136, 15);
-            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "Nhập mã độc giả";
@@ -289,7 +312,7 @@ namespace connect.Template
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
             this.txtDiachi.Location = new System.Drawing.Point(136, 130);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "Nhập địa chỉ";
@@ -307,7 +330,7 @@ namespace connect.Template
             this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.birthdayPicker.Location = new System.Drawing.Point(475, 16);
-            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
             this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
             this.birthdayPicker.Name = "birthdayPicker";
             this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
@@ -364,7 +387,7 @@ namespace connect.Template
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(136, 198);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "Nhập số điện thoại";
@@ -394,7 +417,7 @@ namespace connect.Template
             this.btnEditInfo.ForeColor = System.Drawing.Color.White;
             this.btnEditInfo.HoverState.Parent = this.btnEditInfo;
             this.btnEditInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditInfo.Location = new System.Drawing.Point(300, 300);
+            this.btnEditInfo.Location = new System.Drawing.Point(658, 305);
             this.btnEditInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditInfo.Name = "btnEditInfo";
             this.btnEditInfo.ShadowDecoration.Parent = this.btnEditInfo;
@@ -413,7 +436,7 @@ namespace connect.Template
             this.btnAddInfo.ForeColor = System.Drawing.Color.White;
             this.btnAddInfo.HoverState.Parent = this.btnAddInfo;
             this.btnAddInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddInfo.Location = new System.Drawing.Point(24, 300);
+            this.btnAddInfo.Location = new System.Drawing.Point(384, 305);
             this.btnAddInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddInfo.Name = "btnAddInfo";
             this.btnAddInfo.ShadowDecoration.Parent = this.btnAddInfo;
@@ -426,6 +449,7 @@ namespace connect.Template
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderRadius = 16;
+            this.guna2Panel2.Controls.Add(this.guna2Button1);
             this.guna2Panel2.Controls.Add(this.lbMsg);
             this.guna2Panel2.Controls.Add(this.label11);
             this.guna2Panel2.Controls.Add(this.txtPassword);
@@ -433,22 +457,12 @@ namespace connect.Template
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.txtUsername);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(757, 8);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Location = new System.Drawing.Point(26, 15);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(412, 266);
             this.guna2Panel2.TabIndex = 16;
-            // 
-            // lbMsg
-            // 
-            this.lbMsg.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Appearance.Options.UseForeColor = true;
-            this.lbMsg.Location = new System.Drawing.Point(205, 123);
-            this.lbMsg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(0, 16);
-            this.lbMsg.TabIndex = 19;
             // 
             // label11
             // 
@@ -477,7 +491,7 @@ namespace connect.Template
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = global::connect.Properties.Resources.icons8_password_16px;
             this.txtPassword.Location = new System.Drawing.Point(157, 151);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Mật khẩu";
@@ -523,7 +537,7 @@ namespace connect.Template
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::connect.Properties.Resources.icons8_user_50px_1;
             this.txtUsername.Location = new System.Drawing.Point(157, 81);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Tên đăng nhập";
@@ -544,14 +558,13 @@ namespace connect.Template
             this.sdt,
             this.dateReg,
             this.cmnd,
-            this.user,
-            this.pass});
+            this.user});
             this.listViewInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(169)))));
             this.listViewInfo.FullRowSelect = true;
             this.listViewInfo.GridLines = true;
             this.listViewInfo.HideSelection = false;
-            this.listViewInfo.Location = new System.Drawing.Point(0, 375);
+            this.listViewInfo.Location = new System.Drawing.Point(3, 374);
             this.listViewInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewInfo.Name = "listViewInfo";
             this.listViewInfo.Size = new System.Drawing.Size(1208, 291);
@@ -614,34 +627,35 @@ namespace connect.Template
             this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.user.Width = 80;
             // 
-            // pass
+            // lbMsg
             // 
-            this.pass.Text = "Mật khẩu";
-            this.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.pass.Width = 70;
+            this.lbMsg.AutoSize = true;
+            this.lbMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbMsg.Location = new System.Drawing.Point(154, 209);
+            this.lbMsg.Name = "lbMsg";
+            this.lbMsg.Size = new System.Drawing.Size(12, 17);
+            this.lbMsg.TabIndex = 20;
+            this.lbMsg.Text = ".";
             // 
-            // selectGender
+            // guna2Button1
             // 
-            this.selectGender.BackColor = System.Drawing.Color.Transparent;
-            this.selectGender.BorderRadius = 6;
-            this.selectGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.selectGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectGender.FocusedColor = System.Drawing.Color.Empty;
-            this.selectGender.FocusedState.Parent = this.selectGender;
-            this.selectGender.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.selectGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.selectGender.FormattingEnabled = true;
-            this.selectGender.HoverState.Parent = this.selectGender;
-            this.selectGender.ItemHeight = 30;
-            this.selectGender.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.selectGender.ItemsAppearance.Parent = this.selectGender;
-            this.selectGender.Location = new System.Drawing.Point(475, 80);
-            this.selectGender.Name = "selectGender";
-            this.selectGender.ShadowDecoration.Parent = this.selectGender;
-            this.selectGender.Size = new System.Drawing.Size(201, 36);
-            this.selectGender.TabIndex = 18;
+            this.guna2Button1.BorderRadius = 16;
+            this.guna2Button1.BorderThickness = 3;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Location = new System.Drawing.Point(157, 209);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(227, 46);
+            this.guna2Button1.TabIndex = 18;
+            this.guna2Button1.Text = "Cấp tài khoản";
             // 
             // QLInfoDocgia
             // 
@@ -649,7 +663,7 @@ namespace connect.Template
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listViewInfo);
             this.Controls.Add(this.panelInput);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLInfoDocgia";
             this.Size = new System.Drawing.Size(1206, 688);
             this.panelInput.ResumeLayout(false);
@@ -699,8 +713,8 @@ namespace connect.Template
         private System.Windows.Forms.ColumnHeader address;
         private System.Windows.Forms.ColumnHeader cmnd;
         private System.Windows.Forms.ColumnHeader user;
-        private System.Windows.Forms.ColumnHeader pass;
-        private DevExpress.XtraEditors.LabelControl lbMsg;
         private Guna.UI2.WinForms.Guna2ComboBox selectGender;
+        private System.Windows.Forms.Label lbMsg;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
