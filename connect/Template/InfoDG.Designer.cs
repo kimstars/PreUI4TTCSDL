@@ -49,13 +49,11 @@ namespace connect.Template
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSaveInfo = new Guna.UI2.WinForms.Guna2Button();
             this.avtImage = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avtImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,10 +62,9 @@ namespace connect.Template
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(158, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(211, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 25);
+            this.label1.Size = new System.Drawing.Size(173, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chu Tuấn Kiệt";
             // 
@@ -75,10 +72,9 @@ namespace connect.Template
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(286, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(381, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.Size = new System.Drawing.Size(122, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "(Tài khoản độc giả)";
             // 
@@ -86,10 +82,9 @@ namespace connect.Template
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(16, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(21, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ và tên:";
             // 
@@ -97,10 +92,9 @@ namespace connect.Template
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(16, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(21, 101);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Ngày sinh:";
             // 
@@ -121,11 +115,11 @@ namespace connect.Template
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(31, 151);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(41, 186);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(272, 241);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(363, 297);
             this.guna2CustomGradientPanel1.TabIndex = 6;
             // 
             // pickerBirthday
@@ -136,11 +130,11 @@ namespace connect.Template
             this.pickerBirthday.CustomFormat = "dd/MM/yyyy";
             this.pickerBirthday.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pickerBirthday.Location = new System.Drawing.Point(19, 102);
-            this.pickerBirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pickerBirthday.Location = new System.Drawing.Point(25, 126);
+            this.pickerBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pickerBirthday.MinimumSize = new System.Drawing.Size(4, 37);
             this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(223, 37);
+            this.pickerBirthday.Size = new System.Drawing.Size(296, 37);
             this.pickerBirthday.SkinColor = System.Drawing.Color.White;
             this.pickerBirthday.TabIndex = 13;
             this.pickerBirthday.TextColor = System.Drawing.Color.Black;
@@ -162,23 +156,23 @@ namespace connect.Template
             this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(98, 179);
+            this.guna2TextBox4.Location = new System.Drawing.Point(131, 220);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.SelectedText = "";
             this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(142, 36);
+            this.guna2TextBox4.Size = new System.Drawing.Size(189, 44);
             this.guna2TextBox4.TabIndex = 12;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(95, 154);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(127, 190);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
+            this.label11.Size = new System.Drawing.Size(46, 17);
             this.label11.TabIndex = 11;
             this.label11.Text = "Email:";
             // 
@@ -200,21 +194,20 @@ namespace connect.Template
             "Nam",
             "Nữ"});
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(18, 179);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(24, 220);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(75, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(99, 36);
             this.guna2ComboBox1.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(16, 154);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(21, 190);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 8;
             this.label8.Text = "Giới tính:";
             // 
@@ -236,13 +229,14 @@ namespace connect.Template
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.IconRight = global::connect.Properties.Resources.icons8_tick_box_48px;
-            this.txtName.Location = new System.Drawing.Point(19, 32);
+            this.txtName.Location = new System.Drawing.Point(25, 39);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(222, 36);
+            this.txtName.Size = new System.Drawing.Size(296, 44);
             this.txtName.TabIndex = 6;
             // 
             // guna2CustomGradientPanel2
@@ -260,11 +254,11 @@ namespace connect.Template
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(330, 151);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(440, 186);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(266, 241);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(355, 297);
             this.guna2CustomGradientPanel2.TabIndex = 8;
             // 
             // guna2TextBox3
@@ -284,23 +278,23 @@ namespace connect.Template
             this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(17, 179);
+            this.guna2TextBox3.Location = new System.Drawing.Point(23, 220);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(222, 36);
+            this.guna2TextBox3.Size = new System.Drawing.Size(296, 44);
             this.guna2TextBox3.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(16, 154);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(21, 190);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 13);
+            this.label10.Size = new System.Drawing.Size(183, 17);
             this.label10.TabIndex = 8;
             this.label10.Text = "Số CMND (số thẻ căn cước)";
             // 
@@ -321,13 +315,14 @@ namespace connect.Template
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(17, 102);
+            this.guna2TextBox1.Location = new System.Drawing.Point(23, 126);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(222, 36);
+            this.guna2TextBox1.Size = new System.Drawing.Size(296, 44);
             this.guna2TextBox1.TabIndex = 7;
             // 
             // guna2TextBox2
@@ -347,23 +342,23 @@ namespace connect.Template
             this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(17, 32);
+            this.guna2TextBox2.Location = new System.Drawing.Point(23, 39);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(222, 36);
+            this.guna2TextBox2.Size = new System.Drawing.Size(296, 44);
             this.guna2TextBox2.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(15, 82);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(20, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "(Đơn vị):";
             // 
@@ -371,10 +366,9 @@ namespace connect.Template
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(16, 12);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(21, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Địa chỉ:";
             // 
@@ -382,10 +376,9 @@ namespace connect.Template
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(160, 58);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(213, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 15);
+            this.label7.Size = new System.Drawing.Size(125, 20);
             this.label7.TabIndex = 9;
             this.label7.Text = "Mã độc giả : NaN";
             // 
@@ -393,19 +386,18 @@ namespace connect.Template
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(160, 85);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(213, 105);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 15);
+            this.label9.Size = new System.Drawing.Size(142, 20);
             this.label9.TabIndex = 10;
             this.label9.Text = "Hoạt động từ ngày :";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(-14, -15);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(-19, -18);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -414,18 +406,18 @@ namespace connect.Template
             // 
             this.btnSaveInfo.AutoRoundedCorners = true;
             this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
-            this.btnSaveInfo.BorderRadius = 17;
+            this.btnSaveInfo.BorderRadius = 22;
             this.btnSaveInfo.CheckedState.Parent = this.btnSaveInfo;
             this.btnSaveInfo.CustomImages.Parent = this.btnSaveInfo;
             this.btnSaveInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
             this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveInfo.ForeColor = System.Drawing.Color.White;
             this.btnSaveInfo.HoverState.Parent = this.btnSaveInfo;
-            this.btnSaveInfo.Location = new System.Drawing.Point(31, 413);
-            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveInfo.Location = new System.Drawing.Point(41, 508);
+            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveInfo.Name = "btnSaveInfo";
             this.btnSaveInfo.ShadowDecoration.Parent = this.btnSaveInfo;
-            this.btnSaveInfo.Size = new System.Drawing.Size(120, 37);
+            this.btnSaveInfo.Size = new System.Drawing.Size(160, 46);
             this.btnSaveInfo.TabIndex = 19;
             this.btnSaveInfo.Text = "Lưu thông tin";
             this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
@@ -434,16 +426,16 @@ namespace connect.Template
             // 
             this.avtImage.BackgroundImage = global::connect.Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
             this.avtImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.avtImage.Location = new System.Drawing.Point(31, 20);
-            this.avtImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.avtImage.Location = new System.Drawing.Point(41, 25);
+            this.avtImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.avtImage.Name = "avtImage";
-            this.avtImage.Size = new System.Drawing.Size(108, 117);
+            this.avtImage.Size = new System.Drawing.Size(144, 144);
             this.avtImage.TabIndex = 2;
             this.avtImage.TabStop = false;
             // 
             // InfoDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSaveInfo);
             this.Controls.Add(this.button1);
@@ -454,14 +446,13 @@ namespace connect.Template
             this.Controls.Add(this.label2);
             this.Controls.Add(this.avtImage);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InfoDG";
-            this.Size = new System.Drawing.Size(618, 592);
+            this.Size = new System.Drawing.Size(824, 729);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avtImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -490,7 +481,6 @@ namespace connect.Template
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
         private DateTimePickerKiet pickerBirthday;
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Button btnSaveInfo;

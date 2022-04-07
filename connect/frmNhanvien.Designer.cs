@@ -308,7 +308,7 @@ namespace connect
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(101, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "Admin";
             // 
@@ -320,7 +320,7 @@ namespace connect
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(71, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 21);
+            this.label2.Size = new System.Drawing.Size(138, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "Chu Tuấn Kiệt";
             // 
@@ -359,7 +359,7 @@ namespace connect
             // 
             this.panel4.Controls.Add(this.btnCaiDat);
             this.panel4.Controls.Add(this.btnThongtin);
-            this.panel4.Location = new System.Drawing.Point(459, 474);
+            this.panel4.Location = new System.Drawing.Point(367, 420);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(254, 95);
             this.panel4.TabIndex = 11;
@@ -421,7 +421,7 @@ namespace connect
             this.panelTitleBar.CausesValidation = false;
             this.panelTitleBar.Location = new System.Drawing.Point(232, 28);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(34, 16);
+            this.panelTitleBar.Size = new System.Drawing.Size(35, 17);
             this.panelTitleBar.TabIndex = 11;
             this.panelTitleBar.Text = "Title";
             // 
