@@ -113,6 +113,12 @@
     <Compile Include="Template\QLInfoDocgia.Designer.cs">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\Thongkesachdamuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\Thongkesachdamuon.Designer.cs">
+      <DependentUpon>Thongkesachdamuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Thongtin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     <Compile Include="FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\Thongkesachnhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\Thongkesachnhap.Designer.cs">
+      <DependentUpon>Thongkesachnhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -212,6 +224,9 @@
     <EmbeddedResource Include="Template\QLInfoDocgia.resx">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\Thongkesachdamuon.resx">
+      <DependentUpon>Thongkesachdamuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\Thongtin.resx">
       <DependentUpon>Thongtin.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +246,9 @@
     </Compile>
     <EmbeddedResource Include="Template\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Thongkesachnhap.resx">
+      <DependentUpon>Thongkesachnhap.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="model\modelThuVien.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
