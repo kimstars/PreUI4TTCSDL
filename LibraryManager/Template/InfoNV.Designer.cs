@@ -107,7 +107,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(375, 249);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(356, 248);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(300, 372);
@@ -506,7 +506,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.SystemColors.ControlLight;
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(730, 249);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(700, 249);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(300, 306);
@@ -631,7 +631,7 @@ namespace LibraryManager.Template
             this.Mâ.AutoSize = true;
             this.Mâ.BackColor = System.Drawing.Color.Transparent;
             this.Mâ.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mâ.Location = new System.Drawing.Point(726, 208);
+            this.Mâ.Location = new System.Drawing.Point(696, 208);
             this.Mâ.Name = "Mâ";
             this.Mâ.Size = new System.Drawing.Size(128, 23);
             this.Mâ.TabIndex = 0;

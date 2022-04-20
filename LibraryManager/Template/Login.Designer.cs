@@ -60,7 +60,7 @@ namespace LibraryManager
             this.btnToggle.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.Parent = this.btnToggle;
-            this.btnToggle.Location = new System.Drawing.Point(38, 262);
+            this.btnToggle.Location = new System.Drawing.Point(38, 253);
             this.btnToggle.Name = "btnToggle";
             this.btnToggle.ShadowDecoration.Parent = this.btnToggle;
             this.btnToggle.Size = new System.Drawing.Size(40, 20);
@@ -168,7 +168,7 @@ namespace LibraryManager
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 265);
+            this.label2.Location = new System.Drawing.Point(86, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(238, 17);
             this.label2.TabIndex = 20;
@@ -211,7 +211,7 @@ namespace LibraryManager
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Name = "Login";
-            this.Size = new System.Drawing.Size(406, 496);
+            this.Size = new System.Drawing.Size(370, 497);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
