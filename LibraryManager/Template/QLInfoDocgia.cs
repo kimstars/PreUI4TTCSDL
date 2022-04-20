@@ -22,30 +22,13 @@ namespace LibraryManager.Template
             InitializeComponent();
         }
 
-        private bool CheckPassword(string passwd)
+        public string ID2
         {
+            get { return txtUsername.Text; }
+            set { txtUsername.Text = value; }
 
-            if (passwd.Length < 6)
-            {
-                lbMsg.Text = "Mật khẩu tối thiếu là 6 kí tự.";
-                return false;
-            }
-            if (passwd.Contains(" "))
-            {
-                lbMsg.Text = "Mật khẩu không chứa khoảng trắng.";
-                return false;
-            }
-
-
-            return true;
         }
 
-        private string HashPass(string password)
-        {
-            byte[] bytes = Encoding.Unicode.GetBytes(password);
-            byte[] inArray = HashAlgorithm.Create("SHA1").ComputeHash(bytes);
-            return Convert.ToBase64String(inArray);
-        }
 
 
         public string GenerateMa(string type)
@@ -53,7 +36,7 @@ namespace LibraryManager.Template
             string temp = type + "000000";
             return temp;
         }
-        private bool validateAll(ref string MaDocGia, string HoTen, string gender, string DiaChi, string sdt, string soCMND, string username, string password)
+        private bool validateAll(ref string MaDocGia, string HoTen, string gender, string DiaChi, string sdt, string soCMND, string username)
         {
             if (string.IsNullOrEmpty(HoTen))
             {
@@ -115,12 +98,6 @@ namespace LibraryManager.Template
                 return false;
 
             }
-            else if (!CheckPassword(password))
-            {
-                
-                return false;
-
-            }
             else
             {
                 return true;
@@ -140,8 +117,8 @@ namespace LibraryManager.Template
             string soCMND = txtCMND.Text;
             string ngayDK = ngayDKPicker.Text;
             string username = txtUsername.Text;
-            string password = HashPass(txtPassword.Text);
-            if (validateAll(ref MaDocGia, HoTen, gender, DiaChi, sdt, soCMND, username, password))
+ 
+            if (validateAll(ref MaDocGia, HoTen, gender, DiaChi, sdt, soCMND, username))
             {
                 ListViewItem lvi = new ListViewItem(MaDocGia);
                 lvi.SubItems.Add(HoTen);
@@ -152,10 +129,9 @@ namespace LibraryManager.Template
                 lvi.SubItems.Add(soCMND);
                 lvi.SubItems.Add(ngayDK);
                 lvi.SubItems.Add(username);
-                lvi.SubItems.Add(password);
+          
 
                 listViewInfo.Items.Add(lvi);
-
                 txtMaDG.Text = "";
                 txtHoten.Text = "";
                 birthdayPicker.Text = "";
@@ -165,7 +141,7 @@ namespace LibraryManager.Template
                 txtCMND.Text = "";
                 ngayDKPicker.Text = "";
                 txtUsername.Text = "";
-                txtPassword.Text = "";
+                
 
                 //string query = "INSERT INTO DOCGIA (ID,  Sname, age, Address, classname) VALUES (@ID,  @Sname, @age, @Address, @classname)";
                 //SqlCommand sqlCmd = new SqlCommand();
@@ -223,7 +199,7 @@ namespace LibraryManager.Template
                 txtCMND.Text = item.SubItems[6].Text;
                 dateReg.Text = item.SubItems[7].Text;
                 txtUsername.Text = item.SubItems[8].Text;
-                txtPassword.Text = item.SubItems[9].Text;
+                
             }
             btnEditInfo.Visible = true;
             btnDeleteInfo.Visible = true;
@@ -240,8 +216,8 @@ namespace LibraryManager.Template
             string soCMND = txtCMND.Text;
             string ngayDK = ngayDKPicker.Text;
             string username = txtUsername.Text;
-            string password = HashPass(txtPassword.Text);
-            if (validateAll(ref MaDocGia, HoTen, gender, DiaChi, sdt, soCMND, username, password))
+
+            if (validateAll(ref MaDocGia, HoTen, gender, DiaChi, sdt, soCMND, username))
             {
                 item.SubItems[0].Text = MaDocGia;
                 item.SubItems[1].Text = HoTen;
@@ -252,7 +228,7 @@ namespace LibraryManager.Template
                 item.SubItems[6].Text = soCMND;
                 item.SubItems[7].Text = ngayDK;
                 item.SubItems[8].Text = username;
-                item.SubItems[9].Text = password;
+                
 
 
                 txtMaDG.Text = "";
@@ -264,7 +240,6 @@ namespace LibraryManager.Template
                 txtCMND.Text = "";
                 ngayDKPicker.Text = "";
                 txtUsername.Text = "";
-                txtPassword.Text = "";
 
                 MessageBox.Show(
                 "Nhập thông tin thành công !!",
@@ -280,5 +255,7 @@ namespace LibraryManager.Template
             if (MessageBox.Show("Thông báo", "Bạn có chắc chắn xóa dòng dữ liệu này không ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 item.Remove();
         }
+
+
     }
 }

@@ -86,6 +86,12 @@
     <Compile Include="frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\Captaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\Captaikhoan.Designer.cs">
+      <DependentUpon>Captaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\DateTimePickerKiet.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -124,57 +130,6 @@
     </Compile>
     <Compile Include="Template\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="model\BIENBANVIPHAM.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\CUONSACH.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\DAUSACH.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\DOCGIA.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\modelThuVien.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>modelThuVien.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\modelThuVien.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\modelThuVien.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>modelThuVien.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="model\NHANVIEN.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\NHAXUATBAN.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\PHIEUMUONTRA.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\PHIEUNHAP.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\sysdiagram.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\TACGIA.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\THONGTINMUONTRA.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\THONGTINNHAPSACH.cs">
-      <DependentUpon>modelThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,13 +187,6 @@
     <EmbeddedResource Include="Template\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="model\modelThuVien.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>modelThuVien.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="model\modelThuVien.edmx.diagram">
-      <DependentUpon>modelThuVien.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -270,18 +218,10 @@
     <None Include="Resources\icons8_user_50px_2.png" />
     <None Include="Resources\icons8_phone_26px.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="model\modelThuVien.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>modelThuVien.edmx</DependentUpon>
-      <LastGenOutput>modelThuVien.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="model\modelThuVien.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>modelThuVien.edmx</DependentUpon>
-      <LastGenOutput>modelThuVien.cs</LastGenOutput>
-    </Content>
+    <Folder Include="model\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\icons8_edit_property_26px.png" />
     <None Include="Resources\icons8_Delete_30px.png" />
     <None Include="Resources\icons8_add_30px.png" />

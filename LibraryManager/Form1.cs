@@ -180,6 +180,8 @@ namespace LibraryManager
         {
             //frminfoDG.Visible = true;
             formQLInfo.Visible = true;
+            Template.Captaikhoan newform = new Template.Captaikhoan();
+            newform.Show();
         }
     }
 }
