@@ -53,7 +53,7 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+      <HintPath>E:\NAM 3 KI 2\thực tập csdl\LibraryManager\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -86,6 +86,21 @@
     <Compile Include="frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\BIENBANVIPHAM.cs" />
+    <Compile Include="model\CUONSACH.cs" />
+    <Compile Include="model\DAUSACH.cs" />
+    <Compile Include="model\DOCGIA.cs" />
+    <Compile Include="model\modelThuVien.Context.cs" />
+    <Compile Include="model\modelThuVien.cs" />
+    <Compile Include="model\modelThuVien.Designer.cs" />
+    <Compile Include="model\NHANVIEN.cs" />
+    <Compile Include="model\NHAXUATBAN.cs" />
+    <Compile Include="model\PHIEUMUONTRA.cs" />
+    <Compile Include="model\PHIEUNHAP.cs" />
+    <Compile Include="model\sysdiagram.cs" />
+    <Compile Include="model\TACGIA.cs" />
+    <Compile Include="model\THONGTINMUONTRA.cs" />
+    <Compile Include="model\THONGTINNHAPSACH.cs" />
     <Compile Include="Template\Captaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,9 +233,7 @@
     <None Include="Resources\icons8_user_50px_2.png" />
     <None Include="Resources\icons8_phone_26px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_edit_property_26px.png" />
     <None Include="Resources\icons8_Delete_30px.png" />

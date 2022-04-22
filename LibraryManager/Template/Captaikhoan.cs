@@ -130,8 +130,7 @@ namespace LibraryManager.Template
                 //    sqlCon.Close();
                 //}
 
-               Form1.
-                
+
 
             }
 
