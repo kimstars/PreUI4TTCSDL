@@ -30,7 +30,7 @@ namespace LibraryManager
         
         private void btnquanlysachkho_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnQLsachtra_Click(object sender, EventArgs e)
@@ -53,7 +53,6 @@ namespace LibraryManager
             if (sidebarExpand)
             {
                 LoginTick.Start();
-
             }
 
         }
@@ -107,13 +106,14 @@ namespace LibraryManager
         }
 
 
+
         bool sidebarExpand;
         private void sidebartick_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
             {
                 PanelMenuBar.Width -= 100;
-                if(PanelMenuBar.Width == PanelMenuBar.MinimumSize.Width)
+                if (PanelMenuBar.Width == PanelMenuBar.MinimumSize.Width)
                 {
                     sidebarExpand = false;
                     sidebartick.Stop();
@@ -122,7 +122,7 @@ namespace LibraryManager
             else
             {
                 PanelMenuBar.Width += 100;
-                if(PanelMenuBar.Width == PanelMenuBar.MaximumSize.Width)
+                if (PanelMenuBar.Width == PanelMenuBar.MaximumSize.Width)
                 {
                     sidebarExpand = true;
                     sidebartick.Stop();
@@ -134,11 +134,12 @@ namespace LibraryManager
         {
             sidebartick.Start();
         }
+
         bool LoginCollapse;
 
         private void LoginTick_Tick(object sender, EventArgs e)
         {
-        
+
             if (LoginCollapse)
             {
                 PaneLogin.Height -= 100;
@@ -182,7 +183,9 @@ namespace LibraryManager
             hideChildForm();
             //frminfoDG.Visible = true;
             formQLInfo.Visible = true;
-        
+
+            Template.FormAdmin newform = new Template.FormAdmin();
+            newform.Show();
         }
     }
 }

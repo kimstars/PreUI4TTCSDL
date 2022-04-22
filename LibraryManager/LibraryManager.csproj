@@ -115,6 +115,13 @@
     <Compile Include="Template\DateTimePickerKiet.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Template\ExpandXY.cs" />
+    <Compile Include="Template\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\FrmHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +139,9 @@
     </Compile>
     <Compile Include="Template\InfoNV.Designer.cs">
       <DependentUpon>InfoNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\PictureBoxKiet.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Template\QLInfoDocgia.cs">
       <SubType>UserControl</SubType>
@@ -174,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
@@ -255,7 +268,6 @@
     <None Include="Resources\icons8_tick_box_48px.png" />
     <None Include="Resources\icons8_man_with_moleskine_50px.png" />
     <None Include="Resources\icons8_info_30px.png" />
-    <None Include="Resources\icons8_settings_24px.png" />
     <None Include="Resources\icons8_book_64px_1.png" />
     <None Include="Resources\icons8_people_100px.png" />
     <None Include="Resources\icons8_password_16px.png" />
@@ -269,6 +281,20 @@
     <None Include="Resources\icons8_administrator_male_50px.png" />
     <None Include="Resources\icons8_circled_user_male_skin_type_3_40px_1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8_manager_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_dashboard_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_people_30px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_study_64px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
