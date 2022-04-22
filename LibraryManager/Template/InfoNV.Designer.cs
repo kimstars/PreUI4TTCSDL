@@ -474,11 +474,11 @@ namespace LibraryManager.Template
             // 
             this.lbTypeAcc.AutoSize = true;
             this.lbTypeAcc.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeAcc.Location = new System.Drawing.Point(371, 40);
+            this.lbTypeAcc.Location = new System.Drawing.Point(350, 40);
             this.lbTypeAcc.Name = "lbTypeAcc";
-            this.lbTypeAcc.Size = new System.Drawing.Size(122, 19);
+            this.lbTypeAcc.Size = new System.Drawing.Size(138, 19);
             this.lbTypeAcc.TabIndex = 13;
-            this.lbTypeAcc.Text = "(Tài khoản độc giả)";
+            this.lbTypeAcc.Text = "(Tài khoản nhân viên)";
             // 
             // label1
             // 

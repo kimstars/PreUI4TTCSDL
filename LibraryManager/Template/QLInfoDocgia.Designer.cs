@@ -33,14 +33,18 @@ namespace LibraryManager.Template
             this.btnDeleteInfo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.selectGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ngayDKPicker = new LibraryManager.Template.DateTimePickerKiet();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtCMND = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtHoten = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiachi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.birthdayPicker = new LibraryManager.Template.DateTimePickerKiet();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,8 +52,6 @@ namespace LibraryManager.Template
             this.label7 = new System.Windows.Forms.Label();
             this.btnEditInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.listViewInfo = new System.Windows.Forms.ListView();
             this.idDG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,8 +62,6 @@ namespace LibraryManager.Template
             this.dateReg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmnd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.user = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ngayDKPicker = new LibraryManager.Template.DateTimePickerKiet();
-            this.birthdayPicker = new LibraryManager.Template.DateTimePickerKiet();
             this.panelInput.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -123,7 +123,7 @@ namespace LibraryManager.Template
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
             this.guna2Panel1.Location = new System.Drawing.Point(24, 15);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1146, 210);
@@ -153,6 +153,25 @@ namespace LibraryManager.Template
             this.selectGender.Size = new System.Drawing.Size(201, 36);
             this.selectGender.TabIndex = 18;
             // 
+            // ngayDKPicker
+            // 
+            this.ngayDKPicker.BorderColor = System.Drawing.Color.Transparent;
+            this.ngayDKPicker.BorderRadius = 6;
+            this.ngayDKPicker.BorderSize = 1;
+            this.ngayDKPicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.ngayDKPicker.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ngayDKPicker.CustomFormat = "dd/MM/yyyy";
+            this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngayDKPicker.Location = new System.Drawing.Point(848, 86);
+            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
+            this.ngayDKPicker.Name = "ngayDKPicker";
+            this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
+            this.ngayDKPicker.SkinColor = System.Drawing.Color.Transparent;
+            this.ngayDKPicker.TabIndex = 17;
+            this.ngayDKPicker.TextColor = System.Drawing.Color.Black;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -175,6 +194,16 @@ namespace LibraryManager.Template
             this.label12.TabIndex = 15;
             this.label12.Text = "Số CMND";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(735, 154);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 25);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Tài khoản";
+            // 
             // txtCMND
             // 
             this.txtCMND.BorderRadius = 6;
@@ -191,7 +220,7 @@ namespace LibraryManager.Template
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(475, 144);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "Nhập số CMND";
@@ -211,6 +240,32 @@ namespace LibraryManager.Template
             this.label3.TabIndex = 9;
             this.label3.Text = "Mã độc giả";
             // 
+            // txtUsername
+            // 
+            this.txtUsername.BorderRadius = 6;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.Parent = this.txtUsername;
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.FocusedState.Parent = this.txtUsername;
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.HoverState.Parent = this.txtUsername;
+            this.txtUsername.IconLeft = global::LibraryManager.Properties.Resources.icons8_user_50px_1;
+            this.txtUsername.Location = new System.Drawing.Point(848, 144);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "Tên đăng nhập";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
+            this.txtUsername.Size = new System.Drawing.Size(201, 42);
+            this.txtUsername.TabIndex = 16;
+            // 
             // txtHoten
             // 
             this.txtHoten.BorderRadius = 6;
@@ -227,7 +282,7 @@ namespace LibraryManager.Template
             this.txtHoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoten.HoverState.Parent = this.txtHoten;
             this.txtHoten.Location = new System.Drawing.Point(136, 80);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(5);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.PasswordChar = '\0';
             this.txtHoten.PlaceholderText = "Nhập tên độc giả";
@@ -264,7 +319,7 @@ namespace LibraryManager.Template
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.HoverState.Parent = this.txtMaDG;
             this.txtMaDG.Location = new System.Drawing.Point(136, 15);
-            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "Nhập mã độc giả";
@@ -289,7 +344,7 @@ namespace LibraryManager.Template
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
             this.txtDiachi.Location = new System.Drawing.Point(136, 144);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "Nhập địa chỉ";
@@ -297,6 +352,23 @@ namespace LibraryManager.Template
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
             this.txtDiachi.Size = new System.Drawing.Size(180, 42);
             this.txtDiachi.TabIndex = 10;
+            // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.BorderColor = System.Drawing.Color.Transparent;
+            this.birthdayPicker.BorderRadius = 6;
+            this.birthdayPicker.BorderSize = 1;
+            this.birthdayPicker.CustomFormat = "dd/MM/yyyy";
+            this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthdayPicker.Location = new System.Drawing.Point(475, 22);
+            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
+            this.birthdayPicker.SkinColor = System.Drawing.Color.Transparent;
+            this.birthdayPicker.TabIndex = 7;
+            this.birthdayPicker.TextColor = System.Drawing.Color.Black;
             // 
             // label8
             // 
@@ -347,7 +419,7 @@ namespace LibraryManager.Template
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(475, 80);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "Nhập số điện thoại";
@@ -405,42 +477,6 @@ namespace LibraryManager.Template
             this.btnAddInfo.Text = "Thêm thông tin";
             this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(735, 154);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 25);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Tài khoản";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BorderRadius = 6;
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.Parent = this.txtUsername;
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.FocusedState.Parent = this.txtUsername;
-            this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.IconLeft = global::LibraryManager.Properties.Resources.icons8_user_50px_1;
-            this.txtUsername.Location = new System.Drawing.Point(848, 144);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "Tên đăng nhập";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(201, 42);
-            this.txtUsername.TabIndex = 16;
-            // 
             // listViewInfo
             // 
             this.listViewInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -459,10 +495,10 @@ namespace LibraryManager.Template
             this.listViewInfo.FullRowSelect = true;
             this.listViewInfo.GridLines = true;
             this.listViewInfo.HideSelection = false;
-            this.listViewInfo.Location = new System.Drawing.Point(3, 355);
+            this.listViewInfo.Location = new System.Drawing.Point(6, 312);
             this.listViewInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewInfo.Name = "listViewInfo";
-            this.listViewInfo.Size = new System.Drawing.Size(1207, 310);
+            this.listViewInfo.Size = new System.Drawing.Size(1207, 374);
             this.listViewInfo.TabIndex = 14;
             this.listViewInfo.UseCompatibleStateImageBehavior = false;
             this.listViewInfo.View = System.Windows.Forms.View.Details;
@@ -522,49 +558,13 @@ namespace LibraryManager.Template
             this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.user.Width = 80;
             // 
-            // ngayDKPicker
-            // 
-            this.ngayDKPicker.BorderColor = System.Drawing.Color.Transparent;
-            this.ngayDKPicker.BorderRadius = 6;
-            this.ngayDKPicker.BorderSize = 1;
-            this.ngayDKPicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.ngayDKPicker.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ngayDKPicker.CustomFormat = "dd/MM/yyyy";
-            this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngayDKPicker.Location = new System.Drawing.Point(848, 86);
-            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
-            this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
-            this.ngayDKPicker.Name = "ngayDKPicker";
-            this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
-            this.ngayDKPicker.SkinColor = System.Drawing.Color.Transparent;
-            this.ngayDKPicker.TabIndex = 17;
-            this.ngayDKPicker.TextColor = System.Drawing.Color.Black;
-            // 
-            // birthdayPicker
-            // 
-            this.birthdayPicker.BorderColor = System.Drawing.Color.Transparent;
-            this.birthdayPicker.BorderRadius = 6;
-            this.birthdayPicker.BorderSize = 1;
-            this.birthdayPicker.CustomFormat = "dd/MM/yyyy";
-            this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthdayPicker.Location = new System.Drawing.Point(475, 22);
-            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
-            this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
-            this.birthdayPicker.Name = "birthdayPicker";
-            this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
-            this.birthdayPicker.SkinColor = System.Drawing.Color.Transparent;
-            this.birthdayPicker.TabIndex = 7;
-            this.birthdayPicker.TextColor = System.Drawing.Color.Black;
-            // 
             // QLInfoDocgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listViewInfo);
             this.Controls.Add(this.panelInput);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLInfoDocgia";
             this.Size = new System.Drawing.Size(1205, 688);
             this.panelInput.ResumeLayout(false);

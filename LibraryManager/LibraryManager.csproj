@@ -74,9 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\MatKhau_BUS.cs" />
+    <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\MatKhau_DAO.cs" />
+    <Compile Include="DAO\NhanVien_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />
     <Compile Include="DTO\BienBanViPham.cs" />
     <Compile Include="DTO\CuonSach.cs" />
@@ -111,6 +113,12 @@
     </Compile>
     <Compile Include="Template\Captaikhoan.Designer.cs">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\DanhsachNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\DanhsachNV.Designer.cs">
+      <DependentUpon>DanhsachNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\DateTimePickerKiet.cs">
       <SubType>Component</SubType>
@@ -184,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DanhsachNV.resx">
+      <DependentUpon>DanhsachNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
@@ -295,6 +306,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_study_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_client_80px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

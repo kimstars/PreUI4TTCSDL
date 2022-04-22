@@ -154,16 +154,20 @@ namespace LibraryManager.Template
                     QLDGtick.Stop();
                 }
             }
-
-
+        }
+        private void btnOpenQLDG_Click(object sender, EventArgs e)
+        {
+            QLDGtick.Start();
         }
 
 
         #endregion
 
-        private void btnOpenQLDG_Click(object sender, EventArgs e)
+
+
+        private void btnDSNV_Click(object sender, EventArgs e)
         {
-            QLDGtick.Start();
+            danhsachNV1.Visible = true;
         }
     }
 }
