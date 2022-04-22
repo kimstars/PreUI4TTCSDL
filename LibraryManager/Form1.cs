@@ -23,6 +23,7 @@ namespace LibraryManager
             FrmLogin1.Visible = false;
             frmThongtin.Visible = false;
             frminfoDG.Visible = false;
+            formQLInfo.Visible = false;
         }
 
 
@@ -178,10 +179,10 @@ namespace LibraryManager
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            hideChildForm();
             //frminfoDG.Visible = true;
             formQLInfo.Visible = true;
-            Template.Captaikhoan newform = new Template.Captaikhoan();
-            newform.Show();
+        
         }
     }
 }

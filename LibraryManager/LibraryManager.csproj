@@ -73,7 +73,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="daoo\dbService.cs" />
+    <Compile Include="BUS\MatKhau_BUS.cs" />
+    <Compile Include="BUS\TaiKhoan_BUS.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\MatKhau_DAO.cs" />
+    <Compile Include="DAO\TaiKhoan_DAO.cs" />
+    <Compile Include="DTO\BienBanViPham.cs" />
+    <Compile Include="DTO\CuonSach.cs" />
+    <Compile Include="DTO\DauSach.cs" />
+    <Compile Include="DTO\DocGia.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\NhaXuatBan.cs" />
+    <Compile Include="DTO\PhieuMuonTra.cs" />
+    <Compile Include="DTO\PhieuNhap.cs" />
+    <Compile Include="DTO\SangTac.cs" />
+    <Compile Include="DTO\TacGia.cs" />
+    <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\TheLoai.cs" />
+    <Compile Include="DTO\ThongTinMuonTra.cs" />
+    <Compile Include="DTO\ThongTinNhapSach.cs" />
+    <Compile Include="DTO\ViPham.cs" />
+    <Compile Include="DTO\XuatBan.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,21 +106,6 @@
     <Compile Include="frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\BIENBANVIPHAM.cs" />
-    <Compile Include="model\CUONSACH.cs" />
-    <Compile Include="model\DAUSACH.cs" />
-    <Compile Include="model\DOCGIA.cs" />
-    <Compile Include="model\modelThuVien.Context.cs" />
-    <Compile Include="model\modelThuVien.cs" />
-    <Compile Include="model\modelThuVien.Designer.cs" />
-    <Compile Include="model\NHANVIEN.cs" />
-    <Compile Include="model\NHAXUATBAN.cs" />
-    <Compile Include="model\PHIEUMUONTRA.cs" />
-    <Compile Include="model\PHIEUNHAP.cs" />
-    <Compile Include="model\sysdiagram.cs" />
-    <Compile Include="model\TACGIA.cs" />
-    <Compile Include="model\THONGTINMUONTRA.cs" />
-    <Compile Include="model\THONGTINNHAPSACH.cs" />
     <Compile Include="Template\Captaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,7 +238,6 @@
     <None Include="Resources\icons8_user_50px_2.png" />
     <None Include="Resources\icons8_phone_26px.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_edit_property_26px.png" />
     <None Include="Resources\icons8_Delete_30px.png" />
@@ -265,5 +269,6 @@
     <None Include="Resources\icons8_administrator_male_50px.png" />
     <None Include="Resources\icons8_circled_user_male_skin_type_3_40px_1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

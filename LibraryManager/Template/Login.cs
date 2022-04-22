@@ -8,14 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LibraryManager.DTO;
+using LibraryManager.BUS;
 
 
 namespace LibraryManager
 {
     public partial class Login : UserControl
     {
-        private model.THUVIEN123Entities2 db = daoo.dbService.db;
+
         public Login()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace LibraryManager
             if(user.Trim() == string.Empty)
             {
 
-                errorProvider1.SetError(lbMsg, "ko được để trống!!");
+                errorProvider1.SetError(lbMsg, "Không được để trống!!");
                 lbMsg.Text = "Bạn phải nhập Tên đăng nhập!!";
                 check1 = false;
             }
@@ -60,12 +61,12 @@ namespace LibraryManager
 
             if (pass.Trim() == string.Empty)
             {
-                errorProvider1.SetError(lbMsg, "ko được để trống!!");
+                errorProvider1.SetError(lbMsg, "Không được để trống!!");
                 lbMsg.Text = "Bạn phải nhập mật khẩu!!";
                 check2 = false;
             }else if (!CheckPassword(pass))
             {
-                errorProvider1.SetError(lbMsg, "ko được để trống!!");
+                errorProvider1.SetError(lbMsg, "Không được để trống!!");
                 check2 = false;
             }
             else
@@ -82,21 +83,20 @@ namespace LibraryManager
             if(check1 && check2 && check3)
             {
 
-                int cnt = db.DOCGIAs.Where(p => p.MaDocGia == user).ToList().Count;
+                TaiKhoan_BUS tk = new TaiKhoan_BUS();
 
-                if (cnt == 0)
+                if (tk.DangNhap(user,pass))
+                {
+                    MessageBox.Show("Đăng nhập thành công !!" );
+
+                }
+                else
                 {
                     MessageBox.Show("Không tồn tại độc giả nào có mã " + user, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                model.DOCGIA nv = db.DOCGIAs.Where(p => p.MaDocGia == user).FirstOrDefault();
-
-                if (nv.MatKhau != pass)
-                {
-                    MessageBox.Show("Mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                
 
             }
 
