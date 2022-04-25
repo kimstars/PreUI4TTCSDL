@@ -53,7 +53,7 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\NAM 3 KI 2\thực tập csdl\LibraryManager\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -183,6 +183,12 @@
     <Compile Include="FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\tk_muontra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\tk_muontra.Designer.cs">
+      <DependentUpon>tk_muontra.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -230,6 +236,9 @@
     </Compile>
     <EmbeddedResource Include="Template\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\tk_muontra.resx">
+      <DependentUpon>tk_muontra.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -309,6 +318,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_search_client_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_100px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
