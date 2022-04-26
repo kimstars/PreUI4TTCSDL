@@ -186,6 +186,9 @@ namespace LibraryManager
 
             Template.FormAdmin newform = new Template.FormAdmin();
             newform.Show();
+
+
+
         }
     }
 }

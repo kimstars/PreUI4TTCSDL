@@ -22,5 +22,15 @@ namespace LibraryManager.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True")]
+        public string THUVIENMTAConnectionString {
+            get {
+                return ((string)(this["THUVIENMTAConnectionString"]));
+            }
+        }
     }
 }

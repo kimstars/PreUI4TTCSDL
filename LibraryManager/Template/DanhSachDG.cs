@@ -11,31 +11,31 @@ using LibraryManager.BUS;
 
 namespace LibraryManager.Template
 {
-    public partial class DanhsachNV : UserControl
+    public partial class DanhSachDG : UserControl
     {
-        NhanVien_BUS nvbus = new NhanVien_BUS();
-        public DanhsachNV()
+        public DanhSachDG()
         {
             InitializeComponent();
         }
+        DocGia_BUS dgBus = new DocGia_BUS();
 
-        private void DanhsachNV_Load(object sender, EventArgs e)
+        private void DanhSachDG_Load(object sender, EventArgs e)
         {
-            dgvNhanvien.DataSource = nvbus.GetList();
+            dgvDG.DataSource = dgBus.GetList();
         }
 
         private void btnSearchNV_Click(object sender, EventArgs e)
         {
             string keyword = txtSearch.Text;
-            string type = cbFilterNV.Text;
+            string type = cbFilterDG.Text;
             MessageBox.Show(type);
             if (keyword != "")
             {
-                dgvNhanvien.DataSource = nvbus.TimKiem(keyword);
+                dgvDG.DataSource = dgBus.TimKiem(keyword);
             }
             else
             {
-                dgvNhanvien.DataSource = nvbus.GetList();
+                dgvDG.DataSource = dgBus.GetList();
             }
         }
     }
