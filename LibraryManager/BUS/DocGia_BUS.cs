@@ -48,7 +48,14 @@ namespace LibraryManager.BUS
         {
             byte[] img = LoadImageFromTableDB("DocGia", maID, "MaDocGia");
             PictureBox avt = new PictureBox();
-            return Image.FromStream(new MemoryStream(img));
+            if (img !=  null)
+            {
+                return Image.FromStream(new MemoryStream(img));
+            }
+            else
+            {
+                return Properties.Resources.icons8_search_client_80px;
+            }
             
         }
         
