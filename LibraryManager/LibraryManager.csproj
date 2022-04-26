@@ -136,6 +136,11 @@
     <Compile Include="frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Template\Captaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,14 +297,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Template\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,7 +392,6 @@
   <ItemGroup>
     <None Include="Resources\icons8_search_client_80px.png" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="Resources\search_26px.png" />
   </ItemGroup>
@@ -411,7 +410,6 @@
   <ItemGroup>
     <None Include="Resources\icons8_borrow_book_64px.png" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="Resources\icons8_back_24px.png" />
   </ItemGroup>
@@ -433,6 +431,5 @@
   <ItemGroup>
     <None Include="Resources\155.jpg" />
   </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
