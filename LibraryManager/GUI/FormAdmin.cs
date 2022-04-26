@@ -170,9 +170,10 @@ namespace LibraryManager.Template
 
         void hideChildFrm()
         {
-            danhsachNV1.Visible = false;
-            infoDG.Visible = false;
-            danhSachDG1.Visible = false;
+            //danhsachNV1.Visible = false;
+            
+            //infoDG.Visible = false;
+            //danhSachDG1.Visible = false;
         }
 
 
@@ -190,7 +191,7 @@ namespace LibraryManager.Template
         private void btnThuNghiem_Click(object sender, EventArgs e)
         {
             hideChildFrm();
-            infoDG.Visible = true;
+            //infoDG.Visible = true;
         }
 
         private void btnDSDocGia_Click(object sender, EventArgs e)

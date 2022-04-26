@@ -160,7 +160,7 @@ namespace LibraryManager.Template
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(131, 220);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
@@ -234,7 +234,7 @@ namespace LibraryManager.Template
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.IconRight = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
             this.txtName.Location = new System.Drawing.Point(25, 39);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -284,7 +284,7 @@ namespace LibraryManager.Template
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(24, 220);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "";
@@ -322,7 +322,7 @@ namespace LibraryManager.Template
             this.txtDonvi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonvi.HoverState.Parent = this.txtDonvi;
             this.txtDonvi.Location = new System.Drawing.Point(23, 126);
-            this.txtDonvi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDonvi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDonvi.Name = "txtDonvi";
             this.txtDonvi.PasswordChar = '\0';
             this.txtDonvi.PlaceholderText = "";
@@ -350,7 +350,7 @@ namespace LibraryManager.Template
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
             this.txtDiachi.Location = new System.Drawing.Point(23, 39);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "";
@@ -438,7 +438,7 @@ namespace LibraryManager.Template
             this.btnOpenImage.ForeColor = System.Drawing.Color.White;
             this.btnOpenImage.HoverState.Parent = this.btnOpenImage;
             this.btnOpenImage.Location = new System.Drawing.Point(41, 191);
-            this.btnOpenImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpenImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpenImage.Name = "btnOpenImage";
             this.btnOpenImage.ShadowDecoration.Parent = this.btnOpenImage;
             this.btnOpenImage.Size = new System.Drawing.Size(144, 34);

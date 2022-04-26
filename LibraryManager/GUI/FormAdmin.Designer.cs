@@ -67,7 +67,6 @@ namespace LibraryManager.Template
             this.QLSachTick = new System.Windows.Forms.Timer(this.components);
             this.QLNVtick = new System.Windows.Forms.Timer(this.components);
             this.QLDGtick = new System.Windows.Forms.Timer(this.components);
-            this.infoDG = new LibraryManager.Template.InfoDG();
             this.danhsachNV1 = new LibraryManager.Template.DanhsachNV();
             this.danhSachDG1 = new LibraryManager.Template.DanhSachDG();
             this.paneldrag.SuspendLayout();
@@ -153,10 +152,10 @@ namespace LibraryManager.Template
             this.panelSetting.Controls.Add(this.btnThuNghiem);
             this.panelSetting.Controls.Add(this.btnCaiDat);
             this.panelSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSetting.Location = new System.Drawing.Point(0, 589);
+            this.panelSetting.Location = new System.Drawing.Point(0, 381);
             this.panelSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSetting.Name = "panelSetting";
-            this.panelSetting.Size = new System.Drawing.Size(253, 113);
+            this.panelSetting.Size = new System.Drawing.Size(253, 107);
             this.panelSetting.TabIndex = 14;
             // 
             // btnThuNghiem
@@ -215,7 +214,7 @@ namespace LibraryManager.Template
             this.panelQLDocGia.MaximumSize = new System.Drawing.Size(253, 263);
             this.panelQLDocGia.MinimumSize = new System.Drawing.Size(253, 55);
             this.panelQLDocGia.Name = "panelQLDocGia";
-            this.panelQLDocGia.Size = new System.Drawing.Size(253, 263);
+            this.panelQLDocGia.Size = new System.Drawing.Size(253, 55);
             this.panelQLDocGia.TabIndex = 18;
             // 
             // guna2Button6
@@ -569,7 +568,7 @@ namespace LibraryManager.Template
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(82, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "  Quản lý  ";
             // 
@@ -598,7 +597,7 @@ namespace LibraryManager.Template
             this.nameuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nameuser.Location = new System.Drawing.Point(81, 7);
             this.nameuser.Name = "nameuser";
-            this.nameuser.Size = new System.Drawing.Size(78, 28);
+            this.nameuser.Size = new System.Drawing.Size(64, 21);
             this.nameuser.TabIndex = 12;
             this.nameuser.Text = "ADMIN";
             // 
@@ -609,7 +608,7 @@ namespace LibraryManager.Template
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(82, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 28);
+            this.label2.Size = new System.Drawing.Size(115, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Thư viện MTA";
             // 
@@ -642,25 +641,17 @@ namespace LibraryManager.Template
             // 
             this.QLDGtick.Tick += new System.EventHandler(this.QLDGtick_Tick);
             // 
-            // infoDG
-            // 
-            this.infoDG.Location = new System.Drawing.Point(273, 80);
-            this.infoDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.infoDG.Name = "infoDG";
-            this.infoDG.Size = new System.Drawing.Size(824, 729);
-            this.infoDG.TabIndex = 8;
-            this.infoDG.Visible = false;
-            // 
             // danhsachNV1
             // 
-            this.danhsachNV1.Location = new System.Drawing.Point(256, 62);
+            this.danhsachNV1.Location = new System.Drawing.Point(303, 73);
             this.danhsachNV1.Name = "danhsachNV1";
             this.danhsachNV1.Size = new System.Drawing.Size(1134, 803);
             this.danhsachNV1.TabIndex = 9;
             // 
             // danhSachDG1
             // 
-            this.danhSachDG1.Location = new System.Drawing.Point(273, 62);
+            this.danhSachDG1.BackColor = System.Drawing.Color.Transparent;
+            this.danhSachDG1.Location = new System.Drawing.Point(349, 73);
             this.danhSachDG1.Name = "danhSachDG1";
             this.danhSachDG1.Size = new System.Drawing.Size(1134, 803);
             this.danhSachDG1.TabIndex = 10;
@@ -673,7 +664,6 @@ namespace LibraryManager.Template
             this.ClientSize = new System.Drawing.Size(1590, 865);
             this.Controls.Add(this.danhSachDG1);
             this.Controls.Add(this.danhsachNV1);
-            this.Controls.Add(this.infoDG);
             this.Controls.Add(this.paneldrag);
             this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -737,7 +727,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Panel panelSetting;
         private System.Windows.Forms.Timer QLNVtick;
         private System.Windows.Forms.Timer QLDGtick;
-        private InfoDG infoDG;
         private DanhsachNV danhsachNV1;
         private DanhSachDG danhSachDG1;
     }

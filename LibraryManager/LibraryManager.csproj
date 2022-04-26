@@ -124,16 +124,16 @@
     <Compile Include="DTO\ThongTinNhapSach.cs" />
     <Compile Include="DTO\ViPham.cs" />
     <Compile Include="DTO\XuatBan.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhanvien.cs">
+    <Compile Include="GUI\frmNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhanvien.Designer.cs">
+    <Compile Include="GUI\frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -141,10 +141,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Captaikhoan.cs">
+    <Compile Include="GUI\Captaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\Captaikhoan.Designer.cs">
+    <Compile Include="GUI\Captaikhoan.Designer.cs">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\DanhSachDG.cs">
@@ -159,14 +159,13 @@
     <Compile Include="Template\DanhsachNV.Designer.cs">
       <DependentUpon>DanhsachNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\DateTimePickerKiet.cs">
+    <Compile Include="extentItem\DateTimePickerKiet.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Template\ExpandXY.cs" />
-    <Compile Include="Template\FormAdmin.cs">
+    <Compile Include="GUI\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\FormAdmin.Designer.cs">
+    <Compile Include="GUI\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\FrmHome.cs">
@@ -175,16 +174,16 @@
     <Compile Include="Template\FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\frmPhieuphat.cs">
+    <Compile Include="GUI\frmPhieuphat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\frmPhieuphat.Designer.cs">
+    <Compile Include="GUI\frmPhieuphat.Designer.cs">
       <DependentUpon>frmPhieuphat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\frmVipham.cs">
+    <Compile Include="GUI\frmVipham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\frmVipham.Designer.cs">
+    <Compile Include="GUI\frmVipham.Designer.cs">
       <DependentUpon>frmVipham.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\InfoDG.cs">
@@ -199,14 +198,20 @@
     <Compile Include="Template\InfoNV.Designer.cs">
       <DependentUpon>InfoNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\FrmInfoNV_2.cs">
+    <Compile Include="GUI\FrmInfoNV_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\FrmInfoNV_2.Designer.cs">
+    <Compile Include="GUI\FrmInfoNV_2.Designer.cs">
       <DependentUpon>FrmInfoNV_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\PictureBoxKiet.cs">
+    <Compile Include="extentItem\PictureBoxKiet.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\PhieuMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\PhieuMuon.Designer.cs">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\QLInfoDocgia.cs">
       <SubType>UserControl</SubType>
@@ -228,34 +233,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Template\Home.cs">
+    <Compile Include="GUI\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\Home.Designer.cs">
+    <Compile Include="GUI\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDocGia.cs">
+    <Compile Include="GUI\FrmDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDocGia.Designer.cs">
+    <Compile Include="GUI\FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
-    <Compile Include="THUVIENMTADataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>THUVIENMTADataSet.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDocGia.resx">
+    <EmbeddedResource Include="GUI\FrmDocGia.resx">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhanvien.resx">
+    <EmbeddedResource Include="GUI\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\Captaikhoan.resx">
+    <EmbeddedResource Include="GUI\Captaikhoan.resx">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DanhSachDG.resx">
@@ -264,16 +264,16 @@
     <EmbeddedResource Include="Template\DanhsachNV.resx">
       <DependentUpon>DanhsachNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\FormAdmin.resx">
+    <EmbeddedResource Include="GUI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\frmPhieuphat.resx">
+    <EmbeddedResource Include="GUI\frmPhieuphat.resx">
       <DependentUpon>frmPhieuphat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\frmVipham.resx">
+    <EmbeddedResource Include="GUI\frmVipham.resx">
       <DependentUpon>frmVipham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\InfoDG.resx">
@@ -282,8 +282,11 @@
     <EmbeddedResource Include="Template\InfoNV.resx">
       <DependentUpon>InfoNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\FrmInfoNV_2.resx">
+    <EmbeddedResource Include="GUI\FrmInfoNV_2.resx">
       <DependentUpon>FrmInfoNV_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\PhieuMuon.resx">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\QLInfoDocgia.resx">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
@@ -300,7 +303,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\Home.resx">
+    <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -313,17 +316,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="THUVIENMTADataSet.xsc">
-      <DependentUpon>THUVIENMTADataSet.xsd</DependentUpon>
-    </None>
-    <None Include="THUVIENMTADataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>THUVIENMTADataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="THUVIENMTADataSet.xss">
-      <DependentUpon>THUVIENMTADataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -430,6 +422,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\155.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_preview_file_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_remove_tag_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

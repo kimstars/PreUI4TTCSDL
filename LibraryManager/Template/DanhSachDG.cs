@@ -28,7 +28,7 @@ namespace LibraryManager.Template
         {
             string keyword = txtSearch.Text;
             string type = cbFilterDG.Text;
-            MessageBox.Show(type);
+
             if (keyword != "")
             {
                 dgvDG.DataSource = dgBus.TimKiem(keyword);
@@ -37,6 +37,18 @@ namespace LibraryManager.Template
             {
                 dgvDG.DataSource = dgBus.GetList();
             }
+        }
+
+        private void dgvDG_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvDG.Rows[e.RowIndex];
+            txtName.Text = row.Cells[2].Value.ToString();
+            txtDiachi.Text = row.Cells[3].Value.ToString();
+            pickerBirthday.Value = DateTime.Parse(row.Cells[4].Value.ToString()); ;
+            cbGender.Text = row.Cells[5].Value.ToString();
+            txtSDT.Text = row.Cells[6].Value.ToString();
+            txtCMND.Text = row.Cells[7].Value.ToString();
+            txtTendangnhap.Text = row.Cells[9].Value.ToString();
         }
     }
 }
