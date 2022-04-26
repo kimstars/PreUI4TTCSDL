@@ -19,5 +19,6 @@ namespace LibraryManager.DTO
         public string SDT { get; set; }
         public string CMND { get; set; }
         public string TenDangNhap { get; set; }
+        public byte[] Anh { get; set; }
     }
 }

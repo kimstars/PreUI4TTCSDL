@@ -17,5 +17,6 @@ namespace LibraryManager.DTO
         public long GiaTien { get; set; }
         public string MoTa { get; set; }
         public string MaTheLoai { get; set; }
+        public byte[] Anh { get; set; }
     }
 }

@@ -49,7 +49,9 @@ namespace LibraryManager.DAO
 
         public DataTable Search(string _timkiem)
         {
-            string sqlString = string.Format("select * from NHANVIEN where MaNhanVien like N'%{0}%' or HoTen like N'%{0}%'", _timkiem);
+            string sqlString = string.Format("select *  from nhanvien where MaNhanVien like '{0}' or TenNhanVien like N'{0}' or ChucVu like N'{0}' or NgaySinh like '{0}' or GioiTinh like N'{0}' or Email like '{0}' or SDT like '{0}' or CMND like '{0}' or TenDangNhap like '{0}' ", _timkiem);
+            
+
             return GetData(sqlString);
         }
     }

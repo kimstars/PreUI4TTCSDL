@@ -1,7 +1,7 @@
 ﻿
 namespace LibraryManager.Template
 {
-    partial class DanhsachNV
+    partial class DanhSachDG
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,53 +29,100 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvNhanvien = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbFilterNV = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbFilterDG = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvDG = new System.Windows.Forms.DataGridView();
+            this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDG)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvNhanvien
-            // 
-            this.dgvNhanvien.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanvien.GridColor = System.Drawing.Color.Black;
-            this.dgvNhanvien.Location = new System.Drawing.Point(3, 173);
-            this.dgvNhanvien.Name = "dgvNhanvien";
-            this.dgvNhanvien.RowHeadersWidth = 51;
-            this.dgvNhanvien.RowTemplate.Height = 24;
-            this.dgvNhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhanvien.Size = new System.Drawing.Size(1103, 606);
-            this.dgvNhanvien.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(525, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DANH SÁCH NHÂN VIÊN THƯ VIỆN";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnSearchNV);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.cbFilterNV);
+            this.panel1.Controls.Add(this.cbFilterDG);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Location = new System.Drawing.Point(3, 56);
+            this.panel1.Location = new System.Drawing.Point(16, 65);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 111);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(523, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 28);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Bộ lọc";
+            // 
+            // cbFilterDG
+            // 
+            this.cbFilterDG.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilterDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbFilterDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilterDG.FocusedColor = System.Drawing.Color.Empty;
+            this.cbFilterDG.FocusedState.Parent = this.cbFilterDG;
+            this.cbFilterDG.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbFilterDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFilterDG.FormattingEnabled = true;
+            this.cbFilterDG.HoverState.Parent = this.cbFilterDG;
+            this.cbFilterDG.ItemHeight = 30;
+            this.cbFilterDG.Items.AddRange(new object[] {
+            "Theo tên",
+            "Theo Mã nhân viên",
+            "Theo Chức vụ",
+            "Theo Email",
+            "Theo SDT",
+            "Theo Tên đăng nhập",
+            "Auto select"});
+            this.cbFilterDG.ItemsAppearance.Parent = this.cbFilterDG;
+            this.cbFilterDG.Location = new System.Drawing.Point(528, 55);
+            this.cbFilterDG.Name = "cbFilterDG";
+            this.cbFilterDG.ShadowDecoration.Parent = this.cbFilterDG;
+            this.cbFilterDG.Size = new System.Drawing.Size(283, 36);
+            this.cbFilterDG.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.Location = new System.Drawing.Point(4, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 28);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Tìm kiếm NV";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(328, 41);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "DANH SÁCH ĐỘC GIẢ";
+            // 
+            // dgvDG
+            // 
+            this.dgvDG.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDG.GridColor = System.Drawing.Color.Black;
+            this.dgvDG.Location = new System.Drawing.Point(16, 182);
+            this.dgvDG.Name = "dgvDG";
+            this.dgvDG.RowHeadersWidth = 51;
+            this.dgvDG.RowTemplate.Height = 24;
+            this.dgvDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDG.Size = new System.Drawing.Size(1103, 606);
+            this.dgvDG.TabIndex = 5;
             // 
             // btnSearchNV
             // 
@@ -94,53 +141,6 @@ namespace LibraryManager.Template
             this.btnSearchNV.TabIndex = 5;
             this.btnSearchNV.Text = "Tìm kiếm";
             this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(523, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 28);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Bộ lọc";
-            // 
-            // cbFilterNV
-            // 
-            this.cbFilterNV.BackColor = System.Drawing.Color.Transparent;
-            this.cbFilterNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbFilterNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFilterNV.FocusedColor = System.Drawing.Color.Empty;
-            this.cbFilterNV.FocusedState.Parent = this.cbFilterNV;
-            this.cbFilterNV.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbFilterNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbFilterNV.FormattingEnabled = true;
-            this.cbFilterNV.HoverState.Parent = this.cbFilterNV;
-            this.cbFilterNV.ItemHeight = 30;
-            this.cbFilterNV.Items.AddRange(new object[] {
-            "Theo tên",
-            "Theo Mã nhân viên",
-            "Theo Chức vụ",
-            "Theo Email",
-            "Theo SDT",
-            "Theo Tên đăng nhập",
-            "Auto select"});
-            this.cbFilterNV.ItemsAppearance.Parent = this.cbFilterNV;
-            this.cbFilterNV.Location = new System.Drawing.Point(528, 55);
-            this.cbFilterNV.Name = "cbFilterNV";
-            this.cbFilterNV.ShadowDecoration.Parent = this.cbFilterNV;
-            this.cbFilterNV.Size = new System.Drawing.Size(283, 36);
-            this.cbFilterNV.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(4, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 28);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tìm kiếm NV";
             // 
             // txtSearch
             // 
@@ -177,27 +177,27 @@ namespace LibraryManager.Template
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnAdd.Location = new System.Drawing.Point(992, 5);
+            this.btnAdd.Location = new System.Drawing.Point(1005, 14);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(114, 45);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Thêm NV";
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "Thêm";
             // 
-            // DanhsachNV
+            // DanhSachDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvNhanvien);
-            this.Name = "DanhsachNV";
+            this.Controls.Add(this.dgvDG);
+            this.Controls.Add(this.btnAdd);
+            this.Name = "DanhSachDG";
             this.Size = new System.Drawing.Size(1134, 803);
-            this.Load += new System.EventHandler(this.DanhsachNV_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).EndInit();
+            this.Load += new System.EventHandler(this.DanhSachDG_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,14 +205,14 @@ namespace LibraryManager.Template
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvNhanvien;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnSearchNV;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox cbFilterNV;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFilterDG;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvDG;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }
