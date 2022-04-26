@@ -310,5 +310,26 @@
   <ItemGroup>
     <None Include="Resources\icons8_search_client_80px.png" />
   </ItemGroup>
+<<<<<<< Updated upstream
+=======
+  <ItemGroup>
+    <None Include="Resources\search_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check Circle_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_borrow_book_64px.png" />
+  </ItemGroup>
+>>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
