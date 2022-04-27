@@ -18,6 +18,7 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+
         DocGia_BUS dgbus = new DocGia_BUS();
 
         string imgPath = @"";
@@ -25,11 +26,11 @@ namespace LibraryManager.Template
 
         private void btnSaveInfo_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-                 dgbus.LuuAnh("DG000001", imgPath);
+
+            dgbus.LuuAnh("DG000001", imgPath);
             DateTime t = pickerBirthday.Value.Date;
             MessageBox.Show(t.ToString());
-=======
+
             dgbus.LuuAnh("DG000001", imgPath);
 
         }

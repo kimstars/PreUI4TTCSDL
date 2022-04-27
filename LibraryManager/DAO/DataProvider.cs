@@ -59,7 +59,15 @@ namespace LibraryManager.DAO
             connect.Close();
             return imgbin;
         }
-
+        public DataSet chart(string sql)
+        {
+            connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            SqlDataAdapter ad = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            return ds;
+        } 
 
     }
 }
