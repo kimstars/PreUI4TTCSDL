@@ -74,11 +74,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DocGia_BUS.cs" />
+    <Compile Include="BUS\Image_BUS.cs" />
     <Compile Include="BUS\MatKhau_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
     <Compile Include="BUS\ThongKe_BUS.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DocGia_DAO.cs" />
+    <Compile Include="DAO\Image_DAO.cs" />
     <Compile Include="DAO\MatKhau_DAO.cs" />
     <Compile Include="DAO\NhanVien_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />

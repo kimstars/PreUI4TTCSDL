@@ -24,9 +24,9 @@ namespace LibraryManager.DAO
             string sql = string.Format("Insert Into TaiKhoan values('{0}', '{1}', '{2}', '{3}')", dg.MaDocGia, dg.TenDangNhap, "", 1);
             Excute(sql);
 
-            sql = string.Format("Insert Into DOCGIA values('{0}','{1}','{2}','{3}','{4}','{5}')",
-                dg.MaDocGia, dg.TenDocGia, dg.DiaChi, dg.NgaySinh, dg.GioiTinh, dg.SDT, dg.CMND, dg.NgayDangKi, dg.TenDangNhap, dg.Anh);
-            Excute(sql);
+            //sql = string.Format("Insert Into DOCGIA values('{0}','{1}','{2}','{3}','{4}','{5}')",
+            //    dg.MaDocGia, dg.TenDocGia, dg.DiaChi, dg.NgaySinh, dg.GioiTinh, dg.SDT, dg.CMND, dg.NgayDangKi, dg.TenDangNhap, dg.Anh);
+            //Excute(sql);
 
 
             return true;

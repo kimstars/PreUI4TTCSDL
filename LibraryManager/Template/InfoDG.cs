@@ -42,17 +42,17 @@ namespace LibraryManager.Template
 
             txtName.Text = dg.TenDocGia;
             pickerBirthday.Value = dg.NgaySinh;
-            cbGender.Text = dg.GioiTinh;
-            txtSDT.Text = dg.SDT;
-            txtDiachi.Text = dg.DiaChi;
-            txtDonvi.Text = "";
-            txtCMND.Text = dg.CMND;
+            //cbGender.Text = dg.GioiTinh;
+            //txtSDT.Text = dg.SDT;
+            //txtDiachi.Text = dg.DiaChi;
+            //txtDonvi.Text = "";
+            //txtCMND.Text = dg.CMND;
 
 
-            lbInfoName.Text = dg.TenDocGia;
-            lbMaDG.Text = dg.MaDocGia;
-            DateTime dateReg = dg.NgayDangKi;
-            lbInfoDate.Text = dateReg.ToString("MM/dd/yyyy");
+            //lbInfoName.Text = dg.TenDocGia;
+            //lbMaDG.Text = dg.MaDocGia;
+            //DateTime dateReg = dg.NgayDangKi;
+            //lbInfoDate.Text = dateReg.ToString("MM/dd/yyyy");
 
         }
 
