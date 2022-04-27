@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class tk_muontra : UserControl
+    public partial class xulymuontra : UserControl
     {
-        public tk_muontra()
+        public xulymuontra()
         {
             InitializeComponent();
         }

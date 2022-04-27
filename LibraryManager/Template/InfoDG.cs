@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LibraryManager.BUS;
-using LibraryManager.DTO;
 
 namespace LibraryManager.Template
 {
@@ -18,13 +16,14 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
-        DocGia_BUS dgbus = new DocGia_BUS();
-
-        string imgPath = @"";
-
 
         private void btnSaveInfo_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
+                 dgbus.LuuAnh("DG000001", imgPath);
+            DateTime t = pickerBirthday.Value.Date;
+            MessageBox.Show(t.ToString());
+=======
             dgbus.LuuAnh("DG000001", imgPath);
 
         }
@@ -59,15 +58,8 @@ namespace LibraryManager.Template
                 dlg.Title = "Chon anh";
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
+>>>>>>> Stashed changes
 
-                    imgPath = dlg.FileName.ToString();
-                    avtImage.ImageLocation = imgPath;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }
