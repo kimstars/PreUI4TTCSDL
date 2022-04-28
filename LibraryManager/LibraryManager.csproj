@@ -106,6 +106,12 @@
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\NhapSach_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
+    <Compile Include="CreateDB\addImageDauSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDB\addImageDauSach.Designer.cs">
+      <DependentUpon>addImageDauSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDB\NhapSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,7 @@
     <Compile Include="DAO\DauSach_DAO.cs" />
     <Compile Include="DAO\DocGia_DAO.cs" />
     <Compile Include="DAO\Image_DAO.cs" />
+    <Compile Include="DAO\LoadAll_DAO.cs" />
     <Compile Include="DAO\MatKhau_DAO.cs" />
     <Compile Include="DAO\MuonSach_DAO.cs" />
     <Compile Include="DAO\NhanVien_DAO.cs" />
@@ -267,6 +274,9 @@
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="CreateDB\addImageDauSach.resx">
+      <DependentUpon>addImageDauSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateDB\NhapSach.resx">
       <DependentUpon>NhapSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -455,6 +465,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_remove_tag_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_image_file_add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_daily_import_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_daily_import_40px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

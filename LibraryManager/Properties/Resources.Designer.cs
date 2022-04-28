@@ -253,6 +253,26 @@ namespace LibraryManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_database_daily_import_40px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_database_daily_import_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_database_daily_import_40px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_database_daily_import_40px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Delete_30px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Delete_30px", resourceCulture);
@@ -296,6 +316,16 @@ namespace LibraryManager.Properties {
         internal static System.Drawing.Bitmap icons8_home_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_home_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_image_file_add_24px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_image_file_add_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
