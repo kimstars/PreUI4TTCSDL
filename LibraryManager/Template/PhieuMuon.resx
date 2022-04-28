@@ -129,7 +129,19 @@
   <metadata name="GiaTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="lbInfoMota.Text" xml:space="preserve">
     <value>100 bài học then chốt mà mọi doanh nhân đều phải học trong bảy lĩnh vực: Chiến lược, Giáo dục, Con người, Tài chính, Marketing và bán hàng, Khả năng lãnh đạo và động lực, với những suy nghĩ táo bạo, lực chọn đối tác làm ăn tốt nhất, những yếu tố thu hút nhà đầu tư...</value>
   </data>
+  <metadata name="MaSach.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TenDauSach.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ViTriSach.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GiaTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

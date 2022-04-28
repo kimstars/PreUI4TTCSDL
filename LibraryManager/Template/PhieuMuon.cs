@@ -21,5 +21,15 @@ namespace LibraryManager.Template
         {
             
         }
+
+        private void PhieuMuon_Load(object sender, EventArgs e)
+        {
+            string[] listsach = { "S000030", "S000040", "S000045", "S000009", "S000013", "S000012", "S00002" };
+
+
+
+
+
+        }
     }
 }
