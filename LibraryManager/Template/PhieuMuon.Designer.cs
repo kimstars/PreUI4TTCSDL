@@ -30,32 +30,25 @@ namespace LibraryManager.Template
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuMuon));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pickerBirthday = new LibraryManager.Template.DateTimePickerKiet();
+            this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePickerKiet1 = new LibraryManager.Template.DateTimePickerKiet();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViTriSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbMaMuonTra = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbMaDocGia = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbInfoNamXB = new System.Windows.Forms.Label();
+            this.lbInfoMota = new System.Windows.Forms.Label();
+            this.lbInfoTenTG = new System.Windows.Forms.Label();
             this.lbInfoTenSach = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,13 +57,15 @@ namespace LibraryManager.Template
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViTriSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,22 +87,22 @@ namespace LibraryManager.Template
             this.label5.TabIndex = 7;
             this.label5.Text = "Họ và tên độc giả :";
             // 
-            // pickerBirthday
+            // DateMuon
             // 
-            this.pickerBirthday.BorderColor = System.Drawing.Color.Transparent;
-            this.pickerBirthday.BorderRadius = 6;
-            this.pickerBirthday.BorderSize = 0;
-            this.pickerBirthday.CustomFormat = "dd/MM/yyyy";
-            this.pickerBirthday.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pickerBirthday.Location = new System.Drawing.Point(21, 135);
-            this.pickerBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pickerBirthday.MinimumSize = new System.Drawing.Size(4, 37);
-            this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(187, 37);
-            this.pickerBirthday.SkinColor = System.Drawing.Color.White;
-            this.pickerBirthday.TabIndex = 1;
-            this.pickerBirthday.TextColor = System.Drawing.Color.Black;
+            this.DateMuon.BorderColor = System.Drawing.Color.Transparent;
+            this.DateMuon.BorderRadius = 6;
+            this.DateMuon.BorderSize = 0;
+            this.DateMuon.CustomFormat = "dd/MM/yyyy";
+            this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateMuon.Location = new System.Drawing.Point(21, 135);
+            this.DateMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
+            this.DateMuon.Name = "DateMuon";
+            this.DateMuon.Size = new System.Drawing.Size(187, 37);
+            this.DateMuon.SkinColor = System.Drawing.Color.White;
+            this.DateMuon.TabIndex = 1;
+            this.DateMuon.TextColor = System.Drawing.Color.Black;
             // 
             // label4
             // 
@@ -127,7 +122,7 @@ namespace LibraryManager.Template
             this.dateTimePickerKiet1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerKiet1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerKiet1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerKiet1.Location = new System.Drawing.Point(248, 135);
+            this.dateTimePickerKiet1.Location = new System.Drawing.Point(249, 135);
             this.dateTimePickerKiet1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerKiet1.MinimumSize = new System.Drawing.Size(4, 37);
             this.dateTimePickerKiet1.Name = "dateTimePickerKiet1";
@@ -140,7 +135,7 @@ namespace LibraryManager.Template
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(304, 137);
+            this.label2.Location = new System.Drawing.Point(246, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 16;
@@ -155,8 +150,8 @@ namespace LibraryManager.Template
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.pickerBirthday);
-            this.guna2Panel1.Location = new System.Drawing.Point(56, 108);
+            this.guna2Panel1.Controls.Add(this.DateMuon);
+            this.guna2Panel1.Location = new System.Drawing.Point(55, 120);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
@@ -182,13 +177,13 @@ namespace LibraryManager.Template
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(21, 46);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(188, 43);
+            this.txtName.Size = new System.Drawing.Size(200, 43);
             this.txtName.TabIndex = 0;
             // 
             // dataGridView1
@@ -200,56 +195,20 @@ namespace LibraryManager.Template
             this.TenDauSach,
             this.ViTriSach,
             this.GiaTien});
-            this.dataGridView1.Location = new System.Drawing.Point(56, 350);
+            this.dataGridView1.Location = new System.Drawing.Point(55, 350);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 65);
+            this.dataGridView1.Size = new System.Drawing.Size(744, 357);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã cuốn sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            this.MaSach.Width = 125;
-            // 
-            // TenDauSach
-            // 
-            this.TenDauSach.DataPropertyName = "TenDauSach";
-            this.TenDauSach.HeaderText = "Tên đầu sách";
-            this.TenDauSach.MinimumWidth = 6;
-            this.TenDauSach.Name = "TenDauSach";
-            this.TenDauSach.ReadOnly = true;
-            this.TenDauSach.Width = 125;
-            // 
-            // ViTriSach
-            // 
-            this.ViTriSach.DataPropertyName = "ViTriSach";
-            this.ViTriSach.HeaderText = "Vị trí sách";
-            this.ViTriSach.MinimumWidth = 6;
-            this.ViTriSach.Name = "ViTriSach";
-            this.ViTriSach.ReadOnly = true;
-            this.ViTriSach.Width = 125;
-            // 
-            // GiaTien
-            // 
-            this.GiaTien.DataPropertyName = "GiaTien";
-            this.GiaTien.HeaderText = "Giá tiền";
-            this.GiaTien.MinimumWidth = 6;
-            this.GiaTien.Name = "GiaTien";
-            this.GiaTien.ReadOnly = true;
-            this.GiaTien.Width = 125;
             // 
             // lbMaMuonTra
             // 
             this.lbMaMuonTra.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
             this.lbMaMuonTra.Location = new System.Drawing.Point(361, 0);
             this.lbMaMuonTra.Name = "lbMaMuonTra";
-            this.lbMaMuonTra.Size = new System.Drawing.Size(181, 44);
+            this.lbMaMuonTra.Size = new System.Drawing.Size(200, 44);
             this.lbMaMuonTra.TabIndex = 3;
             this.lbMaMuonTra.Text = "000";
             // 
@@ -265,17 +224,17 @@ namespace LibraryManager.Template
             this.label6.TabIndex = 0;
             this.label6.Text = "Mã độc giả :";
             // 
-            // label7
+            // lbMaDocGia
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkRed;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(172, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 28);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "dg000000";
+            this.lbMaDocGia.AutoSize = true;
+            this.lbMaDocGia.BackColor = System.Drawing.Color.DarkRed;
+            this.lbMaDocGia.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaDocGia.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbMaDocGia.Location = new System.Drawing.Point(174, 68);
+            this.lbMaDocGia.Name = "lbMaDocGia";
+            this.lbMaDocGia.Size = new System.Drawing.Size(102, 28);
+            this.lbMaDocGia.TabIndex = 1;
+            this.lbMaDocGia.Text = "dg000000";
             // 
             // label3
             // 
@@ -283,7 +242,7 @@ namespace LibraryManager.Template
             this.label3.BackColor = System.Drawing.Color.MediumTurquoise;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(336, 68);
+            this.label3.Location = new System.Drawing.Point(358, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(297, 28);
             this.label3.TabIndex = 2;
@@ -295,9 +254,9 @@ namespace LibraryManager.Template
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.Controls.Add(this.guna2Button1);
             this.guna2Panel2.Controls.Add(this.btnSearchNV);
-            this.guna2Panel2.Controls.Add(this.label13);
-            this.guna2Panel2.Controls.Add(this.label12);
-            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.Controls.Add(this.lbInfoNamXB);
+            this.guna2Panel2.Controls.Add(this.lbInfoMota);
+            this.guna2Panel2.Controls.Add(this.lbInfoTenTG);
             this.guna2Panel2.Controls.Add(this.lbInfoTenSach);
             this.guna2Panel2.Controls.Add(this.label11);
             this.guna2Panel2.Controls.Add(this.label10);
@@ -347,36 +306,36 @@ namespace LibraryManager.Template
             this.btnSearchNV.TabIndex = 2;
             this.btnSearchNV.Text = "Preview";
             // 
-            // label13
+            // lbInfoNamXB
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(148, 251);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 28);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "2020";
+            this.lbInfoNamXB.AutoSize = true;
+            this.lbInfoNamXB.BackColor = System.Drawing.Color.Transparent;
+            this.lbInfoNamXB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfoNamXB.Location = new System.Drawing.Point(199, 251);
+            this.lbInfoNamXB.Name = "lbInfoNamXB";
+            this.lbInfoNamXB.Size = new System.Drawing.Size(56, 28);
+            this.lbInfoNamXB.TabIndex = 26;
+            this.lbInfoNamXB.Text = "2020";
             // 
-            // label12
+            // lbInfoMota
             // 
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label12.Location = new System.Drawing.Point(93, 309);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(331, 206);
-            this.label12.TabIndex = 25;
-            this.label12.Text = resources.GetString("label12.Text");
+            this.lbInfoMota.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lbInfoMota.Location = new System.Drawing.Point(93, 309);
+            this.lbInfoMota.Name = "lbInfoMota";
+            this.lbInfoMota.Size = new System.Drawing.Size(331, 206);
+            this.lbInfoMota.TabIndex = 25;
+            this.lbInfoMota.Text = resources.GetString("lbInfoMota.Text");
             // 
-            // label8
+            // lbInfoTenTG
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(100, 210);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(155, 28);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Kevin D.Johnson";
+            this.lbInfoTenTG.AutoSize = true;
+            this.lbInfoTenTG.BackColor = System.Drawing.Color.Transparent;
+            this.lbInfoTenTG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfoTenTG.Location = new System.Drawing.Point(100, 210);
+            this.lbInfoTenTG.Name = "lbInfoTenTG";
+            this.lbInfoTenTG.Size = new System.Drawing.Size(155, 28);
+            this.lbInfoTenTG.TabIndex = 24;
+            this.lbInfoTenTG.Text = "Kevin D.Johnson";
             // 
             // lbInfoTenSach
             // 
@@ -438,7 +397,7 @@ namespace LibraryManager.Template
             this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.Controls.Add(this.label15);
             this.guna2Panel3.Controls.Add(this.label14);
-            this.guna2Panel3.Location = new System.Drawing.Point(557, 108);
+            this.guna2Panel3.Location = new System.Drawing.Point(556, 120);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
@@ -448,7 +407,8 @@ namespace LibraryManager.Template
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(27, 91);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(47, 91);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(184, 52);
             this.label15.TabIndex = 24;
@@ -463,75 +423,51 @@ namespace LibraryManager.Template
             this.label14.TabIndex = 1;
             this.label14.Text = "Tổng tiền cọc:";
             // 
-            // guna2DataGridView1
+            // MaSach
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(55, 454);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.guna2DataGridView1.TabIndex = 23;
-            this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã cuốn sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Width = 125;
+            // 
+            // TenDauSach
+            // 
+            this.TenDauSach.DataPropertyName = "TenDauSach";
+            this.TenDauSach.HeaderText = "Tên đầu sách";
+            this.TenDauSach.MinimumWidth = 6;
+            this.TenDauSach.Name = "TenDauSach";
+            this.TenDauSach.ReadOnly = true;
+            this.TenDauSach.Width = 290;
+            // 
+            // ViTriSach
+            // 
+            this.ViTriSach.DataPropertyName = "ViTriSach";
+            this.ViTriSach.HeaderText = "Vị trí sách";
+            this.ViTriSach.MinimumWidth = 6;
+            this.ViTriSach.Name = "ViTriSach";
+            this.ViTriSach.ReadOnly = true;
+            this.ViTriSach.Width = 125;
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.DataPropertyName = "GiaTien";
+            this.GiaTien.HeaderText = "Giá tiền";
+            this.GiaTien.MinimumWidth = 6;
+            this.GiaTien.Name = "GiaTien";
+            this.GiaTien.ReadOnly = true;
+            this.GiaTien.Width = 150;
             // 
             // PhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbMaDocGia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbMaMuonTra);
             this.Controls.Add(this.dataGridView1);
@@ -540,6 +476,7 @@ namespace LibraryManager.Template
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PhieuMuon";
             this.Size = new System.Drawing.Size(1333, 801);
+            this.Load += new System.EventHandler(this.PhieuMuon_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -547,7 +484,6 @@ namespace LibraryManager.Template
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,7 +494,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label label5;
-        private DateTimePickerKiet pickerBirthday;
+        private DateTimePickerKiet DateMuon;
         private System.Windows.Forms.Label label4;
         private DateTimePickerKiet dateTimePickerKiet1;
         private System.Windows.Forms.Label label2;
@@ -566,17 +502,17 @@ namespace LibraryManager.Template
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbMaMuonTra;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbMaDocGia;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbInfoTenTG;
         private System.Windows.Forms.Label lbInfoTenSach;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox imageBook;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbInfoMota;
+        private System.Windows.Forms.Label lbInfoNamXB;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnSearchNV;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
@@ -586,6 +522,5 @@ namespace LibraryManager.Template
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn ViTriSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

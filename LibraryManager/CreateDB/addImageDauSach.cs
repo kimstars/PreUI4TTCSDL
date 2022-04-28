@@ -55,7 +55,10 @@ namespace LibraryManager.CreateDB
                 MessageBox.Show("Chọn tên bảng đi !! ");
                 return;
             }
-            string[] files = Directory.GetFiles(txtPathFolder.Text);
+            
+
+            var filenames = Directory.GetFiles(txtPathFolder.Text).OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f)));
+
             string tablename = cbTableName.Text;
             string maid = "";
             string typeid = "";
@@ -82,9 +85,8 @@ namespace LibraryManager.CreateDB
                         break;
                     }
             }
-            MessageBox.Show(files[0]);
             int i = 0;
-            foreach (string file in files)
+            foreach (string file in filenames)
             {
                 img.SaveImage(tablename, AutoTaoMa(maid, i), typeid, file);
                 i++;

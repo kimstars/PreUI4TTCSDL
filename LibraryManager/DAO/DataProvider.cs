@@ -21,6 +21,15 @@ namespace LibraryManager.DAO
             adapter.Fill(rs);
             return rs;
         }
+
+        public SqlDataAdapter GetDataSet(string sql)
+        {
+            
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
+
+            return adapter;
+        }
+
         public void Excute(string sql)
         {
             connect.Open();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using LibraryManager.DTO;
 using System.Windows.Forms;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
@@ -41,7 +42,22 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
-        
+        // độc giả chọn sách -> bảng ghi thông tin các sách độc giả chọn
+        public DataTable LoadThongTinSachMuon(string [] ListMaSach)
+        { 
+            string sql = "";
+
+            DataTable rs = new DataTable();
+
+            foreach (var i in ListMaSach)
+            {
+                sql = $"SELECT * FROM CuonSach WHERE MaSach = '{i}'";
+                SqlDataAdapter temp = GetDataSet(sql);
+                temp.Fill(rs);
+            }
+            return rs;
+        }
+
 
     }
 }
