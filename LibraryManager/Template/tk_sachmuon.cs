@@ -26,7 +26,7 @@ namespace LibraryManager.Template
             chartTK.DataSource = tkBus.LoadChartSachMuon();
             chartTK.Series["Sách mượn"].XValueMember = "trangthai";
             chartTK.Series["Sách mượn"].YValueMembers = "giatri";
-            chartTK.Titles.Add("Sách mượn Chart");
+            chartTK.Titles.Add("Sách mượn");
             chartTK.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
         }
     }
