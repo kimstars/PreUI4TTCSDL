@@ -40,7 +40,6 @@ namespace LibraryManager
             this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongtin = new Guna.UI2.WinForms.Guna2Button();
             this.PaneLogin = new System.Windows.Forms.Panel();
-            this.tk_sachmuon1 = new LibraryManager.Template.tk_sachmuon();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.btnloginQL = new Guna.UI2.WinForms.Guna2Button();
             this.btnloginNV = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +47,6 @@ namespace LibraryManager
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.frminfoDG = new LibraryManager.Template.InfoDG();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -56,11 +54,12 @@ namespace LibraryManager
             this.LoginTick = new System.Windows.Forms.Timer(this.components);
             this.Paneltoolbar = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.frmThongtin = new LibraryManager.Template.Thongtin();
-            this.FrmLogin1 = new LibraryManager.Login();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
-            this.tk_sachmuon2 = new LibraryManager.Template.tk_sachmuon();
+            this.frminfoDG = new LibraryManager.Template.InfoDG();
+            this.frmThongtin = new LibraryManager.Template.Thongtin();
+            this.FrmLogin1 = new LibraryManager.Login();
+            this.tk_sachmuon1 = new LibraryManager.Template.tk_sachmuon();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -202,7 +201,6 @@ namespace LibraryManager
             // 
             // PaneLogin
             // 
-            this.PaneLogin.Controls.Add(this.tk_sachmuon1);
             this.PaneLogin.Controls.Add(this.btnLogin);
             this.PaneLogin.Controls.Add(this.btnloginQL);
             this.PaneLogin.Controls.Add(this.btnloginNV);
@@ -215,13 +213,6 @@ namespace LibraryManager
             this.PaneLogin.Name = "PaneLogin";
             this.PaneLogin.Size = new System.Drawing.Size(253, 214);
             this.PaneLogin.TabIndex = 17;
-            // 
-            // tk_sachmuon1
-            // 
-            this.tk_sachmuon1.Location = new System.Drawing.Point(0, 0);
-            this.tk_sachmuon1.Name = "tk_sachmuon1";
-            this.tk_sachmuon1.Size = new System.Drawing.Size(956, 717);
-            this.tk_sachmuon1.TabIndex = 18;
             // 
             // btnLogin
             // 
@@ -348,15 +339,6 @@ namespace LibraryManager
             this.label2.Text = "Thư viện MTA";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // frminfoDG
-            // 
-            this.frminfoDG.Location = new System.Drawing.Point(260, 52);
-            this.frminfoDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.frminfoDG.Name = "frminfoDG";
-            this.frminfoDG.Size = new System.Drawing.Size(824, 729);
-            this.frminfoDG.TabIndex = 13;
-            this.frminfoDG.Visible = false;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
@@ -413,23 +395,6 @@ namespace LibraryManager
             // 
             this.guna2DragControl1.TargetControl = this.Paneltoolbar;
             // 
-            // frmThongtin
-            // 
-            this.frmThongtin.Location = new System.Drawing.Point(423, 58);
-            this.frmThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.frmThongtin.Name = "frmThongtin";
-            this.frmThongtin.Size = new System.Drawing.Size(531, 542);
-            this.frmThongtin.TabIndex = 11;
-            this.frmThongtin.Visible = false;
-            // 
-            // FrmLogin1
-            // 
-            this.FrmLogin1.Location = new System.Drawing.Point(411, 58);
-            this.FrmLogin1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FrmLogin1.Name = "FrmLogin1";
-            this.FrmLogin1.Size = new System.Drawing.Size(517, 532);
-            this.FrmLogin1.TabIndex = 7;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -453,19 +418,45 @@ namespace LibraryManager
             this.formQLInfo.TabIndex = 14;
             this.formQLInfo.Visible = false;
             // 
-            // tk_sachmuon2
+            // frminfoDG
             // 
-            this.tk_sachmuon2.Location = new System.Drawing.Point(234, 16);
-            this.tk_sachmuon2.Name = "tk_sachmuon2";
-            this.tk_sachmuon2.Size = new System.Drawing.Size(956, 717);
-            this.tk_sachmuon2.TabIndex = 15;
+            this.frminfoDG.Location = new System.Drawing.Point(260, 52);
+            this.frminfoDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.frminfoDG.Name = "frminfoDG";
+            this.frminfoDG.Size = new System.Drawing.Size(824, 729);
+            this.frminfoDG.TabIndex = 13;
+            this.frminfoDG.Visible = false;
+            // 
+            // frmThongtin
+            // 
+            this.frmThongtin.Location = new System.Drawing.Point(423, 58);
+            this.frmThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.frmThongtin.Name = "frmThongtin";
+            this.frmThongtin.Size = new System.Drawing.Size(531, 542);
+            this.frmThongtin.TabIndex = 11;
+            this.frmThongtin.Visible = false;
+            // 
+            // FrmLogin1
+            // 
+            this.FrmLogin1.Location = new System.Drawing.Point(411, 58);
+            this.FrmLogin1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FrmLogin1.Name = "FrmLogin1";
+            this.FrmLogin1.Size = new System.Drawing.Size(517, 532);
+            this.FrmLogin1.TabIndex = 7;
+            // 
+            // tk_sachmuon1
+            // 
+            this.tk_sachmuon1.Location = new System.Drawing.Point(259, 12);
+            this.tk_sachmuon1.Name = "tk_sachmuon1";
+            this.tk_sachmuon1.Size = new System.Drawing.Size(825, 626);
+            this.tk_sachmuon1.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1591, 866);
-            this.Controls.Add(this.tk_sachmuon2);
+            this.Controls.Add(this.tk_sachmuon1);
             this.Controls.Add(this.PanelMenuBar);
             this.Controls.Add(this.formQLInfo);
             this.Controls.Add(this.frminfoDG);
@@ -520,6 +511,5 @@ namespace LibraryManager
         private Template.InfoDG frminfoDG;
         private Template.QLInfoDocgia formQLInfo;
         private Template.tk_sachmuon tk_sachmuon1;
-        private Template.tk_sachmuon tk_sachmuon2;
     }
 }

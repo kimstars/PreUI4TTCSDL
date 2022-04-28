@@ -17,5 +17,9 @@ namespace LibraryManager.BUS
             return tkDao.Get_chart_tk_sachmuon();
 
         }
+        public DataTable load_tt_sachmuon()
+        {
+            return tkDao.tk_sachmuon();
+        }
     }
 }

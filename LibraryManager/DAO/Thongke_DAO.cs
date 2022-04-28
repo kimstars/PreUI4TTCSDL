@@ -21,7 +21,7 @@ namespace LibraryManager.DAO
             string sqlString = "select trangthai, count(trangthai) as giatri from cuonsach group by trangthai ";
             return chart(sqlString);
             
-            
         }
+        
     }
 }
