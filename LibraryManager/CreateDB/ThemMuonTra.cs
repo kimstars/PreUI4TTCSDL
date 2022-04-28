@@ -61,15 +61,15 @@ namespace LibraryManager.CreateDB
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            phieuMT.MaDocGia = cbMaDG.Text;
-            phieuMT.MaMuonTra = txtMaMT.Text;
-            phieuMT.MaNhanVien = cbNV.Text;
+            phieuMT.MaDocGia = cbMaDG.Text.Trim();
+            phieuMT.MaMuonTra = txtMaMT.Text.Trim();
+            phieuMT.MaNhanVien = cbNV.Text.Trim();
             phieuMT.NgayMuon = dateMuon.Value;
             phieuMT.HanTra = dateHanTra.Value;
 
 
-            TTMuonTra.MaMuonTra = txtMaMT.Text;
-            TTMuonTra.MaSach = cbMaSach.Text;
+            TTMuonTra.MaMuonTra = txtMaMT.Text.Trim();
+            TTMuonTra.MaSach = cbMaSach.Text.Trim();
             TTMuonTra.NgayTra = null;
 
 
@@ -81,7 +81,9 @@ namespace LibraryManager.CreateDB
 
             AutoTaoMa();
 
-
+            RandomCombobox(ref cbMaDG);
+            RandomCombobox(ref cbNV);
+            RandomCombobox(ref cbMaSach);
 
         }
 
@@ -98,6 +100,17 @@ namespace LibraryManager.CreateDB
             DateTime date = dateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));
             dateHanTra.Value = date;
 
+        }
+
+        private void RandomCombobox(ref ComboBox comboBox)
+        {
+            Random random = new Random();
+            int newSelectedIndex = comboBox.SelectedIndex;
+            while (newSelectedIndex == comboBox.SelectedIndex)
+            {
+                newSelectedIndex = random.Next(0, comboBox.Items.Count);
+            }
+            comboBox.SelectedIndex = newSelectedIndex;
         }
     }
 }
