@@ -97,16 +97,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CuonSach_BUS.cs" />
+    <Compile Include="BUS\DauSach_BUS.cs" />
     <Compile Include="BUS\DocGia_BUS.cs" />
     <Compile Include="BUS\Image_BUS.cs" />
     <Compile Include="BUS\MatKhau_BUS.cs" />
+    <Compile Include="BUS\MuonSach_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
+    <Compile Include="BUS\NhapSach_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
+    <Compile Include="CreateDB\NhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDB\NhapSach.Designer.cs">
+      <DependentUpon>NhapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateDB\ThemMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDB\ThemMuonTra.Designer.cs">
+      <DependentUpon>ThemMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\CuonSach_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DauSach_DAO.cs" />
     <Compile Include="DAO\DocGia_DAO.cs" />
     <Compile Include="DAO\Image_DAO.cs" />
     <Compile Include="DAO\MatKhau_DAO.cs" />
+    <Compile Include="DAO\MuonSach_DAO.cs" />
     <Compile Include="DAO\NhanVien_DAO.cs" />
+    <Compile Include="DAO\NhapSach_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />
     <Compile Include="DTO\BienBanViPham.cs" />
     <Compile Include="DTO\CuonSach.cs" />
@@ -124,6 +144,7 @@
     <Compile Include="DTO\ThongTinNhapSach.cs" />
     <Compile Include="DTO\ViPham.cs" />
     <Compile Include="DTO\XuatBan.cs" />
+    <Compile Include="extentItem\RandomDateTime.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +267,12 @@
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="CreateDB\NhapSach.resx">
+      <DependentUpon>NhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateDB\ThemMuonTra.resx">
+      <DependentUpon>ThemMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

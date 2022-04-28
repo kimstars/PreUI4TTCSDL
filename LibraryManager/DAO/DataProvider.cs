@@ -56,9 +56,42 @@ namespace LibraryManager.DAO
                 imgbin = (byte[])reader[0];
             }
             connect.Close();
-            return imgbin;
+            return imgbin ;
         }
 
+
+        public string ExcuteRetStr(string sql)
+        {
+            
+            
+            string res = "";
+
+            using (SqlCommand command = new SqlCommand(sql, connect))
+            {
+                if (connect.State != ConnectionState.Open)
+                    connect.Open();
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    res = result.ToString();
+                    //MessageBox.Show(res);
+                }
+            }
+
+            connect.Close();
+
+            return res;
+            
+        }
+
+
+        public string DateToString(Nullable<DateTime> d)
+        {
+
+            if (d != null) return d.Value.ToString("yyyy/MM/dd");
+            return "";
+
+        }
 
     }
 }

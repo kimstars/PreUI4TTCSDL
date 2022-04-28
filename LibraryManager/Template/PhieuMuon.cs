@@ -19,7 +19,7 @@ namespace LibraryManager.Template
 
         private void label12_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

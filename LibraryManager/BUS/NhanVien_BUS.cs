@@ -55,5 +55,11 @@ namespace LibraryManager.BUS
             avt.Image = Image.FromStream(new MemoryStream(img));
             return avt; 
         }
+
+
+        public DataTable LoadMaNhanVien() {
+            return nvDao.GetMaNV();
+        }
     }
+
 }

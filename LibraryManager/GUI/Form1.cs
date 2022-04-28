@@ -184,11 +184,23 @@ namespace LibraryManager
             //frminfoDG.Visible = true;
             formQLInfo.Visible = true;
 
-            Template.FormAdmin newform = new Template.FormAdmin();
-            newform.Show();
+            //Template.FormAdmin newform = new Template.FormAdmin();
+            //newform.Show();
+
+            CreateDB.ThemMuonTra newThemMT = new CreateDB.ThemMuonTra();
+            newThemMT.Show();
 
 
 
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            CreateDB.NhapSach newNhap = new CreateDB.NhapSach();
+            newNhap.Show();
+        }
+
+        
     }
 }

@@ -77,5 +77,18 @@ namespace LibraryManager.DAO
             return dg;
 
         }
+
+
+
+
+        #region get
+
+        public DataTable GetMaDG()
+        {
+            string sql = "SELECT MaDocGia FROM dbo.DOCGIA";
+            return GetData(sql);
+        }
+
+        #endregion
     }
 }

@@ -54,5 +54,19 @@ namespace LibraryManager.DAO
 
             return GetData(sqlString);
         }
+
+
+        #region get
+
+        public DataTable GetMaNV()
+        {
+            string sql = "SELECT MaNhanVien FROM dbo.NHANVIEN";
+            return GetData(sql);
+        }
+
+
+        #endregion
+
+
     }
 }

@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.DAO;
 using LibraryManager.DTO;
+using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
-using System.Data;
 
 namespace LibraryManager.BUS
 {
@@ -68,6 +68,12 @@ namespace LibraryManager.BUS
         public DocGia GetOne(string maDG)
         {
             return dgDao.GetMotDG(maDG);
+        }
+
+
+        public DataTable LoadMaDocGia()
+        {
+            return dgDao.GetMaDG();
         }
     }
 }
