@@ -51,12 +51,15 @@ namespace LibraryManager.DAO
 
             foreach (var i in ListMaSach)
             {
-                sql = $"SELECT * FROM CuonSach WHERE MaSach = '{i}'";
+                sql = $"SELECT top 1 cs.MaSach, ds.MaDauSach, ds.TenDauSach, cs.ViTriSach, ds.GiaTien FROM dbo.CUONSACH AS cs INNER JOIN dbo.DAUSACH AS ds ON ds.MaDauSach = cs.MaDauSach WHERE cs.MaDauSach = '{i}' AND cs.TrangThai = 1 GROUP BY cs.MaSach, ds.MaDauSach, ds.TenDauSach, cs.ViTriSach, ds.GiaTien";
                 SqlDataAdapter temp = GetDataSet(sql);
                 temp.Fill(rs);
             }
             return rs;
         }
+
+
+
 
 
     }

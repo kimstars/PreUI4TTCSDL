@@ -24,10 +24,12 @@ namespace LibraryManager
             frmThongtin.Visible = false;
             frminfoDG.Visible = false;
             formQLInfo.Visible = false;
+            phieuMuon1.Visible = false;
+
         }
 
 
-        
+
         private void btnquanlysachkho_Click(object sender, EventArgs e)
         {
 
@@ -206,6 +208,12 @@ namespace LibraryManager
             hideChildForm();
             CreateDB.addImageDauSach newNhap = new CreateDB.addImageDauSach();
             newNhap.Show();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            phieuMuon1.Visible = true;
         }
     }
 }

@@ -51,7 +51,7 @@ namespace LibraryManager.CreateDB
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
-            this.btnSubmit.Size = new System.Drawing.Size(445, 51);
+            this.btnSubmit.Size = new System.Drawing.Size(277, 51);
             this.btnSubmit.TabIndex = 31;
             this.btnSubmit.Text = "submit";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);

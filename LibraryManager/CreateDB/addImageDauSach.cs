@@ -19,10 +19,12 @@ namespace LibraryManager.CreateDB
         {
             InitializeComponent();
         }
+
+        int n = 0;
         void loaddatatable()
         {
             dgvInfo.DataSource = loadDao.LoadDataTable(cbTableName.Text);
-
+            n = dgvInfo.RowCount;
         }
         private void addImageDauSach_Load(object sender, EventArgs e)
         {
@@ -57,7 +59,10 @@ namespace LibraryManager.CreateDB
             }
             
 
-            var filenames = Directory.GetFiles(txtPathFolder.Text).OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f)));
+            string[] filenames = Directory.GetFiles(txtPathFolder.Text).OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f))).ToArray();
+
+
+
 
             string tablename = cbTableName.Text;
             string maid = "";
@@ -85,21 +90,24 @@ namespace LibraryManager.CreateDB
                         break;
                     }
             }
-            int i = 0;
-            foreach (string file in filenames)
+
+
+            loaddatatable();
+
+            for (int i = 0; i < n; i++ )
             {
-                img.SaveImage(tablename, AutoTaoMa(maid, i), typeid, file);
-                i++;
+                img.SaveImage(tablename, AutoTaoMa(maid, i), typeid, filenames[i]);
+
             }
 
             loaddatatable();
 
         }
 
-        private string AutoTaoMa(string maMuon, int i)
+        private string AutoTaoMa(string MaID, int i)
         {
             string index = i.ToString();
-            return maMuon.Substring(0, maMuon.Length - index.Length) + index;
+            return MaID.Substring(0, MaID.Length - index.Length) + index;
         }
     }
 }
