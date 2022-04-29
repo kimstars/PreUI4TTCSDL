@@ -176,6 +176,12 @@
     <Compile Include="GUI\TKeSachCon.Designer.cs">
       <DependentUpon>TKeSachCon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TTinSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TTinSach.Designer.cs">
+      <DependentUpon>TTinSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TKeSachCon.resx">
       <DependentUpon>TKeSachCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TTinSach.resx">
+      <DependentUpon>TTinSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DanhSachDG.resx">
       <DependentUpon>DanhSachDG.cs</DependentUpon>
