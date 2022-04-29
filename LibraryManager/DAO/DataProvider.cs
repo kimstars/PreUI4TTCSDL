@@ -11,7 +11,7 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=DESKTOP-JB3V9TV\PTT;Initial Catalog=THUVIENMTA;Integrated Security=True";
         SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
@@ -101,6 +101,14 @@ namespace LibraryManager.DAO
             return "";
 
         }
-
+        public DataSet chart(string sql)
+        {
+            connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            SqlDataAdapter ad = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            return ds;
+        }
     }
 }
