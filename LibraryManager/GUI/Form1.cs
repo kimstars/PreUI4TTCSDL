@@ -207,5 +207,12 @@ namespace LibraryManager
             CreateDB.addImageDauSach newNhap = new CreateDB.addImageDauSach();
             newNhap.Show();
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            GUI.HomeDocGia newNhap = new GUI.HomeDocGia();
+            newNhap.Show();
+        }
     }
 }

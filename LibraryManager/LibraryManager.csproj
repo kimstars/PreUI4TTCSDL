@@ -164,6 +164,18 @@
     <Compile Include="GUI\frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HomeDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HomeDocGia.Designer.cs">
+      <DependentUpon>HomeDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TKeSachCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TKeSachCon.Designer.cs">
+      <DependentUpon>TKeSachCon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +259,12 @@
     <Compile Include="Template\QLInfoDocgia.Designer.cs">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\sach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\sach.Designer.cs">
+      <DependentUpon>sach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Thongtin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -295,6 +313,12 @@
     <EmbeddedResource Include="GUI\Captaikhoan.resx">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HomeDocGia.resx">
+      <DependentUpon>HomeDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TKeSachCon.resx">
+      <DependentUpon>TKeSachCon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\DanhSachDG.resx">
       <DependentUpon>DanhSachDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\QLInfoDocgia.resx">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\sach.resx">
+      <DependentUpon>sach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\Thongtin.resx">
       <DependentUpon>Thongtin.cs</DependentUpon>
