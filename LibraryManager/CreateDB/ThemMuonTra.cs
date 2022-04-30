@@ -72,14 +72,22 @@ namespace LibraryManager.CreateDB
             TTMuonTra.MaSach = cbMaSach.Text.Trim();
             TTMuonTra.NgayTra = null;
 
+            if (cbNhieuSach.Checked)
+            {
+                msBus.ThemTTMT(TTMuonTra);
+            }
+            else
+            {
+                msBus.ThemBothTTMT(phieuMT, TTMuonTra);
+                AutoTaoMa();
 
-            msBus.ThemTTMuonTra(phieuMT, TTMuonTra);
+            }
+
 
             //MessageBox.Show("Thành công!!!");
 
             dgvThongtinMT.DataSource = msBus.LoadData();
-
-            AutoTaoMa();
+            
 
             RandomCombobox(ref cbMaDG);
             RandomCombobox(ref cbNV);
@@ -91,7 +99,7 @@ namespace LibraryManager.CreateDB
         {
             string index = (dgvThongtinMT.Rows.Count - 1).ToString();
             maMuon = "MT000000";
-            maMuon = maMuon.Substring(0, 9 - index.Length) + index;
+            maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
             txtMaMT.Text = maMuon;
 
 

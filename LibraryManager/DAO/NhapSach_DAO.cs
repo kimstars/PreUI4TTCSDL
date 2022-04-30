@@ -23,7 +23,7 @@ namespace LibraryManager.DAO
         {
             string sql = $"SELECT soluong FROM dbo.DAUSACH WHERE MaDauSach ='{MaDauSach}'";
 
-            return ExcuteRetStr(sql);
+            return GetCount(sql).ToString();
         }
 
 

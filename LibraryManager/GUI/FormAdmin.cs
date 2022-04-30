@@ -200,5 +200,11 @@ namespace LibraryManager.Template
             hideChildFrm();
             danhSachDG1.Visible = true;
         }
+
+        private void btnPhieumuon_Click(object sender, EventArgs e)
+        {
+            hideChildFrm();
+            phieuMuon.Visible = true;
+        }
     }
 }

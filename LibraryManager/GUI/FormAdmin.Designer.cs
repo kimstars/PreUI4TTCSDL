@@ -39,6 +39,8 @@ namespace LibraryManager.Template
             this.panelSetting = new System.Windows.Forms.Panel();
             this.btnThuNghiem = new Guna.UI2.WinForms.Guna2Button();
             this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPhieumuon = new Guna.UI2.WinForms.Guna2Button();
             this.panelQLDocGia = new System.Windows.Forms.Panel();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -70,9 +72,11 @@ namespace LibraryManager.Template
             this.danhsachNV1 = new LibraryManager.Template.DanhsachNV();
             this.danhSachDG1 = new LibraryManager.Template.DanhSachDG();
             this.phieuMuon = new LibraryManager.Template.PhieuMuon();
+            this.dsPhieuMuonNV1 = new LibraryManager.Template.DSPhieuMuonNV();
             this.paneldrag.SuspendLayout();
             this.PanelMenuBar.SuspendLayout();
             this.panelSetting.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelQLDocGia.SuspendLayout();
             this.PanelQLSach.SuspendLayout();
             this.panelQLNV.SuspendLayout();
@@ -98,7 +102,7 @@ namespace LibraryManager.Template
             this.paneldrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneldrag.Location = new System.Drawing.Point(190, 0);
             this.paneldrag.Name = "paneldrag";
-            this.paneldrag.Size = new System.Drawing.Size(1002, 54);
+            this.paneldrag.Size = new System.Drawing.Size(1295, 54);
             this.paneldrag.TabIndex = 3;
             // 
             // guna2ControlBox1
@@ -107,7 +111,7 @@ namespace LibraryManager.Template
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(947, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1240, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -120,7 +124,7 @@ namespace LibraryManager.Template
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(889, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1182, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
@@ -130,6 +134,7 @@ namespace LibraryManager.Template
             // 
             this.PanelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
             this.PanelMenuBar.Controls.Add(this.panelSetting);
+            this.PanelMenuBar.Controls.Add(this.panel1);
             this.PanelMenuBar.Controls.Add(this.panelQLDocGia);
             this.PanelMenuBar.Controls.Add(this.PanelQLSach);
             this.PanelMenuBar.Controls.Add(this.panelQLNV);
@@ -142,7 +147,7 @@ namespace LibraryManager.Template
             this.PanelMenuBar.MaximumSize = new System.Drawing.Size(190, 812);
             this.PanelMenuBar.MinimumSize = new System.Drawing.Size(48, 648);
             this.PanelMenuBar.Name = "PanelMenuBar";
-            this.PanelMenuBar.Size = new System.Drawing.Size(190, 703);
+            this.PanelMenuBar.Size = new System.Drawing.Size(190, 812);
             this.PanelMenuBar.TabIndex = 7;
             // 
             // panelSetting
@@ -150,7 +155,7 @@ namespace LibraryManager.Template
             this.panelSetting.Controls.Add(this.btnThuNghiem);
             this.panelSetting.Controls.Add(this.btnCaiDat);
             this.panelSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSetting.Location = new System.Drawing.Point(0, 310);
+            this.panelSetting.Location = new System.Drawing.Point(0, 360);
             this.panelSetting.Margin = new System.Windows.Forms.Padding(2);
             this.panelSetting.Name = "panelSetting";
             this.panelSetting.Size = new System.Drawing.Size(190, 87);
@@ -199,6 +204,40 @@ namespace LibraryManager.Template
             this.btnCaiDat.TabIndex = 14;
             this.btnCaiDat.Text = "Cài đặt";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnPhieumuon);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 311);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.MaximumSize = new System.Drawing.Size(190, 214);
+            this.panel1.MinimumSize = new System.Drawing.Size(190, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(190, 49);
+            this.panel1.TabIndex = 19;
+            // 
+            // btnPhieumuon
+            // 
+            this.btnPhieumuon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnPhieumuon.CheckedState.Parent = this.btnPhieumuon;
+            this.btnPhieumuon.CustomImages.Parent = this.btnPhieumuon;
+            this.btnPhieumuon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.btnPhieumuon.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhieumuon.ForeColor = System.Drawing.Color.Black;
+            this.btnPhieumuon.HoverState.Parent = this.btnPhieumuon;
+            this.btnPhieumuon.Image = global::LibraryManager.Properties.Resources.icons8_bill_100px;
+            this.btnPhieumuon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPhieumuon.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPhieumuon.Location = new System.Drawing.Point(0, 2);
+            this.btnPhieumuon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPhieumuon.Name = "btnPhieumuon";
+            this.btnPhieumuon.Padding = new System.Windows.Forms.Padding(1);
+            this.btnPhieumuon.ShadowDecoration.Parent = this.btnPhieumuon;
+            this.btnPhieumuon.Size = new System.Drawing.Size(190, 40);
+            this.btnPhieumuon.TabIndex = 12;
+            this.btnPhieumuon.Text = "QL Phiếu mượn";
+            this.btnPhieumuon.Click += new System.EventHandler(this.btnPhieumuon_Click);
+            // 
             // panelQLDocGia
             // 
             this.panelQLDocGia.Controls.Add(this.guna2Button6);
@@ -212,7 +251,7 @@ namespace LibraryManager.Template
             this.panelQLDocGia.MaximumSize = new System.Drawing.Size(190, 214);
             this.panelQLDocGia.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelQLDocGia.Name = "panelQLDocGia";
-            this.panelQLDocGia.Size = new System.Drawing.Size(190, 45);
+            this.panelQLDocGia.Size = new System.Drawing.Size(190, 46);
             this.panelQLDocGia.TabIndex = 18;
             // 
             // guna2Button6
@@ -274,7 +313,7 @@ namespace LibraryManager.Template
             this.btnOpenQLDG.Name = "btnOpenQLDG";
             this.btnOpenQLDG.Padding = new System.Windows.Forms.Padding(1);
             this.btnOpenQLDG.ShadowDecoration.Parent = this.btnOpenQLDG;
-            this.btnOpenQLDG.Size = new System.Drawing.Size(190, 41);
+            this.btnOpenQLDG.Size = new System.Drawing.Size(190, 40);
             this.btnOpenQLDG.TabIndex = 12;
             this.btnOpenQLDG.Text = "QL độc giả";
             this.btnOpenQLDG.Click += new System.EventHandler(this.btnOpenQLDG_Click);
@@ -455,7 +494,7 @@ namespace LibraryManager.Template
             this.btnOpenQLNV.Name = "btnOpenQLNV";
             this.btnOpenQLNV.Padding = new System.Windows.Forms.Padding(1);
             this.btnOpenQLNV.ShadowDecoration.Parent = this.btnOpenQLNV;
-            this.btnOpenQLNV.Size = new System.Drawing.Size(190, 44);
+            this.btnOpenQLNV.Size = new System.Drawing.Size(190, 45);
             this.btnOpenQLNV.TabIndex = 12;
             this.btnOpenQLNV.Text = "QL Nhân viên";
             this.btnOpenQLNV.Click += new System.EventHandler(this.btnOpenQLNV_Click);
@@ -646,7 +685,7 @@ namespace LibraryManager.Template
             // 
             // danhsachNV1
             // 
-            this.danhsachNV1.Location = new System.Drawing.Point(224, 51);
+            this.danhsachNV1.Location = new System.Drawing.Point(259, 59);
             this.danhsachNV1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.danhsachNV1.Name = "danhsachNV1";
             this.danhsachNV1.Size = new System.Drawing.Size(850, 652);
@@ -656,7 +695,7 @@ namespace LibraryManager.Template
             // danhSachDG1
             // 
             this.danhSachDG1.BackColor = System.Drawing.Color.Transparent;
-            this.danhSachDG1.Location = new System.Drawing.Point(247, 51);
+            this.danhSachDG1.Location = new System.Drawing.Point(285, 83);
             this.danhSachDG1.Margin = new System.Windows.Forms.Padding(2);
             this.danhSachDG1.Name = "danhSachDG1";
             this.danhSachDG1.Size = new System.Drawing.Size(850, 652);
@@ -666,18 +705,27 @@ namespace LibraryManager.Template
             // phieuMuon
             // 
             this.phieuMuon.BackColor = System.Drawing.Color.Transparent;
-            this.phieuMuon.Location = new System.Drawing.Point(190, 52);
+            this.phieuMuon.Location = new System.Drawing.Point(221, 59);
             this.phieuMuon.Margin = new System.Windows.Forms.Padding(2);
             this.phieuMuon.Name = "phieuMuon";
             this.phieuMuon.Size = new System.Drawing.Size(1000, 651);
             this.phieuMuon.TabIndex = 11;
             this.phieuMuon.Visible = false;
             // 
+            // dsPhieuMuonNV1
+            // 
+            this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
+            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(190, 59);
+            this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
+            this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1334, 801);
+            this.dsPhieuMuonNV1.TabIndex = 12;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 703);
+            this.ClientSize = new System.Drawing.Size(1485, 833);
+            this.Controls.Add(this.dsPhieuMuonNV1);
             this.Controls.Add(this.phieuMuon);
             this.Controls.Add(this.danhSachDG1);
             this.Controls.Add(this.danhsachNV1);
@@ -690,6 +738,7 @@ namespace LibraryManager.Template
             this.paneldrag.ResumeLayout(false);
             this.PanelMenuBar.ResumeLayout(false);
             this.panelSetting.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelQLDocGia.ResumeLayout(false);
             this.PanelQLSach.ResumeLayout(false);
             this.panelQLNV.ResumeLayout(false);
@@ -745,6 +794,9 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Timer QLDGtick;
         private DanhsachNV danhsachNV1;
         private DanhSachDG danhSachDG1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnPhieumuon;
         private PhieuMuon phieuMuon;
+        private DSPhieuMuonNV dsPhieuMuonNV1;
     }
 }

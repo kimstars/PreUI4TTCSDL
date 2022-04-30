@@ -21,10 +21,16 @@ namespace LibraryManager.BUS
             return msDao.LoadThongTinSachMuon(Listma);
         }
 
-        public bool ThemTTMuonTra(PhieuMuonTra pm, ThongTinMuonTra ttmt)
+        public bool ThemBothTTMT(PhieuMuonTra pm, ThongTinMuonTra ttmt)
         {
             return msDao.InsertPhieuMuon(pm) && msDao.InsertThongTinMT(ttmt);
         }
+
+        public bool ThemTTMT(ThongTinMuonTra ttmt)
+        {
+            return msDao.InsertThongTinMT(ttmt);
+        }
+
 
 
     }

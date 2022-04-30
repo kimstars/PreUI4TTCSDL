@@ -57,6 +57,7 @@ namespace LibraryManager
                 LoginTick.Start();
             }
 
+
         }
 
         private void btnLoginDG_Click(object sender, EventArgs e)
@@ -64,6 +65,9 @@ namespace LibraryManager
             hideChildForm();
 
             FrmLogin1.Visible = true;
+
+            GUI.frmLogin newform = new GUI.frmLogin();
+            newform.Show();
 
         }
 
@@ -74,7 +78,9 @@ namespace LibraryManager
 
         private void btnLoginQL_Click(object sender, EventArgs e)
         {
-            
+            Template.FormAdmin newform = new Template.FormAdmin();
+            newform.Show();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -16,7 +16,10 @@ namespace LibraryManager
         {
             InitializeComponent();
         }
-
+        public FrmDocGia(string username)
+        {
+            InitializeComponent();
+        }
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
