@@ -94,6 +94,7 @@ namespace LibraryManager.GUI
             } else 
             {
                 lbMsg.Text = "";
+                errorProvider1.SetError(lbMsg, null);
                 check2 = true;
             }
 
@@ -134,7 +135,7 @@ namespace LibraryManager.GUI
             else
             {
                 lbMsg.Text = "";
-
+                errorProvider1.SetError(lbMsg, null);
             }
         }
     }
