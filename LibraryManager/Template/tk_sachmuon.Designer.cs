@@ -38,18 +38,18 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.charttk = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbLoc = new System.Windows.Forms.Label();
-            this.lbTKe = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgv_tksachmuon = new System.Windows.Forms.DataGridView();
+            this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lbTKe = new System.Windows.Forms.Label();
+            this.lbLoc = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +87,17 @@ namespace LibraryManager.Template
             this.panel2.Size = new System.Drawing.Size(759, 360);
             this.panel2.TabIndex = 4;
             // 
+            // dgv_tksachmuon
+            // 
+            this.dgv_tksachmuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tksachmuon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tksachmuon.Location = new System.Drawing.Point(0, 0);
+            this.dgv_tksachmuon.Name = "dgv_tksachmuon";
+            this.dgv_tksachmuon.RowHeadersWidth = 51;
+            this.dgv_tksachmuon.RowTemplate.Height = 24;
+            this.dgv_tksachmuon.Size = new System.Drawing.Size(759, 360);
+            this.dgv_tksachmuon.TabIndex = 0;
+            // 
             // panel1
             // 
             this.panel1.BorderRadius = 20;
@@ -101,27 +112,27 @@ namespace LibraryManager.Template
             this.panel1.Size = new System.Drawing.Size(363, 167);
             this.panel1.TabIndex = 5;
             // 
-            // lbLoc
+            // guna2ComboBox2
             // 
-            this.lbLoc.AutoSize = true;
-            this.lbLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbLoc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoc.Location = new System.Drawing.Point(26, 34);
-            this.lbLoc.Name = "lbLoc";
-            this.lbLoc.Size = new System.Drawing.Size(40, 23);
-            this.lbLoc.TabIndex = 0;
-            this.lbLoc.Text = "Lọc:";
-            // 
-            // lbTKe
-            // 
-            this.lbTKe.AutoSize = true;
-            this.lbTKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbTKe.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTKe.Location = new System.Drawing.Point(26, 96);
-            this.lbTKe.Name = "lbTKe";
-            this.lbTKe.Size = new System.Drawing.Size(85, 23);
-            this.lbTKe.TabIndex = 1;
-            this.lbTKe.Text = "Thống kê:";
+            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
+            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox2.FormattingEnabled = true;
+            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.ItemHeight = 30;
+            this.guna2ComboBox2.Items.AddRange(new object[] {
+            "hiện tại",
+            "theo tháng"});
+            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.Location = new System.Drawing.Point(125, 83);
+            this.guna2ComboBox2.Name = "guna2ComboBox2";
+            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.Size = new System.Drawing.Size(193, 36);
+            this.guna2ComboBox2.TabIndex = 3;
             // 
             // guna2ComboBox1
             // 
@@ -142,24 +153,27 @@ namespace LibraryManager.Template
             this.guna2ComboBox1.Size = new System.Drawing.Size(193, 36);
             this.guna2ComboBox1.TabIndex = 2;
             // 
-            // guna2ComboBox2
+            // lbTKe
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.FormattingEnabled = true;
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(125, 83);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(193, 36);
-            this.guna2ComboBox2.TabIndex = 3;
+            this.lbTKe.AutoSize = true;
+            this.lbTKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbTKe.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTKe.Location = new System.Drawing.Point(26, 96);
+            this.lbTKe.Name = "lbTKe";
+            this.lbTKe.Size = new System.Drawing.Size(85, 23);
+            this.lbTKe.TabIndex = 1;
+            this.lbTKe.Text = "Thống kê:";
+            // 
+            // lbLoc
+            // 
+            this.lbLoc.AutoSize = true;
+            this.lbLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbLoc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoc.Location = new System.Drawing.Point(26, 34);
+            this.lbLoc.Name = "lbLoc";
+            this.lbLoc.Size = new System.Drawing.Size(40, 23);
+            this.lbLoc.TabIndex = 0;
+            this.lbLoc.Text = "Lọc:";
             // 
             // chart1
             // 
@@ -177,17 +191,6 @@ namespace LibraryManager.Template
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chartTK";
             // 
-            // dgv_tksachmuon
-            // 
-            this.dgv_tksachmuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tksachmuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_tksachmuon.Location = new System.Drawing.Point(0, 0);
-            this.dgv_tksachmuon.Name = "dgv_tksachmuon";
-            this.dgv_tksachmuon.RowHeadersWidth = 51;
-            this.dgv_tksachmuon.RowTemplate.Height = 24;
-            this.dgv_tksachmuon.Size = new System.Drawing.Size(759, 360);
-            this.dgv_tksachmuon.TabIndex = 0;
-            // 
             // tk_sachmuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,10 +203,10 @@ namespace LibraryManager.Template
             this.Size = new System.Drawing.Size(895, 755);
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
