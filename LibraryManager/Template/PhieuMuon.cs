@@ -36,7 +36,7 @@ namespace LibraryManager.Template
 
             DataTable InfoBorrow = pmBus.LoadTTSachMuon(listsach);
             dgvInfoBorrow.DataSource = InfoBorrow;
-
+         
 
             TinhTienCoc(InfoBorrow);
             DateTime date = DateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));

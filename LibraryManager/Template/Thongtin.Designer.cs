@@ -29,6 +29,7 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +40,12 @@ namespace LibraryManager.Template
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tHUVIENMTADataSet = new LibraryManager.THUVIENMTADataSet();
+            this.dAUSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dAUSACHTableAdapter = new LibraryManager.THUVIENMTADataSetTableAdapters.DAUSACHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,6 +142,20 @@ namespace LibraryManager.Template
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // tHUVIENMTADataSet
+            // 
+            this.tHUVIENMTADataSet.DataSetName = "THUVIENMTADataSet";
+            this.tHUVIENMTADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dAUSACHBindingSource
+            // 
+            this.dAUSACHBindingSource.DataMember = "DAUSACH";
+            this.dAUSACHBindingSource.DataSource = this.tHUVIENMTADataSet;
+            // 
+            // dAUSACHTableAdapter
+            // 
+            this.dAUSACHTableAdapter.ClearBeforeFill = true;
+            // 
             // Thongtin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,8 +171,10 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Thongtin";
-            this.Size = new System.Drawing.Size(521, 542);
+            this.Size = new System.Drawing.Size(818, 659);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +192,8 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource dAUSACHBindingSource;
+        private THUVIENMTADataSet tHUVIENMTADataSet;
+        private THUVIENMTADataSetTableAdapters.DAUSACHTableAdapter dAUSACHTableAdapter;
     }
 }
