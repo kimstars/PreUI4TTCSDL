@@ -36,6 +36,7 @@ namespace LibraryManager
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PanelMenuBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -61,8 +62,9 @@ namespace LibraryManager
             this.FrmLogin1 = new LibraryManager.Login();
             this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.phieuMuon1 = new LibraryManager.Template.PhieuMuon();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.tk_sachmuon1 = new LibraryManager.Template.tk_sachmuon();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -126,6 +128,7 @@ namespace LibraryManager
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.guna2Button5);
             this.panel4.Controls.Add(this.guna2Button4);
             this.panel4.Controls.Add(this.guna2Button3);
             this.panel4.Controls.Add(this.guna2Button2);
@@ -136,8 +139,30 @@ namespace LibraryManager
             this.panel4.Location = new System.Drawing.Point(0, 292);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(253, 328);
+            this.panel4.Size = new System.Drawing.Size(253, 375);
             this.panel4.TabIndex = 11;
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Image = global::LibraryManager.Properties.Resources.icons8_man_with_moleskine_50px;
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button4.Location = new System.Drawing.Point(0, 260);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Padding = new System.Windows.Forms.Padding(1);
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(253, 48);
+            this.guna2Button4.TabIndex = 18;
+            this.guna2Button4.Text = "Phiếu mượn";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -494,28 +519,6 @@ namespace LibraryManager
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Image = global::LibraryManager.Properties.Resources.icons8_man_with_moleskine_50px;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button4.Location = new System.Drawing.Point(0, 260);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Padding = new System.Windows.Forms.Padding(1);
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(253, 48);
-            this.guna2Button4.TabIndex = 18;
-            this.guna2Button4.Text = "Phiếu mượn";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
-            // 
             // phieuMuon1
             // 
             this.phieuMuon1.BackColor = System.Drawing.Color.Transparent;
@@ -526,11 +529,42 @@ namespace LibraryManager
             this.phieuMuon1.TabIndex = 15;
             this.phieuMuon1.Visible = false;
             // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Image = global::LibraryManager.Properties.Resources.icons8_man_with_moleskine_50px;
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 312);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Padding = new System.Windows.Forms.Padding(1);
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(253, 48);
+            this.guna2Button5.TabIndex = 19;
+            this.guna2Button5.Text = "Thống kê ngu";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
+            // tk_sachmuon1
+            // 
+            this.tk_sachmuon1.Location = new System.Drawing.Point(293, 68);
+            this.tk_sachmuon1.Name = "tk_sachmuon1";
+            this.tk_sachmuon1.Size = new System.Drawing.Size(1209, 755);
+            this.tk_sachmuon1.TabIndex = 16;
+            this.tk_sachmuon1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 865);
+            this.Controls.Add(this.tk_sachmuon1);
             this.Controls.Add(this.phieuMuon1);
             this.Controls.Add(this.PanelMenuBar);
             this.Controls.Add(this.formQLInfo);
@@ -589,5 +623,7 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Template.PhieuMuon phieuMuon1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Template.tk_sachmuon tk_sachmuon1;
     }
 }

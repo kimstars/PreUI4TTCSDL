@@ -18,7 +18,7 @@ namespace LibraryManager.DAO
         }
         public DataSet Get_chart_tk_sachmuon()
         {
-            string sqlString = "select trangthai, count(trangthai) as giatri from cuonsach group by trangthai ";
+            string sqlString = "select case trangthai when 0 then N'Đã mượn' when 1 then N'Chưa được mượn' end as trangthai, count(trangthai)  as giatri from cuonsach group by trangthai ";
             return chart(sqlString);
             
         }

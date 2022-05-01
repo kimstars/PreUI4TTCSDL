@@ -215,5 +215,11 @@ namespace LibraryManager
             hideChildForm();
             phieuMuon1.Visible = true;
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            tk_sachmuon1.Visible = true;
+        }
     }
 }

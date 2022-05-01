@@ -21,10 +21,12 @@ namespace LibraryManager.Template
         {
 
             charttk.DataSource = tkBus.LoadChartSachMuon();
-            charttk.Series["Sách mượn"].XValueMember = "trangthai";
-            charttk.Series["Sách mượn"].YValueMembers = "giatri";
+            charttk.Series["Chart1"].XValueMember = "trangthai";
+            charttk.Series["Chart1"].YValueMembers = "giatri";
+            charttk.Series["Chart1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+
             charttk.Titles.Add("Sách mượn");
-            charttk.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             dgv_tksachmuon.DataSource = tkBus.load_tt_sachmuon();
         }
     }

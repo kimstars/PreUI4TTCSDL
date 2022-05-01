@@ -32,12 +32,13 @@ namespace LibraryManager.Template
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.charttk = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_tksachmuon = new System.Windows.Forms.DataGridView();
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -46,7 +47,6 @@ namespace LibraryManager.Template
             this.lbLoc = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -64,38 +64,35 @@ namespace LibraryManager.Template
             // 
             // charttk
             // 
+            this.charttk.BorderlineColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea1";
             this.charttk.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.charttk.Legends.Add(legend1);
-            this.charttk.Location = new System.Drawing.Point(542, 98);
+            this.charttk.Location = new System.Drawing.Point(668, 201);
             this.charttk.Name = "charttk";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
-            series1.Name = "Sách mượn ";
+            series1.Name = "Chart1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.charttk.Series.Add(series1);
-            this.charttk.Size = new System.Drawing.Size(271, 167);
+            this.charttk.Size = new System.Drawing.Size(494, 495);
             this.charttk.TabIndex = 3;
             this.charttk.Text = "chart1";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv_tksachmuon);
-            this.panel2.Location = new System.Drawing.Point(54, 317);
-            this.panel2.Name = "panel2";
-            this.panel2.ShadowDecoration.Parent = this.panel2;
-            this.panel2.Size = new System.Drawing.Size(759, 360);
-            this.panel2.TabIndex = 4;
+            title1.Name = "Title1";
+            title2.Name = "Title2";
+            this.charttk.Titles.Add(title1);
+            this.charttk.Titles.Add(title2);
             // 
             // dgv_tksachmuon
             // 
             this.dgv_tksachmuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tksachmuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_tksachmuon.Location = new System.Drawing.Point(0, 0);
+            this.dgv_tksachmuon.Location = new System.Drawing.Point(15, 201);
             this.dgv_tksachmuon.Name = "dgv_tksachmuon";
             this.dgv_tksachmuon.RowHeadersWidth = 51;
             this.dgv_tksachmuon.RowTemplate.Height = 24;
-            this.dgv_tksachmuon.Size = new System.Drawing.Size(759, 360);
+            this.dgv_tksachmuon.Size = new System.Drawing.Size(633, 495);
             this.dgv_tksachmuon.TabIndex = 0;
             // 
             // panel1
@@ -106,10 +103,10 @@ namespace LibraryManager.Template
             this.panel1.Controls.Add(this.lbTKe);
             this.panel1.Controls.Add(this.lbLoc);
             this.panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(54, 98);
+            this.panel1.Location = new System.Drawing.Point(15, 87);
             this.panel1.Name = "panel1";
             this.panel1.ShadowDecoration.Parent = this.panel1;
-            this.panel1.Size = new System.Drawing.Size(363, 167);
+            this.panel1.Size = new System.Drawing.Size(1098, 89);
             this.panel1.TabIndex = 5;
             // 
             // guna2ComboBox2
@@ -128,7 +125,7 @@ namespace LibraryManager.Template
             "hiện tại",
             "theo tháng"});
             this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(125, 83);
+            this.guna2ComboBox2.Location = new System.Drawing.Point(466, 21);
             this.guna2ComboBox2.Name = "guna2ComboBox2";
             this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
             this.guna2ComboBox2.Size = new System.Drawing.Size(193, 36);
@@ -158,7 +155,7 @@ namespace LibraryManager.Template
             this.lbTKe.AutoSize = true;
             this.lbTKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTKe.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTKe.Location = new System.Drawing.Point(26, 96);
+            this.lbTKe.Location = new System.Drawing.Point(367, 34);
             this.lbTKe.Name = "lbTKe";
             this.lbTKe.Size = new System.Drawing.Size(85, 23);
             this.lbTKe.TabIndex = 1;
@@ -195,14 +192,15 @@ namespace LibraryManager.Template
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.dgv_tksachmuon);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.charttk);
             this.Controls.Add(this.label1);
             this.Name = "tk_sachmuon";
-            this.Size = new System.Drawing.Size(895, 755);
+            this.Size = new System.Drawing.Size(1209, 755);
+            this.Load += new System.EventHandler(this.tk_sachmuon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -216,7 +214,6 @@ namespace LibraryManager.Template
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart charttk;
-        private Guna.UI2.WinForms.Guna2Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel panel1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
