@@ -16,5 +16,35 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
+
+        private void btnThongbao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLSach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLPhieuMuon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLViPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThuNghiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

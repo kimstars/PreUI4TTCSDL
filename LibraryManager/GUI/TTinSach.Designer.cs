@@ -33,6 +33,11 @@ namespace LibraryManager.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TTinSach));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.sach2 = new LibraryManager.Template.sach();
+            this.sach3 = new LibraryManager.Template.sach();
+            this.sach4 = new LibraryManager.Template.sach();
+            this.sach5 = new LibraryManager.Template.sach();
+            this.sach6 = new LibraryManager.Template.sach();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -50,7 +55,9 @@ namespace LibraryManager.GUI
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.sach1 = new LibraryManager.Template.sach();
+            this.pictureBoxAnhSach = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -60,16 +67,61 @@ namespace LibraryManager.GUI
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.sach2);
+            this.flowLayoutPanel1.Controls.Add(this.sach3);
+            this.flowLayoutPanel1.Controls.Add(this.sach4);
+            this.flowLayoutPanel1.Controls.Add(this.sach5);
+            this.flowLayoutPanel1.Controls.Add(this.sach6);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(67, 536);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(962, 211);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1015, 211);
             this.flowLayoutPanel1.TabIndex = 39;
+            // 
+            // sach2
+            // 
+            this.sach2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach2.BackgroundImage")));
+            this.sach2.Location = new System.Drawing.Point(3, 3);
+            this.sach2.Name = "sach2";
+            this.sach2.Size = new System.Drawing.Size(197, 173);
+            this.sach2.TabIndex = 0;
+            // 
+            // sach3
+            // 
+            this.sach3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach3.BackgroundImage")));
+            this.sach3.Location = new System.Drawing.Point(206, 3);
+            this.sach3.Name = "sach3";
+            this.sach3.Size = new System.Drawing.Size(197, 173);
+            this.sach3.TabIndex = 1;
+            // 
+            // sach4
+            // 
+            this.sach4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach4.BackgroundImage")));
+            this.sach4.Location = new System.Drawing.Point(409, 3);
+            this.sach4.Name = "sach4";
+            this.sach4.Size = new System.Drawing.Size(197, 173);
+            this.sach4.TabIndex = 2;
+            // 
+            // sach5
+            // 
+            this.sach5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach5.BackgroundImage")));
+            this.sach5.Location = new System.Drawing.Point(612, 3);
+            this.sach5.Name = "sach5";
+            this.sach5.Size = new System.Drawing.Size(197, 173);
+            this.sach5.TabIndex = 3;
+            // 
+            // sach6
+            // 
+            this.sach6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach6.BackgroundImage")));
+            this.sach6.Location = new System.Drawing.Point(815, 3);
+            this.sach6.Name = "sach6";
+            this.sach6.Size = new System.Drawing.Size(197, 173);
+            this.sach6.TabIndex = 4;
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(230, 369);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(232, 395);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(34, 25);
             this.guna2HtmlLabel7.TabIndex = 38;
@@ -88,7 +140,7 @@ namespace LibraryManager.GUI
             this.txtSoLuong.FocusedState.Parent = this.txtSoLuong;
             this.txtSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuong.HoverState.Parent = this.txtSoLuong;
-            this.txtSoLuong.Location = new System.Drawing.Point(271, 363);
+            this.txtSoLuong.Location = new System.Drawing.Point(273, 389);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.PasswordChar = '\0';
@@ -117,7 +169,7 @@ namespace LibraryManager.GUI
             this.btMuon.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMuon.ForeColor = System.Drawing.Color.DarkRed;
             this.btMuon.HoverState.Parent = this.btMuon;
-            this.btMuon.Location = new System.Drawing.Point(92, 415);
+            this.btMuon.Location = new System.Drawing.Point(92, 434);
             this.btMuon.Name = "btMuon";
             this.btMuon.ShadowDecoration.Parent = this.btMuon;
             this.btMuon.Size = new System.Drawing.Size(180, 45);
@@ -149,7 +201,7 @@ namespace LibraryManager.GUI
             // 
             // guna2RatingStar1
             // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(102, 323);
+            this.guna2RatingStar1.Location = new System.Drawing.Point(94, 350);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.Size = new System.Drawing.Size(181, 32);
             this.guna2RatingStar1.TabIndex = 33;
@@ -158,7 +210,7 @@ namespace LibraryManager.GUI
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(59, 367);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(61, 393);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(29, 25);
             this.guna2HtmlLabel5.TabIndex = 32;
@@ -179,7 +231,7 @@ namespace LibraryManager.GUI
             this.txtGiaSach.FocusedState.Parent = this.txtGiaSach;
             this.txtGiaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaSach.HoverState.Parent = this.txtGiaSach;
-            this.txtGiaSach.Location = new System.Drawing.Point(99, 365);
+            this.txtGiaSach.Location = new System.Drawing.Point(101, 391);
             this.txtGiaSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGiaSach.Name = "txtGiaSach";
             this.txtGiaSach.PasswordChar = '\0';
@@ -326,21 +378,21 @@ namespace LibraryManager.GUI
             // 
             this.guna2Elipse2.BorderRadius = 15;
             // 
-            // sach1
+            // pictureBoxAnhSach
             // 
-            this.sach1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach1.BackgroundImage")));
-            this.sach1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.sach1.Location = new System.Drawing.Point(36, 12);
-            this.sach1.Name = "sach1";
-            this.sach1.Size = new System.Drawing.Size(310, 305);
-            this.sach1.TabIndex = 40;
+            this.pictureBoxAnhSach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxAnhSach.BackgroundImage")));
+            this.pictureBoxAnhSach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxAnhSach.Location = new System.Drawing.Point(36, 12);
+            this.pictureBoxAnhSach.Name = "pictureBoxAnhSach";
+            this.pictureBoxAnhSach.Size = new System.Drawing.Size(309, 332);
+            this.pictureBoxAnhSach.TabIndex = 41;
+            this.pictureBoxAnhSach.TabStop = false;
             // 
             // TTinSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 759);
-            this.Controls.Add(this.sach1);
+            this.ClientSize = new System.Drawing.Size(1121, 759);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.txtSoLuong);
@@ -358,9 +410,12 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txtMoTa);
+            this.Controls.Add(this.pictureBoxAnhSach);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TTinSach";
             this.Text = "TTinSach";
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,6 +442,11 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Template.sach sach1;
+        private Template.sach sach2;
+        private Template.sach sach3;
+        private Template.sach sach4;
+        private Template.sach sach5;
+        private Template.sach sach6;
+        private System.Windows.Forms.PictureBox pictureBoxAnhSach;
     }
 }
