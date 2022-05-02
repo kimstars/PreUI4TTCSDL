@@ -63,7 +63,7 @@ namespace LibraryManager.Template
 
         private void FormAdmin_Load_1(object sender, EventArgs e)
         {
-            PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
+            PanelMenuBar.Width = PanelMenuBar.MaximumSize.Width;
 
 
             hideChildFrm();

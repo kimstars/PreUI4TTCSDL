@@ -37,8 +37,14 @@
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
@@ -121,6 +127,7 @@
     <Compile Include="BUS\MuonSach_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\NhapSach_BUS.cs" />
+    <Compile Include="BUS\PhieuMuon_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
     <Compile Include="CreateDB\addImageDauSach.cs">
       <SubType>Form</SubType>
@@ -169,6 +176,12 @@
     <Compile Include="DTO\ViPham.cs" />
     <Compile Include="DTO\XuatBan.cs" />
     <Compile Include="extentItem\RandomDateTime.cs" />
+    <Compile Include="GUI\DocGiaActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DocGiaActivity.Designer.cs">
+      <DependentUpon>DocGiaActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateDB\ThemMuonTra.resx">
       <DependentUpon>ThemMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DocGiaActivity.resx">
+      <DependentUpon>DocGiaActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -524,6 +540,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_bill_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Check_Circle_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
