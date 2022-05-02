@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class Thongtin : UserControl
+    public partial class Xu_ly_tra : UserControl
     {
-        public Thongtin()
+        public Xu_ly_tra()
         {
             InitializeComponent();
-        }
-
-        private void Thongtin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -141,9 +141,13 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
@@ -179,6 +183,28 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
@@ -187,6 +213,13 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
@@ -217,6 +250,34 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
@@ -236,6 +297,22 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
 
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -318,6 +395,7 @@
 
     <Compile Include="BUS\ThongKe_BUS.cs" />
 
+    <Compile Include="BUS\Trasach_Bus.cs" />
     <Compile Include="CreateDB\addImageDauSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +446,7 @@
       <DependentUpon>DSSachMuon.cs</DependentUpon>
     </Compile>
 
+    <Compile Include="DAO\Trasach_DAO.cs" />
     <Compile Include="DTO\BienBanViPham.cs" />
     <Compile Include="DTO\CuonSach.cs" />
     <Compile Include="DTO\DauSach.cs" />
@@ -672,6 +751,12 @@
     <Compile Include="Template\TimKiem4NV.Designer.cs">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\Xu_ly_tra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\Xu_ly_tra.Designer.cs">
+      <DependentUpon>Xu_ly_tra.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="CreateDB\addImageDauSach.resx">
       <DependentUpon>addImageDauSach.cs</DependentUpon>
@@ -833,6 +918,10 @@
     <EmbeddedResource Include="Template\tk_sachnhap.resx">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\Xu_ly_tra.resx">
+      <DependentUpon>Xu_ly_tra.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1076,6 +1165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_file_excel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
