@@ -26,7 +26,7 @@ namespace LibraryManager.DAO
 
         public DataTable GetThongtinSachMuon(string MaMuonTra)
         {
-            string sql = $"SELECT top 1 cs.MaSach, cs.MaDauSach, ds.TenDauSach, ds.GiaTien,cs.ViTriSach FROM dbo.CUONSACH cs INNER JOIN  dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach WHERE cs.MaDauSach IN(SELECT MaDauSach  FROM dbo.CUONSACH    WHERE MaSach IN ( SELECT tt.MaSach   FROM dbo.THONGTINMUONTRA tt   WHERE tt.MaMuonTra = '{MaMuonTra}' ) )AND cs.TrangThai = 1";
+            string sql = $"SELECT cs.MaSach, cs.MaDauSach, ds.TenDauSach, ds.GiaTien,cs.ViTriSach FROM dbo.CUONSACH cs INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt1 ON tt1.MaSach = cs.MaSach WHERE cs.MaDauSach IN(SELECT MaDauSach     FROM dbo.CUONSACH WHERE MaSach IN ( SELECT tt.MaSach   FROM dbo.THONGTINMUONTRA tt        WHERE tt.MaMuonTra = '{MaMuonTra}' )) AND cs.TrangThai = 0 AND tt1.MaMuonTra = '{MaMuonTra}'";
             return GetData(sql);
         }
 
