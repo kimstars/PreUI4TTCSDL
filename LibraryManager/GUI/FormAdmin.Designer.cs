@@ -97,7 +97,7 @@ namespace LibraryManager.Template
             this.paneldrag.Controls.Add(this.guna2ControlBox2);
             this.paneldrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneldrag.Location = new System.Drawing.Point(253, 0);
-            this.paneldrag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneldrag.Margin = new System.Windows.Forms.Padding(4);
             this.paneldrag.Name = "paneldrag";
             this.paneldrag.Size = new System.Drawing.Size(1336, 66);
             this.paneldrag.TabIndex = 3;
@@ -109,7 +109,7 @@ namespace LibraryManager.Template
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1263, 4);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -123,7 +123,7 @@ namespace LibraryManager.Template
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1185, 4);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
@@ -684,7 +684,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.paneldrag);
             this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);
