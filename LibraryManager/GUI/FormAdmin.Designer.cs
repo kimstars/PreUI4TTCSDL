@@ -720,7 +720,6 @@ namespace LibraryManager.Template
             this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
             this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1779, 986);
             this.dsPhieuMuonNV1.TabIndex = 12;
-            this.dsPhieuMuonNV1.Visible = false;
             // 
             // FormAdmin
             // 
