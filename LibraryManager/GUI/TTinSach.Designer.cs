@@ -30,6 +30,7 @@ namespace LibraryManager.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TTinSach));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -46,7 +47,7 @@ namespace LibraryManager.GUI
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGiaSach = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNXB = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTheLoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTacGia = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,10 +55,10 @@ namespace LibraryManager.GUI
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pictureBoxAnhSach = new System.Windows.Forms.PictureBox();
+            this.AnhSach = new System.Windows.Forms.PictureBox();
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -72,6 +73,7 @@ namespace LibraryManager.GUI
             this.flowLayoutPanel1.Controls.Add(this.sach4);
             this.flowLayoutPanel1.Controls.Add(this.sach5);
             this.flowLayoutPanel1.Controls.Add(this.sach6);
+            this.guna2Transition1.SetDecoration(this.flowLayoutPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(67, 536);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1015, 211);
@@ -80,46 +82,57 @@ namespace LibraryManager.GUI
             // sach2
             // 
             this.sach2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach2.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.sach2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sach2.Location = new System.Drawing.Point(3, 3);
             this.sach2.Name = "sach2";
             this.sach2.Size = new System.Drawing.Size(197, 173);
             this.sach2.TabIndex = 0;
+            this.sach2.Click += new System.EventHandler(this.usercontrol_click);
             // 
             // sach3
             // 
             this.sach3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach3.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.sach3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sach3.Location = new System.Drawing.Point(206, 3);
             this.sach3.Name = "sach3";
             this.sach3.Size = new System.Drawing.Size(197, 173);
             this.sach3.TabIndex = 1;
+            this.sach3.Click += new System.EventHandler(this.usercontrol_click);
             // 
             // sach4
             // 
             this.sach4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach4.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.sach4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sach4.Location = new System.Drawing.Point(409, 3);
             this.sach4.Name = "sach4";
             this.sach4.Size = new System.Drawing.Size(197, 173);
             this.sach4.TabIndex = 2;
+            this.sach4.Click += new System.EventHandler(this.usercontrol_click);
             // 
             // sach5
             // 
             this.sach5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach5.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.sach5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sach5.Location = new System.Drawing.Point(612, 3);
             this.sach5.Name = "sach5";
             this.sach5.Size = new System.Drawing.Size(197, 173);
             this.sach5.TabIndex = 3;
+            this.sach5.Click += new System.EventHandler(this.usercontrol_click);
             // 
             // sach6
             // 
             this.sach6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach6.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.sach6, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sach6.Location = new System.Drawing.Point(815, 3);
             this.sach6.Name = "sach6";
             this.sach6.Size = new System.Drawing.Size(197, 173);
             this.sach6.TabIndex = 4;
+            this.sach6.Click += new System.EventHandler(this.usercontrol_click);
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(232, 395);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
@@ -130,6 +143,7 @@ namespace LibraryManager.GUI
             // txtSoLuong
             // 
             this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtSoLuong, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtSoLuong.DefaultText = "";
             this.txtSoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -153,6 +167,7 @@ namespace LibraryManager.GUI
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel6, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(36, 493);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
@@ -165,6 +180,7 @@ namespace LibraryManager.GUI
             this.btMuon.BorderRadius = 10;
             this.btMuon.CheckedState.Parent = this.btMuon;
             this.btMuon.CustomImages.Parent = this.btMuon;
+            this.guna2Transition1.SetDecoration(this.btMuon, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btMuon.FillColor = System.Drawing.Color.LightGreen;
             this.btMuon.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMuon.ForeColor = System.Drawing.Color.DarkRed;
@@ -175,10 +191,12 @@ namespace LibraryManager.GUI
             this.btMuon.Size = new System.Drawing.Size(180, 45);
             this.btMuon.TabIndex = 35;
             this.btMuon.Text = "Chọn mượn";
+            this.btMuon.Click += new System.EventHandler(this.btMuon_Click);
             // 
             // txtTenSach
             // 
             this.txtTenSach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtTenSach, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtTenSach.DefaultText = "";
             this.txtTenSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -201,6 +219,7 @@ namespace LibraryManager.GUI
             // 
             // guna2RatingStar1
             // 
+            this.guna2Transition1.SetDecoration(this.guna2RatingStar1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2RatingStar1.Location = new System.Drawing.Point(94, 350);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.Size = new System.Drawing.Size(181, 32);
@@ -209,6 +228,7 @@ namespace LibraryManager.GUI
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(61, 393);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
@@ -220,6 +240,7 @@ namespace LibraryManager.GUI
             // 
             this.txtGiaSach.BorderColor = System.Drawing.SystemColors.Control;
             this.txtGiaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtGiaSach, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtGiaSach.DefaultText = "";
             this.txtGiaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtGiaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -241,42 +262,45 @@ namespace LibraryManager.GUI
             this.txtGiaSach.Size = new System.Drawing.Size(85, 31);
             this.txtGiaSach.TabIndex = 31;
             // 
-            // guna2TextBox1
+            // txtNXB
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(597, 237);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(267, 32);
-            this.guna2TextBox1.TabIndex = 30;
+            this.txtNXB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtNXB, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtNXB.DefaultText = "";
+            this.txtNXB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNXB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNXB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNXB.DisabledState.Parent = this.txtNXB;
+            this.txtNXB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNXB.FocusedState.Parent = this.txtNXB;
+            this.txtNXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNXB.HoverState.Parent = this.txtNXB;
+            this.txtNXB.Location = new System.Drawing.Point(597, 237);
+            this.txtNXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.PasswordChar = '\0';
+            this.txtNXB.PlaceholderText = "";
+            this.txtNXB.SelectedText = "";
+            this.txtNXB.ShadowDecoration.Parent = this.txtNXB;
+            this.txtNXB.Size = new System.Drawing.Size(267, 32);
+            this.txtNXB.TabIndex = 30;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(462, 237);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(110, 25);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(116, 25);
             this.guna2HtmlLabel4.TabIndex = 29;
-            this.guna2HtmlLabel4.Text = "Nhà xuất bản";
+            this.guna2HtmlLabel4.Text = "Năm xuất bản";
             // 
             // txtTheLoai
             // 
             this.txtTheLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtTheLoai, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtTheLoai.DefaultText = "";
             this.txtTheLoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTheLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -300,6 +324,7 @@ namespace LibraryManager.GUI
             // txtTacGia
             // 
             this.txtTacGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtTacGia, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtTacGia.DefaultText = "";
             this.txtTacGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTacGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -323,6 +348,7 @@ namespace LibraryManager.GUI
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(487, 168);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
@@ -333,6 +359,7 @@ namespace LibraryManager.GUI
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(487, 101);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
@@ -343,6 +370,7 @@ namespace LibraryManager.GUI
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(487, 305);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
@@ -354,6 +382,7 @@ namespace LibraryManager.GUI
             // 
             this.txtMoTa.AutoScroll = true;
             this.txtMoTa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtMoTa, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtMoTa.DefaultText = "";
             this.txtMoTa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMoTa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -374,19 +403,37 @@ namespace LibraryManager.GUI
             this.txtMoTa.Size = new System.Drawing.Size(314, 150);
             this.txtMoTa.TabIndex = 23;
             // 
-            // guna2Elipse2
+            // AnhSach
             // 
-            this.guna2Elipse2.BorderRadius = 15;
+            this.AnhSach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AnhSach.BackgroundImage")));
+            this.AnhSach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Transition1.SetDecoration(this.AnhSach, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.AnhSach.Location = new System.Drawing.Point(36, 12);
+            this.AnhSach.Name = "AnhSach";
+            this.AnhSach.Size = new System.Drawing.Size(309, 332);
+            this.AnhSach.TabIndex = 41;
+            this.AnhSach.TabStop = false;
             // 
-            // pictureBoxAnhSach
+            // guna2Transition1
             // 
-            this.pictureBoxAnhSach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxAnhSach.BackgroundImage")));
-            this.pictureBoxAnhSach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxAnhSach.Location = new System.Drawing.Point(36, 12);
-            this.pictureBoxAnhSach.Name = "pictureBoxAnhSach";
-            this.pictureBoxAnhSach.Size = new System.Drawing.Size(309, 332);
-            this.pictureBoxAnhSach.TabIndex = 41;
-            this.pictureBoxAnhSach.TabStop = false;
+            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.guna2Transition1.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // TTinSach
             // 
@@ -402,7 +449,7 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.guna2RatingStar1);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.txtGiaSach);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtNXB);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtTheLoai);
             this.Controls.Add(this.txtTacGia);
@@ -410,12 +457,13 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txtMoTa);
-            this.Controls.Add(this.pictureBoxAnhSach);
+            this.Controls.Add(this.AnhSach);
+            this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TTinSach";
             this.Text = "TTinSach";
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +481,7 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtGiaSach;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtNXB;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtTheLoai;
         private Guna.UI2.WinForms.Guna2TextBox txtTacGia;
@@ -441,12 +489,12 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Template.sach sach2;
         private Template.sach sach3;
         private Template.sach sach4;
         private Template.sach sach5;
         private Template.sach sach6;
-        private System.Windows.Forms.PictureBox pictureBoxAnhSach;
+        private System.Windows.Forms.PictureBox AnhSach;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
     }
 }

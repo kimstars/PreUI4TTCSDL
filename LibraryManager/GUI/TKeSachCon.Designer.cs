@@ -34,7 +34,7 @@ namespace LibraryManager.GUI
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.comboBoxTheLoai = new System.Windows.Forms.ComboBox();
             this.btTKe = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTimSach = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.txtSachCon = new Guna.UI2.WinForms.Guna2TextBox();
@@ -105,21 +105,21 @@ namespace LibraryManager.GUI
             this.btTKe.TabIndex = 6;
             this.btTKe.Text = "Sách hiện có";
             // 
-            // guna2Button1
+            // btnTimSach
             // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.LightGreen;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(798, 112);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(52, 34);
-            this.guna2Button1.TabIndex = 10;
+            this.btnTimSach.BorderRadius = 18;
+            this.btnTimSach.CheckedState.Parent = this.btnTimSach;
+            this.btnTimSach.CustomImages.Parent = this.btnTimSach;
+            this.btnTimSach.FillColor = System.Drawing.Color.LightGreen;
+            this.btnTimSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTimSach.ForeColor = System.Drawing.Color.White;
+            this.btnTimSach.HoverState.Parent = this.btnTimSach;
+            this.btnTimSach.Image = ((System.Drawing.Image)(resources.GetObject("btnTimSach.Image")));
+            this.btnTimSach.Location = new System.Drawing.Point(798, 112);
+            this.btnTimSach.Name = "btnTimSach";
+            this.btnTimSach.ShadowDecoration.Parent = this.btnTimSach;
+            this.btnTimSach.Size = new System.Drawing.Size(52, 34);
+            this.btnTimSach.TabIndex = 10;
             // 
             // txtTimSach
             // 
@@ -150,7 +150,7 @@ namespace LibraryManager.GUI
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(31, 112);
+            this.guna2Separator1.Location = new System.Drawing.Point(47, 112);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(211, 10);
             this.guna2Separator1.TabIndex = 8;
@@ -376,7 +376,7 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.SachCon);
             this.Controls.Add(this.comboBoxTheLoai);
             this.Controls.Add(this.btTKe);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnTimSach);
             this.Controls.Add(this.txtTimSach);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.txtSachCon);
@@ -393,7 +393,7 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.ComboBox comboBoxTheLoai;
         private Guna.UI2.WinForms.Guna2Button btTKe;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnTimSach;
         private Guna.UI2.WinForms.Guna2TextBox txtTimSach;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2TextBox txtSachCon;
