@@ -34,9 +34,10 @@ namespace LibraryManager.Template
             DataTable temp = pmBus.LoadDSPhieumuon();
 
             dgvDSPhieumuon.DataSource = temp;
-            
 
-
+            //load thông tin độc giả đầu tiên lên
+            string MaDocGia = dgvDSPhieumuon.Rows[0].Cells["MaDocGia"].Value.ToString().Trim();
+            LoadDetailUser(MaDocGia);
         }
 
         private void TinhTienCoc(DataTable InfoBorrow)
@@ -88,6 +89,20 @@ namespace LibraryManager.Template
             }
             LoadDetailUser(MaDocGia);
             
+        }
+
+        private void btnFilterDate_Click(object sender, EventArgs e)
+        {
+            DateTime start = dateStart.Value;
+            DateTime end = dateEnd.Value;
+
+            dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon(start, end);
+
+        }
+
+        private void btnXemInfoDG_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

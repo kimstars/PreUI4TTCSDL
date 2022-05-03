@@ -72,10 +72,10 @@ namespace LibraryManager.Template
             this.panelInput.Controls.Add(this.guna2Panel1);
             this.panelInput.Controls.Add(this.btnEditInfo);
             this.panelInput.Controls.Add(this.btnAddInfo);
-            this.panelInput.Location = new System.Drawing.Point(3, 2);
-            this.panelInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelInput.Location = new System.Drawing.Point(2, 2);
+            this.panelInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(1205, 368);
+            this.panelInput.Size = new System.Drawing.Size(900, 244);
             this.panelInput.TabIndex = 13;
             // 
             // btnDeleteInfo
@@ -88,11 +88,11 @@ namespace LibraryManager.Template
             this.btnDeleteInfo.ForeColor = System.Drawing.Color.White;
             this.btnDeleteInfo.HoverState.Parent = this.btnDeleteInfo;
             this.btnDeleteInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteInfo.Location = new System.Drawing.Point(631, 243);
-            this.btnDeleteInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteInfo.Location = new System.Drawing.Point(473, 197);
+            this.btnDeleteInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteInfo.Name = "btnDeleteInfo";
             this.btnDeleteInfo.ShadowDecoration.Parent = this.btnDeleteInfo;
-            this.btnDeleteInfo.Size = new System.Drawing.Size(239, 46);
+            this.btnDeleteInfo.Size = new System.Drawing.Size(179, 37);
             this.btnDeleteInfo.TabIndex = 17;
             this.btnDeleteInfo.Text = "Xóa dòng thông tin";
             this.btnDeleteInfo.Visible = false;
@@ -122,11 +122,10 @@ namespace LibraryManager.Template
             this.guna2Panel1.Controls.Add(this.txtSDT);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(24, 15);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(18, 12);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1146, 210);
+            this.guna2Panel1.Size = new System.Drawing.Size(860, 171);
             this.guna2Panel1.TabIndex = 15;
             // 
             // selectGender
@@ -146,11 +145,11 @@ namespace LibraryManager.Template
             "Nam",
             "Nữ"});
             this.selectGender.ItemsAppearance.Parent = this.selectGender;
-            this.selectGender.Location = new System.Drawing.Point(848, 26);
-            this.selectGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.selectGender.Location = new System.Drawing.Point(636, 21);
+            this.selectGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.selectGender.Name = "selectGender";
             this.selectGender.ShadowDecoration.Parent = this.selectGender;
-            this.selectGender.Size = new System.Drawing.Size(201, 36);
+            this.selectGender.Size = new System.Drawing.Size(152, 36);
             this.selectGender.TabIndex = 18;
             // 
             // ngayDKPicker
@@ -163,11 +162,10 @@ namespace LibraryManager.Template
             this.ngayDKPicker.CustomFormat = "dd/MM/yyyy";
             this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngayDKPicker.Location = new System.Drawing.Point(848, 86);
-            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.ngayDKPicker.Location = new System.Drawing.Point(636, 70);
             this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
             this.ngayDKPicker.Name = "ngayDKPicker";
-            this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
+            this.ngayDKPicker.Size = new System.Drawing.Size(152, 36);
             this.ngayDKPicker.SkinColor = System.Drawing.Color.Transparent;
             this.ngayDKPicker.TabIndex = 17;
             this.ngayDKPicker.TextColor = System.Drawing.Color.Black;
@@ -177,9 +175,10 @@ namespace LibraryManager.Template
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(728, 96);
+            this.label2.Location = new System.Drawing.Point(546, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 16;
             this.label2.Text = "Ngày đăng ký";
             // 
@@ -188,9 +187,10 @@ namespace LibraryManager.Template
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(355, 156);
+            this.label12.Location = new System.Drawing.Point(266, 127);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 20);
+            this.label12.Size = new System.Drawing.Size(59, 15);
             this.label12.TabIndex = 15;
             this.label12.Text = "Số CMND";
             // 
@@ -198,9 +198,10 @@ namespace LibraryManager.Template
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(735, 154);
+            this.label9.Location = new System.Drawing.Point(551, 125);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 25);
+            this.label9.Size = new System.Drawing.Size(71, 20);
             this.label9.TabIndex = 17;
             this.label9.Text = "Tài khoản";
             // 
@@ -219,14 +220,14 @@ namespace LibraryManager.Template
             this.txtCMND.ForeColor = System.Drawing.Color.Black;
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
-            this.txtCMND.Location = new System.Drawing.Point(475, 144);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCMND.Location = new System.Drawing.Point(356, 117);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "Nhập số CMND";
             this.txtCMND.SelectedText = "";
             this.txtCMND.ShadowDecoration.Parent = this.txtCMND;
-            this.txtCMND.Size = new System.Drawing.Size(201, 42);
+            this.txtCMND.Size = new System.Drawing.Size(151, 34);
             this.txtCMND.TabIndex = 14;
             // 
             // label3
@@ -234,9 +235,10 @@ namespace LibraryManager.Template
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 31);
+            this.label3.Location = new System.Drawing.Point(23, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 9;
             this.label3.Text = "Mã độc giả";
             // 
@@ -256,14 +258,14 @@ namespace LibraryManager.Template
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::LibraryManager.Properties.Resources.icons8_user_50px_1;
-            this.txtUsername.Location = new System.Drawing.Point(848, 144);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtUsername.Location = new System.Drawing.Point(636, 117);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Tên đăng nhập";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(201, 42);
+            this.txtUsername.Size = new System.Drawing.Size(151, 34);
             this.txtUsername.TabIndex = 16;
             // 
             // txtHoten
@@ -281,14 +283,14 @@ namespace LibraryManager.Template
             this.txtHoten.ForeColor = System.Drawing.Color.Black;
             this.txtHoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoten.HoverState.Parent = this.txtHoten;
-            this.txtHoten.Location = new System.Drawing.Point(136, 80);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(5);
+            this.txtHoten.Location = new System.Drawing.Point(102, 65);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.PasswordChar = '\0';
             this.txtHoten.PlaceholderText = "Nhập tên độc giả";
             this.txtHoten.SelectedText = "";
             this.txtHoten.ShadowDecoration.Parent = this.txtHoten;
-            this.txtHoten.Size = new System.Drawing.Size(180, 42);
+            this.txtHoten.Size = new System.Drawing.Size(135, 34);
             this.txtHoten.TabIndex = 0;
             // 
             // label1
@@ -296,9 +298,10 @@ namespace LibraryManager.Template
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 91);
+            this.label1.Location = new System.Drawing.Point(23, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(58, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Họ và tên";
             // 
@@ -318,14 +321,14 @@ namespace LibraryManager.Template
             this.txtMaDG.ForeColor = System.Drawing.Color.Black;
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.HoverState.Parent = this.txtMaDG;
-            this.txtMaDG.Location = new System.Drawing.Point(136, 15);
-            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5);
+            this.txtMaDG.Location = new System.Drawing.Point(102, 12);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "Nhập mã độc giả";
             this.txtMaDG.SelectedText = "";
             this.txtMaDG.ShadowDecoration.Parent = this.txtMaDG;
-            this.txtMaDG.Size = new System.Drawing.Size(180, 42);
+            this.txtMaDG.Size = new System.Drawing.Size(135, 34);
             this.txtMaDG.TabIndex = 8;
             // 
             // txtDiachi
@@ -343,14 +346,14 @@ namespace LibraryManager.Template
             this.txtDiachi.ForeColor = System.Drawing.Color.Black;
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
-            this.txtDiachi.Location = new System.Drawing.Point(136, 144);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDiachi.Location = new System.Drawing.Point(102, 117);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "Nhập địa chỉ";
             this.txtDiachi.SelectedText = "";
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
-            this.txtDiachi.Size = new System.Drawing.Size(180, 42);
+            this.txtDiachi.Size = new System.Drawing.Size(135, 34);
             this.txtDiachi.TabIndex = 10;
             // 
             // birthdayPicker
@@ -361,11 +364,10 @@ namespace LibraryManager.Template
             this.birthdayPicker.CustomFormat = "dd/MM/yyyy";
             this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthdayPicker.Location = new System.Drawing.Point(475, 22);
-            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.birthdayPicker.Location = new System.Drawing.Point(356, 18);
             this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
             this.birthdayPicker.Name = "birthdayPicker";
-            this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
+            this.birthdayPicker.Size = new System.Drawing.Size(152, 36);
             this.birthdayPicker.SkinColor = System.Drawing.Color.Transparent;
             this.birthdayPicker.TabIndex = 7;
             this.birthdayPicker.TextColor = System.Drawing.Color.Black;
@@ -375,9 +377,10 @@ namespace LibraryManager.Template
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 95);
+            this.label8.Location = new System.Drawing.Point(278, 77);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 20);
+            this.label8.Size = new System.Drawing.Size(27, 15);
             this.label8.TabIndex = 13;
             this.label8.Text = "SĐT";
             // 
@@ -386,9 +389,10 @@ namespace LibraryManager.Template
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 158);
+            this.label5.Location = new System.Drawing.Point(23, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.Size = new System.Drawing.Size(43, 15);
             this.label5.TabIndex = 11;
             this.label5.Text = "Địa chỉ";
             // 
@@ -397,9 +401,10 @@ namespace LibraryManager.Template
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(355, 32);
+            this.label6.Location = new System.Drawing.Point(266, 26);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.Size = new System.Drawing.Size(60, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "Ngày sinh";
             // 
@@ -418,14 +423,14 @@ namespace LibraryManager.Template
             this.txtSDT.ForeColor = System.Drawing.Color.Black;
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
-            this.txtSDT.Location = new System.Drawing.Point(475, 80);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSDT.Location = new System.Drawing.Point(356, 65);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "Nhập số điện thoại";
             this.txtSDT.SelectedText = "";
             this.txtSDT.ShadowDecoration.Parent = this.txtSDT;
-            this.txtSDT.Size = new System.Drawing.Size(201, 42);
+            this.txtSDT.Size = new System.Drawing.Size(151, 34);
             this.txtSDT.TabIndex = 12;
             // 
             // label7
@@ -433,9 +438,10 @@ namespace LibraryManager.Template
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(728, 32);
+            this.label7.Location = new System.Drawing.Point(546, 26);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.Size = new System.Drawing.Size(52, 15);
             this.label7.TabIndex = 3;
             this.label7.Text = "Giới tính";
             // 
@@ -449,11 +455,11 @@ namespace LibraryManager.Template
             this.btnEditInfo.ForeColor = System.Drawing.Color.White;
             this.btnEditInfo.HoverState.Parent = this.btnEditInfo;
             this.btnEditInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditInfo.Location = new System.Drawing.Point(339, 243);
-            this.btnEditInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditInfo.Location = new System.Drawing.Point(254, 197);
+            this.btnEditInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditInfo.Name = "btnEditInfo";
             this.btnEditInfo.ShadowDecoration.Parent = this.btnEditInfo;
-            this.btnEditInfo.Size = new System.Drawing.Size(240, 46);
+            this.btnEditInfo.Size = new System.Drawing.Size(180, 37);
             this.btnEditInfo.TabIndex = 16;
             this.btnEditInfo.Text = "Sửa thông tin";
             this.btnEditInfo.Visible = false;
@@ -468,11 +474,11 @@ namespace LibraryManager.Template
             this.btnAddInfo.ForeColor = System.Drawing.Color.White;
             this.btnAddInfo.HoverState.Parent = this.btnAddInfo;
             this.btnAddInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddInfo.Location = new System.Drawing.Point(24, 243);
-            this.btnAddInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddInfo.Location = new System.Drawing.Point(18, 197);
+            this.btnAddInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddInfo.Name = "btnAddInfo";
             this.btnAddInfo.ShadowDecoration.Parent = this.btnAddInfo;
-            this.btnAddInfo.Size = new System.Drawing.Size(239, 46);
+            this.btnAddInfo.Size = new System.Drawing.Size(179, 37);
             this.btnAddInfo.TabIndex = 15;
             this.btnAddInfo.Text = "Thêm thông tin";
             this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
@@ -495,10 +501,10 @@ namespace LibraryManager.Template
             this.listViewInfo.FullRowSelect = true;
             this.listViewInfo.GridLines = true;
             this.listViewInfo.HideSelection = false;
-            this.listViewInfo.Location = new System.Drawing.Point(6, 312);
-            this.listViewInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewInfo.Location = new System.Drawing.Point(15, 255);
+            this.listViewInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listViewInfo.Name = "listViewInfo";
-            this.listViewInfo.Size = new System.Drawing.Size(1207, 374);
+            this.listViewInfo.Size = new System.Drawing.Size(865, 304);
             this.listViewInfo.TabIndex = 14;
             this.listViewInfo.UseCompatibleStateImageBehavior = false;
             this.listViewInfo.View = System.Windows.Forms.View.Details;
@@ -560,13 +566,12 @@ namespace LibraryManager.Template
             // 
             // QLInfoDocgia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listViewInfo);
             this.Controls.Add(this.panelInput);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLInfoDocgia";
-            this.Size = new System.Drawing.Size(1205, 688);
+            this.Size = new System.Drawing.Size(904, 559);
             this.panelInput.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

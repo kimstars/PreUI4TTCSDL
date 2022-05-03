@@ -80,7 +80,6 @@ namespace LibraryManager.DAO
 
 
 
-
         #region get
 
         public DataTable GetMaDG()
@@ -90,5 +89,40 @@ namespace LibraryManager.DAO
         }
 
         #endregion
+
+
+        #region HoatDong
+           
+        public string TongSachMuon1Month(string MaDocGia)
+        {
+            DateTime date = DateTime.Today.Subtract(new TimeSpan(30, 0, 0, 0));
+            string start = DateToString(date);
+            string end = DateToString(DateTime.Today);
+            string sql = $"SELECT pm.NgayMuon, COUNT(MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND pm.NgayMuon BETWEEN '{start}' AND '{end}'GROUP BY pm.NgayMuon";
+
+            return GetCount(sql).ToString();
+            
+        }
+
+        public string TongSachTra1Month(string MaDocGia)
+        {
+            DateTime date = DateTime.Today.Subtract(new TimeSpan(30, 0, 0, 0));
+            string start = DateToString(date);
+            string end = DateToString(DateTime.Today);
+            string sql = $"SELECT tt.NgayTra, COUNT(tt.MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN  dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND tt.NgayTra BETWEEN '{start}' AND '{end}' GROUP BY tt.NgayTra";
+
+            return GetCount(sql).ToString();
+        }
+
+        public DataTable LoiViPham(string MaDocGia)
+        {
+            string sql = $"SELECT bb.LyDo, vp.MaSach FROM dbo.VIPHAM vp INNER JOIN dbo.BIENBANVIPHAM AS bb ON bb.MaViPham = vp.MaViPham WHERE bb.MaDocGia = '{MaDocGia}'";
+            return GetData(sql);
+        }
+
+        #endregion
     }
+
+
+
 }

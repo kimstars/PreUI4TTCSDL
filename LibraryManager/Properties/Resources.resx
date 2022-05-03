@@ -268,4 +268,10 @@
   <data name="icons8_Check_Circle_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Check_Circle_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_moleskine_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_moleskine_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_study_200px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_study_200px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
