@@ -101,9 +101,9 @@ namespace LibraryManager.Template
             this.paneldrag.Controls.Add(this.guna2ControlBox2);
             this.paneldrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneldrag.Location = new System.Drawing.Point(253, 0);
-            this.paneldrag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneldrag.Margin = new System.Windows.Forms.Padding(4);
             this.paneldrag.Name = "paneldrag";
-            this.paneldrag.Size = new System.Drawing.Size(1689, 66);
+            this.paneldrag.Size = new System.Drawing.Size(1687, 66);
             this.paneldrag.TabIndex = 3;
             // 
             // guna2ControlBox1
@@ -112,8 +112,8 @@ namespace LibraryManager.Template
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1615, 4);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1613, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -126,8 +126,8 @@ namespace LibraryManager.Template
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1538, 4);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1536, 4);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
@@ -715,8 +715,8 @@ namespace LibraryManager.Template
             // dsPhieuMuonNV1
             // 
             this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
-            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(253, 64);
-            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(253, 73);
+            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5);
             this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
             this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1779, 986);
             this.dsPhieuMuonNV1.TabIndex = 12;
@@ -726,7 +726,7 @@ namespace LibraryManager.Template
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1942, 1025);
+            this.ClientSize = new System.Drawing.Size(1940, 1025);
             this.Controls.Add(this.dsPhieuMuonNV1);
             this.Controls.Add(this.phieuMuon);
             this.Controls.Add(this.danhSachDG1);
@@ -734,7 +734,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.paneldrag);
             this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);

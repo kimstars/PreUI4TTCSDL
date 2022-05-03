@@ -26,7 +26,11 @@ namespace LibraryManager.DAO
 
         public bool InsertThongTinMT(ThongTinMuonTra ttmt)
         {
-            string sql = $@"INSERT INTO dbo.THONGTINMUONTRA VALUES ('{ttmt.MaMuonTra}', '{ttmt.MaSach}','')";
+            string sql = $@"INSERT INTO dbo.THONGTINMUONTRA VALUES ('{ttmt.MaMuonTra}', '{ttmt.MaSach}', NULL)";
+
+            Excute(sql);
+
+            sql = $"UPDATE dbo.CUONSACH SET TrangThai = 0 WHERE MaSach = '{ttmt.MaSach}'";
 
             Excute(sql);
 

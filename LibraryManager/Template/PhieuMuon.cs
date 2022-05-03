@@ -24,10 +24,7 @@ namespace LibraryManager.Template
 
         string MaDauSachCurrent = "";
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         MuonSach_BUS pmBus = new MuonSach_BUS();
         private void PhieuMuon_Load(object sender, EventArgs e)
@@ -35,8 +32,8 @@ namespace LibraryManager.Template
             
 
             DataTable InfoBorrow = pmBus.LoadTTSachMuon(listsach);
-            dgvInfoBorrow.DataSource = InfoBorrow;
-         
+
+            dgvTest.DataSource = InfoBorrow;
 
             TinhTienCoc(InfoBorrow);
             DateTime date = DateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));
@@ -77,7 +74,8 @@ namespace LibraryManager.Template
         private void dgvInfoBorrow_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;
-            string MaDauSach = dgvInfoBorrow.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
+            string MaDauSach = dgvTest.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
+
             if(MaDauSach.Contains("DS")) LoadDetailBook(MaDauSach);
             MaDauSachCurrent = MaDauSach;
         }
@@ -86,7 +84,7 @@ namespace LibraryManager.Template
         {
             listsach = listsach.Where(var => var != MaDauSachCurrent).ToArray();
             DataTable InfoBorrow = pmBus.LoadTTSachMuon(listsach);
-            dgvInfoBorrow.DataSource = InfoBorrow;
+            dgvTest.DataSource = InfoBorrow;
             TinhTienCoc(InfoBorrow);
 
         }

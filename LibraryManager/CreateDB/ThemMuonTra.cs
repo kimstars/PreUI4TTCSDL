@@ -31,6 +31,8 @@ namespace LibraryManager.CreateDB
         PhieuMuonTra phieuMT = new PhieuMuonTra();
         ThongTinMuonTra TTMuonTra = new ThongTinMuonTra();
         string maMuon;
+        string Current_Mamuon = "";
+
         private void ThemMuonTra_Load(object sender, EventArgs e)
         {
             dgvThongtinMT.DataSource = msBus.LoadData();
@@ -74,12 +76,17 @@ namespace LibraryManager.CreateDB
 
             if (cbNhieuSach.Checked)
             {
+
                 msBus.ThemTTMT(TTMuonTra);
             }
             else
             {
                 msBus.ThemBothTTMT(phieuMT, TTMuonTra);
+                cbNhieuSach.Checked = true;
+                dateMuon.Value = randDate.Next();
                 AutoTaoMa();
+                RandomCombobox(ref cbMaDG);
+                RandomCombobox(ref cbNV);
 
             }
 
@@ -89,8 +96,7 @@ namespace LibraryManager.CreateDB
             dgvThongtinMT.DataSource = msBus.LoadData();
             
 
-            RandomCombobox(ref cbMaDG);
-            RandomCombobox(ref cbNV);
+            
             RandomCombobox(ref cbMaSach);
 
         }
@@ -99,11 +105,15 @@ namespace LibraryManager.CreateDB
         {
             string index = (dgvThongtinMT.Rows.Count - 1).ToString();
             maMuon = "MT000000";
+            Current_Mamuon = txtMaMT.Text;
             maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
-            txtMaMT.Text = maMuon;
+            if(maMuon != Current_Mamuon)
+            {
+                cbNhieuSach.Checked = false;
+                txtMaMT.Text = maMuon;
+            }
 
 
-            dateMuon.Value = randDate.Next();
 
             DateTime date = dateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));
             dateHanTra.Value = date;
@@ -119,6 +129,14 @@ namespace LibraryManager.CreateDB
                 newSelectedIndex = random.Next(0, comboBox.Items.Count);
             }
             comboBox.SelectedIndex = newSelectedIndex;
+        }
+        private void cbNhieuSach_CheckedChanged(object sender, EventArgs e)
+        {
+            AutoTaoMa();
+            if (cbNhieuSach.Checked)
+            {
+                txtMaMT.Text = Current_Mamuon;
+            }
         }
     }
 }

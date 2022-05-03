@@ -71,7 +71,7 @@ namespace LibraryManager.DAO
                 dg.CMND = res.Rows[0][7].ToString();
                 dg.NgayDangKi = DateTime.Parse(res.Rows[0][8].ToString());
                 dg.TenDangNhap = res.Rows[0][9].ToString();
-                dg.Anh = (byte[])res.Rows[0][10];
+
             }
 
             return dg;
