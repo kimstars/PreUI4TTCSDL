@@ -407,6 +407,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.lbMuontra);
             this.Name = "Xu_ly_tra";
             this.Size = new System.Drawing.Size(1054, 799);
+            this.Load += new System.EventHandler(this.Xu_ly_tra_Load);
             this.pnTTchung.ResumeLayout(false);
             this.pnTTchung.PerformLayout();
             this.pnTrasach.ResumeLayout(false);
