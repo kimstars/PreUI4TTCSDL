@@ -18,6 +18,7 @@ namespace LibraryManager.DAO
         {
             DataTable rs = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
+            rs.Clear();
             adapter.Fill(rs);
             return rs;
         }

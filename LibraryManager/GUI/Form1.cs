@@ -219,7 +219,8 @@ namespace LibraryManager
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             hideChildForm();
-            phieuMuon1.Visible = true;
+            phieuMuon1.Visible = false;
+            xu_ly_tra1.Visible = true;
         }
     }
 }

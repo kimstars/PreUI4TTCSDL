@@ -20,10 +20,20 @@ namespace LibraryManager.Template
 
         private void btnTK_Click(object sender, EventArgs e)
         {
-            if(cmbTKiem.Text == "Mã độc giả")
+            if(cmbTKiem.SelectedItem == "Mã độc giả")
             {
-
+                dgv_trasach.DataSource = ts_bus.loadtk_dgia(txtTK.Text);
             }
+            else if (cmbTKiem.SelectedItem == "Mã sách")
+                    {
+                dgv_trasach.DataSource = ts_bus.loadtk_masach(txtTK.Text);
+            }
+        }
+
+        private void Xu_ly_tra_Load(object sender, EventArgs e)
+        {
+            dgv_trasach.DataSource = ts_bus.Loadls();
+            cmbTKiem.SelectedIndex = 0;
         }
     }
 }
