@@ -12,6 +12,7 @@ namespace LibraryManager.DAO
 {
     class TTinSach_DAO : DataProvider
     {
+        /*
         public string GetTenDauSach()
         {
             string sqlString = "SELECT TenDauSach FROM dbo.DAUSACH WHERE Anh='" + AnhSach.Image + "'";
@@ -47,6 +48,7 @@ namespace LibraryManager.DAO
             string sqlString = "SELECT COUNT(MaSach) FROM dbo.CUONSACH, dbo.DAUSACH WHERE dbo.CUONSACH.MADauSach = dbo.DAUSACH.MaDauSach AND TrangThai = 0 AND Anh='" + AnhSach.Image + "'";
             return ExcuteRetStr(sqlString);
         }
+        */
     }
     
 }
