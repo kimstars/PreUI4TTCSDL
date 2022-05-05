@@ -35,5 +35,22 @@ namespace LibraryManager.Template
             dgv_trasach.DataSource = ts_bus.Loadls();
             cmbTKiem.SelectedIndex = 0;
         }
+
+        private void dgv_trasach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgv_trasach.CurrentRow.Index;
+            txtMasach.Text = dgv_trasach.Rows[i].Cells[1].Value.ToString();
+            txtMadg.Text = dgv_trasach.Rows[i].Cells[2].Value.ToString();
+       
+        }
+
+        private void btnCapnhat_Click(object sender, EventArgs e)
+        {
+            if(cboxTra.Checked == true && cboxVi_pham.Checked == false)
+            {
+                ts_bus.update(dgv_trasach.Rows)######
+            }
+        }
     }
 }
