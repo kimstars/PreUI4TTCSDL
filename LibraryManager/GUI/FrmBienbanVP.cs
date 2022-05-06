@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManager.Template
+namespace LibraryManager.GUI
 {
-    public partial class frmPhieuphat : Form
+    public partial class FrmBienbanVP : Form
     {
-        public frmPhieuphat()
+        public FrmBienbanVP()
         {
             InitializeComponent();
         }
-
-       
     }
 }
