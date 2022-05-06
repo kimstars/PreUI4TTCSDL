@@ -186,6 +186,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BienbanVP_BUS.cs" />
     <Compile Include="BUS\CuonSach_BUS.cs" />
     <Compile Include="BUS\DauSach_BUS.cs" />
     <Compile Include="BUS\DocGia_BUS.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="CreateDB\ThemMuonTra.Designer.cs">
       <DependentUpon>ThemMuonTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\BienbanVP_DAO.cs" />
     <Compile Include="DAO\CuonSach_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DauSach_DAO.cs" />
