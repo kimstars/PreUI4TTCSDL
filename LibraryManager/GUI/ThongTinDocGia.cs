@@ -18,7 +18,7 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
-        string MaDocGia = "";
+        string MaDocGia = "DG000002";
         public ThongTinDocGia(string madg)
         {
             InitializeComponent();
@@ -38,6 +38,51 @@ namespace LibraryManager.GUI
                 lbSDT.Text = infoDG.SDT;
                 lbDiaChi.Text = infoDG.DiaChi;
             }
+
+            imageAvt.Image = dgBus.LoadAnh(MaDocGia);
+
+            DataTable muonSL = dgBus.LoadMuon_SL(MaDocGia);
+            if (muonSL.Rows.Count > 1)
+            {
+                DateTime ngayMuon = (DateTime)muonSL.Rows[0]["NgayMuon"];
+                lbinfoMuon.Text = $"- Mượn {muonSL.Rows[0]["sl"].ToString()} cuốn sách vào ngày {DateToString(ngayMuon)}";
+            }
+            else
+            {
+                lbinfoMuon.Text = "";
+            }
+
+            int sachchuatra = dgBus.TongSachChuaTra(MaDocGia);
+            if (sachchuatra > 0)
+            {
+                lbinfoChuaTra.Text = $"- Còn {sachchuatra} cuốn sách chưa trả.";
+            }
+            else
+            {
+                lbinfoChuaTra.Text = "Không có sách phải trả.";
+
+            }
+
+
+            DataTable trasach = dgBus.TraGanDay(MaDocGia);
+
+            if (trasach.Rows.Count > 1)
+            {
+                DateTime timetra = (DateTime)trasach.Rows[0]["NgayTra"];
+
+                lbinfoTra.Text = $"- Đến trả {trasach.Rows[0]["sl"]} cuốn sách ngày {DateToString(timetra)}";
+            }
+            else
+            {
+                lbinfoTra.Text = "";
+            }
+
+
+
+
+            dgvViPham.DataSource = dgBus.LoadLoiViPham(MaDocGia);
+            dgvDenHan.DataSource = dgBus.LoadSachDenHan(MaDocGia);
+
         }
 
 
@@ -52,6 +97,11 @@ namespace LibraryManager.GUI
             if (d != null) return d.Value.ToString("dd/MM/yyyy");
             return "";
 
+        }
+
+        private void ThongTinDocGia_Load(object sender, EventArgs e)
+        {
+            LoadDetailUser();
         }
     }
 }

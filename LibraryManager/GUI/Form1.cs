@@ -64,16 +64,19 @@ namespace LibraryManager
         {
             hideChildForm();
 
-            FrmLogin1.Visible = true;
-
-            GUI.frmLogin newform = new GUI.frmLogin();
+            GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia();
             newform.Show();
 
         }
 
         private void btnloginNV_Click(object sender, EventArgs e)
         {
-            
+            hideChildForm();
+
+            FrmLogin1.Visible = true;
+
+            GUI.frmLogin newform = new GUI.frmLogin();
+            newform.Show();
         }
 
         private void btnLoginQL_Click(object sender, EventArgs e)
@@ -220,6 +223,13 @@ namespace LibraryManager
         {
             hideChildForm();
             phieuMuon1.Visible = true;
+        }
+
+        private void btnListByte_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            GUI.testListByte newform = new GUI.testListByte();
+            newform.Show();
         }
     }
 }

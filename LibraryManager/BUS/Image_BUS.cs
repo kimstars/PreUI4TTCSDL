@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using LibraryManager.DAO;
 using LibraryManager.DTO;
 
@@ -21,5 +24,26 @@ namespace LibraryManager.BUS
             return imgdao.LoadImageFromDB(tableName, MaID, typeID);
         }
 
+
+        public List<byte[]> LoadDSAnh(string tableName)
+        {
+            return imgdao.LoadDSAnh(tableName);
+        }
+
+
+        public Image Load1Anh(byte[] img)
+        {
+            
+            PictureBox avt = new PictureBox();
+            if (img != null)
+            {
+                return Image.FromStream(new MemoryStream(img));
+            }
+            else
+            {
+                return Properties.Resources.icons8_search_client_80px;
+            }
+
+        }
     }
 }

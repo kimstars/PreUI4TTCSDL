@@ -7,6 +7,7 @@ using System.IO;
 using System.Data.SqlClient;
 using LibraryManager.DTO;
 using System.Windows.Forms;
+using System.Data;
 
 namespace LibraryManager.DAO
 {
@@ -44,6 +45,23 @@ namespace LibraryManager.DAO
             string sql = $"Select ANH from {tableName} where {typeID}='{MaID}'";
 
             return LoadImage(sql);
+
+        }
+
+
+        public List<byte[]> LoadDSAnh(string tableName)
+        {
+            string sql = $"SELECT Anh FROM {tableName}";
+            DataTable temp = GetData(sql);
+
+            List<byte[]> listAnh = new List<byte[]>();
+            for(int i = 0; i < temp.Rows.Count; i++)
+            {
+                byte[] anhtemp = (byte[])temp.Rows[i]["Anh"];
+                listAnh.Add(anhtemp);
+            }
+
+            return listAnh;
 
         }
 

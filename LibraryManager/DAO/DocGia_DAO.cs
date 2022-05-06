@@ -120,6 +120,47 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+
+        public DataTable SachDenHan(string MaDocGia)
+        {
+            string sql = $"SELECT pm.MaMuonTra,pm.HanTra, COUNT(tt.MaSach) AS soluong FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra WHERE tt.NgayTra IS NULL AND pm.MaDocGia = '{MaDocGia}' AND DATEDIFF(DAY, pm.HanTra, GETDATE()) > 10 GROUP BY pm.MaMuonTra,pm.HanTra";
+            return GetData(sql);
+        }
+
+
+        public DataTable SachDaMuon_Soluong(string MaDocGia)
+        {
+            string sql = $"SELECT COUNT(tt.MaSach) sl, pm.NgayMuon FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' GROUP BY pm.NgayMuon ORDER BY pm.NgayMuon DESC";
+
+
+            return GetData(sql);
+        }
+
+        public int TongSoSachChuaTra(string MaDocGia)
+        {
+            string sql = $"SELECT COUNT(tt.MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}'";
+
+            return (int)GetCount(sql);
+
+        }
+
+        public DataTable TraGanNhat(string MaDocGia)
+        {
+            string sql = $"SELECT COUNT(tt.MaSach) sl, tt.NgayTra FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND tt.NgayTra IS NOT NULL GROUP BY tt.NgayTra ORDER BY tt.NgayTra DESC";
+
+            return GetData(sql);
+        }
+
+
+
+        #endregion
+
+
+
+        #region khoataikhoan
+        
+
+
         #endregion
     }
 
