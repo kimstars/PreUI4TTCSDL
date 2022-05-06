@@ -52,6 +52,7 @@ namespace LibraryManager.Template
             this.lbMasach = new System.Windows.Forms.Label();
             this.lb_nhap_tra_sach = new System.Windows.Forms.Label();
             this.dgv_trasach = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnTTchung.SuspendLayout();
             this.pnTrasach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).BeginInit();
@@ -77,7 +78,7 @@ namespace LibraryManager.Template
             this.pnTTchung.Controls.Add(this.lbTimkiem);
             this.pnTTchung.Controls.Add(this.lbTTchung);
             this.pnTTchung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTTchung.Location = new System.Drawing.Point(30, 88);
+            this.pnTTchung.Location = new System.Drawing.Point(30, 77);
             this.pnTTchung.Name = "pnTTchung";
             this.pnTTchung.ShadowDecoration.Parent = this.pnTTchung;
             this.pnTTchung.Size = new System.Drawing.Size(479, 204);
@@ -107,7 +108,9 @@ namespace LibraryManager.Template
             this.cmbTKiem.FormattingEnabled = true;
             this.cmbTKiem.Items.AddRange(new object[] {
             "Mã độc giả",
-            "Mã sách"});
+            "Mã sách",
+            "Đã trả",
+            "Chưa trả"});
             this.cmbTKiem.Location = new System.Drawing.Point(171, 57);
             this.cmbTKiem.Name = "cmbTKiem";
             this.cmbTKiem.Size = new System.Drawing.Size(221, 31);
@@ -182,7 +185,7 @@ namespace LibraryManager.Template
             this.pnTrasach.Controls.Add(this.lbMasach);
             this.pnTrasach.Controls.Add(this.lb_nhap_tra_sach);
             this.pnTrasach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTrasach.Location = new System.Drawing.Point(536, 88);
+            this.pnTrasach.Location = new System.Drawing.Point(536, 77);
             this.pnTrasach.Name = "pnTrasach";
             this.pnTrasach.ShadowDecoration.Parent = this.pnTrasach;
             this.pnTrasach.Size = new System.Drawing.Size(466, 204);
@@ -388,7 +391,7 @@ namespace LibraryManager.Template
             this.dgv_trasach.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_trasach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_trasach.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_trasach.Location = new System.Drawing.Point(30, 338);
+            this.dgv_trasach.Location = new System.Drawing.Point(30, 299);
             this.dgv_trasach.Name = "dgv_trasach";
             this.dgv_trasach.RowHeadersVisible = false;
             this.dgv_trasach.RowHeadersWidth = 51;
@@ -399,10 +402,25 @@ namespace LibraryManager.Template
             this.dgv_trasach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_trasach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_trasach_CellContentClick);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(363, 728);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Hoàn tất trả sách";
+            // 
             // Xu_ly_tra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.dgv_trasach);
             this.Controls.Add(this.pnTrasach);
             this.Controls.Add(this.pnTTchung);
@@ -441,5 +459,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label lbMasach;
         private System.Windows.Forms.Label lb_nhap_tra_sach;
         private Bunifu.UI.WinForms.BunifuDataGridView dgv_trasach;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

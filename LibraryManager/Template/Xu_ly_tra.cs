@@ -27,6 +27,13 @@ namespace LibraryManager.Template
             else if (cmbTKiem.SelectedItem == "Mã sách")
                     {
                 dgv_trasach.DataSource = ts_bus.loadtk_masach(txtTK.Text);
+            }else if(cmbTKiem.SelectedItem == "Đã trả")
+            {
+                dgv_trasach.DataSource = ts_bus.loadtk_datra();
+            }
+            else if(cmbTKiem.SelectedItem == "Chưa trả")
+            {
+                dgv_trasach.DataSource = ts_bus.loadtk_chuatra();
             }
         }
 
@@ -49,8 +56,10 @@ namespace LibraryManager.Template
         {
             if(cboxTra.Checked == true && cboxVi_pham.Checked == false)
             {
-                ts_bus.update(dgv_trasach.Rows)######
+                ts_bus.update(txtMasach.Text);
+                ts_bus.Loadls();
             }
+            
         }
     }
 }

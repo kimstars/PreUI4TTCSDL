@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.DAO;
-using LibraryManager.DTO
+using LibraryManager.DTO;
 using System.Data;
 namespace LibraryManager.BUS
 {
@@ -23,12 +23,18 @@ namespace LibraryManager.BUS
         {
             return ts_Dao.loadtk_masach(a);
         }
-        public bool update(ThongTinMuonTra ttmt)
+        public void update(string a)
         {
-            if (ttmt.NgayTra == null)
-                return false;
-            ts_Dao.Update(ttmt);
-            return true;
+            ts_Dao.Update(a);
+            
+        }
+        public DataTable loadtk_datra()
+        {
+            return ts_Dao.load_datra();
+        }
+        public DataTable loadtk_chuatra()
+        {
+            return ts_Dao.load_chuatra();
         }
     }
 }
