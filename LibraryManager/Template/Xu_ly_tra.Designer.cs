@@ -30,9 +30,9 @@ namespace LibraryManager.Template
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Xu_ly_tra));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbMuontra = new System.Windows.Forms.Label();
             this.pnTTchung = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTK = new Guna.UI2.WinForms.Guna2Button();
@@ -52,7 +52,8 @@ namespace LibraryManager.Template
             this.lbMasach = new System.Windows.Forms.Label();
             this.lb_nhap_tra_sach = new System.Windows.Forms.Label();
             this.dgv_trasach = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHoantat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBbvp = new Guna.UI2.WinForms.Guna2Button();
             this.pnTTchung.SuspendLayout();
             this.pnTrasach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).BeginInit();
@@ -190,6 +191,7 @@ namespace LibraryManager.Template
             this.pnTrasach.ShadowDecoration.Parent = this.pnTrasach;
             this.pnTrasach.Size = new System.Drawing.Size(466, 204);
             this.pnTrasach.TabIndex = 2;
+            this.pnTrasach.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTrasach_Paint);
             // 
             // btnCapnhat
             // 
@@ -344,21 +346,21 @@ namespace LibraryManager.Template
             // dgv_trasach
             // 
             this.dgv_trasach.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgv_trasach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgv_trasach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_trasach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_trasach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_trasach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_trasach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_trasach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_trasach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_trasach.ColumnHeadersHeight = 40;
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -378,14 +380,14 @@ namespace LibraryManager.Template
             this.dgv_trasach.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_trasach.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_trasach.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_trasach.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_trasach.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_trasach.EnableHeadersVisualStyles = false;
             this.dgv_trasach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgv_trasach.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -402,25 +404,44 @@ namespace LibraryManager.Template
             this.dgv_trasach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_trasach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_trasach_CellContentClick);
             // 
-            // guna2Button1
+            // btnHoantat
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(363, 728);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Hoàn tất trả sách";
+            this.btnHoantat.BorderRadius = 15;
+            this.btnHoantat.CheckedState.Parent = this.btnHoantat;
+            this.btnHoantat.CustomImages.Parent = this.btnHoantat;
+            this.btnHoantat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnHoantat.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHoantat.ForeColor = System.Drawing.Color.Black;
+            this.btnHoantat.HoverState.Parent = this.btnHoantat;
+            this.btnHoantat.Location = new System.Drawing.Point(671, 731);
+            this.btnHoantat.Name = "btnHoantat";
+            this.btnHoantat.ShadowDecoration.Parent = this.btnHoantat;
+            this.btnHoantat.Size = new System.Drawing.Size(180, 45);
+            this.btnHoantat.TabIndex = 4;
+            this.btnHoantat.Text = "Hoàn tất trả sách";
+            // 
+            // btnBbvp
+            // 
+            this.btnBbvp.BorderRadius = 15;
+            this.btnBbvp.CheckedState.Parent = this.btnBbvp;
+            this.btnBbvp.CustomImages.Parent = this.btnBbvp;
+            this.btnBbvp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnBbvp.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnBbvp.ForeColor = System.Drawing.Color.Black;
+            this.btnBbvp.HoverState.Parent = this.btnBbvp;
+            this.btnBbvp.Location = new System.Drawing.Point(157, 731);
+            this.btnBbvp.Name = "btnBbvp";
+            this.btnBbvp.ShadowDecoration.Parent = this.btnBbvp;
+            this.btnBbvp.Size = new System.Drawing.Size(180, 45);
+            this.btnBbvp.TabIndex = 5;
+            this.btnBbvp.Text = "Lập biên bản vi phạm";
             // 
             // Xu_ly_tra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnBbvp);
+            this.Controls.Add(this.btnHoantat);
             this.Controls.Add(this.dgv_trasach);
             this.Controls.Add(this.pnTrasach);
             this.Controls.Add(this.pnTTchung);
@@ -459,6 +480,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label lbMasach;
         private System.Windows.Forms.Label lb_nhap_tra_sach;
         private Bunifu.UI.WinForms.BunifuDataGridView dgv_trasach;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnHoantat;
+        private Guna.UI2.WinForms.Guna2Button btnBbvp;
     }
 }
