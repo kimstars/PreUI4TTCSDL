@@ -17,16 +17,19 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
-
+        public string chuanhoa(string a)
+        {
+            return a.ToUpper();
+        }
         private void btnTK_Click(object sender, EventArgs e)
         {
             if(cmbTKiem.SelectedItem == "Mã độc giả")
             {
-                dgv_trasach.DataSource = ts_bus.loadtk_dgia(txtTK.Text);
+                dgv_trasach.DataSource = ts_bus.loadtk_dgia(chuanhoa(txtTK.Text));
             }
             else if (cmbTKiem.SelectedItem == "Mã sách")
                     {
-                dgv_trasach.DataSource = ts_bus.loadtk_masach(txtTK.Text);
+                dgv_trasach.DataSource = ts_bus.loadtk_masach(chuanhoa(txtTK.Text));
             }else if(cmbTKiem.SelectedItem == "Đã trả")
             {
                 dgv_trasach.DataSource = ts_bus.loadtk_datra();
@@ -59,10 +62,10 @@ namespace LibraryManager.Template
                 ts_bus.update(txtMasach.Text);
                 ts_bus.Loadls();
             }
-            if(cboxTra.Checked == true && cboxVi_pham.Checked == true)
+            /*if(cboxTra.Checked == true && cboxVi_pham.Checked == true)
             {
                 frmVipham. = true;
-            }
+            }*/
         }
 
         private void pnTrasach_Paint(object sender, PaintEventArgs e)
