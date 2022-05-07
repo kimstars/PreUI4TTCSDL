@@ -62,15 +62,13 @@ namespace LibraryManager.Template
                 ts_bus.update(txtMasach.Text);
                 ts_bus.Loadls();
             }
-            /*if(cboxTra.Checked == true && cboxVi_pham.Checked == true)
+            if(cboxTra.Checked == true && cboxVi_pham.Checked == true)
             {
-                frmVipham. = true;
-            }*/
+                frmVipham vipham = new frmVipham();
+                vipham.Show();
+            }
         }
 
-        private void pnTrasach_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
