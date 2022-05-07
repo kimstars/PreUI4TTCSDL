@@ -47,8 +47,8 @@ namespace LibraryManager.CreateDB
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDauSach = new System.Windows.Forms.DataGridView();
-            this.dateNhap = new LibraryManager.Template.DateTimePickerKiet();
             this.txtMaDauSach = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dateNhap = new LibraryManager.Template.DateTimePickerKiet();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDauSach)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +56,10 @@ namespace LibraryManager.CreateDB
             // label7
             // 
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(130, 189);
+            this.label7.Location = new System.Drawing.Point(173, 233);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 17);
+            this.label7.Size = new System.Drawing.Size(176, 21);
             this.label7.TabIndex = 30;
             this.label7.Text = "* auto random";
             // 
@@ -69,10 +70,11 @@ namespace LibraryManager.CreateDB
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
-            this.btnSubmit.Location = new System.Drawing.Point(133, 220);
+            this.btnSubmit.Location = new System.Drawing.Point(177, 271);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
-            this.btnSubmit.Size = new System.Drawing.Size(464, 32);
+            this.btnSubmit.Size = new System.Drawing.Size(619, 39);
             this.btnSubmit.TabIndex = 29;
             this.btnSubmit.Text = "Xác nhận nhập sách";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -97,10 +99,11 @@ namespace LibraryManager.CreateDB
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTTNhap.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTTNhap.Location = new System.Drawing.Point(50, 326);
+            this.dgvTTNhap.Location = new System.Drawing.Point(67, 401);
+            this.dgvTTNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTTNhap.Name = "dgvTTNhap";
             this.dgvTTNhap.RowHeadersWidth = 51;
-            this.dgvTTNhap.Size = new System.Drawing.Size(547, 156);
+            this.dgvTTNhap.Size = new System.Drawing.Size(729, 192);
             this.dgvTTNhap.TabIndex = 28;
             // 
             // txtMaNhap
@@ -117,53 +120,58 @@ namespace LibraryManager.CreateDB
             this.txtMaNhap.ForeColor = System.Drawing.Color.Black;
             this.txtMaNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaNhap.HoverState.Parent = this.txtMaNhap;
-            this.txtMaNhap.Location = new System.Drawing.Point(133, 12);
-            this.txtMaNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNhap.Location = new System.Drawing.Point(177, 15);
+            this.txtMaNhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMaNhap.Name = "txtMaNhap";
             this.txtMaNhap.PasswordChar = '\0';
             this.txtMaNhap.PlaceholderText = "";
             this.txtMaNhap.SelectedText = "";
             this.txtMaNhap.ShadowDecoration.Parent = this.txtMaNhap;
-            this.txtMaNhap.Size = new System.Drawing.Size(150, 36);
+            this.txtMaNhap.Size = new System.Drawing.Size(200, 44);
             this.txtMaNhap.TabIndex = 27;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(12, 86);
+            this.label6.Location = new System.Drawing.Point(16, 106);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 20);
+            this.label6.Size = new System.Drawing.Size(135, 25);
             this.label6.TabIndex = 25;
             this.label6.Text = "Chọn đầu sách";
             // 
             // cbNV
             // 
             this.cbNV.FormattingEnabled = true;
-            this.cbNV.Location = new System.Drawing.Point(446, 85);
+            this.cbNV.Location = new System.Drawing.Point(595, 105);
+            this.cbNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbNV.Name = "cbNV";
-            this.cbNV.Size = new System.Drawing.Size(152, 21);
+            this.cbNV.Size = new System.Drawing.Size(201, 24);
             this.cbNV.TabIndex = 21;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(304, 85);
+            this.label5.Location = new System.Drawing.Point(405, 105);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 20);
+            this.label5.Size = new System.Drawing.Size(199, 25);
             this.label5.TabIndex = 20;
             this.label5.Text = "Chọn mã nhân viên";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(12, 150);
+            this.label4.Location = new System.Drawing.Point(16, 185);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 26);
+            this.label4.Size = new System.Drawing.Size(140, 32);
             this.label4.TabIndex = 18;
             this.label4.Text = "Ngày nhập";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(12, 23);
+            this.label3.Location = new System.Drawing.Point(16, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.Size = new System.Drawing.Size(152, 31);
             this.label3.TabIndex = 17;
             this.label3.Text = "Mã phiếu nhập : ";
             // 
@@ -181,38 +189,41 @@ namespace LibraryManager.CreateDB
             this.txtSoluong.ForeColor = System.Drawing.Color.Black;
             this.txtSoluong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoluong.HoverState.Parent = this.txtSoluong;
-            this.txtSoluong.Location = new System.Drawing.Point(446, 13);
-            this.txtSoluong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoluong.Location = new System.Drawing.Point(595, 16);
+            this.txtSoluong.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSoluong.Name = "txtSoluong";
             this.txtSoluong.PasswordChar = '\0';
             this.txtSoluong.PlaceholderText = "";
             this.txtSoluong.SelectedText = "";
             this.txtSoluong.ShadowDecoration.Parent = this.txtSoluong;
-            this.txtSoluong.Size = new System.Drawing.Size(151, 36);
+            this.txtSoluong.Size = new System.Drawing.Size(201, 44);
             this.txtSoluong.TabIndex = 32;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(326, 23);
+            this.label1.Location = new System.Drawing.Point(435, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.Size = new System.Drawing.Size(133, 31);
             this.label1.TabIndex = 31;
             this.label1.Text = "Số lượng sách :";
             // 
             // label2
             // 
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(131, 51);
+            this.label2.Location = new System.Drawing.Point(175, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 17);
+            this.label2.Size = new System.Drawing.Size(175, 21);
             this.label2.TabIndex = 33;
             this.label2.Text = "* auto random";
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(48, 286);
+            this.label8.Location = new System.Drawing.Point(64, 352);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(336, 21);
+            this.label8.Size = new System.Drawing.Size(448, 26);
             this.label8.TabIndex = 34;
             this.label8.Text = "Chọn đầu sách đầu tiên rồi nhập các  thông tin khác";
             // 
@@ -236,26 +247,13 @@ namespace LibraryManager.CreateDB
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDauSach.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvDauSach.Location = new System.Drawing.Point(639, 36);
+            this.dgvDauSach.Location = new System.Drawing.Point(852, 44);
+            this.dgvDauSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDauSach.Name = "dgvDauSach";
             this.dgvDauSach.RowHeadersWidth = 51;
-            this.dgvDauSach.Size = new System.Drawing.Size(418, 446);
+            this.dgvDauSach.Size = new System.Drawing.Size(557, 549);
             this.dgvDauSach.TabIndex = 35;
             this.dgvDauSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDauSach_CellClick);
-            // 
-            // dateNhap
-            // 
-            this.dateNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateNhap.BorderRadius = 0;
-            this.dateNhap.BorderSize = 0;
-            this.dateNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateNhap.Location = new System.Drawing.Point(133, 136);
-            this.dateNhap.MinimumSize = new System.Drawing.Size(4, 40);
-            this.dateNhap.Name = "dateNhap";
-            this.dateNhap.Size = new System.Drawing.Size(150, 40);
-            this.dateNhap.SkinColor = System.Drawing.Color.MidnightBlue;
-            this.dateNhap.TabIndex = 22;
-            this.dateNhap.TextColor = System.Drawing.Color.White;
             // 
             // txtMaDauSach
             // 
@@ -271,21 +269,36 @@ namespace LibraryManager.CreateDB
             this.txtMaDauSach.ForeColor = System.Drawing.Color.Black;
             this.txtMaDauSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDauSach.HoverState.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.Location = new System.Drawing.Point(134, 72);
-            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaDauSach.Location = new System.Drawing.Point(179, 89);
+            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMaDauSach.Name = "txtMaDauSach";
             this.txtMaDauSach.PasswordChar = '\0';
             this.txtMaDauSach.PlaceholderText = "";
             this.txtMaDauSach.SelectedText = "";
             this.txtMaDauSach.ShadowDecoration.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.Size = new System.Drawing.Size(151, 36);
+            this.txtMaDauSach.Size = new System.Drawing.Size(201, 44);
             this.txtMaDauSach.TabIndex = 36;
+            // 
+            // dateNhap
+            // 
+            this.dateNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateNhap.BorderRadius = 0;
+            this.dateNhap.BorderSize = 0;
+            this.dateNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateNhap.Location = new System.Drawing.Point(177, 167);
+            this.dateNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.dateNhap.MinimumSize = new System.Drawing.Size(4, 40);
+            this.dateNhap.Name = "dateNhap";
+            this.dateNhap.Size = new System.Drawing.Size(199, 40);
+            this.dateNhap.SkinColor = System.Drawing.Color.MidnightBlue;
+            this.dateNhap.TabIndex = 22;
+            this.dateNhap.TextColor = System.Drawing.Color.White;
             // 
             // NhapSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 528);
+            this.ClientSize = new System.Drawing.Size(1445, 650);
             this.Controls.Add(this.txtMaDauSach);
             this.Controls.Add(this.dgvDauSach);
             this.Controls.Add(this.label8);
@@ -302,6 +315,7 @@ namespace LibraryManager.CreateDB
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NhapSach";
             this.Text = "NhapSach";
             this.Load += new System.EventHandler(this.NhapSach_Load);

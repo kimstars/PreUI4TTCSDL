@@ -28,6 +28,7 @@ namespace LibraryManager.CreateDB
 
         NhanVien_BUS nvBus = new NhanVien_BUS();
 
+
         private void NhapSach_Load(object sender, EventArgs e)
         {
             dgvTTNhap.DataSource = nsBus.LoadTTNhap();
@@ -80,7 +81,7 @@ namespace LibraryManager.CreateDB
             DataGridViewRow row = dgvDauSach.Rows[e.RowIndex];
 
             txtMaDauSach.Text = row.Cells[1].Value.ToString();
-            txtSoluong.Text = row.Cells[3].Value.ToString();
+            txtSoluong.Text = nsBus.LoadSLSachChuaNhap(txtMaDauSach.Text);
 
         }
 
@@ -102,6 +103,10 @@ namespace LibraryManager.CreateDB
             dgvTTNhap.DataSource = nsBus.LoadTTNhap();
 
             AutoTaoMa();
+
+
+           
+
         }
     }
 }

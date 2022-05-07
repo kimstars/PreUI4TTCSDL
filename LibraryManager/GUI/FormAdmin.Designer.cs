@@ -59,11 +59,11 @@ namespace LibraryManager.Template
             this.panelHome = new System.Windows.Forms.Panel();
             this.btnThongtin = new Guna.UI2.WinForms.Guna2Button();
             this.panelNameUser = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelName = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.nameuser = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.QLSachTick = new System.Windows.Forms.Timer(this.components);
@@ -578,8 +578,8 @@ namespace LibraryManager.Template
             // 
             // panelNameUser
             // 
+            this.panelNameUser.Controls.Add(this.label1);
             this.panelNameUser.Controls.Add(this.panelName);
-            this.panelNameUser.Controls.Add(this.label2);
             this.panelNameUser.Controls.Add(this.pictureBox2);
             this.panelNameUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNameUser.Location = new System.Drawing.Point(0, 0);
@@ -587,6 +587,17 @@ namespace LibraryManager.Template
             this.panelNameUser.Name = "panelNameUser";
             this.panelNameUser.Size = new System.Drawing.Size(253, 160);
             this.panelNameUser.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(84, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 74);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "THƯ VIỆN MTA";
             // 
             // panelName
             // 
@@ -642,17 +653,6 @@ namespace LibraryManager.Template
             this.nameuser.Size = new System.Drawing.Size(78, 28);
             this.nameuser.TabIndex = 12;
             this.nameuser.Text = "ADMIN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 28);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Thư viện MTA";
             // 
             // pictureBox2
             // 
@@ -715,10 +715,11 @@ namespace LibraryManager.Template
             // dsPhieuMuonNV1
             // 
             this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
-            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(253, 73);
+            this.dsPhieuMuonNV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(316, 83);
             this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5);
             this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
-            this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1779, 986);
+            this.dsPhieuMuonNV1.Size = new System.Drawing.Size(2109, 1199);
             this.dsPhieuMuonNV1.TabIndex = 12;
             // 
             // FormAdmin
@@ -746,7 +747,6 @@ namespace LibraryManager.Template
             this.panelQLNV.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);
             this.panelNameUser.ResumeLayout(false);
-            this.panelNameUser.PerformLayout();
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).EndInit();
@@ -773,7 +773,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button btnLoginDG;
         private System.Windows.Forms.Panel panelNameUser;
         public System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer sidebartick;
         private System.Windows.Forms.Panel paneldrag;
         private System.Windows.Forms.Label nameuser;
@@ -800,5 +799,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button btnPhieumuon;
         private PhieuMuon phieuMuon;
         private DSPhieuMuonNV dsPhieuMuonNV1;
+        private System.Windows.Forms.Label label1;
     }
 }

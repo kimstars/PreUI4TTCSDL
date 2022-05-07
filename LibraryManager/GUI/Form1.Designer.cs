@@ -36,6 +36,7 @@ namespace LibraryManager
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PanelMenuBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnListByte = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -63,7 +64,7 @@ namespace LibraryManager
             this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.phieuMuon1 = new LibraryManager.Template.PhieuMuon();
-            this.btnListByte = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDocGia = new Guna.UI2.WinForms.Guna2Button();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -127,6 +128,7 @@ namespace LibraryManager
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnDocGia);
             this.panel4.Controls.Add(this.btnListByte);
             this.panel4.Controls.Add(this.guna2Button4);
             this.panel4.Controls.Add(this.guna2Button3);
@@ -138,8 +140,30 @@ namespace LibraryManager
             this.panel4.Location = new System.Drawing.Point(0, 292);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(253, 392);
+            this.panel4.Size = new System.Drawing.Size(253, 455);
             this.panel4.TabIndex = 11;
+            // 
+            // btnListByte
+            // 
+            this.btnListByte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnListByte.CheckedState.Parent = this.btnListByte;
+            this.btnListByte.CustomImages.Parent = this.btnListByte;
+            this.btnListByte.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnListByte.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListByte.ForeColor = System.Drawing.Color.Black;
+            this.btnListByte.HoverState.Parent = this.btnListByte;
+            this.btnListByte.Image = global::LibraryManager.Properties.Resources.icons8_potion_100px;
+            this.btnListByte.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnListByte.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnListByte.Location = new System.Drawing.Point(0, 312);
+            this.btnListByte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListByte.Name = "btnListByte";
+            this.btnListByte.Padding = new System.Windows.Forms.Padding(1);
+            this.btnListByte.ShadowDecoration.Parent = this.btnListByte;
+            this.btnListByte.Size = new System.Drawing.Size(253, 48);
+            this.btnListByte.TabIndex = 19;
+            this.btnListByte.Text = "Test List Byte";
+            this.btnListByte.Click += new System.EventHandler(this.btnListByte_Click);
             // 
             // guna2Button4
             // 
@@ -528,27 +552,27 @@ namespace LibraryManager
             this.phieuMuon1.TabIndex = 15;
             this.phieuMuon1.Visible = false;
             // 
-            // btnListByte
+            // btnDocGia
             // 
-            this.btnListByte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnListByte.CheckedState.Parent = this.btnListByte;
-            this.btnListByte.CustomImages.Parent = this.btnListByte;
-            this.btnListByte.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnListByte.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListByte.ForeColor = System.Drawing.Color.Black;
-            this.btnListByte.HoverState.Parent = this.btnListByte;
-            this.btnListByte.Image = global::LibraryManager.Properties.Resources.icons8_potion_100px;
-            this.btnListByte.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListByte.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnListByte.Location = new System.Drawing.Point(0, 312);
-            this.btnListByte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnListByte.Name = "btnListByte";
-            this.btnListByte.Padding = new System.Windows.Forms.Padding(1);
-            this.btnListByte.ShadowDecoration.Parent = this.btnListByte;
-            this.btnListByte.Size = new System.Drawing.Size(253, 48);
-            this.btnListByte.TabIndex = 19;
-            this.btnListByte.Text = "Test List Byte";
-            this.btnListByte.Click += new System.EventHandler(this.btnListByte_Click);
+            this.btnDocGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnDocGia.CheckedState.Parent = this.btnDocGia;
+            this.btnDocGia.CustomImages.Parent = this.btnDocGia;
+            this.btnDocGia.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnDocGia.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocGia.ForeColor = System.Drawing.Color.Black;
+            this.btnDocGia.HoverState.Parent = this.btnDocGia;
+            this.btnDocGia.Image = global::LibraryManager.Properties.Resources.icons8_people_30px_2;
+            this.btnDocGia.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDocGia.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDocGia.Location = new System.Drawing.Point(0, 364);
+            this.btnDocGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDocGia.Name = "btnDocGia";
+            this.btnDocGia.Padding = new System.Windows.Forms.Padding(1);
+            this.btnDocGia.ShadowDecoration.Parent = this.btnDocGia;
+            this.btnDocGia.Size = new System.Drawing.Size(253, 48);
+            this.btnDocGia.TabIndex = 20;
+            this.btnDocGia.Text = "Độc giả";
+            this.btnDocGia.Click += new System.EventHandler(this.btnDocGia_Click);
             // 
             // Form1
             // 
@@ -614,5 +638,6 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Template.PhieuMuon phieuMuon1;
         private Guna.UI2.WinForms.Guna2Button btnListByte;
+        private Guna.UI2.WinForms.Guna2Button btnDocGia;
     }
 }

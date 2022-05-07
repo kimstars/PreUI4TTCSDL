@@ -231,5 +231,12 @@ namespace LibraryManager
             GUI.testListByte newform = new GUI.testListByte();
             newform.Show();
         }
+
+        private void btnDocGia_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            FrmDocGia newform = new FrmDocGia();
+            newform.Show();
+        }
     }
 }

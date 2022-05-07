@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
@@ -48,6 +49,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
@@ -589,6 +593,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_moleskine_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_combo_chart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_menu_rounded_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
