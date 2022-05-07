@@ -529,9 +529,9 @@ namespace LibraryManager
             // 
             // xu_ly_tra1
             // 
-            this.xu_ly_tra1.Location = new System.Drawing.Point(399, 69);
+            this.xu_ly_tra1.Location = new System.Drawing.Point(281, 12);
             this.xu_ly_tra1.Name = "xu_ly_tra1";
-            this.xu_ly_tra1.Size = new System.Drawing.Size(1054, 799);
+            this.xu_ly_tra1.Size = new System.Drawing.Size(1305, 841);
             this.xu_ly_tra1.TabIndex = 16;
             // 
             // Form1

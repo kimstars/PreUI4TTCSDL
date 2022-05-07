@@ -28,13 +28,6 @@ namespace LibraryManager.BUS
             ts_Dao.Update(a);
             
         }
-        public DataTable loadtk_datra()
-        {
-            return ts_Dao.load_datra();
-        }
-        public DataTable loadtk_chuatra()
-        {
-            return ts_Dao.load_chuatra();
-        }
+       
     }
 }

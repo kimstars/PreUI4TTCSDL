@@ -36,9 +36,9 @@ namespace LibraryManager.Template
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTendg = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtManv = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTennv = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -84,7 +84,7 @@ namespace LibraryManager.Template
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 30);
+            this.label2.Location = new System.Drawing.Point(32, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 23);
             this.label2.TabIndex = 1;
@@ -93,7 +93,7 @@ namespace LibraryManager.Template
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(460, 30);
+            this.label3.Location = new System.Drawing.Point(367, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 2;
@@ -102,7 +102,7 @@ namespace LibraryManager.Template
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 110);
+            this.label4.Location = new System.Drawing.Point(29, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 23);
             this.label4.TabIndex = 3;
@@ -111,7 +111,7 @@ namespace LibraryManager.Template
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(516, 110);
+            this.label5.Location = new System.Drawing.Point(367, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 23);
             this.label5.TabIndex = 4;
@@ -137,33 +137,33 @@ namespace LibraryManager.Template
             this.txtMadg.PlaceholderText = "";
             this.txtMadg.SelectedText = "";
             this.txtMadg.ShadowDecoration.Parent = this.txtMadg;
-            this.txtMadg.Size = new System.Drawing.Size(292, 34);
+            this.txtMadg.Size = new System.Drawing.Size(173, 34);
             this.txtMadg.TabIndex = 5;
             this.txtMadg.TextChanged += new System.EventHandler(this.txtMadg_TextChanged);
             // 
-            // guna2TextBox2
+            // txtTendg
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(554, 25);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(328, 34);
-            this.guna2TextBox2.TabIndex = 6;
+            this.txtTendg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTendg.DefaultText = "";
+            this.txtTendg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTendg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTendg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendg.DisabledState.Parent = this.txtTendg;
+            this.txtTendg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendg.FocusedState.Parent = this.txtTendg;
+            this.txtTendg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendg.HoverState.Parent = this.txtTendg;
+            this.txtTendg.Location = new System.Drawing.Point(480, 28);
+            this.txtTendg.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtTendg.Name = "txtTendg";
+            this.txtTendg.PasswordChar = '\0';
+            this.txtTendg.PlaceholderText = "";
+            this.txtTendg.ReadOnly = true;
+            this.txtTendg.SelectedText = "";
+            this.txtTendg.ShadowDecoration.Parent = this.txtTendg;
+            this.txtTendg.Size = new System.Drawing.Size(328, 34);
+            this.txtTendg.TabIndex = 6;
             // 
             // txtManv
             // 
@@ -178,44 +178,45 @@ namespace LibraryManager.Template
             this.txtManv.FocusedState.Parent = this.txtManv;
             this.txtManv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtManv.HoverState.Parent = this.txtManv;
-            this.txtManv.Location = new System.Drawing.Point(150, 102);
+            this.txtManv.Location = new System.Drawing.Point(145, 89);
             this.txtManv.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtManv.Name = "txtManv";
             this.txtManv.PasswordChar = '\0';
             this.txtManv.PlaceholderText = "";
             this.txtManv.SelectedText = "";
             this.txtManv.ShadowDecoration.Parent = this.txtManv;
-            this.txtManv.Size = new System.Drawing.Size(328, 32);
+            this.txtManv.Size = new System.Drawing.Size(173, 32);
             this.txtManv.TabIndex = 7;
+            this.txtManv.TextChanged += new System.EventHandler(this.txtManv_TextChanged);
             // 
-            // guna2TextBox4
+            // txtTennv
             // 
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(639, 102);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.ReadOnly = true;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(328, 32);
-            this.guna2TextBox4.TabIndex = 8;
+            this.txtTennv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTennv.DefaultText = "";
+            this.txtTennv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTennv.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTennv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTennv.DisabledState.Parent = this.txtTennv;
+            this.txtTennv.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTennv.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTennv.FocusedState.Parent = this.txtTennv;
+            this.txtTennv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTennv.HoverState.Parent = this.txtTennv;
+            this.txtTennv.Location = new System.Drawing.Point(480, 89);
+            this.txtTennv.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtTennv.Name = "txtTennv";
+            this.txtTennv.PasswordChar = '\0';
+            this.txtTennv.PlaceholderText = "";
+            this.txtTennv.ReadOnly = true;
+            this.txtTennv.SelectedText = "";
+            this.txtTennv.ShadowDecoration.Parent = this.txtTennv;
+            this.txtTennv.Size = new System.Drawing.Size(328, 32);
+            this.txtTennv.TabIndex = 8;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2TextBox2);
-            this.panel2.Controls.Add(this.guna2TextBox4);
+            this.panel2.Controls.Add(this.txtTendg);
+            this.panel2.Controls.Add(this.txtTennv);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtManv);
             this.panel2.Controls.Add(this.label3);
@@ -243,9 +244,9 @@ namespace LibraryManager.Template
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 608);
+            this.panel3.Location = new System.Drawing.Point(0, 505);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1012, 10);
+            this.panel3.Size = new System.Drawing.Size(1012, 113);
             this.panel3.TabIndex = 11;
             // 
             // guna2GroupBox2
@@ -266,7 +267,7 @@ namespace LibraryManager.Template
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 225);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(1012, 383);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(1012, 280);
             this.guna2GroupBox2.TabIndex = 12;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
             // 
@@ -371,7 +372,7 @@ namespace LibraryManager.Template
             // txtLydo
             // 
             this.txtLydo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLydo.Location = new System.Drawing.Point(497, 88);
+            this.txtLydo.Location = new System.Drawing.Point(480, 88);
             this.txtLydo.Name = "txtLydo";
             this.txtLydo.Size = new System.Drawing.Size(482, 79);
             this.txtLydo.TabIndex = 1;
@@ -421,9 +422,9 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtMadg;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtTendg;
         private Guna.UI2.WinForms.Guna2TextBox txtManv;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtTennv;
         private Guna.UI2.WinForms.Guna2Panel panel2;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.Panel panel3;
