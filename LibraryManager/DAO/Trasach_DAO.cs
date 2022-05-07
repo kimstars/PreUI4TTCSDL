@@ -11,19 +11,10 @@ namespace LibraryManager.DAO
     {
         public DataTable load_trasach()
         {
-            string sqlString = @"select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt,THONGTINMUONTRA tt where tt.MaMuonTra =pmt.MaMuonTra ";
+            string sqlString = @"select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt,THONGTINMUONTRA tt where tt.MaMuonTra =pmt.MaMuonTra and ngaytra is null ";
             return GetData(sqlString);
         }
-        public DataTable load_datra()
-        {
-            string sqlString = @"select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt,THONGTINMUONTRA tt where tt.MaMuonTra =pmt.MaMuonTra and ngaytra is not null";
-            return GetData(sqlString);
-        }
-        public DataTable load_chuatra()
-        {
-            string sqlString = @"select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt,THONGTINMUONTRA tt where tt.MaMuonTra =pmt.MaMuonTra and ngaytra is null";
-            return GetData(sqlString);
-        }
+       
         public void Update(string a)
         {
             string sqlString = "update THONGTINMUONTRA set Ngaytra = getdate() where masach = '"+a+"'";

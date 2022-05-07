@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryManager.BUS;
+using LibraryManager.GUI;
 namespace LibraryManager.Template
 {
     public partial class Xu_ly_tra : UserControl
@@ -30,13 +31,6 @@ namespace LibraryManager.Template
             else if (cmbTKiem.SelectedItem == "Mã sách")
                     {
                 dgv_trasach.DataSource = ts_bus.loadtk_masach(chuanhoa(txtTK.Text));
-            }else if(cmbTKiem.SelectedItem == "Đã trả")
-            {
-                dgv_trasach.DataSource = ts_bus.loadtk_datra();
-            }
-            else if(cmbTKiem.SelectedItem == "Chưa trả")
-            {
-                dgv_trasach.DataSource = ts_bus.loadtk_chuatra();
             }
         }
 
@@ -50,14 +44,14 @@ namespace LibraryManager.Template
         {
             int i;
             i = dgv_trasach.CurrentRow.Index;
-            txtMasach.Text = dgv_trasach.Rows[i].Cells[1].Value.ToString();
+            txtMasach.Text = dgv_trasach.Rows[i].Cells[7].Value.ToString();
             txtMadg.Text = dgv_trasach.Rows[i].Cells[2].Value.ToString();
        
         }
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-            if(cboxTra.Checked == true && cboxVi_pham.Checked == false)
+            /*if(cboxTra.Checked == true && cboxVi_pham.Checked == false)
             {
                 ts_bus.update(txtMasach.Text);
                 ts_bus.Loadls();
@@ -66,9 +60,23 @@ namespace LibraryManager.Template
             {
                 frmVipham vipham = new frmVipham();
                 vipham.Show();
+            }*/
+
+            if (cboxVi_pham.Checked == true)
+            {
+                dgvDs.Rows.Add(txtMasach.Text, txtMadg.Text, DateTime.Now, "Có");
             }
+            else
+            {
+                dgvDs.Rows.Add(txtMasach.Text, txtMadg.Text, DateTime.Now, "Không");
+            }
+       
         }
 
-        
+        private void btnBbvp_Click(object sender, EventArgs e)
+        {
+            frmPhieuphat pp = new frmPhieuphat();
+            pp.Show();
+        }
     }
 }

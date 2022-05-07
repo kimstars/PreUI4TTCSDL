@@ -21,7 +21,14 @@ namespace LibraryManager.Template
 
         private void txtMadg_TextChanged(object sender, EventArgs e)
         {
-
+            txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
         }
+
+        private void txtManv_TextChanged(object sender, EventArgs e)
+        {
+            txtTennv.Text = bbvp_bus.Get_tennv(txtManv.Text);
+        }
+
+        
     }
 }
