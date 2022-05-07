@@ -191,7 +191,7 @@ namespace LibraryManager.Template
             this.pnTrasach.ShadowDecoration.Parent = this.pnTrasach;
             this.pnTrasach.Size = new System.Drawing.Size(466, 204);
             this.pnTrasach.TabIndex = 2;
-            this.pnTrasach.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTrasach_Paint);
+            
             // 
             // btnCapnhat
             // 
