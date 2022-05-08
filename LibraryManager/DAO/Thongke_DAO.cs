@@ -10,7 +10,7 @@ namespace LibraryManager.DAO
 {
     class Thongke_DAO : DataProvider
     {
-        public DataTable tk_sachmuon()
+        public DataTable tk_sachmuon_nv()
         {
             
             string sqlString ="select * from cuonsach where trangthai ='1'";
@@ -22,7 +22,27 @@ namespace LibraryManager.DAO
             return chart(sqlString);
             
         }
-        
-        
+        public DataTable tk_sachmuon_dg(string a)
+        {
+            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra " +
+                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds " +
+                "where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='" +a + "'";
+            return GetData(sqlString);
+        }
+        public DataTable tk_sachchuatra_dg(string a)
+        {
+            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra " +
+                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds " +
+                "where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and ngaytra is null and dg.Madocgia ='" + a + "'";
+            return GetData(sqlString);
+        }
+        public DataTable tk_sach_tre_hen_dg(string a)
+        {
+            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra ,NgayMuon " +
+                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia " +
+                "and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach " +
+                "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
+            return GetData(sqlString);
+        }
     }
 }
