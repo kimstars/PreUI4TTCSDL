@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using LibraryManager.BUS;
 namespace LibraryManager.Template
 {
-    public partial class tk_sachmuon : UserControl
+    public partial class tk_sachmuon_nv : UserControl
     {
-        public tk_sachmuon()
+        public tk_sachmuon_nv()
         {
             InitializeComponent();
         }

@@ -220,7 +220,7 @@ namespace LibraryManager
         {
             hideChildForm();
             //tk_sachmuon1.Visible = true;
-            tk_sachnhap1.Visible = true;
+            // tk_sachnhap1.Visible = true;
         }
     }
 }

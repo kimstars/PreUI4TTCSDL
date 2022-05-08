@@ -286,11 +286,17 @@
     <Compile Include="GUI\FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\tk_sachmuon.cs">
+    <Compile Include="Template\TK_sachmuon_dg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Template\tk_sachmuon.Designer.cs">
-      <DependentUpon>tk_sachmuon.cs</DependentUpon>
+    <Compile Include="Template\TK_sachmuon_dg.Designer.cs">
+      <DependentUpon>TK_sachmuon_dg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\tk_sachmuon_nv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\tk_sachmuon_nv.Designer.cs">
+      <DependentUpon>tk_sachmuon_nv.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\tk_sachnhap.cs">
       <SubType>UserControl</SubType>
@@ -368,8 +374,11 @@
     <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\tk_sachmuon.resx">
-      <DependentUpon>tk_sachmuon.cs</DependentUpon>
+    <EmbeddedResource Include="Template\TK_sachmuon_dg.resx">
+      <DependentUpon>TK_sachmuon_dg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\tk_sachmuon_nv.resx">
+      <DependentUpon>tk_sachmuon_nv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\tk_sachnhap.resx">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
