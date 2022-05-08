@@ -30,12 +30,12 @@ namespace LibraryManager.Template
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Xu_ly_tra));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbMuontra = new System.Windows.Forms.Label();
             this.pnTTchung = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTK = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +47,6 @@ namespace LibraryManager.Template
             this.pnTrasach = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCapnhat = new Guna.UI2.WinForms.Guna2Button();
             this.cboxVi_pham = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.cboxTra = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMasach = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,12 +58,12 @@ namespace LibraryManager.Template
             this.btnBbvp = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvDs = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.pabe = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbDs = new System.Windows.Forms.Label();
             this.clmMasach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMadg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNgaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pabe = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbDs = new System.Windows.Forms.Label();
             this.pnTTchung.SuspendLayout();
             this.pnTrasach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).BeginInit();
@@ -190,7 +189,6 @@ namespace LibraryManager.Template
             this.pnTrasach.BorderRadius = 15;
             this.pnTrasach.Controls.Add(this.btnCapnhat);
             this.pnTrasach.Controls.Add(this.cboxVi_pham);
-            this.pnTrasach.Controls.Add(this.cboxTra);
             this.pnTrasach.Controls.Add(this.txtMadg);
             this.pnTrasach.Controls.Add(this.txtMasach);
             this.pnTrasach.Controls.Add(this.label7);
@@ -216,12 +214,12 @@ namespace LibraryManager.Template
             this.btnCapnhat.HoverState.Parent = this.btnCapnhat;
             this.btnCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapnhat.Image")));
             this.btnCapnhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCapnhat.Location = new System.Drawing.Point(315, 148);
+            this.btnCapnhat.Location = new System.Drawing.Point(154, 148);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.ShadowDecoration.Parent = this.btnCapnhat;
             this.btnCapnhat.Size = new System.Drawing.Size(112, 45);
             this.btnCapnhat.TabIndex = 8;
-            this.btnCapnhat.Text = "Cập nhật";
+            this.btnCapnhat.Text = "Trả sách";
             this.btnCapnhat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
@@ -234,7 +232,7 @@ namespace LibraryManager.Template
             this.cboxVi_pham.CheckedState.BorderThickness = 0;
             this.cboxVi_pham.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboxVi_pham.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboxVi_pham.Location = new System.Drawing.Point(183, 157);
+            this.cboxVi_pham.Location = new System.Drawing.Point(28, 151);
             this.cboxVi_pham.Name = "cboxVi_pham";
             this.cboxVi_pham.Size = new System.Drawing.Size(96, 27);
             this.cboxVi_pham.TabIndex = 7;
@@ -244,26 +242,6 @@ namespace LibraryManager.Template
             this.cboxVi_pham.UncheckedState.BorderThickness = 0;
             this.cboxVi_pham.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.cboxVi_pham.UseVisualStyleBackColor = false;
-            // 
-            // cboxTra
-            // 
-            this.cboxTra.AutoSize = true;
-            this.cboxTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.cboxTra.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxTra.CheckedState.BorderRadius = 2;
-            this.cboxTra.CheckedState.BorderThickness = 0;
-            this.cboxTra.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxTra.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboxTra.Location = new System.Drawing.Point(28, 159);
-            this.cboxTra.Name = "cboxTra";
-            this.cboxTra.Size = new System.Drawing.Size(79, 27);
-            this.cboxTra.TabIndex = 6;
-            this.cboxTra.Text = "Đã trả";
-            this.cboxTra.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxTra.UncheckedState.BorderRadius = 2;
-            this.cboxTra.UncheckedState.BorderThickness = 0;
-            this.cboxTra.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxTra.UseVisualStyleBackColor = false;
             // 
             // txtMadg
             // 
@@ -357,21 +335,21 @@ namespace LibraryManager.Template
             // dgv_trasach
             // 
             this.dgv_trasach.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgv_trasach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgv_trasach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_trasach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_trasach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_trasach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_trasach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_trasach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_trasach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_trasach.ColumnHeadersHeight = 40;
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -391,14 +369,14 @@ namespace LibraryManager.Template
             this.dgv_trasach.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_trasach.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_trasach.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_trasach.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_trasach.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_trasach.EnableHeadersVisualStyles = false;
             this.dgv_trasach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgv_trasach.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -430,6 +408,7 @@ namespace LibraryManager.Template
             this.btnHoantat.Size = new System.Drawing.Size(180, 45);
             this.btnHoantat.TabIndex = 4;
             this.btnHoantat.Text = "Hoàn tất trả sách";
+            this.btnHoantat.Click += new System.EventHandler(this.btnHoantat_Click);
             // 
             // btnBbvp
             // 
@@ -461,21 +440,21 @@ namespace LibraryManager.Template
             // dgvDs
             // 
             this.dgvDs.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvDs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dgvDs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvDs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDs.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvDs.ColumnHeadersHeight = 40;
             this.dgvDs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmMasach,
@@ -491,7 +470,7 @@ namespace LibraryManager.Template
             this.dgvDs.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDs.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDs.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvDs.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvDs.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvDs.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.dgvDs.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvDs.CurrentTheme.Name = null;
@@ -500,20 +479,20 @@ namespace LibraryManager.Template
             this.dgvDs.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDs.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvDs.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDs.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDs.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvDs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDs.EnableHeadersVisualStyles = false;
-            this.dgvDs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvDs.GridColor = System.Drawing.Color.Aqua;
             this.dgvDs.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDs.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvDs.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvDs.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvDs.Location = new System.Drawing.Point(0, 40);
             this.dgvDs.Name = "dgvDs";
             this.dgvDs.RowHeadersVisible = false;
@@ -523,30 +502,7 @@ namespace LibraryManager.Template
             this.dgvDs.Size = new System.Drawing.Size(475, 208);
             this.dgvDs.TabIndex = 1;
             this.dgvDs.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // clmMasach
-            // 
-            this.clmMasach.HeaderText = "Mã sách";
-            this.clmMasach.MinimumWidth = 6;
-            this.clmMasach.Name = "clmMasach";
-            // 
-            // clmMadg
-            // 
-            this.clmMadg.HeaderText = "Mã độc giả";
-            this.clmMadg.MinimumWidth = 6;
-            this.clmMadg.Name = "clmMadg";
-            // 
-            // clmNgaytra
-            // 
-            this.clmNgaytra.HeaderText = "Ngày trả";
-            this.clmNgaytra.MinimumWidth = 6;
-            this.clmNgaytra.Name = "clmNgaytra";
-            // 
-            // clmVP
-            // 
-            this.clmVP.HeaderText = "Vi Phạm";
-            this.clmVP.MinimumWidth = 6;
-            this.clmVP.Name = "clmVP";
+            this.dgvDs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDs_CellContentClick);
             // 
             // pabe
             // 
@@ -569,6 +525,34 @@ namespace LibraryManager.Template
             this.lbDs.Size = new System.Drawing.Size(191, 28);
             this.lbDs.TabIndex = 0;
             this.lbDs.Text = "Danh sách sách trả";
+            // 
+            // clmMasach
+            // 
+            this.clmMasach.DataPropertyName = "clmMasach";
+            this.clmMasach.HeaderText = "Mã sách";
+            this.clmMasach.MinimumWidth = 6;
+            this.clmMasach.Name = "clmMasach";
+            // 
+            // clmMadg
+            // 
+            this.clmMadg.DataPropertyName = "clmMadg";
+            this.clmMadg.HeaderText = "Mã độc giả";
+            this.clmMadg.MinimumWidth = 6;
+            this.clmMadg.Name = "clmMadg";
+            // 
+            // clmNgaytra
+            // 
+            this.clmNgaytra.DataPropertyName = "clmNgaytra";
+            this.clmNgaytra.HeaderText = "Ngày trả";
+            this.clmNgaytra.MinimumWidth = 6;
+            this.clmNgaytra.Name = "clmNgaytra";
+            // 
+            // clmVP
+            // 
+            this.clmVP.DataPropertyName = "clmVP";
+            this.clmVP.HeaderText = "Vi Phạm";
+            this.clmVP.MinimumWidth = 6;
+            this.clmVP.Name = "clmVP";
             // 
             // Xu_ly_tra
             // 
@@ -611,7 +595,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Panel pnTrasach;
         private Guna.UI2.WinForms.Guna2Button btnCapnhat;
         private Guna.UI2.WinForms.Guna2CheckBox cboxVi_pham;
-        private Guna.UI2.WinForms.Guna2CheckBox cboxTra;
         private Guna.UI2.WinForms.Guna2TextBox txtMadg;
         private Guna.UI2.WinForms.Guna2TextBox txtMasach;
         private System.Windows.Forms.Label label7;

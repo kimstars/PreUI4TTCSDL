@@ -17,5 +17,9 @@ namespace LibraryManager.BUS
         {
             return bbvp_dao.get_ten_nv(a);
         }
+        public int Get_slVP()
+        {
+            return int.Parse(bbvp_dao.Get_sl_MaVP());
+        }
     }
 }

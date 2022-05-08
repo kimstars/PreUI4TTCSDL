@@ -43,16 +43,16 @@ namespace LibraryManager.GUI
             this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.labelChuY = new System.Windows.Forms.Label();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbMaVP = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.txtLydo = new System.Windows.Forms.RichTextBox();
             this.lbVP = new System.Windows.Forms.Label();
-            this.labelChuY = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -277,8 +277,8 @@ namespace LibraryManager.GUI
             // 
             this.guna2GroupBox2.Controls.Add(this.labelChuY);
             this.guna2GroupBox2.Controls.Add(this.guna2TextBox6);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox5);
-            this.guna2GroupBox2.Controls.Add(this.label9);
+            this.guna2GroupBox2.Controls.Add(this.txtMaVP);
+            this.guna2GroupBox2.Controls.Add(this.lbMaVP);
             this.guna2GroupBox2.Controls.Add(this.label8);
             this.guna2GroupBox2.Controls.Add(this.label7);
             this.guna2GroupBox2.Controls.Add(this.label6);
@@ -295,6 +295,17 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Size = new System.Drawing.Size(895, 354);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // labelChuY
+            // 
+            this.labelChuY.AutoSize = true;
+            this.labelChuY.BackColor = System.Drawing.Color.White;
+            this.labelChuY.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChuY.Location = new System.Drawing.Point(12, 265);
+            this.labelChuY.Name = "labelChuY";
+            this.labelChuY.Size = new System.Drawing.Size(60, 23);
+            this.labelChuY.TabIndex = 9;
+            this.labelChuY.Text = "Chú ý:";
             // 
             // guna2TextBox6
             // 
@@ -320,39 +331,39 @@ namespace LibraryManager.GUI
             this.guna2TextBox6.Size = new System.Drawing.Size(252, 35);
             this.guna2TextBox6.TabIndex = 8;
             // 
-            // guna2TextBox5
+            // txtMaVP
             // 
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(145, 47);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Size = new System.Drawing.Size(328, 34);
-            this.guna2TextBox5.TabIndex = 7;
+            this.txtMaVP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaVP.DefaultText = "";
+            this.txtMaVP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaVP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaVP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaVP.DisabledState.Parent = this.txtMaVP;
+            this.txtMaVP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaVP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaVP.FocusedState.Parent = this.txtMaVP;
+            this.txtMaVP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaVP.HoverState.Parent = this.txtMaVP;
+            this.txtMaVP.Location = new System.Drawing.Point(145, 47);
+            this.txtMaVP.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtMaVP.Name = "txtMaVP";
+            this.txtMaVP.PasswordChar = '\0';
+            this.txtMaVP.PlaceholderText = "";
+            this.txtMaVP.SelectedText = "";
+            this.txtMaVP.ShadowDecoration.Parent = this.txtMaVP;
+            this.txtMaVP.Size = new System.Drawing.Size(328, 34);
+            this.txtMaVP.TabIndex = 7;
             // 
-            // label9
+            // lbMaVP
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label9.Location = new System.Drawing.Point(12, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Mã vi phạm";
+            this.lbMaVP.AutoSize = true;
+            this.lbMaVP.BackColor = System.Drawing.Color.White;
+            this.lbMaVP.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbMaVP.Location = new System.Drawing.Point(12, 50);
+            this.lbMaVP.Name = "lbMaVP";
+            this.lbMaVP.Size = new System.Drawing.Size(100, 23);
+            this.lbMaVP.TabIndex = 6;
+            this.lbMaVP.Text = "Mã vi phạm";
             // 
             // label8
             // 
@@ -414,17 +425,6 @@ namespace LibraryManager.GUI
             this.lbVP.TabIndex = 0;
             this.lbVP.Text = "Lý do vi phạm:";
             // 
-            // labelChuY
-            // 
-            this.labelChuY.AutoSize = true;
-            this.labelChuY.BackColor = System.Drawing.Color.White;
-            this.labelChuY.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChuY.Location = new System.Drawing.Point(12, 265);
-            this.labelChuY.Name = "labelChuY";
-            this.labelChuY.Size = new System.Drawing.Size(60, 23);
-            this.labelChuY.TabIndex = 9;
-            this.labelChuY.Text = "Chú ý:";
-            // 
             // FrmBienbanVP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,6 +435,7 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.panel1);
             this.Name = "FrmBienbanVP";
             this.Text = "FrmBienbanVP";
+            this.Load += new System.EventHandler(this.FrmBienbanVP_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -460,8 +461,8 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaVP;
+        private System.Windows.Forms.Label lbMaVP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
