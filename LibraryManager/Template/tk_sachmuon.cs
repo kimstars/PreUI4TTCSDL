@@ -29,5 +29,7 @@ namespace LibraryManager.Template
             charttk.Titles.Add("Sách mượn");
             dgv_tksachmuon.DataSource = tkBus.load_tt_sachmuon();
         }
+
+       
     }
 }

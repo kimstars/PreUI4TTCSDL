@@ -292,6 +292,12 @@
     <Compile Include="Template\tk_sachmuon.Designer.cs">
       <DependentUpon>tk_sachmuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\tk_sachnhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\tk_sachnhap.Designer.cs">
+      <DependentUpon>tk_sachnhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="CreateDB\addImageDauSach.resx">
       <DependentUpon>addImageDauSach.cs</DependentUpon>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\tk_sachmuon.resx">
       <DependentUpon>tk_sachmuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\tk_sachnhap.resx">
+      <DependentUpon>tk_sachnhap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

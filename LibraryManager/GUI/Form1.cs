@@ -219,7 +219,8 @@ namespace LibraryManager
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             hideChildForm();
-            tk_sachmuon1.Visible = true;
+            //tk_sachmuon1.Visible = true;
+            tk_sachnhap1.Visible = true;
         }
     }
 }

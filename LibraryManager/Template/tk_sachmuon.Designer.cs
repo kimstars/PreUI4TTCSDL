@@ -59,11 +59,11 @@ namespace LibraryManager.Template
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 42);
+            this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 32);
+            this.label1.Size = new System.Drawing.Size(253, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Danh sách sách mượn";
+            this.label1.Text = "Thống kê sách mượn";
             // 
             // charttk
             // 
@@ -199,7 +199,7 @@ namespace LibraryManager.Template
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_tksachmuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_tksachmuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tksachmuon.ColumnHeadersHeight = 40;
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
