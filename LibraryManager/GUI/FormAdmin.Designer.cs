@@ -62,17 +62,17 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.panelName = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.nameuser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.QLSachTick = new System.Windows.Forms.Timer(this.components);
             this.QLNVtick = new System.Windows.Forms.Timer(this.components);
             this.QLDGtick = new System.Windows.Forms.Timer(this.components);
-            this.danhsachNV1 = new LibraryManager.Template.DanhsachNV();
-            this.danhSachDG1 = new LibraryManager.Template.DanhSachDG();
-            this.phieuMuon = new LibraryManager.Template.PhieuMuon();
             this.dsPhieuMuonNV1 = new LibraryManager.Template.DSPhieuMuonNV();
+            this.phieuMuon = new LibraryManager.Template.PhieuMuon();
+            this.danhSachDG1 = new LibraryManager.Template.DanhSachDG();
+            this.danhsachNV1 = new LibraryManager.Template.DanhsachNV();
+            this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.paneldrag.SuspendLayout();
             this.PanelMenuBar.SuspendLayout();
             this.panelSetting.SuspendLayout();
@@ -83,8 +83,8 @@ namespace LibraryManager.Template
             this.panelHome.SuspendLayout();
             this.panelNameUser.SuspendLayout();
             this.panelName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -236,7 +236,7 @@ namespace LibraryManager.Template
             this.btnPhieumuon.Name = "btnPhieumuon";
             this.btnPhieumuon.Padding = new System.Windows.Forms.Padding(1);
             this.btnPhieumuon.ShadowDecoration.Parent = this.btnPhieumuon;
-            this.btnPhieumuon.Size = new System.Drawing.Size(253, 49);
+            this.btnPhieumuon.Size = new System.Drawing.Size(253, 56);
             this.btnPhieumuon.TabIndex = 12;
             this.btnPhieumuon.Text = "QL Phiếu mượn";
             this.btnPhieumuon.Click += new System.EventHandler(this.btnPhieumuon_Click);
@@ -624,25 +624,6 @@ namespace LibraryManager.Template
             this.label3.TabIndex = 13;
             this.label3.Text = "  Quản lý  ";
             // 
-            // pictureAvt
-            // 
-            this.pictureAvt.BackColor = System.Drawing.Color.White;
-            this.pictureAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictureAvt.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.pictureAvt.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pictureAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.pictureAvt.BorderSize = 2;
-            this.pictureAvt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureAvt.GradientAngle = 50F;
-            this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
-            this.pictureAvt.Location = new System.Drawing.Point(0, 0);
-            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureAvt.Name = "pictureAvt";
-            this.pictureAvt.Size = new System.Drawing.Size(60, 60);
-            this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureAvt.TabIndex = 5;
-            this.pictureAvt.TabStop = false;
-            // 
             // nameuser
             // 
             this.nameuser.AutoSize = true;
@@ -683,24 +664,15 @@ namespace LibraryManager.Template
             // 
             this.QLDGtick.Tick += new System.EventHandler(this.QLDGtick_Tick);
             // 
-            // danhsachNV1
+            // dsPhieuMuonNV1
             // 
-            this.danhsachNV1.Location = new System.Drawing.Point(345, 73);
-            this.danhsachNV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.danhsachNV1.Name = "danhsachNV1";
-            this.danhsachNV1.Size = new System.Drawing.Size(1133, 802);
-            this.danhsachNV1.TabIndex = 9;
-            this.danhsachNV1.Visible = false;
-            // 
-            // danhSachDG1
-            // 
-            this.danhSachDG1.BackColor = System.Drawing.Color.Transparent;
-            this.danhSachDG1.Location = new System.Drawing.Point(380, 102);
-            this.danhSachDG1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.danhSachDG1.Name = "danhSachDG1";
-            this.danhSachDG1.Size = new System.Drawing.Size(1133, 802);
-            this.danhSachDG1.TabIndex = 10;
-            this.danhSachDG1.Visible = false;
+            this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
+            this.dsPhieuMuonNV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(253, 66);
+            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5);
+            this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
+            this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1687, 959);
+            this.dsPhieuMuonNV1.TabIndex = 12;
             // 
             // phieuMuon
             // 
@@ -712,15 +684,43 @@ namespace LibraryManager.Template
             this.phieuMuon.TabIndex = 11;
             this.phieuMuon.Visible = false;
             // 
-            // dsPhieuMuonNV1
+            // danhSachDG1
             // 
-            this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
-            this.dsPhieuMuonNV1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dsPhieuMuonNV1.Location = new System.Drawing.Point(316, 83);
-            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5);
-            this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
-            this.dsPhieuMuonNV1.Size = new System.Drawing.Size(2109, 1199);
-            this.dsPhieuMuonNV1.TabIndex = 12;
+            this.danhSachDG1.BackColor = System.Drawing.Color.Transparent;
+            this.danhSachDG1.Location = new System.Drawing.Point(380, 102);
+            this.danhSachDG1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.danhSachDG1.Name = "danhSachDG1";
+            this.danhSachDG1.Size = new System.Drawing.Size(1133, 802);
+            this.danhSachDG1.TabIndex = 10;
+            this.danhSachDG1.Visible = false;
+            // 
+            // danhsachNV1
+            // 
+            this.danhsachNV1.Location = new System.Drawing.Point(345, 73);
+            this.danhsachNV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.danhsachNV1.Name = "danhsachNV1";
+            this.danhsachNV1.Size = new System.Drawing.Size(1133, 802);
+            this.danhsachNV1.TabIndex = 9;
+            this.danhsachNV1.Visible = false;
+            // 
+            // pictureAvt
+            // 
+            this.pictureAvt.BackColor = System.Drawing.Color.White;
+            this.pictureAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictureAvt.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pictureAvt.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pictureAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.pictureAvt.BorderSize = 2;
+            this.pictureAvt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureAvt.GradientAngle = 50F;
+            this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
+            this.pictureAvt.Location = new System.Drawing.Point(0, 0);
+            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureAvt.Name = "pictureAvt";
+            this.pictureAvt.Size = new System.Drawing.Size(75, 75);
+            this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureAvt.TabIndex = 5;
+            this.pictureAvt.TabStop = false;
             // 
             // FormAdmin
             // 
@@ -749,8 +749,8 @@ namespace LibraryManager.Template
             this.panelNameUser.ResumeLayout(false);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).EndInit();
             this.ResumeLayout(false);
 
         }

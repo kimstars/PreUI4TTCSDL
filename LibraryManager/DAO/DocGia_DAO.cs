@@ -80,12 +80,18 @@ namespace LibraryManager.DAO
 
 
 
-        #region get
+        #region get MADOCGIA
 
         public DataTable GetMaDG()
         {
             string sql = "SELECT MaDocGia FROM dbo.DOCGIA";
             return GetData(sql);
+        }
+
+        public string GetMaDG_PhieuMuon(string MaMuonTra)
+        {
+            string sql = $"SELECT MaDocGia FROM dbo.PHIEUMUONTRA WHERE MaMuonTra = '{MaMuonTra}'";
+            return GetString(sql);
         }
 
         #endregion

@@ -70,11 +70,17 @@ namespace LibraryManager.BUS
             return dgDao.GetMotDG(maDG);
         }
 
-
+        #region getMaDocGia
         public DataTable LoadMaDocGia()
         {
             return dgDao.GetMaDG();
         }
+        public string LoadMaDocGia_PhieuMuon(string MaMT)
+        {
+            return dgDao.GetMaDG_PhieuMuon(MaMT);
+        }
+
+        #endregion
 
         #region hoatdong
         public DataTable LoadLoiViPham(string MaDG)

@@ -42,8 +42,6 @@ namespace LibraryManager.Template
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnFilterDate = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
-            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -74,6 +72,8 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
+            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
@@ -138,7 +138,7 @@ namespace LibraryManager.Template
             this.guna2GradientPanel1.Controls.Add(this.txtSearch);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(68, 70);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(699, 191);
@@ -176,43 +176,14 @@ namespace LibraryManager.Template
             this.btnSearch.Size = new System.Drawing.Size(103, 44);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Tìm kiếm";
-            // 
-            // dateEnd
-            // 
-            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateEnd.BorderRadius = 0;
-            this.dateEnd.BorderSize = 0;
-            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateEnd.Location = new System.Drawing.Point(317, 52);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 36);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(205, 36);
-            this.dateEnd.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.dateEnd.TabIndex = 7;
-            this.dateEnd.TextColor = System.Drawing.Color.White;
-            // 
-            // dateStart
-            // 
-            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateStart.BorderRadius = 0;
-            this.dateStart.BorderSize = 0;
-            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateStart.Location = new System.Drawing.Point(27, 50);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateStart.MinimumSize = new System.Drawing.Size(4, 36);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(205, 36);
-            this.dateStart.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.dateStart.TabIndex = 1;
-            this.dateStart.TextColor = System.Drawing.Color.White;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_arrow_64px;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(240, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 36);
             this.pictureBox1.TabIndex = 4;
@@ -233,7 +204,7 @@ namespace LibraryManager.Template
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::LibraryManager.Properties.Resources.icons8_search_32px;
             this.txtSearch.Location = new System.Drawing.Point(27, 135);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -263,7 +234,7 @@ namespace LibraryManager.Template
             this.guna2GradientPanel2.Controls.Add(this.btnXemInfoDG);
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(785, 70);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(629, 718);
@@ -434,7 +405,7 @@ namespace LibraryManager.Template
             this.dgvDSDausach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSDausach.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSDausach.Location = new System.Drawing.Point(17, 244);
-            this.dgvDSDausach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDSDausach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSDausach.Name = "dgvDSDausach";
             this.dgvDSDausach.RowHeadersVisible = false;
             this.dgvDSDausach.RowHeadersWidth = 51;
@@ -604,7 +575,7 @@ namespace LibraryManager.Template
             this.dgvDSPhieumuon.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSPhieumuon.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSPhieumuon.Location = new System.Drawing.Point(69, 297);
-            this.dgvDSPhieumuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDSPhieumuon.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSPhieumuon.Name = "dgvDSPhieumuon";
             this.dgvDSPhieumuon.RowHeadersVisible = false;
             this.dgvDSPhieumuon.RowHeadersWidth = 51;
@@ -614,7 +585,6 @@ namespace LibraryManager.Template
             this.dgvDSPhieumuon.TabIndex = 74;
             this.dgvDSPhieumuon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvDSPhieumuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSPhieumuon_CellContentClick);
-            this.dgvDSPhieumuon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSPhieumuon_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -663,6 +633,36 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // dateEnd
+            // 
+            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateEnd.BorderRadius = 0;
+            this.dateEnd.BorderSize = 0;
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateEnd.Location = new System.Drawing.Point(317, 52);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 36);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(205, 36);
+            this.dateEnd.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.dateEnd.TabIndex = 7;
+            this.dateEnd.TextColor = System.Drawing.Color.White;
+            // 
+            // dateStart
+            // 
+            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateStart.BorderRadius = 0;
+            this.dateStart.BorderSize = 0;
+            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateStart.Location = new System.Drawing.Point(27, 50);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
+            this.dateStart.MinimumSize = new System.Drawing.Size(4, 36);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(205, 36);
+            this.dateStart.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.dateStart.TabIndex = 1;
+            this.dateStart.TextColor = System.Drawing.Color.White;
+            // 
             // DSPhieuMuonNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -672,7 +672,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DSPhieuMuonNV";
             this.Size = new System.Drawing.Size(1433, 814);
             this.Load += new System.EventHandler(this.DSPhieuMuonNV_Load);

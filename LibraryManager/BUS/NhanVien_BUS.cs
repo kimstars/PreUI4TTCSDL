@@ -56,10 +56,17 @@ namespace LibraryManager.BUS
             return avt; 
         }
 
-
+        #region LoadMaNhanVien
         public DataTable LoadMaNhanVien() {
             return nvDao.GetMaNV();
         }
+
+        public string LoadMaNhanVien_PhieuMuon(string MaMT)
+        {
+            return nvDao.GetMaNV_PM(MaMT);
+        }
+
+        #endregion
     }
 
 }

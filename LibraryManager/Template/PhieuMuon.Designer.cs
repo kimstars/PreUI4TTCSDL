@@ -57,6 +57,8 @@ namespace LibraryManager.Template
             this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
+            this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -66,8 +68,6 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
-            this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -396,6 +396,42 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(465, 195);
             this.guna2CustomGradientPanel3.TabIndex = 28;
             // 
+            // dateHanTra
+            // 
+            this.dateHanTra.BorderColor = System.Drawing.Color.Transparent;
+            this.dateHanTra.BorderRadius = 6;
+            this.dateHanTra.BorderSize = 0;
+            this.dateHanTra.CustomFormat = "dd/MM/yyyy";
+            this.dateHanTra.Enabled = false;
+            this.dateHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateHanTra.Location = new System.Drawing.Point(256, 127);
+            this.dateHanTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 37);
+            this.dateHanTra.Name = "dateHanTra";
+            this.dateHanTra.Size = new System.Drawing.Size(183, 37);
+            this.dateHanTra.SkinColor = System.Drawing.Color.White;
+            this.dateHanTra.TabIndex = 2;
+            this.dateHanTra.TextColor = System.Drawing.Color.Black;
+            // 
+            // DateMuon
+            // 
+            this.DateMuon.BorderColor = System.Drawing.Color.Transparent;
+            this.DateMuon.BorderRadius = 6;
+            this.DateMuon.BorderSize = 0;
+            this.DateMuon.CustomFormat = "dd/MM/yyyy";
+            this.DateMuon.Enabled = false;
+            this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateMuon.Location = new System.Drawing.Point(29, 127);
+            this.DateMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
+            this.DateMuon.Name = "DateMuon";
+            this.DateMuon.Size = new System.Drawing.Size(187, 37);
+            this.DateMuon.SkinColor = System.Drawing.Color.White;
+            this.DateMuon.TabIndex = 1;
+            this.DateMuon.TextColor = System.Drawing.Color.Black;
+            // 
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 15;
@@ -441,7 +477,7 @@ namespace LibraryManager.Template
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(251, 44);
             this.guna2Button1.TabIndex = 27;
-            this.guna2Button1.Text = "Xác nhận phiếu mượn";
+            this.guna2Button1.Text = "Xác nhận mượn sách";
             // 
             // dgvInfoBorrow
             // 
@@ -551,42 +587,6 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn5.HeaderText = "Vị trí sách";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dateHanTra
-            // 
-            this.dateHanTra.BorderColor = System.Drawing.Color.Transparent;
-            this.dateHanTra.BorderRadius = 6;
-            this.dateHanTra.BorderSize = 0;
-            this.dateHanTra.CustomFormat = "dd/MM/yyyy";
-            this.dateHanTra.Enabled = false;
-            this.dateHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateHanTra.Location = new System.Drawing.Point(256, 127);
-            this.dateHanTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 37);
-            this.dateHanTra.Name = "dateHanTra";
-            this.dateHanTra.Size = new System.Drawing.Size(183, 37);
-            this.dateHanTra.SkinColor = System.Drawing.Color.White;
-            this.dateHanTra.TabIndex = 2;
-            this.dateHanTra.TextColor = System.Drawing.Color.Black;
-            // 
-            // DateMuon
-            // 
-            this.DateMuon.BorderColor = System.Drawing.Color.Transparent;
-            this.DateMuon.BorderRadius = 6;
-            this.DateMuon.BorderSize = 0;
-            this.DateMuon.CustomFormat = "dd/MM/yyyy";
-            this.DateMuon.Enabled = false;
-            this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateMuon.Location = new System.Drawing.Point(29, 127);
-            this.DateMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
-            this.DateMuon.Name = "DateMuon";
-            this.DateMuon.Size = new System.Drawing.Size(187, 37);
-            this.DateMuon.SkinColor = System.Drawing.Color.White;
-            this.DateMuon.TabIndex = 1;
-            this.DateMuon.TextColor = System.Drawing.Color.Black;
             // 
             // PhieuMuon
             // 

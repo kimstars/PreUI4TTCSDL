@@ -21,6 +21,11 @@ namespace LibraryManager.BUS
         {
             return pmDao.Get_DSphieumuon(start,end);
         }
+        public DataTable LoadDSPhieumuon(string keyword)
+        {
+            return pmDao.Get_DSphieumuon(keyword);
+        }
+
 
         public DataTable Load_Thongtinsachmuon(string MaMuonTra)
         {
