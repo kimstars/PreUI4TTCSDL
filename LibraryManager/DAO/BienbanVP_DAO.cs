@@ -19,5 +19,15 @@ namespace LibraryManager.DAO
             string sqlString = "select tennhanvien from nhanvien where manhanvien = '" + a + "'";
             return GetString(sqlString);
         }
+        public string Get_MaVP()
+        {
+            string sqlString = "select top(1) mavipham from VIPHAM order by mavipham)";
+            return GetString(sqlString);
+        }
+        public string Get_sl_MaVP()
+        {
+            string sqlString = "select count(mavipham) from vipham group by mavipham";
+            return GetCount(sqlString).ToString();
+        }
     }
 }
