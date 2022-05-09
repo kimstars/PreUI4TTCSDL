@@ -32,17 +32,18 @@ namespace LibraryManager.GUI
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmbManv = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNgaytra = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTendg = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTennv = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtManv = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
             this.labelChuY = new System.Windows.Forms.Label();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,6 +54,8 @@ namespace LibraryManager.GUI
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.txtLydo = new System.Windows.Forms.RichTextBox();
             this.lbVP = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -84,12 +87,12 @@ namespace LibraryManager.GUI
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cmbManv);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txtNgaytra);
             this.panel2.Controls.Add(this.txtTendg);
             this.panel2.Controls.Add(this.txtTennv);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtManv);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtMadg);
@@ -100,6 +103,26 @@ namespace LibraryManager.GUI
             this.panel2.ShadowDecoration.Parent = this.panel2;
             this.panel2.Size = new System.Drawing.Size(895, 175);
             this.panel2.TabIndex = 10;
+            // 
+            // cmbManv
+            // 
+            this.cmbManv.BackColor = System.Drawing.Color.Transparent;
+            this.cmbManv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbManv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbManv.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbManv.FocusedState.Parent = this.cmbManv;
+            this.cmbManv.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbManv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbManv.FormattingEnabled = true;
+            this.cmbManv.HoverState.Parent = this.cmbManv;
+            this.cmbManv.ItemHeight = 30;
+            this.cmbManv.ItemsAppearance.Parent = this.cmbManv;
+            this.cmbManv.Location = new System.Drawing.Point(150, 73);
+            this.cmbManv.Name = "cmbManv";
+            this.cmbManv.ShadowDecoration.Parent = this.cmbManv;
+            this.cmbManv.Size = new System.Drawing.Size(203, 36);
+            this.cmbManv.TabIndex = 11;
+            this.cmbManv.SelectedIndexChanged += new System.EventHandler(this.cmbManv_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -195,30 +218,6 @@ namespace LibraryManager.GUI
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã độc giả";
             // 
-            // txtManv
-            // 
-            this.txtManv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtManv.DefaultText = "";
-            this.txtManv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtManv.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtManv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtManv.DisabledState.Parent = this.txtManv;
-            this.txtManv.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtManv.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManv.FocusedState.Parent = this.txtManv;
-            this.txtManv.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtManv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManv.HoverState.Parent = this.txtManv;
-            this.txtManv.Location = new System.Drawing.Point(150, 79);
-            this.txtManv.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.txtManv.Name = "txtManv";
-            this.txtManv.PasswordChar = '\0';
-            this.txtManv.PlaceholderText = "";
-            this.txtManv.SelectedText = "";
-            this.txtManv.ShadowDecoration.Parent = this.txtManv;
-            this.txtManv.Size = new System.Drawing.Size(203, 32);
-            this.txtManv.TabIndex = 7;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -275,11 +274,14 @@ namespace LibraryManager.GUI
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.richTextBox1);
+            this.guna2GroupBox2.Controls.Add(this.btnHoanthien);
             this.guna2GroupBox2.Controls.Add(this.labelChuY);
             this.guna2GroupBox2.Controls.Add(this.guna2TextBox6);
             this.guna2GroupBox2.Controls.Add(this.txtMaVP);
             this.guna2GroupBox2.Controls.Add(this.lbMaVP);
             this.guna2GroupBox2.Controls.Add(this.label8);
+            this.guna2GroupBox2.Controls.Add(this.label9);
             this.guna2GroupBox2.Controls.Add(this.label7);
             this.guna2GroupBox2.Controls.Add(this.label6);
             this.guna2GroupBox2.Controls.Add(this.checkedListBox1);
@@ -295,6 +297,24 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Size = new System.Drawing.Size(895, 354);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // btnHoanthien
+            // 
+            this.btnHoanthien.BorderRadius = 10;
+            this.btnHoanthien.CheckedState.Parent = this.btnHoanthien;
+            this.btnHoanthien.CustomImages.Parent = this.btnHoanthien;
+            this.btnHoanthien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnHoanthien.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
+            this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
+            this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
+            this.btnHoanthien.Location = new System.Drawing.Point(379, 284);
+            this.btnHoanthien.Name = "btnHoanthien";
+            this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
+            this.btnHoanthien.Size = new System.Drawing.Size(110, 45);
+            this.btnHoanthien.TabIndex = 10;
+            this.btnHoanthien.Text = "Hoàn tất";
+            this.btnHoanthien.Click += new System.EventHandler(this.btnHoanthien_Click);
             // 
             // labelChuY
             // 
@@ -328,7 +348,7 @@ namespace LibraryManager.GUI
             this.guna2TextBox6.ReadOnly = true;
             this.guna2TextBox6.SelectedText = "";
             this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Size = new System.Drawing.Size(252, 35);
+            this.guna2TextBox6.Size = new System.Drawing.Size(184, 35);
             this.guna2TextBox6.TabIndex = 8;
             // 
             // txtMaVP
@@ -387,7 +407,7 @@ namespace LibraryManager.GUI
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(384, 88);
+            this.label6.Location = new System.Drawing.Point(414, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 23);
             this.label6.TabIndex = 3;
@@ -403,15 +423,15 @@ namespace LibraryManager.GUI
             "Lý do khác"});
             this.checkedListBox1.Location = new System.Drawing.Point(145, 93);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(173, 79);
+            this.checkedListBox1.Size = new System.Drawing.Size(184, 79);
             this.checkedListBox1.TabIndex = 2;
             // 
             // txtLydo
             // 
             this.txtLydo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLydo.Location = new System.Drawing.Point(497, 88);
+            this.txtLydo.Location = new System.Drawing.Point(525, 93);
             this.txtLydo.Name = "txtLydo";
-            this.txtLydo.Size = new System.Drawing.Size(376, 79);
+            this.txtLydo.Size = new System.Drawing.Size(309, 79);
             this.txtLydo.TabIndex = 1;
             this.txtLydo.Text = "";
             // 
@@ -424,6 +444,25 @@ namespace LibraryManager.GUI
             this.lbVP.Size = new System.Drawing.Size(120, 23);
             this.lbVP.TabIndex = 0;
             this.lbVP.Text = "Lý do vi phạm:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(384, 194);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 23);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Tình trạng sách:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Location = new System.Drawing.Point(522, 194);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(312, 79);
+            this.richTextBox1.TabIndex = 11;
+            this.richTextBox1.Text = "";
             // 
             // FrmBienbanVP
             // 
@@ -454,7 +493,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2TextBox txtTendg;
         private Guna.UI2.WinForms.Guna2TextBox txtTennv;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtManv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtMadg;
@@ -472,5 +510,9 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtNgaytra;
         private System.Windows.Forms.Label labelChuY;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbManv;
+        private Guna.UI2.WinForms.Guna2Button btnHoanthien;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label9;
     }
 }

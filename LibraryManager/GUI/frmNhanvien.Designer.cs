@@ -35,6 +35,9 @@ namespace LibraryManager
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PanelMenuBar = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThongtin = new Guna.UI2.WinForms.Guna2Button();
             this.PanelQLsach = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnQLSach = new Guna.UI2.WinForms.Guna2Button();
@@ -51,9 +54,6 @@ namespace LibraryManager
             this.label2 = new System.Windows.Forms.Label();
             this.avtPicture = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThongtin = new Guna.UI2.WinForms.Guna2Button();
             this.Paneltoolbar = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Label();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -65,12 +65,12 @@ namespace LibraryManager
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelMenuBar.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.PanelQLsach.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelInfoUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avtPicture)).BeginInit();
-            this.panel4.SuspendLayout();
             this.Paneltoolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,55 @@ namespace LibraryManager
             this.PanelMenuBar.Name = "PanelMenuBar";
             this.PanelMenuBar.Size = new System.Drawing.Size(254, 658);
             this.PanelMenuBar.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnCaiDat);
+            this.panel4.Controls.Add(this.btnThongtin);
+            this.panel4.Location = new System.Drawing.Point(0, 382);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(254, 95);
+            this.panel4.TabIndex = 11;
+            // 
+            // btnCaiDat
+            // 
+            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnCaiDat.CheckedState.Parent = this.btnCaiDat;
+            this.btnCaiDat.CustomImages.Parent = this.btnCaiDat;
+            this.btnCaiDat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnCaiDat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.ForeColor = System.Drawing.Color.Black;
+            this.btnCaiDat.HoverState.Parent = this.btnCaiDat;
+            this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
+            this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 47);
+            this.btnCaiDat.Name = "btnCaiDat";
+            this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
+            this.btnCaiDat.ShadowDecoration.Parent = this.btnCaiDat;
+            this.btnCaiDat.Size = new System.Drawing.Size(254, 45);
+            this.btnCaiDat.TabIndex = 14;
+            this.btnCaiDat.Text = "Cài đặt";
+            // 
+            // btnThongtin
+            // 
+            this.btnThongtin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnThongtin.CheckedState.Parent = this.btnThongtin;
+            this.btnThongtin.CustomImages.Parent = this.btnThongtin;
+            this.btnThongtin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnThongtin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongtin.ForeColor = System.Drawing.Color.Black;
+            this.btnThongtin.HoverState.Parent = this.btnThongtin;
+            this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_30px;
+            this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThongtin.Location = new System.Drawing.Point(0, 0);
+            this.btnThongtin.Name = "btnThongtin";
+            this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
+            this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
+            this.btnThongtin.Size = new System.Drawing.Size(254, 45);
+            this.btnThongtin.TabIndex = 13;
+            this.btnThongtin.Text = "Thông tin";
             // 
             // PanelQLsach
             // 
@@ -316,7 +365,7 @@ namespace LibraryManager
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(101, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "Admin";
             // 
@@ -328,7 +377,7 @@ namespace LibraryManager
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(71, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 21);
+            this.label2.Size = new System.Drawing.Size(138, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "Chu Tuấn Kiệt";
             // 
@@ -363,55 +412,6 @@ namespace LibraryManager
             this.guna2Button1.TabIndex = 14;
             this.guna2Button1.Text = "Sửa thông tin";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnCaiDat);
-            this.panel4.Controls.Add(this.btnThongtin);
-            this.panel4.Location = new System.Drawing.Point(0, 382);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(254, 95);
-            this.panel4.TabIndex = 11;
-            // 
-            // btnCaiDat
-            // 
-            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnCaiDat.CheckedState.Parent = this.btnCaiDat;
-            this.btnCaiDat.CustomImages.Parent = this.btnCaiDat;
-            this.btnCaiDat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnCaiDat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaiDat.ForeColor = System.Drawing.Color.Black;
-            this.btnCaiDat.HoverState.Parent = this.btnCaiDat;
-            this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
-            this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 47);
-            this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
-            this.btnCaiDat.ShadowDecoration.Parent = this.btnCaiDat;
-            this.btnCaiDat.Size = new System.Drawing.Size(254, 45);
-            this.btnCaiDat.TabIndex = 14;
-            this.btnCaiDat.Text = "Cài đặt";
-            // 
-            // btnThongtin
-            // 
-            this.btnThongtin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnThongtin.CheckedState.Parent = this.btnThongtin;
-            this.btnThongtin.CustomImages.Parent = this.btnThongtin;
-            this.btnThongtin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnThongtin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongtin.ForeColor = System.Drawing.Color.Black;
-            this.btnThongtin.HoverState.Parent = this.btnThongtin;
-            this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_30px;
-            this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThongtin.Location = new System.Drawing.Point(0, 0);
-            this.btnThongtin.Name = "btnThongtin";
-            this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
-            this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
-            this.btnThongtin.Size = new System.Drawing.Size(254, 45);
-            this.btnThongtin.TabIndex = 13;
-            this.btnThongtin.Text = "Thông tin";
-            // 
             // Paneltoolbar
             // 
             this.Paneltoolbar.Controls.Add(this.panelTitleBar);
@@ -429,7 +429,7 @@ namespace LibraryManager
             this.panelTitleBar.CausesValidation = false;
             this.panelTitleBar.Location = new System.Drawing.Point(232, 28);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(34, 16);
+            this.panelTitleBar.Size = new System.Drawing.Size(35, 17);
             this.panelTitleBar.TabIndex = 11;
             this.panelTitleBar.Text = "Title";
             // 
@@ -479,6 +479,7 @@ namespace LibraryManager
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -488,7 +489,7 @@ namespace LibraryManager
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ColumnHeadersHeight = 21;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hoten,
             this.ngaysinh});
@@ -502,9 +503,10 @@ namespace LibraryManager
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.Location = new System.Drawing.Point(311, 116);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(309, 120);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Size = new System.Drawing.Size(713, 487);
@@ -521,7 +523,7 @@ namespace LibraryManager
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 21;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -535,11 +537,13 @@ namespace LibraryManager
             // hoten
             // 
             this.hoten.HeaderText = "hoten";
+            this.hoten.MinimumWidth = 6;
             this.hoten.Name = "hoten";
             // 
             // ngaysinh
             // 
             this.ngaysinh.HeaderText = "ngaysinh";
+            this.ngaysinh.MinimumWidth = 6;
             this.ngaysinh.Name = "ngaysinh";
             // 
             // frmNhanvien
@@ -554,13 +558,13 @@ namespace LibraryManager
             this.Name = "frmNhanvien";
             this.Text = "frmNhanvien";
             this.PanelMenuBar.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.PanelQLsach.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelInfoUser.ResumeLayout(false);
             this.panelInfoUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avtPicture)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.Paneltoolbar.ResumeLayout(false);
             this.Paneltoolbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
