@@ -48,5 +48,13 @@ namespace LibraryManager.BUS
         {
             return dg.Search(_timkiem);
         }
+        public string GetSachDangMuon(string madg)
+        {
+            return dg.GetSachDangMuon(madg);
+        }
+        public string GetSachDaMuon(string madg)
+        {
+            return dg.GetSachDaMuon(madg);
+        }
     }
 }

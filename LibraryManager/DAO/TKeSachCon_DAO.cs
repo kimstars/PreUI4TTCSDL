@@ -10,12 +10,12 @@ namespace LibraryManager.DAO
 {
     class TKeSachCon_DAO : DataProvider
     {
-        /*
+        
         public string GetSachCon()
         {
-            string sqlString = "SELECT COUNT( FROM dbo.DAUSACH WHERE Anh='" + AnhSach.Image + "'";
+            string sqlString = "SELECT COUNT(MASACH) FROM dbo.CUONSACH WHERE TRANGTHAI = 1";
             return ExcuteRetStr(sqlString);
         }
-        */
+        
     }
 }

@@ -632,7 +632,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(924, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(927, 4);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -646,7 +646,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(846, 4);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(849, 4);
             this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
@@ -691,6 +691,7 @@ namespace LibraryManager.GUI
             this.txtDangMuon.ShadowDecoration.Parent = this.txtDangMuon;
             this.txtDangMuon.Size = new System.Drawing.Size(68, 37);
             this.txtDangMuon.TabIndex = 2;
+            this.txtDangMuon.TextChanged += new System.EventHandler(this.txtDangMuon_TextChanged);
             // 
             // btnSachDangMuon
             // 
@@ -707,6 +708,7 @@ namespace LibraryManager.GUI
             this.btnSachDangMuon.Size = new System.Drawing.Size(203, 34);
             this.btnSachDangMuon.TabIndex = 0;
             this.btnSachDangMuon.Text = "Số Sách Đang Mượn";
+            this.btnSachDangMuon.Click += new System.EventHandler(this.btnSachDangMuon_Click);
             // 
             // guna2CustomGradientPanel1
             // 
@@ -749,6 +751,7 @@ namespace LibraryManager.GUI
             this.txtDaMuon.ShadowDecoration.Parent = this.txtDaMuon;
             this.txtDaMuon.Size = new System.Drawing.Size(69, 37);
             this.txtDaMuon.TabIndex = 1;
+            this.txtDaMuon.TextChanged += new System.EventHandler(this.txtDaMuon_TextChanged);
             // 
             // btnSachDaMuon
             // 
@@ -765,6 +768,7 @@ namespace LibraryManager.GUI
             this.btnSachDaMuon.Size = new System.Drawing.Size(175, 33);
             this.btnSachDaMuon.TabIndex = 0;
             this.btnSachDaMuon.Text = "Số Sách Đã Mượn";
+            this.btnSachDaMuon.Click += new System.EventHandler(this.btnSachDaMuon_Click);
             // 
             // guna2Button7
             // 
@@ -800,6 +804,7 @@ namespace LibraryManager.GUI
             // sach5
             // 
             this.sach5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach5.BackgroundImage")));
+            this.sach5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sach5.Location = new System.Drawing.Point(705, 9);
             this.sach5.Name = "sach5";
             this.sach5.Size = new System.Drawing.Size(150, 150);
@@ -808,6 +813,7 @@ namespace LibraryManager.GUI
             // sach4
             // 
             this.sach4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach4.BackgroundImage")));
+            this.sach4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sach4.Location = new System.Drawing.Point(547, 10);
             this.sach4.Name = "sach4";
             this.sach4.Size = new System.Drawing.Size(150, 150);
@@ -816,6 +822,7 @@ namespace LibraryManager.GUI
             // sach3
             // 
             this.sach3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach3.BackgroundImage")));
+            this.sach3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sach3.Location = new System.Drawing.Point(380, 10);
             this.sach3.Name = "sach3";
             this.sach3.Size = new System.Drawing.Size(150, 150);
@@ -824,6 +831,7 @@ namespace LibraryManager.GUI
             // sach2
             // 
             this.sach2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach2.BackgroundImage")));
+            this.sach2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sach2.Location = new System.Drawing.Point(215, 8);
             this.sach2.Name = "sach2";
             this.sach2.Size = new System.Drawing.Size(150, 150);
@@ -832,6 +840,7 @@ namespace LibraryManager.GUI
             // sach1
             // 
             this.sach1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sach1.BackgroundImage")));
+            this.sach1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sach1.Location = new System.Drawing.Point(49, 7);
             this.sach1.Name = "sach1";
             this.sach1.Size = new System.Drawing.Size(150, 150);
@@ -980,7 +989,7 @@ namespace LibraryManager.GUI
             this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button12.ForeColor = System.Drawing.Color.Black;
             this.guna2Button12.HoverState.Parent = this.guna2Button12;
-            this.guna2Button12.Location = new System.Drawing.Point(655, 519);
+            this.guna2Button12.Location = new System.Drawing.Point(658, 519);
             this.guna2Button12.Name = "guna2Button12";
             this.guna2Button12.ShadowDecoration.Parent = this.guna2Button12;
             this.guna2Button12.Size = new System.Drawing.Size(172, 37);
@@ -1035,7 +1044,7 @@ namespace LibraryManager.GUI
             // 
             this.txtTimKiem.BorderRadius = 13;
             this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "Tìm kiếm...";
+            this.txtTimKiem.DefaultText = "";
             this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -1051,9 +1060,8 @@ namespace LibraryManager.GUI
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderText = "";
+            this.txtTimKiem.PlaceholderText = "Tìm kiếm...";
             this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.SelectionStart = 11;
             this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
             this.txtTimKiem.Size = new System.Drawing.Size(284, 34);
             this.txtTimKiem.TabIndex = 23;

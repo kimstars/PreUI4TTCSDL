@@ -30,8 +30,8 @@ namespace LibraryManager.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TTinSach));
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.sach2 = new LibraryManager.Template.sach();
@@ -44,7 +44,6 @@ namespace LibraryManager.GUI
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btMuon = new Guna.UI2.WinForms.Guna2Button();
             this.txtTenSach = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGiaSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNXB = new Guna.UI2.WinForms.Guna2TextBox();
@@ -134,7 +133,7 @@ namespace LibraryManager.GUI
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2HtmlLabel7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(232, 395);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(232, 373);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(34, 25);
             this.guna2HtmlLabel7.TabIndex = 38;
@@ -154,7 +153,7 @@ namespace LibraryManager.GUI
             this.txtSoLuong.FocusedState.Parent = this.txtSoLuong;
             this.txtSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuong.HoverState.Parent = this.txtSoLuong;
-            this.txtSoLuong.Location = new System.Drawing.Point(273, 389);
+            this.txtSoLuong.Location = new System.Drawing.Point(273, 367);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.PasswordChar = '\0';
@@ -185,7 +184,7 @@ namespace LibraryManager.GUI
             this.btMuon.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMuon.ForeColor = System.Drawing.Color.DarkRed;
             this.btMuon.HoverState.Parent = this.btMuon;
-            this.btMuon.Location = new System.Drawing.Point(92, 434);
+            this.btMuon.Location = new System.Drawing.Point(92, 412);
             this.btMuon.Name = "btMuon";
             this.btMuon.ShadowDecoration.Parent = this.btMuon;
             this.btMuon.Size = new System.Drawing.Size(180, 45);
@@ -217,20 +216,12 @@ namespace LibraryManager.GUI
             this.txtTenSach.Size = new System.Drawing.Size(481, 56);
             this.txtTenSach.TabIndex = 34;
             // 
-            // guna2RatingStar1
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2RatingStar1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2RatingStar1.Location = new System.Drawing.Point(94, 350);
-            this.guna2RatingStar1.Name = "guna2RatingStar1";
-            this.guna2RatingStar1.Size = new System.Drawing.Size(181, 32);
-            this.guna2RatingStar1.TabIndex = 33;
-            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2HtmlLabel5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(61, 393);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(61, 371);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(29, 25);
             this.guna2HtmlLabel5.TabIndex = 32;
@@ -252,7 +243,7 @@ namespace LibraryManager.GUI
             this.txtGiaSach.FocusedState.Parent = this.txtGiaSach;
             this.txtGiaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaSach.HoverState.Parent = this.txtGiaSach;
-            this.txtGiaSach.Location = new System.Drawing.Point(101, 391);
+            this.txtGiaSach.Location = new System.Drawing.Point(101, 369);
             this.txtGiaSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGiaSach.Name = "txtGiaSach";
             this.txtGiaSach.PasswordChar = '\0';
@@ -418,22 +409,22 @@ namespace LibraryManager.GUI
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // TTinSach
             // 
@@ -446,7 +437,6 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.btMuon);
             this.Controls.Add(this.txtTenSach);
-            this.Controls.Add(this.guna2RatingStar1);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.txtGiaSach);
             this.Controls.Add(this.txtNXB);
@@ -478,7 +468,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2Button btMuon;
         private Guna.UI2.WinForms.Guna2TextBox txtTenSach;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtGiaSach;
         private Guna.UI2.WinForms.Guna2TextBox txtNXB;

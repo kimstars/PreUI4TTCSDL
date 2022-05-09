@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryManager.BUS;
 
 namespace LibraryManager.GUI
 {
@@ -15,6 +16,12 @@ namespace LibraryManager.GUI
         public TKeSachCon()
         {
             InitializeComponent();
+        }
+        TKeSachCon_BUS Sach = new TKeSachCon_BUS();
+
+        private void txtSachCon_TextChanged(object sender, EventArgs e)
+        {
+            txtSachCon.Text = Sach.GetSachCon();
         }
     }
 }

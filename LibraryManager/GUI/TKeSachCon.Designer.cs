@@ -125,7 +125,7 @@ namespace LibraryManager.GUI
             // 
             this.txtTimSach.BorderRadius = 15;
             this.txtTimSach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimSach.DefaultText = "Nhập sách cần tìm";
+            this.txtTimSach.DefaultText = "";
             this.txtTimSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTimSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTimSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -141,9 +141,8 @@ namespace LibraryManager.GUI
             this.txtTimSach.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimSach.Name = "txtTimSach";
             this.txtTimSach.PasswordChar = '\0';
-            this.txtTimSach.PlaceholderText = "";
+            this.txtTimSach.PlaceholderText = "Nhập sách cần tìm";
             this.txtTimSach.SelectedText = "";
-            this.txtTimSach.SelectionStart = 17;
             this.txtTimSach.ShadowDecoration.Parent = this.txtTimSach;
             this.txtTimSach.Size = new System.Drawing.Size(284, 34);
             this.txtTimSach.TabIndex = 9;
@@ -179,6 +178,7 @@ namespace LibraryManager.GUI
             this.txtSachCon.ShadowDecoration.Parent = this.txtSachCon;
             this.txtSachCon.Size = new System.Drawing.Size(132, 33);
             this.txtSachCon.TabIndex = 11;
+            this.txtSachCon.TextChanged += new System.EventHandler(this.txtSachCon_TextChanged);
             // 
             // SachCon
             // 

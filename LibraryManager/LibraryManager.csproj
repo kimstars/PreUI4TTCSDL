@@ -108,6 +108,8 @@
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\NhapSach_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
+    <Compile Include="BUS\TKeSachCon_BUS.cs" />
+    <Compile Include="BUS\TTinSach.cs" />
     <Compile Include="CreateDB\addImageDauSach.cs">
       <SubType>Form</SubType>
     </Compile>
