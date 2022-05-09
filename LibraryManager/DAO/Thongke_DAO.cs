@@ -54,5 +54,11 @@ namespace LibraryManager.DAO
             string sqlString = "select sum(ttns.SoLuongSach) from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '2010-12-3' and '2022-12-5' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
             return GetCount(sqlString);
         }
+        public DataTable load_combobox_docgia()
+        {
+            string sqlString = " select distinct(madocgia) from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where pmt.MaMuonTra = tt.MaMuonTra and tt.NgayTra is null";
+            return GetData(sqlString);
+        }
+       
     }
 }

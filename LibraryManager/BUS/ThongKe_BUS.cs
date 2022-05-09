@@ -41,5 +41,9 @@ namespace LibraryManager.BUS
         {
             return tkDao.Load_tongso();
         }
+        public DataTable get_madg_cmb()
+        {
+            return tkDao.load_combobox_docgia();
+        }
     }
 }

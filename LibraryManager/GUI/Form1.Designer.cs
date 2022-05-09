@@ -64,7 +64,7 @@ namespace LibraryManager
             this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.phieuMuon1 = new LibraryManager.Template.PhieuMuon();
-            this.tk_sachnhap1 = new LibraryManager.Template.tk_sachnhap();
+            this.tk_sachmuon_nv1 = new LibraryManager.Template.tk_sachmuon_nv();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -551,19 +551,20 @@ namespace LibraryManager
             this.phieuMuon1.TabIndex = 15;
             this.phieuMuon1.Visible = false;
             // 
-            // tk_sachnhap1
+            // tk_sachmuon_nv1
             // 
-            this.tk_sachnhap1.Location = new System.Drawing.Point(293, 238);
-            this.tk_sachnhap1.Name = "tk_sachnhap1";
-            this.tk_sachnhap1.Size = new System.Drawing.Size(1109, 754);
-            this.tk_sachnhap1.TabIndex = 16;
+            this.tk_sachmuon_nv1.BackColor = System.Drawing.SystemColors.Control;
+            this.tk_sachmuon_nv1.Location = new System.Drawing.Point(319, 90);
+            this.tk_sachmuon_nv1.Name = "tk_sachmuon_nv1";
+            this.tk_sachmuon_nv1.Size = new System.Drawing.Size(937, 662);
+            this.tk_sachmuon_nv1.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 865);
-            this.Controls.Add(this.tk_sachnhap1);
+            this.Controls.Add(this.tk_sachmuon_nv1);
             this.Controls.Add(this.phieuMuon1);
             this.Controls.Add(this.PanelMenuBar);
             this.Controls.Add(this.formQLInfo);
@@ -623,6 +624,6 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Template.PhieuMuon phieuMuon1;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Template.tk_sachnhap tk_sachnhap1;
+        private Template.tk_sachmuon_nv tk_sachmuon_nv1;
     }
 }

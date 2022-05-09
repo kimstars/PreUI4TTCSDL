@@ -30,6 +30,25 @@ namespace LibraryManager.Template
             dgv_tksachmuon.DataSource = tkBus.load_tt_sachmuon_nv();
         }
 
-       
+        private void rbtnMadocgia_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cmbMadg.DataSource = tkBus.get_madg_cmb();
+                cmbMadg.DisplayMember = "Madocgia";
+                cmbMadg.ValueMember = "Madocgia";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi load dữ liệu!\n", ex.ToString());
+            }
+            
+
+        }
+
+        private void btnTK_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
