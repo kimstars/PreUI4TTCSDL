@@ -44,14 +44,14 @@ namespace LibraryManager.DAO
                 "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
             return GetData(sqlString);
         }
-        public DataTable tkSachnhap(string a, string b)
+        public DataTable tkSachnhap(string ngaybd, string ngaykt)
         {
-            string sqlString = "select ds.* from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '"+a+"' and '"+b+"' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
+            string sqlString = "select ds.* from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '"+ngaybd+"' and '"+ngaykt+"' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
             return GetData(sqlString);
         }
-        public Int64 Load_tongso()
+        public Int64 Load_tongso(string ngaybd, string ngaykt)
         {
-            string sqlString = "select sum(ttns.SoLuongSach) from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '2010-12-3' and '2022-12-5' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
+            string sqlString = "select sum(ttns.SoLuongSach) from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '" + ngaybd + "' and '" + ngaykt + "' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
             return GetCount(sqlString);
         }
         public DataTable load_combobox_docgia()
