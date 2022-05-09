@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.DAO;
+using System.Data;
 namespace LibraryManager.BUS
 {
     class BienbanVP_BUS
@@ -20,6 +21,10 @@ namespace LibraryManager.BUS
         public int Get_slVP()
         {
             return int.Parse(bbvp_dao.Get_sl_MaVP());
+        }
+        public DataTable getManv()
+        {
+            return bbvp_dao.loadManv();
         }
     }
 }

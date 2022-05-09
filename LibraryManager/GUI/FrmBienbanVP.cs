@@ -18,6 +18,7 @@ namespace LibraryManager.GUI
         string madocgia = "";
         string ngaytra = "";
         string maVP = "";
+        
         public FrmBienbanVP()
         {
             InitializeComponent();
@@ -25,24 +26,26 @@ namespace LibraryManager.GUI
         public FrmBienbanVP(string madg, string date)
         {
             madocgia = madg;
-            ngaytra = madg;
+            ngaytra = date;
             InitializeComponent();
         }
-        private void txtMadg_TextChanged(object sender, EventArgs e)
+        /*private void txtMadg_TextChanged(object sender, EventArgs e)
         {
             txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
-        }
+        }*/
 
-        private void txtManv_TextChanged(object sender, EventArgs e)
-        {
-            txtTennv.Text = bbvp_bus.Get_tennv(txtManv.Text);
-        }
+       
 
         private void FrmBienbanVP_Load(object sender, EventArgs e)
         {
             txtMadg.Text = madocgia;
             txtNgaytra.Text = ngaytra;
             txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
+            
+            cmbManv.DataSource = bbvp_bus.getManv();
+            cmbManv.DisplayMember = "manhanvien";
+            
+            txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
             AutoTaoMaVP();
 
         }
@@ -54,6 +57,16 @@ namespace LibraryManager.GUI
             maVP = maVP.Substring(0, 8 - index.Length) + index;
             txtMaVP.Text = maVP;
 
+        }
+
+        private void cmbManv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
+        }
+
+        private void btnHoanthien_Click(object sender, EventArgs e)
+        {
+            //string sq
         }
     }
 }
