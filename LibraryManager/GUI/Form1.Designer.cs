@@ -554,9 +554,9 @@ namespace LibraryManager
             // tk_sachmuon_nv1
             // 
             this.tk_sachmuon_nv1.BackColor = System.Drawing.SystemColors.Control;
-            this.tk_sachmuon_nv1.Location = new System.Drawing.Point(319, 90);
+            this.tk_sachmuon_nv1.Location = new System.Drawing.Point(315, 58);
             this.tk_sachmuon_nv1.Name = "tk_sachmuon_nv1";
-            this.tk_sachmuon_nv1.Size = new System.Drawing.Size(937, 662);
+            this.tk_sachmuon_nv1.Size = new System.Drawing.Size(1209, 755);
             this.tk_sachmuon_nv1.TabIndex = 16;
             // 
             // Form1

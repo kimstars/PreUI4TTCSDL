@@ -19,7 +19,8 @@ namespace LibraryManager.Template
         ThongKe_BUS tkBus = new ThongKe_BUS();
         private void tk_sachmuon_Load(object sender, EventArgs e)
         {
-
+            mtxtTu_ngay.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            mtxtDen_ngay.Text = DateTime.Now.ToString("dd/MM/yyyy");
             charttk.DataSource = tkBus.LoadChartSachMuon();
             charttk.Series["Chart1"].XValueMember = "trangthai";
             charttk.Series["Chart1"].YValueMembers = "giatri";
@@ -35,7 +36,7 @@ namespace LibraryManager.Template
             try
             {
                 cmbMadg.DataSource = tkBus.get_madg_cmb();
-                cmbMadg.DisplayMember = "Madocgia";
+                //cmbMadg.DisplayMember = "Madocgia";
                 cmbMadg.ValueMember = "Madocgia";
             }
             catch (Exception ex)
@@ -48,7 +49,18 @@ namespace LibraryManager.Template
 
         private void btnTK_Click(object sender, EventArgs e)
         {
-            
+            if (rbtnMadocgia.Checked == true)
+            {
+                string a = cmbMadg.Text;
+                dgv_tksachmuon.DataSource = tkBus.Tk_docgia(a, mtxtTu_ngay.Text, mtxtDen_ngay.Text);
+            }
+            else if(rbtnTrehan.Checked == true)
+            {
+                dgv_tksachmuon.DataSource = tkBus.get_trehan(cmbMadg.Text);
+            }else if( rbtnMadocgia.Checked == false && rbtnTrehan.Checked == false)
+            {
+                dgv_tksachmuon.DataSource = tkBus.TK_theongay(mtxtTu_ngay.Text, mtxtDen_ngay.Text);
+            }
         }
     }
 }

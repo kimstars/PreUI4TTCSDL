@@ -13,7 +13,7 @@ namespace LibraryManager.DAO
         public DataTable tk_sachmuon_nv()
         {
             
-            string sqlString ="select * from cuonsach where trangthai ='1'";
+            string sqlString ="select * from cuonsach where trangthai ='0'";
             return GetData(sqlString);
         }
         public DataSet Get_chart_tk_sachmuon()
@@ -44,9 +44,9 @@ namespace LibraryManager.DAO
                 "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
             return GetData(sqlString);
         }
-        public DataTable tkSachnhap()
+        public DataTable tkSachnhap(string a, string b)
         {
-            string sqlString = "select ds.* from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '2010-12-3' and '2022-12-5' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
+            string sqlString = "select ds.* from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '"+a+"' and '"+b+"' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
             return GetData(sqlString);
         }
         public Int64 Load_tongso()
@@ -59,6 +59,30 @@ namespace LibraryManager.DAO
             string sqlString = " select distinct(madocgia) from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where pmt.MaMuonTra = tt.MaMuonTra and tt.NgayTra is null";
             return GetData(sqlString);
         }
-       
+
+        public DataTable tk_sachmuonNV_dg(string a, string b, string c)
+        {
+            string sqlString = "select Tendocgia, pmt.Mamuontra, tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra " +
+                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds " +
+                "where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='" 
+                + a + "' and ngaymuon between '"+b+"' and '"+c+"'";
+            return GetData(sqlString);
+        }
+        public DataTable tk_trehan_nv(string a)
+        {
+            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra ,NgayMuon " +
+       "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia " +
+       "and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach " +
+       "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
+            return GetData(sqlString);
+        }
+        public DataTable TK_Sachmuon_theongay(string b, string c)
+        {
+           string sqlString = "select dg.madocgia, tendocgia" +
+                ", pmt.Mamuontra, tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra " +
+                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds " +
+                "where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach  and ngaymuon between '" + b + "' and '" + c + "'";
+            return GetData(sqlString);
+        }
     }
 }

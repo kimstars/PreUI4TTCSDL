@@ -33,9 +33,9 @@ namespace LibraryManager.BUS
         {
             return tkDao.tk_sach_tre_hen_dg(a);
         }
-        public DataTable Load_sach_nhap()
+        public DataTable Load_sach_nhap(string a, string b)
         {
-            return tkDao.tkSachnhap();
+            return tkDao.tkSachnhap(a,b);
         }
         public Int64 GetTongso()
         {
@@ -44,6 +44,18 @@ namespace LibraryManager.BUS
         public DataTable get_madg_cmb()
         {
             return tkDao.load_combobox_docgia();
+        }
+        public DataTable get_trehan(string a)
+        {
+            return tkDao.tk_trehan_nv(a);
+        }
+        public DataTable Tk_docgia(string a, string b, string c)
+        {
+            return tkDao.tk_sachmuonNV_dg(a,b,c);
+        }
+        public DataTable TK_theongay(string a, string b)
+        {
+            return tkDao.TK_Sachmuon_theongay(a, b);
         }
     }
 }
