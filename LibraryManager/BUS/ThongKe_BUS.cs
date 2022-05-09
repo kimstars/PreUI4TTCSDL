@@ -33,5 +33,9 @@ namespace LibraryManager.BUS
         {
             return tkDao.tk_sach_tre_hen_dg(a);
         }
+        public DataTable Load_sach_nhap()
+        {
+            return tkDao.tkSachnhap();
+        }
     }
 }

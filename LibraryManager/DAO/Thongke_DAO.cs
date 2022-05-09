@@ -44,5 +44,10 @@ namespace LibraryManager.DAO
                 "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
             return GetData(sqlString);
         }
+        public DataTable tkSachnhap()
+        {
+            string sqlString = "select ds.* from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '2010-12-3' and '2022-12-5' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
+            return GetData(sqlString);
+        }
     }
 }
