@@ -295,6 +295,12 @@
     <Compile Include="Template\HomeAdmin.Designer.cs">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\HomeHello.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\HomeHello.Designer.cs">
+      <DependentUpon>HomeHello.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\InfoDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\HomeHello.resx">
+      <DependentUpon>HomeHello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\InfoDG.resx">
       <DependentUpon>InfoDG.cs</DependentUpon>
@@ -605,6 +614,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_menu_rounded_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cross_mark_button_96px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

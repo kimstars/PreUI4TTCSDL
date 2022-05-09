@@ -48,12 +48,12 @@ namespace LibraryManager.BUS
         }
 
         // Xử lý load ảnh lên pictureBox;
-        public PictureBox LoadAnh(string maID)
+        public Image LoadAnh(string maID)
         {
             byte[] img = LoadImageFromTableDB("NhanVien", maID, "MaNhanVien");
-            PictureBox avt = new PictureBox();
-            avt.Image = Image.FromStream(new MemoryStream(img));
-            return avt; 
+
+            return Image.FromStream(new MemoryStream(img));
+             
         }
 
         #region LoadMaNhanVien
@@ -65,6 +65,18 @@ namespace LibraryManager.BUS
         {
             return nvDao.GetMaNV_PM(MaMT);
         }
+
+        #endregion
+
+
+
+        #region load ThongtinNV
+
+        public DataTable LoadThongTinNV(string MaNV)
+        {
+            return nvDao.GetThongTinNV(MaNV);
+        }
+
 
         #endregion
     }

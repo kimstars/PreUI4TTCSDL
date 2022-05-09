@@ -14,23 +14,36 @@ namespace LibraryManager.Template
 {
     public partial class PhieuMuon : UserControl
     {
+        private static PhieuMuon _instance;
+        public static PhieuMuon Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new PhieuMuon();
+                return _instance;
+            }
+        }
+
         public PhieuMuon()
         {
             InitializeComponent();
         }
+   
 
         string[] listsach = { "DS000030", "DS000040", "DS000045", "DS000009", "DS000013", "DS000012", "DS00002" };
 
-        string MaDauSachCurrent = "";
+        string MaDauSachCurrent = "DS000000";
 
 
 
-        MuonSach_BUS pmBus = new MuonSach_BUS();
+        MuonSach_BUS msBus = new MuonSach_BUS();
+        PhieuMuon_BUS pmBus = new PhieuMuon_BUS();
         private void PhieuMuon_Load(object sender, EventArgs e)
         {
             
 
-            DataTable InfoBorrow = pmBus.LoadTTSachMuon(listsach);
+            DataTable InfoBorrow = msBus.LoadTTSachMuon(listsach);
 
             dgvInfoBorrow.DataSource = InfoBorrow;
 
@@ -39,6 +52,9 @@ namespace LibraryManager.Template
             dateHanTra.Value = date;
 
             LoadDetailBook("DS000013");
+
+            lbMaMuonTra.Text = pmBus.CreateNext_MaMT();
+
 
         }
         private void TinhTienCoc(DataTable InfoBorrow)
@@ -82,9 +98,36 @@ namespace LibraryManager.Template
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
             listsach = listsach.Where(var => var != MaDauSachCurrent).ToArray();
-            DataTable InfoBorrow = pmBus.LoadTTSachMuon(listsach);
+            DataTable InfoBorrow = msBus.LoadTTSachMuon(listsach);
             dgvInfoBorrow.DataSource = InfoBorrow;
             TinhTienCoc(InfoBorrow);
+
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            GUI.ThongTinSach newform = new GUI.ThongTinSach(MaDauSachCurrent);
+            newform.Show();
+        }
+
+        // click xác nhận để lưu tạm vào bảng phieumuontra cho nv xử lý
+        private void btnMuon_Click(object sender, EventArgs e)
+        {
+            PhieuMuonTra pmtnew = new PhieuMuonTra();
+            pmtnew.MaDocGia = txtMaDG.Text;
+            pmtnew.NgayMuon = DateMuon.Value;
+            pmtnew.HanTra = dateHanTra.Value;
+            pmtnew.MaMuonTra = lbMaMuonTra.Text;
+
+            List<string> DSMaSach = new List<string>();
+            for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
+            {
+                DSMaSach.Add(dgvInfoBorrow.Rows[i].Cells[0].Value.ToString());
+            }
+
+
+            pmBus.DocGiaMuon(pmtnew, DSMaSach);
+
 
         }
     }

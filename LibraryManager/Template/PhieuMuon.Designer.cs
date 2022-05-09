@@ -37,9 +37,9 @@ namespace LibraryManager.Template
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbMaMuonTra = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbNVxuly = new System.Windows.Forms.Label();
             this.lbInfoNamXB = new System.Windows.Forms.Label();
             this.lbInfoMota = new System.Windows.Forms.Label();
             this.lbInfoTenTG = new System.Windows.Forms.Label();
@@ -50,30 +50,30 @@ namespace LibraryManager.Template
             this.lbTienCoc = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnLoaiBo = new Guna.UI2.WinForms.Guna2Button();
             this.imageBook = new System.Windows.Forms.PictureBox();
-            this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.txtMaDG = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
             this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.dgvInfoBorrow = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bthHuy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMuon = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
-            this.guna2CustomGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoBorrow)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,34 +119,34 @@ namespace LibraryManager.Template
             this.label2.TabIndex = 16;
             this.label2.Text = "Hạn trả:";
             // 
-            // txtName
+            // txtTenDG
             // 
-            this.txtName.BackColor = System.Drawing.Color.Transparent;
-            this.txtName.BorderColor = System.Drawing.Color.Transparent;
-            this.txtName.BorderRadius = 6;
-            this.txtName.BorderThickness = 0;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.Parent = this.txtName;
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(29, 42);
-            this.txtName.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "";
-            this.txtName.SelectedText = "";
-            this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(188, 39);
-            this.txtName.TabIndex = 0;
+            this.txtTenDG.BackColor = System.Drawing.Color.Transparent;
+            this.txtTenDG.BorderColor = System.Drawing.Color.Transparent;
+            this.txtTenDG.BorderRadius = 6;
+            this.txtTenDG.BorderThickness = 0;
+            this.txtTenDG.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDG.DefaultText = "";
+            this.txtTenDG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDG.DisabledState.Parent = this.txtTenDG;
+            this.txtTenDG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDG.FocusedState.Parent = this.txtTenDG;
+            this.txtTenDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDG.ForeColor = System.Drawing.Color.Black;
+            this.txtTenDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDG.HoverState.Parent = this.txtTenDG;
+            this.txtTenDG.Location = new System.Drawing.Point(29, 42);
+            this.txtTenDG.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtTenDG.Name = "txtTenDG";
+            this.txtTenDG.PasswordChar = '\0';
+            this.txtTenDG.PlaceholderText = "";
+            this.txtTenDG.SelectedText = "";
+            this.txtTenDG.ShadowDecoration.Parent = this.txtTenDG;
+            this.txtTenDG.Size = new System.Drawing.Size(188, 39);
+            this.txtTenDG.TabIndex = 0;
             // 
             // lbMaMuonTra
             // 
@@ -155,19 +155,19 @@ namespace LibraryManager.Template
             this.lbMaMuonTra.Name = "lbMaMuonTra";
             this.lbMaMuonTra.Size = new System.Drawing.Size(200, 44);
             this.lbMaMuonTra.TabIndex = 3;
-            this.lbMaMuonTra.Text = "PM002323";
+            this.lbMaMuonTra.Text = "MT002323";
             // 
-            // label3
+            // lbNVxuly
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nhân viên xử lý : Chu Tuấn Kiệt";
+            this.lbNVxuly.AutoSize = true;
+            this.lbNVxuly.BackColor = System.Drawing.Color.Transparent;
+            this.lbNVxuly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNVxuly.ForeColor = System.Drawing.Color.White;
+            this.lbNVxuly.Location = new System.Drawing.Point(6, 8);
+            this.lbNVxuly.Name = "lbNVxuly";
+            this.lbNVxuly.Size = new System.Drawing.Size(297, 28);
+            this.lbNVxuly.TabIndex = 2;
+            this.lbNVxuly.Text = "Nhân viên xử lý : Chu Tuấn Kiệt";
             // 
             // lbInfoNamXB
             // 
@@ -276,24 +276,12 @@ namespace LibraryManager.Template
             this.label7.TabIndex = 17;
             this.label7.Text = "*Tiền cọc được tính bằng 10% giá sách";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(229, 28);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Mã độc giả :  DG000000";
-            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.Controls.Add(this.btnLoaiBo);
             this.guna2CustomGradientPanel1.Controls.Add(this.imageBook);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnSearchNV);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnPreview);
             this.guna2CustomGradientPanel1.Controls.Add(this.label9);
             this.guna2CustomGradientPanel1.Controls.Add(this.lbInfoNamXB);
             this.guna2CustomGradientPanel1.Controls.Add(this.label10);
@@ -334,7 +322,7 @@ namespace LibraryManager.Template
             // imageBook
             // 
             this.imageBook.BackColor = System.Drawing.Color.Transparent;
-            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
+            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_study_200px;
             this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imageBook.Location = new System.Drawing.Point(15, 46);
             this.imageBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -343,24 +331,25 @@ namespace LibraryManager.Template
             this.imageBook.TabIndex = 3;
             this.imageBook.TabStop = false;
             // 
-            // btnSearchNV
+            // btnPreview
             // 
-            this.btnSearchNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchNV.BorderRadius = 18;
-            this.btnSearchNV.CheckedState.Parent = this.btnSearchNV;
-            this.btnSearchNV.CustomImages.Parent = this.btnSearchNV;
-            this.btnSearchNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.btnSearchNV.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearchNV.ForeColor = System.Drawing.Color.White;
-            this.btnSearchNV.HoverState.Parent = this.btnSearchNV;
-            this.btnSearchNV.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.btnSearchNV.Location = new System.Drawing.Point(41, 525);
-            this.btnSearchNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearchNV.Name = "btnSearchNV";
-            this.btnSearchNV.ShadowDecoration.Parent = this.btnSearchNV;
-            this.btnSearchNV.Size = new System.Drawing.Size(159, 44);
-            this.btnSearchNV.TabIndex = 2;
-            this.btnSearchNV.Text = "Preview";
+            this.btnPreview.BackColor = System.Drawing.Color.Transparent;
+            this.btnPreview.BorderRadius = 18;
+            this.btnPreview.CheckedState.Parent = this.btnPreview;
+            this.btnPreview.CustomImages.Parent = this.btnPreview;
+            this.btnPreview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.btnPreview.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPreview.ForeColor = System.Drawing.Color.White;
+            this.btnPreview.HoverState.Parent = this.btnPreview;
+            this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
+            this.btnPreview.Location = new System.Drawing.Point(41, 525);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
+            this.btnPreview.Size = new System.Drawing.Size(159, 44);
+            this.btnPreview.TabIndex = 2;
+            this.btnPreview.Text = "Preview";
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // guna2CustomGradientPanel2
             // 
@@ -380,7 +369,9 @@ namespace LibraryManager.Template
             // guna2CustomGradientPanel3
             // 
             this.guna2CustomGradientPanel3.BorderRadius = 20;
-            this.guna2CustomGradientPanel3.Controls.Add(this.txtName);
+            this.guna2CustomGradientPanel3.Controls.Add(this.txtMaDG);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label8);
+            this.guna2CustomGradientPanel3.Controls.Add(this.txtTenDG);
             this.guna2CustomGradientPanel3.Controls.Add(this.label5);
             this.guna2CustomGradientPanel3.Controls.Add(this.dateHanTra);
             this.guna2CustomGradientPanel3.Controls.Add(this.DateMuon);
@@ -395,6 +386,47 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(465, 195);
             this.guna2CustomGradientPanel3.TabIndex = 28;
+            // 
+            // txtMaDG
+            // 
+            this.txtMaDG.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaDG.BorderColor = System.Drawing.Color.Transparent;
+            this.txtMaDG.BorderRadius = 6;
+            this.txtMaDG.BorderThickness = 0;
+            this.txtMaDG.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaDG.DefaultText = "";
+            this.txtMaDG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaDG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaDG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaDG.DisabledState.Parent = this.txtMaDG;
+            this.txtMaDG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaDG.Enabled = false;
+            this.txtMaDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaDG.FocusedState.Parent = this.txtMaDG;
+            this.txtMaDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDG.ForeColor = System.Drawing.Color.Black;
+            this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaDG.HoverState.Parent = this.txtMaDG;
+            this.txtMaDG.Location = new System.Drawing.Point(256, 42);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtMaDG.Name = "txtMaDG";
+            this.txtMaDG.PasswordChar = '\0';
+            this.txtMaDG.PlaceholderText = "";
+            this.txtMaDG.SelectedText = "";
+            this.txtMaDG.ShadowDecoration.Parent = this.txtMaDG;
+            this.txtMaDG.Size = new System.Drawing.Size(188, 39);
+            this.txtMaDG.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(256, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 20);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Mã độc giả :";
             // 
             // dateHanTra
             // 
@@ -435,7 +467,7 @@ namespace LibraryManager.Template
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 15;
-            this.guna2CustomGradientPanel4.Controls.Add(this.label6);
+            this.guna2CustomGradientPanel4.Controls.Add(this.lbNVxuly);
             this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
             this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
@@ -443,41 +475,8 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.ShadowDecoration.Parent = this.guna2CustomGradientPanel4;
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(264, 47);
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(326, 47);
             this.guna2CustomGradientPanel4.TabIndex = 29;
-            // 
-            // guna2CustomGradientPanel5
-            // 
-            this.guna2CustomGradientPanel5.BorderRadius = 15;
-            this.guna2CustomGradientPanel5.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(98)))));
-            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(98)))));
-            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(98)))));
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(384, 55);
-            this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            this.guna2CustomGradientPanel5.ShadowDecoration.Parent = this.guna2CustomGradientPanel5;
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(329, 47);
-            this.guna2CustomGradientPanel5.TabIndex = 30;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.guna2Button1.Location = new System.Drawing.Point(857, 55);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(251, 44);
-            this.guna2Button1.TabIndex = 27;
-            this.guna2Button1.Text = "Xác nhận mượn sách";
             // 
             // dgvInfoBorrow
             // 
@@ -588,14 +587,53 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // bthHuy
+            // 
+            this.bthHuy.BackColor = System.Drawing.Color.Transparent;
+            this.bthHuy.BorderRadius = 18;
+            this.bthHuy.CheckedState.Parent = this.bthHuy;
+            this.bthHuy.CustomImages.Parent = this.bthHuy;
+            this.bthHuy.FillColor = System.Drawing.Color.LightCoral;
+            this.bthHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bthHuy.ForeColor = System.Drawing.Color.White;
+            this.bthHuy.HoverState.Parent = this.bthHuy;
+            this.bthHuy.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
+            this.bthHuy.Location = new System.Drawing.Point(1128, 55);
+            this.bthHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bthHuy.Name = "bthHuy";
+            this.bthHuy.ShadowDecoration.Parent = this.bthHuy;
+            this.bthHuy.Size = new System.Drawing.Size(172, 44);
+            this.bthHuy.TabIndex = 33;
+            this.bthHuy.Text = "Hủy bỏ";
+            // 
+            // btnMuon
+            // 
+            this.btnMuon.BackColor = System.Drawing.Color.Transparent;
+            this.btnMuon.BorderRadius = 18;
+            this.btnMuon.CheckedState.Parent = this.btnMuon;
+            this.btnMuon.CustomImages.Parent = this.btnMuon;
+            this.btnMuon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnMuon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMuon.ForeColor = System.Drawing.Color.White;
+            this.btnMuon.HoverState.Parent = this.btnMuon;
+            this.btnMuon.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
+            this.btnMuon.Location = new System.Drawing.Point(857, 55);
+            this.btnMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMuon.Name = "btnMuon";
+            this.btnMuon.ShadowDecoration.Parent = this.btnMuon;
+            this.btnMuon.Size = new System.Drawing.Size(239, 44);
+            this.btnMuon.TabIndex = 27;
+            this.btnMuon.Text = "Xác nhận mượn sách";
+            this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
+            // 
             // PhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.bthHuy);
             this.Controls.Add(this.dgvInfoBorrow);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2CustomGradientPanel5);
+            this.Controls.Add(this.btnMuon);
             this.Controls.Add(this.guna2CustomGradientPanel4);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Controls.Add(this.guna2CustomGradientPanel2);
@@ -615,8 +653,6 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
-            this.guna2CustomGradientPanel5.ResumeLayout(false);
-            this.guna2CustomGradientPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoBorrow)).EndInit();
             this.ResumeLayout(false);
 
@@ -625,14 +661,14 @@ namespace LibraryManager.Template
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDG;
         private System.Windows.Forms.Label label5;
         private DateTimePickerKiet DateMuon;
         private System.Windows.Forms.Label label4;
         private DateTimePickerKiet dateHanTra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbMaMuonTra;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbNVxuly;
         private System.Windows.Forms.Label lbInfoTenTG;
         private System.Windows.Forms.Label lbInfoTenSach;
         private System.Windows.Forms.Label label11;
@@ -642,22 +678,23 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label lbInfoMota;
         private System.Windows.Forms.Label lbInfoNamXB;
         private Guna.UI2.WinForms.Guna2Button btnLoaiBo;
-        private Guna.UI2.WinForms.Guna2Button btnSearchNV;
+        private Guna.UI2.WinForms.Guna2Button btnPreview;
         private System.Windows.Forms.Label lbTienCoc;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnMuon;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvInfoBorrow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private Guna.UI2.WinForms.Guna2Button bthHuy;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaDG;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -70,7 +70,15 @@ namespace LibraryManager.DAO
             return GetString(sql);
         }
 
+        public DataTable GetThongTinNV(string MaNV)
+        {
+            string sql = $"select TenNhanVien,ChucVu,NgaySinh,GioiTinh,DiaChi,Email,SDT,CMND,TenDangNhap from Nhanvien WHERE MaNhanVien = '{MaNV}'";
+            return GetData(sql);
+        }
+
         #endregion
+
+
 
 
     }

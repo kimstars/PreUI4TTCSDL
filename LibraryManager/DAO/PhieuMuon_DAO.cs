@@ -42,11 +42,28 @@ namespace LibraryManager.DAO
 
         public string GetLastest_MaPhieuMuon()
         {
-            string sql = "";
+            string sql = "SELECT TOP 1 MaMuonTra FROM dbo.PHIEUMUONTRA ORDER BY MaMuonTra DESC";
             return GetString(sql);
         }
 
 
+
+        #region insertPM
+
+        public void InsertPhieuMuonTra(PhieuMuonTra pm, List<string> dsMaSach)
+        {
+            string sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, {DateToString(pm.NgayMuon) }, {DateToString(pm.HanTra)},  0 )";
+
+            Excute(sql);
+
+            foreach(var masach in dsMaSach)
+            {
+              sql = $"INSERT INTO dbo.THONGTINMUONTRA VALUES('{pm.MaMuonTra}',  '{masach}', NULL)";
+            }
+        }
+
+
+        #endregion
 
     }
 }

@@ -52,5 +52,15 @@ namespace LibraryManager.BUS
             SaveImage("DauSach", maID, "MaDauSach", imgPath);
         }
 
+
+        #region thongtinsach
+
+        public DataTable LoadThongtinSach_DS(string MaDS)
+        {
+            return dsDao.GetInfo2(MaDS);
+        }
+
+        #endregion
+
     }
 }

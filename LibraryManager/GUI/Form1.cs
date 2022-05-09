@@ -20,11 +20,11 @@ namespace LibraryManager
         
         private void hideChildForm()
         {
-            FrmLogin1.Visible = false;
+         
             frmThongtin.Visible = false;
-            frminfoDG.Visible = false;
-            formQLInfo.Visible = false;
-            phieuMuon1.Visible = false;
+         
+      
+        
 
         }
 
@@ -64,8 +64,13 @@ namespace LibraryManager
         {
             hideChildForm();
 
-            GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia();
-            newform.Show();
+            //GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia();
+            //newform.Show();
+
+            panelShow.Controls.Clear();
+            UserControl temp = new Template.InfoNV("NV000000");
+            panelShow.Controls.Add(temp);
+            
 
         }
 
@@ -73,7 +78,7 @@ namespace LibraryManager
         {
             hideChildForm();
 
-            FrmLogin1.Visible = true;
+            
 
             GUI.frmLogin newform = new GUI.frmLogin();
             newform.Show();
@@ -192,8 +197,8 @@ namespace LibraryManager
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             hideChildForm();
-            //frminfoDG.Visible = true;
-            formQLInfo.Visible = true;
+
+
 
             //Template.FormAdmin newform = new Template.FormAdmin();
             //newform.Show();
@@ -221,8 +226,10 @@ namespace LibraryManager
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             hideChildForm();
-            phieuMuon1.Visible = true;
+            panelShow.Controls.Add(new Template.PhieuMuon());
+            
         }
 
         private void btnListByte_Click(object sender, EventArgs e)
