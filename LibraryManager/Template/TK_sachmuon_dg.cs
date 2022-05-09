@@ -12,6 +12,7 @@ namespace LibraryManager.Template
 {
     public partial class TK_sachmuon_dg : UserControl
     {
+        string madg = "";
         public TK_sachmuon_dg()
         {
             InitializeComponent();
@@ -28,21 +29,18 @@ namespace LibraryManager.Template
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if(txtMadg.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập mã độc giả");
-            }
+           
             if (rbtnDamuon.Checked == true)
             {
-                dgvTK.DataSource = tk_buss.Load_tt_sachmuon_dg(chuanhoa(txtMadg.Text));
+                dgvTK.DataSource = tk_buss.Load_tt_sachmuon_dg(madg);
             }
             else if (rbtnChuaTra.Checked == true)
             {
-                dgvTK.DataSource = tk_buss.Load_tt_sachchuatra_dg(chuanhoa(txtMadg.Text));
+                dgvTK.DataSource = tk_buss.Load_tt_sachchuatra_dg(madg);
             }
             else if (rbtnTrehen.Checked == true)
             {
-                dgvTK.DataSource = tk_buss.Load_tt_sach_trehen_dg(chuanhoa(txtMadg.Text));
+                dgvTK.DataSource = tk_buss.Load_tt_sach_trehen_dg(madg);
             }
         }
         

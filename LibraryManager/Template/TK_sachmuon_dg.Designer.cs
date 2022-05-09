@@ -29,16 +29,14 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.rbtnChuaTra = new System.Windows.Forms.RadioButton();
             this.rbtnTrehen = new System.Windows.Forms.RadioButton();
             this.rbtnDamuon = new System.Windows.Forms.RadioButton();
-            this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbTK = new System.Windows.Forms.Label();
             this.dgvTK = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.guna2Panel1.SuspendLayout();
@@ -52,8 +50,6 @@ namespace LibraryManager.Template
             this.guna2Panel1.Controls.Add(this.rbtnChuaTra);
             this.guna2Panel1.Controls.Add(this.rbtnTrehen);
             this.guna2Panel1.Controls.Add(this.rbtnDamuon);
-            this.guna2Panel1.Controls.Add(this.txtMadg);
-            this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.lbTK);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -114,39 +110,6 @@ namespace LibraryManager.Template
             this.rbtnDamuon.Text = "Đã mượn";
             this.rbtnDamuon.UseVisualStyleBackColor = true;
             // 
-            // txtMadg
-            // 
-            this.txtMadg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMadg.DefaultText = "";
-            this.txtMadg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMadg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMadg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMadg.DisabledState.Parent = this.txtMadg;
-            this.txtMadg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMadg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMadg.FocusedState.Parent = this.txtMadg;
-            this.txtMadg.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMadg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMadg.HoverState.Parent = this.txtMadg;
-            this.txtMadg.Location = new System.Drawing.Point(136, 55);
-            this.txtMadg.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtMadg.Name = "txtMadg";
-            this.txtMadg.PasswordChar = '\0';
-            this.txtMadg.PlaceholderText = "";
-            this.txtMadg.SelectedText = "";
-            this.txtMadg.ShadowDecoration.Parent = this.txtMadg;
-            this.txtMadg.Size = new System.Drawing.Size(187, 38);
-            this.txtMadg.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mã độc giả ";
-            // 
             // lbTK
             // 
             this.lbTK.AutoSize = true;
@@ -160,52 +123,52 @@ namespace LibraryManager.Template
             // dgvTK
             // 
             this.dgvTK.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvTK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvTK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTK.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTK.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(84)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTK.ColumnHeadersHeight = 40;
-            this.dgvTK.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvTK.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))));
             this.dgvTK.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvTK.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvTK.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvTK.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(165)))), ((int)(((byte)(120)))));
             this.dgvTK.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvTK.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvTK.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvTK.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvTK.CurrentTheme.BackColor = System.Drawing.Color.Chocolate;
+            this.dgvTK.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(210)))), ((int)(((byte)(187)))));
+            this.dgvTK.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Chocolate;
             this.dgvTK.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dgvTK.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvTK.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvTK.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(84)))), ((int)(((byte)(24)))));
             this.dgvTK.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvTK.CurrentTheme.Name = null;
-            this.dgvTK.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvTK.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(210)))));
             this.dgvTK.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvTK.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvTK.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvTK.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(165)))), ((int)(((byte)(120)))));
             this.dgvTK.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTK.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(210)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(165)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTK.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTK.EnableHeadersVisualStyles = false;
-            this.dgvTK.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvTK.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvTK.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(210)))), ((int)(((byte)(187)))));
+            this.dgvTK.HeaderBackColor = System.Drawing.Color.Chocolate;
             this.dgvTK.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvTK.HeaderForeColor = System.Drawing.Color.White;
             this.dgvTK.Location = new System.Drawing.Point(0, 174);
@@ -216,7 +179,7 @@ namespace LibraryManager.Template
             this.dgvTK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTK.Size = new System.Drawing.Size(1093, 617);
             this.dgvTK.TabIndex = 1;
-            this.dgvTK.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvTK.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Chocolate;
             // 
             // TK_sachmuon_dg
             // 
@@ -237,13 +200,11 @@ namespace LibraryManager.Template
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTK;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.RadioButton rbtnChuaTra;
         private System.Windows.Forms.RadioButton rbtnTrehen;
         private System.Windows.Forms.RadioButton rbtnDamuon;
-        private Guna.UI2.WinForms.Guna2TextBox txtMadg;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvTK;
     }
 }
