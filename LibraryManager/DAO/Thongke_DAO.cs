@@ -49,5 +49,10 @@ namespace LibraryManager.DAO
             string sqlString = "select ds.* from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '2010-12-3' and '2022-12-5' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
             return GetData(sqlString);
         }
+        public Int64 Load_tongso()
+        {
+            string sqlString = "select sum(ttns.SoLuongSach) from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '2010-12-3' and '2022-12-5' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
+            return GetCount(sqlString);
+        }
     }
 }

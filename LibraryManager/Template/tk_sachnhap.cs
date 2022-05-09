@@ -27,6 +27,7 @@ namespace LibraryManager.Template
         private void btnTK_Click(object sender, EventArgs e)
         {
             dgv_tkSachnhap.DataSource = tk_bus.Load_sach_nhap();
+            txtTongso.Text = tk_bus.GetTongso().ToString();
         }
     }
 }

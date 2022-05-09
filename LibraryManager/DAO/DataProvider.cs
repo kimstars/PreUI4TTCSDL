@@ -68,7 +68,16 @@ namespace LibraryManager.DAO
             return imgbin ;
         }
 
+        public Int64 GetCount(string sql)
+        {
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            Int32 count = (Int32)command.ExecuteScalar();
+            connect.Close();
+            return count;
 
+        }
         public string ExcuteRetStr(string sql)
         {
             

@@ -37,5 +37,9 @@ namespace LibraryManager.BUS
         {
             return tkDao.tkSachnhap();
         }
+        public Int64 GetTongso()
+        {
+            return tkDao.Load_tongso();
+        }
     }
 }
