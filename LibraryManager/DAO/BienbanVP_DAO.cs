@@ -10,9 +10,9 @@ namespace LibraryManager.DAO
     class BienbanVP_DAO:DataProvider
     {
         //BienBanViPham bbvp = new BienBanViPham();
-        public string get_ten_dg(string a)
+        public string get_ten_dg(string madocgia)
         {
-            string sqlString = "select tendocgia from docgia where madocgia = '" + a + "'";
+            string sqlString = "select tendocgia from docgia where madocgia = '" + madocgia + "'";
             return GetString(sqlString);
         }
         public string get_ten_nv(string a)

@@ -43,19 +43,22 @@ namespace LibraryManager.GUI
             this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cboxHongsach = new System.Windows.Forms.CheckBox();
+            this.cboxKhac = new System.Windows.Forms.CheckBox();
+            this.cboxMatsach = new System.Windows.Forms.CheckBox();
+            this.cboxTrehan = new System.Windows.Forms.CheckBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
             this.labelChuY = new System.Windows.Forms.Label();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTienphat = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.txtLydo = new System.Windows.Forms.RichTextBox();
             this.lbVP = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -274,17 +277,20 @@ namespace LibraryManager.GUI
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.cboxHongsach);
+            this.guna2GroupBox2.Controls.Add(this.cboxKhac);
+            this.guna2GroupBox2.Controls.Add(this.cboxMatsach);
+            this.guna2GroupBox2.Controls.Add(this.cboxTrehan);
             this.guna2GroupBox2.Controls.Add(this.richTextBox1);
             this.guna2GroupBox2.Controls.Add(this.btnHoanthien);
             this.guna2GroupBox2.Controls.Add(this.labelChuY);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox6);
+            this.guna2GroupBox2.Controls.Add(this.txtTienphat);
             this.guna2GroupBox2.Controls.Add(this.txtMaVP);
             this.guna2GroupBox2.Controls.Add(this.lbMaVP);
             this.guna2GroupBox2.Controls.Add(this.label8);
             this.guna2GroupBox2.Controls.Add(this.label9);
             this.guna2GroupBox2.Controls.Add(this.label7);
             this.guna2GroupBox2.Controls.Add(this.label6);
-            this.guna2GroupBox2.Controls.Add(this.checkedListBox1);
             this.guna2GroupBox2.Controls.Add(this.txtLydo);
             this.guna2GroupBox2.Controls.Add(this.lbVP);
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -297,6 +303,59 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Size = new System.Drawing.Size(895, 354);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // cboxHongsach
+            // 
+            this.cboxHongsach.AutoSize = true;
+            this.cboxHongsach.BackColor = System.Drawing.Color.White;
+            this.cboxHongsach.Location = new System.Drawing.Point(145, 121);
+            this.cboxHongsach.Name = "cboxHongsach";
+            this.cboxHongsach.Size = new System.Drawing.Size(148, 27);
+            this.cboxHongsach.TabIndex = 12;
+            this.cboxHongsach.Text = "Làm hỏng sách";
+            this.cboxHongsach.UseVisualStyleBackColor = false;
+            // 
+            // cboxKhac
+            // 
+            this.cboxKhac.AutoSize = true;
+            this.cboxKhac.BackColor = System.Drawing.Color.White;
+            this.cboxKhac.Location = new System.Drawing.Point(145, 174);
+            this.cboxKhac.Name = "cboxKhac";
+            this.cboxKhac.Size = new System.Drawing.Size(112, 27);
+            this.cboxKhac.TabIndex = 12;
+            this.cboxKhac.Text = "Lý do khác";
+            this.cboxKhac.UseVisualStyleBackColor = false;
+            // 
+            // cboxMatsach
+            // 
+            this.cboxMatsach.AutoSize = true;
+            this.cboxMatsach.BackColor = System.Drawing.Color.White;
+            this.cboxMatsach.Location = new System.Drawing.Point(145, 149);
+            this.cboxMatsach.Name = "cboxMatsach";
+            this.cboxMatsach.Size = new System.Drawing.Size(138, 27);
+            this.cboxMatsach.TabIndex = 12;
+            this.cboxMatsach.Text = "Làm mất sách";
+            this.cboxMatsach.UseVisualStyleBackColor = false;
+            // 
+            // cboxTrehan
+            // 
+            this.cboxTrehan.AutoSize = true;
+            this.cboxTrehan.BackColor = System.Drawing.Color.White;
+            this.cboxTrehan.Location = new System.Drawing.Point(145, 93);
+            this.cboxTrehan.Name = "cboxTrehan";
+            this.cboxTrehan.Size = new System.Drawing.Size(154, 27);
+            this.cboxTrehan.TabIndex = 12;
+            this.cboxTrehan.Text = "Trả sách trễ hạn";
+            this.cboxTrehan.UseVisualStyleBackColor = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Location = new System.Drawing.Point(522, 201);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(312, 79);
+            this.richTextBox1.TabIndex = 11;
+            this.richTextBox1.Text = "";
             // 
             // btnHoanthien
             // 
@@ -327,29 +386,28 @@ namespace LibraryManager.GUI
             this.labelChuY.TabIndex = 9;
             this.labelChuY.Text = "Chú ý:";
             // 
-            // guna2TextBox6
+            // txtTienphat
             // 
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Location = new System.Drawing.Point(145, 189);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.ReadOnly = true;
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Size = new System.Drawing.Size(184, 35);
-            this.guna2TextBox6.TabIndex = 8;
+            this.txtTienphat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTienphat.DefaultText = "";
+            this.txtTienphat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTienphat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTienphat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTienphat.DisabledState.Parent = this.txtTienphat;
+            this.txtTienphat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTienphat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTienphat.FocusedState.Parent = this.txtTienphat;
+            this.txtTienphat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTienphat.HoverState.Parent = this.txtTienphat;
+            this.txtTienphat.Location = new System.Drawing.Point(145, 211);
+            this.txtTienphat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTienphat.Name = "txtTienphat";
+            this.txtTienphat.PasswordChar = '\0';
+            this.txtTienphat.PlaceholderText = "";
+            this.txtTienphat.SelectedText = "";
+            this.txtTienphat.ShadowDecoration.Parent = this.txtTienphat;
+            this.txtTienphat.Size = new System.Drawing.Size(184, 35);
+            this.txtTienphat.TabIndex = 8;
             // 
             // txtMaVP
             // 
@@ -393,11 +451,21 @@ namespace LibraryManager.GUI
             this.label8.Size = new System.Drawing.Size(0, 23);
             this.label8.TabIndex = 5;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(384, 219);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 23);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Tình trạng sách:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 192);
+            this.label7.Location = new System.Drawing.Point(3, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 23);
             this.label7.TabIndex = 4;
@@ -413,23 +481,10 @@ namespace LibraryManager.GUI
             this.label6.TabIndex = 3;
             this.label6.Text = "Lý do khác:";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Trả sách trễ hạn",
-            "Làm hỏng sách",
-            "Làm mất sách",
-            "Lý do khác"});
-            this.checkedListBox1.Location = new System.Drawing.Point(145, 93);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(184, 79);
-            this.checkedListBox1.TabIndex = 2;
-            // 
             // txtLydo
             // 
             this.txtLydo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLydo.Location = new System.Drawing.Point(525, 93);
+            this.txtLydo.Location = new System.Drawing.Point(525, 95);
             this.txtLydo.Name = "txtLydo";
             this.txtLydo.Size = new System.Drawing.Size(309, 79);
             this.txtLydo.TabIndex = 1;
@@ -444,25 +499,6 @@ namespace LibraryManager.GUI
             this.lbVP.Size = new System.Drawing.Size(120, 23);
             this.lbVP.TabIndex = 0;
             this.lbVP.Text = "Lý do vi phạm:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(384, 194);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 23);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Tình trạng sách:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(522, 194);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(312, 79);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
             // 
             // FrmBienbanVP
             // 
@@ -498,13 +534,12 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2TextBox txtMadg;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtTienphat;
         private Guna.UI2.WinForms.Guna2TextBox txtMaVP;
         private System.Windows.Forms.Label lbMaVP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.RichTextBox txtLydo;
         private System.Windows.Forms.Label lbVP;
         private System.Windows.Forms.Label label10;
@@ -514,5 +549,9 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2Button btnHoanthien;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox cboxTrehan;
+        private System.Windows.Forms.CheckBox cboxHongsach;
+        private System.Windows.Forms.CheckBox cboxKhac;
+        private System.Windows.Forms.CheckBox cboxMatsach;
     }
 }
