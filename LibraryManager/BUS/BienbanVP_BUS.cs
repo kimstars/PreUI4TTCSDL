@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.DAO;
 using System.Data;
+using LibraryManager.DTO;
 namespace LibraryManager.BUS
 {
     class BienbanVP_BUS
@@ -25,6 +26,10 @@ namespace LibraryManager.BUS
         public DataTable getManv()
         {
             return bbvp_dao.loadManv();
+        }
+        public void insertBB(BienBanViPham bbvp)
+        {
+            bbvp_dao.insert(bbvp);
         }
     }
 }

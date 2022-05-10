@@ -38,6 +38,7 @@ namespace LibraryManager.Template
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbMuontra = new System.Windows.Forms.Label();
             this.pnTTchung = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmbTKiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTK = new Guna.UI2.WinForms.Guna2Button();
             this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbtk = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@ namespace LibraryManager.Template
             this.clmVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pabe = new Guna.UI2.WinForms.Guna2Panel();
             this.lbDs = new System.Windows.Forms.Label();
-            this.cmbTKiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnTTchung.SuspendLayout();
             this.pnTrasach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).BeginInit();
@@ -97,6 +97,28 @@ namespace LibraryManager.Template
             this.pnTTchung.ShadowDecoration.Parent = this.pnTTchung;
             this.pnTTchung.Size = new System.Drawing.Size(475, 170);
             this.pnTTchung.TabIndex = 1;
+            // 
+            // cmbTKiem
+            // 
+            this.cmbTKiem.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTKiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTKiem.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbTKiem.FocusedState.Parent = this.cmbTKiem;
+            this.cmbTKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbTKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbTKiem.FormattingEnabled = true;
+            this.cmbTKiem.HoverState.Parent = this.cmbTKiem;
+            this.cmbTKiem.ItemHeight = 30;
+            this.cmbTKiem.Items.AddRange(new object[] {
+            "Mã độc giả",
+            "Mã sách"});
+            this.cmbTKiem.ItemsAppearance.Parent = this.cmbTKiem;
+            this.cmbTKiem.Location = new System.Drawing.Point(171, 47);
+            this.cmbTKiem.Name = "cmbTKiem";
+            this.cmbTKiem.ShadowDecoration.Parent = this.cmbTKiem;
+            this.cmbTKiem.Size = new System.Drawing.Size(207, 36);
+            this.cmbTKiem.TabIndex = 6;
             // 
             // btnTK
             // 
@@ -541,25 +563,6 @@ namespace LibraryManager.Template
             this.lbDs.Size = new System.Drawing.Size(191, 28);
             this.lbDs.TabIndex = 0;
             this.lbDs.Text = "Danh sách sách trả";
-            // 
-            // cmbTKiem
-            // 
-            this.cmbTKiem.BackColor = System.Drawing.Color.Transparent;
-            this.cmbTKiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTKiem.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbTKiem.FocusedState.Parent = this.cmbTKiem;
-            this.cmbTKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbTKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbTKiem.FormattingEnabled = true;
-            this.cmbTKiem.HoverState.Parent = this.cmbTKiem;
-            this.cmbTKiem.ItemHeight = 30;
-            this.cmbTKiem.ItemsAppearance.Parent = this.cmbTKiem;
-            this.cmbTKiem.Location = new System.Drawing.Point(171, 47);
-            this.cmbTKiem.Name = "cmbTKiem";
-            this.cmbTKiem.ShadowDecoration.Parent = this.cmbTKiem;
-            this.cmbTKiem.Size = new System.Drawing.Size(207, 36);
-            this.cmbTKiem.TabIndex = 6;
             // 
             // Xu_ly_tra
             // 

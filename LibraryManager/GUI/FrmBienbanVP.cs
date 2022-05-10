@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryManager.BUS;
 using LibraryManager.Template;
+using LibraryManager.DTO;
 namespace LibraryManager.GUI
 {
     public partial class FrmBienbanVP : Form
@@ -66,7 +67,37 @@ namespace LibraryManager.GUI
 
         private void btnHoanthien_Click(object sender, EventArgs e)
         {
-            //string sq
+            BienBanViPham bbvp = new BienBanViPham();
+            bbvp.MaDocGia = txtMadg.Text;
+            bbvp.MaNhanVien = cmbManv.Text;
+            bbvp.MaViPham = txtMaVP.Text;
+            bbvp.TienPhat = Int32.Parse(txtTienphat.Text);
+            string a = "";
+            if (cboxTrehan.Checked == true)
+            {
+                a = cboxTrehan.Text;
+            }
+            if(cboxHongsach.Checked == true)
+            {
+                a += cboxHongsach.Text;
+            }
+            if (cboxMatsach.Checked == true)
+            {
+                a += cboxMatsach.Text;
+            }
+            if (cboxKhac.Checked == true)
+            {
+                txtLydo.ReadOnly = false;
+                a += txtLydo.Text;
+            }
+            bbvp.LyDo = a;
+            bbvp.TinhTrangSach = "";
+            bbvp_bus.insertBB(bbvp);
+
+            // bbvp.LyDo = lstBoxLydo.Items.cố
+
         }
+
+        
     }
 }

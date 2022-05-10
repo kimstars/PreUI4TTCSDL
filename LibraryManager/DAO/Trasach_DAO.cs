@@ -15,20 +15,20 @@ namespace LibraryManager.DAO
             return GetData(sqlString);
         }
        
-        public void Update(string a)
+        public void Update(string masach )
         {
-            string sqlString = "update THONGTINMUONTRA set Ngaytra = getdate() where masach = '"+a+"'";
+            string sqlString = "update THONGTINMUONTRA set Ngaytra = getdate() where masach = '"+masach +"'";
             Excute(sqlString);
             
         }
-        public DataTable loadtk_madg(string a)
+        public DataTable loadtk_madg(string madocgia)
         {
-            string sqlString = "select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where tt.MaMuonTra = pmt.MaMuonTra and ngaytra is null and madocgia = " + "'" + a + "'";
+            string sqlString = "select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where tt.MaMuonTra = pmt.MaMuonTra and ngaytra is null and madocgia = " + "'" + madocgia+ "'";
             return GetData(sqlString);
         }
-        public DataTable loadtk_masach(string a)
+        public DataTable loadtk_masach(string masach)
         {
-            string d = "select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where tt.MaMuonTra = pmt.MaMuonTra and ngaytra is null and tt.masach = " + "'" + a + "'";
+            string d = "select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where tt.MaMuonTra = pmt.MaMuonTra and ngaytra is null and tt.masach = " + "'" + masach + "'";
             
             return GetData(d);
         }
