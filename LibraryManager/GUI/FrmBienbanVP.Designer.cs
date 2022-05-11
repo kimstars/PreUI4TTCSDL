@@ -40,19 +40,20 @@ namespace LibraryManager.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMadg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.cboxHongsach = new System.Windows.Forms.CheckBox();
             this.cboxKhac = new System.Windows.Forms.CheckBox();
             this.cboxMatsach = new System.Windows.Forms.CheckBox();
             this.cboxTrehan = new System.Windows.Forms.CheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_tinhtrang = new System.Windows.Forms.RichTextBox();
             this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
             this.labelChuY = new System.Windows.Forms.Label();
             this.txtTienphat = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbMaVP = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -74,7 +75,7 @@ namespace LibraryManager.GUI
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.ShadowDecoration.Parent = this.panel1;
-            this.panel1.Size = new System.Drawing.Size(1249, 67);
+            this.panel1.Size = new System.Drawing.Size(879, 67);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -106,7 +107,7 @@ namespace LibraryManager.GUI
             this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
             this.panel2.ShadowDecoration.Parent = this.panel2;
-            this.panel2.Size = new System.Drawing.Size(1249, 175);
+            this.panel2.Size = new System.Drawing.Size(879, 175);
             this.panel2.TabIndex = 10;
             // 
             // cmbManv
@@ -243,6 +244,30 @@ namespace LibraryManager.GUI
             this.label4.TabIndex = 3;
             this.label4.Text = "Mã nhân viên";
             // 
+            // txtMaVP
+            // 
+            this.txtMaVP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaVP.DefaultText = "";
+            this.txtMaVP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaVP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaVP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaVP.DisabledState.Parent = this.txtMaVP;
+            this.txtMaVP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaVP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaVP.FocusedState.Parent = this.txtMaVP;
+            this.txtMaVP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaVP.HoverState.Parent = this.txtMaVP;
+            this.txtMaVP.Location = new System.Drawing.Point(515, 126);
+            this.txtMaVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtMaVP.Name = "txtMaVP";
+            this.txtMaVP.PasswordChar = '\0';
+            this.txtMaVP.PlaceholderText = "";
+            this.txtMaVP.ReadOnly = true;
+            this.txtMaVP.SelectedText = "";
+            this.txtMaVP.ShadowDecoration.Parent = this.txtMaVP;
+            this.txtMaVP.Size = new System.Drawing.Size(328, 34);
+            this.txtMaVP.TabIndex = 7;
+            // 
             // txtMadg
             // 
             this.txtMadg.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -267,6 +292,17 @@ namespace LibraryManager.GUI
             this.txtMadg.Size = new System.Drawing.Size(203, 34);
             this.txtMadg.TabIndex = 5;
             // 
+            // lbMaVP
+            // 
+            this.lbMaVP.AutoSize = true;
+            this.lbMaVP.BackColor = System.Drawing.SystemColors.Control;
+            this.lbMaVP.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbMaVP.Location = new System.Drawing.Point(392, 129);
+            this.lbMaVP.Name = "lbMaVP";
+            this.lbMaVP.Size = new System.Drawing.Size(100, 23);
+            this.lbMaVP.TabIndex = 6;
+            this.lbMaVP.Text = "Mã vi phạm";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -279,11 +315,12 @@ namespace LibraryManager.GUI
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.guna2Button1);
             this.guna2GroupBox2.Controls.Add(this.cboxHongsach);
             this.guna2GroupBox2.Controls.Add(this.cboxKhac);
             this.guna2GroupBox2.Controls.Add(this.cboxMatsach);
             this.guna2GroupBox2.Controls.Add(this.cboxTrehan);
-            this.guna2GroupBox2.Controls.Add(this.richTextBox1);
+            this.guna2GroupBox2.Controls.Add(this.txt_tinhtrang);
             this.guna2GroupBox2.Controls.Add(this.btnHoanthien);
             this.guna2GroupBox2.Controls.Add(this.labelChuY);
             this.guna2GroupBox2.Controls.Add(this.txtTienphat);
@@ -300,9 +337,27 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 242);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(1249, 490);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(879, 444);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.White;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(522, 331);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(96, 45);
+            this.guna2Button1.TabIndex = 13;
+            this.guna2Button1.Text = "Sửa";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // cboxHongsach
             // 
@@ -348,14 +403,14 @@ namespace LibraryManager.GUI
             this.cboxTrehan.Text = "Trả sách trễ hạn";
             this.cboxTrehan.UseVisualStyleBackColor = false;
             // 
-            // richTextBox1
+            // txt_tinhtrang
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(522, 201);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(312, 79);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.txt_tinhtrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_tinhtrang.Location = new System.Drawing.Point(522, 201);
+            this.txt_tinhtrang.Name = "txt_tinhtrang";
+            this.txt_tinhtrang.Size = new System.Drawing.Size(312, 79);
+            this.txt_tinhtrang.TabIndex = 11;
+            this.txt_tinhtrang.Text = "";
             // 
             // btnHoanthien
             // 
@@ -367,7 +422,7 @@ namespace LibraryManager.GUI
             this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
             this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
             this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
-            this.btnHoanthien.Location = new System.Drawing.Point(379, 284);
+            this.btnHoanthien.Location = new System.Drawing.Point(664, 331);
             this.btnHoanthien.Name = "btnHoanthien";
             this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
             this.btnHoanthien.Size = new System.Drawing.Size(110, 45);
@@ -408,40 +463,6 @@ namespace LibraryManager.GUI
             this.txtTienphat.ShadowDecoration.Parent = this.txtTienphat;
             this.txtTienphat.Size = new System.Drawing.Size(184, 34);
             this.txtTienphat.TabIndex = 8;
-            // 
-            // txtMaVP
-            // 
-            this.txtMaVP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaVP.DefaultText = "";
-            this.txtMaVP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaVP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaVP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaVP.DisabledState.Parent = this.txtMaVP;
-            this.txtMaVP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaVP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaVP.FocusedState.Parent = this.txtMaVP;
-            this.txtMaVP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaVP.HoverState.Parent = this.txtMaVP;
-            this.txtMaVP.Location = new System.Drawing.Point(515, 126);
-            this.txtMaVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtMaVP.Name = "txtMaVP";
-            this.txtMaVP.PasswordChar = '\0';
-            this.txtMaVP.PlaceholderText = "";
-            this.txtMaVP.SelectedText = "";
-            this.txtMaVP.ShadowDecoration.Parent = this.txtMaVP;
-            this.txtMaVP.Size = new System.Drawing.Size(328, 34);
-            this.txtMaVP.TabIndex = 7;
-            // 
-            // lbMaVP
-            // 
-            this.lbMaVP.AutoSize = true;
-            this.lbMaVP.BackColor = System.Drawing.SystemColors.Control;
-            this.lbMaVP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbMaVP.Location = new System.Drawing.Point(392, 129);
-            this.lbMaVP.Name = "lbMaVP";
-            this.lbMaVP.Size = new System.Drawing.Size(100, 23);
-            this.lbMaVP.TabIndex = 6;
-            this.lbMaVP.Text = "Mã vi phạm";
             // 
             // label8
             // 
@@ -486,6 +507,7 @@ namespace LibraryManager.GUI
             this.txtLydo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLydo.Location = new System.Drawing.Point(525, 95);
             this.txtLydo.Name = "txtLydo";
+            this.txtLydo.ReadOnly = true;
             this.txtLydo.Size = new System.Drawing.Size(309, 79);
             this.txtLydo.TabIndex = 1;
             this.txtLydo.Text = "";
@@ -504,7 +526,7 @@ namespace LibraryManager.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 732);
+            this.ClientSize = new System.Drawing.Size(879, 686);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -547,11 +569,12 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.Label labelChuY;
         private Guna.UI2.WinForms.Guna2ComboBox cmbManv;
         private Guna.UI2.WinForms.Guna2Button btnHoanthien;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txt_tinhtrang;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox cboxTrehan;
         private System.Windows.Forms.CheckBox cboxHongsach;
         private System.Windows.Forms.CheckBox cboxKhac;
         private System.Windows.Forms.CheckBox cboxMatsach;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

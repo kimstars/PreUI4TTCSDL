@@ -19,16 +19,18 @@ namespace LibraryManager.GUI
         string madocgia = "";
         string ngaytra = "";
         string maVP = "";
-        string masach = "";
+        bool quahan = false;
+        List<string> book1 = new List<string>();
         public FrmBienbanVP()
         {
             InitializeComponent();
         }
-        public FrmBienbanVP(string madg, string date, string masachvp )
+        public FrmBienbanVP(string madg, string date, List<string> book, bool qua )
         {
             madocgia = madg;
             ngaytra = date;
-            masach = masachvp;
+            book1 = book;
+            quahan = qua;
             InitializeComponent();
         }
         /*private void txtMadg_TextChanged(object sender, EventArgs e)
@@ -49,6 +51,11 @@ namespace LibraryManager.GUI
             
             txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
             AutoTaoMaVP();
+            if(quahan == true)
+            {
+                cboxTrehan.Checked = true;
+                cboxTrehan.Enabled = false;
+            }
 
         }
         
@@ -76,6 +83,7 @@ namespace LibraryManager.GUI
             string a = "";
             if (cboxTrehan.Checked == true)
             {
+                bbvp_bus.update_loaiTK(bbvp.MaDocGia);
                 a = cboxTrehan.Text;
             }
             if(cboxHongsach.Checked == true)
@@ -92,13 +100,58 @@ namespace LibraryManager.GUI
                 a += txtLydo.Text;
             }
             bbvp.LyDo = a;
-            bbvp.TinhTrangSach = "";
-            bbvp_bus.insertBB(bbvp);
-
+            bbvp.TinhTrangSach = txt_tinhtrang.Text;
+            DialogResult result= MessageBox.Show("Bạn có muốn hoàn tất biên bản", "Hỏi đáp", MessageBoxButtons.YesNo);
+            if( result == DialogResult.Yes)
+            {
+                bbvp_bus.insertBB(bbvp);
+                
+                foreach (string mabook in book1)
+                {
+                    ViPham vp = new ViPham();
+                    vp.MaSach = mabook;
+                    vp.MaViPham = txtMaVP.Text;
+                    bbvp_bus.Them_vp(vp);
+                }
+            }
             // bbvp.LyDo = lstBoxLydo.Items.cố
 
         }
 
-        
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            BienBanViPham bbvp = new BienBanViPham();
+            bbvp.MaViPham = txtMaVP.Text;
+            bbvp.TienPhat = Int32.Parse(txtTienphat.Text);
+            string a = "";
+            if (cboxTrehan.Checked == true)
+            {
+                a = cboxTrehan.Text;
+            }
+            if (cboxHongsach.Checked == true)
+            {
+                a += cboxHongsach.Text;
+            }
+            if (cboxMatsach.Checked == true)
+            {
+                a += cboxMatsach.Text;
+            }
+            if (cboxKhac.Checked == true)
+            {
+                txtLydo.ReadOnly = false;
+                a += txtLydo.Text;
+            }
+            bbvp.LyDo = a;
+            bbvp.TinhTrangSach = txt_tinhtrang.Text;
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn sửa biên bản", "Hỏi đáp", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bbvp_bus.suabb(bbvp);
+                
+            }
+        }
+           
+            
+        }
     }
-}
+

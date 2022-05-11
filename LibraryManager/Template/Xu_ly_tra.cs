@@ -14,6 +14,7 @@ namespace LibraryManager.Template
     public partial class Xu_ly_tra : UserControl
     {
         Trasach_Bus ts_bus = new Trasach_Bus();
+        
         public Xu_ly_tra()
         {
             InitializeComponent();
@@ -76,23 +77,48 @@ namespace LibraryManager.Template
             }
 
         }
-
+        public int check(string sach)
+        {
+            
+            for( int i =0; i <dgv_trasach.Rows.Count; i++)
+            {
+                if (DateTime.Parse(dgv_trasach.Rows[i].Cells[5].Value.ToString()) < DateTime.Today.Date && Equals(dgv_trasach.Rows[i].Cells[7].Value, sach))
+                {
+                    return 0;
+                }
+                else return 1;
+            }
+            return 1;
+        }
         private void btnBbvp_Click(object sender, EventArgs e)
         {
+            List<string> book= new List<string>();
+            string madg;
+            string ngaytra1;
+            int count = 0;
+            bool tre = false;
             for (int i = 0; i < dgvDs.Rows.Count; i++)
-            {
-                if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có"))
+            { 
+                if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có") )
                 {
-                    string madg = dgvDs.Rows[0].Cells[1].Value.ToString();
-                    string ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
-                    FrmBienbanVP bbvp = new FrmBienbanVP(madg,ngaytra1);
-                    bbvp.Show();
-                    break;
-
+                    book.Add(dgvDs.Rows[i].Cells[0].Value.ToString());
+                    count++;
                 }
+                if( check(dgvDs.Rows[i].Cells[0].Value.ToString()) == 0)
+                {
+                    tre = true;
+                }
+                
+               // if( dgvDs.Rows[i].Cells[)
 
             }
-
+            if (count != 0)
+            {
+                madg = dgvDs.Rows[0].Cells[1].Value.ToString();
+                ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
+                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book,tre);
+                bbvp.Show();
+            }
         }
        
     

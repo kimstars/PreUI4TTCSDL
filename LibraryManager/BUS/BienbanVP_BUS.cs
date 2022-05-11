@@ -31,5 +31,17 @@ namespace LibraryManager.BUS
         {
             bbvp_dao.insert(bbvp);
         }
+        public void suabb(BienBanViPham bbvp)
+        {
+            bbvp_dao.sua(bbvp);
+        }
+        public void Them_vp(ViPham vp)
+        {
+            bbvp_dao.Tao_vp(vp);
+        }
+        public void update_loaiTK(string madg)
+        {
+            bbvp_dao.vohieuhoa(madg);
+        }
     }
 }
