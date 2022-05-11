@@ -37,7 +37,23 @@ namespace LibraryManager.DAO
         }
         public void insert(BienBanViPham bbvp)
         {
-            string sqlString = $"insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"','"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",'"+bbvp.TinhTrangSach+"')";
+            string sqlString = "insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"','"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",'"+bbvp.TinhTrangSach+"')";
+            Excute(sqlString);
+        }
+        public void sua(BienBanViPham bbvp)
+        {
+            string sqlString = $"proc_thaydoi_bbvp N'" + bbvp.LyDo + "'," + bbvp.TienPhat.ToString() + ",'" + bbvp.MaViPham + "',N'" + bbvp.TinhTrangSach + "'";
+            Excute(sqlString);
+
+        }
+        public void Tao_vp(ViPham vp)
+        {
+            string sqlString = "insert into vipham (mavipham, masach ) values ('" + vp.MaViPham + "','" + vp.MaSach + "')";
+            Excute(sqlString);
+        }
+        public void vohieuhoa(string madg)
+        {
+            string sqlString = "update taikhoan set loaiTK = N'Vô hiệu hóa' where tendangnhap = (select tendangnhap from docgia where madocgia = '" + madg + "'";
             Excute(sqlString);
         }
     }
