@@ -111,6 +111,7 @@
       <HintPath>E:\NAM 3 KI 2\thực tập csdl\LibraryManager\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -191,6 +192,12 @@
     <Compile Include="DTO\ViPham.cs" />
     <Compile Include="DTO\XuatBan.cs" />
     <Compile Include="extentItem\RandomDateTime.cs" />
+    <Compile Include="GUI\CreateDataDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CreateDataDB.Designer.cs">
+      <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\testListByte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +239,12 @@
     </Compile>
     <Compile Include="GUI\ThongTinSach.Designer.cs">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TimKiem4Hello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TimKiem4Hello.Designer.cs">
+      <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -322,6 +335,12 @@
     <Compile Include="extentItem\PictureBoxKiet.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Template\OneBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\OneBook.Designer.cs">
+      <DependentUpon>OneBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\PhieuMuon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -364,6 +383,9 @@
     <EmbeddedResource Include="CreateDB\ThemMuonTra.resx">
       <DependentUpon>ThemMuonTra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CreateDataDB.resx">
+      <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\testListByte.resx">
       <DependentUpon>testListByte.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongTinSach.resx">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TimKiem4Hello.resx">
+      <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Template\DanhSachDG.resx">
@@ -427,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmInfoNV_2.resx">
       <DependentUpon>FrmInfoNV_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\OneBook.resx">
+      <DependentUpon>OneBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>

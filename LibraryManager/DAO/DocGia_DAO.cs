@@ -37,14 +37,14 @@ namespace LibraryManager.DAO
             Excute("delete from DOCGIA where MaDocGia = '" + mDG + "'");
         }
 
-        public void Update(DocGia dg)
+        public bool Update(DocGia dg)
         {
-            //string sql = string.Format("update DOCGIA set TenDocGia = N'{0}', DiaChi = N'{1}', NgaySinh = '{2}', GioiTinh = N'{3}', SDT = '{5}', CMND = '{6}', NgayDangKi = '{7}', NgayDangKi = '{7} where MaDocGia = '{4}'",
-            //      dg.TenDocGia, dg.DiaChi, dg.NgaySinh, dg.GioiTinh, dg.SDT, dg.CMND, dg.NgayDangKi, dg.Anh, dg.MaDocGia );
-            //Excute(sql);
 
-            //sql = string.Format("update ACCOUNT set TenDangNhap = '{0}' where TenDangNhap = '{1}'", dg.TenDangNhap, dg.MaDocGia);
-            //Excute(sql);
+            string sql = $"update DOCGIA set TenDocGia = N'{dg.TenDocGia}', DiaChi = N'{dg.DiaChi}', NgaySinh = '{DateToString(dg.NgaySinh)}', GioiTinh = N'{dg.GioiTinh}', SDT = '{dg.SDT}', CMND = '{dg.CMND}' where MaDocGia = '{dg.MaDocGia}'";
+            Excute(sql);
+            return true;
+
+        
         }
         public DataTable Search(string _timkiem)
         {
@@ -61,7 +61,7 @@ namespace LibraryManager.DAO
             DocGia dg = new DocGia();
             if (res.Rows.Count == 1)
             {
-                //MessageBox.Show(res.Rows[0][0].ToString());
+                //MessageBox.Show(res.Rows[0][1].ToString());
                 dg.MaDocGia = maDG;
                 dg.TenDocGia = res.Rows[0][2].ToString();
                 dg.DiaChi = res.Rows[0][3].ToString();

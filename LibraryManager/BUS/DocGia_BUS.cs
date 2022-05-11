@@ -113,5 +113,14 @@ namespace LibraryManager.BUS
         }
 
         #endregion
+
+        #region suathongtin
+
+
+        public bool UpdateOne(DocGia dg)
+        {
+            return dgDao.Update(dg);
+        }
+        #endregion
     }
 }

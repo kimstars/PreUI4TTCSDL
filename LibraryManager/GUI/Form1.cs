@@ -30,26 +30,6 @@ namespace LibraryManager
 
 
 
-        private void btnquanlysachkho_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnQLsachtra_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnQLsachnhap_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnQLsachmuon_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -64,13 +44,16 @@ namespace LibraryManager
         {
             hideChildForm();
 
-            //GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia();
-            //newform.Show();
+            FrmDocGia newform = new FrmDocGia();
+            newform.Show();
 
-            panelShow.Controls.Clear();
-            UserControl temp = new Template.InfoNV("NV000000");
-            panelShow.Controls.Add(temp);
-            
+            //panelShow.Controls.Clear();
+            //UserControl temp = new Template.InfoNV("NV000000");
+            //panelShow.Controls.Add(temp);
+
+
+
+
 
         }
 
@@ -104,24 +87,17 @@ namespace LibraryManager
             //}
         }
 
-        private void separatorControl1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
             PaneLogin.Height = PaneLogin.MinimumSize.Height;
 
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeHello());
+
         }
-
-
 
         bool sidebarExpand;
         private void sidebartick_Tick(object sender, EventArgs e)
@@ -198,15 +174,8 @@ namespace LibraryManager
         {
             hideChildForm();
 
-
-
-            //Template.FormAdmin newform = new Template.FormAdmin();
-            //newform.Show();
-
-            CreateDB.ThemMuonTra newThemMT = new CreateDB.ThemMuonTra();
-            newThemMT.Show();
-
-
+            GUI.CreateDataDB newform = new GUI.CreateDataDB();
+            newform.Show();
 
         }
 
@@ -242,8 +211,23 @@ namespace LibraryManager
         private void btnDocGia_Click(object sender, EventArgs e)
         {
             hideChildForm();
-            FrmDocGia newform = new FrmDocGia();
+            //FrmDocGia newform = new FrmDocGia();
+            //newform.Show();
+
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.InfoDG());
+
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            //panelShow.Controls.Clear();
+            //panelShow.Controls.Add(new Template.TimKiemForHello());
+            GUI.TimKiem4Hello newform = new GUI.TimKiem4Hello();
             newform.Show();
+
         }
     }
 }
