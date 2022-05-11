@@ -74,7 +74,7 @@ namespace LibraryManager.GUI
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.ShadowDecoration.Parent = this.panel1;
-            this.panel1.Size = new System.Drawing.Size(895, 67);
+            this.panel1.Size = new System.Drawing.Size(1249, 67);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -98,13 +98,15 @@ namespace LibraryManager.GUI
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtMaVP);
             this.panel2.Controls.Add(this.txtMadg);
+            this.panel2.Controls.Add(this.lbMaVP);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
             this.panel2.ShadowDecoration.Parent = this.panel2;
-            this.panel2.Size = new System.Drawing.Size(895, 175);
+            this.panel2.Size = new System.Drawing.Size(1249, 175);
             this.panel2.TabIndex = 10;
             // 
             // cmbManv
@@ -225,7 +227,7 @@ namespace LibraryManager.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label3.Location = new System.Drawing.Point(392, 29);
+            this.label3.Location = new System.Drawing.Point(392, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 2;
@@ -285,8 +287,6 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Controls.Add(this.btnHoanthien);
             this.guna2GroupBox2.Controls.Add(this.labelChuY);
             this.guna2GroupBox2.Controls.Add(this.txtTienphat);
-            this.guna2GroupBox2.Controls.Add(this.txtMaVP);
-            this.guna2GroupBox2.Controls.Add(this.lbMaVP);
             this.guna2GroupBox2.Controls.Add(this.label8);
             this.guna2GroupBox2.Controls.Add(this.label9);
             this.guna2GroupBox2.Controls.Add(this.label7);
@@ -300,7 +300,7 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 242);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(895, 354);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(1249, 490);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
             // 
@@ -406,7 +406,7 @@ namespace LibraryManager.GUI
             this.txtTienphat.PlaceholderText = "";
             this.txtTienphat.SelectedText = "";
             this.txtTienphat.ShadowDecoration.Parent = this.txtTienphat;
-            this.txtTienphat.Size = new System.Drawing.Size(184, 35);
+            this.txtTienphat.Size = new System.Drawing.Size(184, 34);
             this.txtTienphat.TabIndex = 8;
             // 
             // txtMaVP
@@ -422,8 +422,8 @@ namespace LibraryManager.GUI
             this.txtMaVP.FocusedState.Parent = this.txtMaVP;
             this.txtMaVP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaVP.HoverState.Parent = this.txtMaVP;
-            this.txtMaVP.Location = new System.Drawing.Point(145, 47);
-            this.txtMaVP.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtMaVP.Location = new System.Drawing.Point(515, 126);
+            this.txtMaVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMaVP.Name = "txtMaVP";
             this.txtMaVP.PasswordChar = '\0';
             this.txtMaVP.PlaceholderText = "";
@@ -435,9 +435,9 @@ namespace LibraryManager.GUI
             // lbMaVP
             // 
             this.lbMaVP.AutoSize = true;
-            this.lbMaVP.BackColor = System.Drawing.Color.White;
+            this.lbMaVP.BackColor = System.Drawing.SystemColors.Control;
             this.lbMaVP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbMaVP.Location = new System.Drawing.Point(12, 50);
+            this.lbMaVP.Location = new System.Drawing.Point(392, 129);
             this.lbMaVP.Name = "lbMaVP";
             this.lbMaVP.Size = new System.Drawing.Size(100, 23);
             this.lbMaVP.TabIndex = 6;
@@ -504,7 +504,7 @@ namespace LibraryManager.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 596);
+            this.ClientSize = new System.Drawing.Size(1249, 732);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

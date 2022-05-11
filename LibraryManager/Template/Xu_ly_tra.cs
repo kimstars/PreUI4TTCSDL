@@ -24,13 +24,20 @@ namespace LibraryManager.Template
         }
         private void btnTK_Click(object sender, EventArgs e)
         {
-            if (cmbTKiem.SelectedItem == "Mã độc giả")
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                dgv_trasach.DataSource = ts_bus.loadtk_dgia(chuanhoa(txtTK.Text));
-            }
-            else if (cmbTKiem.SelectedItem == "Mã sách")
-            {
-                dgv_trasach.DataSource = ts_bus.loadtk_masach(chuanhoa(txtTK.Text));
+                if (cmbTKiem.SelectedItem == "Mã độc giả")
+                {
+                    if (ValidateChildren(ValidationConstraints.Enabled))
+                    {
+                        dgv_trasach.DataSource = ts_bus.loadtk_dgia(chuanhoa(txtTK.Text));
+                    }
+
+                }
+                else if (cmbTKiem.SelectedItem == "Mã sách")
+                {
+                    dgv_trasach.DataSource = ts_bus.loadtk_masach(chuanhoa(txtTK.Text));
+                }
             }
         }
 
@@ -98,6 +105,20 @@ namespace LibraryManager.Template
         private void btnHoantat_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void txtTK_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTK.Text) == true)
+            {
+                //e.Cancel = true;
+                txtTK.Focus();
+                error1.SetError(txtTK, "Vui lòng nhập nội dung cần tìm kiếm!!");
+            }else
+            {
+                //e.Cancel = true;
+                error1.SetError(txtTK, null);
+            }
         }
     }
 }
