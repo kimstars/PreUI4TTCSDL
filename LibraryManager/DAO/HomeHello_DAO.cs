@@ -30,6 +30,12 @@ namespace LibraryManager.DAO
             string sqlString = "SELECT COUNT(MATHELOAI) FROM dbo.THELOAI";
             return GetString(sqlString);
         }
-       
+
+        public DataTable Get2Anh()
+        {
+            string sql = "select madausach from (select top 2 madausach, count(tt.masach) sl from thongtinmuontra tt, cuonsach cs where cs.masach = tt.masach group by madausach order by sl desc) a";
+            return GetData(sql);
+        }
+
     }
 }

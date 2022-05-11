@@ -46,12 +46,12 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbSach1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbSach2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnNXB = new Guna.UI2.WinForms.Guna2Button();
@@ -73,8 +73,8 @@ namespace LibraryManager.Template
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSach1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSach2)).BeginInit();
             this.bunifuPanel5.SuspendLayout();
             this.bunifuPanel6.SuspendLayout();
             this.bunifuPanel7.SuspendLayout();
@@ -95,7 +95,7 @@ namespace LibraryManager.Template
             this.bunifuPanel3.Controls.Add(this.bunifuPictureBox3);
             this.bunifuPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel3.Location = new System.Drawing.Point(783, 50);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(297, 187);
@@ -149,7 +149,7 @@ namespace LibraryManager.Template
             this.bunifuPictureBox3.Image = global::LibraryManager.Properties.Resources.icons8_moleskine_500px;
             this.bunifuPictureBox3.IsCircle = true;
             this.bunifuPictureBox3.Location = new System.Drawing.Point(27, 48);
-            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
             this.bunifuPictureBox3.Size = new System.Drawing.Size(81, 81);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@ namespace LibraryManager.Template
             this.bunifuPanel2.Controls.Add(this.bunifuPictureBox2);
             this.bunifuPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel2.Location = new System.Drawing.Point(432, 50);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(304, 187);
@@ -225,7 +225,7 @@ namespace LibraryManager.Template
             this.bunifuPictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
             this.bunifuPictureBox2.IsCircle = true;
             this.bunifuPictureBox2.Location = new System.Drawing.Point(28, 57);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
             this.bunifuPictureBox2.Size = new System.Drawing.Size(81, 81);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +247,7 @@ namespace LibraryManager.Template
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel1.Location = new System.Drawing.Point(67, 50);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(323, 187);
@@ -301,7 +301,7 @@ namespace LibraryManager.Template
             this.bunifuPictureBox1.Image = global::LibraryManager.Properties.Resources.icons8_study_200px;
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(31, 57);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(81, 81);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -317,36 +317,36 @@ namespace LibraryManager.Template
             this.bunifuPanel4.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel4.BorderRadius = 30;
             this.bunifuPanel4.BorderThickness = 1;
-            this.bunifuPanel4.Controls.Add(this.guna2PictureBox1);
-            this.bunifuPanel4.Controls.Add(this.guna2PictureBox2);
+            this.bunifuPanel4.Controls.Add(this.pbSach1);
+            this.bunifuPanel4.Controls.Add(this.pbSach2);
             this.bunifuPanel4.Controls.Add(this.label10);
             this.bunifuPanel4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel4.Location = new System.Drawing.Point(609, 443);
-            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(779, 366);
             this.bunifuPanel4.TabIndex = 25;
             // 
-            // guna2PictureBox1
+            // pbSach1
             // 
-            this.guna2PictureBox1.Location = new System.Drawing.Point(49, 96);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(333, 214);
-            this.guna2PictureBox1.TabIndex = 20;
-            this.guna2PictureBox1.TabStop = false;
+            this.pbSach1.Location = new System.Drawing.Point(49, 96);
+            this.pbSach1.Margin = new System.Windows.Forms.Padding(4);
+            this.pbSach1.Name = "pbSach1";
+            this.pbSach1.ShadowDecoration.Parent = this.pbSach1;
+            this.pbSach1.Size = new System.Drawing.Size(333, 214);
+            this.pbSach1.TabIndex = 20;
+            this.pbSach1.TabStop = false;
             // 
-            // guna2PictureBox2
+            // pbSach2
             // 
-            this.guna2PictureBox2.Location = new System.Drawing.Point(413, 96);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(325, 214);
-            this.guna2PictureBox2.TabIndex = 21;
-            this.guna2PictureBox2.TabStop = false;
+            this.pbSach2.Location = new System.Drawing.Point(413, 96);
+            this.pbSach2.Margin = new System.Windows.Forms.Padding(4);
+            this.pbSach2.Name = "pbSach2";
+            this.pbSach2.ShadowDecoration.Parent = this.pbSach2;
+            this.pbSach2.Size = new System.Drawing.Size(325, 214);
+            this.pbSach2.TabIndex = 21;
+            this.pbSach2.TabStop = false;
             // 
             // label10
             // 
@@ -370,10 +370,10 @@ namespace LibraryManager.Template
             this.bunifuPanel5.BorderRadius = 30;
             this.bunifuPanel5.BorderThickness = 1;
             this.bunifuPanel5.Controls.Add(this.guna2Button1);
-            this.bunifuPanel5.Controls.Add(this.guna2TextBox1);
+            this.bunifuPanel5.Controls.Add(this.txtTimKiem);
             this.bunifuPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel5.Location = new System.Drawing.Point(67, 299);
-            this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
             this.bunifuPanel5.Size = new System.Drawing.Size(1321, 97);
@@ -388,36 +388,37 @@ namespace LibraryManager.Template
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(1081, 22);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(161, 55);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Tìm kiếm";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2TextBox1
+            // txtTimKiem
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(31, 22);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(1060, 55);
-            this.guna2TextBox1.TabIndex = 0;
+            this.txtTimKiem.BorderColor = System.Drawing.Color.Silver;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.Parent = this.txtTimKiem;
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.FocusedState.Parent = this.txtTimKiem;
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
+            this.txtTimKiem.Location = new System.Drawing.Point(31, 22);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
+            this.txtTimKiem.Size = new System.Drawing.Size(1060, 55);
+            this.txtTimKiem.TabIndex = 0;
             // 
             // label11
             // 
@@ -448,7 +449,7 @@ namespace LibraryManager.Template
             this.bunifuPanel6.Controls.Add(this.label12);
             this.bunifuPanel6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel6.Location = new System.Drawing.Point(67, 443);
-            this.bunifuPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
             this.bunifuPanel6.Size = new System.Drawing.Size(516, 266);
@@ -463,7 +464,7 @@ namespace LibraryManager.Template
             this.btnNXB.ForeColor = System.Drawing.Color.White;
             this.btnNXB.HoverState.Parent = this.btnNXB;
             this.btnNXB.Location = new System.Drawing.Point(307, 65);
-            this.btnNXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNXB.Margin = new System.Windows.Forms.Padding(4);
             this.btnNXB.Name = "btnNXB";
             this.btnNXB.ShadowDecoration.Parent = this.btnNXB;
             this.btnNXB.Size = new System.Drawing.Size(181, 55);
@@ -479,7 +480,7 @@ namespace LibraryManager.Template
             this.btnDSach.ForeColor = System.Drawing.Color.White;
             this.btnDSach.HoverState.Parent = this.btnDSach;
             this.btnDSach.Location = new System.Drawing.Point(151, 65);
-            this.btnDSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDSach.Margin = new System.Windows.Forms.Padding(4);
             this.btnDSach.Name = "btnDSach";
             this.btnDSach.ShadowDecoration.Parent = this.btnDSach;
             this.btnDSach.Size = new System.Drawing.Size(148, 55);
@@ -495,7 +496,7 @@ namespace LibraryManager.Template
             this.btnTLoai.ForeColor = System.Drawing.Color.White;
             this.btnTLoai.HoverState.Parent = this.btnTLoai;
             this.btnTLoai.Location = new System.Drawing.Point(25, 128);
-            this.btnTLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTLoai.Margin = new System.Windows.Forms.Padding(4);
             this.btnTLoai.Name = "btnTLoai";
             this.btnTLoai.ShadowDecoration.Parent = this.btnTLoai;
             this.btnTLoai.Size = new System.Drawing.Size(144, 97);
@@ -511,7 +512,7 @@ namespace LibraryManager.Template
             this.btnTgia.ForeColor = System.Drawing.Color.White;
             this.btnTgia.HoverState.Parent = this.btnTgia;
             this.btnTgia.Location = new System.Drawing.Point(25, 65);
-            this.btnTgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTgia.Margin = new System.Windows.Forms.Padding(4);
             this.btnTgia.Name = "btnTgia";
             this.btnTgia.ShadowDecoration.Parent = this.btnTgia;
             this.btnTgia.Size = new System.Drawing.Size(109, 55);
@@ -527,7 +528,7 @@ namespace LibraryManager.Template
             this.btnAllSach.ForeColor = System.Drawing.Color.White;
             this.btnAllSach.HoverState.Parent = this.btnAllSach;
             this.btnAllSach.Location = new System.Drawing.Point(185, 128);
-            this.btnAllSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAllSach.Margin = new System.Windows.Forms.Padding(4);
             this.btnAllSach.Name = "btnAllSach";
             this.btnAllSach.ShadowDecoration.Parent = this.btnAllSach;
             this.btnAllSach.Size = new System.Drawing.Size(303, 97);
@@ -561,7 +562,7 @@ namespace LibraryManager.Template
             this.bunifuPanel7.Controls.Add(this.bunifuPictureBox4);
             this.bunifuPanel7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel7.Location = new System.Drawing.Point(1125, 50);
-            this.bunifuPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel7.Name = "bunifuPanel7";
             this.bunifuPanel7.ShowBorders = true;
             this.bunifuPanel7.Size = new System.Drawing.Size(297, 187);
@@ -615,7 +616,7 @@ namespace LibraryManager.Template
             this.bunifuPictureBox4.Image = global::LibraryManager.Properties.Resources.icons8_moleskine_500px;
             this.bunifuPictureBox4.IsCircle = true;
             this.bunifuPictureBox4.Location = new System.Drawing.Point(23, 48);
-            this.bunifuPictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
             this.bunifuPictureBox4.Size = new System.Drawing.Size(81, 81);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -633,7 +634,7 @@ namespace LibraryManager.Template
             this.btnDKy.ForeColor = System.Drawing.Color.White;
             this.btnDKy.HoverState.Parent = this.btnDKy;
             this.btnDKy.Location = new System.Drawing.Point(67, 737);
-            this.btnDKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDKy.Margin = new System.Windows.Forms.Padding(4);
             this.btnDKy.Name = "btnDKy";
             this.btnDKy.ShadowDecoration.Parent = this.btnDKy;
             this.btnDKy.Size = new System.Drawing.Size(516, 71);
@@ -654,7 +655,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeHello";
             this.Size = new System.Drawing.Size(1468, 854);
             this.Load += new System.EventHandler(this.HomeHello_Load);
@@ -669,8 +670,8 @@ namespace LibraryManager.Template
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuPanel4.ResumeLayout(false);
             this.bunifuPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSach1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSach2)).EndInit();
             this.bunifuPanel5.ResumeLayout(false);
             this.bunifuPanel6.ResumeLayout(false);
             this.bunifuPanel6.PerformLayout();
@@ -701,11 +702,11 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox pbSach1;
+        private Guna.UI2.WinForms.Guna2PictureBox pbSach2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private System.Windows.Forms.Label label11;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
         private Guna.UI2.WinForms.Guna2Button btnNXB;

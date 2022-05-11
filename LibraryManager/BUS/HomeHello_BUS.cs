@@ -34,5 +34,10 @@ namespace LibraryManager.BUS
             
             return hello.GetTongTL();
         }
+        public DataTable Get2Anh()
+        {
+            
+            return hello.Get2Anh();
+        }
     }
 }

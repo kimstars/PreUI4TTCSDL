@@ -226,9 +226,11 @@ namespace LibraryManager
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            panelShow.Controls.Clear();
             hideChildForm();
-            panelShow.Controls.Add(new Template.PhieuMuon());
+            panelShow.Controls.Clear();
+            
+            UserControl temp = new Template.PhieuMuon();
+            panelShow.Controls.Add(temp);
             
         }
 
@@ -244,6 +246,11 @@ namespace LibraryManager
             hideChildForm();
             FrmDocGia newform = new FrmDocGia();
             newform.Show();
+        }
+
+        private void panelShow_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
