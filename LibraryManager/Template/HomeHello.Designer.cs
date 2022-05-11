@@ -470,6 +470,7 @@ namespace LibraryManager.Template
             this.btnNXB.Size = new System.Drawing.Size(181, 55);
             this.btnNXB.TabIndex = 32;
             this.btnNXB.Text = "Năm xuất bản";
+            this.btnNXB.Click += new System.EventHandler(this.btnNXB_Click);
             // 
             // btnDSach
             // 
@@ -486,6 +487,7 @@ namespace LibraryManager.Template
             this.btnDSach.Size = new System.Drawing.Size(148, 55);
             this.btnDSach.TabIndex = 31;
             this.btnDSach.Text = "Đầu sách";
+            this.btnDSach.Click += new System.EventHandler(this.btnDSach_Click);
             // 
             // btnTLoai
             // 
@@ -502,6 +504,7 @@ namespace LibraryManager.Template
             this.btnTLoai.Size = new System.Drawing.Size(144, 97);
             this.btnTLoai.TabIndex = 30;
             this.btnTLoai.Text = "Thể loại";
+            this.btnTLoai.Click += new System.EventHandler(this.btnTLoai_Click);
             // 
             // btnTgia
             // 
@@ -518,6 +521,7 @@ namespace LibraryManager.Template
             this.btnTgia.Size = new System.Drawing.Size(109, 55);
             this.btnTgia.TabIndex = 29;
             this.btnTgia.Text = "Tác giả";
+            this.btnTgia.Click += new System.EventHandler(this.btnTgia_Click);
             // 
             // btnAllSach
             // 
@@ -534,6 +538,7 @@ namespace LibraryManager.Template
             this.btnAllSach.Size = new System.Drawing.Size(303, 97);
             this.btnAllSach.TabIndex = 28;
             this.btnAllSach.Text = "Tất cả sách";
+            this.btnAllSach.Click += new System.EventHandler(this.btnAllSach_Click);
             // 
             // label12
             // 
@@ -640,6 +645,7 @@ namespace LibraryManager.Template
             this.btnDKy.Size = new System.Drawing.Size(516, 71);
             this.btnDKy.TabIndex = 33;
             this.btnDKy.Text = "ĐĂNG KÝ TÀI KHOẢN ĐỘC GIẢ";
+            this.btnDKy.Click += new System.EventHandler(this.btnDKy_Click);
             // 
             // HomeHello
             // 

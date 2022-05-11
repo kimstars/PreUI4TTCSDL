@@ -33,7 +33,7 @@ namespace LibraryManager.DAO
 
         public DataTable Get2Anh()
         {
-            string sql = "select madausach from (select top 2 madausach, count(tt.masach) sl from thongtinmuontra tt, cuonsach cs where cs.masach = tt.masach group by madausach order by sl desc) a";
+            string sql = "select top 2 madausach, count(tt.masach) sl from thongtinmuontra tt, cuonsach cs where cs.masach = tt.masach group by madausach order by sl desc";
             return GetData(sql);
         }
 

@@ -41,5 +41,35 @@ namespace LibraryManager.Template
             //UserControl temp = new Template.TimSach();
             //panelShow.Controls.Add(temp);
         }
+
+        private void btnTgia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDSach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNXB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTLoai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAllSach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDKy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
