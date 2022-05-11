@@ -37,7 +37,7 @@ namespace LibraryManager.DAO
         }
         public void insert(BienBanViPham bbvp)
         {
-            string sqlString = "insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"','"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",'"+bbvp.TinhTrangSach+"')";
+            string sqlString = $"insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"','"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",'"+bbvp.TinhTrangSach+"')";
             Excute(sqlString);
         }
     }

@@ -24,6 +24,7 @@ namespace LibraryManager.DAO
         public DataTable loadtk_madg(string madocgia)
         {
             string sqlString = "select pmt.*, masach, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where tt.MaMuonTra = pmt.MaMuonTra and ngaytra is null and madocgia = " + "'" + madocgia+ "'";
+            // string sqlString = "proc_sach_chuatra '"+madocgia+"'";
             return GetData(sqlString);
         }
         public DataTable loadtk_masach(string masach)

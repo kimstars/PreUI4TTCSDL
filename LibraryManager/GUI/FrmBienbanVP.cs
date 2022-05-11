@@ -19,15 +19,16 @@ namespace LibraryManager.GUI
         string madocgia = "";
         string ngaytra = "";
         string maVP = "";
-        
+        string masach = "";
         public FrmBienbanVP()
         {
             InitializeComponent();
         }
-        public FrmBienbanVP(string madg, string date)
+        public FrmBienbanVP(string madg, string date, string masachvp )
         {
             madocgia = madg;
             ngaytra = date;
+            masach = masachvp;
             InitializeComponent();
         }
         /*private void txtMadg_TextChanged(object sender, EventArgs e)
