@@ -109,7 +109,7 @@ namespace LibraryManager
             this.PanelMenuBar.AutoScroll = true;
             this.PanelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
             this.PanelMenuBar.Controls.Add(this.panel3);
-            this.PanelMenuBar.Controls.Add(this.panelInfoUser);
+
             this.PanelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenuBar.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2);

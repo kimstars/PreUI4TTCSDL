@@ -82,10 +82,11 @@ namespace LibraryManager.Template
             this.bunifuPanel5.Controls.Add(this.chart1);
             this.bunifuPanel5.Controls.Add(this.label15);
             this.bunifuPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel5.Location = new System.Drawing.Point(71, 257);
+            this.bunifuPanel5.Location = new System.Drawing.Point(95, 316);
+            this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
-            this.bunifuPanel5.Size = new System.Drawing.Size(635, 416);
+            this.bunifuPanel5.Size = new System.Drawing.Size(847, 512);
             this.bunifuPanel5.TabIndex = 24;
             // 
             // label13
@@ -94,9 +95,10 @@ namespace LibraryManager.Template
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label13.Location = new System.Drawing.Point(50, 18);
+            this.label13.Location = new System.Drawing.Point(67, 22);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(282, 25);
+            this.label13.Size = new System.Drawing.Size(341, 30);
             this.label13.TabIndex = 24;
             this.label13.Text = "Thống kê độc giả đến thư viện";
             // 
@@ -106,13 +108,14 @@ namespace LibraryManager.Template
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(29, 78);
+            this.chart1.Location = new System.Drawing.Point(39, 96);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(574, 300);
+            this.chart1.Size = new System.Drawing.Size(765, 369);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart1";
             // 
@@ -122,9 +125,10 @@ namespace LibraryManager.Template
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label15.Location = new System.Drawing.Point(25, 18);
+            this.label15.Location = new System.Drawing.Point(33, 22);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 21);
+            this.label15.Size = new System.Drawing.Size(0, 28);
             this.label15.TabIndex = 20;
             // 
             // bunifuPanel4
@@ -142,10 +146,11 @@ namespace LibraryManager.Template
             this.bunifuPanel4.Controls.Add(this.label10);
             this.bunifuPanel4.Controls.Add(this.bunifuCircleProgress1);
             this.bunifuPanel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel4.Location = new System.Drawing.Point(735, 257);
+            this.bunifuPanel4.Location = new System.Drawing.Point(980, 316);
+            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(387, 416);
+            this.bunifuPanel4.Size = new System.Drawing.Size(516, 512);
             this.bunifuPanel4.TabIndex = 22;
             // 
             // label12
@@ -154,9 +159,10 @@ namespace LibraryManager.Template
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label12.Location = new System.Drawing.Point(49, 96);
+            this.label12.Location = new System.Drawing.Point(65, 118);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 23);
+            this.label12.Size = new System.Drawing.Size(182, 30);
             this.label12.TabIndex = 23;
             this.label12.Text = "Số sách đã mượn";
             // 
@@ -168,11 +174,12 @@ namespace LibraryManager.Template
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(26, 105);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(35, 129);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(10, 10);
+            this.guna2CircleButton2.Size = new System.Drawing.Size(13, 12);
             this.guna2CircleButton2.TabIndex = 22;
             // 
             // label11
@@ -181,9 +188,10 @@ namespace LibraryManager.Template
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label11.Location = new System.Drawing.Point(49, 60);
+            this.label11.Location = new System.Drawing.Point(65, 74);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 23);
+            this.label11.Size = new System.Drawing.Size(155, 30);
             this.label11.TabIndex = 20;
             this.label11.Text = "Số sách sẵn có";
             // 
@@ -195,11 +203,12 @@ namespace LibraryManager.Template
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(26, 69);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(35, 85);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(10, 10);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(13, 12);
             this.guna2CircleButton1.TabIndex = 21;
             // 
             // label10
@@ -208,9 +217,10 @@ namespace LibraryManager.Template
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label10.Location = new System.Drawing.Point(17, 18);
+            this.label10.Location = new System.Drawing.Point(23, 22);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(346, 25);
+            this.label10.Size = new System.Drawing.Size(421, 30);
             this.label10.TabIndex = 20;
             this.label10.Text = "Biểu đồ số sách còn lại trong thư viện";
             // 
@@ -226,7 +236,8 @@ namespace LibraryManager.Template
             this.bunifuCircleProgress1.IsPercentage = false;
             this.bunifuCircleProgress1.LineProgressThickness = 10;
             this.bunifuCircleProgress1.LineThickness = 10;
-            this.bunifuCircleProgress1.Location = new System.Drawing.Point(132, 163);
+            this.bunifuCircleProgress1.Location = new System.Drawing.Point(176, 201);
+            this.bunifuCircleProgress1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
             this.bunifuCircleProgress1.ProgressAnimationSpeed = 200;
             this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -236,7 +247,7 @@ namespace LibraryManager.Template
             this.bunifuCircleProgress1.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
             this.bunifuCircleProgress1.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
             this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.bunifuCircleProgress1.Size = new System.Drawing.Size(215, 215);
+            this.bunifuCircleProgress1.Size = new System.Drawing.Size(287, 287);
             this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
             this.bunifuCircleProgress1.SubScriptText = ".00";
@@ -264,10 +275,11 @@ namespace LibraryManager.Template
             this.bunifuPanel3.Controls.Add(this.label9);
             this.bunifuPanel3.Controls.Add(this.bunifuPictureBox3);
             this.bunifuPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel3.Location = new System.Drawing.Point(788, 54);
+            this.bunifuPanel3.Location = new System.Drawing.Point(1051, 66);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(251, 152);
+            this.bunifuPanel3.Size = new System.Drawing.Size(335, 187);
             this.bunifuPanel3.TabIndex = 21;
             // 
             // label7
@@ -276,9 +288,10 @@ namespace LibraryManager.Template
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(151, 21);
+            this.label7.Location = new System.Drawing.Point(201, 26);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 21);
+            this.label7.Size = new System.Drawing.Size(82, 28);
             this.label7.TabIndex = 19;
             this.label7.Text = "Có hơn";
             // 
@@ -288,9 +301,10 @@ namespace LibraryManager.Template
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label8.Location = new System.Drawing.Point(166, 53);
+            this.label8.Location = new System.Drawing.Point(221, 65);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 37);
+            this.label8.Size = new System.Drawing.Size(60, 46);
             this.label8.TabIndex = 18;
             this.label8.Text = "30";
             // 
@@ -300,9 +314,10 @@ namespace LibraryManager.Template
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(135, 100);
+            this.label9.Location = new System.Drawing.Point(180, 123);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 21);
+            this.label9.Size = new System.Drawing.Size(100, 28);
             this.label9.TabIndex = 17;
             this.label9.Text = "Đầu sách";
             // 
@@ -311,12 +326,13 @@ namespace LibraryManager.Template
             this.bunifuPictureBox3.AllowFocused = false;
             this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox3.AutoSizeHeight = true;
-            this.bunifuPictureBox3.BorderRadius = 34;
+            this.bunifuPictureBox3.BorderRadius = 45;
             this.bunifuPictureBox3.Image = global::LibraryManager.Properties.Resources.icons8_moleskine_500px;
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(19, 39);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(25, 48);
+            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(68, 68);
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(91, 91);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox3.TabIndex = 17;
             this.bunifuPictureBox3.TabStop = false;
@@ -335,10 +351,11 @@ namespace LibraryManager.Template
             this.bunifuPanel2.Controls.Add(this.label6);
             this.bunifuPanel2.Controls.Add(this.bunifuPictureBox2);
             this.bunifuPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel2.Location = new System.Drawing.Point(455, 54);
+            this.bunifuPanel2.Location = new System.Drawing.Point(607, 66);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(251, 152);
+            this.bunifuPanel2.Size = new System.Drawing.Size(335, 187);
             this.bunifuPanel2.TabIndex = 20;
             // 
             // label4
@@ -347,9 +364,10 @@ namespace LibraryManager.Template
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(157, 100);
+            this.label4.Location = new System.Drawing.Point(209, 123);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 21);
+            this.label4.Size = new System.Drawing.Size(84, 28);
             this.label4.TabIndex = 19;
             this.label4.Text = "độc giả";
             // 
@@ -359,9 +377,10 @@ namespace LibraryManager.Template
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label5.Location = new System.Drawing.Point(161, 53);
+            this.label5.Location = new System.Drawing.Point(215, 65);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 37);
+            this.label5.Size = new System.Drawing.Size(76, 46);
             this.label5.TabIndex = 18;
             this.label5.Text = "100";
             // 
@@ -371,9 +390,10 @@ namespace LibraryManager.Template
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(84, 21);
+            this.label6.Location = new System.Drawing.Point(112, 26);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 21);
+            this.label6.Size = new System.Drawing.Size(179, 28);
             this.label6.TabIndex = 17;
             this.label6.Text = "Số lượng độc giả";
             // 
@@ -382,12 +402,13 @@ namespace LibraryManager.Template
             this.bunifuPictureBox2.AllowFocused = false;
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 30;
+            this.bunifuPictureBox2.BorderRadius = 40;
             this.bunifuPictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(23, 39);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(31, 48);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(61, 61);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(81, 81);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 17;
             this.bunifuPictureBox2.TabStop = false;
@@ -406,10 +427,11 @@ namespace LibraryManager.Template
             this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel1.Location = new System.Drawing.Point(71, 54);
+            this.bunifuPanel1.Location = new System.Drawing.Point(95, 66);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(251, 152);
+            this.bunifuPanel1.Size = new System.Drawing.Size(335, 187);
             this.bunifuPanel1.TabIndex = 0;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
@@ -419,9 +441,10 @@ namespace LibraryManager.Template
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(126, 100);
+            this.label3.Location = new System.Drawing.Point(168, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
+            this.label3.Size = new System.Drawing.Size(110, 28);
             this.label3.TabIndex = 19;
             this.label3.Text = "cuốn sách";
             // 
@@ -431,9 +454,10 @@ namespace LibraryManager.Template
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label2.Location = new System.Drawing.Point(132, 53);
+            this.label2.Location = new System.Drawing.Point(176, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 37);
+            this.label2.Size = new System.Drawing.Size(100, 46);
             this.label2.TabIndex = 18;
             this.label2.Text = "2000";
             // 
@@ -443,9 +467,10 @@ namespace LibraryManager.Template
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(102, 21);
+            this.label1.Location = new System.Drawing.Point(136, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 21);
+            this.label1.Size = new System.Drawing.Size(142, 28);
             this.label1.TabIndex = 17;
             this.label1.Text = "Tổng số sách";
             // 
@@ -454,12 +479,13 @@ namespace LibraryManager.Template
             this.bunifuPictureBox1.AllowFocused = false;
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 30;
+            this.bunifuPictureBox1.BorderRadius = 40;
             this.bunifuPictureBox1.Image = global::LibraryManager.Properties.Resources.icons8_study_200px;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(23, 39);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(31, 48);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(61, 61);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(81, 81);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 17;
             this.bunifuPictureBox1.TabStop = false;
@@ -467,15 +493,16 @@ namespace LibraryManager.Template
             // 
             // HomeAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuPanel5);
             this.Controls.Add(this.bunifuPanel4);
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeAdmin";
-            this.Size = new System.Drawing.Size(1179, 723);
+            this.Size = new System.Drawing.Size(1572, 890);
             this.Load += new System.EventHandler(this.HomeAdmin_Load);
             this.bunifuPanel5.ResumeLayout(false);
             this.bunifuPanel5.PerformLayout();
