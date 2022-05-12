@@ -30,6 +30,8 @@ namespace LibraryManager.Template
         private void imgBook_Click(object sender, EventArgs e)
         {
             OnSelect?.Invoke(this, e);
+            
+            HighLightItem();
         }
 
 
@@ -41,13 +43,15 @@ namespace LibraryManager.Template
         public string TenSach;
         public string TenTacGia;
         public string TheLoai;
+        public int SoLuong;
 
         public bool selected = false;
-        private void HighLightItem()
+        public void HighLightItem()
         {
-            int sl = int.Parse(lbSoLuong.Text);
-            if(sl > 0)
+            SoLuong = int.Parse(lbSoLuong.Text);
+            if(SoLuong > 0)
             {
+                selected = !selected;
                 if (selected)
                 {
                     panelMain.BorderColor = System.Drawing.Color.FromArgb(0,192,0);
@@ -67,6 +71,7 @@ namespace LibraryManager.Template
                 MessageBox.Show("Đã hết sách " + TenSach + " rồi nhé!!");
             }
         }
+
         DauSach_BUS dsBus = new DauSach_BUS();
 
         
@@ -91,11 +96,6 @@ namespace LibraryManager.Template
 
                 lbSoLuong.Text = dsBus.LoadSL_SanCo(MaDauSach);
             }
-
-
-
         }
-
-      
     }
 }

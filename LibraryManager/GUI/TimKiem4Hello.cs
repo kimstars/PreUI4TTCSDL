@@ -21,17 +21,35 @@ namespace LibraryManager.GUI
             InitializeComponent();
         }
 
-
+        string MaDSCurrent = "";
         public void AddItem(string MaDauSach)
         {
 
             if (MaDauSach != "")
             {
-                flowLayoutDS.Controls.Add(new Template.OneBook(MaDauSach));
+                Template.OneBook newbook = new Template.OneBook(MaDauSach);
+                flowLayoutDS.Controls.Add(newbook);
+
+                newbook.OnSelect += (ss, ee) =>
+                {
+                    var item = (Template.OneBook)ss;
+                    MaDSCurrent = item.MaDauSach;
+
+                    foreach (DataGridViewRow row in dgvChooseBook.Rows)
+                    {
+                        if(row.Cells[0].Value.ToString() == item.MaDauSach)
+                        {
+                            return;
+                        }
+                    }
+                    MessageBox.Show(item.SoLuong.ToString());
+                        dgvChooseBook.Rows.Add(new object[] { item.MaDauSach, item.TenSach, "Bỏ" });
+                    
+                    
+                };
             }
-
-
         }
+
         private List<string> DSDauSach = new List<string>();
 
 
@@ -87,10 +105,11 @@ namespace LibraryManager.GUI
 
         private void dgvChooseBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 2)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+      
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
                 }
 
@@ -174,7 +193,16 @@ namespace LibraryManager.GUI
 
         private void btnFindAll_Click(object sender, EventArgs e)
         {
+            ShowAll();
+            LoadBookFlow();
 
+        }
+
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            GUI.ThongTinSach newform = new GUI.ThongTinSach(MaDSCurrent);
+            newform.Show();
         }
     }
 }

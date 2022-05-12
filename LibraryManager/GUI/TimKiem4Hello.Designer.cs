@@ -31,11 +31,11 @@ namespace LibraryManager.GUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimKiem4Hello));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.flowLayoutDS = new System.Windows.Forms.FlowLayoutPanel();
             this.cbTheLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -53,12 +53,11 @@ namespace LibraryManager.GUI
             this.label13 = new System.Windows.Forms.Label();
             this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.dgvChooseBook = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnFindByTG = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dragPanel.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseBook)).BeginInit();
@@ -158,11 +157,11 @@ namespace LibraryManager.GUI
             this.btnFindAll.ColorContrastOnClick = 45;
             this.btnFindAll.ColorContrastOnHover = 45;
             this.btnFindAll.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnFindAll.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnFindAll.CustomizableEdges = borderEdges3;
             this.btnFindAll.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFindAll.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFindAll.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -247,7 +246,7 @@ namespace LibraryManager.GUI
             this.dragPanel.Location = new System.Drawing.Point(0, 0);
             this.dragPanel.Margin = new System.Windows.Forms.Padding(4);
             this.dragPanel.Name = "dragPanel";
-            this.dragPanel.Size = new System.Drawing.Size(1543, 50);
+            this.dragPanel.Size = new System.Drawing.Size(1542, 32);
             this.dragPanel.TabIndex = 42;
             // 
             // label1
@@ -270,7 +269,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1381, 4);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1380, 4);
             this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
@@ -283,7 +282,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1467, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1466, 4);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -375,31 +374,32 @@ namespace LibraryManager.GUI
             this.btnPreview.Size = new System.Drawing.Size(228, 44);
             this.btnPreview.TabIndex = 37;
             this.btnPreview.Text = "Xem chi tiết";
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // dgvChooseBook
             // 
             this.dgvChooseBook.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvChooseBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvChooseBook.AllowUserToAddRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvChooseBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvChooseBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChooseBook.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvChooseBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvChooseBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvChooseBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChooseBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChooseBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvChooseBook.ColumnHeadersHeight = 40;
             this.dgvChooseBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach,
             this.TenDauSach,
-            this.SoLuong,
             this.Remove});
             this.dgvChooseBook.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvChooseBook.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -419,14 +419,14 @@ namespace LibraryManager.GUI
             this.dgvChooseBook.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvChooseBook.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvChooseBook.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChooseBook.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChooseBook.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvChooseBook.EnableHeadersVisualStyles = false;
             this.dgvChooseBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvChooseBook.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -442,27 +442,6 @@ namespace LibraryManager.GUI
             this.dgvChooseBook.TabIndex = 36;
             this.dgvChooseBook.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvChooseBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChooseBook_CellClick);
-            // 
-            // MaDauSach
-            // 
-            this.MaDauSach.HeaderText = "Mã đầu sách";
-            this.MaDauSach.Name = "MaDauSach";
-            this.MaDauSach.ReadOnly = true;
-            // 
-            // TenDauSach
-            // 
-            this.TenDauSach.HeaderText = "Tên đầu sách";
-            this.TenDauSach.Name = "TenDauSach";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // Remove
-            // 
-            this.Remove.HeaderText = "Remove";
-            this.Remove.Name = "Remove";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -498,11 +477,11 @@ namespace LibraryManager.GUI
             this.btnFindByTG.ColorContrastOnClick = 45;
             this.btnFindByTG.ColorContrastOnHover = 45;
             this.btnFindByTG.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnFindByTG.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnFindByTG.CustomizableEdges = borderEdges4;
             this.btnFindByTG.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFindByTG.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFindByTG.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -571,11 +550,28 @@ namespace LibraryManager.GUI
             this.btnFindByTG.UseDefaultRadiusAndThickness = true;
             this.btnFindByTG.Click += new System.EventHandler(this.btnFindByTG_Click);
             // 
+            // MaDauSach
+            // 
+            this.MaDauSach.HeaderText = "Mã đầu sách";
+            this.MaDauSach.Name = "MaDauSach";
+            this.MaDauSach.ReadOnly = true;
+            // 
+            // TenDauSach
+            // 
+            this.TenDauSach.HeaderText = "Tên đầu sách";
+            this.TenDauSach.Name = "TenDauSach";
+            // 
+            // Remove
+            // 
+            this.Remove.HeaderText = "Remove";
+            this.Remove.Name = "Remove";
+            this.Remove.Text = "Loại bỏ";
+            // 
             // TimKiem4Hello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1543, 916);
+            this.ClientSize = new System.Drawing.Size(1542, 880);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dragPanel);
@@ -618,7 +614,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2Button btnClearAll;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewButtonColumn Remove;
     }
 }
