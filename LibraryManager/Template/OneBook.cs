@@ -40,6 +40,7 @@ namespace LibraryManager.Template
 
         public string TenSach;
         public string TenTacGia;
+        public string TheLoai;
 
         public bool selected = false;
         private void HighLightItem()
@@ -85,6 +86,8 @@ namespace LibraryManager.Template
 
                 TenTacGia = dsBus.LoadTenTG(maDauSach);
                 lbInfoTenTG.Text = TenTacGia;
+
+                TheLoai = dsBus.LoadTenTheLoai(MaDauSach);
 
                 lbSoLuong.Text = dsBus.LoadSL_SanCo(MaDauSach);
             }

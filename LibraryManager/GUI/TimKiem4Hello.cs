@@ -17,70 +17,67 @@ namespace LibraryManager.GUI
     {
         public TimKiem4Hello()
         {
-            
+
             InitializeComponent();
         }
 
 
         public void AddItem(string MaDauSach)
         {
-            
-            if(MaDauSach != "")
+
+            if (MaDauSach != "")
             {
-                    flowLayoutDS.Controls.Add(new Template.OneBook(MaDauSach));
+                flowLayoutDS.Controls.Add(new Template.OneBook(MaDauSach));
             }
 
-    
+
         }
-        private List<string> DSDauSach = null;
-        private List<string> DSRoot = null;
+        private List<string> DSDauSach = new List<string>();
+
 
         private void LoadBookFlow()
         {
             flowLayoutDS.Controls.Clear();
-            string keyword = txtSearch.Text;
-
-            if (keyword.Trim().Length == 0)
-            {
-                if(DSRoot == null)   DSRoot = dsBus.LoadMaDauSach();
-                DSDauSach = DSRoot;
-            }
-            else
-            { 
-                DSDauSach = dsBus.LoadMaDauSach(keyword, "");
-            }
 
             if (DSDauSach.Count > 0)
             {
-                foreach(var item in DSDauSach)
+                foreach (var item in DSDauSach)
                 {
                     AddItem(item);
                 }
             }
         }
-        
+
         DauSach_BUS dsBus = new DauSach_BUS();
         private void TimKiem4Hello_Load(object sender, EventArgs e)
         {
+
             
-            //LoadBookFlow();
+            DSDauSach = dsBus.LoadMaDauSach();
+            LoadBookFlow();
             LoadComboBoxTheLoai();
 
         }
 
         public void LoadComboBoxTheLoai()
         {
-            cbTheLoai.Items.Insert(0, "admin");
+            List<string> dsTheLoai = dsBus.LoadAllTheLoai();
+            for (int i = 0; i < dsTheLoai.Count; i++)
+            {
+
+                cbTheLoai.Items.Insert(i, dsTheLoai[i]);
+
+            }
 
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (isSearchTG)
-            {
 
-                LoadBookFlow();
-            }
+            SearchByName();
+
+
+            LoadBookFlow();
         }
 
         private void btnClearAll_Click(object sender, EventArgs e)
@@ -90,19 +87,19 @@ namespace LibraryManager.GUI
 
         private void dgvChooseBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 3)
+            if (e.ColumnIndex == 3)
             {
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
                 }
-                   
+
             }
         }
         bool isSearchTG = false;
         private void btnFindByTG_Click(object sender, EventArgs e)
         {
-            if(btnFindByTG.Text == btnFindByTG.Tag.ToString())
+            if (btnFindByTG.Text == btnFindByTG.Tag.ToString())
             {
                 btnFindByTG.Text = "Tìm theo tên sách";
                 txtSearch.PlaceholderText = "Nhập tên tác giả để tôi tìm sách cho bạn ";
@@ -115,25 +112,69 @@ namespace LibraryManager.GUI
                 isSearchTG = false;
 
             }
-
-            
         }
 
-
-        private void LoadOne_Search()
+        private void ShowAll()
         {
-            foreach(var item in flowLayoutDS.Controls)
-            {
-                var book = (Template.OneBook)item;
-                //book.Visible = book.
-            }
-            
+            DSDauSach = dsBus.LoadMaDauSach();
         }
+
+        private void SearchByName()
+        {
+            string tl = cbTheLoai.Text.Trim();
+            string keysearch = txtSearch.Text.Trim();
+
+            if (keysearch != "")
+            {
+                if (!isSearchTG)
+                {
+                    if (tl != "Tất cả thể loại")
+                    {
+                        DSDauSach = dsBus.LoadMaDS_TS_TL(tl, keysearch);
+
+                    }
+                    else
+                    {
+                        DSDauSach = dsBus.LoadMaDS_onlyTenSach(keysearch);
+                    }
+
+                }
+                else
+                {
+                    if (tl != "Tất cả thể loại")
+                    {
+                        DSDauSach = dsBus.LoadMaDS_TG_TL(tl, keysearch);
+                    }
+                    else
+                    {
+                        DSDauSach = dsBus.LoadMaDS_OnlyTG(keysearch);
+                    }
+                }
+            }
+            else
+            {
+                DSDauSach = dsBus.LoadMaDS_onlyTheloai(tl);
+
+                if (tl == "Tất cả thể loại")
+                {
+                    DSDauSach = dsBus.LoadMaDauSach();
+                }
+
+            }
+        }
+
+
+
         private void cbTheLoai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string key = cbTheLoai.SelectedValue.ToString();
-            
-            MessageBox.Show(key);
+            string key = cbTheLoai.Text;
+
+
+        }
+
+        private void btnFindAll_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

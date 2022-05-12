@@ -210,7 +210,7 @@ namespace LibraryManager
         private void btnHome_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.HomeAdmin());
+            panelShow.Controls.Add(new Template.HomeNV());
         }
     }
 }

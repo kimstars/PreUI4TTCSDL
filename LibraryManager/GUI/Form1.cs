@@ -56,9 +56,6 @@ namespace LibraryManager
             //panelShow.Controls.Add(temp);
 
 
-
-
-
         }
 
         private void btnloginNV_Click(object sender, EventArgs e)
