@@ -58,6 +58,7 @@ namespace LibraryManager.GUI
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lbSLBook = new System.Windows.Forms.Label();
             this.dragPanel.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseBook)).BeginInit();
@@ -255,7 +256,7 @@ namespace LibraryManager.GUI
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Location = new System.Drawing.Point(52, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 25);
@@ -322,6 +323,7 @@ namespace LibraryManager.GUI
             this.btnCreatePM.Size = new System.Drawing.Size(228, 44);
             this.btnCreatePM.TabIndex = 41;
             this.btnCreatePM.Text = "Tạo phiếu mượn";
+            this.btnCreatePM.Click += new System.EventHandler(this.btnCreatePM_Click);
             // 
             // btnClearAll
             // 
@@ -567,11 +569,25 @@ namespace LibraryManager.GUI
             this.Remove.Name = "Remove";
             this.Remove.Text = "Loại bỏ";
             // 
+            // lbSLBook
+            // 
+            this.lbSLBook.AutoSize = true;
+            this.lbSLBook.BackColor = System.Drawing.Color.Transparent;
+            this.lbSLBook.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lbSLBook.ForeColor = System.Drawing.Color.Red;
+            this.lbSLBook.Location = new System.Drawing.Point(52, 44);
+            this.lbSLBook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSLBook.Name = "lbSLBook";
+            this.lbSLBook.Size = new System.Drawing.Size(10, 15);
+            this.lbSLBook.TabIndex = 41;
+            this.lbSLBook.Text = ".";
+            // 
             // TimKiem4Hello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1542, 880);
+            this.Controls.Add(this.lbSLBook);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dragPanel);
@@ -588,6 +604,7 @@ namespace LibraryManager.GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseBook)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -615,5 +632,6 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
         private System.Windows.Forms.DataGridViewButtonColumn Remove;
+        private System.Windows.Forms.Label lbSLBook;
     }
 }

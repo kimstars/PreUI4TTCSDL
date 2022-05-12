@@ -37,15 +37,16 @@ namespace LibraryManager.GUI
 
                     foreach (DataGridViewRow row in dgvChooseBook.Rows)
                     {
-                        if(row.Cells[0].Value.ToString() == item.MaDauSach)
+                        if (row.Cells[0].Value.ToString() == item.MaDauSach)
                         {
                             return;
                         }
                     }
-                    MessageBox.Show(item.SoLuong.ToString());
+
+                    if (item.SoLuong > 0)
                         dgvChooseBook.Rows.Add(new object[] { item.MaDauSach, item.TenSach, "Bỏ" });
-                    
-                    
+
+
                 };
             }
         }
@@ -56,7 +57,7 @@ namespace LibraryManager.GUI
         private void LoadBookFlow()
         {
             flowLayoutDS.Controls.Clear();
-
+            lbSLBook.Text = $"Danh sách này có {DSDauSach.Count.ToString()} đầu sách.";
             if (DSDauSach.Count > 0)
             {
                 foreach (var item in DSDauSach)
@@ -70,7 +71,7 @@ namespace LibraryManager.GUI
         private void TimKiem4Hello_Load(object sender, EventArgs e)
         {
 
-            
+
             DSDauSach = dsBus.LoadMaDauSach();
             LoadBookFlow();
             LoadComboBoxTheLoai();
@@ -82,9 +83,7 @@ namespace LibraryManager.GUI
             List<string> dsTheLoai = dsBus.LoadAllTheLoai();
             for (int i = 0; i < dsTheLoai.Count; i++)
             {
-
                 cbTheLoai.Items.Insert(i, dsTheLoai[i]);
-
             }
 
         }
@@ -93,8 +92,6 @@ namespace LibraryManager.GUI
         {
 
             SearchByName();
-
-
             LoadBookFlow();
         }
 
@@ -109,7 +106,7 @@ namespace LibraryManager.GUI
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-      
+
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
                 }
 
@@ -203,6 +200,23 @@ namespace LibraryManager.GUI
         {
             GUI.ThongTinSach newform = new GUI.ThongTinSach(MaDSCurrent);
             newform.Show();
+        }
+
+        List<string> dsMuon = new List<string>();
+
+        private void btnCreatePM_Click(object sender, EventArgs e)
+        {
+
+            dsMuon.Clear();
+            DataTable tempMuon = (DataTable)dgvChooseBook.DataSource;
+            for(int i = 0; i< dgvChooseBook.Rows.Count; i++)
+            {
+                dsMuon.Add(dgvChooseBook.Rows[i].Cells["MaDauSach"].ToString());
+            }
+
+
+
+
         }
     }
 }
