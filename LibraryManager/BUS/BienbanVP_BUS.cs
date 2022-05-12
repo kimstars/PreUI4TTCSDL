@@ -39,9 +39,9 @@ namespace LibraryManager.BUS
         {
             bbvp_dao.Tao_vp(vp);
         }
-        public void update_loaiTK(string madg)
+       /* public void update_loaiTK(string madg)
         {
             bbvp_dao.vohieuhoa(madg);
-        }
+        }*/
     }
 }

@@ -77,46 +77,51 @@ namespace LibraryManager.Template
             }
 
         }
-        public int check(string sach)
+       /* public bool check(string sach)
         {
             
             for( int i =0; i <dgv_trasach.Rows.Count; i++)
             {
-                if (DateTime.Parse(dgv_trasach.Rows[i].Cells[5].Value.ToString()) < DateTime.Today.Date && Equals(dgv_trasach.Rows[i].Cells[7].Value, sach))
+                if (DateTime.Parse(dgv_trasach.Rows[i].Cells[5].Value.ToString()) < DateTime.Today.Date && Equals(dgv_trasach.Rows[i].Cells[7].Value.ToString(), sach))
                 {
-                    return 0;
+                    return true;
                 }
-                else return 1;
+                else return false;
             }
-            return 1;
-        }
+            return false;
+        }*/
         private void btnBbvp_Click(object sender, EventArgs e)
         {
             List<string> book= new List<string>();
             string madg;
             string ngaytra1;
             int count = 0;
-            bool tre = false;
-            for (int i = 0; i < dgvDs.Rows.Count; i++)
+            int count1 = 0;
+          //  bool tre = false;
+            for (int i = 0; i < dgvDs.Rows.Count-1; i++)
             { 
                 if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có") )
                 {
                     book.Add(dgvDs.Rows[i].Cells[0].Value.ToString());
                     count++;
                 }
-                if( check(dgvDs.Rows[i].Cells[0].Value.ToString()) == 0)
+              /*  if (check(dgvDs.Rows[i].Cells[0].Value.ToString()) == true)
                 {
                     tre = true;
-                }
-                
-               // if( dgvDs.Rows[i].Cells[)
+                    count1++;
+                }*/
+               
 
             }
+            /*if(count1!=0)
+            {
+                tre = true;
+            }*/
             if (count != 0)
             {
                 madg = dgvDs.Rows[0].Cells[1].Value.ToString();
                 ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
-                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book,tre);
+                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/);
                 bbvp.Show();
             }
         }
@@ -130,7 +135,10 @@ namespace LibraryManager.Template
 
         private void btnHoantat_Click(object sender, EventArgs e)
         {
-           
+           for( int  i = 0; i <dgvDs.Rows.Count-1; i++)
+            {
+                ts_bus.update(dgvDs.Rows[i].Cells[0].Value.ToString());
+            }
         }
 
         private void txtTK_Validating(object sender, CancelEventArgs e)
