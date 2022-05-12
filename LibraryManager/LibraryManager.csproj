@@ -197,6 +197,7 @@
     <Compile Include="BUS\CuonSach_BUS.cs" />
     <Compile Include="BUS\DauSach_BUS.cs" />
     <Compile Include="BUS\DocGia_BUS.cs" />
+    <Compile Include="BUS\Home_BUS.cs" />
     <Compile Include="BUS\Image_BUS.cs" />
     <Compile Include="BUS\MatKhau_BUS.cs" />
     <Compile Include="BUS\MuonSach_BUS.cs" />
@@ -226,6 +227,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DauSach_DAO.cs" />
     <Compile Include="DAO\DocGia_DAO.cs" />
+    <Compile Include="DAO\Home_DAO.cs" />
     <Compile Include="DAO\Image_DAO.cs" />
     <Compile Include="DAO\LoadAll_DAO.cs" />
     <Compile Include="DAO\MatKhau_DAO.cs" />
