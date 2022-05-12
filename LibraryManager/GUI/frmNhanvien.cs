@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LibraryManager
 {
     public partial class frmNhanvien : Form
@@ -18,89 +20,24 @@ namespace LibraryManager
             InitializeComponent();
         }
 
-        public static Color PrimaryColor { get; set; }
-        public static Color SecondaryColor { get; set; }
-
-        private Button currentButton;
-
-        private Random random;
-
-        private int tempIndex;
-
-        private Form activeForm;
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-
-
-
-        private void ActivateButton(object btnSender)
-        {
-            if (btnSender != null)
-            {
-                if (currentButton != (Button)btnSender)
-                {
-                    DisableButton();
-                    Color color = Color.FromArgb(51, 51, 76);
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    //panelTitleBar.BackColor = color;
-                   
-                    ThemeColor.PrimaryColor = color;
-                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    
-                }
-            }
-        }
-        private void DisableButton()
-        {
-            foreach (Control previousBtn in PanelMenuBar.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                }
-            }
-        }
-
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
         }
-        bool QuanLyExpand;
 
-        private void btnQLSach_Click(object sender, EventArgs e)
-        {
-            if (QuanLyExpand)
-            {
-                QuanLyTickTime.Start();
+        bool sidebarExpand = true; // menubar
+        bool QLSachExpand = true;
+        bool QLSachNhapExpand = true;
+        bool QLDocgiaExpand = true;
+        bool XLMuonTraExpand = true;
+        bool XLViPhamExpand = true;
+        bool CaiDatExpand = true;
 
-            }
-        }
 
-        private void QuanLyTickTime_Tick(object sender, EventArgs e)
-        {
-            opencloseBarDoc(PanelQLsach, QuanLyExpand, QuanLyTickTime);
-        }
-        bool sidebarExpand;
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (sidebarExpand)
-            {
-                sidebarTickTime.Start();
-
-            }
-        }
-
-        private void opencloseBarDoc(Panel thisPanel,bool thisExpand,Timer thisTick)
+        #region ManagerBar
+        private static void opencloseBarDoc(ref Panel thisPanel, ref bool thisExpand, ref Timer thisTick)
         {
             if (thisExpand)
             {
@@ -121,46 +58,159 @@ namespace LibraryManager
                 }
             }
         }
-        private void opencloseBarNgang(Panel thisPanel, bool thisExpand, Timer thisTick)
+        private void opencloseBarNgang(ref Panel thisPanel,ref bool thisExpand, ref Timer thisTick)
         {
-            if (thisExpand)
+            if (thisExpand) // thu vao
             {
-                thisPanel.Height -= 100;
-                if (thisPanel.Height == thisPanel.MinimumSize.Height)
+
+                PanelMenuBar.Width -= 100;
+                if (PanelMenuBar.Width == PanelMenuBar.MinimumSize.Width)
                 {
                     thisExpand = false;
                     thisTick.Stop();
                 }
+               
+
+                foreach (var btn in thisPanel.Controls.OfType<Guna2Button>())
+                {
+                    btn.Text = "";
+                    btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+                    btn.Padding = new Padding(0);
+                }
+                thisPanel.AutoScroll = false;
+
             }
-            else
+            else // mo ra
             {
-                thisPanel.Height += 100;
-                if (thisPanel.Height == thisPanel.MaximumSize.Height)
+                PanelMenuBar.Width += 100;
+                if (PanelMenuBar.Width == PanelMenuBar.MaximumSize.Width)
                 {
                     thisExpand = true;
                     thisTick.Stop();
+
                 }
+                
+                foreach (Guna2Button btn in thisPanel.Controls.OfType<Guna2Button>())
+                {
+                    btn.Text = btn.Tag.ToString();
+                    btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+                    btn.Padding = new Padding(10, 0, 0, 0);
+                }
+                thisPanel.AutoScroll = true;
+
             }
         }
+
+
+        #endregion
+
+
 
         private void sidebarTickTime_Tick(object sender, EventArgs e)
         {
-            opencloseBarNgang(PanelMenuBar, sidebarExpand, sidebarTickTime);
+            opencloseBarNgang(ref PanelMenuBar, ref sidebarExpand, ref sidebarTickTime);
         }
 
-        bool infoExpand;
-        private void avtPicture_Click(object sender, EventArgs e)
+        #region tick doc
+        private void QuanLyTickTime_Tick(object sender, EventArgs e)
         {
-            if (infoExpand)
-            {
-                infoUserTick.Start();
-
-            }
+            opencloseBarDoc(ref PanelQLsach, ref QLSachExpand, ref QuanLyTickTime);
         }
 
-        private void infoUserTick_Tick(object sender, EventArgs e)
+        private void QLSachNhaptick_Tick(object sender, EventArgs e)
         {
-            opencloseBarDoc(panelInfoUser, infoExpand, infoUserTick);
+            opencloseBarDoc(ref panelQLSachNhap, ref QLSachNhapExpand, ref QLSachNhaptick);
+        }
+
+        private void XLMuonTratick_Tick(object sender, EventArgs e)
+        {
+            opencloseBarDoc(ref panelXLMuontra, ref XLMuonTraExpand, ref XLMuonTratick);
+        }
+
+        private void QLDGtick_Tick(object sender, EventArgs e)
+        {
+            opencloseBarDoc(ref panelQLDocGia, ref QLDocgiaExpand, ref QLDGtick);
+
+        }
+
+        private void XLViPhamTick_Tick(object sender, EventArgs e)
+        {
+            opencloseBarDoc(ref panelXLViPham, ref XLViPhamExpand, ref XLViPhamTick);
+
+        }
+
+        private void CaiDatTick_Tick(object sender, EventArgs e)
+        {
+            opencloseBarDoc(ref panelSetting, ref CaiDatExpand, ref CaiDatTick);
+
+        }
+
+
+
+
+        #endregion
+        private void CloseDoc()
+        {
+            if (QLSachExpand) { QuanLyTickTime.Start(); }
+            if (QLSachNhapExpand) { QLSachNhaptick.Start(); }
+            if (XLMuonTraExpand) { XLMuonTratick.Start(); }
+            if (QLDocgiaExpand) { QLDGtick.Start(); }
+            if (XLViPhamExpand) { XLViPhamTick.Start(); }
+            if (CaiDatExpand) { CaiDatTick.Start(); }
+        }
+
+        private void btnM_QLsachnhap_Click(object sender, EventArgs e)
+        {
+            CloseDoc();
+            QLSachNhaptick.Start();
+        }
+
+        private void btnMuonTra_Click(object sender, EventArgs e)
+        {
+            CloseDoc();
+            XLMuonTratick.Start();
+        }
+
+        private void btnQLsach_Click_1(object sender, EventArgs e)
+        {
+            CloseDoc();
+            QuanLyTickTime.Start();
+        }
+
+        private void btnM_QLDG_Click(object sender, EventArgs e)
+        {
+            CloseDoc();
+            QLDGtick.Start();
+        }
+
+        private void btnM_XLViPham_Click(object sender, EventArgs e)
+        {
+            CloseDoc();
+            XLViPhamTick.Start();
+        }
+
+        private void btnM_Caidat_Click(object sender, EventArgs e)
+        {
+            CloseDoc();
+            CaiDatTick.Start();
+        }
+
+        private void frmNhanvien_Load(object sender, EventArgs e)
+        {
+            CloseDoc();
+
+
+        }
+
+        private void imgThuVienMTA_Click(object sender, EventArgs e)
+        {
+            sidebarTickTime.Start();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeAdmin());
         }
     }
 }

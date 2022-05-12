@@ -143,7 +143,7 @@ namespace LibraryManager.Template
             this.PanelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenuBar.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.PanelMenuBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenuBar.MaximumSize = new System.Drawing.Size(190, 812);
             this.PanelMenuBar.MinimumSize = new System.Drawing.Size(48, 648);
             this.PanelMenuBar.Name = "PanelMenuBar";
@@ -156,7 +156,7 @@ namespace LibraryManager.Template
             this.panelSetting.Controls.Add(this.btnCaiDat);
             this.panelSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSetting.Location = new System.Drawing.Point(0, 360);
-            this.panelSetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSetting.Margin = new System.Windows.Forms.Padding(2);
             this.panelSetting.Name = "panelSetting";
             this.panelSetting.Size = new System.Drawing.Size(190, 87);
             this.panelSetting.TabIndex = 14;
@@ -174,7 +174,7 @@ namespace LibraryManager.Template
             this.btnThuNghiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThuNghiem.ImageSize = new System.Drawing.Size(30, 30);
             this.btnThuNghiem.Location = new System.Drawing.Point(0, 44);
-            this.btnThuNghiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThuNghiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThuNghiem.Name = "btnThuNghiem";
             this.btnThuNghiem.Padding = new System.Windows.Forms.Padding(1);
             this.btnThuNghiem.ShadowDecoration.Parent = this.btnThuNghiem;
@@ -196,7 +196,7 @@ namespace LibraryManager.Template
             this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCaiDat.Location = new System.Drawing.Point(0, 3);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
             this.btnCaiDat.ShadowDecoration.Parent = this.btnCaiDat;
@@ -209,7 +209,7 @@ namespace LibraryManager.Template
             this.panel1.Controls.Add(this.btnPhieumuon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 311);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.MaximumSize = new System.Drawing.Size(190, 214);
             this.panel1.MinimumSize = new System.Drawing.Size(190, 45);
             this.panel1.Name = "panel1";
@@ -229,7 +229,7 @@ namespace LibraryManager.Template
             this.btnPhieumuon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPhieumuon.ImageSize = new System.Drawing.Size(30, 30);
             this.btnPhieumuon.Location = new System.Drawing.Point(0, 2);
-            this.btnPhieumuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPhieumuon.Margin = new System.Windows.Forms.Padding(2);
             this.btnPhieumuon.Name = "btnPhieumuon";
             this.btnPhieumuon.Padding = new System.Windows.Forms.Padding(1);
             this.btnPhieumuon.ShadowDecoration.Parent = this.btnPhieumuon;
@@ -247,7 +247,7 @@ namespace LibraryManager.Template
             this.panelQLDocGia.Controls.Add(this.guna2Button5);
             this.panelQLDocGia.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQLDocGia.Location = new System.Drawing.Point(0, 265);
-            this.panelQLDocGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQLDocGia.Margin = new System.Windows.Forms.Padding(2);
             this.panelQLDocGia.MaximumSize = new System.Drawing.Size(190, 214);
             this.panelQLDocGia.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelQLDocGia.Name = "panelQLDocGia";
@@ -268,7 +268,7 @@ namespace LibraryManager.Template
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button6.Location = new System.Drawing.Point(0, 169);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
             this.guna2Button6.Size = new System.Drawing.Size(190, 37);
@@ -289,7 +289,7 @@ namespace LibraryManager.Template
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button3.Location = new System.Drawing.Point(0, 128);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(190, 37);
@@ -309,7 +309,7 @@ namespace LibraryManager.Template
             this.btnOpenQLDG.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOpenQLDG.ImageSize = new System.Drawing.Size(30, 30);
             this.btnOpenQLDG.Location = new System.Drawing.Point(0, 3);
-            this.btnOpenQLDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpenQLDG.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenQLDG.Name = "btnOpenQLDG";
             this.btnOpenQLDG.Padding = new System.Windows.Forms.Padding(1);
             this.btnOpenQLDG.ShadowDecoration.Parent = this.btnOpenQLDG;
@@ -332,7 +332,7 @@ namespace LibraryManager.Template
             this.btnDSDocGia.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDSDocGia.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDSDocGia.Location = new System.Drawing.Point(0, 47);
-            this.btnDSDocGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDSDocGia.Margin = new System.Windows.Forms.Padding(2);
             this.btnDSDocGia.Name = "btnDSDocGia";
             this.btnDSDocGia.ShadowDecoration.Parent = this.btnDSDocGia;
             this.btnDSDocGia.Size = new System.Drawing.Size(190, 37);
@@ -354,7 +354,7 @@ namespace LibraryManager.Template
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button5.Location = new System.Drawing.Point(0, 88);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(190, 37);
@@ -369,7 +369,7 @@ namespace LibraryManager.Template
             this.PanelQLSach.Controls.Add(this.btnLoginDG);
             this.PanelQLSach.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelQLSach.Location = new System.Drawing.Point(0, 220);
-            this.PanelQLSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelQLSach.Margin = new System.Windows.Forms.Padding(2);
             this.PanelQLSach.MaximumSize = new System.Drawing.Size(190, 171);
             this.PanelQLSach.MinimumSize = new System.Drawing.Size(190, 45);
             this.PanelQLSach.Name = "PanelQLSach";
@@ -390,7 +390,7 @@ namespace LibraryManager.Template
             this.btnOpenQLSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOpenQLSach.ImageSize = new System.Drawing.Size(30, 30);
             this.btnOpenQLSach.Location = new System.Drawing.Point(0, 0);
-            this.btnOpenQLSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpenQLSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenQLSach.Name = "btnOpenQLSach";
             this.btnOpenQLSach.Padding = new System.Windows.Forms.Padding(1);
             this.btnOpenQLSach.ShadowDecoration.Parent = this.btnOpenQLSach;
@@ -413,7 +413,7 @@ namespace LibraryManager.Template
             this.btnloginQL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnloginQL.ImageSize = new System.Drawing.Size(30, 30);
             this.btnloginQL.Location = new System.Drawing.Point(0, 130);
-            this.btnloginQL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnloginQL.Margin = new System.Windows.Forms.Padding(2);
             this.btnloginQL.Name = "btnloginQL";
             this.btnloginQL.ShadowDecoration.Parent = this.btnloginQL;
             this.btnloginQL.Size = new System.Drawing.Size(190, 37);
@@ -434,7 +434,7 @@ namespace LibraryManager.Template
             this.btnloginNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnloginNV.ImageSize = new System.Drawing.Size(30, 30);
             this.btnloginNV.Location = new System.Drawing.Point(0, 47);
-            this.btnloginNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnloginNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnloginNV.Name = "btnloginNV";
             this.btnloginNV.ShadowDecoration.Parent = this.btnloginNV;
             this.btnloginNV.Size = new System.Drawing.Size(190, 37);
@@ -455,7 +455,7 @@ namespace LibraryManager.Template
             this.btnLoginDG.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLoginDG.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLoginDG.Location = new System.Drawing.Point(0, 89);
-            this.btnLoginDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoginDG.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoginDG.Name = "btnLoginDG";
             this.btnLoginDG.ShadowDecoration.Parent = this.btnLoginDG;
             this.btnLoginDG.Size = new System.Drawing.Size(190, 37);
@@ -469,7 +469,7 @@ namespace LibraryManager.Template
             this.panelQLNV.Controls.Add(this.btnAddNV);
             this.panelQLNV.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQLNV.Location = new System.Drawing.Point(0, 173);
-            this.panelQLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQLNV.Margin = new System.Windows.Forms.Padding(2);
             this.panelQLNV.MaximumSize = new System.Drawing.Size(190, 133);
             this.panelQLNV.MinimumSize = new System.Drawing.Size(190, 46);
             this.panelQLNV.Name = "panelQLNV";
@@ -490,7 +490,7 @@ namespace LibraryManager.Template
             this.btnOpenQLNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOpenQLNV.ImageSize = new System.Drawing.Size(30, 30);
             this.btnOpenQLNV.Location = new System.Drawing.Point(0, 0);
-            this.btnOpenQLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpenQLNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenQLNV.Name = "btnOpenQLNV";
             this.btnOpenQLNV.Padding = new System.Windows.Forms.Padding(1);
             this.btnOpenQLNV.ShadowDecoration.Parent = this.btnOpenQLNV;
@@ -513,7 +513,7 @@ namespace LibraryManager.Template
             this.btnDSNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDSNV.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDSNV.Location = new System.Drawing.Point(0, 47);
-            this.btnDSNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDSNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnDSNV.Name = "btnDSNV";
             this.btnDSNV.ShadowDecoration.Parent = this.btnDSNV;
             this.btnDSNV.Size = new System.Drawing.Size(190, 37);
@@ -535,7 +535,7 @@ namespace LibraryManager.Template
             this.btnAddNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddNV.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAddNV.Location = new System.Drawing.Point(0, 89);
-            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.ShadowDecoration.Parent = this.btnAddNV;
             this.btnAddNV.Size = new System.Drawing.Size(190, 37);
@@ -547,7 +547,7 @@ namespace LibraryManager.Template
             this.panelHome.Controls.Add(this.btnThongtin);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 130);
-            this.panelHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(2);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(190, 43);
             this.panelHome.TabIndex = 11;
@@ -565,7 +565,7 @@ namespace LibraryManager.Template
             this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
             this.btnThongtin.Location = new System.Drawing.Point(0, 0);
-            this.btnThongtin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThongtin.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongtin.Name = "btnThongtin";
             this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
             this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
@@ -580,7 +580,7 @@ namespace LibraryManager.Template
             this.panelNameUser.Controls.Add(this.pictureBox2);
             this.panelNameUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNameUser.Location = new System.Drawing.Point(0, 0);
-            this.panelNameUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelNameUser.Margin = new System.Windows.Forms.Padding(2);
             this.panelNameUser.Name = "panelNameUser";
             this.panelNameUser.Size = new System.Drawing.Size(190, 130);
             this.panelNameUser.TabIndex = 0;
@@ -605,7 +605,7 @@ namespace LibraryManager.Template
             this.panelName.Controls.Add(this.pictureAvt);
             this.panelName.Controls.Add(this.nameuser);
             this.panelName.Location = new System.Drawing.Point(0, 65);
-            this.panelName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelName.Margin = new System.Windows.Forms.Padding(2);
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(190, 62);
             this.panelName.TabIndex = 13;
@@ -635,7 +635,7 @@ namespace LibraryManager.Template
             this.pictureAvt.GradientAngle = 50F;
             this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
             this.pictureAvt.Location = new System.Drawing.Point(0, 0);
-            this.pictureAvt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureAvt.Margin = new System.Windows.Forms.Padding(2);
             this.pictureAvt.Name = "pictureAvt";
             this.pictureAvt.Size = new System.Drawing.Size(56, 56);
             this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -660,7 +660,7 @@ namespace LibraryManager.Template
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_library_64__2_;
             this.pictureBox2.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 61);
             this.pictureBox2.TabIndex = 8;
@@ -688,7 +688,7 @@ namespace LibraryManager.Template
             this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
             this.dsPhieuMuonNV1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dsPhieuMuonNV1.Location = new System.Drawing.Point(190, 54);
-            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(4);
             this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
             this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1265, 779);
             this.dsPhieuMuonNV1.TabIndex = 12;
@@ -697,7 +697,7 @@ namespace LibraryManager.Template
             // 
             this.phieuMuon.BackColor = System.Drawing.Color.Transparent;
             this.phieuMuon.Location = new System.Drawing.Point(221, 59);
-            this.phieuMuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phieuMuon.Margin = new System.Windows.Forms.Padding(2);
             this.phieuMuon.Name = "phieuMuon";
             this.phieuMuon.Size = new System.Drawing.Size(1000, 651);
             this.phieuMuon.TabIndex = 11;
@@ -707,7 +707,7 @@ namespace LibraryManager.Template
             // 
             this.danhSachDG1.BackColor = System.Drawing.Color.Transparent;
             this.danhSachDG1.Location = new System.Drawing.Point(285, 83);
-            this.danhSachDG1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.danhSachDG1.Margin = new System.Windows.Forms.Padding(2);
             this.danhSachDG1.Name = "danhSachDG1";
             this.danhSachDG1.Size = new System.Drawing.Size(850, 652);
             this.danhSachDG1.TabIndex = 10;

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class HomeHello : UserControl
+    public partial class HomeNV : UserControl
     {
-        public HomeHello()
+        public HomeNV()
         {
             InitializeComponent();
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            GUI.FrmDangKy newform = new GUI.FrmDangKy();
-
         }
     }
 }

@@ -16,10 +16,30 @@ namespace LibraryManager.BUS
     {
         DauSach_DAO dsDao = new DauSach_DAO();
 
-        public DataTable LoadMaDauSach()
+        public List<string> LoadMaDauSach()
         {
-            return dsDao.GetMaDauSach();
+            DataTable temp =  dsDao.GetMaDauSach();
+            List<string> res = new List<string>();
+            for(int i = 0; i < temp.Rows.Count; i++)
+            {
+                string item = temp.Rows[i]["MaDauSach"].ToString();
+                res.Add(item);
+            }
+            return res;
         }
+        public List<string> LoadMaDauSach(string keyword, string TL)
+        {
+            DataTable temp = dsDao.GetMaDauSach(keyword,TL);
+
+            List<string> res = new List<string>();
+            for (int i = 0; i < temp.Rows.Count; i++)
+            {
+                string item = temp.Rows[0]["MaDauSach"].ToString();
+                res.Add(item);
+            }
+            return res;
+        }
+
 
         public DataTable LoadListDS()
         {
@@ -59,6 +79,24 @@ namespace LibraryManager.BUS
         {
             return dsDao.GetInfo2(MaDS);
         }
+
+
+        public string LoadSL_SanCo(string MaDS)
+        {
+            return dsDao.GetSLCuonSach_Sanco(MaDS).ToString();
+        }
+
+        public string LoadTenDS(string MaDS)
+        {
+            return dsDao.GetTenDauSach(MaDS);
+        }
+
+        public string LoadTenTG(string MaDS)
+        {
+            return dsDao.GetTenTacGia(MaDS);
+        }
+
+
 
         #endregion
 

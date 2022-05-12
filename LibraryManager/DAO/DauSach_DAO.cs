@@ -16,6 +16,14 @@ namespace LibraryManager.DAO
             string sql = "SELECT MaDauSach FROM dbo.DAUSACH";
             return GetData(sql);
         }
+        public DataTable GetMaDauSach(string keyword, string TheLoai)
+        {
+            string sql = $"SELECT ds.MaDauSach, ds.TenDauSach , tl.TenTheLoai FROM dbo.DAUSACH ds INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE MaDauSach = '{keyword}' OR TenDauSach LIKE N'%{keyword}%' and tl.TenTheLoai LIKE '%{TheLoai}%'";
+            return GetData(sql);
+        }
+
+
+
 
         public DataTable LoadDauSach()
         {
@@ -38,6 +46,41 @@ namespace LibraryManager.DAO
 
 
         }
+
+
+        public int GetSLCuonSach_Sanco(string MaDauSach)
+        {
+            string sql = $"SELECT COUNT(MaSach) soluong FROM dbo.CUONSACH WHERE MaDauSach = '{MaDauSach}' AND TrangThai = 1";
+
+            return (int)GetCount(sql);
+        }
+
+        public string GetTenDauSach(string MaDauSach)
+        {
+            string sql = $"SELECT TenDauSach FROM dbo.DAUSACH WHERE MaDauSach = '{MaDauSach}'";
+
+            return GetString(sql);
+        }
+
+        public string GetTenTacGia(string MaDauSach)
+        {
+            string sql = $"SELECT TenTacGia FROM dbo.TACGIA tg INNER JOIN dbo.SANGTAC st ON st.MaTacGia = tg.MaTacGia INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = st.MaDauSach WHERE ds.MaDauSach = '{MaDauSach}' GROUP BY tg.TenTacGia ";
+
+            return GetString(sql);
+        }
+
+        #endregion
+
+
+        #region TimKiem
+        public DataTable LoadTheLoai()
+        {
+            string sql = $"SELECT MaTheLoai,TenTheLoai FROM dbo.THELOAI";
+            return GetData(sql);
+        }
+
+
+
 
         #endregion
     }
