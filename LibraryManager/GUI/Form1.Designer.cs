@@ -117,11 +117,11 @@ namespace LibraryManager
             this.PanelMenuBar.Controls.Add(this.panel1);
             this.PanelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenuBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelMenuBar.MaximumSize = new System.Drawing.Size(190, 708);
-            this.PanelMenuBar.MinimumSize = new System.Drawing.Size(58, 750);
+            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelMenuBar.MaximumSize = new System.Drawing.Size(253, 871);
+            this.PanelMenuBar.MinimumSize = new System.Drawing.Size(77, 923);
             this.PanelMenuBar.Name = "PanelMenuBar";
-            this.PanelMenuBar.Size = new System.Drawing.Size(190, 750);
+            this.PanelMenuBar.Size = new System.Drawing.Size(253, 923);
             this.PanelMenuBar.TabIndex = 6;
             // 
             // panel4
@@ -131,10 +131,10 @@ namespace LibraryManager
             this.panel4.Controls.Add(this.btnThongtin);
             this.panel4.Controls.Add(this.btnCaiDat);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 283);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(0, 349);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 178);
+            this.panel4.Size = new System.Drawing.Size(253, 219);
             this.panel4.TabIndex = 11;
             // 
             // guna2Button5
@@ -149,12 +149,12 @@ namespace LibraryManager
             this.guna2Button5.Image = global::LibraryManager.Properties.Resources.icons8_study_64px;
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 4);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 5);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Padding = new System.Windows.Forms.Padding(1);
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
-            this.guna2Button5.Size = new System.Drawing.Size(190, 39);
+            this.guna2Button5.Size = new System.Drawing.Size(253, 48);
             this.guna2Button5.TabIndex = 21;
             this.guna2Button5.Tag = "Mượn sách";
             this.guna2Button5.Text = "Mượn sách";
@@ -172,12 +172,12 @@ namespace LibraryManager
             this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_database_daily_import_40px;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 47);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 58);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Padding = new System.Windows.Forms.Padding(1);
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(190, 39);
+            this.guna2Button1.Size = new System.Drawing.Size(253, 48);
             this.guna2Button1.TabIndex = 15;
             this.guna2Button1.Tag = "Tạo Data ";
             this.guna2Button1.Text = "Tạo Data ";
@@ -195,12 +195,12 @@ namespace LibraryManager
             this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_30px;
             this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThongtin.Location = new System.Drawing.Point(0, 90);
-            this.btnThongtin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongtin.Location = new System.Drawing.Point(0, 111);
+            this.btnThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongtin.Name = "btnThongtin";
             this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
             this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
-            this.btnThongtin.Size = new System.Drawing.Size(190, 37);
+            this.btnThongtin.Size = new System.Drawing.Size(253, 46);
             this.btnThongtin.TabIndex = 13;
             this.btnThongtin.Tag = "Thông tin";
             this.btnThongtin.Text = "Thông tin";
@@ -218,12 +218,12 @@ namespace LibraryManager
             this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
             this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 131);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 161);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
             this.btnCaiDat.ShadowDecoration.Parent = this.btnCaiDat;
-            this.btnCaiDat.Size = new System.Drawing.Size(190, 37);
+            this.btnCaiDat.Size = new System.Drawing.Size(253, 46);
             this.btnCaiDat.TabIndex = 14;
             this.btnCaiDat.Tag = "Cài đặt";
             this.btnCaiDat.Text = "Cài đặt";
@@ -236,12 +236,12 @@ namespace LibraryManager
             this.PanelFind.Controls.Add(this.btn4Dausach);
             this.PanelFind.Controls.Add(this.btn4Theloai);
             this.PanelFind.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelFind.Location = new System.Drawing.Point(0, 109);
-            this.PanelFind.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFind.MaximumSize = new System.Drawing.Size(190, 174);
-            this.PanelFind.MinimumSize = new System.Drawing.Size(190, 45);
+            this.PanelFind.Location = new System.Drawing.Point(0, 135);
+            this.PanelFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelFind.MaximumSize = new System.Drawing.Size(253, 214);
+            this.PanelFind.MinimumSize = new System.Drawing.Size(253, 55);
             this.PanelFind.Name = "PanelFind";
-            this.PanelFind.Size = new System.Drawing.Size(190, 174);
+            this.PanelFind.Size = new System.Drawing.Size(253, 214);
             this.PanelFind.TabIndex = 17;
             // 
             // btnFind
@@ -257,11 +257,11 @@ namespace LibraryManager
             this.btnFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
             this.btnFind.Location = new System.Drawing.Point(0, 2);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind.Name = "btnFind";
             this.btnFind.Padding = new System.Windows.Forms.Padding(1);
             this.btnFind.ShadowDecoration.Parent = this.btnFind;
-            this.btnFind.Size = new System.Drawing.Size(190, 40);
+            this.btnFind.Size = new System.Drawing.Size(253, 49);
             this.btnFind.TabIndex = 12;
             this.btnFind.Tag = "Tìm sách";
             this.btnFind.Text = "Tìm sách";
@@ -280,11 +280,11 @@ namespace LibraryManager
             this.btn4TacGia.HoverState.Parent = this.btn4TacGia;
             this.btn4TacGia.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn4TacGia.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn4TacGia.Location = new System.Drawing.Point(0, 130);
-            this.btn4TacGia.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4TacGia.Location = new System.Drawing.Point(0, 160);
+            this.btn4TacGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4TacGia.Name = "btn4TacGia";
             this.btn4TacGia.ShadowDecoration.Parent = this.btn4TacGia;
-            this.btn4TacGia.Size = new System.Drawing.Size(190, 37);
+            this.btn4TacGia.Size = new System.Drawing.Size(253, 46);
             this.btn4TacGia.TabIndex = 17;
             this.btn4TacGia.Tag = "Theo tác giả";
             this.btn4TacGia.Text = "Theo tác giả";
@@ -302,11 +302,11 @@ namespace LibraryManager
             this.btn4Dausach.HoverState.Parent = this.btn4Dausach;
             this.btn4Dausach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn4Dausach.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn4Dausach.Location = new System.Drawing.Point(0, 47);
-            this.btn4Dausach.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4Dausach.Location = new System.Drawing.Point(0, 58);
+            this.btn4Dausach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4Dausach.Name = "btn4Dausach";
             this.btn4Dausach.ShadowDecoration.Parent = this.btn4Dausach;
-            this.btn4Dausach.Size = new System.Drawing.Size(190, 37);
+            this.btn4Dausach.Size = new System.Drawing.Size(253, 46);
             this.btn4Dausach.TabIndex = 16;
             this.btn4Dausach.Tag = "Theo đầu sách";
             this.btn4Dausach.Text = "Theo đầu sách";
@@ -324,11 +324,11 @@ namespace LibraryManager
             this.btn4Theloai.HoverState.Parent = this.btn4Theloai;
             this.btn4Theloai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn4Theloai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn4Theloai.Location = new System.Drawing.Point(0, 88);
-            this.btn4Theloai.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4Theloai.Location = new System.Drawing.Point(0, 108);
+            this.btn4Theloai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4Theloai.Name = "btn4Theloai";
             this.btn4Theloai.ShadowDecoration.Parent = this.btn4Theloai;
-            this.btn4Theloai.Size = new System.Drawing.Size(190, 37);
+            this.btn4Theloai.Size = new System.Drawing.Size(253, 46);
             this.btn4Theloai.TabIndex = 15;
             this.btn4Theloai.Tag = "Theo thể loại";
             this.btn4Theloai.Text = "Theo thể loại";
@@ -337,9 +337,10 @@ namespace LibraryManager
             // 
             this.panel2.Controls.Add(this.btnLoginn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 63);
+            this.panel2.Location = new System.Drawing.Point(0, 78);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 46);
+            this.panel2.Size = new System.Drawing.Size(253, 57);
             this.panel2.TabIndex = 18;
             // 
             // btnLoginn
@@ -355,11 +356,11 @@ namespace LibraryManager
             this.btnLoginn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLoginn.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLoginn.Location = new System.Drawing.Point(-1, 2);
-            this.btnLoginn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoginn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoginn.Name = "btnLoginn";
             this.btnLoginn.Padding = new System.Windows.Forms.Padding(1);
             this.btnLoginn.ShadowDecoration.Parent = this.btnLoginn;
-            this.btnLoginn.Size = new System.Drawing.Size(190, 40);
+            this.btnLoginn.Size = new System.Drawing.Size(253, 49);
             this.btnLoginn.TabIndex = 12;
             this.btnLoginn.Tag = "Đăng nhập";
             this.btnLoginn.Text = "Đăng nhập";
@@ -371,9 +372,9 @@ namespace LibraryManager
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 63);
+            this.panel1.Size = new System.Drawing.Size(253, 78);
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -382,10 +383,10 @@ namespace LibraryManager
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_library_64__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 63);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 78);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -395,8 +396,7 @@ namespace LibraryManager
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(83, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 21);
             this.label2.TabIndex = 11;
@@ -415,11 +415,11 @@ namespace LibraryManager
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(961, 13);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1281, 16);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
-            this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox3.TabIndex = 10;
             // 
             // guna2ControlBox4
@@ -429,11 +429,11 @@ namespace LibraryManager
             this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox4.HoverState.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox4.Location = new System.Drawing.Point(1005, 13);
-            this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox4.Location = new System.Drawing.Point(1340, 16);
+            this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox4.Name = "guna2ControlBox4";
             this.guna2ControlBox4.ShadowDecoration.Parent = this.guna2ControlBox4;
-            this.guna2ControlBox4.Size = new System.Drawing.Size(34, 24);
+            this.guna2ControlBox4.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox4.TabIndex = 9;
             // 
             // sidebartick
@@ -449,10 +449,10 @@ namespace LibraryManager
             this.Paneltoolbar.Controls.Add(this.guna2ControlBox3);
             this.Paneltoolbar.Controls.Add(this.guna2ControlBox4);
             this.Paneltoolbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Paneltoolbar.Location = new System.Drawing.Point(190, 0);
-            this.Paneltoolbar.Margin = new System.Windows.Forms.Padding(2);
+            this.Paneltoolbar.Location = new System.Drawing.Point(253, 0);
+            this.Paneltoolbar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Paneltoolbar.Name = "Paneltoolbar";
-            this.Paneltoolbar.Size = new System.Drawing.Size(1047, 48);
+            this.Paneltoolbar.Size = new System.Drawing.Size(1396, 59);
             this.Paneltoolbar.TabIndex = 12;
             // 
             // guna2DragControl1
@@ -462,17 +462,18 @@ namespace LibraryManager
             // panelShow
             // 
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShow.Location = new System.Drawing.Point(190, 48);
+            this.panelShow.Location = new System.Drawing.Point(253, 59);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(4);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(1047, 707);
+            this.panelShow.Size = new System.Drawing.Size(1396, 870);
             this.panelShow.TabIndex = 13;
             // 
             // frmThongtin
             // 
-            this.frmThongtin.Location = new System.Drawing.Point(466, 90);
-            this.frmThongtin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.frmThongtin.Location = new System.Drawing.Point(621, 111);
+            this.frmThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.frmThongtin.Name = "frmThongtin";
-            this.frmThongtin.Size = new System.Drawing.Size(398, 440);
+            this.frmThongtin.Size = new System.Drawing.Size(531, 542);
             this.frmThongtin.TabIndex = 11;
             this.frmThongtin.Visible = false;
             // 
@@ -491,16 +492,16 @@ namespace LibraryManager
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 755);
+            this.ClientSize = new System.Drawing.Size(1649, 929);
             this.Controls.Add(this.panelShow);
             this.Controls.Add(this.Paneltoolbar);
             this.Controls.Add(this.PanelMenuBar);
             this.Controls.Add(this.frmThongtin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -17,6 +17,8 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
+
+
         string MaDauSach = "";
         public ThongTinSach(string Mads)
         {

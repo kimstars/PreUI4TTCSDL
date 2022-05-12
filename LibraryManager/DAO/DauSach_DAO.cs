@@ -69,6 +69,12 @@ namespace LibraryManager.DAO
             return GetString(sql);
         }
 
+        public string GetTheLoai(string MaDauSach)
+        {
+            string sql = $"SELECT tl.TenTheLoai FROM dbo.DAUSACH ds INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE ds.MaDauSach = '{MaDauSach}'";
+            return GetString(sql);
+        }
+
         #endregion
 
 
@@ -80,6 +86,37 @@ namespace LibraryManager.DAO
         }
 
 
+        public DataTable SearchMaDS_TG_TL(string TenTheLoai, string TenTacGia)
+        {
+            string sql = $"SELECT ds.MaDauSach FROM dbo.DAUSACH ds INNER JOIN dbo.SANGTAC st ON st.MaDauSach = ds.MaDauSach INNER JOIN dbo.TACGIA tg ON tg.MaTacGia = st.MaTacGia  INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE tl.TenTheLoai LIKE N'{TenTheLoai}' and tg.TenTacGia like N'%{TenTacGia}%' GROUP BY ds.MaDauSach ";
+
+            return GetData(sql);
+        }
+
+        public DataTable SearchMaDS_onlyTG(string TenTacGia)
+        {
+            string sql = $"SELECT ds.MaDauSach FROM dbo.DAUSACH ds INNER JOIN dbo.SANGTAC st ON st.MaDauSach = ds.MaDauSach INNER JOIN dbo.TACGIA tg ON tg.MaTacGia = st.MaTacGia INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE tg.TenTacGia like N'%{TenTacGia}%' GROUP BY ds.MaDauSach";
+            return GetData(sql);
+        }
+
+
+        public DataTable SearchMaDS_onlyTenSach(string TenSach)
+        {
+            string sql = $"SELECT ds.MaDauSach FROM dbo.DAUSACH ds  INNER JOIN dbo.SANGTAC st ON st.MaDauSach = ds.MaDauSach INNER JOIN dbo.TACGIA tg ON tg.MaTacGia = st.MaTacGia INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE ds.TenDauSach like N'%{TenSach}%' GROUP BY ds.MaDauSach";
+            return GetData(sql);
+        }
+
+        public DataTable SearchMaDS_TS_TL(string TenTheLoai,string TenSach)
+        {
+            string sql = $"SELECT ds.MaDauSach FROM dbo.DAUSACH ds INNER JOIN dbo.SANGTAC st ON st.MaDauSach = ds.MaDauSach INNER JOIN dbo.TACGIA tg ON tg.MaTacGia = st.MaTacGia INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE tl.TenTheLoai LIKE N'{TenTheLoai}' AND ds.TenDauSach LIKE N'%{TenSach}%'GROUP BY ds.MaDauSach";
+            return GetData(sql);
+        }
+
+        public DataTable SearchMaDS_onlyTheLoai(string TenTheLoai)
+        {
+            string sql = $"SELECT ds.MaDauSach FROM dbo.DAUSACH ds INNER JOIN dbo.SANGTAC st ON st.MaDauSach = ds.MaDauSach INNER JOIN dbo.TACGIA tg ON tg.MaTacGia = st.MaTacGia INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE tl.TenTheLoai LIKE N'%{TenTheLoai}%' GROUP BY ds.MaDauSach";
+            return GetData(sql);
+        }
 
 
         #endregion
