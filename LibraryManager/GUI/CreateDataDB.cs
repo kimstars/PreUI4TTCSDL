@@ -43,7 +43,8 @@ namespace LibraryManager.GUI
 
         private void btnloginNV_Click(object sender, EventArgs e)
         {
-
+            frmNhanvien newform = new frmNhanvien();
+            newform.Show();
         }
 
         private void btnLoginDG_Click(object sender, EventArgs e)

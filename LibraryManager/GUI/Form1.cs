@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,11 +23,13 @@ namespace LibraryManager
         {
          
             frmThongtin.Visible = false;
-         
-      
-        
+        }
+        private void closeYCollapse()
+        {
+            if (LoginCollapse) LoginTick.Start();
 
         }
+
 
 
 
@@ -37,6 +40,7 @@ namespace LibraryManager
                 LoginTick.Start();
             }
 
+            
 
         }
 
@@ -61,10 +65,7 @@ namespace LibraryManager
         {
             hideChildForm();
 
-            
 
-            GUI.frmLogin newform = new GUI.frmLogin();
-            newform.Show();
         }
 
         private void btnLoginQL_Click(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace LibraryManager
         private void Form1_Load(object sender, EventArgs e)
         {
             PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
-            PaneLogin.Height = PaneLogin.MinimumSize.Height;
+            PanelFind.Height = PanelFind.MinimumSize.Height;
 
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
@@ -110,6 +111,13 @@ namespace LibraryManager
                     sidebarExpand = false;
                     sidebartick.Stop();
                 }
+
+                foreach (var btn in PanelMenuBar.Controls.OfType<Guna2Button>())
+                {
+                    btn.Text = "";
+                    btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+                    btn.Padding = new Padding(0);
+                }
             }
             else
             {
@@ -119,12 +127,21 @@ namespace LibraryManager
                     sidebarExpand = true;
                     sidebartick.Stop();
                 }
+
+                foreach (Guna2Button btn in panel4.Controls.OfType<Guna2Button>())
+                {
+                    btn.Text = btn.Tag.ToString();
+                    btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+                    btn.Padding = new Padding(10, 0, 0, 0);
+                }
             }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            closeYCollapse();
             sidebartick.Start();
+
         }
 
         bool LoginCollapse;
@@ -134,8 +151,8 @@ namespace LibraryManager
 
             if (LoginCollapse)
             {
-                PaneLogin.Height -= 100;
-                if (PaneLogin.Height == PaneLogin.MinimumSize.Height)
+                PanelFind.Height -= 100;
+                if (PanelFind.Height == PanelFind.MinimumSize.Height)
                 {
                     LoginCollapse = false;
                     LoginTick.Stop();
@@ -143,8 +160,8 @@ namespace LibraryManager
             }
             else
             {
-                PaneLogin.Height += 100;
-                if (PaneLogin.Height == PaneLogin.MaximumSize.Height)
+                PanelFind.Height += 100;
+                if (PanelFind.Height == PanelFind.MaximumSize.Height)
                 {
                     LoginCollapse = true;
                     LoginTick.Stop();
@@ -228,6 +245,12 @@ namespace LibraryManager
             GUI.TimKiem4Hello newform = new GUI.TimKiem4Hello();
             newform.Show();
 
+        }
+
+        private void btnLoginn_Click(object sender, EventArgs e)
+        {
+            GUI.frmLogin newform = new GUI.frmLogin();
+            newform.Show();
         }
     }
 }

@@ -246,6 +246,7 @@
     <Compile Include="GUI\TimKiem4Hello.Designer.cs">
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerBar.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -313,6 +314,12 @@
     </Compile>
     <Compile Include="Template\HomeHello.Designer.cs">
       <DependentUpon>HomeHello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\HomeNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\HomeNV.Designer.cs">
+      <DependentUpon>HomeNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\InfoDG.cs">
       <SubType>UserControl</SubType>
@@ -443,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\HomeHello.resx">
       <DependentUpon>HomeHello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\HomeNV.resx">
+      <DependentUpon>HomeNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\InfoDG.resx">
       <DependentUpon>InfoDG.cs</DependentUpon>
@@ -645,6 +655,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_cross_mark_button_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_book_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_book_and_pencil_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_banned_male_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_no_entry_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_no_entry_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_settings_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

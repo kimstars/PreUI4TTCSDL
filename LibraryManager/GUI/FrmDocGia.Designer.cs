@@ -52,6 +52,10 @@ namespace LibraryManager
             this.panelDrag = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.panelXLMuontra = new System.Windows.Forms.Panel();
+            this.btnM_Muon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnM_Tra = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelName.SuspendLayout();
@@ -59,6 +63,7 @@ namespace LibraryManager
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.panelDrag.SuspendLayout();
+            this.panelXLMuontra.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -83,15 +88,15 @@ namespace LibraryManager
             // panel4
             // 
             this.panel4.Controls.Add(this.guna2Button2);
+            this.panel4.Controls.Add(this.panelXLMuontra);
             this.panel4.Controls.Add(this.btnLogin);
-            this.panel4.Controls.Add(this.guna2Button1);
             this.panel4.Controls.Add(this.btnCaiDat);
             this.panel4.Controls.Add(this.btnHome);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 125);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 214);
+            this.panel4.Size = new System.Drawing.Size(190, 365);
             this.panel4.TabIndex = 11;
             // 
             // guna2Button2
@@ -150,7 +155,7 @@ namespace LibraryManager
             this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_combo_chart_48px;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 122);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 2);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Padding = new System.Windows.Forms.Padding(1);
@@ -172,7 +177,7 @@ namespace LibraryManager
             this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
             this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 162);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 302);
             this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
@@ -381,6 +386,83 @@ namespace LibraryManager
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 0;
             // 
+            // panelXLMuontra
+            // 
+            this.panelXLMuontra.Controls.Add(this.guna2Button3);
+            this.panelXLMuontra.Controls.Add(this.btnM_Muon);
+            this.panelXLMuontra.Controls.Add(this.btnM_Tra);
+            this.panelXLMuontra.Controls.Add(this.guna2Button1);
+            this.panelXLMuontra.Location = new System.Drawing.Point(2, 122);
+            this.panelXLMuontra.Margin = new System.Windows.Forms.Padding(2);
+            this.panelXLMuontra.MaximumSize = new System.Drawing.Size(190, 230);
+            this.panelXLMuontra.MinimumSize = new System.Drawing.Size(190, 45);
+            this.panelXLMuontra.Name = "panelXLMuontra";
+            this.panelXLMuontra.Size = new System.Drawing.Size(190, 176);
+            this.panelXLMuontra.TabIndex = 19;
+            // 
+            // btnM_Muon
+            // 
+            this.btnM_Muon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnM_Muon.BorderColor = System.Drawing.Color.Transparent;
+            this.btnM_Muon.BorderThickness = 1;
+            this.btnM_Muon.CheckedState.Parent = this.btnM_Muon;
+            this.btnM_Muon.CustomImages.Parent = this.btnM_Muon;
+            this.btnM_Muon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.btnM_Muon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnM_Muon.ForeColor = System.Drawing.Color.Black;
+            this.btnM_Muon.HoverState.Parent = this.btnM_Muon;
+            this.btnM_Muon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnM_Muon.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnM_Muon.Location = new System.Drawing.Point(0, 43);
+            this.btnM_Muon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnM_Muon.Name = "btnM_Muon";
+            this.btnM_Muon.ShadowDecoration.Parent = this.btnM_Muon;
+            this.btnM_Muon.Size = new System.Drawing.Size(190, 37);
+            this.btnM_Muon.TabIndex = 16;
+            this.btnM_Muon.Text = "Sách mượn";
+            // 
+            // btnM_Tra
+            // 
+            this.btnM_Tra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnM_Tra.BorderColor = System.Drawing.Color.Transparent;
+            this.btnM_Tra.BorderThickness = 1;
+            this.btnM_Tra.CheckedState.Parent = this.btnM_Tra;
+            this.btnM_Tra.CustomImages.Parent = this.btnM_Tra;
+            this.btnM_Tra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.btnM_Tra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnM_Tra.ForeColor = System.Drawing.Color.Black;
+            this.btnM_Tra.HoverState.Parent = this.btnM_Tra;
+            this.btnM_Tra.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnM_Tra.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnM_Tra.Location = new System.Drawing.Point(0, 84);
+            this.btnM_Tra.Margin = new System.Windows.Forms.Padding(2);
+            this.btnM_Tra.Name = "btnM_Tra";
+            this.btnM_Tra.ShadowDecoration.Parent = this.btnM_Tra;
+            this.btnM_Tra.Size = new System.Drawing.Size(190, 37);
+            this.btnM_Tra.TabIndex = 17;
+            this.btnM_Tra.Text = "Sách chưa trả";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderThickness = 1;
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 125);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(190, 37);
+            this.guna2Button3.TabIndex = 18;
+            this.guna2Button3.Text = "Các lỗi vi phạm";
+            // 
             // FrmDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +482,7 @@ namespace LibraryManager
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.panelDrag.ResumeLayout(false);
+            this.panelXLMuontra.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -427,5 +510,9 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.Panel panelXLMuontra;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnM_Muon;
+        private Guna.UI2.WinForms.Guna2Button btnM_Tra;
     }
 }
