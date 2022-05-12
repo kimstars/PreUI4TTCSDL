@@ -43,7 +43,10 @@ namespace LibraryManager.BUS
             
             return home.LoadPhieuMuon();
         }
-        
+        public DataTable LoadPhieuTra()
+        {
+            return home.LoadPhieuTra();
+        }
         public DataTable LoadSachMoi()
         {
             

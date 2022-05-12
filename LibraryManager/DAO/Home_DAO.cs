@@ -40,13 +40,14 @@ namespace LibraryManager.DAO
         public DataTable LoadPhieuMuon()
         {
             string sql = "SELECT TOP 5 NGAYMUON N'Ngày mượn/trả', MAMUONTRA N'Mã mượn trả', MADOCGIA N'Mã độc giả', MANHANVIEN N'Mã nhân viên' FROM dbo.PHIEUMUONTRA WHERE DaXuLy = 1 ORDER BY NGAYMUON DESC";
-            DataTable mt = GetData(sql);
-            string sql1 = "SELECT TOP 5 NGAYTRA N'Ngày mượn/trả', TT.MAMUONTRA N'Mã mượn trả', MADOCGIA N'Mã độc giả', MANHANVIEN N'Mã nhân viên' FROM dbo.THONGTINMUONTRA TT, dbo.PHIEUMUONTRA PMT WHERE TT.MaMuonTra = PMT.MaMuonTra ORDER BY TT.NgayTra DESC";
-            mt =  GetData(sql1);
-            return mt;
+            return GetData(sql);
         }
 
-        
+        public DataTable LoadPhieuTra()
+        {
+            string sql = "SELECT TOP 5 NGAYTRA N'Ngày mượn/trả', TT.MAMUONTRA N'Mã mượn trả', MADOCGIA N'Mã độc giả', MANHANVIEN N'Mã nhân viên' FROM dbo.THONGTINMUONTRA TT, dbo.PHIEUMUONTRA PMT WHERE TT.MaMuonTra = PMT.MaMuonTra ORDER BY TT.NgayTra DESC";
+            return GetData(sql);
+        }
         public DataTable LoadSachMoi()
         {
             string sql = "SELECT DISTINCT TOP 5 TENDAUSACH N'Tên Đầu Sách', NGAYNHAP N'Ngày Nhập' FROM dbo.DAUSACH, dbo.PHIEUNHAP WHERE MaDauSach IN(SELECT MaDauSach FROM dbo.THONGTINNHAPSACH WHERE MaPhieuNhap IN (SELECT MaPhieuNhap FROM dbo.PHIEUNHAP)) ORDER BY NGAYNHAP DESC";

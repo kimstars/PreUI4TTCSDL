@@ -36,9 +36,12 @@ namespace LibraryManager.Template
 
             DataTable muon = homeNV.LoadPhieuMuon();
             dgvMuonTra.DataSource = muon;
-            
+            DataTable tra = homeNV.LoadPhieuTra();
+            dgvMuonTra.DataSource = tra;
+            muon.Merge(tra);
+            DataTable result = muon;
+            dgvMuonTra.DataSource = muon;
 
-            
             long sc = homeNV.GetSachCo();
             int sc1 = Convert.ToInt32(sc);
             chartSach.Series["sach"].Points.AddXY(" ", sc1.ToString());
