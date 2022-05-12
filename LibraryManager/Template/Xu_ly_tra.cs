@@ -39,6 +39,10 @@ namespace LibraryManager.Template
                 {
                     dgv_trasach.DataSource = ts_bus.loadtk_masach(chuanhoa(txtTK.Text));
                 }
+                else if (cmbTKiem.SelectedItem =="Tất cả")
+                {
+                    dgv_trasach.DataSource = ts_bus.Loadls();
+                }
             }
         }
 
@@ -52,8 +56,8 @@ namespace LibraryManager.Template
         {
             int i;
             i = dgv_trasach.CurrentRow.Index;
-            txtMasach.Text = dgv_trasach.Rows[i].Cells[7].Value.ToString();
-            txtMadg.Text = dgv_trasach.Rows[i].Cells[2].Value.ToString();
+            txtMasach.Text = dgv_trasach.Rows[i].Cells[3].Value.ToString();
+            txtMadg.Text = dgv_trasach.Rows[i].Cells[0].Value.ToString();
 
         }
 
@@ -130,7 +134,14 @@ namespace LibraryManager.Template
 
         private void dgvDs_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            int i;
+            i = dgvDs.CurrentRow.Index;
+            txtMasach.Text = dgvDs.Rows[i].Cells[0].Value.ToString();
+            txtMadg.Text = dgvDs.Rows[i].Cells[1].Value.ToString();
+            if (dgvDs.Rows[i].Cells[0].Value.ToString() == "Có")
+            {
+                cboxVi_pham.Checked =true;
+            }
         }
 
         private void btnHoantat_Click(object sender, EventArgs e)
@@ -153,6 +164,11 @@ namespace LibraryManager.Template
                 //e.Cancel = true;
                 error1.SetError(txtTK, null);
             }
+        }
+
+        private void btnLoaibo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
