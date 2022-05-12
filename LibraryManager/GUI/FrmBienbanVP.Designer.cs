@@ -380,6 +380,7 @@ namespace LibraryManager.GUI
             this.cboxKhac.TabIndex = 12;
             this.cboxKhac.Text = "Lý do khác";
             this.cboxKhac.UseVisualStyleBackColor = false;
+            this.cboxKhac.CheckedChanged += new System.EventHandler(this.cboxKhac_CheckedChanged);
             // 
             // cboxMatsach
             // 

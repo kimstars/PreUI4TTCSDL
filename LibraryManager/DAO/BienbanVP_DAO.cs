@@ -27,7 +27,7 @@ namespace LibraryManager.DAO
         }
         public string Get_sl_MaVP()
         {
-            string sqlString = "select count(mavipham) from vipham group by mavipham";
+            string sqlString = "select count(mavipham) from vipham ";
             return GetCount(sqlString).ToString();
         }
         public DataTable loadManv()
@@ -37,7 +37,7 @@ namespace LibraryManager.DAO
         }
         public void insert(BienBanViPham bbvp)
         {
-            string sqlString = "insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"','"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",'"+bbvp.TinhTrangSach+"')";
+            string sqlString = "insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"',N'"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",N'"+bbvp.TinhTrangSach+"')";
             Excute(sqlString);
         }
         public void sua(BienBanViPham bbvp)
@@ -51,10 +51,18 @@ namespace LibraryManager.DAO
             string sqlString = "insert into vipham (mavipham, masach ) values ('" + vp.MaViPham + "','" + vp.MaSach + "')";
             Excute(sqlString);
         }
-        public void vohieuhoa(string madg)
+        /*public void vohieuhoa(string madg)
         {
-            string sqlString = "update taikhoan set loaiTK = N'Vô hiệu hóa' where tendangnhap = (select tendangnhap from docgia where madocgia = '" + madg + "'";
+            string sqlString = "  update TAIKHOAN set LoaiTK= 'vohieuhoa' where TenDangNhap = (select dg.tendangnhap from DOCGIA dg where MaDocGia = '"+madg+"')";
             Excute(sqlString);
-        }
+        }*/
     }
 }
+/* create trigger them_bbvp on bienbanvipham after insert
+  as declare @lydo nvarchar(100) , @ma char(10)
+  begin 
+  select @lydo = LyDo, @ma = MaDocGia from inserted
+  if( select count(mavipham) from BIENBANVIPHAM where LyDo like N'%Trả sách trễ hạn%' and MaDocGia = @ma group by (MaDocGia) )>3
+	update TAIKHOAN set LoaiTK= 'vohieuhoa' where TenDangNhap = (select dg.tendangnhap from DOCGIA dg where MaDocGia = @ma)
+  end
+*/

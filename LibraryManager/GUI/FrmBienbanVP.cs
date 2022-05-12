@@ -19,18 +19,18 @@ namespace LibraryManager.GUI
         string madocgia = "";
         string ngaytra = "";
         string maVP = "";
-        bool quahan = false;
+       // bool quahan = false;
         List<string> book1 = new List<string>();
         public FrmBienbanVP()
         {
             InitializeComponent();
         }
-        public FrmBienbanVP(string madg, string date, List<string> book, bool qua )
+        public FrmBienbanVP(string madg, string date, List<string> book/*, bool qua */)
         {
             madocgia = madg;
             ngaytra = date;
             book1 = book;
-            quahan = qua;
+           // quahan = qua;
             InitializeComponent();
         }
         /*private void txtMadg_TextChanged(object sender, EventArgs e)
@@ -51,17 +51,17 @@ namespace LibraryManager.GUI
             
             txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
             AutoTaoMaVP();
-            if(quahan == true)
+           /* if(quahan == true)
             {
                 cboxTrehan.Checked = true;
                 cboxTrehan.Enabled = false;
-            }
+            }*/
 
         }
         
         private void AutoTaoMaVP()
         {
-            string index = (bbvp_bus.Get_slVP() - 1).ToString();
+            string index = (bbvp_bus.Get_slVP()+1).ToString();
             maVP = "VP000000";
             maVP = maVP.Substring(0, 8 - index.Length) + index;
             txtMaVP.Text = maVP;
@@ -76,14 +76,14 @@ namespace LibraryManager.GUI
         private void btnHoanthien_Click(object sender, EventArgs e)
         {
             BienBanViPham bbvp = new BienBanViPham();
-            bbvp.MaDocGia = txtMadg.Text;
-            bbvp.MaNhanVien = cmbManv.Text;
+            bbvp.MaDocGia = txtMadg.Text.Trim();
+            bbvp.MaNhanVien = cmbManv.Text.Trim();
             bbvp.MaViPham = txtMaVP.Text;
             bbvp.TienPhat = Int32.Parse(txtTienphat.Text);
             string a = "";
             if (cboxTrehan.Checked == true)
             {
-                bbvp_bus.update_loaiTK(bbvp.MaDocGia);
+               // bbvp_bus.update_loaiTK(bbvp.MaDocGia);
                 a = cboxTrehan.Text;
             }
             if(cboxHongsach.Checked == true)
@@ -111,8 +111,15 @@ namespace LibraryManager.GUI
                     ViPham vp = new ViPham();
                     vp.MaSach = mabook;
                     vp.MaViPham = txtMaVP.Text;
+
                     bbvp_bus.Them_vp(vp);
+                    
+                    
                 }
+                /*if(cboxTrehan.Checked == true)
+                {
+                    bbvp_bus.update_loaiTK(txtMadg.Text.Trim());
+                }*/
             }
             // bbvp.LyDo = lstBoxLydo.Items.cố
 
@@ -138,7 +145,7 @@ namespace LibraryManager.GUI
             }
             if (cboxKhac.Checked == true)
             {
-                txtLydo.ReadOnly = false;
+                // txtLydo.ReadOnly = false;
                 a += txtLydo.Text;
             }
             bbvp.LyDo = a;
@@ -150,8 +157,12 @@ namespace LibraryManager.GUI
                 
             }
         }
-           
-            
+
+        private void cboxKhac_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxKhac.Checked == true)
+                txtLydo.ReadOnly = false;
         }
+    }
     }
 
