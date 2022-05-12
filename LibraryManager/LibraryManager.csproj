@@ -76,8 +76,15 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
@@ -87,6 +94,9 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
@@ -117,6 +127,15 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>..\..\bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
@@ -168,17 +187,12 @@
     <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -187,8 +201,10 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -257,11 +273,23 @@
     <Compile Include="DTO\ViPham.cs" />
     <Compile Include="DTO\XuatBan.cs" />
     <Compile Include="extentItem\RandomDateTime.cs" />
-    <Compile Include="GUI\DocGiaActivity.cs">
+    <Compile Include="GUI\CreateDataDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DocGiaActivity.Designer.cs">
-      <DependentUpon>DocGiaActivity.cs</DependentUpon>
+    <Compile Include="GUI\CreateDataDB.Designer.cs">
+      <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\testListByte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\testListByte.Designer.cs">
+      <DependentUpon>testListByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongTinDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongTinDocGia.Designer.cs">
+      <DependentUpon>ThongTinDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
@@ -293,6 +321,13 @@
     <Compile Include="GUI\ThongTinSach.Designer.cs">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TimKiem4Hello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TimKiem4Hello.Designer.cs">
+      <DependentUpon>TimKiem4Hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBar.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -349,6 +384,24 @@
     <Compile Include="GUI\frmVipham.Designer.cs">
       <DependentUpon>frmVipham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\HomeAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\HomeHello.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\HomeHello.Designer.cs">
+      <DependentUpon>HomeHello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\HomeNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\HomeNV.Designer.cs">
+      <DependentUpon>HomeNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\InfoDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -369,6 +422,12 @@
     </Compile>
     <Compile Include="extentItem\PictureBoxKiet.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\OneBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\OneBook.Designer.cs">
+      <DependentUpon>OneBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\PhieuMuon.cs">
       <SubType>UserControl</SubType>
@@ -417,8 +476,14 @@
     <EmbeddedResource Include="CreateDB\ThemMuonTra.resx">
       <DependentUpon>ThemMuonTra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DocGiaActivity.resx">
-      <DependentUpon>DocGiaActivity.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CreateDataDB.resx">
+      <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\testListByte.resx">
+      <DependentUpon>testListByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongTinDocGia.resx">
+      <DependentUpon>ThongTinDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -441,6 +506,10 @@
     <EmbeddedResource Include="GUI\ThongTinSach.resx">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TimKiem4Hello.resx">
+      <DependentUpon>TimKiem4Hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Template\DanhSachDG.resx">
       <DependentUpon>DanhSachDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -462,6 +531,15 @@
     <EmbeddedResource Include="GUI\frmVipham.resx">
       <DependentUpon>frmVipham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\HomeHello.resx">
+      <DependentUpon>HomeHello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\HomeNV.resx">
+      <DependentUpon>HomeNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\InfoDG.resx">
       <DependentUpon>InfoDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,6 +548,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmInfoNV_2.resx">
       <DependentUpon>FrmInfoNV_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\OneBook.resx">
+      <DependentUpon>OneBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
@@ -483,13 +564,11 @@
     <EmbeddedResource Include="Template\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -640,6 +719,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Check_Circle_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_study_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_man_in_blue_t_shirt_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_study_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_moleskine_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_combo_chart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_menu_rounded_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cross_mark_button_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_book_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_book_and_pencil_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_banned_male_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_no_entry_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_no_entry_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_settings_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

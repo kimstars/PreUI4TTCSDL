@@ -22,24 +22,44 @@ namespace LibraryManager.Template
 
         string imgPath = @"";
 
+        string MaDocGia = "DG000001";
 
+        DocGia dg = new DocGia();
         private void btnSaveInfo_Click(object sender, EventArgs e)
         {
-            dgbus.LuuAnh("DG000001", imgPath);
+            dg.TenDocGia = txtName.Text;
+            dg.DiaChi = txtDiachi.Text;
+            dg.GioiTinh = cbGender.Text;
+            dg.SDT = txtSDT.Text;
+            dg.CMND = txtCMND.Text;
+            dg.NgaySinh = pickerBirthday.Value;
+
+            if (dgbus.UpdateOne(dg))
+            {
+                MessageBox.Show("Cập nhật thành công!!");
+            }
+            
+
+            if (imgPath != "")
+            {
+                dgbus.LuuAnh(MaDocGia, imgPath);
+            }
+
+
 
         }
 
         private void InfoDG_Load(object sender, EventArgs e)
         {
-            avtImage.Image = dgbus.LoadAnh("DG000001");
-            DocGia dg = dgbus.GetOne("DG000001");
+            avtImage.BackgroundImage = dgbus.LoadAnh(MaDocGia);
+            dg = dgbus.GetOne(MaDocGia);
 
             txtName.Text = dg.TenDocGia;
             pickerBirthday.Value = dg.NgaySinh;
             cbGender.Text = dg.GioiTinh;
             txtSDT.Text = dg.SDT;
             txtDiachi.Text = dg.DiaChi;
-            txtDonvi.Text = "";
+            
             txtCMND.Text = dg.CMND;
 
 
@@ -61,7 +81,7 @@ namespace LibraryManager.Template
                 {
 
                     imgPath = dlg.FileName.ToString();
-                    avtImage.ImageLocation = imgPath;
+                    avtImage.BackgroundImage = Image.FromFile(imgPath);
                 }
             }
             catch (Exception ex)

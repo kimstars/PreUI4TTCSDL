@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManager.GUI
+namespace LibraryManager.Template
 {
-    public partial class DocGiaActivity : Form
+    public partial class HomeNV : UserControl
     {
-        public DocGiaActivity()
+        public HomeNV()
         {
             InitializeComponent();
         }

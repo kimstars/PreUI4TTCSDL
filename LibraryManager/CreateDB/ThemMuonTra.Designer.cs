@@ -56,7 +56,7 @@ namespace LibraryManager.CreateDB
             this.label1.Location = new System.Drawing.Point(23, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chọn mã độc giả";
             // 
@@ -66,7 +66,7 @@ namespace LibraryManager.CreateDB
             this.label3.Location = new System.Drawing.Point(23, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã mượn trả : ";
             // 
@@ -76,7 +76,7 @@ namespace LibraryManager.CreateDB
             this.label4.Location = new System.Drawing.Point(23, 178);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày mượn";
             // 
@@ -95,7 +95,7 @@ namespace LibraryManager.CreateDB
             this.label5.Location = new System.Drawing.Point(748, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 16);
+            this.label5.Size = new System.Drawing.Size(130, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Chọn mã nhân viên";
             // 
@@ -114,7 +114,7 @@ namespace LibraryManager.CreateDB
             this.label2.Location = new System.Drawing.Point(405, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "Hạn trả ";
             // 
@@ -133,7 +133,7 @@ namespace LibraryManager.CreateDB
             this.label6.Location = new System.Drawing.Point(405, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 16);
+            this.label6.Size = new System.Drawing.Size(98, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Chọn mã sách";
             // 
@@ -159,15 +159,17 @@ namespace LibraryManager.CreateDB
             this.txtMaMT.ShadowDecoration.Parent = this.txtMaMT;
             this.txtMaMT.Size = new System.Drawing.Size(267, 44);
             this.txtMaMT.TabIndex = 12;
+            this.txtMaMT.TextChanged += new System.EventHandler(this.txtMaMT_TextChanged);
             // 
             // dgvThongtinMT
             // 
             this.dgvThongtinMT.BackgroundColor = System.Drawing.Color.White;
             this.dgvThongtinMT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongtinMT.Location = new System.Drawing.Point(39, 497);
+            this.dgvThongtinMT.Location = new System.Drawing.Point(39, 350);
             this.dgvThongtinMT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvThongtinMT.Name = "dgvThongtinMT";
-            this.dgvThongtinMT.Size = new System.Drawing.Size(1001, 185);
+            this.dgvThongtinMT.RowHeadersWidth = 51;
+            this.dgvThongtinMT.Size = new System.Drawing.Size(1001, 332);
             this.dgvThongtinMT.TabIndex = 13;
             // 
             // btnSubmit
@@ -193,7 +195,7 @@ namespace LibraryManager.CreateDB
             this.label7.Location = new System.Drawing.Point(539, 225);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 16);
+            this.label7.Size = new System.Drawing.Size(150, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "*Mặc định hạn 6 tháng";
             // 
@@ -204,7 +206,7 @@ namespace LibraryManager.CreateDB
             this.label8.Location = new System.Drawing.Point(172, 128);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(198, 16);
+            this.label8.Size = new System.Drawing.Size(207, 17);
             this.label8.TabIndex = 16;
             this.label8.Text = "*Auto random select combobox ";
             // 
@@ -215,7 +217,7 @@ namespace LibraryManager.CreateDB
             this.label9.Location = new System.Drawing.Point(161, 256);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 16);
+            this.label9.Size = new System.Drawing.Size(121, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "* only click Submit";
             // 
@@ -225,7 +227,7 @@ namespace LibraryManager.CreateDB
             this.cbNhieuSach.Location = new System.Drawing.Point(463, 36);
             this.cbNhieuSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbNhieuSach.Name = "cbNhieuSach";
-            this.cbNhieuSach.Size = new System.Drawing.Size(231, 20);
+            this.cbNhieuSach.Size = new System.Drawing.Size(250, 21);
             this.cbNhieuSach.TabIndex = 18;
             this.cbNhieuSach.Text = "Nhiều sách một đơn (thì ko đổi mã)";
             this.cbNhieuSach.UseVisualStyleBackColor = true;
@@ -238,7 +240,7 @@ namespace LibraryManager.CreateDB
             this.dateHanTra.BorderSize = 0;
             this.dateHanTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dateHanTra.Location = new System.Drawing.Point(543, 159);
-            this.dateHanTra.Margin = new System.Windows.Forms.Padding(4);
+            this.dateHanTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 40);
             this.dateHanTra.Name = "dateHanTra";
             this.dateHanTra.Size = new System.Drawing.Size(199, 40);
@@ -253,7 +255,7 @@ namespace LibraryManager.CreateDB
             this.dateMuon.BorderSize = 0;
             this.dateMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dateMuon.Location = new System.Drawing.Point(160, 159);
-            this.dateMuon.Margin = new System.Windows.Forms.Padding(4);
+            this.dateMuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateMuon.MinimumSize = new System.Drawing.Size(4, 40);
             this.dateMuon.Name = "dateMuon";
             this.dateMuon.Size = new System.Drawing.Size(199, 40);
@@ -266,13 +268,13 @@ namespace LibraryManager.CreateDB
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 697);
+            this.Controls.Add(this.txtMaMT);
             this.Controls.Add(this.cbNhieuSach);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dgvThongtinMT);
-            this.Controls.Add(this.txtMaMT);
             this.Controls.Add(this.cbMaSach);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateHanTra);
