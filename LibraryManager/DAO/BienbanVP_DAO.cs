@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.DTO;
 using System.Data;
+using System.Data.SqlClient;
+
 namespace LibraryManager.DAO
 {
     class BienbanVP_DAO:DataProvider
@@ -42,8 +44,33 @@ namespace LibraryManager.DAO
         }
         public void sua(BienBanViPham bbvp)
         {
-            string sqlString = $"proc_thaydoi_bbvp N'" + bbvp.LyDo + "'," + bbvp.TienPhat.ToString() + ",'" + bbvp.MaViPham + "',N'" + bbvp.TinhTrangSach + "'";
-            Excute(sqlString);
+
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("proc_thaydoi_bbvp", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@lido", bbvp.LyDo);
+                cmd.Parameters.AddWithValue("@tien", bbvp.TienPhat);
+                cmd.Parameters.AddWithValue("@mavp", bbvp.MaViPham);
+                cmd.Parameters.AddWithValue("@tinhtrang", bbvp.TinhTrangSach);
+
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
+               
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            //string sqlString = $"proc_thaydoi_bbvp N'" + bbvp.LyDo + "'," + bbvp.TienPhat.ToString() + ",'" + bbvp.MaViPham + "',N'" + bbvp.TinhTrangSach + "'";
+           // Excute(sqlString);
 
         }
         public void Tao_vp(ViPham vp)
