@@ -10,25 +10,25 @@ namespace LibraryManager.DAO
 {
     class Home_DAO : DataProvider
     {
-        public String GetTongSach()
+        public Int64 GetTongSach()
         {
             string sqlString = "SELECT COUNT(MASACH) FROM dbo.CUONSACH";
-            return GetString(sqlString);
+            return GetCount(sqlString);
         }
-        public String GetTongDG()
+        public Int64 GetTongDG()
         {
             string sqlString = "SELECT COUNT(MADOCGIA) FROM dbo.DOCGIA";
-            return GetString(sqlString);
+            return GetCount(sqlString);
         }
-        public String GetTongDS()
+        public Int64 GetTongDS()
         {
             string sqlString = "SELECT COUNT(MADAUSACH) FROM dbo.DAUSACH";
-            return GetString(sqlString);
+            return GetCount(sqlString);
         }
-        public String GetTongTL()
+        public Int64 GetTongTL()
         {
             string sqlString = "SELECT COUNT(MATHELOAI) FROM dbo.THELOAI";
-            return GetString(sqlString);
+            return GetCount(sqlString);
         }
 
         public DataTable Get2Anh()
@@ -39,12 +39,35 @@ namespace LibraryManager.DAO
 
         public DataTable LoadPhieuMuon()
         {
-            string sql = "SELECT MaMuonTra, MaDocGia, MaNhanVien,NgayMuon,HanTra FROM dbo.PHIEUMUONTRA";
-            return GetData(sql);
+            string sql = "SELECT TOP 5 NGAYMUON N'Ngày mượn/trả', MAMUONTRA N'Mã mượn trả', MADOCGIA N'Mã độc giả', MANHANVIEN N'Mã nhân viên' FROM dbo.PHIEUMUONTRA WHERE DaXuLy = 1 ORDER BY NGAYMUON DESC";
+            DataTable mt = GetData(sql);
+            string sql1 = "SELECT TOP 5 NGAYTRA N'Ngày mượn/trả', TT.MAMUONTRA N'Mã mượn trả', MADOCGIA N'Mã độc giả', MANHANVIEN N'Mã nhân viên' FROM dbo.THONGTINMUONTRA TT, dbo.PHIEUMUONTRA PMT WHERE TT.MaMuonTra = PMT.MaMuonTra ORDER BY TT.NgayTra DESC";
+            mt =  GetData(sql1);
+            return mt;
         }
+
+        
         public DataTable LoadSachMoi()
         {
-            string sql = 
+            string sql = "SELECT DISTINCT TOP 5 TENDAUSACH N'Tên Đầu Sách', NGAYNHAP N'Ngày Nhập' FROM dbo.DAUSACH, dbo.PHIEUNHAP WHERE MaDauSach IN(SELECT MaDauSach FROM dbo.THONGTINNHAPSACH WHERE MaPhieuNhap IN (SELECT MaPhieuNhap FROM dbo.PHIEUNHAP)) ORDER BY NGAYNHAP DESC";
+            return GetData(sql);
         }
+
+        public Int64 GetSachCo()
+        {
+            string sqlString = "select count(masach) from cuonsach where trangthai = 1";
+            return GetCount(sqlString);
+        }
+        public Int64 GetSachMuon()
+        {
+            string sqlString = "select count(masach) from cuonsach where trangthai = 0";
+            return GetCount(sqlString);
+        }
+        public DataTable LoadSLDG()
+        {
+            string sql = "SELECT DISTINCT TOP 5 YEAR(NGAYMUON) NAM, COUNT(MADOCGIA) SL FROM PHIEUMUONTRA GROUP BY YEAR(NgayMuon) ORDER BY YEAR(NgayMuon) DESC";
+            return GetData(sql);
+        }
+        
     }
 }

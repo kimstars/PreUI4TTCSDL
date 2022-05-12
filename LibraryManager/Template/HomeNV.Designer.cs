@@ -36,6 +36,9 @@ namespace LibraryManager.Template
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTongSach = new System.Windows.Forms.Label();
@@ -56,14 +59,12 @@ namespace LibraryManager.Template
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.bunifuCircleProgress1 = new Bunifu.UI.WinForms.BunifuCircleProgress();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.dgvMuonTra = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.chartSach = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
@@ -75,6 +76,7 @@ namespace LibraryManager.Template
             this.bunifuPanel6.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuonTra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSach)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -320,7 +322,7 @@ namespace LibraryManager.Template
             this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
-            this.bunifuPanel5.Size = new System.Drawing.Size(445, 329);
+            this.bunifuPanel5.Size = new System.Drawing.Size(445, 343);
             this.bunifuPanel5.TabIndex = 20;
             // 
             // dgvSachMoi
@@ -380,7 +382,7 @@ namespace LibraryManager.Template
             this.dgvSachMoi.RowHeadersWidth = 51;
             this.dgvSachMoi.RowTemplate.Height = 40;
             this.dgvSachMoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSachMoi.Size = new System.Drawing.Size(392, 249);
+            this.dgvSachMoi.Size = new System.Drawing.Size(392, 258);
             this.dgvSachMoi.TabIndex = 19;
             this.dgvSachMoi.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -405,77 +407,43 @@ namespace LibraryManager.Template
             this.bunifuPanel6.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel6.BorderRadius = 30;
             this.bunifuPanel6.BorderThickness = 1;
-            this.bunifuPanel6.Controls.Add(this.label12);
-            this.bunifuPanel6.Controls.Add(this.guna2CircleButton2);
             this.bunifuPanel6.Controls.Add(this.label10);
-            this.bunifuPanel6.Controls.Add(this.guna2CircleButton1);
+            this.bunifuPanel6.Controls.Add(this.label12);
+            this.bunifuPanel6.Controls.Add(this.chartSach);
             this.bunifuPanel6.Controls.Add(this.label13);
-            this.bunifuPanel6.Controls.Add(this.bunifuCircleProgress1);
             this.bunifuPanel6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel6.Location = new System.Drawing.Point(840, 374);
+            this.bunifuPanel6.Location = new System.Drawing.Point(840, 401);
             this.bunifuPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
-            this.bunifuPanel6.Size = new System.Drawing.Size(445, 400);
+            this.bunifuPanel6.Size = new System.Drawing.Size(445, 373);
             this.bunifuPanel6.TabIndex = 21;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(48, 119);
+            this.label12.Location = new System.Drawing.Point(277, 125);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(180, 28);
+            this.label12.Size = new System.Drawing.Size(164, 25);
             this.label12.TabIndex = 29;
             this.label12.Text = "Số sách đã mượn";
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.FillColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(17, 130);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(13, 12);
-            this.guna2CircleButton2.TabIndex = 28;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(48, 75);
+            this.label10.Location = new System.Drawing.Point(277, 102);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 28);
+            this.label10.Size = new System.Drawing.Size(139, 25);
             this.label10.TabIndex = 25;
             this.label10.Text = "Số sách sẵn có";
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.DodgerBlue;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(17, 86);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(13, 12);
-            this.guna2CircleButton1.TabIndex = 27;
             // 
             // label13
             // 
@@ -489,43 +457,6 @@ namespace LibraryManager.Template
             this.label13.Size = new System.Drawing.Size(387, 28);
             this.label13.TabIndex = 26;
             this.label13.Text = "Biểu đồ số sách còn lại trong thư viện";
-            // 
-            // bunifuCircleProgress1
-            // 
-            this.bunifuCircleProgress1.Animated = false;
-            this.bunifuCircleProgress1.AnimationInterval = 1;
-            this.bunifuCircleProgress1.AnimationSpeed = 1;
-            this.bunifuCircleProgress1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgress1.CircleMargin = 10;
-            this.bunifuCircleProgress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
-            this.bunifuCircleProgress1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCircleProgress1.IsPercentage = false;
-            this.bunifuCircleProgress1.LineProgressThickness = 10;
-            this.bunifuCircleProgress1.LineThickness = 10;
-            this.bunifuCircleProgress1.Location = new System.Drawing.Point(196, 170);
-            this.bunifuCircleProgress1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
-            this.bunifuCircleProgress1.ProgressAnimationSpeed = 200;
-            this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgress1.ProgressColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCircleProgress1.ProgressColor2 = System.Drawing.Color.DodgerBlue;
-            this.bunifuCircleProgress1.ProgressEndCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
-            this.bunifuCircleProgress1.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
-            this.bunifuCircleProgress1.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
-            this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.bunifuCircleProgress1.Size = new System.Drawing.Size(225, 225);
-            this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
-            this.bunifuCircleProgress1.SubScriptText = ".00";
-            this.bunifuCircleProgress1.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.bunifuCircleProgress1.SuperScriptMargin = new System.Windows.Forms.Padding(5, 20, 0, 0);
-            this.bunifuCircleProgress1.SuperScriptText = "%";
-            this.bunifuCircleProgress1.TabIndex = 24;
-            this.bunifuCircleProgress1.Text = "30";
-            this.bunifuCircleProgress1.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.bunifuCircleProgress1.Value = 30;
-            this.bunifuCircleProgress1.ValueByTransition = 30;
-            this.bunifuCircleProgress1.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
             // label11
             // 
@@ -619,6 +550,24 @@ namespace LibraryManager.Template
             this.dgvMuonTra.TabIndex = 19;
             this.dgvMuonTra.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // chartSach
+            // 
+            this.chartSach.BorderlineWidth = 5;
+            this.chartSach.BorderSkin.BorderWidth = 2;
+            chartArea1.Name = "ChartArea1";
+            this.chartSach.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSach.Legends.Add(legend1);
+            this.chartSach.Location = new System.Drawing.Point(3, 97);
+            this.chartSach.Name = "chartSach";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "sach";
+            this.chartSach.Series.Add(series1);
+            this.chartSach.Size = new System.Drawing.Size(298, 283);
+            this.chartSach.TabIndex = 30;
+            // 
             // HomeNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -632,6 +581,7 @@ namespace LibraryManager.Template
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeNV";
             this.Size = new System.Drawing.Size(1317, 793);
+            this.Load += new System.EventHandler(this.HomeNV_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
@@ -649,6 +599,7 @@ namespace LibraryManager.Template
             this.bunifuPanel4.ResumeLayout(false);
             this.bunifuPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuonTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSach)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,10 +629,8 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvMuonTra;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private System.Windows.Forms.Label label13;
-        private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSach;
     }
 }

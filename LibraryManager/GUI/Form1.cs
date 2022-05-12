@@ -96,7 +96,7 @@ namespace LibraryManager
             PanelFind.Height = PanelFind.MinimumSize.Height;
 
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.HomeHello());
+            panelShow.Controls.Add(new Template.HomeNV());
 
         }
 
