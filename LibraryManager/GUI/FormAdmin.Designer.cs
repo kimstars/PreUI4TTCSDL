@@ -48,7 +48,7 @@ namespace LibraryManager.Template
             this.panelQLSachNhap = new System.Windows.Forms.Panel();
             this.btnM_QLsachnhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_Nhapsach = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelQLsach = new System.Windows.Forms.Panel();
             this.btnM_QLsach = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_SVipham = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_SConlai = new Guna.UI2.WinForms.Guna2Button();
@@ -78,7 +78,7 @@ namespace LibraryManager.Template
             this.panelXLViPham.SuspendLayout();
             this.panelXLMuontra.SuspendLayout();
             this.panelQLSachNhap.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelQLsach.SuspendLayout();
             this.panelQLNV.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panelNameUser.SuspendLayout();
@@ -100,10 +100,9 @@ namespace LibraryManager.Template
             this.paneldrag.Controls.Add(this.guna2ControlBox1);
             this.paneldrag.Controls.Add(this.guna2ControlBox2);
             this.paneldrag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneldrag.Location = new System.Drawing.Point(253, 0);
-            this.paneldrag.Margin = new System.Windows.Forms.Padding(4);
+            this.paneldrag.Location = new System.Drawing.Point(190, 0);
             this.paneldrag.Name = "paneldrag";
-            this.paneldrag.Size = new System.Drawing.Size(1687, 66);
+            this.paneldrag.Size = new System.Drawing.Size(1265, 54);
             this.paneldrag.TabIndex = 3;
             // 
             // guna2ControlBox1
@@ -112,11 +111,10 @@ namespace LibraryManager.Template
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1613, 4);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1210, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 1;
             // 
             // guna2ControlBox2
@@ -126,11 +124,10 @@ namespace LibraryManager.Template
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1536, 4);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1152, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 2;
             // 
             // PanelMenuBar
@@ -142,11 +139,11 @@ namespace LibraryManager.Template
             this.PanelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenuBar.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.PanelMenuBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelMenuBar.MaximumSize = new System.Drawing.Size(253, 999);
-            this.PanelMenuBar.MinimumSize = new System.Drawing.Size(64, 798);
+            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenuBar.MaximumSize = new System.Drawing.Size(190, 812);
+            this.PanelMenuBar.MinimumSize = new System.Drawing.Size(48, 648);
             this.PanelMenuBar.Name = "PanelMenuBar";
-            this.PanelMenuBar.Size = new System.Drawing.Size(253, 999);
+            this.PanelMenuBar.Size = new System.Drawing.Size(190, 812);
             this.PanelMenuBar.TabIndex = 7;
             // 
             // panelAll
@@ -154,14 +151,14 @@ namespace LibraryManager.Template
             this.panelAll.Controls.Add(this.panelXLViPham);
             this.panelAll.Controls.Add(this.panelXLMuontra);
             this.panelAll.Controls.Add(this.panelQLSachNhap);
-            this.panelAll.Controls.Add(this.panel1);
+            this.panelAll.Controls.Add(this.panelQLsach);
             this.panelAll.Controls.Add(this.panelQLNV);
             this.panelAll.Controls.Add(this.panelHome);
             this.panelAll.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAll.Location = new System.Drawing.Point(0, 160);
-            this.panelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelAll.Location = new System.Drawing.Point(0, 130);
+            this.panelAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAll.Name = "panelAll";
-            this.panelAll.Size = new System.Drawing.Size(236, 1173);
+            this.panelAll.Size = new System.Drawing.Size(173, 953);
             this.panelAll.TabIndex = 11;
             // 
             // panelXLViPham
@@ -170,12 +167,12 @@ namespace LibraryManager.Template
             this.panelXLViPham.Controls.Add(this.btnM_LapBBvp);
             this.panelXLViPham.Controls.Add(this.btnM_XLViPham);
             this.panelXLViPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelXLViPham.Location = new System.Drawing.Point(0, 910);
-            this.panelXLViPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelXLViPham.MaximumSize = new System.Drawing.Size(253, 161);
-            this.panelXLViPham.MinimumSize = new System.Drawing.Size(253, 55);
+            this.panelXLViPham.Location = new System.Drawing.Point(0, 721);
+            this.panelXLViPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelXLViPham.MaximumSize = new System.Drawing.Size(190, 131);
+            this.panelXLViPham.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelXLViPham.Name = "panelXLViPham";
-            this.panelXLViPham.Size = new System.Drawing.Size(253, 161);
+            this.panelXLViPham.Size = new System.Drawing.Size(190, 130);
             this.panelXLViPham.TabIndex = 22;
             // 
             // btnM_DGVP
@@ -191,11 +188,11 @@ namespace LibraryManager.Template
             this.btnM_DGVP.HoverState.Parent = this.btnM_DGVP;
             this.btnM_DGVP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_DGVP.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_DGVP.Location = new System.Drawing.Point(0, 107);
-            this.btnM_DGVP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_DGVP.Location = new System.Drawing.Point(0, 87);
+            this.btnM_DGVP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_DGVP.Name = "btnM_DGVP";
             this.btnM_DGVP.ShadowDecoration.Parent = this.btnM_DGVP;
-            this.btnM_DGVP.Size = new System.Drawing.Size(253, 46);
+            this.btnM_DGVP.Size = new System.Drawing.Size(190, 37);
             this.btnM_DGVP.TabIndex = 19;
             this.btnM_DGVP.Text = "Độc giả vi phạm";
             // 
@@ -212,11 +209,11 @@ namespace LibraryManager.Template
             this.btnM_LapBBvp.HoverState.Parent = this.btnM_LapBBvp;
             this.btnM_LapBBvp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_LapBBvp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_LapBBvp.Location = new System.Drawing.Point(0, 57);
-            this.btnM_LapBBvp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_LapBBvp.Location = new System.Drawing.Point(0, 46);
+            this.btnM_LapBBvp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_LapBBvp.Name = "btnM_LapBBvp";
             this.btnM_LapBBvp.ShadowDecoration.Parent = this.btnM_LapBBvp;
-            this.btnM_LapBBvp.Size = new System.Drawing.Size(253, 46);
+            this.btnM_LapBBvp.Size = new System.Drawing.Size(190, 37);
             this.btnM_LapBBvp.TabIndex = 18;
             this.btnM_LapBBvp.Text = "Lập biên bản vi phạm";
             // 
@@ -232,14 +229,15 @@ namespace LibraryManager.Template
             this.btnM_XLViPham.Image = global::LibraryManager.Properties.Resources.icons8_no_entry_48px;
             this.btnM_XLViPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_XLViPham.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_XLViPham.Location = new System.Drawing.Point(-3, 2);
-            this.btnM_XLViPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_XLViPham.Location = new System.Drawing.Point(-2, 2);
+            this.btnM_XLViPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_XLViPham.Name = "btnM_XLViPham";
             this.btnM_XLViPham.Padding = new System.Windows.Forms.Padding(1);
             this.btnM_XLViPham.ShadowDecoration.Parent = this.btnM_XLViPham;
-            this.btnM_XLViPham.Size = new System.Drawing.Size(253, 49);
+            this.btnM_XLViPham.Size = new System.Drawing.Size(190, 40);
             this.btnM_XLViPham.TabIndex = 12;
             this.btnM_XLViPham.Text = "Xử lý vi phạm";
+            this.btnM_XLViPham.Click += new System.EventHandler(this.btnM_XLViPham_Click);
             // 
             // panelXLMuontra
             // 
@@ -247,12 +245,12 @@ namespace LibraryManager.Template
             this.panelXLMuontra.Controls.Add(this.btnM_Muon);
             this.panelXLMuontra.Controls.Add(this.btnM_Tra);
             this.panelXLMuontra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelXLMuontra.Location = new System.Drawing.Point(0, 749);
-            this.panelXLMuontra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelXLMuontra.MaximumSize = new System.Drawing.Size(253, 161);
-            this.panelXLMuontra.MinimumSize = new System.Drawing.Size(253, 55);
+            this.panelXLMuontra.Location = new System.Drawing.Point(0, 592);
+            this.panelXLMuontra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelXLMuontra.MaximumSize = new System.Drawing.Size(190, 131);
+            this.panelXLMuontra.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelXLMuontra.Name = "panelXLMuontra";
-            this.panelXLMuontra.Size = new System.Drawing.Size(253, 161);
+            this.panelXLMuontra.Size = new System.Drawing.Size(190, 129);
             this.panelXLMuontra.TabIndex = 22;
             // 
             // btnM_XLMuonTra
@@ -267,14 +265,15 @@ namespace LibraryManager.Template
             this.btnM_XLMuonTra.Image = global::LibraryManager.Properties.Resources.icons8_study_64px;
             this.btnM_XLMuonTra.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_XLMuonTra.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_XLMuonTra.Location = new System.Drawing.Point(2, 2);
-            this.btnM_XLMuonTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_XLMuonTra.Location = new System.Drawing.Point(0, -1);
+            this.btnM_XLMuonTra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_XLMuonTra.Name = "btnM_XLMuonTra";
             this.btnM_XLMuonTra.Padding = new System.Windows.Forms.Padding(1);
             this.btnM_XLMuonTra.ShadowDecoration.Parent = this.btnM_XLMuonTra;
-            this.btnM_XLMuonTra.Size = new System.Drawing.Size(253, 49);
+            this.btnM_XLMuonTra.Size = new System.Drawing.Size(190, 45);
             this.btnM_XLMuonTra.TabIndex = 12;
             this.btnM_XLMuonTra.Text = "Xử lý Mượn Trả";
+            this.btnM_XLMuonTra.Click += new System.EventHandler(this.btnM_XLMuonTra_Click);
             // 
             // btnM_Muon
             // 
@@ -289,11 +288,11 @@ namespace LibraryManager.Template
             this.btnM_Muon.HoverState.Parent = this.btnM_Muon;
             this.btnM_Muon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_Muon.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_Muon.Location = new System.Drawing.Point(0, 58);
-            this.btnM_Muon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_Muon.Location = new System.Drawing.Point(-2, 47);
+            this.btnM_Muon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_Muon.Name = "btnM_Muon";
             this.btnM_Muon.ShadowDecoration.Parent = this.btnM_Muon;
-            this.btnM_Muon.Size = new System.Drawing.Size(253, 46);
+            this.btnM_Muon.Size = new System.Drawing.Size(190, 37);
             this.btnM_Muon.TabIndex = 16;
             this.btnM_Muon.Text = "Quản lý phiếu mượn";
             // 
@@ -310,11 +309,11 @@ namespace LibraryManager.Template
             this.btnM_Tra.HoverState.Parent = this.btnM_Tra;
             this.btnM_Tra.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_Tra.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_Tra.Location = new System.Drawing.Point(0, 108);
-            this.btnM_Tra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_Tra.Location = new System.Drawing.Point(0, 88);
+            this.btnM_Tra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_Tra.Name = "btnM_Tra";
             this.btnM_Tra.ShadowDecoration.Parent = this.btnM_Tra;
-            this.btnM_Tra.Size = new System.Drawing.Size(253, 46);
+            this.btnM_Tra.Size = new System.Drawing.Size(190, 37);
             this.btnM_Tra.TabIndex = 17;
             this.btnM_Tra.Text = "Trả sách";
             // 
@@ -323,12 +322,12 @@ namespace LibraryManager.Template
             this.panelQLSachNhap.Controls.Add(this.btnM_QLsachnhap);
             this.panelQLSachNhap.Controls.Add(this.btnM_Nhapsach);
             this.panelQLSachNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLSachNhap.Location = new System.Drawing.Point(0, 638);
-            this.panelQLSachNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQLSachNhap.MaximumSize = new System.Drawing.Size(253, 111);
-            this.panelQLSachNhap.MinimumSize = new System.Drawing.Size(253, 55);
+            this.panelQLSachNhap.Location = new System.Drawing.Point(0, 508);
+            this.panelQLSachNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQLSachNhap.MaximumSize = new System.Drawing.Size(190, 90);
+            this.panelQLSachNhap.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelQLSachNhap.Name = "panelQLSachNhap";
-            this.panelQLSachNhap.Size = new System.Drawing.Size(253, 111);
+            this.panelQLSachNhap.Size = new System.Drawing.Size(190, 84);
             this.panelQLSachNhap.TabIndex = 21;
             // 
             // btnM_QLsachnhap
@@ -343,15 +342,16 @@ namespace LibraryManager.Template
             this.btnM_QLsachnhap.Image = global::LibraryManager.Properties.Resources.icons8_book_and_pencil_200px;
             this.btnM_QLsachnhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_QLsachnhap.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_QLsachnhap.Location = new System.Drawing.Point(0, 2);
-            this.btnM_QLsachnhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_QLsachnhap.Location = new System.Drawing.Point(0, 0);
+            this.btnM_QLsachnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_QLsachnhap.Name = "btnM_QLsachnhap";
             this.btnM_QLsachnhap.Padding = new System.Windows.Forms.Padding(1);
             this.btnM_QLsachnhap.ShadowDecoration.Parent = this.btnM_QLsachnhap;
-            this.btnM_QLsachnhap.Size = new System.Drawing.Size(253, 49);
+            this.btnM_QLsachnhap.Size = new System.Drawing.Size(190, 40);
             this.btnM_QLsachnhap.TabIndex = 12;
             this.btnM_QLsachnhap.Tag = "Quản lý sách nhập";
             this.btnM_QLsachnhap.Text = "Quản lý sách nhập";
+            this.btnM_QLsachnhap.Click += new System.EventHandler(this.btnM_QLsachnhap_Click);
             // 
             // btnM_Nhapsach
             // 
@@ -366,30 +366,30 @@ namespace LibraryManager.Template
             this.btnM_Nhapsach.HoverState.Parent = this.btnM_Nhapsach;
             this.btnM_Nhapsach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_Nhapsach.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_Nhapsach.Location = new System.Drawing.Point(0, 56);
-            this.btnM_Nhapsach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_Nhapsach.Location = new System.Drawing.Point(0, 43);
+            this.btnM_Nhapsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_Nhapsach.Name = "btnM_Nhapsach";
             this.btnM_Nhapsach.ShadowDecoration.Parent = this.btnM_Nhapsach;
-            this.btnM_Nhapsach.Size = new System.Drawing.Size(253, 46);
+            this.btnM_Nhapsach.Size = new System.Drawing.Size(190, 37);
             this.btnM_Nhapsach.TabIndex = 16;
             this.btnM_Nhapsach.Text = "Danh sách sách nhập";
             // 
-            // panel1
+            // panelQLsach
             // 
-            this.panel1.Controls.Add(this.btnM_QLsach);
-            this.panel1.Controls.Add(this.btnM_SVipham);
-            this.panel1.Controls.Add(this.btnM_SConlai);
-            this.panel1.Controls.Add(this.btnM_dsSDamuon);
-            this.panel1.Controls.Add(this.btnM_DSDausach);
-            this.panel1.Controls.Add(this.btnM_Suadausach);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 325);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.MaximumSize = new System.Drawing.Size(253, 313);
-            this.panel1.MinimumSize = new System.Drawing.Size(253, 55);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 313);
-            this.panel1.TabIndex = 20;
+            this.panelQLsach.Controls.Add(this.btnM_QLsach);
+            this.panelQLsach.Controls.Add(this.btnM_SVipham);
+            this.panelQLsach.Controls.Add(this.btnM_SConlai);
+            this.panelQLsach.Controls.Add(this.btnM_dsSDamuon);
+            this.panelQLsach.Controls.Add(this.btnM_DSDausach);
+            this.panelQLsach.Controls.Add(this.btnM_Suadausach);
+            this.panelQLsach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelQLsach.Location = new System.Drawing.Point(0, 260);
+            this.panelQLsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQLsach.MaximumSize = new System.Drawing.Size(190, 248);
+            this.panelQLsach.MinimumSize = new System.Drawing.Size(190, 45);
+            this.panelQLsach.Name = "panelQLsach";
+            this.panelQLsach.Size = new System.Drawing.Size(190, 248);
+            this.panelQLsach.TabIndex = 20;
             // 
             // btnM_QLsach
             // 
@@ -403,14 +403,15 @@ namespace LibraryManager.Template
             this.btnM_QLsach.Image = global::LibraryManager.Properties.Resources.icons8_book_64px_1;
             this.btnM_QLsach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_QLsach.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_QLsach.Location = new System.Drawing.Point(-3, 2);
-            this.btnM_QLsach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_QLsach.Location = new System.Drawing.Point(-2, 2);
+            this.btnM_QLsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_QLsach.Name = "btnM_QLsach";
             this.btnM_QLsach.Padding = new System.Windows.Forms.Padding(1);
             this.btnM_QLsach.ShadowDecoration.Parent = this.btnM_QLsach;
-            this.btnM_QLsach.Size = new System.Drawing.Size(253, 49);
+            this.btnM_QLsach.Size = new System.Drawing.Size(190, 40);
             this.btnM_QLsach.TabIndex = 12;
             this.btnM_QLsach.Text = "Quản lý sách";
+            this.btnM_QLsach.Click += new System.EventHandler(this.btnM_QLsach_Click);
             // 
             // btnM_SVipham
             // 
@@ -425,11 +426,11 @@ namespace LibraryManager.Template
             this.btnM_SVipham.HoverState.Parent = this.btnM_SVipham;
             this.btnM_SVipham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_SVipham.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_SVipham.Location = new System.Drawing.Point(0, 260);
-            this.btnM_SVipham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_SVipham.Location = new System.Drawing.Point(0, 207);
+            this.btnM_SVipham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_SVipham.Name = "btnM_SVipham";
             this.btnM_SVipham.ShadowDecoration.Parent = this.btnM_SVipham;
-            this.btnM_SVipham.Size = new System.Drawing.Size(253, 46);
+            this.btnM_SVipham.Size = new System.Drawing.Size(190, 37);
             this.btnM_SVipham.TabIndex = 20;
             this.btnM_SVipham.Text = "DS Sách bị vi phạm";
             // 
@@ -446,11 +447,11 @@ namespace LibraryManager.Template
             this.btnM_SConlai.HoverState.Parent = this.btnM_SConlai;
             this.btnM_SConlai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_SConlai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_SConlai.Location = new System.Drawing.Point(-3, 209);
-            this.btnM_SConlai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_SConlai.Location = new System.Drawing.Point(-2, 167);
+            this.btnM_SConlai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_SConlai.Name = "btnM_SConlai";
             this.btnM_SConlai.ShadowDecoration.Parent = this.btnM_SConlai;
-            this.btnM_SConlai.Size = new System.Drawing.Size(253, 46);
+            this.btnM_SConlai.Size = new System.Drawing.Size(190, 37);
             this.btnM_SConlai.TabIndex = 19;
             this.btnM_SConlai.Text = "DS Sách còn lại";
             // 
@@ -467,11 +468,11 @@ namespace LibraryManager.Template
             this.btnM_dsSDamuon.HoverState.Parent = this.btnM_dsSDamuon;
             this.btnM_dsSDamuon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_dsSDamuon.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_dsSDamuon.Location = new System.Drawing.Point(0, 159);
-            this.btnM_dsSDamuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_dsSDamuon.Location = new System.Drawing.Point(0, 126);
+            this.btnM_dsSDamuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_dsSDamuon.Name = "btnM_dsSDamuon";
             this.btnM_dsSDamuon.ShadowDecoration.Parent = this.btnM_dsSDamuon;
-            this.btnM_dsSDamuon.Size = new System.Drawing.Size(253, 46);
+            this.btnM_dsSDamuon.Size = new System.Drawing.Size(190, 37);
             this.btnM_dsSDamuon.TabIndex = 18;
             this.btnM_dsSDamuon.Text = "DS Sách đã mượn";
             // 
@@ -488,11 +489,11 @@ namespace LibraryManager.Template
             this.btnM_DSDausach.HoverState.Parent = this.btnM_DSDausach;
             this.btnM_DSDausach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_DSDausach.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_DSDausach.Location = new System.Drawing.Point(0, 58);
-            this.btnM_DSDausach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_DSDausach.Location = new System.Drawing.Point(0, 45);
+            this.btnM_DSDausach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_DSDausach.Name = "btnM_DSDausach";
             this.btnM_DSDausach.ShadowDecoration.Parent = this.btnM_DSDausach;
-            this.btnM_DSDausach.Size = new System.Drawing.Size(253, 46);
+            this.btnM_DSDausach.Size = new System.Drawing.Size(190, 37);
             this.btnM_DSDausach.TabIndex = 16;
             this.btnM_DSDausach.Text = "Danh sách đầu sách";
             // 
@@ -509,11 +510,11 @@ namespace LibraryManager.Template
             this.btnM_Suadausach.HoverState.Parent = this.btnM_Suadausach;
             this.btnM_Suadausach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_Suadausach.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_Suadausach.Location = new System.Drawing.Point(-3, 108);
-            this.btnM_Suadausach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_Suadausach.Location = new System.Drawing.Point(-2, 85);
+            this.btnM_Suadausach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnM_Suadausach.Name = "btnM_Suadausach";
             this.btnM_Suadausach.ShadowDecoration.Parent = this.btnM_Suadausach;
-            this.btnM_Suadausach.Size = new System.Drawing.Size(253, 46);
+            this.btnM_Suadausach.Size = new System.Drawing.Size(190, 37);
             this.btnM_Suadausach.TabIndex = 17;
             this.btnM_Suadausach.Text = "Sửa thông tin sách";
             // 
@@ -523,12 +524,12 @@ namespace LibraryManager.Template
             this.panelQLNV.Controls.Add(this.btnDSNV);
             this.panelQLNV.Controls.Add(this.btnAddNV);
             this.panelQLNV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLNV.Location = new System.Drawing.Point(0, 161);
-            this.panelQLNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQLNV.MaximumSize = new System.Drawing.Size(253, 250);
-            this.panelQLNV.MinimumSize = new System.Drawing.Size(253, 57);
+            this.panelQLNV.Location = new System.Drawing.Point(0, 132);
+            this.panelQLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQLNV.MaximumSize = new System.Drawing.Size(190, 128);
+            this.panelQLNV.MinimumSize = new System.Drawing.Size(190, 46);
             this.panelQLNV.Name = "panelQLNV";
-            this.panelQLNV.Size = new System.Drawing.Size(253, 164);
+            this.panelQLNV.Size = new System.Drawing.Size(190, 128);
             this.panelQLNV.TabIndex = 18;
             // 
             // btnOpenQLNV
@@ -544,13 +545,14 @@ namespace LibraryManager.Template
             this.btnOpenQLNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOpenQLNV.ImageSize = new System.Drawing.Size(30, 30);
             this.btnOpenQLNV.Location = new System.Drawing.Point(0, 2);
-            this.btnOpenQLNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOpenQLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOpenQLNV.Name = "btnOpenQLNV";
             this.btnOpenQLNV.Padding = new System.Windows.Forms.Padding(1);
             this.btnOpenQLNV.ShadowDecoration.Parent = this.btnOpenQLNV;
-            this.btnOpenQLNV.Size = new System.Drawing.Size(253, 55);
+            this.btnOpenQLNV.Size = new System.Drawing.Size(190, 40);
             this.btnOpenQLNV.TabIndex = 12;
             this.btnOpenQLNV.Text = "QL Nhân viên";
+            this.btnOpenQLNV.Click += new System.EventHandler(this.btnOpenQLNV_Click);
             // 
             // btnDSNV
             // 
@@ -565,11 +567,11 @@ namespace LibraryManager.Template
             this.btnDSNV.HoverState.Parent = this.btnDSNV;
             this.btnDSNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDSNV.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDSNV.Location = new System.Drawing.Point(0, 58);
-            this.btnDSNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDSNV.Location = new System.Drawing.Point(-1, 45);
+            this.btnDSNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDSNV.Name = "btnDSNV";
             this.btnDSNV.ShadowDecoration.Parent = this.btnDSNV;
-            this.btnDSNV.Size = new System.Drawing.Size(253, 46);
+            this.btnDSNV.Size = new System.Drawing.Size(190, 37);
             this.btnDSNV.TabIndex = 16;
             this.btnDSNV.Text = "Danh sách nhân viên";
             this.btnDSNV.Click += new System.EventHandler(this.btnDSNV_Click);
@@ -587,11 +589,11 @@ namespace LibraryManager.Template
             this.btnAddNV.HoverState.Parent = this.btnAddNV;
             this.btnAddNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddNV.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNV.Location = new System.Drawing.Point(0, 110);
-            this.btnAddNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddNV.Location = new System.Drawing.Point(-2, 86);
+            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.ShadowDecoration.Parent = this.btnAddNV;
-            this.btnAddNV.Size = new System.Drawing.Size(253, 46);
+            this.btnAddNV.Size = new System.Drawing.Size(190, 37);
             this.btnAddNV.TabIndex = 15;
             this.btnAddNV.Text = "Thêm nhân viên";
             // 
@@ -602,11 +604,11 @@ namespace LibraryManager.Template
             this.panelHome.Controls.Add(this.btnThuNghiem);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 0);
-            this.panelHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelHome.MaximumSize = new System.Drawing.Size(253, 263);
-            this.panelHome.MinimumSize = new System.Drawing.Size(253, 55);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHome.MaximumSize = new System.Drawing.Size(190, 214);
+            this.panelHome.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(253, 161);
+            this.panelHome.Size = new System.Drawing.Size(190, 132);
             this.panelHome.TabIndex = 19;
             // 
             // btnThongtin
@@ -622,11 +624,11 @@ namespace LibraryManager.Template
             this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
             this.btnThongtin.Location = new System.Drawing.Point(0, 2);
-            this.btnThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThongtin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThongtin.Name = "btnThongtin";
             this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
             this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
-            this.btnThongtin.Size = new System.Drawing.Size(253, 50);
+            this.btnThongtin.Size = new System.Drawing.Size(190, 41);
             this.btnThongtin.TabIndex = 13;
             this.btnThongtin.Text = "Dashboard";
             // 
@@ -642,12 +644,12 @@ namespace LibraryManager.Template
             this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
             this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCaiDat.Location = new System.Drawing.Point(-3, 56);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCaiDat.Location = new System.Drawing.Point(-2, 46);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
             this.btnCaiDat.ShadowDecoration.Parent = this.btnCaiDat;
-            this.btnCaiDat.Size = new System.Drawing.Size(253, 46);
+            this.btnCaiDat.Size = new System.Drawing.Size(190, 41);
             this.btnCaiDat.TabIndex = 14;
             this.btnCaiDat.Text = "Cài đặt";
             // 
@@ -663,12 +665,12 @@ namespace LibraryManager.Template
             this.btnThuNghiem.Image = global::LibraryManager.Properties.Resources.icons8_ab_testing_48px;
             this.btnThuNghiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThuNghiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThuNghiem.Location = new System.Drawing.Point(-3, 106);
-            this.btnThuNghiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThuNghiem.Location = new System.Drawing.Point(0, 89);
+            this.btnThuNghiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThuNghiem.Name = "btnThuNghiem";
             this.btnThuNghiem.Padding = new System.Windows.Forms.Padding(1);
             this.btnThuNghiem.ShadowDecoration.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.Size = new System.Drawing.Size(253, 47);
+            this.btnThuNghiem.Size = new System.Drawing.Size(190, 40);
             this.btnThuNghiem.TabIndex = 15;
             this.btnThuNghiem.Text = "Thử nghiệm";
             this.btnThuNghiem.Click += new System.EventHandler(this.btnThuNghiem_Click);
@@ -680,9 +682,9 @@ namespace LibraryManager.Template
             this.panelNameUser.Controls.Add(this.pictureBox2);
             this.panelNameUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNameUser.Location = new System.Drawing.Point(0, 0);
-            this.panelNameUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelNameUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelNameUser.Name = "panelNameUser";
-            this.panelNameUser.Size = new System.Drawing.Size(236, 160);
+            this.panelNameUser.Size = new System.Drawing.Size(173, 130);
             this.panelNameUser.TabIndex = 0;
             // 
             // label1
@@ -690,9 +692,10 @@ namespace LibraryManager.Template
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 4);
+            this.label1.Location = new System.Drawing.Point(63, 3);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 74);
+            this.label1.Size = new System.Drawing.Size(50, 60);
             this.label1.TabIndex = 14;
             this.label1.Text = "THƯ VIỆN MTA";
             // 
@@ -703,10 +706,10 @@ namespace LibraryManager.Template
             this.panelName.Controls.Add(this.label3);
             this.panelName.Controls.Add(this.pictureAvt);
             this.panelName.Controls.Add(this.nameuser);
-            this.panelName.Location = new System.Drawing.Point(0, 80);
-            this.panelName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelName.Location = new System.Drawing.Point(0, 65);
+            this.panelName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelName.Name = "panelName";
-            this.panelName.Size = new System.Drawing.Size(253, 76);
+            this.panelName.Size = new System.Drawing.Size(190, 62);
             this.panelName.TabIndex = 13;
             // 
             // label3
@@ -715,7 +718,8 @@ namespace LibraryManager.Template
             this.label3.BackColor = System.Drawing.Color.Firebrick;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(83, 39);
+            this.label3.Location = new System.Drawing.Point(62, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 13;
@@ -733,9 +737,9 @@ namespace LibraryManager.Template
             this.pictureAvt.GradientAngle = 50F;
             this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
             this.pictureAvt.Location = new System.Drawing.Point(0, 0);
-            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureAvt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureAvt.Name = "pictureAvt";
-            this.pictureAvt.Size = new System.Drawing.Size(75, 75);
+            this.pictureAvt.Size = new System.Drawing.Size(56, 56);
             this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureAvt.TabIndex = 5;
             this.pictureAvt.TabStop = false;
@@ -745,7 +749,8 @@ namespace LibraryManager.Template
             this.nameuser.AutoSize = true;
             this.nameuser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.nameuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nameuser.Location = new System.Drawing.Point(81, 7);
+            this.nameuser.Location = new System.Drawing.Point(61, 6);
+            this.nameuser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameuser.Name = "nameuser";
             this.nameuser.Size = new System.Drawing.Size(64, 21);
             this.nameuser.TabIndex = 12;
@@ -756,10 +761,10 @@ namespace LibraryManager.Template
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_library_64__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 75);
+            this.pictureBox2.Size = new System.Drawing.Size(57, 61);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -771,21 +776,21 @@ namespace LibraryManager.Template
             // panelShow
             // 
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShow.Location = new System.Drawing.Point(253, 66);
+            this.panelShow.Location = new System.Drawing.Point(190, 54);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(1687, 959);
+            this.panelShow.Size = new System.Drawing.Size(1265, 779);
             this.panelShow.TabIndex = 8;
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1940, 1025);
+            this.ClientSize = new System.Drawing.Size(1455, 833);
             this.Controls.Add(this.panelShow);
             this.Controls.Add(this.paneldrag);
             this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);
@@ -795,7 +800,7 @@ namespace LibraryManager.Template
             this.panelXLViPham.ResumeLayout(false);
             this.panelXLMuontra.ResumeLayout(false);
             this.panelQLSachNhap.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelQLsach.ResumeLayout(false);
             this.panelQLNV.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);
             this.panelNameUser.ResumeLayout(false);
@@ -833,7 +838,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelShow;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelQLsach;
         private Guna.UI2.WinForms.Guna2Button btnM_QLsach;
         private Guna.UI2.WinForms.Guna2Button btnM_SVipham;
         private Guna.UI2.WinForms.Guna2Button btnM_SConlai;

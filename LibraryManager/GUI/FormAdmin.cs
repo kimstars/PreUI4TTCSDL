@@ -20,14 +20,34 @@ namespace LibraryManager.Template
 
         private void closeYCollapse()
         {
-            
+            if (QLNVTickCollapse)
+            {
+                Open_Y(ref panelQLNV, ref QLNVTickCollapse);
+            }
+            if (QLSachTickCollapse)
+            {
+                Open_Y(ref panelQLsach, ref QLSachTickCollapse);
+            }
+            if (QLSachNhap)
+            {
+                Open_Y(ref panelQLSachNhap, ref QLSachNhap);
+            }
+            if (XLMuonTra)
+            {
+                Open_Y(ref panelXLMuontra, ref XLMuonTra);
+            }
+            if (XLViPham)
+            {
+                Open_Y(ref panelXLViPham, ref XLViPham);
+
+            }
 
         }
 
-        bool sidebarExpand;
-        bool QLSachTickCollapse;
-        bool QLNVTickCollapse;
-        bool QLDGTickCollapse;
+        bool sidebarExpand = false;
+        bool QLSachTickCollapse = true;
+        bool QLNVTickCollapse = true;
+        bool QLDGTickCollapse = true;
 
 
         private void sidebartick_Tick(object sender, EventArgs e)
@@ -40,8 +60,11 @@ namespace LibraryManager.Template
                 {
                     sidebarExpand = false;
                     sidebartick.Stop();
+
                 }
-                pictureAvt.Size = new Size(40,40);
+                PanelMenuBar.AutoScroll = false;
+
+                pictureAvt.Size = new Size(40, 40);
 
 
             }
@@ -53,7 +76,9 @@ namespace LibraryManager.Template
                     sidebarExpand = true;
                     sidebartick.Stop();
                 }
-                pictureAvt.Size = new Size(60,60);
+                PanelMenuBar.AutoScroll = true;
+
+                pictureAvt.Size = new Size(60, 60);
 
             }
         }
@@ -65,61 +90,73 @@ namespace LibraryManager.Template
 
         private void FormAdmin_Load_1(object sender, EventArgs e)
         {
-            PanelMenuBar.Width = PanelMenuBar.MaximumSize.Width;
-            hideChildFrm();
+            PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
+            PanelMenuBar.AutoScroll = false;
+            closeYCollapse();
 
         }
-        
 
 
 
-        private void Open_Y(ref Panel thisPanel,ref bool thisCollapse)
+
+        private void Open_Y(ref Panel thisPanel, ref bool thisCollapse)
         {
             if (thisCollapse)
             {
-                thisPanel.Height = thisPanel.MinimumSize.Height;
 
-                QLSachTickCollapse = false;
-                   
+                thisPanel.Height = thisPanel.MinimumSize.Height;
+                thisCollapse = false;
             }
             else
             {
                 thisPanel.Height = thisPanel.MaximumSize.Height;
-
                 thisCollapse = true;
             }
         }
 
 
 
-
-
-
-        void hideChildFrm()
-        {
-           
-
-        }
-
-
         private void btnDSNV_Click(object sender, EventArgs e)
         {
-            hideChildFrm();
-            
+            closeYCollapse();
+
         }
 
-     
+
 
         private void btnThuNghiem_Click(object sender, EventArgs e)
         {
-            hideChildFrm();
+            closeYCollapse();
             //infoDG.Visible = true;
-            
+
 
         }
 
-       
+        private void btnOpenQLNV_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelQLNV, ref QLNVTickCollapse);
+        }
 
-      
+        private void btnM_QLsach_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelQLsach, ref QLSachTickCollapse);
+        }
+        bool QLSachNhap = true;
+        private void btnM_QLsachnhap_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelQLSachNhap, ref QLSachNhap);
+        }
+        bool XLMuonTra = true;
+
+        private void btnM_XLMuonTra_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelXLMuontra, ref XLMuonTra);
+
+        }
+        bool XLViPham = true;
+        private void btnM_XLViPham_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelXLViPham, ref XLViPham);
+        }
     }
 }
