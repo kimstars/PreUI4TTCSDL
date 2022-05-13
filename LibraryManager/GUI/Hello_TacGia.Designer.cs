@@ -117,6 +117,7 @@ namespace LibraryManager.GUI
             this.btnSearch.Size = new System.Drawing.Size(122, 49);
             this.btnSearch.TabIndex = 38;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvDs
             // 
@@ -213,6 +214,7 @@ namespace LibraryManager.GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Hello_TacGia";
             this.Text = "Hello_TacGia";
+            this.Load += new System.EventHandler(this.Hello_TacGia_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDs)).EndInit();
