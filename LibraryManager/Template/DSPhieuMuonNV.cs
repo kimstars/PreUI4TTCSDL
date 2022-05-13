@@ -20,6 +20,7 @@ namespace LibraryManager.Template
         }
 
         private string MaPhieuMuonCurrent = "";
+        private string MaDocGiaMuonCurrent = "";
 
 
         PhieuMuon_BUS pmBus = new PhieuMuon_BUS();
@@ -85,8 +86,10 @@ namespace LibraryManager.Template
                 DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
                 dgvDSDausach.DataSource = temp;
                 MaPhieuMuonCurrent = MaPhieuMuon;
+
                 TinhTienCoc(temp);
             }
+            MaDocGiaMuonCurrent = MaDocGia;
             LoadDetailUser(MaDocGia);
             
         }
@@ -102,7 +105,8 @@ namespace LibraryManager.Template
 
         private void btnXemInfoDG_Click(object sender, EventArgs e)
         {
-
+            GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia(MaDocGiaMuonCurrent);
+            newform.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

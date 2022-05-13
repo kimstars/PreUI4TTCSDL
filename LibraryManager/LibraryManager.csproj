@@ -358,6 +358,12 @@
     <Compile Include="GUI\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\DSInfoDauSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\DSInfoDauSach.Designer.cs">
+      <DependentUpon>DSInfoDauSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\DSPhieuMuonNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -520,6 +526,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DSInfoDauSach.resx">
+      <DependentUpon>DSInfoDauSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DSPhieuMuonNV.resx">
       <DependentUpon>DSPhieuMuonNV.cs</DependentUpon>

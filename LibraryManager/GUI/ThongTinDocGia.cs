@@ -18,6 +18,9 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
+
+       
+
         string MaDocGia = "DG000002";
         public ThongTinDocGia(string madg)
         {
