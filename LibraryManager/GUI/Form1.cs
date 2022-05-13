@@ -76,7 +76,8 @@ namespace LibraryManager
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            
+            GUI.Hello_TacGia newform = new GUI.Hello_TacGia();
+            newform.Show();
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
