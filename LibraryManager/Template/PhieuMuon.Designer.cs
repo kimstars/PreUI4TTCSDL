@@ -51,31 +51,31 @@ namespace LibraryManager.Template
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.btnLoaiBo = new Guna.UI2.WinForms.Guna2Button();
-            this.imageBook = new System.Windows.Forms.PictureBox();
-            this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.txtMaDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
-            this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dgvInfoBorrow = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bthHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnMuon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLoaiBo = new Guna.UI2.WinForms.Guna2Button();
+            this.imageBook = new System.Windows.Forms.PictureBox();
+            this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
+            this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoBorrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -301,58 +301,6 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(443, 636);
             this.guna2CustomGradientPanel1.TabIndex = 25;
             // 
-            // btnLoaiBo
-            // 
-            this.btnLoaiBo.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoaiBo.BorderRadius = 18;
-            this.btnLoaiBo.CheckedState.Parent = this.btnLoaiBo;
-            this.btnLoaiBo.CustomImages.Parent = this.btnLoaiBo;
-            this.btnLoaiBo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
-            this.btnLoaiBo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoaiBo.ForeColor = System.Drawing.Color.White;
-            this.btnLoaiBo.HoverState.Parent = this.btnLoaiBo;
-            this.btnLoaiBo.Image = global::LibraryManager.Properties.Resources.icons8_remove_tag_40px;
-            this.btnLoaiBo.Location = new System.Drawing.Point(261, 558);
-            this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLoaiBo.Name = "btnLoaiBo";
-            this.btnLoaiBo.ShadowDecoration.Parent = this.btnLoaiBo;
-            this.btnLoaiBo.Size = new System.Drawing.Size(159, 44);
-            this.btnLoaiBo.TabIndex = 1;
-            this.btnLoaiBo.Text = "Loại bỏ";
-            this.btnLoaiBo.Click += new System.EventHandler(this.btnLoaiBo_Click);
-            // 
-            // imageBook
-            // 
-            this.imageBook.BackColor = System.Drawing.Color.Transparent;
-            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_study_200px;
-            this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imageBook.Location = new System.Drawing.Point(15, 46);
-            this.imageBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.imageBook.Name = "imageBook";
-            this.imageBook.Size = new System.Drawing.Size(144, 144);
-            this.imageBook.TabIndex = 3;
-            this.imageBook.TabStop = false;
-            // 
-            // btnPreview
-            // 
-            this.btnPreview.BackColor = System.Drawing.Color.Transparent;
-            this.btnPreview.BorderRadius = 18;
-            this.btnPreview.CheckedState.Parent = this.btnPreview;
-            this.btnPreview.CustomImages.Parent = this.btnPreview;
-            this.btnPreview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.btnPreview.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPreview.ForeColor = System.Drawing.Color.White;
-            this.btnPreview.HoverState.Parent = this.btnPreview;
-            this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.btnPreview.Location = new System.Drawing.Point(44, 558);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPreview.Name = "btnPreview";
-            this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
-            this.btnPreview.Size = new System.Drawing.Size(159, 44);
-            this.btnPreview.TabIndex = 2;
-            this.btnPreview.Text = "Preview";
-            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
-            // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 20;
@@ -431,42 +379,6 @@ namespace LibraryManager.Template
             this.label8.TabIndex = 18;
             this.label8.Text = "Mã độc giả :";
             // 
-            // dateHanTra
-            // 
-            this.dateHanTra.BorderColor = System.Drawing.Color.Transparent;
-            this.dateHanTra.BorderRadius = 6;
-            this.dateHanTra.BorderSize = 0;
-            this.dateHanTra.CustomFormat = "dd/MM/yyyy";
-            this.dateHanTra.Enabled = false;
-            this.dateHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateHanTra.Location = new System.Drawing.Point(256, 127);
-            this.dateHanTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 37);
-            this.dateHanTra.Name = "dateHanTra";
-            this.dateHanTra.Size = new System.Drawing.Size(183, 37);
-            this.dateHanTra.SkinColor = System.Drawing.Color.White;
-            this.dateHanTra.TabIndex = 2;
-            this.dateHanTra.TextColor = System.Drawing.Color.Black;
-            // 
-            // DateMuon
-            // 
-            this.DateMuon.BorderColor = System.Drawing.Color.Transparent;
-            this.DateMuon.BorderRadius = 6;
-            this.DateMuon.BorderSize = 0;
-            this.DateMuon.CustomFormat = "dd/MM/yyyy";
-            this.DateMuon.Enabled = false;
-            this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateMuon.Location = new System.Drawing.Point(29, 127);
-            this.DateMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
-            this.DateMuon.Name = "DateMuon";
-            this.DateMuon.Size = new System.Drawing.Size(187, 37);
-            this.DateMuon.SkinColor = System.Drawing.Color.White;
-            this.DateMuon.TabIndex = 1;
-            this.DateMuon.TextColor = System.Drawing.Color.Black;
-            // 
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 15;
@@ -484,6 +396,7 @@ namespace LibraryManager.Template
             // dgvInfoBorrow
             // 
             this.dgvInfoBorrow.AllowCustomTheming = false;
+            this.dgvInfoBorrow.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvInfoBorrow.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -591,6 +504,58 @@ namespace LibraryManager.Template
             this.btnMuon.Text = "Xác nhận mượn sách";
             this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
             // 
+            // btnLoaiBo
+            // 
+            this.btnLoaiBo.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoaiBo.BorderRadius = 18;
+            this.btnLoaiBo.CheckedState.Parent = this.btnLoaiBo;
+            this.btnLoaiBo.CustomImages.Parent = this.btnLoaiBo;
+            this.btnLoaiBo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
+            this.btnLoaiBo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoaiBo.ForeColor = System.Drawing.Color.White;
+            this.btnLoaiBo.HoverState.Parent = this.btnLoaiBo;
+            this.btnLoaiBo.Image = global::LibraryManager.Properties.Resources.icons8_remove_tag_40px;
+            this.btnLoaiBo.Location = new System.Drawing.Point(261, 558);
+            this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoaiBo.Name = "btnLoaiBo";
+            this.btnLoaiBo.ShadowDecoration.Parent = this.btnLoaiBo;
+            this.btnLoaiBo.Size = new System.Drawing.Size(159, 44);
+            this.btnLoaiBo.TabIndex = 1;
+            this.btnLoaiBo.Text = "Loại bỏ";
+            this.btnLoaiBo.Click += new System.EventHandler(this.btnLoaiBo_Click);
+            // 
+            // imageBook
+            // 
+            this.imageBook.BackColor = System.Drawing.Color.Transparent;
+            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_study_200px;
+            this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imageBook.Location = new System.Drawing.Point(15, 46);
+            this.imageBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.imageBook.Name = "imageBook";
+            this.imageBook.Size = new System.Drawing.Size(144, 144);
+            this.imageBook.TabIndex = 3;
+            this.imageBook.TabStop = false;
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.BackColor = System.Drawing.Color.Transparent;
+            this.btnPreview.BorderRadius = 18;
+            this.btnPreview.CheckedState.Parent = this.btnPreview;
+            this.btnPreview.CustomImages.Parent = this.btnPreview;
+            this.btnPreview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.btnPreview.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPreview.ForeColor = System.Drawing.Color.White;
+            this.btnPreview.HoverState.Parent = this.btnPreview;
+            this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
+            this.btnPreview.Location = new System.Drawing.Point(44, 558);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
+            this.btnPreview.Size = new System.Drawing.Size(159, 44);
+            this.btnPreview.TabIndex = 2;
+            this.btnPreview.Text = "Preview";
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MaSach";
@@ -636,7 +601,42 @@ namespace LibraryManager.Template
             this.remove.MinimumWidth = 6;
             this.remove.Name = "remove";
             this.remove.Text = "Bỏ";
-            this.remove.UseColumnTextForButtonValue = true;
+            // 
+            // dateHanTra
+            // 
+            this.dateHanTra.BorderColor = System.Drawing.Color.Transparent;
+            this.dateHanTra.BorderRadius = 6;
+            this.dateHanTra.BorderSize = 0;
+            this.dateHanTra.CustomFormat = "dd/MM/yyyy";
+            this.dateHanTra.Enabled = false;
+            this.dateHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateHanTra.Location = new System.Drawing.Point(256, 127);
+            this.dateHanTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 37);
+            this.dateHanTra.Name = "dateHanTra";
+            this.dateHanTra.Size = new System.Drawing.Size(183, 37);
+            this.dateHanTra.SkinColor = System.Drawing.Color.White;
+            this.dateHanTra.TabIndex = 2;
+            this.dateHanTra.TextColor = System.Drawing.Color.Black;
+            // 
+            // DateMuon
+            // 
+            this.DateMuon.BorderColor = System.Drawing.Color.Transparent;
+            this.DateMuon.BorderRadius = 6;
+            this.DateMuon.BorderSize = 0;
+            this.DateMuon.CustomFormat = "dd/MM/yyyy";
+            this.DateMuon.Enabled = false;
+            this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateMuon.Location = new System.Drawing.Point(29, 127);
+            this.DateMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
+            this.DateMuon.Name = "DateMuon";
+            this.DateMuon.Size = new System.Drawing.Size(187, 37);
+            this.DateMuon.SkinColor = System.Drawing.Color.White;
+            this.DateMuon.TabIndex = 1;
+            this.DateMuon.TextColor = System.Drawing.Color.Black;
             // 
             // PhieuMuon
             // 
@@ -659,13 +659,13 @@ namespace LibraryManager.Template
             this.Load += new System.EventHandler(this.PhieuMuon_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBook)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoBorrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBook)).EndInit();
             this.ResumeLayout(false);
 
         }

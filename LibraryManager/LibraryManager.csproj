@@ -265,6 +265,18 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Hello_TacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Hello_TacGia.Designer.cs">
+      <DependentUpon>Hello_TacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Hello_TheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Hello_TheLoai.Designer.cs">
+      <DependentUpon>Hello_TheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\testListByte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,6 +474,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Hello_TacGia.resx">
+      <DependentUpon>Hello_TacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Hello_TheLoai.resx">
+      <DependentUpon>Hello_TheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\testListByte.resx">
       <DependentUpon>testListByte.cs</DependentUpon>

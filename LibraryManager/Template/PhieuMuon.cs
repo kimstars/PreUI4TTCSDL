@@ -110,7 +110,7 @@ namespace LibraryManager.Template
             MaDauSachCurrent = MaDauSach;
 
 
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 5)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
