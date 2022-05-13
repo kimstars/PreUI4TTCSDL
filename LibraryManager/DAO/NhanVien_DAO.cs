@@ -64,8 +64,21 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string GetMaNV_PM(string MaMT)
+        {
+            string sql = $"SELECT MaNhanVien FROM dbo.PHIEUMUONTRA WHERE MaMuonTra = '{MaMT}'";
+            return GetString(sql);
+        }
+
+        public DataTable GetThongTinNV(string MaNV)
+        {
+            string sql = $"select TenNhanVien,ChucVu,NgaySinh,GioiTinh,DiaChi,Email,SDT,CMND,TenDangNhap from Nhanvien WHERE MaNhanVien = '{MaNV}'";
+            return GetData(sql);
+        }
 
         #endregion
+
+
 
 
     }

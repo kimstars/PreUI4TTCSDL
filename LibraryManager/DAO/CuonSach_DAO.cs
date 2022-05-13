@@ -16,6 +16,8 @@ namespace LibraryManager.DAO
             string sql = "SELECT MaSach FROM dbo.CUONSACH";
             return GetData(sql);
         }
+       
+
 
 
 

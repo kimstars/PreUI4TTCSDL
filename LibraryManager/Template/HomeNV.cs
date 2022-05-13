@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class Home : Form
+    public partial class HomeNV : UserControl
     {
-        public Home()
+        public HomeNV()
         {
             InitializeComponent();
         }

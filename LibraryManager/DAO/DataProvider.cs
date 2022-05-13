@@ -21,6 +21,15 @@ namespace LibraryManager.DAO
             adapter.Fill(rs);
             return rs;
         }
+
+        public SqlDataAdapter GetDataSet(string sql)
+        {
+            
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
+
+            return adapter;
+        }
+
         public void Excute(string sql)
         {
             connect.Open();
@@ -60,30 +69,26 @@ namespace LibraryManager.DAO
         }
 
 
-        public string ExcuteRetStr(string sql)
+        public Int64 GetCount(string sql)
         {
-            
-            
-            string res = "";
-
-            using (SqlCommand command = new SqlCommand(sql, connect))
-            {
-                if (connect.State != ConnectionState.Open)
-                    connect.Open();
-                object result = command.ExecuteScalar();
-                if (result != null)
-                {
-                    res = result.ToString();
-                    //MessageBox.Show(res);
-                }
-            }
-
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            Int32 count = (Int32)command.ExecuteScalar();
             connect.Close();
-
-            return res;
+            return count;
             
         }
 
+        public string GetString(string sql)
+        {
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            string res = (string)command.ExecuteScalar();
+            connect.Close();
+            return res;
+        }
 
         public string DateToString(Nullable<DateTime> d)
         {

@@ -17,13 +17,19 @@ namespace LibraryManager.BUS
                 return true;
             return false;
         }
-        public int DangKy(TaiKhoan _tv)
+        public bool DangKy(TaiKhoan _tv)
         {
-            if (string.IsNullOrEmpty(_tv.TenDangNhap) || string.IsNullOrEmpty(_tv.MatKhau))
-                return -1;
-            if (tvDao.signup(_tv,false) == true)
-                return 1;
-            return 0;
+            return tvDao.signup(_tv, false);
+        }
+
+        public bool checkTonTaiTK(string username)
+        {
+            return tvDao.checkExistTK(username);
+        }
+
+        public string LoadLoaiTK(string username)
+        {
+            return tvDao.LoaiTaiKhoan(username);
         }
       
     }

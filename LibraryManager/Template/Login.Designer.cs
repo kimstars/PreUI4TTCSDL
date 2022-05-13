@@ -34,12 +34,12 @@ namespace LibraryManager
             this.btnToggle = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbMsg = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@ namespace LibraryManager
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(79, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 34);
+            this.label1.Size = new System.Drawing.Size(138, 28);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đăng nhập";
             // 
@@ -111,6 +111,38 @@ namespace LibraryManager
             this.guna2Button3.TabIndex = 18;
             this.guna2Button3.Text = "Đăng ký";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(85, 265);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Đồng ý chấp hành Nội quy thư viện?";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(85, 362);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 16);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Bạn quên mật khẩu ?";
+            // 
+            // lbMsg
+            // 
+            this.lbMsg.AutoSize = true;
+            this.lbMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbMsg.Location = new System.Drawing.Point(36, 228);
+            this.lbMsg.Name = "lbMsg";
+            this.lbMsg.Size = new System.Drawing.Size(11, 16);
+            this.lbMsg.TabIndex = 22;
+            this.lbMsg.Text = ".";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // txtPassword
             // 
             this.txtPassword.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_male_user_50px_1;
@@ -168,38 +200,6 @@ namespace LibraryManager
             this.txtUsername.Size = new System.Drawing.Size(271, 42);
             this.txtUsername.TabIndex = 11;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 265);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 17);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Đồng ý chấp hành Nội quy thư viện?";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 362);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 17);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Bạn quên mật khẩu ?";
-            // 
-            // lbMsg
-            // 
-            this.lbMsg.AutoSize = true;
-            this.lbMsg.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Location = new System.Drawing.Point(36, 228);
-            this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(12, 17);
-            this.lbMsg.TabIndex = 22;
-            this.lbMsg.Text = ".";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,7 +225,6 @@ namespace LibraryManager
         #endregion
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2ToggleSwitch btnToggle;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
@@ -233,5 +232,6 @@ namespace LibraryManager
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbMsg;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
     }
 }

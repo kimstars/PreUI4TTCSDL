@@ -63,7 +63,7 @@ namespace LibraryManager.Template
 
         private void FormAdmin_Load_1(object sender, EventArgs e)
         {
-            PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
+            PanelMenuBar.Width = PanelMenuBar.MaximumSize.Width;
 
 
             hideChildFrm();
@@ -174,6 +174,8 @@ namespace LibraryManager.Template
             
             //infoDG.Visible = false;
             danhSachDG1.Visible = false;
+            dsPhieuMuonNV1.Visible = false;
+
         }
 
 
@@ -181,6 +183,7 @@ namespace LibraryManager.Template
         {
             hideChildFrm();
             danhsachNV1.Visible = true;
+            danhsachNV1.Dock = DockStyle.Fill;
         }
 
         private void btnDSDocGia_ClientSizeChanged(object sender, EventArgs e)
@@ -193,12 +196,24 @@ namespace LibraryManager.Template
             hideChildFrm();
             //infoDG.Visible = true;
             phieuMuon.Visible = true;
+            phieuMuon.Dock = DockStyle.Fill;
+
         }
 
         private void btnDSDocGia_Click(object sender, EventArgs e)
         {
             hideChildFrm();
             danhSachDG1.Visible = true;
+            danhSachDG1.Dock = DockStyle.Fill;
+
+        }
+
+        private void btnPhieumuon_Click(object sender, EventArgs e)
+        {
+            hideChildFrm();
+            dsPhieuMuonNV1.Visible = true;
+            dsPhieuMuonNV1.Dock = DockStyle.Fill;
+
         }
     }
 }

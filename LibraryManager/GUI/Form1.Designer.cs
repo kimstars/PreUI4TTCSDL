@@ -35,34 +35,31 @@ namespace LibraryManager
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PanelMenuBar = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelButton = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongtin = new Guna.UI2.WinForms.Guna2Button();
-            this.PaneLogin = new System.Windows.Forms.Panel();
-            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.btnloginQL = new Guna.UI2.WinForms.Guna2Button();
-            this.btnloginNV = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLoginDG = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLoginn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.frminfoDG = new LibraryManager.Template.InfoDG();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.LoginTick = new System.Windows.Forms.Timer(this.components);
-            this.Paneltoolbar = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.frmThongtin = new LibraryManager.Template.Thongtin();
-            this.FrmLogin1 = new LibraryManager.Login();
+            this.Paneltoolbar = new System.Windows.Forms.Panel();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.panelShow = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.PanelMenuBar.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.PaneLogin.SuspendLayout();
+            this.panelButton.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Paneltoolbar.SuspendLayout();
@@ -110,29 +107,101 @@ namespace LibraryManager
             // PanelMenuBar
             // 
             this.PanelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
-            this.PanelMenuBar.Controls.Add(this.panel4);
-            this.PanelMenuBar.Controls.Add(this.PaneLogin);
+            this.PanelMenuBar.Controls.Add(this.panelButton);
+            this.PanelMenuBar.Controls.Add(this.panel2);
             this.PanelMenuBar.Controls.Add(this.panel1);
+            this.PanelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenuBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenuBar.MaximumSize = new System.Drawing.Size(190, 708);
-            this.PanelMenuBar.MinimumSize = new System.Drawing.Size(58, 643);
+            this.PanelMenuBar.MinimumSize = new System.Drawing.Size(58, 750);
             this.PanelMenuBar.Name = "PanelMenuBar";
-            this.PanelMenuBar.Size = new System.Drawing.Size(190, 708);
+            this.PanelMenuBar.Size = new System.Drawing.Size(190, 750);
             this.PanelMenuBar.TabIndex = 6;
             // 
-            // panel4
+            // panelButton
             // 
-            this.panel4.Controls.Add(this.guna2Button2);
-            this.panel4.Controls.Add(this.guna2Button1);
-            this.panel4.Controls.Add(this.btnCaiDat);
-            this.panel4.Controls.Add(this.btnThongtin);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 237);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 172);
-            this.panel4.TabIndex = 11;
+            this.panelButton.Controls.Add(this.guna2Button2);
+            this.panelButton.Controls.Add(this.btnDangKy);
+            this.panelButton.Controls.Add(this.guna2Button5);
+            this.panelButton.Controls.Add(this.guna2Button1);
+            this.panelButton.Controls.Add(this.btnDangNhap);
+            this.panelButton.Controls.Add(this.btnThongtin);
+            this.panelButton.Controls.Add(this.btnCaiDat);
+            this.panelButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelButton.Location = new System.Drawing.Point(0, 69);
+            this.panelButton.Margin = new System.Windows.Forms.Padding(2);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(190, 309);
+            this.panelButton.TabIndex = 19;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Image = global::LibraryManager.Properties.Resources.icons8_home_64px;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 5);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Padding = new System.Windows.Forms.Padding(1);
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(190, 39);
+            this.guna2Button2.TabIndex = 21;
+            this.guna2Button2.Tag = "Home";
+            this.guna2Button2.Text = "Home";
+            // 
+            // btnDangKy
+            // 
+            this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnDangKy.CheckedState.Parent = this.btnDangKy;
+            this.btnDangKy.CustomImages.Parent = this.btnDangKy;
+            this.btnDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.ForeColor = System.Drawing.Color.Black;
+            this.btnDangKy.HoverState.Parent = this.btnDangKy;
+            this.btnDangKy.Image = global::LibraryManager.Properties.Resources.icons8_add_user_male_60px;
+            this.btnDangKy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangKy.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDangKy.Location = new System.Drawing.Point(0, 92);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Padding = new System.Windows.Forms.Padding(1);
+            this.btnDangKy.ShadowDecoration.Parent = this.btnDangKy;
+            this.btnDangKy.Size = new System.Drawing.Size(190, 41);
+            this.btnDangKy.TabIndex = 23;
+            this.btnDangKy.Tag = "Đăng ký ";
+            this.btnDangKy.Text = "Đăng ký ";
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Image = global::LibraryManager.Properties.Resources.icons8_study_64px;
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 136);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Padding = new System.Windows.Forms.Padding(1);
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(190, 39);
+            this.guna2Button5.TabIndex = 21;
+            this.guna2Button5.Tag = "Tìm kiếm sách";
+            this.guna2Button5.Text = "Tìm kiếm sách";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button1
             // 
@@ -143,18 +212,65 @@ namespace LibraryManager
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_ab_testing_48px;
+            this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_database_daily_import_40px;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 82);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 179);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Padding = new System.Windows.Forms.Padding(1);
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(190, 39);
             this.guna2Button1.TabIndex = 15;
-            this.guna2Button1.Text = "Nhập mượn DB";
+            this.guna2Button1.Tag = "Tạo Data ";
+            this.guna2Button1.Text = "Tạo Data ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnDangNhap.CheckedState.Parent = this.btnDangNhap;
+            this.btnDangNhap.CustomImages.Parent = this.btnDangNhap;
+            this.btnDangNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.btnDangNhap.HoverState.Parent = this.btnDangNhap;
+            this.btnDangNhap.Image = global::LibraryManager.Properties.Resources.icons8_male_user_100px;
+            this.btnDangNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangNhap.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDangNhap.Location = new System.Drawing.Point(0, 47);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Padding = new System.Windows.Forms.Padding(1);
+            this.btnDangNhap.ShadowDecoration.Parent = this.btnDangNhap;
+            this.btnDangNhap.Size = new System.Drawing.Size(190, 41);
+            this.btnDangNhap.TabIndex = 22;
+            this.btnDangNhap.Tag = "Đăng nhập";
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // btnThongtin
+            // 
+            this.btnThongtin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnThongtin.CheckedState.Parent = this.btnThongtin;
+            this.btnThongtin.CustomImages.Parent = this.btnThongtin;
+            this.btnThongtin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnThongtin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongtin.ForeColor = System.Drawing.Color.Black;
+            this.btnThongtin.HoverState.Parent = this.btnThongtin;
+            this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_60px;
+            this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThongtin.Location = new System.Drawing.Point(0, 221);
+            this.btnThongtin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongtin.Name = "btnThongtin";
+            this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
+            this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
+            this.btnThongtin.Size = new System.Drawing.Size(190, 37);
+            this.btnThongtin.TabIndex = 13;
+            this.btnThongtin.Tag = "Thông tin";
+            this.btnThongtin.Text = "Thông tin";
+            this.btnThongtin.Click += new System.EventHandler(this.btnThongtin_Click);
             // 
             // btnCaiDat
             // 
@@ -168,140 +284,47 @@ namespace LibraryManager
             this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
             this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 41);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 262);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
             this.btnCaiDat.ShadowDecoration.Parent = this.btnCaiDat;
             this.btnCaiDat.Size = new System.Drawing.Size(190, 37);
             this.btnCaiDat.TabIndex = 14;
+            this.btnCaiDat.Tag = "Cài đặt";
             this.btnCaiDat.Text = "Cài đặt";
             this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
             // 
-            // btnThongtin
+            // panel2
             // 
-            this.btnThongtin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnThongtin.CheckedState.Parent = this.btnThongtin;
-            this.btnThongtin.CustomImages.Parent = this.btnThongtin;
-            this.btnThongtin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnThongtin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongtin.ForeColor = System.Drawing.Color.Black;
-            this.btnThongtin.HoverState.Parent = this.btnThongtin;
-            this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_30px;
-            this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThongtin.Location = new System.Drawing.Point(0, 0);
-            this.btnThongtin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnThongtin.Name = "btnThongtin";
-            this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
-            this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
-            this.btnThongtin.Size = new System.Drawing.Size(190, 37);
-            this.btnThongtin.TabIndex = 13;
-            this.btnThongtin.Text = "Thông tin";
-            this.btnThongtin.Click += new System.EventHandler(this.btnThongtin_Click);
+            this.panel2.Controls.Add(this.btnLoginn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 67);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(190, 2);
+            this.panel2.TabIndex = 18;
             // 
-            // PaneLogin
+            // btnLoginn
             // 
-            this.PaneLogin.Controls.Add(this.btnLogin);
-            this.PaneLogin.Controls.Add(this.btnloginQL);
-            this.PaneLogin.Controls.Add(this.btnloginNV);
-            this.PaneLogin.Controls.Add(this.btnLoginDG);
-            this.PaneLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PaneLogin.Location = new System.Drawing.Point(0, 63);
-            this.PaneLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.PaneLogin.MaximumSize = new System.Drawing.Size(190, 174);
-            this.PaneLogin.MinimumSize = new System.Drawing.Size(190, 45);
-            this.PaneLogin.Name = "PaneLogin";
-            this.PaneLogin.Size = new System.Drawing.Size(190, 174);
-            this.PaneLogin.TabIndex = 17;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnLogin.CheckedState.Parent = this.btnLogin;
-            this.btnLogin.CustomImages.Parent = this.btnLogin;
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Image = global::LibraryManager.Properties.Resources.icons8_male_user_50px_1;
-            this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogin.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogin.Location = new System.Drawing.Point(0, 2);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Padding = new System.Windows.Forms.Padding(1);
-            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(190, 40);
-            this.btnLogin.TabIndex = 12;
-            this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnloginQL
-            // 
-            this.btnloginQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnloginQL.BorderColor = System.Drawing.Color.Transparent;
-            this.btnloginQL.BorderThickness = 1;
-            this.btnloginQL.CheckedState.Parent = this.btnloginQL;
-            this.btnloginQL.CustomImages.Parent = this.btnloginQL;
-            this.btnloginQL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnloginQL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnloginQL.ForeColor = System.Drawing.Color.Black;
-            this.btnloginQL.HoverState.Parent = this.btnloginQL;
-            this.btnloginQL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnloginQL.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnloginQL.Location = new System.Drawing.Point(0, 130);
-            this.btnloginQL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnloginQL.Name = "btnloginQL";
-            this.btnloginQL.ShadowDecoration.Parent = this.btnloginQL;
-            this.btnloginQL.Size = new System.Drawing.Size(190, 37);
-            this.btnloginQL.TabIndex = 17;
-            this.btnloginQL.Text = "Quản lý";
-            this.btnloginQL.Click += new System.EventHandler(this.btnLoginQL_Click);
-            // 
-            // btnloginNV
-            // 
-            this.btnloginNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnloginNV.BorderColor = System.Drawing.Color.Transparent;
-            this.btnloginNV.BorderThickness = 1;
-            this.btnloginNV.CheckedState.Parent = this.btnloginNV;
-            this.btnloginNV.CustomImages.Parent = this.btnloginNV;
-            this.btnloginNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnloginNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnloginNV.ForeColor = System.Drawing.Color.Black;
-            this.btnloginNV.HoverState.Parent = this.btnloginNV;
-            this.btnloginNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnloginNV.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnloginNV.Location = new System.Drawing.Point(0, 47);
-            this.btnloginNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnloginNV.Name = "btnloginNV";
-            this.btnloginNV.ShadowDecoration.Parent = this.btnloginNV;
-            this.btnloginNV.Size = new System.Drawing.Size(190, 37);
-            this.btnloginNV.TabIndex = 16;
-            this.btnloginNV.Text = "Thủ thư";
-            this.btnloginNV.Click += new System.EventHandler(this.btnloginNV_Click);
-            // 
-            // btnLoginDG
-            // 
-            this.btnLoginDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnLoginDG.BorderColor = System.Drawing.Color.Transparent;
-            this.btnLoginDG.BorderThickness = 1;
-            this.btnLoginDG.CheckedState.Parent = this.btnLoginDG;
-            this.btnLoginDG.CustomImages.Parent = this.btnLoginDG;
-            this.btnLoginDG.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnLoginDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginDG.ForeColor = System.Drawing.Color.Black;
-            this.btnLoginDG.HoverState.Parent = this.btnLoginDG;
-            this.btnLoginDG.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLoginDG.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLoginDG.Location = new System.Drawing.Point(0, 89);
-            this.btnLoginDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLoginDG.Name = "btnLoginDG";
-            this.btnLoginDG.ShadowDecoration.Parent = this.btnLoginDG;
-            this.btnLoginDG.Size = new System.Drawing.Size(190, 37);
-            this.btnLoginDG.TabIndex = 15;
-            this.btnLoginDG.Text = "Độc giả";
-            this.btnLoginDG.Click += new System.EventHandler(this.btnLoginDG_Click);
+            this.btnLoginn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnLoginn.CheckedState.Parent = this.btnLoginn;
+            this.btnLoginn.CustomImages.Parent = this.btnLoginn;
+            this.btnLoginn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnLoginn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginn.ForeColor = System.Drawing.Color.Black;
+            this.btnLoginn.HoverState.Parent = this.btnLoginn;
+            this.btnLoginn.Image = global::LibraryManager.Properties.Resources.icons8_male_user_50px_1;
+            this.btnLoginn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLoginn.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLoginn.Location = new System.Drawing.Point(-1, 2);
+            this.btnLoginn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoginn.Name = "btnLoginn";
+            this.btnLoginn.Padding = new System.Windows.Forms.Padding(1);
+            this.btnLoginn.ShadowDecoration.Parent = this.btnLoginn;
+            this.btnLoginn.Size = new System.Drawing.Size(190, 40);
+            this.btnLoginn.TabIndex = 12;
+            this.btnLoginn.Tag = "Đăng nhập";
+            this.btnLoginn.Text = "Đăng nhập";
             // 
             // panel1
             // 
@@ -309,9 +332,9 @@ namespace LibraryManager
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 63);
+            this.panel1.Size = new System.Drawing.Size(190, 67);
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -321,7 +344,7 @@ namespace LibraryManager
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_library_64__2_;
             this.pictureBox2.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 63);
             this.pictureBox2.TabIndex = 8;
@@ -341,18 +364,28 @@ namespace LibraryManager
             this.label2.Text = "Thư viện MTA";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // frminfoDG
-            // 
-            this.frminfoDG.Location = new System.Drawing.Point(220, 47);
-            this.frminfoDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.frminfoDG.Name = "frminfoDG";
-            this.frminfoDG.Size = new System.Drawing.Size(618, 592);
-            this.frminfoDG.TabIndex = 13;
-            this.frminfoDG.Visible = false;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // sidebartick
+            // 
+            this.sidebartick.Tick += new System.EventHandler(this.sidebartick_Tick);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.Paneltoolbar;
+            // 
+            // Paneltoolbar
+            // 
+            this.Paneltoolbar.Controls.Add(this.guna2ControlBox3);
+            this.Paneltoolbar.Controls.Add(this.guna2ControlBox4);
+            this.Paneltoolbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Paneltoolbar.Location = new System.Drawing.Point(190, 0);
+            this.Paneltoolbar.Margin = new System.Windows.Forms.Padding(2);
+            this.Paneltoolbar.Name = "Paneltoolbar";
+            this.Paneltoolbar.Size = new System.Drawing.Size(974, 42);
+            this.Paneltoolbar.TabIndex = 12;
             // 
             // guna2ControlBox3
             // 
@@ -362,8 +395,8 @@ namespace LibraryManager
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1106, 13);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(888, 13);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
@@ -376,52 +409,20 @@ namespace LibraryManager
             this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox4.HoverState.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox4.Location = new System.Drawing.Point(1150, 13);
-            this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox4.Location = new System.Drawing.Point(932, 13);
+            this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox4.Name = "guna2ControlBox4";
             this.guna2ControlBox4.ShadowDecoration.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox4.TabIndex = 9;
             // 
-            // sidebartick
+            // panelShow
             // 
-            this.sidebartick.Tick += new System.EventHandler(this.sidebartick_Tick);
-            // 
-            // LoginTick
-            // 
-            this.LoginTick.Tick += new System.EventHandler(this.LoginTick_Tick);
-            // 
-            // Paneltoolbar
-            // 
-            this.Paneltoolbar.Controls.Add(this.guna2ControlBox3);
-            this.Paneltoolbar.Controls.Add(this.guna2ControlBox4);
-            this.Paneltoolbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Paneltoolbar.Location = new System.Drawing.Point(0, 0);
-            this.Paneltoolbar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Paneltoolbar.Name = "Paneltoolbar";
-            this.Paneltoolbar.Size = new System.Drawing.Size(1192, 44);
-            this.Paneltoolbar.TabIndex = 12;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this.Paneltoolbar;
-            // 
-            // frmThongtin
-            // 
-            this.frmThongtin.Location = new System.Drawing.Point(317, 47);
-            this.frmThongtin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.frmThongtin.Name = "frmThongtin";
-            this.frmThongtin.Size = new System.Drawing.Size(398, 440);
-            this.frmThongtin.TabIndex = 11;
-            this.frmThongtin.Visible = false;
-            // 
-            // FrmLogin1
-            // 
-            this.FrmLogin1.Location = new System.Drawing.Point(308, 47);
-            this.FrmLogin1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FrmLogin1.Name = "FrmLogin1";
-            this.FrmLogin1.Size = new System.Drawing.Size(388, 432);
-            this.FrmLogin1.TabIndex = 7;
+            this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShow.Location = new System.Drawing.Point(190, 42);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(974, 673);
+            this.panelShow.TabIndex = 13;
             // 
             // pictureBox1
             // 
@@ -434,60 +435,24 @@ namespace LibraryManager
             this.pictureBox1.Size = new System.Drawing.Size(259, 68);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // formQLInfo
-            // 
-            this.formQLInfo.ID2 = "";
-            this.formQLInfo.Location = new System.Drawing.Point(196, 43);
-            this.formQLInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.formQLInfo.Name = "formQLInfo";
-            this.formQLInfo.Size = new System.Drawing.Size(1003, 662);
-            this.formQLInfo.TabIndex = 14;
-            this.formQLInfo.Visible = false;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = global::LibraryManager.Properties.Resources.icons8_ab_testing_48px;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 125);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Padding = new System.Windows.Forms.Padding(1);
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(190, 39);
-            this.guna2Button2.TabIndex = 16;
-            this.guna2Button2.Text = "Nhập sách DB";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 703);
-            this.Controls.Add(this.PanelMenuBar);
-            this.Controls.Add(this.formQLInfo);
-            this.Controls.Add(this.frminfoDG);
+            this.ClientSize = new System.Drawing.Size(1164, 715);
+            this.Controls.Add(this.panelShow);
             this.Controls.Add(this.Paneltoolbar);
-            this.Controls.Add(this.frmThongtin);
-            this.Controls.Add(this.FrmLogin1);
+            this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenuBar.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.PaneLogin.ResumeLayout(false);
+            this.panelButton.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -503,29 +468,26 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private System.Windows.Forms.Panel PanelMenuBar;
-        private Login FrmLogin1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnCaiDat;
         private Guna.UI2.WinForms.Guna2Button btnThongtin;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2Button btnLoginDG;
-        private Guna.UI2.WinForms.Guna2Button btnloginNV;
-        private Guna.UI2.WinForms.Guna2Button btnloginQL;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel PaneLogin;
         private System.Windows.Forms.Timer sidebartick;
         private System.Windows.Forms.Timer LoginTick;
-        private Template.Thongtin frmThongtin;
-        private System.Windows.Forms.Panel Paneltoolbar;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Template.InfoDG frminfoDG;
-        private Template.QLInfoDocgia formQLInfo;
+        private System.Windows.Forms.Panel panelShow;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnLoginn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnDangNhap;
+        private Guna.UI2.WinForms.Guna2Button btnDangKy;
+        private System.Windows.Forms.Panel Paneltoolbar;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
     }
 }

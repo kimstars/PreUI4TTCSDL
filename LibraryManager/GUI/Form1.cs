@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,95 +18,14 @@ namespace LibraryManager
             InitializeComponent();
         }
 
-        
-        private void hideChildForm()
-        {
-            FrmLogin1.Visible = false;
-            frmThongtin.Visible = false;
-            frminfoDG.Visible = false;
-            formQLInfo.Visible = false;
-        }
-
-
-        
-        private void btnquanlysachkho_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnQLsachtra_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnQLsachnhap_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnQLsachmuon_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (sidebarExpand)
-            {
-                LoginTick.Start();
-            }
-
-        }
-
-        private void btnLoginDG_Click(object sender, EventArgs e)
-        {
-            hideChildForm();
-
-            FrmLogin1.Visible = true;
-
-        }
-
-        private void btnloginNV_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnLoginQL_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            //if (PanelMenuBar.Visible == false)
-            //{
-            //    PanelMenuBar.Visible = true;
-
-            //}
-            //else
-            //{
-            //    PanelMenuBar.Visible = false;
-            //}
-        }
-
-        private void separatorControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
-            PaneLogin.Height = PaneLogin.MinimumSize.Height;
-
+            sidebartick.Start();
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeHello());
         }
 
-
+        public static bool isLogin = false;
 
         bool sidebarExpand;
         private void sidebartick_Tick(object sender, EventArgs e)
@@ -118,6 +38,13 @@ namespace LibraryManager
                     sidebarExpand = false;
                     sidebartick.Stop();
                 }
+
+                foreach (var btn in panelButton.Controls.OfType<Guna2Button>())
+                {
+                    btn.Text = "";
+                    btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+                    btn.Padding = new Padding(0);
+                }
             }
             else
             {
@@ -127,50 +54,33 @@ namespace LibraryManager
                     sidebarExpand = true;
                     sidebartick.Stop();
                 }
+
+                foreach (Guna2Button btn in panelButton.Controls.OfType<Guna2Button>())
+                {
+                    btn.Text = btn.Tag.ToString();
+                    btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+                    btn.Padding = new Padding(10, 0, 0, 0);
+                }
             }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+    
             sidebartick.Start();
         }
 
-        bool LoginCollapse;
-
-        private void LoginTick_Tick(object sender, EventArgs e)
-        {
-
-            if (LoginCollapse)
-            {
-                PaneLogin.Height -= 100;
-                if (PaneLogin.Height == PaneLogin.MinimumSize.Height)
-                {
-                    LoginCollapse = false;
-                    LoginTick.Stop();
-                }
-            }
-            else
-            {
-                PaneLogin.Height += 100;
-                if (PaneLogin.Height == PaneLogin.MaximumSize.Height)
-                {
-                    LoginCollapse = true;
-                    LoginTick.Stop();
-                }
-            }
-        }
-
-
+        
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            hideChildForm();
+            
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
         {
-            hideChildForm();
-            frmThongtin.Visible = true;
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.Thongtin());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -180,27 +90,31 @@ namespace LibraryManager
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            hideChildForm();
-            //frminfoDG.Visible = true;
-            formQLInfo.Visible = true;
-
-            //Template.FormAdmin newform = new Template.FormAdmin();
-            //newform.Show();
-
-            CreateDB.ThemMuonTra newThemMT = new CreateDB.ThemMuonTra();
-            newThemMT.Show();
-
-
+            GUI.CreateDataDB newform = new GUI.CreateDataDB();
+            newform.Show();
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+
+        private void guna2Button5_Click(object sender, EventArgs e)
         {
-            hideChildForm();
-            CreateDB.NhapSach newNhap = new CreateDB.NhapSach();
-            newNhap.Show();
+            GUI.TimKiem4Hello newform = new GUI.TimKiem4Hello();
+            newform.Show();
+
         }
 
         
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            GUI.frmLogin newform = new GUI.frmLogin();
+            newform.Show();
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            GUI.FrmDangKy newform = new GUI.FrmDangKy();
+            newform.Show();
+        }
     }
 }

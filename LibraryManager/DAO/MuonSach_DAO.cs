@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using LibraryManager.DTO;
 using System.Windows.Forms;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
@@ -25,7 +26,11 @@ namespace LibraryManager.DAO
 
         public bool InsertThongTinMT(ThongTinMuonTra ttmt)
         {
-            string sql = $@"INSERT INTO dbo.THONGTINMUONTRA VALUES ('{ttmt.MaMuonTra}', '{ttmt.MaSach}','')";
+            string sql = $@"INSERT INTO dbo.THONGTINMUONTRA VALUES ('{ttmt.MaMuonTra}', '{ttmt.MaSach}', NULL)";
+
+            Excute(sql);
+
+            sql = $"UPDATE dbo.CUONSACH SET TrangThai = 0 WHERE MaSach = '{ttmt.MaSach}'";
 
             Excute(sql);
 
@@ -41,7 +46,25 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
-        
+        // độc giả chọn sách -> bảng ghi thông tin các sách độc giả chọn
+        public DataTable LoadThongTinSachMuon(List<string> ListMaSach)
+        { 
+            string sql = "";
+
+            DataTable rs = new DataTable();
+
+            foreach (string i in ListMaSach)
+            {
+                sql = $"SELECT top 1 cs.MaSach, ds.MaDauSach, ds.TenDauSach, cs.ViTriSach, ds.GiaTien FROM dbo.CUONSACH AS cs INNER JOIN dbo.DAUSACH AS ds ON ds.MaDauSach = cs.MaDauSach WHERE cs.MaDauSach = '{i}' AND cs.TrangThai = 1 GROUP BY cs.MaSach, ds.MaDauSach, ds.TenDauSach, cs.ViTriSach, ds.GiaTien";
+                SqlDataAdapter temp = GetDataSet(sql);
+                temp.Fill(rs);
+            }
+            return rs;
+        }
+
+
+
+
 
     }
 }
