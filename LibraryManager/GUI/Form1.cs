@@ -116,5 +116,11 @@ namespace LibraryManager
             GUI.FrmDangKy newform = new GUI.FrmDangKy();
             newform.Show();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeNV());
+        }
     }
 }

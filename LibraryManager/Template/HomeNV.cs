@@ -16,5 +16,10 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+
+        private void HomeNV_Load(object sender, EventArgs e)
+        {
+            circlePercent.ValueByTransition = 60;
+        }
     }
 }
