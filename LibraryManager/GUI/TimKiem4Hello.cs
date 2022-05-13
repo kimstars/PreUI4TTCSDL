@@ -22,6 +22,8 @@ namespace LibraryManager.GUI
         }
 
         string MaDSCurrent = "";
+
+        public EventHandler clickPM;
         public void AddItem(string MaDauSach)
         {
 
@@ -202,21 +204,35 @@ namespace LibraryManager.GUI
             newform.Show();
         }
 
-        List<string> dsMuon = new List<string>();
-
+        public static List<string> dsMuon = new List<string>();
+        public static bool DaTim = false;
         private void btnCreatePM_Click(object sender, EventArgs e)
         {
 
             dsMuon.Clear();
-            DataTable tempMuon = (DataTable)dgvChooseBook.DataSource;
             for(int i = 0; i< dgvChooseBook.Rows.Count; i++)
             {
-                dsMuon.Add(dgvChooseBook.Rows[i].Cells["MaDauSach"].ToString());
+                dsMuon.Add(dgvChooseBook.Rows[i].Cells["MaDauSach"].Value.ToString());
+    
             }
+            DaTim = true;
 
 
+            openAfterLog();
+        }
 
-
+        public static void openAfterLog()
+        {
+            if (!Form1.isLogin)
+            {
+                frmLogin newlogin = new frmLogin();
+                newlogin.Show();
+            }
+            else
+            {
+                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr);
+                newdg.Show();
+            }
         }
     }
 }

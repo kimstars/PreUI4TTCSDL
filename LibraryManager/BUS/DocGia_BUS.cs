@@ -114,7 +114,7 @@ namespace LibraryManager.BUS
 
         #endregion
 
-        #region suathongtin
+        #region xuathongtin
 
 
         public bool UpdateOne(DocGia dg)
@@ -122,5 +122,11 @@ namespace LibraryManager.BUS
             return dgDao.Update(dg);
         }
         #endregion
+
+
+        public string LoadMaDG_TK(string tk)
+        {
+            return dgDao.GetMaDG_TaiKhoan(tk);
+        }
     }
 }

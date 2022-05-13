@@ -143,10 +143,11 @@ namespace LibraryManager.Template
             this.txtTenDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDG.HoverState.Parent = this.txtTenDG;
             this.txtTenDG.Location = new System.Drawing.Point(22, 34);
-            this.txtTenDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.PasswordChar = '\0';
             this.txtTenDG.PlaceholderText = "";
+            this.txtTenDG.ReadOnly = true;
             this.txtTenDG.SelectedText = "";
             this.txtTenDG.ShadowDecoration.Parent = this.txtTenDG;
             this.txtTenDG.Size = new System.Drawing.Size(141, 32);
@@ -311,7 +312,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(643, 98);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(332, 488);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(332, 517);
             this.guna2CustomGradientPanel1.TabIndex = 25;
             // 
             // btnLoaiBo
@@ -325,8 +326,8 @@ namespace LibraryManager.Template
             this.btnLoaiBo.ForeColor = System.Drawing.Color.White;
             this.btnLoaiBo.HoverState.Parent = this.btnLoaiBo;
             this.btnLoaiBo.Image = global::LibraryManager.Properties.Resources.icons8_remove_tag_40px;
-            this.btnLoaiBo.Location = new System.Drawing.Point(188, 427);
-            this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoaiBo.Location = new System.Drawing.Point(196, 453);
+            this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoaiBo.Name = "btnLoaiBo";
             this.btnLoaiBo.ShadowDecoration.Parent = this.btnLoaiBo;
             this.btnLoaiBo.Size = new System.Drawing.Size(119, 36);
@@ -340,7 +341,7 @@ namespace LibraryManager.Template
             this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_study_200px;
             this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imageBook.Location = new System.Drawing.Point(11, 37);
-            this.imageBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imageBook.Margin = new System.Windows.Forms.Padding(2);
             this.imageBook.Name = "imageBook";
             this.imageBook.Size = new System.Drawing.Size(108, 117);
             this.imageBook.TabIndex = 3;
@@ -357,8 +358,8 @@ namespace LibraryManager.Template
             this.btnPreview.ForeColor = System.Drawing.Color.White;
             this.btnPreview.HoverState.Parent = this.btnPreview;
             this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.btnPreview.Location = new System.Drawing.Point(31, 427);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPreview.Location = new System.Drawing.Point(33, 453);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
             this.btnPreview.Size = new System.Drawing.Size(119, 36);
@@ -421,10 +422,11 @@ namespace LibraryManager.Template
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.HoverState.Parent = this.txtMaDG;
             this.txtMaDG.Location = new System.Drawing.Point(192, 34);
-            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "";
+            this.txtMaDG.ReadOnly = true;
             this.txtMaDG.SelectedText = "";
             this.txtMaDG.ShadowDecoration.Parent = this.txtMaDG;
             this.txtMaDG.Size = new System.Drawing.Size(141, 32);
@@ -452,7 +454,7 @@ namespace LibraryManager.Template
             this.dateHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateHanTra.Location = new System.Drawing.Point(192, 103);
-            this.dateHanTra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateHanTra.Margin = new System.Windows.Forms.Padding(2);
             this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 37);
             this.dateHanTra.Name = "dateHanTra";
             this.dateHanTra.Size = new System.Drawing.Size(138, 37);
@@ -470,7 +472,7 @@ namespace LibraryManager.Template
             this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateMuon.Location = new System.Drawing.Point(22, 103);
-            this.DateMuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateMuon.Margin = new System.Windows.Forms.Padding(2);
             this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
             this.DateMuon.Name = "DateMuon";
             this.DateMuon.Size = new System.Drawing.Size(141, 37);
@@ -611,7 +613,7 @@ namespace LibraryManager.Template
             this.bthHuy.HoverState.Parent = this.bthHuy;
             this.bthHuy.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
             this.bthHuy.Location = new System.Drawing.Point(846, 45);
-            this.bthHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bthHuy.Margin = new System.Windows.Forms.Padding(2);
             this.bthHuy.Name = "bthHuy";
             this.bthHuy.ShadowDecoration.Parent = this.bthHuy;
             this.bthHuy.Size = new System.Drawing.Size(129, 36);
@@ -630,7 +632,7 @@ namespace LibraryManager.Template
             this.btnMuon.HoverState.Parent = this.btnMuon;
             this.btnMuon.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
             this.btnMuon.Location = new System.Drawing.Point(643, 45);
-            this.btnMuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMuon.Margin = new System.Windows.Forms.Padding(2);
             this.btnMuon.Name = "btnMuon";
             this.btnMuon.ShadowDecoration.Parent = this.btnMuon;
             this.btnMuon.Size = new System.Drawing.Size(179, 36);
@@ -653,7 +655,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbMaMuonTra);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PhieuMuon";
             this.Size = new System.Drawing.Size(1000, 651);
             this.Load += new System.EventHandler(this.PhieuMuon_Load);

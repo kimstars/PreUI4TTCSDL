@@ -18,28 +18,14 @@ namespace LibraryManager
             InitializeComponent();
         }
 
-        
-        private void hideChildForm()
-        {
-         
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             sidebartick.Start();
-
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
-
         }
+
+        public static bool isLogin = false;
 
         bool sidebarExpand;
         private void sidebartick_Tick(object sender, EventArgs e)
@@ -80,24 +66,21 @@ namespace LibraryManager
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+    
             sidebartick.Start();
-
         }
 
         
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            hideChildForm();
+            
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
         {
-            hideChildForm();
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.Thongtin());
-
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -107,8 +90,6 @@ namespace LibraryManager
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            hideChildForm();
-
             GUI.CreateDataDB newform = new GUI.CreateDataDB();
             newform.Show();
 
@@ -117,20 +98,12 @@ namespace LibraryManager
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            hideChildForm();
-            //panelShow.Controls.Clear();
-            //panelShow.Controls.Add(new Template.TimKiemForHello());
-
             GUI.TimKiem4Hello newform = new GUI.TimKiem4Hello();
             newform.Show();
 
         }
 
-        private void btnLoginn_Click(object sender, EventArgs e)
-        {
-            GUI.frmLogin newform = new GUI.frmLogin();
-            newform.Show();
-        }
+        
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {

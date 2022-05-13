@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using LibraryManager.BUS;
 
 namespace LibraryManager
 {
@@ -20,11 +21,15 @@ namespace LibraryManager
         public FrmDocGia(string username)
         {
             InitializeComponent();
-        }
+            user = username;
 
- 
+        }
+        string Madocgia = "";
+        string user = "";
 
         bool sidebarExpand = true;
+
+
         private void sidebartick_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand) // thu vao
@@ -87,6 +92,37 @@ namespace LibraryManager
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
+
+        }
+
+        DocGia_BUS dgBus = new DocGia_BUS();
+
+        private void FrmDocGia_Load(object sender, EventArgs e)
+        {
+            if(user != "")
+            {
+                nameuser.Text = user;
+                Madocgia = dgBus.LoadMaDG_TK(user);
+                pictureAvt.Image = dgBus.LoadAnh(Madocgia);
+            }
+            if (GUI.TimKiem4Hello.DaTim)
+            {
+                panelShow.Controls.Clear();
+                List<string> dsmuon = GUI.TimKiem4Hello.dsMuon;
+                MessageBox.Show(dsmuon[0]);
+                panelShow.Controls.Add(new Template.PhieuMuon(Madocgia,dsmuon));
+                GUI.TimKiem4Hello.DaTim = false;
+            }
+        }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.InfoDG());
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
 
         }
     }

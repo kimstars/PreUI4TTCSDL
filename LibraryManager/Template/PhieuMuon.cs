@@ -29,21 +29,30 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
-   
 
-        string[] listsach = { "DS000030", "DS000040", "DS000045", "DS000009", "DS000013", "DS000012", "DS00002" };
+        public PhieuMuon(string maDG, List<string> dsds)
+        {
+            InitializeComponent();
+            listsach = dsds;
+            MaDocGia = maDG;
+        }
+        string MaDocGia;
+        List<string> listsach;
+
 
         string MaDauSachCurrent = "DS000000";
 
-
+        DataTable InfoBorrow = null;
 
         MuonSach_BUS msBus = new MuonSach_BUS();
         PhieuMuon_BUS pmBus = new PhieuMuon_BUS();
         private void PhieuMuon_Load(object sender, EventArgs e)
         {
-            
 
-            DataTable InfoBorrow = msBus.LoadTTSachMuon(listsach);
+
+            LoadTTDocGia();
+
+            InfoBorrow = msBus.LoadTTSachMuon(listsach);
 
             dgvInfoBorrow.DataSource = InfoBorrow;
 
@@ -55,7 +64,13 @@ namespace LibraryManager.Template
 
             lbMaMuonTra.Text = pmBus.CreateNext_MaMT();
 
-
+        }
+        DocGia_BUS dgBus = new DocGia_BUS();
+        private void LoadTTDocGia()
+        {
+            txtMaDG.Text = MaDocGia;
+            DocGia onedg = dgBus.GetOne(MaDocGia);
+            txtTenDG.Text = onedg.TenDocGia;
         }
         private void TinhTienCoc(DataTable InfoBorrow)
         {
@@ -97,8 +112,10 @@ namespace LibraryManager.Template
 
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
-            listsach = listsach.Where(var => var != MaDauSachCurrent).ToArray();
-            DataTable InfoBorrow = msBus.LoadTTSachMuon(listsach);
+
+            listsach.RemoveAll(x => ((string)x) == MaDauSachCurrent);
+
+            InfoBorrow = msBus.LoadTTSachMuon(listsach);
             dgvInfoBorrow.DataSource = InfoBorrow;
             TinhTienCoc(InfoBorrow);
 
@@ -122,7 +139,8 @@ namespace LibraryManager.Template
             List<string> DSMaSach = new List<string>();
             for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
             {
-                DSMaSach.Add(dgvInfoBorrow.Rows[i].Cells[0].Value.ToString());
+                var tempmds = dgvInfoBorrow.Rows[i].Cells[0].Value.ToString().Trim();
+                if(tempmds!="") DSMaSach.Add(tempmds);
             }
 
 
