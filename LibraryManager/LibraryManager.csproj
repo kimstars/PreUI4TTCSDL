@@ -211,6 +211,12 @@
     <Compile Include="CreateDB\addImageDauSach.Designer.cs">
       <DependentUpon>addImageDauSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateDB\create1000Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDB\create1000Book.Designer.cs">
+      <DependentUpon>create1000Book.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDB\NhapSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -444,6 +450,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="CreateDB\addImageDauSach.resx">
       <DependentUpon>addImageDauSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateDB\create1000Book.resx">
+      <DependentUpon>create1000Book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateDB\NhapSach.resx">
       <DependentUpon>NhapSach.cs</DependentUpon>

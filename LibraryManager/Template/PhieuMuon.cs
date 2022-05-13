@@ -108,6 +108,17 @@ namespace LibraryManager.Template
 
             if(MaDauSach.Contains("DS")) LoadDetailBook(MaDauSach);
             MaDauSachCurrent = MaDauSach;
+
+
+            if (e.ColumnIndex == 2)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    dgvInfoBorrow.Rows.RemoveAt(e.RowIndex);
+                }
+
+            }
         }
 
         private void btnLoaiBo_Click(object sender, EventArgs e)
@@ -139,7 +150,7 @@ namespace LibraryManager.Template
             List<string> DSMaSach = new List<string>();
             for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
             {
-                var tempmds = dgvInfoBorrow.Rows[i].Cells[0].Value.ToString().Trim();
+                var tempmds = dgvInfoBorrow.Rows[i].Cells[1].Value.ToString().Trim();
                 if(tempmds!="") DSMaSach.Add(tempmds);
             }
 

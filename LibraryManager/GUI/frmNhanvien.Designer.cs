@@ -69,6 +69,7 @@ namespace LibraryManager
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbchucvu = new System.Windows.Forms.Label();
+            this.imgAvt = new LibraryManager.Template.PictureBoxKiet();
             this.lbUsername = new System.Windows.Forms.Label();
             this.imgThuVienMTA = new System.Windows.Forms.PictureBox();
             this.panelDrag = new System.Windows.Forms.Panel();
@@ -84,7 +85,6 @@ namespace LibraryManager
             this.QLDGtick = new System.Windows.Forms.Timer(this.components);
             this.XLViPhamTick = new System.Windows.Forms.Timer(this.components);
             this.CaiDatTick = new System.Windows.Forms.Timer(this.components);
-            this.imgAvt = new LibraryManager.Template.PictureBoxKiet();
             this.PanelMenuBar.SuspendLayout();
             this.panelScroll.SuspendLayout();
             this.panelSetting.SuspendLayout();
@@ -96,9 +96,9 @@ namespace LibraryManager
             this.panel2.SuspendLayout();
             this.panelNameUser.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgThuVienMTA)).BeginInit();
             this.panelDrag.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -133,7 +133,7 @@ namespace LibraryManager
             this.panelScroll.Location = new System.Drawing.Point(0, 160);
             this.panelScroll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelScroll.Name = "panelScroll";
-            this.panelScroll.Size = new System.Drawing.Size(243, 1370);
+            this.panelScroll.Size = new System.Drawing.Size(239, 1370);
             this.panelScroll.TabIndex = 13;
             // 
             // panelSetting
@@ -783,7 +783,7 @@ namespace LibraryManager
             this.panelNameUser.Location = new System.Drawing.Point(0, 0);
             this.panelNameUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNameUser.Name = "panelNameUser";
-            this.panelNameUser.Size = new System.Drawing.Size(243, 160);
+            this.panelNameUser.Size = new System.Drawing.Size(239, 160);
             this.panelNameUser.TabIndex = 12;
             // 
             // label1
@@ -818,9 +818,28 @@ namespace LibraryManager
             this.lbchucvu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbchucvu.Location = new System.Drawing.Point(83, 39);
             this.lbchucvu.Name = "lbchucvu";
-            this.lbchucvu.Size = new System.Drawing.Size(68, 15);
+            this.lbchucvu.Size = new System.Drawing.Size(84, 20);
             this.lbchucvu.TabIndex = 13;
             this.lbchucvu.Text = "  Thủ thư  ";
+            // 
+            // imgAvt
+            // 
+            this.imgAvt.BackColor = System.Drawing.Color.White;
+            this.imgAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.imgAvt.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.imgAvt.BorderColor2 = System.Drawing.Color.HotPink;
+            this.imgAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.imgAvt.BorderSize = 2;
+            this.imgAvt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgAvt.GradientAngle = 50F;
+            this.imgAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
+            this.imgAvt.Location = new System.Drawing.Point(0, 0);
+            this.imgAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.imgAvt.Name = "imgAvt";
+            this.imgAvt.Size = new System.Drawing.Size(75, 75);
+            this.imgAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAvt.TabIndex = 5;
+            this.imgAvt.TabStop = false;
             // 
             // lbUsername
             // 
@@ -829,7 +848,7 @@ namespace LibraryManager
             this.lbUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbUsername.Location = new System.Drawing.Point(81, 7);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(89, 21);
+            this.lbUsername.Size = new System.Drawing.Size(112, 28);
             this.lbUsername.TabIndex = 12;
             this.lbUsername.Text = "anhvu2203";
             // 
@@ -902,7 +921,7 @@ namespace LibraryManager
             // 
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(260, 55);
-            this.panelShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(4);
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(1317, 793);
             this.panelShow.TabIndex = 14;
@@ -926,25 +945,6 @@ namespace LibraryManager
             // CaiDatTick
             // 
             this.CaiDatTick.Tick += new System.EventHandler(this.CaiDatTick_Tick);
-            // 
-            // imgAvt
-            // 
-            this.imgAvt.BackColor = System.Drawing.Color.White;
-            this.imgAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.imgAvt.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.imgAvt.BorderColor2 = System.Drawing.Color.HotPink;
-            this.imgAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgAvt.BorderSize = 2;
-            this.imgAvt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgAvt.GradientAngle = 50F;
-            this.imgAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
-            this.imgAvt.Location = new System.Drawing.Point(0, 0);
-            this.imgAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.imgAvt.Name = "imgAvt";
-            this.imgAvt.Size = new System.Drawing.Size(75, 75);
-            this.imgAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAvt.TabIndex = 5;
-            this.imgAvt.TabStop = false;
             // 
             // frmNhanvien
             // 
@@ -971,9 +971,9 @@ namespace LibraryManager
             this.panelNameUser.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgThuVienMTA)).EndInit();
             this.panelDrag.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -101,7 +101,7 @@ namespace LibraryManager.Template
             this.paneldrag.Controls.Add(this.guna2ControlBox2);
             this.paneldrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneldrag.Location = new System.Drawing.Point(253, 0);
-            this.paneldrag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneldrag.Margin = new System.Windows.Forms.Padding(4);
             this.paneldrag.Name = "paneldrag";
             this.paneldrag.Size = new System.Drawing.Size(1687, 66);
             this.paneldrag.TabIndex = 3;
@@ -113,7 +113,7 @@ namespace LibraryManager.Template
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1613, 4);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -127,7 +127,7 @@ namespace LibraryManager.Template
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1536, 4);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
@@ -620,7 +620,7 @@ namespace LibraryManager.Template
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(83, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "  Quản lý  ";
             // 
@@ -650,7 +650,7 @@ namespace LibraryManager.Template
             this.nameuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nameuser.Location = new System.Drawing.Point(81, 7);
             this.nameuser.Name = "nameuser";
-            this.nameuser.Size = new System.Drawing.Size(64, 21);
+            this.nameuser.Size = new System.Drawing.Size(78, 28);
             this.nameuser.TabIndex = 12;
             this.nameuser.Text = "ADMIN";
             // 
@@ -688,7 +688,7 @@ namespace LibraryManager.Template
             this.dsPhieuMuonNV1.BackColor = System.Drawing.Color.White;
             this.dsPhieuMuonNV1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dsPhieuMuonNV1.Location = new System.Drawing.Point(253, 66);
-            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dsPhieuMuonNV1.Margin = new System.Windows.Forms.Padding(5);
             this.dsPhieuMuonNV1.Name = "dsPhieuMuonNV1";
             this.dsPhieuMuonNV1.Size = new System.Drawing.Size(1687, 959);
             this.dsPhieuMuonNV1.TabIndex = 12;
@@ -734,7 +734,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.paneldrag);
             this.Controls.Add(this.PanelMenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);

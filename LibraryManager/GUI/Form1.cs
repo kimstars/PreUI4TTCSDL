@@ -22,14 +22,14 @@ namespace LibraryManager
         {
             sidebartick.Start();
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.HomeNV());
+            panelShow.Controls.Add(new Template.HomeHello());
 
 
         }
 
         public static bool isLogin = false;
 
-        bool sidebarExpand;
+        bool sidebarExpand = true;
         private void sidebartick_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -122,7 +122,7 @@ namespace LibraryManager
         private void btnHome_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.HomeNV());
+            panelShow.Controls.Add(new Template.HomeHello());
         }
     }
 }
