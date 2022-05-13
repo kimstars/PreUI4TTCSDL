@@ -64,6 +64,7 @@ namespace LibraryManager.GUI
             this.panel22.ShadowDecoration.Parent = this.panel22;
             this.panel22.Size = new System.Drawing.Size(624, 655);
             this.panel22.TabIndex = 1;
+            this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
             // label1
             // 
@@ -117,6 +118,7 @@ namespace LibraryManager.GUI
             this.btnSearch.Size = new System.Drawing.Size(122, 49);
             this.btnSearch.TabIndex = 38;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvDs
             // 
@@ -213,6 +215,7 @@ namespace LibraryManager.GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Hello_TheLoai";
             this.Text = "Hello_TheLoai";
+            this.Load += new System.EventHandler(this.Hello_TheLoai_Load);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDs)).EndInit();

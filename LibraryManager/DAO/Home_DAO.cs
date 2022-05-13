@@ -69,6 +69,16 @@ namespace LibraryManager.DAO
             string sql = "SELECT DISTINCT TOP 5 YEAR(NGAYMUON) NAM, COUNT(MADOCGIA) SL FROM PHIEUMUONTRA GROUP BY YEAR(NgayMuon) ORDER BY YEAR(NgayMuon) DESC";
             return GetData(sql);
         }
-        
+
+        public DataTable SearchTL(string _timkiem)
+        {
+            string sqlString = string.Format("SELECT TENTHELOAI, COUNT(MASACH) FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
+            return GetData(sqlString);
+        }
+        public DataTable SearchTG(string _timkiem)
+        {
+            string sqlString = string.Format("SELECT TENTHELOAI, COUNT(MASACH) FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
+            return GetData(sqlString);
+        }
     }
 }
