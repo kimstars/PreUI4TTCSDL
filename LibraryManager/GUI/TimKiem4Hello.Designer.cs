@@ -31,11 +31,11 @@ namespace LibraryManager.GUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimKiem4Hello));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.flowLayoutDS = new System.Windows.Forms.FlowLayoutPanel();
             this.cbTheLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -48,17 +48,17 @@ namespace LibraryManager.GUI
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnCreatePM = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClearAll = new Guna.UI2.WinForms.Guna2Button();
             this.label13 = new System.Windows.Forms.Label();
             this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.dgvChooseBook = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.btnFindByTG = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnClearAll = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCreatePM = new Guna.UI2.WinForms.Guna2Button();
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnFindByTG = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.lbSLBook = new System.Windows.Forms.Label();
             this.dragPanel.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseBook)).BeginInit();
@@ -87,7 +87,7 @@ namespace LibraryManager.GUI
             this.cbTheLoai.HoverState.Parent = this.cbTheLoai;
             this.cbTheLoai.ItemHeight = 30;
             this.cbTheLoai.Items.AddRange(new object[] {
-            "Chọn thể loại"});
+            "Tất cả thể loại"});
             this.cbTheLoai.ItemsAppearance.Parent = this.cbTheLoai;
             this.cbTheLoai.Location = new System.Drawing.Point(28, 12);
             this.cbTheLoai.Name = "cbTheLoai";
@@ -127,6 +127,7 @@ namespace LibraryManager.GUI
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(28, 54);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
@@ -154,11 +155,11 @@ namespace LibraryManager.GUI
             this.btnFindAll.ColorContrastOnClick = 45;
             this.btnFindAll.ColorContrastOnHover = 45;
             this.btnFindAll.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnFindAll.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnFindAll.CustomizableEdges = borderEdges1;
             this.btnFindAll.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFindAll.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFindAll.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -223,6 +224,7 @@ namespace LibraryManager.GUI
             this.btnFindAll.TextMarginLeft = 0;
             this.btnFindAll.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnFindAll.UseDefaultRadiusAndThickness = true;
+            this.btnFindAll.Click += new System.EventHandler(this.btnFindAll_Click);
             // 
             // guna2Elipse1
             // 
@@ -240,7 +242,7 @@ namespace LibraryManager.GUI
             this.dragPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.dragPanel.Location = new System.Drawing.Point(0, 0);
             this.dragPanel.Name = "dragPanel";
-            this.dragPanel.Size = new System.Drawing.Size(1157, 41);
+            this.dragPanel.Size = new System.Drawing.Size(1156, 33);
             this.dragPanel.TabIndex = 42;
             // 
             // label1
@@ -249,7 +251,7 @@ namespace LibraryManager.GUI
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label1.Location = new System.Drawing.Point(7, 7);
+            this.label1.Location = new System.Drawing.Point(39, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 25);
             this.label1.TabIndex = 36;
@@ -262,7 +264,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1036, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1035, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
@@ -294,6 +296,46 @@ namespace LibraryManager.GUI
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(445, 673);
             this.guna2CustomGradientPanel1.TabIndex = 43;
             // 
+            // btnCreatePM
+            // 
+            this.btnCreatePM.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreatePM.BorderRadius = 18;
+            this.btnCreatePM.CheckedState.Parent = this.btnCreatePM;
+            this.btnCreatePM.CustomImages.Parent = this.btnCreatePM;
+            this.btnCreatePM.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnCreatePM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCreatePM.ForeColor = System.Drawing.Color.White;
+            this.btnCreatePM.HoverState.Parent = this.btnCreatePM;
+            this.btnCreatePM.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
+            this.btnCreatePM.Location = new System.Drawing.Point(237, 589);
+            this.btnCreatePM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreatePM.Name = "btnCreatePM";
+            this.btnCreatePM.ShadowDecoration.Parent = this.btnCreatePM;
+            this.btnCreatePM.Size = new System.Drawing.Size(171, 36);
+            this.btnCreatePM.TabIndex = 41;
+            this.btnCreatePM.Text = "Tạo phiếu mượn";
+            this.btnCreatePM.Click += new System.EventHandler(this.btnCreatePM_Click);
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearAll.BorderRadius = 18;
+            this.btnClearAll.CheckedState.Parent = this.btnClearAll;
+            this.btnClearAll.CustomImages.Parent = this.btnClearAll;
+            this.btnClearAll.FillColor = System.Drawing.Color.LightCoral;
+            this.btnClearAll.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClearAll.ForeColor = System.Drawing.Color.White;
+            this.btnClearAll.HoverState.Parent = this.btnClearAll;
+            this.btnClearAll.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
+            this.btnClearAll.Location = new System.Drawing.Point(298, 23);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.ShadowDecoration.Parent = this.btnClearAll;
+            this.btnClearAll.Size = new System.Drawing.Size(129, 36);
+            this.btnClearAll.TabIndex = 40;
+            this.btnClearAll.Text = "Clear all";
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -318,37 +360,38 @@ namespace LibraryManager.GUI
             this.btnPreview.HoverState.Parent = this.btnPreview;
             this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
             this.btnPreview.Location = new System.Drawing.Point(20, 589);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
             this.btnPreview.Size = new System.Drawing.Size(171, 36);
             this.btnPreview.TabIndex = 37;
             this.btnPreview.Text = "Xem chi tiết";
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // dgvChooseBook
             // 
             this.dgvChooseBook.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgvChooseBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvChooseBook.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvChooseBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvChooseBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChooseBook.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvChooseBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvChooseBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvChooseBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChooseBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChooseBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvChooseBook.ColumnHeadersHeight = 40;
             this.dgvChooseBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach,
             this.TenDauSach,
-            this.SoLuong,
             this.Remove});
             this.dgvChooseBook.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvChooseBook.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -368,14 +411,14 @@ namespace LibraryManager.GUI
             this.dgvChooseBook.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvChooseBook.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvChooseBook.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChooseBook.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChooseBook.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChooseBook.EnableHeadersVisualStyles = false;
             this.dgvChooseBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvChooseBook.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -390,6 +433,23 @@ namespace LibraryManager.GUI
             this.dgvChooseBook.TabIndex = 36;
             this.dgvChooseBook.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvChooseBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChooseBook_CellClick);
+            // 
+            // MaDauSach
+            // 
+            this.MaDauSach.HeaderText = "Mã đầu sách";
+            this.MaDauSach.Name = "MaDauSach";
+            this.MaDauSach.ReadOnly = true;
+            // 
+            // TenDauSach
+            // 
+            this.TenDauSach.HeaderText = "Tên đầu sách";
+            this.TenDauSach.Name = "TenDauSach";
+            // 
+            // Remove
+            // 
+            this.Remove.HeaderText = "Remove";
+            this.Remove.Name = "Remove";
+            this.Remove.Text = "Loại bỏ";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -424,11 +484,11 @@ namespace LibraryManager.GUI
             this.btnFindByTG.ColorContrastOnClick = 45;
             this.btnFindByTG.ColorContrastOnHover = 45;
             this.btnFindByTG.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnFindByTG.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnFindByTG.CustomizableEdges = borderEdges2;
             this.btnFindByTG.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFindByTG.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFindByTG.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -496,71 +556,24 @@ namespace LibraryManager.GUI
             this.btnFindByTG.UseDefaultRadiusAndThickness = true;
             this.btnFindByTG.Click += new System.EventHandler(this.btnFindByTG_Click);
             // 
-            // btnClearAll
+            // lbSLBook
             // 
-            this.btnClearAll.BackColor = System.Drawing.Color.Transparent;
-            this.btnClearAll.BorderRadius = 18;
-            this.btnClearAll.CheckedState.Parent = this.btnClearAll;
-            this.btnClearAll.CustomImages.Parent = this.btnClearAll;
-            this.btnClearAll.FillColor = System.Drawing.Color.LightCoral;
-            this.btnClearAll.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClearAll.ForeColor = System.Drawing.Color.White;
-            this.btnClearAll.HoverState.Parent = this.btnClearAll;
-            this.btnClearAll.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
-            this.btnClearAll.Location = new System.Drawing.Point(298, 23);
-            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.ShadowDecoration.Parent = this.btnClearAll;
-            this.btnClearAll.Size = new System.Drawing.Size(129, 36);
-            this.btnClearAll.TabIndex = 40;
-            this.btnClearAll.Text = "Clear all";
-            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
-            // 
-            // btnCreatePM
-            // 
-            this.btnCreatePM.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreatePM.BorderRadius = 18;
-            this.btnCreatePM.CheckedState.Parent = this.btnCreatePM;
-            this.btnCreatePM.CustomImages.Parent = this.btnCreatePM;
-            this.btnCreatePM.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.btnCreatePM.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCreatePM.ForeColor = System.Drawing.Color.White;
-            this.btnCreatePM.HoverState.Parent = this.btnCreatePM;
-            this.btnCreatePM.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.btnCreatePM.Location = new System.Drawing.Point(237, 589);
-            this.btnCreatePM.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCreatePM.Name = "btnCreatePM";
-            this.btnCreatePM.ShadowDecoration.Parent = this.btnCreatePM;
-            this.btnCreatePM.Size = new System.Drawing.Size(171, 36);
-            this.btnCreatePM.TabIndex = 41;
-            this.btnCreatePM.Text = "Tạo phiếu mượn";
-            // 
-            // MaDauSach
-            // 
-            this.MaDauSach.HeaderText = "Mã đầu sách";
-            this.MaDauSach.Name = "MaDauSach";
-            this.MaDauSach.ReadOnly = true;
-            // 
-            // TenDauSach
-            // 
-            this.TenDauSach.HeaderText = "Tên đầu sách";
-            this.TenDauSach.Name = "TenDauSach";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // Remove
-            // 
-            this.Remove.HeaderText = "Remove";
-            this.Remove.Name = "Remove";
+            this.lbSLBook.AutoSize = true;
+            this.lbSLBook.BackColor = System.Drawing.Color.Transparent;
+            this.lbSLBook.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lbSLBook.ForeColor = System.Drawing.Color.Red;
+            this.lbSLBook.Location = new System.Drawing.Point(39, 36);
+            this.lbSLBook.Name = "lbSLBook";
+            this.lbSLBook.Size = new System.Drawing.Size(13, 19);
+            this.lbSLBook.TabIndex = 41;
+            this.lbSLBook.Text = ".";
             // 
             // TimKiem4Hello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 744);
+            this.ClientSize = new System.Drawing.Size(1156, 715);
+            this.Controls.Add(this.lbSLBook);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dragPanel);
@@ -576,6 +589,7 @@ namespace LibraryManager.GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseBook)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -602,7 +616,7 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2Button btnClearAll;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewButtonColumn Remove;
+        private System.Windows.Forms.Label lbSLBook;
     }
 }

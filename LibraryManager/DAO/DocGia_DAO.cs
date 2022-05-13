@@ -168,6 +168,14 @@ namespace LibraryManager.DAO
 
 
         #endregion
+
+
+        public string GetMaDG_TaiKhoan(string TenDangNhap)
+        {
+            string sql = $"SELECT dg.MaDocGia FROM dbo.DOCGIA dg INNER JOIN dbo.TAIKHOAN tk ON  tk.TenDangNhap = dg.TenDangNhap WHERE dg.TenDangNhap = '{TenDangNhap}'";
+            return GetString(sql);
+
+        }
     }
 
 

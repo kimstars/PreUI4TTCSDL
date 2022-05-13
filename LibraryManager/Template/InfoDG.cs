@@ -18,6 +18,13 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+
+        public InfoDG(string MDG)
+        {
+            InitializeComponent();
+            MaDocGia = MDG;
+        }
+
         DocGia_BUS dgbus = new DocGia_BUS();
 
         string imgPath = @"";

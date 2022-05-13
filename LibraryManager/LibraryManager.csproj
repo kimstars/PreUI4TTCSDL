@@ -735,5 +735,14 @@
   <ItemGroup>
     <None Include="Resources\icons8_user_settings_64px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_male_user_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_info_60px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
