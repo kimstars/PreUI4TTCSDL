@@ -437,13 +437,6 @@ namespace LibraryManager
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // xu_ly_tra1
-            // 
-            this.xu_ly_tra1.Location = new System.Drawing.Point(281, 12);
-            this.xu_ly_tra1.Name = "xu_ly_tra1";
-            this.xu_ly_tra1.Size = new System.Drawing.Size(1305, 841);
-            this.xu_ly_tra1.TabIndex = 16;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
