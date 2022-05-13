@@ -72,12 +72,12 @@ namespace LibraryManager.DAO
 
         public DataTable SearchTL(string _timkiem)
         {
-            string sqlString = string.Format("SELECT TENTHELOAI, COUNT(MASACH) FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
+            string sqlString = string.Format("SELECT TENTHELOAI N'Tên thể loại', COUNT(MASACH) N'Số lượng cuốn sách' FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
             return GetData(sqlString);
         }
         public DataTable SearchTG(string _timkiem)
         {
-            string sqlString = string.Format("SELECT TENTHELOAI, COUNT(MASACH) FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
+            string sqlString = string.Format("SELECT TENTACGIA N'Tên tác giả', COUNT(DS.MADAUSACH) N'Số lượng đầu sách' FROM dbo.SANGTAC ST, dbo.TACGIA TG, dbo.DAUSACH DS WHERE ST.MaDauSach = DS.MaDauSach AND TG.MaTacGia = ST.MaTacGia AND TG.TenTacGia LIKE N'%{0}%' GROUP BY TG.TenTacGia", _timkiem);
             return GetData(sqlString);
         }
     }

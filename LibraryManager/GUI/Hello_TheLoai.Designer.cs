@@ -39,8 +39,6 @@ namespace LibraryManager.GUI
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.dgvDs = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDs)).BeginInit();
@@ -141,9 +139,6 @@ namespace LibraryManager.GUI
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDs.ColumnHeadersHeight = 40;
-            this.dgvDs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenTheLoai,
-            this.SoLuong});
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -185,20 +180,6 @@ namespace LibraryManager.GUI
             this.dgvDs.TabIndex = 0;
             this.dgvDs.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Purple;
             // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.HeaderText = "Tên thể loại";
-            this.TenTheLoai.MinimumWidth = 6;
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng sách";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -231,8 +212,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
