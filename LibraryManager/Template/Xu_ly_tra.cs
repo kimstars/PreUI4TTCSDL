@@ -102,7 +102,7 @@ namespace LibraryManager.Template
             int count = 0;
             int count1 = 0;
           //  bool tre = false;
-            for (int i = 0; i < dgvDs.Rows.Count-1; i++)
+            for (int i = 0; i < dgvDs.Rows.Count; i++)
             { 
                 if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có") )
                 {
@@ -134,13 +134,23 @@ namespace LibraryManager.Template
 
         private void dgvDs_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i;
+           /* int i;
             i = dgvDs.CurrentRow.Index;
             txtMasach.Text = dgvDs.Rows[i].Cells[0].Value.ToString();
             txtMadg.Text = dgvDs.Rows[i].Cells[1].Value.ToString();
             if (dgvDs.Rows[i].Cells[0].Value.ToString() == "Có")
             {
                 cboxVi_pham.Checked =true;
+            }*/
+            if(e.ColumnIndex== 4)
+            {
+                
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    dgvDs.Rows.RemoveAt(e.RowIndex);
+                }
+
             }
         }
 
@@ -164,11 +174,6 @@ namespace LibraryManager.Template
                 //e.Cancel = true;
                 error1.SetError(txtTK, null);
             }
-        }
-
-        private void btnLoaibo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

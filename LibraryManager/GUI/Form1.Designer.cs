@@ -63,7 +63,6 @@ namespace LibraryManager
             this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.phieuMuon1 = new LibraryManager.Template.PhieuMuon();
-            this.xu_ly_tra1 = new LibraryManager.Template.Xu_ly_tra();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -527,19 +526,11 @@ namespace LibraryManager
             this.phieuMuon1.TabIndex = 15;
             this.phieuMuon1.Visible = false;
             // 
-            // xu_ly_tra1
-            // 
-            this.xu_ly_tra1.Location = new System.Drawing.Point(281, 12);
-            this.xu_ly_tra1.Name = "xu_ly_tra1";
-            this.xu_ly_tra1.Size = new System.Drawing.Size(1305, 841);
-            this.xu_ly_tra1.TabIndex = 16;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 865);
-            this.Controls.Add(this.xu_ly_tra1);
             this.Controls.Add(this.phieuMuon1);
             this.Controls.Add(this.PanelMenuBar);
             this.Controls.Add(this.formQLInfo);
@@ -598,6 +589,5 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Template.PhieuMuon phieuMuon1;
-        private Template.Xu_ly_tra xu_ly_tra1;
     }
 }
