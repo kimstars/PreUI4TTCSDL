@@ -66,5 +66,13 @@ namespace LibraryManager.BUS
 
             return home.LoadSLDG();
         }
+        public DataTable TimKiemTL(string _timkiem)
+        {
+            return home.SearchTL(_timkiem);
+        }
+        public DataTable TimKiemTG(string _timkiem)
+        {
+            return home.SearchTG(_timkiem);
+        }
     }
 }
