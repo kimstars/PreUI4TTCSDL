@@ -23,7 +23,7 @@ namespace LibraryManager.DAO
         {
             string sql = $"SELECT soluong FROM dbo.DAUSACH WHERE MaDauSach ='{MaDauSach}'";
 
-            return ExcuteRetStr(sql);
+            return GetCount(sql).ToString();
         }
 
 
@@ -38,6 +38,13 @@ namespace LibraryManager.DAO
             Excute(sql);
         }
 
+
+        public int GetRemainNhap(string MaDauSach)
+        {
+            string sql = $"SELECT ISNULL(SoLuong,0) - ISNULL((SELECT SUM(SoLuongSach) soluongnhap FROM dbo.THONGTINNHAPSACH WHERE MaDauSach = '{MaDauSach}'),0) AS SL FROM dbo.DAUSACH WHERE MaDauSach = '{MaDauSach}'";
+
+            return (int)GetCount(sql);
+        }
 
     }
 }

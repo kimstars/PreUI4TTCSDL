@@ -76,32 +76,18 @@ namespace LibraryManager.DAO
             Int32 count = (Int32)command.ExecuteScalar();
             connect.Close();
             return count;
-
+            
         }
-        public string ExcuteRetStr(string sql)
+
+        public string GetString(string sql)
         {
-            
-            
-            string res = "";
-
-            using (SqlCommand command = new SqlCommand(sql, connect))
-            {
-                if (connect.State != ConnectionState.Open)
-                    connect.Open();
-                object result = command.ExecuteScalar();
-                if (result != null)
-                {
-                    res = result.ToString();
-                    //MessageBox.Show(res);
-                }
-            }
-
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            string res = (string)command.ExecuteScalar();
             connect.Close();
-
             return res;
-            
         }
-
 
         public string DateToString(Nullable<DateTime> d)
         {

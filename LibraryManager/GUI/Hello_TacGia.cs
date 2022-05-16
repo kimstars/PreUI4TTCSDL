@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManager.Template
+namespace LibraryManager.GUI
 {
-    public partial class Home : Form
+    public partial class Hello_TacGia : Form
     {
-        public Home()
+        public Hello_TacGia()
         {
             InitializeComponent();
         }

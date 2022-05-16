@@ -31,6 +31,8 @@ namespace LibraryManager.CreateDB
         PhieuMuonTra phieuMT = new PhieuMuonTra();
         ThongTinMuonTra TTMuonTra = new ThongTinMuonTra();
         string maMuon;
+        string Current_Mamuon = "";
+
         private void ThemMuonTra_Load(object sender, EventArgs e)
         {
             dgvThongtinMT.DataSource = msBus.LoadData();
@@ -72,17 +74,29 @@ namespace LibraryManager.CreateDB
             TTMuonTra.MaSach = cbMaSach.Text.Trim();
             TTMuonTra.NgayTra = null;
 
+            if (cbNhieuSach.Checked)
+            {
 
-            msBus.ThemTTMuonTra(phieuMT, TTMuonTra);
+                msBus.ThemTTMT(TTMuonTra);
+            }
+            else
+            {
+                msBus.ThemBothTTMT(phieuMT, TTMuonTra);
+                cbNhieuSach.Checked = true;
+                dateMuon.Value = randDate.Next();
+                AutoTaoMa();
+                RandomCombobox(ref cbMaDG);
+                RandomCombobox(ref cbNV);
+
+            }
+
 
             //MessageBox.Show("Thành công!!!");
 
             dgvThongtinMT.DataSource = msBus.LoadData();
+            
 
-            AutoTaoMa();
-
-            RandomCombobox(ref cbMaDG);
-            RandomCombobox(ref cbNV);
+            
             RandomCombobox(ref cbMaSach);
 
         }
@@ -91,11 +105,15 @@ namespace LibraryManager.CreateDB
         {
             string index = (dgvThongtinMT.Rows.Count - 1).ToString();
             maMuon = "MT000000";
-            maMuon = maMuon.Substring(0, 9 - index.Length) + index;
-            txtMaMT.Text = maMuon;
+            Current_Mamuon = txtMaMT.Text;
+            maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
+            if(maMuon != Current_Mamuon)
+            {
+                cbNhieuSach.Checked = false;
+                txtMaMT.Text = maMuon;
+            }
 
 
-            dateMuon.Value = randDate.Next();
 
             DateTime date = dateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));
             dateHanTra.Value = date;
@@ -111,6 +129,20 @@ namespace LibraryManager.CreateDB
                 newSelectedIndex = random.Next(0, comboBox.Items.Count);
             }
             comboBox.SelectedIndex = newSelectedIndex;
+        }
+        private void cbNhieuSach_CheckedChanged(object sender, EventArgs e)
+        {
+            AutoTaoMa();
+            if (cbNhieuSach.Checked)
+            {
+                txtMaMT.Text = Current_Mamuon;
+            }
+        }
+
+        private void txtMaMT_TextChanged(object sender, EventArgs e)
+        {
+            cbMaDG.Text = dgBus.LoadMaDocGia_PhieuMuon(txtMaMT.Text);
+            cbNV.Text = nvBus.LoadMaNhanVien_PhieuMuon(txtMaMT.Text);
         }
     }
 }

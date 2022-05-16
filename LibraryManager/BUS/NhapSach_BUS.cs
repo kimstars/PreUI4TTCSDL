@@ -19,13 +19,14 @@ namespace LibraryManager.BUS
 
         public string LoadSLSachChuaNhap(string MaDauSach)
         {
-            return nsDAO.GetSoLuongSach(MaDauSach).ToString();
+            return nsDAO.GetRemainNhap(MaDauSach).ToString();
         }
 
         public void ThemThongtinNhap(PhieuNhap pn, ThongTinNhapSach ttns)
         {
             nsDAO.InsertPhieuNhap_TTNS(pn, ttns);
         }
+
     }
 
 }

@@ -43,9 +43,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.txtCMND = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtDonvi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiachi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbInfoMaDG = new System.Windows.Forms.Label();
             this.lbInfoDateAct = new System.Windows.Forms.Label();
@@ -54,6 +52,7 @@ namespace LibraryManager.Template
             this.btnOpenImage = new Guna.UI2.WinForms.Guna2Button();
             this.lbMaDG = new System.Windows.Forms.Label();
             this.lbInfoDate = new System.Windows.Forms.Label();
+            this.folderDlg = new System.Windows.Forms.FolderBrowserDialog();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avtImage)).BeginInit();
@@ -64,9 +63,10 @@ namespace LibraryManager.Template
             this.lbInfoName.AutoSize = true;
             this.lbInfoName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfoName.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbInfoName.Location = new System.Drawing.Point(211, 25);
+            this.lbInfoName.Location = new System.Drawing.Point(158, 20);
+            this.lbInfoName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoName.Name = "lbInfoName";
-            this.lbInfoName.Size = new System.Drawing.Size(173, 32);
+            this.lbInfoName.Size = new System.Drawing.Size(135, 25);
             this.lbInfoName.TabIndex = 0;
             this.lbInfoName.Text = "Chu Tuấn Kiệt";
             // 
@@ -74,9 +74,10 @@ namespace LibraryManager.Template
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 36);
+            this.label2.Location = new System.Drawing.Point(324, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.Size = new System.Drawing.Size(104, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "(Tài khoản độc giả)";
             // 
@@ -84,9 +85,10 @@ namespace LibraryManager.Template
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(21, 15);
+            this.label3.Location = new System.Drawing.Point(16, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 17);
+            this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ và tên:";
             // 
@@ -94,34 +96,33 @@ namespace LibraryManager.Template
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(21, 101);
+            this.label4.Location = new System.Drawing.Point(16, 82);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Ngày sinh:";
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Red;
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.White;
             this.guna2CustomGradientPanel1.BorderRadius = 12;
             this.guna2CustomGradientPanel1.Controls.Add(this.pickerBirthday);
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtSDT);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label11);
             this.guna2CustomGradientPanel1.Controls.Add(this.cbGender);
             this.guna2CustomGradientPanel1.Controls.Add(this.label8);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtName);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(41, 287);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(31, 233);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(363, 297);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(272, 182);
             this.guna2CustomGradientPanel1.TabIndex = 6;
             // 
             // pickerBirthday
@@ -132,11 +133,11 @@ namespace LibraryManager.Template
             this.pickerBirthday.CustomFormat = "dd/MM/yyyy";
             this.pickerBirthday.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pickerBirthday.Location = new System.Drawing.Point(25, 126);
-            this.pickerBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pickerBirthday.Location = new System.Drawing.Point(19, 102);
+            this.pickerBirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pickerBirthday.MinimumSize = new System.Drawing.Size(4, 37);
             this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(296, 37);
+            this.pickerBirthday.Size = new System.Drawing.Size(113, 37);
             this.pickerBirthday.SkinColor = System.Drawing.Color.White;
             this.pickerBirthday.TabIndex = 13;
             this.pickerBirthday.TextColor = System.Drawing.Color.Black;
@@ -159,23 +160,24 @@ namespace LibraryManager.Template
             this.txtSDT.ForeColor = System.Drawing.Color.Black;
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
-            this.txtSDT.Location = new System.Drawing.Point(131, 220);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSDT.Location = new System.Drawing.Point(19, 102);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
             this.txtSDT.ShadowDecoration.Parent = this.txtSDT;
-            this.txtSDT.Size = new System.Drawing.Size(189, 44);
+            this.txtSDT.Size = new System.Drawing.Size(221, 36);
             this.txtSDT.TabIndex = 12;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(127, 190);
+            this.label11.Location = new System.Drawing.Point(16, 82);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 17);
+            this.label11.Size = new System.Drawing.Size(73, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "Số điện thoại:";
             // 
@@ -197,20 +199,21 @@ namespace LibraryManager.Template
             "Nam",
             "Nữ"});
             this.cbGender.ItemsAppearance.Parent = this.cbGender;
-            this.cbGender.Location = new System.Drawing.Point(24, 220);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbGender.Location = new System.Drawing.Point(148, 103);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
-            this.cbGender.Size = new System.Drawing.Size(99, 36);
+            this.cbGender.Size = new System.Drawing.Size(114, 36);
             this.cbGender.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(21, 190);
+            this.label8.Location = new System.Drawing.Point(145, 82);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 17);
+            this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Giới tính:";
             // 
@@ -233,36 +236,36 @@ namespace LibraryManager.Template
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.IconRight = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
-            this.txtName.Location = new System.Drawing.Point(25, 39);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5);
+            this.txtName.Location = new System.Drawing.Point(19, 32);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(296, 44);
+            this.txtName.Size = new System.Drawing.Size(222, 36);
             this.txtName.TabIndex = 6;
             // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.Red;
+            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.White;
             this.guna2CustomGradientPanel2.BorderRadius = 12;
             this.guna2CustomGradientPanel2.Controls.Add(this.txtCMND);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label11);
+            this.guna2CustomGradientPanel2.Controls.Add(this.txtSDT);
             this.guna2CustomGradientPanel2.Controls.Add(this.label10);
-            this.guna2CustomGradientPanel2.Controls.Add(this.txtDonvi);
             this.guna2CustomGradientPanel2.Controls.Add(this.txtDiachi);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label5);
             this.guna2CustomGradientPanel2.Controls.Add(this.label6);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(447, 287);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(229)))), ((int)(((byte)(208)))));
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(335, 233);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(355, 297);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(266, 241);
             this.guna2CustomGradientPanel2.TabIndex = 8;
             // 
             // txtCMND
@@ -283,53 +286,26 @@ namespace LibraryManager.Template
             this.txtCMND.ForeColor = System.Drawing.Color.Black;
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
-            this.txtCMND.Location = new System.Drawing.Point(24, 220);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCMND.Location = new System.Drawing.Point(18, 179);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "";
             this.txtCMND.SelectedText = "";
             this.txtCMND.ShadowDecoration.Parent = this.txtCMND;
-            this.txtCMND.Size = new System.Drawing.Size(296, 44);
+            this.txtCMND.Size = new System.Drawing.Size(222, 36);
             this.txtCMND.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(21, 190);
+            this.label10.Location = new System.Drawing.Point(16, 154);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(183, 17);
+            this.label10.Size = new System.Drawing.Size(141, 13);
             this.label10.TabIndex = 8;
             this.label10.Text = "Số CMND (số thẻ căn cước)";
-            // 
-            // txtDonvi
-            // 
-            this.txtDonvi.BackColor = System.Drawing.Color.Transparent;
-            this.txtDonvi.BorderColor = System.Drawing.Color.Transparent;
-            this.txtDonvi.BorderRadius = 6;
-            this.txtDonvi.BorderThickness = 0;
-            this.txtDonvi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDonvi.DefaultText = "";
-            this.txtDonvi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDonvi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDonvi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDonvi.DisabledState.Parent = this.txtDonvi;
-            this.txtDonvi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDonvi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonvi.FocusedState.Parent = this.txtDonvi;
-            this.txtDonvi.ForeColor = System.Drawing.Color.Black;
-            this.txtDonvi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonvi.HoverState.Parent = this.txtDonvi;
-            this.txtDonvi.Location = new System.Drawing.Point(23, 126);
-            this.txtDonvi.Margin = new System.Windows.Forms.Padding(5);
-            this.txtDonvi.Name = "txtDonvi";
-            this.txtDonvi.PasswordChar = '\0';
-            this.txtDonvi.PlaceholderText = "";
-            this.txtDonvi.SelectedText = "";
-            this.txtDonvi.ShadowDecoration.Parent = this.txtDonvi;
-            this.txtDonvi.Size = new System.Drawing.Size(296, 44);
-            this.txtDonvi.TabIndex = 7;
             // 
             // txtDiachi
             // 
@@ -349,33 +325,24 @@ namespace LibraryManager.Template
             this.txtDiachi.ForeColor = System.Drawing.Color.Black;
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
-            this.txtDiachi.Location = new System.Drawing.Point(23, 39);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDiachi.Location = new System.Drawing.Point(17, 32);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "";
             this.txtDiachi.SelectedText = "";
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
-            this.txtDiachi.Size = new System.Drawing.Size(296, 44);
+            this.txtDiachi.Size = new System.Drawing.Size(222, 36);
             this.txtDiachi.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(20, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "(Đơn vị):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(21, 15);
+            this.label6.Location = new System.Drawing.Point(16, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 17);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Địa chỉ:";
             // 
@@ -383,9 +350,10 @@ namespace LibraryManager.Template
             // 
             this.lbInfoMaDG.AutoSize = true;
             this.lbInfoMaDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfoMaDG.Location = new System.Drawing.Point(213, 71);
+            this.lbInfoMaDG.Location = new System.Drawing.Point(160, 58);
+            this.lbInfoMaDG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoMaDG.Name = "lbInfoMaDG";
-            this.lbInfoMaDG.Size = new System.Drawing.Size(95, 20);
+            this.lbInfoMaDG.Size = new System.Drawing.Size(75, 15);
             this.lbInfoMaDG.TabIndex = 9;
             this.lbInfoMaDG.Text = "Mã độc giả : ";
             // 
@@ -393,28 +361,29 @@ namespace LibraryManager.Template
             // 
             this.lbInfoDateAct.AutoSize = true;
             this.lbInfoDateAct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfoDateAct.Location = new System.Drawing.Point(213, 105);
+            this.lbInfoDateAct.Location = new System.Drawing.Point(160, 85);
+            this.lbInfoDateAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoDateAct.Name = "lbInfoDateAct";
-            this.lbInfoDateAct.Size = new System.Drawing.Size(142, 20);
+            this.lbInfoDateAct.Size = new System.Drawing.Size(113, 15);
             this.lbInfoDateAct.TabIndex = 10;
             this.lbInfoDateAct.Text = "Hoạt động từ ngày :";
             // 
             // btnSaveInfo
             // 
             this.btnSaveInfo.AutoRoundedCorners = true;
-            this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
-            this.btnSaveInfo.BorderRadius = 22;
+            this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.btnSaveInfo.BorderRadius = 17;
             this.btnSaveInfo.CheckedState.Parent = this.btnSaveInfo;
             this.btnSaveInfo.CustomImages.Parent = this.btnSaveInfo;
-            this.btnSaveInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.btnSaveInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
             this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveInfo.ForeColor = System.Drawing.Color.White;
             this.btnSaveInfo.HoverState.Parent = this.btnSaveInfo;
-            this.btnSaveInfo.Location = new System.Drawing.Point(41, 602);
-            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSaveInfo.Location = new System.Drawing.Point(31, 437);
+            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveInfo.Name = "btnSaveInfo";
             this.btnSaveInfo.ShadowDecoration.Parent = this.btnSaveInfo;
-            this.btnSaveInfo.Size = new System.Drawing.Size(160, 46);
+            this.btnSaveInfo.Size = new System.Drawing.Size(272, 37);
             this.btnSaveInfo.TabIndex = 19;
             this.btnSaveInfo.Text = "Lưu thông tin";
             this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
@@ -423,25 +392,26 @@ namespace LibraryManager.Template
             // 
             this.avtImage.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
             this.avtImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.avtImage.Location = new System.Drawing.Point(41, 25);
-            this.avtImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.avtImage.Location = new System.Drawing.Point(31, 20);
+            this.avtImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.avtImage.Name = "avtImage";
-            this.avtImage.Size = new System.Drawing.Size(144, 144);
+            this.avtImage.Size = new System.Drawing.Size(108, 117);
             this.avtImage.TabIndex = 2;
             this.avtImage.TabStop = false;
             // 
             // btnOpenImage
             // 
+            this.btnOpenImage.BorderRadius = 14;
             this.btnOpenImage.CheckedState.Parent = this.btnOpenImage;
             this.btnOpenImage.CustomImages.Parent = this.btnOpenImage;
+            this.btnOpenImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
             this.btnOpenImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOpenImage.ForeColor = System.Drawing.Color.White;
             this.btnOpenImage.HoverState.Parent = this.btnOpenImage;
-            this.btnOpenImage.Location = new System.Drawing.Point(41, 191);
-            this.btnOpenImage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpenImage.Location = new System.Drawing.Point(31, 155);
             this.btnOpenImage.Name = "btnOpenImage";
             this.btnOpenImage.ShadowDecoration.Parent = this.btnOpenImage;
-            this.btnOpenImage.Size = new System.Drawing.Size(144, 34);
+            this.btnOpenImage.Size = new System.Drawing.Size(108, 28);
             this.btnOpenImage.TabIndex = 20;
             this.btnOpenImage.Text = "Chọn ảnh";
             this.btnOpenImage.Click += new System.EventHandler(this.btnOpenImage_Click);
@@ -449,24 +419,26 @@ namespace LibraryManager.Template
             // lbMaDG
             // 
             this.lbMaDG.AutoSize = true;
-            this.lbMaDG.Location = new System.Drawing.Point(315, 73);
+            this.lbMaDG.Location = new System.Drawing.Point(236, 59);
+            this.lbMaDG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMaDG.Name = "lbMaDG";
-            this.lbMaDG.Size = new System.Drawing.Size(36, 17);
+            this.lbMaDG.Size = new System.Drawing.Size(29, 13);
             this.lbMaDG.TabIndex = 21;
             this.lbMaDG.Text = "NaN";
             // 
             // lbInfoDate
             // 
             this.lbInfoDate.AutoSize = true;
-            this.lbInfoDate.Location = new System.Drawing.Point(382, 108);
+            this.lbInfoDate.Location = new System.Drawing.Point(286, 88);
+            this.lbInfoDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoDate.Name = "lbInfoDate";
-            this.lbInfoDate.Size = new System.Drawing.Size(36, 17);
+            this.lbInfoDate.Size = new System.Drawing.Size(29, 13);
             this.lbInfoDate.TabIndex = 22;
             this.lbInfoDate.Text = "NaN";
             // 
             // InfoDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lbInfoDate);
             this.Controls.Add(this.lbMaDG);
@@ -479,9 +451,9 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label2);
             this.Controls.Add(this.avtImage);
             this.Controls.Add(this.lbInfoName);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InfoDG";
-            this.Size = new System.Drawing.Size(823, 729);
+            this.Size = new System.Drawing.Size(617, 592);
             this.Load += new System.EventHandler(this.InfoDG_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
@@ -504,14 +476,12 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2TextBox txtDiachi;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ComboBox cbGender;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbInfoMaDG;
         private Guna.UI2.WinForms.Guna2TextBox txtCMND;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox txtDonvi;
         private System.Windows.Forms.Label lbInfoDateAct;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private System.Windows.Forms.Label label11;
@@ -520,5 +490,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button btnOpenImage;
         private System.Windows.Forms.Label lbMaDG;
         private System.Windows.Forms.Label lbInfoDate;
+        private System.Windows.Forms.FolderBrowserDialog folderDlg;
     }
 }
