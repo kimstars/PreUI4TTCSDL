@@ -250,5 +250,13 @@ namespace LibraryManager
         {
 
         }
+
+        private void btnTest3_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            panelShow.Controls.Clear();
+            UserControl temp = new Template.FrmThongTinDG();
+            panelShow.Controls.Add(temp);
+        }
     }
 }

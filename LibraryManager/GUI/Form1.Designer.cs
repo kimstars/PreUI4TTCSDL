@@ -67,6 +67,7 @@ namespace LibraryManager
             this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
             this.frminfoDG = new LibraryManager.Template.InfoDG();
             this.phieuMuon1 = new LibraryManager.Template.PhieuMuon();
+            this.btnTest3 = new Guna.UI2.WinForms.Guna2Button();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PaneLogin.SuspendLayout();
@@ -117,6 +118,7 @@ namespace LibraryManager
             // PanelMenuBar
             // 
             this.PanelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.PanelMenuBar.Controls.Add(this.btnTest3);
             this.PanelMenuBar.Controls.Add(this.btnTestForm2);
             this.PanelMenuBar.Controls.Add(this.btnTestForm);
             this.PanelMenuBar.Controls.Add(this.panel4);
@@ -580,6 +582,21 @@ namespace LibraryManager
             this.phieuMuon1.TabIndex = 15;
             this.phieuMuon1.Visible = false;
             // 
+            // btnTest3
+            // 
+            this.btnTest3.CheckedState.Parent = this.btnTest3;
+            this.btnTest3.CustomImages.Parent = this.btnTest3;
+            this.btnTest3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTest3.ForeColor = System.Drawing.Color.White;
+            this.btnTest3.HoverState.Parent = this.btnTest3;
+            this.btnTest3.Location = new System.Drawing.Point(34, 808);
+            this.btnTest3.Name = "btnTest3";
+            this.btnTest3.ShadowDecoration.Parent = this.btnTest3;
+            this.btnTest3.Size = new System.Drawing.Size(180, 45);
+            this.btnTest3.TabIndex = 19;
+            this.btnTest3.Text = "Test Form #3";
+            this.btnTest3.Click += new System.EventHandler(this.btnTest3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -649,5 +666,6 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2Button btnTestForm;
         private Guna.UI2.WinForms.Guna2Button btnTestForm2;
         private System.Windows.Forms.Panel panelShow;
+        private Guna.UI2.WinForms.Guna2Button btnTest3;
     }
 }
