@@ -42,19 +42,6 @@ namespace LibraryManager.Template
         {
             dgvChonDauSach.DataSource = dsBus.LoadListDSMini();
             cbLoaiLoc.Text = "Tên đầu sách";
-            
-
-            temp = tgBus.LoadTenTacGia();
-            cbTacGia.DataSource = temp;
-            cbTacGia.DisplayMember = temp.Columns[2].ToString();
-
-            temp = nxbBus.LoadTenNXB();
-            cbNhaXuatBan.DataSource = temp;
-            cbNhaXuatBan.DisplayMember = temp.Columns[2].ToString();
-
-            temp = tlBus.LoadTenTheLoai();
-            cbTheLoai.DataSource = temp;
-            cbTheLoai.DisplayMember = temp.Columns[2].ToString();
         }
 
         private void dgvChonDauSach_CellClick(object sender, DataGridViewCellEventArgs e)

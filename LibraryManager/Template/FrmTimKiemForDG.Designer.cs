@@ -35,30 +35,11 @@ namespace LibraryManager.Template
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTimKiemForDG));
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.cbLoaiLoc = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbTheLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbNhaXuatBan = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lbTheLoai = new System.Windows.Forms.Label();
-            this.cbTacGia = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtTuKhoa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.dgvChonDauSach = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbInfoMaDS = new System.Windows.Forms.Label();
-            this.imageBook = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbInfoTenNXB = new System.Windows.Forms.Label();
-            this.lbInfoNamXB = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbInfoMota = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbInfoTenTG = new System.Windows.Forms.Label();
-            this.lbInfoTenSach = new System.Windows.Forms.Label();
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +55,19 @@ namespace LibraryManager.Template
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbInfoMaDS = new System.Windows.Forms.Label();
+            this.imageBook = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbInfoTenNXB = new System.Windows.Forms.Label();
+            this.lbInfoNamXB = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbInfoMota = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbInfoTenTG = new System.Windows.Forms.Label();
+            this.lbInfoTenSach = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChonDauSach)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -84,13 +78,8 @@ namespace LibraryManager.Template
             // 
             this.guna2CustomGradientPanel3.BorderRadius = 20;
             this.guna2CustomGradientPanel3.Controls.Add(this.cbLoaiLoc);
-            this.guna2CustomGradientPanel3.Controls.Add(this.cbTheLoai);
+            this.guna2CustomGradientPanel3.Controls.Add(this.btnSearch);
             this.guna2CustomGradientPanel3.Controls.Add(this.label4);
-            this.guna2CustomGradientPanel3.Controls.Add(this.cbNhaXuatBan);
-            this.guna2CustomGradientPanel3.Controls.Add(this.lbTheLoai);
-            this.guna2CustomGradientPanel3.Controls.Add(this.cbTacGia);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label3);
             this.guna2CustomGradientPanel3.Controls.Add(this.txtTuKhoa);
             this.guna2CustomGradientPanel3.Controls.Add(this.label5);
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
@@ -100,7 +89,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(777, 195);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(777, 114);
             this.guna2CustomGradientPanel3.TabIndex = 30;
             // 
             // cbLoaiLoc
@@ -119,32 +108,12 @@ namespace LibraryManager.Template
             "Mã đầu sách",
             "Tên đầu sách"});
             this.cbLoaiLoc.ItemsAppearance.Parent = this.cbLoaiLoc;
-            this.cbLoaiLoc.Location = new System.Drawing.Point(414, 47);
+            this.cbLoaiLoc.Location = new System.Drawing.Point(401, 47);
             this.cbLoaiLoc.Name = "cbLoaiLoc";
             this.cbLoaiLoc.ShadowDecoration.Parent = this.cbLoaiLoc;
             this.cbLoaiLoc.Size = new System.Drawing.Size(188, 36);
             this.cbLoaiLoc.TabIndex = 8;
             this.cbLoaiLoc.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
-            // 
-            // cbTheLoai
-            // 
-            this.cbTheLoai.BackColor = System.Drawing.Color.Transparent;
-            this.cbTheLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTheLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTheLoai.FocusedColor = System.Drawing.Color.Empty;
-            this.cbTheLoai.FocusedState.Parent = this.cbTheLoai;
-            this.cbTheLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbTheLoai.FormattingEnabled = true;
-            this.cbTheLoai.HoverState.Parent = this.cbTheLoai;
-            this.cbTheLoai.ItemHeight = 30;
-            this.cbTheLoai.ItemsAppearance.Parent = this.cbTheLoai;
-            this.cbTheLoai.Location = new System.Drawing.Point(453, 134);
-            this.cbTheLoai.Name = "cbTheLoai";
-            this.cbTheLoai.ShadowDecoration.Parent = this.cbTheLoai;
-            this.cbTheLoai.Size = new System.Drawing.Size(188, 36);
-            this.cbTheLoai.TabIndex = 8;
-            this.cbTheLoai.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -157,80 +126,6 @@ namespace LibraryManager.Template
             this.label4.TabIndex = 7;
             this.label4.Text = "Lọc theo";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // cbNhaXuatBan
-            // 
-            this.cbNhaXuatBan.BackColor = System.Drawing.Color.Transparent;
-            this.cbNhaXuatBan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbNhaXuatBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNhaXuatBan.FocusedColor = System.Drawing.Color.Empty;
-            this.cbNhaXuatBan.FocusedState.Parent = this.cbNhaXuatBan;
-            this.cbNhaXuatBan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNhaXuatBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbNhaXuatBan.FormattingEnabled = true;
-            this.cbNhaXuatBan.HoverState.Parent = this.cbNhaXuatBan;
-            this.cbNhaXuatBan.ItemHeight = 30;
-            this.cbNhaXuatBan.ItemsAppearance.Parent = this.cbNhaXuatBan;
-            this.cbNhaXuatBan.Location = new System.Drawing.Point(240, 134);
-            this.cbNhaXuatBan.Name = "cbNhaXuatBan";
-            this.cbNhaXuatBan.ShadowDecoration.Parent = this.cbNhaXuatBan;
-            this.cbNhaXuatBan.Size = new System.Drawing.Size(188, 36);
-            this.cbNhaXuatBan.TabIndex = 8;
-            // 
-            // lbTheLoai
-            // 
-            this.lbTheLoai.AutoSize = true;
-            this.lbTheLoai.BackColor = System.Drawing.Color.Transparent;
-            this.lbTheLoai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTheLoai.Location = new System.Drawing.Point(449, 102);
-            this.lbTheLoai.Name = "lbTheLoai";
-            this.lbTheLoai.Size = new System.Drawing.Size(63, 20);
-            this.lbTheLoai.TabIndex = 7;
-            this.lbTheLoai.Text = "Thể loại";
-            this.lbTheLoai.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // cbTacGia
-            // 
-            this.cbTacGia.BackColor = System.Drawing.Color.Transparent;
-            this.cbTacGia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTacGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTacGia.FocusedColor = System.Drawing.Color.Empty;
-            this.cbTacGia.FocusedState.Parent = this.cbTacGia;
-            this.cbTacGia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbTacGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbTacGia.FormattingEnabled = true;
-            this.cbTacGia.HoverState.Parent = this.cbTacGia;
-            this.cbTacGia.ItemHeight = 30;
-            this.cbTacGia.ItemsAppearance.Parent = this.cbTacGia;
-            this.cbTacGia.Location = new System.Drawing.Point(32, 134);
-            this.cbTacGia.Name = "cbTacGia";
-            this.cbTacGia.ShadowDecoration.Parent = this.cbTacGia;
-            this.cbTacGia.Size = new System.Drawing.Size(188, 36);
-            this.cbTacGia.TabIndex = 8;
-            this.cbTacGia.SelectedIndexChanged += new System.EventHandler(this.cbTacGia_SelectedIndexChanged);
-            this.cbTacGia.SelectionChangeCommitted += new System.EventHandler(this.cbTacGia_SelectionChangeCommitted);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(236, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nhà xuất bản";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Tác giả";
             // 
             // txtTuKhoa
             // 
@@ -284,11 +179,11 @@ namespace LibraryManager.Template
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
             this.btnSearch.Image = global::LibraryManager.Properties.Resources.icons8_search_32px;
-            this.btnSearch.Location = new System.Drawing.Point(668, 242);
+            this.btnSearch.Location = new System.Drawing.Point(621, 47);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(178, 44);
+            this.btnSearch.Size = new System.Drawing.Size(125, 44);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Tìm kiếm";
             // 
@@ -360,7 +255,7 @@ namespace LibraryManager.Template
             this.dgvChonDauSach.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvChonDauSach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvChonDauSach.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvChonDauSach.Location = new System.Drawing.Point(69, 289);
+            this.dgvChonDauSach.Location = new System.Drawing.Point(69, 163);
             this.dgvChonDauSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChonDauSach.Name = "dgvChonDauSach";
             this.dgvChonDauSach.RowHeadersVisible = false;
@@ -368,11 +263,142 @@ namespace LibraryManager.Template
             this.dgvChonDauSach.RowTemplate.Height = 40;
             this.dgvChonDauSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvChonDauSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChonDauSach.Size = new System.Drawing.Size(777, 420);
+            this.dgvChonDauSach.Size = new System.Drawing.Size(777, 531);
             this.dgvChonDauSach.TabIndex = 33;
             this.dgvChonDauSach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvChonDauSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChonDauSach_CellClick);
             this.dgvChonDauSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChonDauSach_CellContentClick);
+            // 
+            // MaDauSach
+            // 
+            this.MaDauSach.DataPropertyName = "MaDauSach";
+            this.MaDauSach.HeaderText = "Mã đầu sách";
+            this.MaDauSach.MinimumWidth = 6;
+            this.MaDauSach.Name = "MaDauSach";
+            this.MaDauSach.ReadOnly = true;
+            // 
+            // TenDauSach
+            // 
+            this.TenDauSach.DataPropertyName = "TenDauSach";
+            this.TenDauSach.HeaderText = "Tên đầu sách";
+            this.TenDauSach.MinimumWidth = 6;
+            this.TenDauSach.Name = "TenDauSach";
+            this.TenDauSach.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // LanTaiBan
+            // 
+            this.LanTaiBan.DataPropertyName = "LanTaiBan";
+            this.LanTaiBan.HeaderText = "LanTaiBan";
+            this.LanTaiBan.MinimumWidth = 6;
+            this.LanTaiBan.Name = "LanTaiBan";
+            this.LanTaiBan.ReadOnly = true;
+            this.LanTaiBan.Visible = false;
+            // 
+            // NamXuatBan
+            // 
+            this.NamXuatBan.DataPropertyName = "NamXuatBan";
+            this.NamXuatBan.HeaderText = "NamXuatBan";
+            this.NamXuatBan.MinimumWidth = 6;
+            this.NamXuatBan.Name = "NamXuatBan";
+            this.NamXuatBan.ReadOnly = true;
+            this.NamXuatBan.Visible = false;
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.DataPropertyName = "GiaTien";
+            this.GiaTien.HeaderText = "GiaTien";
+            this.GiaTien.MinimumWidth = 6;
+            this.GiaTien.Name = "GiaTien";
+            this.GiaTien.ReadOnly = true;
+            this.GiaTien.Visible = false;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "MoTa";
+            this.MoTa.MinimumWidth = 6;
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            this.MoTa.Visible = false;
+            // 
+            // Anh
+            // 
+            this.Anh.DataPropertyName = "Anh";
+            this.Anh.HeaderText = "Anh";
+            this.Anh.MinimumWidth = 6;
+            this.Anh.Name = "Anh";
+            this.Anh.ReadOnly = true;
+            this.Anh.Visible = false;
+            // 
+            // MaTheLoai
+            // 
+            this.MaTheLoai.DataPropertyName = "MaTheLoai";
+            this.MaTheLoai.HeaderText = "MaTheLoai";
+            this.MaTheLoai.MinimumWidth = 6;
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
+            this.MaTheLoai.Visible = false;
+            // 
+            // MaTacGia
+            // 
+            this.MaTacGia.DataPropertyName = "MaTacGia";
+            this.MaTacGia.HeaderText = "MaTacGia";
+            this.MaTacGia.MinimumWidth = 6;
+            this.MaTacGia.Name = "MaTacGia";
+            this.MaTacGia.ReadOnly = true;
+            this.MaTacGia.Visible = false;
+            // 
+            // TenTacGia
+            // 
+            this.TenTacGia.DataPropertyName = "TenTacGia";
+            this.TenTacGia.HeaderText = "TenTacGia";
+            this.TenTacGia.MinimumWidth = 6;
+            this.TenTacGia.Name = "TenTacGia";
+            this.TenTacGia.ReadOnly = true;
+            this.TenTacGia.Visible = false;
+            // 
+            // MaNhaXuatBan
+            // 
+            this.MaNhaXuatBan.DataPropertyName = "MaNhaXuatBan";
+            this.MaNhaXuatBan.HeaderText = "MaNhaXuatBan";
+            this.MaNhaXuatBan.MinimumWidth = 6;
+            this.MaNhaXuatBan.Name = "MaNhaXuatBan";
+            this.MaNhaXuatBan.ReadOnly = true;
+            this.MaNhaXuatBan.Visible = false;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "DiaChi";
+            this.DiaChi.MinimumWidth = 6;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            this.DiaChi.Visible = false;
+            // 
+            // TenNhaXuatBan
+            // 
+            this.TenNhaXuatBan.DataPropertyName = "TenNhaXuatBan";
+            this.TenNhaXuatBan.HeaderText = "TenNhaXuatBan";
+            this.TenNhaXuatBan.MinimumWidth = 6;
+            this.TenNhaXuatBan.Name = "TenNhaXuatBan";
+            this.TenNhaXuatBan.ReadOnly = true;
+            this.TenNhaXuatBan.Visible = false;
+            // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.DataPropertyName = "TenTheLoai";
+            this.TenTheLoai.HeaderText = "TenTheLoai";
+            this.TenTheLoai.MinimumWidth = 6;
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
+            this.TenTheLoai.Visible = false;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -531,147 +557,15 @@ namespace LibraryManager.Template
             this.lbInfoTenSach.Text = "Tư duy doanh nhân- Cách doanh nhân nghĩ, việc doanh nhân làm qua 100 bài học xươn" +
     "g máu";
             // 
-            // MaDauSach
-            // 
-            this.MaDauSach.DataPropertyName = "MaDauSach";
-            this.MaDauSach.HeaderText = "Mã đầu sách";
-            this.MaDauSach.MinimumWidth = 6;
-            this.MaDauSach.Name = "MaDauSach";
-            this.MaDauSach.ReadOnly = true;
-            // 
-            // TenDauSach
-            // 
-            this.TenDauSach.DataPropertyName = "TenDauSach";
-            this.TenDauSach.HeaderText = "Tên đầu sách";
-            this.TenDauSach.MinimumWidth = 6;
-            this.TenDauSach.Name = "TenDauSach";
-            this.TenDauSach.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // LanTaiBan
-            // 
-            this.LanTaiBan.DataPropertyName = "LanTaiBan";
-            this.LanTaiBan.HeaderText = "LanTaiBan";
-            this.LanTaiBan.MinimumWidth = 6;
-            this.LanTaiBan.Name = "LanTaiBan";
-            this.LanTaiBan.ReadOnly = true;
-            this.LanTaiBan.Visible = false;
-            // 
-            // NamXuatBan
-            // 
-            this.NamXuatBan.DataPropertyName = "NamXuatBan";
-            this.NamXuatBan.HeaderText = "NamXuatBan";
-            this.NamXuatBan.MinimumWidth = 6;
-            this.NamXuatBan.Name = "NamXuatBan";
-            this.NamXuatBan.ReadOnly = true;
-            this.NamXuatBan.Visible = false;
-            // 
-            // GiaTien
-            // 
-            this.GiaTien.DataPropertyName = "GiaTien";
-            this.GiaTien.HeaderText = "GiaTien";
-            this.GiaTien.MinimumWidth = 6;
-            this.GiaTien.Name = "GiaTien";
-            this.GiaTien.ReadOnly = true;
-            this.GiaTien.Visible = false;
-            // 
-            // MoTa
-            // 
-            this.MoTa.DataPropertyName = "MoTa";
-            this.MoTa.HeaderText = "MoTa";
-            this.MoTa.MinimumWidth = 6;
-            this.MoTa.Name = "MoTa";
-            this.MoTa.ReadOnly = true;
-            this.MoTa.Visible = false;
-            // 
-            // Anh
-            // 
-            this.Anh.DataPropertyName = "Anh";
-            this.Anh.HeaderText = "Anh";
-            this.Anh.MinimumWidth = 6;
-            this.Anh.Name = "Anh";
-            this.Anh.ReadOnly = true;
-            this.Anh.Visible = false;
-            // 
-            // MaTheLoai
-            // 
-            this.MaTheLoai.DataPropertyName = "MaTheLoai";
-            this.MaTheLoai.HeaderText = "MaTheLoai";
-            this.MaTheLoai.MinimumWidth = 6;
-            this.MaTheLoai.Name = "MaTheLoai";
-            this.MaTheLoai.ReadOnly = true;
-            this.MaTheLoai.Visible = false;
-            // 
-            // MaTacGia
-            // 
-            this.MaTacGia.DataPropertyName = "MaTacGia";
-            this.MaTacGia.HeaderText = "MaTacGia";
-            this.MaTacGia.MinimumWidth = 6;
-            this.MaTacGia.Name = "MaTacGia";
-            this.MaTacGia.ReadOnly = true;
-            this.MaTacGia.Visible = false;
-            // 
-            // TenTacGia
-            // 
-            this.TenTacGia.DataPropertyName = "TenTacGia";
-            this.TenTacGia.HeaderText = "TenTacGia";
-            this.TenTacGia.MinimumWidth = 6;
-            this.TenTacGia.Name = "TenTacGia";
-            this.TenTacGia.ReadOnly = true;
-            this.TenTacGia.Visible = false;
-            // 
-            // MaNhaXuatBan
-            // 
-            this.MaNhaXuatBan.DataPropertyName = "MaNhaXuatBan";
-            this.MaNhaXuatBan.HeaderText = "MaNhaXuatBan";
-            this.MaNhaXuatBan.MinimumWidth = 6;
-            this.MaNhaXuatBan.Name = "MaNhaXuatBan";
-            this.MaNhaXuatBan.ReadOnly = true;
-            this.MaNhaXuatBan.Visible = false;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "DiaChi";
-            this.DiaChi.MinimumWidth = 6;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Visible = false;
-            // 
-            // TenNhaXuatBan
-            // 
-            this.TenNhaXuatBan.DataPropertyName = "TenNhaXuatBan";
-            this.TenNhaXuatBan.HeaderText = "TenNhaXuatBan";
-            this.TenNhaXuatBan.MinimumWidth = 6;
-            this.TenNhaXuatBan.Name = "TenNhaXuatBan";
-            this.TenNhaXuatBan.ReadOnly = true;
-            this.TenNhaXuatBan.Visible = false;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.DataPropertyName = "TenTheLoai";
-            this.TenTheLoai.HeaderText = "TenTheLoai";
-            this.TenTheLoai.MinimumWidth = 6;
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            this.TenTheLoai.Visible = false;
-            // 
             // FrmTimKiemForDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvChonDauSach);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Name = "FrmTimKiemForDG";
-            this.Size = new System.Drawing.Size(1347, 643);
+            this.Size = new System.Drawing.Size(1347, 783);
             this.Load += new System.EventHandler(this.FrmTimKiemForDG_Load);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
@@ -687,8 +581,6 @@ namespace LibraryManager.Template
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTacGia;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtTuKhoa;
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvChonDauSach;
@@ -705,10 +597,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbInfoTenTG;
         private System.Windows.Forms.Label lbInfoTenSach;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTheLoai;
-        private Guna.UI2.WinForms.Guna2ComboBox cbNhaXuatBan;
-        private System.Windows.Forms.Label lbTheLoai;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbLoaiLoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
