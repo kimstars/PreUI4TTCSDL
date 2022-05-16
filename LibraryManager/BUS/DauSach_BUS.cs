@@ -27,6 +27,18 @@ namespace LibraryManager.BUS
             }
             return res;
         }
+
+        public List<string> LoadMaDauSach_SanCo()
+        {
+            DataTable temp = dsDao.GetMaDauSach_SanCo();
+            List<string> res = new List<string>();
+            for (int i = 0; i < temp.Rows.Count; i++)
+            {
+                string item = temp.Rows[i]["MaDauSach"].ToString();
+                res.Add(item);
+            }
+            return res;
+        }
         public List<string> LoadMaDauSach(string keyword, string TL)
         {
             DataTable temp = dsDao.GetMaDauSach(keyword,TL);
@@ -41,10 +53,42 @@ namespace LibraryManager.BUS
         }
 
 
+        public bool CheckMaDauSach(string ma)
+        {
+            if (dsDao.GetCheckMaDauSach(ma) != 0) return true;
+            else return false;
+        }
+
+        public void ThemThongtinNhap(DauSach ds,SangTac st, XuatBan xb)
+        {
+            dsDao.InsertDauSach(ds,st,xb);
+        }
+
+        public void Update(DauSach ds, SangTac st, XuatBan xb)
+        {
+            dsDao.UpdateDauSach(ds, st, xb);
+        }
+
+        public void Delete(DauSach ds, SangTac st, XuatBan xb)
+        {
+            dsDao.DeleteDauSach(ds, st, xb);
+        }
+
+        public DataTable SearchDS(string TuKhoa, string MucTimKiem)
+        {
+            return dsDao.Search(TuKhoa,MucTimKiem);
+        }
+        
+
         public DataTable LoadListDS()
         {
             return dsDao.LoadDauSach();
         }
+        public DataTable LoadListDSMini()
+        {
+            return dsDao.LoadDauSachMini();
+        }
+
         public DataTable LoadThongTinSach(string MaDauSach)
         {
             return dsDao.GetInfo(MaDauSach);
@@ -100,6 +144,11 @@ namespace LibraryManager.BUS
             return dsDao.GetTheLoai(Ma);
         }
 
+
+        public string LoadViTriAvailable(string Ma)
+        {
+            return dsDao.ViTriAvailable(Ma);
+        }
 
         #endregion
 
@@ -189,6 +238,7 @@ namespace LibraryManager.BUS
 
 
         #endregion
+
 
 
 

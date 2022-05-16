@@ -16,6 +16,20 @@ namespace LibraryManager.DAO
             string sqlString = @"select * from DOCGIA";
             return GetData(sqlString);
         }
+
+        public DataTable loadDocGiaInfo()
+        {
+            string sqlString = @"SELECT DOCGIA.MaDocGia, TenDocGia, DiaChi, NgaySinh, GioiTinh, SDT, CMND, NgayDangKi,Anh, MaMuonTra, NgayMuon, HanTra, TienCoc
+                                 FROM DOCGIA, PHIEUMUONTRA
+                                 WHERE DOCGIA.MaDocGia = PHIEUMUONTRA.MaDocGia";
+            return GetData(sqlString);
+        }
+
+        public DataTable loadDocGiaLoc(string loai)
+        {
+            string sqlString = @"EXEC LOCDOCGIA '"+loai+"'";
+            return GetData(sqlString);
+        }
         public bool Insert(DocGia dg)
         {
             if (GetData("select* from DOCGIA where MaDocGia = '" + dg.MaDocGia + "'").Rows.Count > 0)
@@ -166,6 +180,36 @@ namespace LibraryManager.DAO
         #region khoataikhoan
         
 
+
+        #endregion
+
+
+        public string GetMaDG_TaiKhoan(string TenDangNhap)
+        {
+            string sql = $"SELECT dg.MaDocGia FROM dbo.DOCGIA dg INNER JOIN dbo.TAIKHOAN tk ON  tk.TenDangNhap = dg.TenDangNhap WHERE dg.TenDangNhap = '{TenDangNhap}'";
+            return GetString(sql);
+
+        }
+
+
+
+
+        #region NhanvienXuLy
+        public string GetTenDocGia(string MaDG)
+        {
+            string sql = $"SELECT TenDocGia FROM dbo.DOCGIA WHERE MaDocGia = '{MaDG}'";
+            return GetString(sql);
+        }
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            string ten = GetTenDocGia(MaDG); 
+            if(ten != "")
+            {
+                return false;
+            }
+            return true;
+        }
 
         #endregion
     }

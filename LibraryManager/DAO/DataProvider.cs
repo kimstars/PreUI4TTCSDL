@@ -68,7 +68,6 @@ namespace LibraryManager.DAO
             return imgbin ;
         }
 
-
         public Int64 GetCount(string sql)
         {
             if (connect.State != ConnectionState.Open)
@@ -96,6 +95,16 @@ namespace LibraryManager.DAO
             if (d != null) return d.Value.ToString("yyyy/MM/dd");
             return "";
 
+        }
+
+        public DataSet chart(string sql)
+        {
+            connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            SqlDataAdapter ad = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            return ds;
         }
 
     }

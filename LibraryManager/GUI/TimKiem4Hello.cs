@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using LibraryManager.BUS;
 using LibraryManager.DTO;
@@ -17,11 +16,12 @@ namespace LibraryManager.GUI
     {
         public TimKiem4Hello()
         {
-
             InitializeComponent();
         }
 
         string MaDSCurrent = "";
+
+        public EventHandler clickPM;
         public void AddItem(string MaDauSach)
         {
 
@@ -37,15 +37,16 @@ namespace LibraryManager.GUI
 
                     foreach (DataGridViewRow row in dgvChooseBook.Rows)
                     {
-                        if(row.Cells[0].Value.ToString() == item.MaDauSach)
+                        if (row.Cells[0].Value.ToString() == item.MaDauSach)
                         {
                             return;
                         }
                     }
-                    MessageBox.Show(item.SoLuong.ToString());
+
+                    if (item.SoLuong > 0)
                         dgvChooseBook.Rows.Add(new object[] { item.MaDauSach, item.TenSach, "Bỏ" });
-                    
-                    
+
+
                 };
             }
         }
@@ -56,7 +57,7 @@ namespace LibraryManager.GUI
         private void LoadBookFlow()
         {
             flowLayoutDS.Controls.Clear();
-
+            lbSLBook.Text = $"Danh sách này có {DSDauSach.Count.ToString()} đầu sách.";
             if (DSDauSach.Count > 0)
             {
                 foreach (var item in DSDauSach)
@@ -70,7 +71,7 @@ namespace LibraryManager.GUI
         private void TimKiem4Hello_Load(object sender, EventArgs e)
         {
 
-            
+
             DSDauSach = dsBus.LoadMaDauSach();
             LoadBookFlow();
             LoadComboBoxTheLoai();
@@ -82,9 +83,7 @@ namespace LibraryManager.GUI
             List<string> dsTheLoai = dsBus.LoadAllTheLoai();
             for (int i = 0; i < dsTheLoai.Count; i++)
             {
-
                 cbTheLoai.Items.Insert(i, dsTheLoai[i]);
-
             }
 
         }
@@ -93,14 +92,28 @@ namespace LibraryManager.GUI
         {
 
             SearchByName();
-
-
             LoadBookFlow();
         }
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
-            dgvChooseBook.Rows.Clear();
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa tất cả?", "Xóa tất cả sách đã chọn?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                dgvChooseBook.Rows.Clear();
+                foreach (var item in flowLayoutDS.Controls)
+                {
+
+                    Template.OneBook it = (Template.OneBook)item;
+                    if (it.selected)
+                    {
+                        it.HighLightItem();
+                        
+                    }
+
+                }
+
+            }
         }
 
         private void dgvChooseBook_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,8 +122,20 @@ namespace LibraryManager.GUI
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-      
+
+                    string MaXoa = dgvChooseBook.Rows[e.RowIndex].Cells["MaDauSach"].Value.ToString();
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
+                    foreach(var item in flowLayoutDS.Controls)
+                    {
+
+                        Template.OneBook it = (Template.OneBook)item;
+                        if(it.MaDauSach == MaXoa && it.selected)
+                        {
+                            it.HighLightItem();
+                            break;
+                        }
+
+                    }
                 }
 
             }
@@ -203,6 +228,37 @@ namespace LibraryManager.GUI
         {
             GUI.ThongTinSach newform = new GUI.ThongTinSach(MaDSCurrent);
             newform.Show();
+        }
+
+        public static List<string> dsMuon = new List<string>();
+        public static bool DaTim = false;
+        private void btnCreatePM_Click(object sender, EventArgs e)
+        {
+
+            dsMuon.Clear();
+            for(int i = 0; i< dgvChooseBook.Rows.Count; i++)
+            {
+                dsMuon.Add(dgvChooseBook.Rows[i].Cells["MaDauSach"].Value.ToString());
+    
+            }
+            DaTim = true;
+
+
+            openAfterLog();
+        }
+
+        public static void openAfterLog()
+        {
+            if (!Form1.isLogin)
+            {
+                frmLogin newlogin = new frmLogin();
+                newlogin.Show();
+            }
+            else
+            {
+                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr);
+                newdg.Show();
+            }
         }
     }
 }

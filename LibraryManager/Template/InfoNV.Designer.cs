@@ -61,12 +61,12 @@ namespace LibraryManager.Template
             this.Mâ = new System.Windows.Forms.Label();
             this.lbChucvu = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDoiMK = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             this.imageAvt = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnChangeImg = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.lbTenDangNhap = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@ namespace LibraryManager.Template
             this.lbMaNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaNV.Location = new System.Drawing.Point(361, 81);
             this.lbMaNV.Name = "lbMaNV";
-            this.lbMaNV.Size = new System.Drawing.Size(39, 20);
+            this.lbMaNV.Size = new System.Drawing.Size(31, 15);
             this.lbMaNV.TabIndex = 16;
             this.lbMaNV.Text = "NaN";
             // 
@@ -128,7 +128,7 @@ namespace LibraryManager.Template
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(22, 228);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "";
@@ -155,7 +155,7 @@ namespace LibraryManager.Template
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
             this.txtDiaChi.Location = new System.Drawing.Point(25, 133);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
@@ -171,7 +171,7 @@ namespace LibraryManager.Template
             this.label10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(21, 204);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(180, 19);
+            this.label10.Size = new System.Drawing.Size(148, 13);
             this.label10.TabIndex = 8;
             this.label10.Text = "Số CMND (số thẻ căn cước):";
             // 
@@ -193,7 +193,7 @@ namespace LibraryManager.Template
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(22, 40);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
@@ -209,7 +209,7 @@ namespace LibraryManager.Template
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(21, 106);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Địa chỉ:";
             // 
@@ -220,7 +220,7 @@ namespace LibraryManager.Template
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(21, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 19);
+            this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Số điện thoại:";
             // 
@@ -265,7 +265,7 @@ namespace LibraryManager.Template
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
             this.txtEmail.Location = new System.Drawing.Point(129, 229);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -281,7 +281,7 @@ namespace LibraryManager.Template
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(125, 202);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 19);
+            this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "Email:";
             // 
@@ -316,7 +316,7 @@ namespace LibraryManager.Template
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(20, 205);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 19);
+            this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Giới tính:";
             // 
@@ -326,6 +326,7 @@ namespace LibraryManager.Template
             this.pickerBirthday.BorderRadius = 6;
             this.pickerBirthday.CheckedState.Parent = this.pickerBirthday;
             this.pickerBirthday.FillColor = System.Drawing.Color.White;
+            this.pickerBirthday.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.pickerBirthday.HoverState.Parent = this.pickerBirthday;
             this.pickerBirthday.Location = new System.Drawing.Point(22, 134);
@@ -356,7 +357,7 @@ namespace LibraryManager.Template
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.IconRight = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
             this.txtName.Location = new System.Drawing.Point(22, 41);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -372,7 +373,7 @@ namespace LibraryManager.Template
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Ngày sinh:";
             // 
@@ -383,7 +384,7 @@ namespace LibraryManager.Template
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(20, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 19);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ và tên:";
             // 
@@ -393,7 +394,7 @@ namespace LibraryManager.Template
             this.lbTypeAcc.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTypeAcc.Location = new System.Drawing.Point(418, 40);
             this.lbTypeAcc.Name = "lbTypeAcc";
-            this.lbTypeAcc.Size = new System.Drawing.Size(138, 19);
+            this.lbTypeAcc.Size = new System.Drawing.Size(117, 13);
             this.lbTypeAcc.TabIndex = 13;
             this.lbTypeAcc.Text = "(Tài khoản nhân viên)";
             // 
@@ -404,7 +405,7 @@ namespace LibraryManager.Template
             this.lbHoTen.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lbHoTen.Location = new System.Drawing.Point(239, 29);
             this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(173, 32);
+            this.lbHoTen.Size = new System.Drawing.Size(135, 25);
             this.lbHoTen.TabIndex = 11;
             this.lbHoTen.Text = "Chu Tuấn Kiệt";
             // 
@@ -437,7 +438,7 @@ namespace LibraryManager.Template
             this.label16.ForeColor = System.Drawing.Color.Red;
             this.label16.Location = new System.Drawing.Point(19, 92);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 19);
+            this.label16.Size = new System.Drawing.Size(32, 13);
             this.label16.TabIndex = 16;
             this.label16.Text = "mess";
             // 
@@ -448,7 +449,7 @@ namespace LibraryManager.Template
             this.label14.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(19, 218);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 19);
+            this.label14.Size = new System.Drawing.Size(126, 13);
             this.label14.TabIndex = 15;
             this.label14.Text = "Nhập lại mật khẩu mới:";
             // 
@@ -459,7 +460,7 @@ namespace LibraryManager.Template
             this.label13.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(19, 123);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 19);
+            this.label13.Size = new System.Drawing.Size(111, 13);
             this.label13.TabIndex = 14;
             this.label13.Text = "Nhập mật khẩu mới:";
             // 
@@ -470,7 +471,7 @@ namespace LibraryManager.Template
             this.label12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(19, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 19);
+            this.label12.Size = new System.Drawing.Size(107, 13);
             this.label12.TabIndex = 10;
             this.label12.Text = "Nhập mật khẩu cũ :";
             // 
@@ -492,7 +493,7 @@ namespace LibraryManager.Template
             this.txtNewpass2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewpass2.HoverState.Parent = this.txtNewpass2;
             this.txtNewpass2.Location = new System.Drawing.Point(23, 245);
-            this.txtNewpass2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewpass2.Margin = new System.Windows.Forms.Padding(4);
             this.txtNewpass2.Name = "txtNewpass2";
             this.txtNewpass2.PasswordChar = '\0';
             this.txtNewpass2.PlaceholderText = "";
@@ -519,7 +520,7 @@ namespace LibraryManager.Template
             this.txtNewpass1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewpass1.HoverState.Parent = this.txtNewpass1;
             this.txtNewpass1.Location = new System.Drawing.Point(23, 154);
-            this.txtNewpass1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewpass1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNewpass1.Name = "txtNewpass1";
             this.txtNewpass1.PasswordChar = '\0';
             this.txtNewpass1.PlaceholderText = "";
@@ -546,7 +547,7 @@ namespace LibraryManager.Template
             this.txtLassPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLassPass.HoverState.Parent = this.txtLassPass;
             this.txtLassPass.Location = new System.Drawing.Point(23, 41);
-            this.txtLassPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLassPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtLassPass.Name = "txtLassPass";
             this.txtLassPass.PasswordChar = '\0';
             this.txtLassPass.PlaceholderText = "";
@@ -562,7 +563,7 @@ namespace LibraryManager.Template
             this.Mâ.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mâ.Location = new System.Drawing.Point(693, 290);
             this.Mâ.Name = "Mâ";
-            this.Mâ.Size = new System.Drawing.Size(128, 23);
+            this.Mâ.Size = new System.Drawing.Size(104, 19);
             this.Mâ.TabIndex = 0;
             this.Mâ.Text = "Đổi mật khẩu : ";
             // 
@@ -572,7 +573,7 @@ namespace LibraryManager.Template
             this.lbChucvu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChucvu.Location = new System.Drawing.Point(361, 166);
             this.lbChucvu.Name = "lbChucvu";
-            this.lbChucvu.Size = new System.Drawing.Size(59, 20);
+            this.lbChucvu.Size = new System.Drawing.Size(48, 15);
             this.lbChucvu.TabIndex = 18;
             this.lbChucvu.Text = "Thủ thư";
             // 
@@ -583,25 +584,25 @@ namespace LibraryManager.Template
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(22, 290);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(224, 23);
+            this.label15.Size = new System.Drawing.Size(184, 19);
             this.label15.TabIndex = 19;
             this.label15.Text = "Chỉnh sửa thông tin cơ bản:";
             // 
-            // guna2Button1
+            // btnDoiMK
             // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(697, 658);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(153, 45);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Đổi mật khẩu";
+            this.btnDoiMK.BorderRadius = 18;
+            this.btnDoiMK.CheckedState.Parent = this.btnDoiMK;
+            this.btnDoiMK.CustomImages.Parent = this.btnDoiMK;
+            this.btnDoiMK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.btnDoiMK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDoiMK.ForeColor = System.Drawing.Color.White;
+            this.btnDoiMK.HoverState.Parent = this.btnDoiMK;
+            this.btnDoiMK.Location = new System.Drawing.Point(697, 658);
+            this.btnDoiMK.Name = "btnDoiMK";
+            this.btnDoiMK.ShadowDecoration.Parent = this.btnDoiMK;
+            this.btnDoiMK.Size = new System.Drawing.Size(153, 45);
+            this.btnDoiMK.TabIndex = 12;
+            this.btnDoiMK.Text = "Đổi mật khẩu";
             // 
             // errorProvider1
             // 
@@ -653,25 +654,25 @@ namespace LibraryManager.Template
             this.btnChangeImg.Location = new System.Drawing.Point(43, 177);
             this.btnChangeImg.Name = "btnChangeImg";
             this.btnChangeImg.ShadowDecoration.Parent = this.btnChangeImg;
-            this.btnChangeImg.Size = new System.Drawing.Size(149, 42);
+            this.btnChangeImg.Size = new System.Drawing.Size(149, 36);
             this.btnChangeImg.TabIndex = 22;
             this.btnChangeImg.Text = "Thay ảnh";
             // 
-            // guna2Button3
+            // btnLuu
             // 
-            this.guna2Button3.BorderRadius = 18;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(26, 658);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(184, 45);
-            this.guna2Button3.TabIndex = 23;
-            this.guna2Button3.Text = "Lưu thay đổi";
+            this.btnLuu.BorderRadius = 18;
+            this.btnLuu.CheckedState.Parent = this.btnLuu;
+            this.btnLuu.CustomImages.Parent = this.btnLuu;
+            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.HoverState.Parent = this.btnLuu;
+            this.btnLuu.Location = new System.Drawing.Point(26, 658);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
+            this.btnLuu.Size = new System.Drawing.Size(184, 45);
+            this.btnLuu.TabIndex = 23;
+            this.btnLuu.Text = "Lưu thay đổi";
             // 
             // lbTenDangNhap
             // 
@@ -679,7 +680,7 @@ namespace LibraryManager.Template
             this.lbTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenDangNhap.Location = new System.Drawing.Point(361, 122);
             this.lbTenDangNhap.Name = "lbTenDangNhap";
-            this.lbTenDangNhap.Size = new System.Drawing.Size(39, 20);
+            this.lbTenDangNhap.Size = new System.Drawing.Size(31, 15);
             this.lbTenDangNhap.TabIndex = 17;
             this.lbTenDangNhap.Text = "NaN";
             // 
@@ -705,7 +706,7 @@ namespace LibraryManager.Template
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(241, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 25;
             this.label1.Text = "Mã nhân viên : ";
             // 
@@ -715,7 +716,7 @@ namespace LibraryManager.Template
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(241, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.Size = new System.Drawing.Size(91, 15);
             this.label2.TabIndex = 26;
             this.label2.Text = "Tên đăng nhập: ";
             // 
@@ -725,23 +726,23 @@ namespace LibraryManager.Template
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(241, 166);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 20);
+            this.label7.Size = new System.Drawing.Size(57, 15);
             this.label7.TabIndex = 27;
             this.label7.Text = "Chức vụ :";
             // 
             // InfoNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnChangeImg);
             this.Controls.Add(this.imageAvt);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lbChucvu);
             this.Controls.Add(this.guna2CustomGradientPanel3);
@@ -800,10 +801,10 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtNewpass2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDoiMK;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2CircleButton btnBack;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnLuu;
         private Guna.UI2.WinForms.Guna2Button btnChangeImg;
         private Bunifu.UI.WinForms.BunifuPictureBox imageAvt;
         private System.Windows.Forms.Label lbTenDangNhap;

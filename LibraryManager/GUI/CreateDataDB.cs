@@ -58,5 +58,11 @@ namespace LibraryManager.GUI
             Template.FormAdmin newform = new Template.FormAdmin();
             newform.Show();
         }
+
+        private void btnCuonSach_Click(object sender, EventArgs e)
+        {
+            CreateDB.create1000Book newform = new CreateDB.create1000Book();
+            newform.Show();
+        }
     }
 }

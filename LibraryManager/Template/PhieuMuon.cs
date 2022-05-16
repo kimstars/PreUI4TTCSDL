@@ -29,21 +29,42 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
-   
 
-        string[] listsach = { "DS000030", "DS000040", "DS000045", "DS000009", "DS000013", "DS000012", "DS00002" };
+        public PhieuMuon(string maDG, List<string> dsds)
+        {
+            InitializeComponent();
+            listsach = dsds;
+            MaDocGia = maDG;
+            lbNVxuly.Text = "Phiếu mượn độc giả";
+        }
+        public PhieuMuon( List<string> dsds,string maNV)
+        {
+            InitializeComponent();
+            listsach = dsds;
+            MaNhanVien = maNV;
+            lbNVxuly.Text = $"Nhân viên xử lý: {MaNhanVien}";
+            isNV = true;
+        }
+
+        bool isNV = false;
+        string MaNhanVien;
+        string MaDocGia;
+        List<string> listsach;
+
 
         string MaDauSachCurrent = "DS000000";
 
-
+        DataTable InfoBorrow = null;
 
         MuonSach_BUS msBus = new MuonSach_BUS();
         PhieuMuon_BUS pmBus = new PhieuMuon_BUS();
         private void PhieuMuon_Load(object sender, EventArgs e)
         {
-            
 
-            DataTable InfoBorrow = msBus.LoadTTSachMuon(listsach);
+
+            LoadTTDocGia();
+
+            InfoBorrow = msBus.LoadTTSachMuon(listsach);
 
             dgvInfoBorrow.DataSource = InfoBorrow;
 
@@ -55,7 +76,13 @@ namespace LibraryManager.Template
 
             lbMaMuonTra.Text = pmBus.CreateNext_MaMT();
 
-
+        }
+        DocGia_BUS dgBus = new DocGia_BUS();
+        private void LoadTTDocGia()
+        {
+            txtMaDG.Text = MaDocGia;
+            DocGia onedg = dgBus.GetOne(MaDocGia);
+            txtTenDG.Text = onedg.TenDocGia;
         }
         private void TinhTienCoc(DataTable InfoBorrow)
         {
@@ -93,16 +120,29 @@ namespace LibraryManager.Template
 
             if(MaDauSach.Contains("DS")) LoadDetailBook(MaDauSach);
             MaDauSachCurrent = MaDauSach;
+
+
+            if (e.ColumnIndex == 5)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    dgvInfoBorrow.Rows.RemoveAt(e.RowIndex);
+                }
+
+            }
+            indexCurrent = e.RowIndex;
         }
 
+        int indexCurrent = 1;
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
-            listsach = listsach.Where(var => var != MaDauSachCurrent).ToArray();
-            DataTable InfoBorrow = msBus.LoadTTSachMuon(listsach);
-            dgvInfoBorrow.DataSource = InfoBorrow;
+
+            dgvInfoBorrow.Controls.RemoveAt(indexCurrent);
             TinhTienCoc(InfoBorrow);
 
         }
+
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
@@ -118,16 +158,33 @@ namespace LibraryManager.Template
             pmtnew.NgayMuon = DateMuon.Value;
             pmtnew.HanTra = dateHanTra.Value;
             pmtnew.MaMuonTra = lbMaMuonTra.Text;
+            pmtnew.MaNhanVien = MaNhanVien;
+
 
             List<string> DSMaSach = new List<string>();
             for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
             {
-                DSMaSach.Add(dgvInfoBorrow.Rows[i].Cells[0].Value.ToString());
+                var tempmds = dgvInfoBorrow.Rows[i].Cells[1].Value.ToString().Trim();
+                if(tempmds!="") DSMaSach.Add(tempmds);
             }
 
+            pmBus.InsertMuon(pmtnew, DSMaSach,isNV);
 
-            pmBus.DocGiaMuon(pmtnew, DSMaSach);
+        }
 
+        private void txtMaDG_TextChanged(object sender, EventArgs e)
+        {
+            if (dgBus.checkTonTaiDG(txtMaDG.Text))
+            {
+                errorProvider1.SetError(lbMsg, "Tài khoản không tồn tại !");
+                lbMsg.Text = "Tài khoản không tồn tại !";
+            }
+            else
+            {
+                lbMsg.Text = "";
+                errorProvider1.SetError(lbMsg, null);
+                txtTenDG.Text = dgBus.LoadTenDG(txtMaDG.Text);
+            }
 
         }
     }

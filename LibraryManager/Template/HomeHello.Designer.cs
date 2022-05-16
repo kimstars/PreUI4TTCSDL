@@ -32,23 +32,21 @@ namespace LibraryManager.Template
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeHello));
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbTongDS = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbTongDG = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbTongSach = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.oneBook1 = new LibraryManager.Template.OneBook();
-            this.oneBook2 = new LibraryManager.Template.OneBook();
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btn = new Guna.UI2.WinForms.Guna2Button();
@@ -63,10 +61,12 @@ namespace LibraryManager.Template
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbTongTL = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuPictureBox4 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnRegister = new Guna.UI2.WinForms.Guna2Button();
+            this.oneBook1 = new LibraryManager.Template.OneBook();
+            this.oneBook2 = new LibraryManager.Template.OneBook();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
@@ -90,7 +90,7 @@ namespace LibraryManager.Template
             this.bunifuPanel3.BorderRadius = 30;
             this.bunifuPanel3.BorderThickness = 1;
             this.bunifuPanel3.Controls.Add(this.label7);
-            this.bunifuPanel3.Controls.Add(this.label8);
+            this.bunifuPanel3.Controls.Add(this.lbTongDS);
             this.bunifuPanel3.Controls.Add(this.label9);
             this.bunifuPanel3.Controls.Add(this.bunifuPictureBox3);
             this.bunifuPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -112,17 +112,17 @@ namespace LibraryManager.Template
             this.label7.TabIndex = 19;
             this.label7.Text = "Có hơn";
             // 
-            // label8
+            // lbTongDS
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label8.Location = new System.Drawing.Point(149, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 37);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "30";
+            this.lbTongDS.AutoSize = true;
+            this.lbTongDS.BackColor = System.Drawing.Color.Transparent;
+            this.lbTongDS.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lbTongDS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.lbTongDS.Location = new System.Drawing.Point(149, 53);
+            this.lbTongDS.Name = "lbTongDS";
+            this.lbTongDS.Size = new System.Drawing.Size(49, 37);
+            this.lbTongDS.TabIndex = 18;
+            this.lbTongDS.Text = "30";
             // 
             // label9
             // 
@@ -161,7 +161,7 @@ namespace LibraryManager.Template
             this.bunifuPanel2.BorderRadius = 30;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.label4);
-            this.bunifuPanel2.Controls.Add(this.label5);
+            this.bunifuPanel2.Controls.Add(this.lbTongDG);
             this.bunifuPanel2.Controls.Add(this.label6);
             this.bunifuPanel2.Controls.Add(this.bunifuPictureBox2);
             this.bunifuPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -183,17 +183,17 @@ namespace LibraryManager.Template
             this.label4.TabIndex = 19;
             this.label4.Text = "độc giả";
             // 
-            // label5
+            // lbTongDG
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label5.Location = new System.Drawing.Point(146, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 37);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "100";
+            this.lbTongDG.AutoSize = true;
+            this.lbTongDG.BackColor = System.Drawing.Color.Transparent;
+            this.lbTongDG.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lbTongDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.lbTongDG.Location = new System.Drawing.Point(146, 53);
+            this.lbTongDG.Name = "lbTongDG";
+            this.lbTongDG.Size = new System.Drawing.Size(62, 37);
+            this.lbTongDG.TabIndex = 18;
+            this.lbTongDG.Text = "100";
             // 
             // label6
             // 
@@ -232,7 +232,7 @@ namespace LibraryManager.Template
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.label3);
-            this.bunifuPanel1.Controls.Add(this.label2);
+            this.bunifuPanel1.Controls.Add(this.lbTongSach);
             this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -254,17 +254,17 @@ namespace LibraryManager.Template
             this.label3.TabIndex = 19;
             this.label3.Text = "cuốn sách";
             // 
-            // label2
+            // lbTongSach
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label2.Location = new System.Drawing.Point(132, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 37);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "2000";
+            this.lbTongSach.AutoSize = true;
+            this.lbTongSach.BackColor = System.Drawing.Color.Transparent;
+            this.lbTongSach.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lbTongSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.lbTongSach.Location = new System.Drawing.Point(132, 53);
+            this.lbTongSach.Name = "lbTongSach";
+            this.lbTongSach.Size = new System.Drawing.Size(81, 37);
+            this.lbTongSach.TabIndex = 18;
+            this.lbTongSach.Text = "2000";
             // 
             // label1
             // 
@@ -319,28 +319,6 @@ namespace LibraryManager.Template
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(633, 222);
             this.flowLayoutPanel1.TabIndex = 22;
-            // 
-            // oneBook1
-            // 
-            this.oneBook1.BackColor = System.Drawing.Color.White;
-            this.oneBook1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oneBook1.ImageBook = null;
-            this.oneBook1.Location = new System.Drawing.Point(3, 3);
-            this.oneBook1.MaDauSach = "DS000003";
-            this.oneBook1.Name = "oneBook1";
-            this.oneBook1.Size = new System.Drawing.Size(309, 214);
-            this.oneBook1.TabIndex = 0;
-            // 
-            // oneBook2
-            // 
-            this.oneBook2.BackColor = System.Drawing.Color.White;
-            this.oneBook2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oneBook2.ImageBook = null;
-            this.oneBook2.Location = new System.Drawing.Point(318, 3);
-            this.oneBook2.MaDauSach = "DS000003";
-            this.oneBook2.Name = "oneBook2";
-            this.oneBook2.Size = new System.Drawing.Size(309, 216);
-            this.oneBook2.TabIndex = 1;
             // 
             // label10
             // 
@@ -401,6 +379,7 @@ namespace LibraryManager.Template
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Location = new System.Drawing.Point(23, 18);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
@@ -538,7 +517,7 @@ namespace LibraryManager.Template
             this.bunifuPanel7.BorderRadius = 30;
             this.bunifuPanel7.BorderThickness = 1;
             this.bunifuPanel7.Controls.Add(this.label13);
-            this.bunifuPanel7.Controls.Add(this.label14);
+            this.bunifuPanel7.Controls.Add(this.lbTongTL);
             this.bunifuPanel7.Controls.Add(this.label15);
             this.bunifuPanel7.Controls.Add(this.bunifuPictureBox4);
             this.bunifuPanel7.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -560,17 +539,17 @@ namespace LibraryManager.Template
             this.label13.TabIndex = 19;
             this.label13.Text = "Với hơn";
             // 
-            // label14
+            // lbTongTL
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label14.Location = new System.Drawing.Point(151, 53);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 37);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "15";
+            this.lbTongTL.AutoSize = true;
+            this.lbTongTL.BackColor = System.Drawing.Color.Transparent;
+            this.lbTongTL.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lbTongTL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.lbTongTL.Location = new System.Drawing.Point(151, 53);
+            this.lbTongTL.Name = "lbTongTL";
+            this.lbTongTL.Size = new System.Drawing.Size(46, 37);
+            this.lbTongTL.TabIndex = 18;
+            this.lbTongTL.Text = "15";
             // 
             // label15
             // 
@@ -617,6 +596,30 @@ namespace LibraryManager.Template
             this.btnRegister.Text = "ĐĂNG KÝ TÀI KHOẢN ĐỘC GIẢ";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // oneBook1
+            // 
+            this.oneBook1.BackColor = System.Drawing.Color.White;
+            this.oneBook1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.oneBook1.ImageBook = null;
+            this.oneBook1.Location = new System.Drawing.Point(4, 4);
+            this.oneBook1.MaDauSach = "DS000003";
+            this.oneBook1.Margin = new System.Windows.Forms.Padding(4);
+            this.oneBook1.Name = "oneBook1";
+            this.oneBook1.Size = new System.Drawing.Size(309, 214);
+            this.oneBook1.TabIndex = 0;
+            // 
+            // oneBook2
+            // 
+            this.oneBook2.BackColor = System.Drawing.Color.White;
+            this.oneBook2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.oneBook2.ImageBook = null;
+            this.oneBook2.Location = new System.Drawing.Point(4, 226);
+            this.oneBook2.MaDauSach = "DS000003";
+            this.oneBook2.Margin = new System.Windows.Forms.Padding(4);
+            this.oneBook2.Name = "oneBook2";
+            this.oneBook2.Size = new System.Drawing.Size(309, 216);
+            this.oneBook2.TabIndex = 1;
+            // 
             // HomeHello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,6 +636,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "HomeHello";
             this.Size = new System.Drawing.Size(1112, 677);
+            this.Load += new System.EventHandler(this.HomeHello_Load);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
@@ -660,17 +664,17 @@ namespace LibraryManager.Template
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbTongDS;
         private System.Windows.Forms.Label label9;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox3;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbTongDG;
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTongSach;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
@@ -688,7 +692,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label12;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel7;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbTongTL;
         private System.Windows.Forms.Label label15;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox4;
         private Guna.UI2.WinForms.Guna2Button btnRegister;

@@ -19,8 +19,14 @@ namespace LibraryManager
         {
             InitializeComponent();
         }
+        public frmNhanvien(string MaNV)
+        {
+            InitializeComponent();
+            MaNhanVien = MaNV;
+        }
 
-        
+        string MaNhanVien= "NV000003";
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -198,7 +204,8 @@ namespace LibraryManager
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
             CloseDoc();
-
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeNV());
 
         }
 
@@ -211,6 +218,63 @@ namespace LibraryManager
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeNV());
+        }
+
+
+        void TimKiem_MuonSach()
+        {
+            panelShow.Controls.Clear();
+            Template.TimKiem4NV usertimkiem = new Template.TimKiem4NV();
+
+            usertimkiem.OnClick += (ss, ee) =>
+            {
+                panelShow.Controls.Clear();
+                List<string> dsds = Template.TimKiem4NV.dsMuon;
+                panelShow.Controls.Add(new Template.PhieuMuon(dsds, MaNhanVien));
+
+            };
+
+
+            panelShow.Controls.Add(usertimkiem);
+        }
+        private void btnM_Muon_Click(object sender, EventArgs e)
+        {
+            TimKiem_MuonSach();
+        }
+
+        private void btnM_search_Click(object sender, EventArgs e)
+        {
+            TimKiem_MuonSach();
+        }
+
+        private void btnM_ChangeInfo_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.InfoNV(MaNhanVien));
+        }
+
+        private void btnM_SConlai_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachCoSan());
+        }
+
+        private void btnM_Nhapsach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemCuonSach());
+        }
+
+        private void btnM_DSDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThongTinDG());
+        }
+
+        private void btnM_DSDausach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemDauSach());
         }
     }
 }
