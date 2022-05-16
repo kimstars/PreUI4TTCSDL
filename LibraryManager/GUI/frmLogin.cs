@@ -18,6 +18,8 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
+
+
         private bool CheckPassword(string passwd)
         {
 
@@ -32,10 +34,10 @@ namespace LibraryManager.GUI
                 return false;
             }
 
-
             return true;
         }
 
+        public static string userstr ;
         TaiKhoan_BUS tkBus = new TaiKhoan_BUS();
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -83,6 +85,7 @@ namespace LibraryManager.GUI
                 if (tkBus.DangNhap(user, pass))
                 {
                     MessageBox.Show("Đăng nhập thành công !!");
+                    Form1.isLogin = true;
 
                     string loaitk = tkBus.LoadLoaiTK(user);
 
@@ -92,8 +95,18 @@ namespace LibraryManager.GUI
                         case "docgia":
                             {
                                 this.Hide();
-                                FrmDocGia newdg = new FrmDocGia(user);
-                                newdg.Show();
+                                userstr = user;
+                                if (GUI.TimKiem4Hello.DaTim)
+                                {
+                                    GUI.TimKiem4Hello.openAfterLog();
+                                }
+                                else
+                                {
+                                    FrmDocGia newdg = new FrmDocGia(user);
+                                    newdg.Show();
+
+                                }
+                                
                                 break;
                             }
                         case "nhanvien":

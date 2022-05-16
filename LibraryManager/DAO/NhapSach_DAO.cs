@@ -46,5 +46,12 @@ namespace LibraryManager.DAO
        
         }
 
+        public int GetRemainNhap(string MaDauSach)
+        {
+            string sql = $"SELECT ISNULL(SoLuong,0) - ISNULL((SELECT SUM(SoLuongSach) soluongnhap FROM dbo.THONGTINNHAPSACH WHERE MaDauSach = '{MaDauSach}'),0) AS SL FROM dbo.DAUSACH WHERE MaDauSach = '{MaDauSach}'";
+
+            return (int)GetCount(sql);
+        }
+
     }
 }

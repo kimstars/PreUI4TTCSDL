@@ -118,65 +118,7 @@ namespace LibraryManager.Template
             string ngayDK = ngayDKPicker.Text;
             string username = txtUsername.Text;
  
-            if (validateAll(ref MaDocGia, HoTen, gender, DiaChi, sdt, soCMND, username))
-            {
-                ListViewItem lvi = new ListViewItem(MaDocGia);
-                lvi.SubItems.Add(HoTen);
-                lvi.SubItems.Add(NgaySinh);
-                lvi.SubItems.Add(gender);
-                lvi.SubItems.Add(DiaChi);
-                lvi.SubItems.Add(sdt);
-                lvi.SubItems.Add(soCMND);
-                lvi.SubItems.Add(ngayDK);
-                lvi.SubItems.Add(username);
-          
-
-                listViewInfo.Items.Add(lvi);
-                txtMaDG.Text = "";
-                txtHoten.Text = "";
-                birthdayPicker.Text = "";
-                selectGender.Text = "";
-                txtDiachi.Text = "";
-                txtSDT.Text = "";
-                txtCMND.Text = "";
-                ngayDKPicker.Text = "";
-                txtUsername.Text = "";
-                
-
-                //string query = "INSERT INTO DOCGIA (ID,  Sname, age, Address, classname) VALUES (@ID,  @Sname, @age, @Address, @classname)";
-                //SqlCommand sqlCmd = new SqlCommand();
-                //sqlCmd.Connection = sqlCon;
-                //sqlCmd.CommandType = CommandType.Text;
-                //sqlCmd.CommandText = query;
-                //sqlCmd.Parameters.AddWithValue("@ID", id);
-                //sqlCmd.Parameters.AddWithValue("@Sname", name);
-                //sqlCmd.Parameters.AddWithValue("@age", age);
-                //sqlCmd.Parameters.AddWithValue("@Address", address);
-                //sqlCmd.Parameters.AddWithValue("@classname", classname);
-                //try
-                //{
-                //    int recordsAffected = sqlCmd.ExecuteNonQuery();
-                //    MessageBox.Show("Insert 1 row done!!");
-                //}
-                //catch (SqlException)
-                //{
-                //    MessageBox.Show("error sql", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    // error here
-                //}
-                //finally
-                //{
-                //    sqlCon.Close();
-                //}
-
-                MessageBox.Show(
-                "Nhập thông tin thành công !!",
-                "Thông báo",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
-
-
-            }
-
+            
             btnDeleteInfo.Visible = false;
             btnEditInfo.Visible = false;
 
@@ -184,27 +126,7 @@ namespace LibraryManager.Template
 
         private ListViewItem item;
 
-        private void listViewInfo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listViewInfo.SelectedItems.Count > 0)
-            {
-                item = listViewInfo.SelectedItems[0];
-
-                txtMaDG.Text = item.SubItems[0].Text;
-                txtHoten.Text = item.SubItems[1].Text;
-                birthdayPicker.Text = item.SubItems[2].Text;
-                selectGender.Text = item.SubItems[3].Text;
-                txtDiachi.Text = item.SubItems[4].Text;
-                txtSDT.Text = item.SubItems[5].Text;
-                txtCMND.Text = item.SubItems[6].Text;
-                dateReg.Text = item.SubItems[7].Text;
-                txtUsername.Text = item.SubItems[8].Text;
-                
-            }
-            btnEditInfo.Visible = true;
-            btnDeleteInfo.Visible = true;
-        }
-
+        
         private void btnEditInfo_Click(object sender, EventArgs e)
         {
             string MaDocGia = txtMaDG.Text;

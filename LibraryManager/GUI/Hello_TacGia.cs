@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.GUI
 {
-    public partial class DocGiaActivity : Form
+    public partial class Hello_TacGia : Form
     {
-        public DocGiaActivity()
+        public Hello_TacGia()
         {
             InitializeComponent();
         }

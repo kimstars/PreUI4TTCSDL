@@ -80,10 +80,79 @@ namespace LibraryManager.BUS
             return dgDao.GetMotDG(maDG);
         }
 
-
+        #region getMaDocGia
         public DataTable LoadMaDocGia()
         {
             return dgDao.GetMaDG();
         }
+        public string LoadMaDocGia_PhieuMuon(string MaMT)
+        {
+            return dgDao.GetMaDG_PhieuMuon(MaMT);
+        }
+
+        #endregion
+
+        #region hoatdong
+        public DataTable LoadLoiViPham(string MaDG)
+        {
+            return dgDao.LoiViPham(MaDG);
+        }
+
+        public DataTable LoadSachDenHan(string MaDG)
+        {
+            return dgDao.SachDenHan(MaDG);
+        }
+
+        public DataTable LoadMuon_SL(string MaDG)
+        {
+            return dgDao.SachDaMuon_Soluong(MaDG);
+        }
+        public string TongSachTra(string MaDG)
+        {
+            return dgDao.TongSachTra1Month(MaDG);
+        }
+
+        public int TongSachChuaTra(string MaDG)
+        {
+            return dgDao.TongSoSachChuaTra(MaDG);
+        }
+
+        public DataTable TraGanDay(string MaDG)
+        {
+            return dgDao.TraGanNhat(MaDG);
+        }
+
+        #endregion
+
+        #region xuathongtin
+
+
+        public bool UpdateOne(DocGia dg)
+        {
+            return dgDao.Update(dg);
+        }
+        #endregion
+
+
+        public string LoadMaDG_TK(string tk)
+        {
+            return dgDao.GetMaDG_TaiKhoan(tk);
+        }
+
+
+
+
+        #region NhanvienXuly
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            return dgDao.checkTonTaiDG(MaDG);
+        }
+        public string LoadTenDG(string MaDG)
+        {
+            return dgDao.GetTenDocGia(MaDG);
+        }
+
+        #endregion
     }
 }
