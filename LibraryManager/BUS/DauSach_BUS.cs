@@ -101,6 +101,11 @@ namespace LibraryManager.BUS
         }
 
 
+        public string LoadViTriAvailable(string Ma)
+        {
+            return dsDao.ViTriAvailable(Ma);
+        }
+
         #endregion
 
 

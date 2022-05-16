@@ -19,8 +19,14 @@ namespace LibraryManager
         {
             InitializeComponent();
         }
+        public frmNhanvien(string MaNV)
+        {
+            InitializeComponent();
+            MaNhanVien = MaNV;
+        }
 
-        
+        string MaNhanVien= "NV000003";
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -212,5 +218,41 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeNV());
         }
+
+
+        void TimKiem_MuonSach()
+        {
+            panelShow.Controls.Clear();
+            Template.TimKiem4NV usertimkiem = new Template.TimKiem4NV();
+
+            usertimkiem.OnClick += (ss, ee) =>
+            {
+                panelShow.Controls.Clear();
+                List<string> dsds = Template.TimKiem4NV.dsMuon;
+                panelShow.Controls.Add(new Template.PhieuMuon(dsds, MaNhanVien));
+
+            };
+
+
+            panelShow.Controls.Add(usertimkiem);
+        }
+        private void btnM_Muon_Click(object sender, EventArgs e)
+        {
+            TimKiem_MuonSach();
+        }
+
+        private void btnM_search_Click(object sender, EventArgs e)
+        {
+            TimKiem_MuonSach();
+        }
+
+        private void btnM_ChangeInfo_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.InfoNV(MaNhanVien));
+        }
+
+
+     
     }
 }

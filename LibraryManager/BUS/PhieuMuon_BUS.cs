@@ -53,11 +53,11 @@ namespace LibraryManager.BUS
         }
 
 
-        #region Docgia muon 
+        #region Insert Muon
 
-        public void DocGiaMuon(PhieuMuonTra pm, List<string> dsMaSach)
+        public void InsertMuon(PhieuMuonTra pm, List<string> dsMaSach,bool isNV)
         {
-            pmDao.InsertPhieuMuonTra(pm, dsMaSach);
+            pmDao.InsertPhieuMuonTra(pm, dsMaSach, isNV);
         }
 
         #endregion

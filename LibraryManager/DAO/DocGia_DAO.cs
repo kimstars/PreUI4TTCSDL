@@ -176,6 +176,28 @@ namespace LibraryManager.DAO
             return GetString(sql);
 
         }
+
+
+
+
+        #region NhanvienXuLy
+        public string GetTenDocGia(string MaDG)
+        {
+            string sql = $"SELECT TenDocGia FROM dbo.DOCGIA WHERE MaDocGia = '{MaDG}'";
+            return GetString(sql);
+        }
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            string ten = GetTenDocGia(MaDG); 
+            if(ten != "")
+            {
+                return false;
+            }
+            return true;
+        }
+
+        #endregion
     }
 
 

@@ -383,6 +383,16 @@ namespace LibraryManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_file_excel_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_file_excel_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_26px {
             get {
                 object obj = ResourceManager.GetObject("icons8_home_26px", resourceCulture);
@@ -716,6 +726,26 @@ namespace LibraryManager.Properties {
         internal static System.Drawing.Bitmap icons8_user_settings_64px {
             get {
                 object obj = ResourceManager.GetObject("icons8_user_settings_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lifesavers___Bookshelf {
+            get {
+                object obj = ResourceManager.GetObject("Lifesavers - Bookshelf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

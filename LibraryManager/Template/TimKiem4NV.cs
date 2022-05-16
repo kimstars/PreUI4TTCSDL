@@ -6,23 +6,75 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using LibraryManager.BUS;
 using LibraryManager.DTO;
 
-namespace LibraryManager.GUI
+namespace LibraryManager.Template
 {
-    public partial class TimKiem4Hello : Form
+    public partial class TimKiem4NV : UserControl
     {
-        public TimKiem4Hello()
+        public TimKiem4NV()
         {
             InitializeComponent();
         }
-
         string MaDSCurrent = "";
 
-        public EventHandler clickPM;
+        private void ToExcel(DataGridView dataGridView1, string fileName)
+        {
+            //khai báo thư viện hỗ trợ Microsoft.Office.Interop.Excel
+            Microsoft.Office.Interop.Excel.Application excel;
+            Microsoft.Office.Interop.Excel.Workbook workbook;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet;
+            try
+            {
+                //Tạo đối tượng COM.
+                excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Visible = false;
+                excel.DisplayAlerts = false;
+                //tạo mới một Workbooks bằng phương thức add()
+                workbook = excel.Workbooks.Add(Type.Missing);
+                worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets["Sheet1"];
+                //đặt tên cho sheet
+                worksheet.Name = "Quản lý học sinh";
+
+                // export header trong DataGridView
+                for (int i = 0; i < dataGridView1.ColumnCount - 1; i++)
+                {
+                    worksheet.Cells[1, i + 1] = dataGridView1.Columns[i].HeaderText;
+                }
+                // export nội dung trong DataGridView
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for (int j = 0; j < dataGridView1.ColumnCount - 1; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                // sử dụng phương thức SaveAs() để lưu workbook với filename
+                workbook.SaveAs(fileName);
+                //đóng workbook
+                workbook.Close();
+                excel.Quit();
+                MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                worksheet = null;
+            }
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ToExcel(dgvChooseBook, "book1.xlsx");
+        }
+
+
         public void AddItem(string MaDauSach)
         {
 
@@ -45,7 +97,7 @@ namespace LibraryManager.GUI
                     }
 
                     if (item.SoLuong > 0)
-                        dgvChooseBook.Rows.Add(new object[] { item.MaDauSach, item.TenSach, "Bỏ" });
+                        dgvChooseBook.Rows.Add(new object[] { item.MaDauSach, item.TenSach, item.ViTri, "Bỏ" });
 
 
                 };
@@ -69,9 +121,8 @@ namespace LibraryManager.GUI
         }
 
         DauSach_BUS dsBus = new DauSach_BUS();
-        private void TimKiem4Hello_Load(object sender, EventArgs e)
+        private void TimKiem4NV_Load(object sender, EventArgs e)
         {
-
 
             DSDauSach = dsBus.LoadMaDauSach();
             LoadBookFlow();
@@ -119,18 +170,18 @@ namespace LibraryManager.GUI
 
         private void dgvChooseBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 3)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     string MaXoa = dgvChooseBook.Rows[e.RowIndex].Cells["MaDauSach"].Value.ToString();
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
-                    foreach(var item in flowLayoutDS.Controls)
+                    foreach (var item in flowLayoutDS.Controls)
                     {
 
                         Template.OneBook it = (Template.OneBook)item;
-                        if(it.MaDauSach == MaXoa && it.selected)
+                        if (it.MaDauSach == MaXoa && it.selected)
                         {
                             it.HighLightItem();
                             break;
@@ -233,33 +284,20 @@ namespace LibraryManager.GUI
 
         public static List<string> dsMuon = new List<string>();
         public static bool DaTim = false;
+
+        public event EventHandler OnClick = null;
+
         private void btnCreatePM_Click(object sender, EventArgs e)
         {
-
             dsMuon.Clear();
-            for(int i = 0; i< dgvChooseBook.Rows.Count; i++)
+            for (int i = 0; i < dgvChooseBook.Rows.Count; i++)
             {
                 dsMuon.Add(dgvChooseBook.Rows[i].Cells["MaDauSach"].Value.ToString());
-    
             }
-            DaTim = true;
+
+            OnClick?.Invoke(this, e);
 
 
-            openAfterLog();
-        }
-
-        public static void openAfterLog()
-        {
-            if (!Form1.isLogin)
-            {
-                frmLogin newlogin = new frmLogin();
-                newlogin.Show();
-            }
-            else
-            {
-                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr);
-                newdg.Show();
-            }
         }
     }
 }

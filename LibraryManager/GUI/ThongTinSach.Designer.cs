@@ -33,6 +33,11 @@ namespace LibraryManager.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinSach));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelall = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.lbTheLoai = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbGiaTien = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.imageBook = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lbInfoNamXB = new System.Windows.Forms.Label();
@@ -41,12 +46,7 @@ namespace LibraryManager.GUI
             this.label11 = new System.Windows.Forms.Label();
             this.lbInfoTenTG = new System.Windows.Forms.Label();
             this.lbInfoTenSach = new System.Windows.Forms.Label();
-            this.lbGiaTien = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbTheLoai = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelall.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,62 @@ namespace LibraryManager.GUI
             this.panelall.Size = new System.Drawing.Size(462, 690);
             this.panelall.TabIndex = 26;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(386, 19);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(57, 39);
+            this.guna2ControlBox1.TabIndex = 31;
+            // 
+            // lbTheLoai
+            // 
+            this.lbTheLoai.AutoSize = true;
+            this.lbTheLoai.BackColor = System.Drawing.Color.Transparent;
+            this.lbTheLoai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTheLoai.Location = new System.Drawing.Point(161, 414);
+            this.lbTheLoai.Name = "lbTheLoai";
+            this.lbTheLoai.Size = new System.Drawing.Size(65, 21);
+            this.lbTheLoai.TabIndex = 30;
+            this.lbTheLoai.Text = "Văn học";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 414);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 21);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Thể loại:";
+            // 
+            // lbGiaTien
+            // 
+            this.lbGiaTien.AutoSize = true;
+            this.lbGiaTien.BackColor = System.Drawing.Color.Transparent;
+            this.lbGiaTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGiaTien.Location = new System.Drawing.Point(161, 375);
+            this.lbGiaTien.Name = "lbGiaTien";
+            this.lbGiaTien.Size = new System.Drawing.Size(92, 21);
+            this.lbGiaTien.TabIndex = 28;
+            this.lbGiaTien.Text = "20000 VND";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 375);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 21);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Giá tiền:";
+            // 
             // imageBook
             // 
             this.imageBook.BackColor = System.Drawing.Color.Transparent;
@@ -101,7 +157,7 @@ namespace LibraryManager.GUI
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(19, 296);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 28);
+            this.label9.Size = new System.Drawing.Size(67, 21);
             this.label9.TabIndex = 19;
             this.label9.Text = "Tác giả :";
             // 
@@ -112,7 +168,7 @@ namespace LibraryManager.GUI
             this.lbInfoNamXB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfoNamXB.Location = new System.Drawing.Point(161, 337);
             this.lbInfoNamXB.Name = "lbInfoNamXB";
-            this.lbInfoNamXB.Size = new System.Drawing.Size(56, 28);
+            this.lbInfoNamXB.Size = new System.Drawing.Size(46, 21);
             this.lbInfoNamXB.TabIndex = 26;
             this.lbInfoNamXB.Text = "2020";
             // 
@@ -123,7 +179,7 @@ namespace LibraryManager.GUI
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(19, 337);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 28);
+            this.label10.Size = new System.Drawing.Size(114, 21);
             this.label10.TabIndex = 20;
             this.label10.Text = "Năm xuất bản:";
             // 
@@ -144,7 +200,7 @@ namespace LibraryManager.GUI
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(24, 460);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 28);
+            this.label11.Size = new System.Drawing.Size(65, 21);
             this.label11.TabIndex = 21;
             this.label11.Text = "Mô tả : ";
             // 
@@ -155,7 +211,7 @@ namespace LibraryManager.GUI
             this.lbInfoTenTG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfoTenTG.Location = new System.Drawing.Point(161, 296);
             this.lbInfoTenTG.Name = "lbInfoTenTG";
-            this.lbInfoTenTG.Size = new System.Drawing.Size(155, 28);
+            this.lbInfoTenTG.Size = new System.Drawing.Size(124, 21);
             this.lbInfoTenTG.TabIndex = 24;
             this.lbInfoTenTG.Text = "Kevin D.Johnson";
             // 
@@ -171,68 +227,12 @@ namespace LibraryManager.GUI
             this.lbInfoTenSach.Text = "Tư duy doanh nhân- Cách doanh nhân nghĩ, việc doanh nhân làm qua 100 bài học xươn" +
     "g máu";
             // 
-            // lbGiaTien
-            // 
-            this.lbGiaTien.AutoSize = true;
-            this.lbGiaTien.BackColor = System.Drawing.Color.Transparent;
-            this.lbGiaTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGiaTien.Location = new System.Drawing.Point(161, 375);
-            this.lbGiaTien.Name = "lbGiaTien";
-            this.lbGiaTien.Size = new System.Drawing.Size(113, 28);
-            this.lbGiaTien.TabIndex = 28;
-            this.lbGiaTien.Text = "20000 VND";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 375);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 28);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Giá tiền:";
-            // 
-            // lbTheLoai
-            // 
-            this.lbTheLoai.AutoSize = true;
-            this.lbTheLoai.BackColor = System.Drawing.Color.Transparent;
-            this.lbTheLoai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTheLoai.Location = new System.Drawing.Point(161, 414);
-            this.lbTheLoai.Name = "lbTheLoai";
-            this.lbTheLoai.Size = new System.Drawing.Size(81, 28);
-            this.lbTheLoai.TabIndex = 30;
-            this.lbTheLoai.Text = "Văn học";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 414);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 28);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Thể loại:";
-            // 
             // dragControl
             // 
             this.dragControl.Fixed = true;
             this.dragControl.Horizontal = true;
             this.dragControl.TargetControl = this.panelall;
             this.dragControl.Vertical = true;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(386, 19);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(57, 39);
-            this.guna2ControlBox1.TabIndex = 31;
             // 
             // ThongTinSach
             // 

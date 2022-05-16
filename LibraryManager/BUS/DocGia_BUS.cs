@@ -128,5 +128,21 @@ namespace LibraryManager.BUS
         {
             return dgDao.GetMaDG_TaiKhoan(tk);
         }
+
+
+
+
+        #region NhanvienXuly
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            return dgDao.checkTonTaiDG(MaDG);
+        }
+        public string LoadTenDG(string MaDG)
+        {
+            return dgDao.GetTenDocGia(MaDG);
+        }
+
+        #endregion
     }
 }

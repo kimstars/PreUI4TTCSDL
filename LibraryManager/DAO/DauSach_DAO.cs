@@ -69,6 +69,13 @@ namespace LibraryManager.DAO
             return GetString(sql);
         }
 
+        // lấy ra vị trí một cuốn sách có sẵn của đầu sách
+        public string ViTriAvailable(string MaDauSach)
+        {
+            string sql = $"SELECT TOP 1 ViTriSach FROM dbo.CUONSACH WHERE MaDauSach = 'DS000001' AND TrangThai = 1";
+            return GetString(sql);
+        }
+
         public string GetTheLoai(string MaDauSach)
         {
             string sql = $"SELECT tl.TenTheLoai FROM dbo.DAUSACH ds INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE ds.MaDauSach = '{MaDauSach}'";
