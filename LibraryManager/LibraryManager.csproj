@@ -376,6 +376,12 @@
     <Compile Include="Template\DSPhieuMuonNV.Designer.cs">
       <DependentUpon>DSPhieuMuonNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\DSSachCoSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\DSSachCoSan.Designer.cs">
+      <DependentUpon>DSSachCoSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\FrmHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -547,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DSPhieuMuonNV.resx">
       <DependentUpon>DSPhieuMuonNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DSSachCoSan.resx">
+      <DependentUpon>DSSachCoSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>

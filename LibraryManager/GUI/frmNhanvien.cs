@@ -252,7 +252,10 @@ namespace LibraryManager
             panelShow.Controls.Add(new Template.InfoNV(MaNhanVien));
         }
 
-
-     
+        private void btnM_SConlai_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachCoSan());
+        }
     }
 }

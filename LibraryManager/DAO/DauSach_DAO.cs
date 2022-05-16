@@ -16,6 +16,13 @@ namespace LibraryManager.DAO
             string sql = "SELECT MaDauSach FROM dbo.DAUSACH";
             return GetData(sql);
         }
+
+        public DataTable GetMaDauSach_SanCo()
+        {
+            string sql = "SELECT MaDauSach FROM dbo.DAUSACH WHERE MaDauSach IN (SELECT MaDauSach FROM dbo.CUONSACH WHERE TrangThai = 1)";
+            return GetData(sql);
+        }
+
         public DataTable GetMaDauSach(string keyword, string TheLoai)
         {
             string sql = $"SELECT ds.MaDauSach, ds.TenDauSach , tl.TenTheLoai FROM dbo.DAUSACH ds INNER JOIN dbo.THELOAI tl ON tl.MaTheLoai = ds.MaTheLoai WHERE MaDauSach = '{keyword}' OR TenDauSach LIKE N'%{keyword}%' and tl.TenTheLoai LIKE '%{TheLoai}%'";

@@ -27,6 +27,18 @@ namespace LibraryManager.BUS
             }
             return res;
         }
+
+        public List<string> LoadMaDauSach_SanCo()
+        {
+            DataTable temp = dsDao.GetMaDauSach_SanCo();
+            List<string> res = new List<string>();
+            for (int i = 0; i < temp.Rows.Count; i++)
+            {
+                string item = temp.Rows[i]["MaDauSach"].ToString();
+                res.Add(item);
+            }
+            return res;
+        }
         public List<string> LoadMaDauSach(string keyword, string TL)
         {
             DataTable temp = dsDao.GetMaDauSach(keyword,TL);
