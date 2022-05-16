@@ -96,6 +96,7 @@ namespace LibraryManager.DAO
             return "";
 
         }
+
         public DataSet chart(string sql)
         {
             connect.Open();
@@ -105,5 +106,6 @@ namespace LibraryManager.DAO
             ad.Fill(ds);
             return ds;
         }
+
     }
 }

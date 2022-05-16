@@ -38,6 +38,13 @@ namespace LibraryManager.DAO
             Excute(sql);
         }
 
+        public int GetSoLuongPhieuNhap()
+        {
+            string sql = $"SELECT COUNT(MaPhieuNhap) FROM dbo.PHIEUNHAP ";
+
+            return Int32.Parse(ExcuteRetStr(sql)) ;
+       
+        }
 
         public int GetRemainNhap(string MaDauSach)
         {

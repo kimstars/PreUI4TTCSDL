@@ -53,10 +53,42 @@ namespace LibraryManager.BUS
         }
 
 
+        public bool CheckMaDauSach(string ma)
+        {
+            if (dsDao.GetCheckMaDauSach(ma) != 0) return true;
+            else return false;
+        }
+
+        public void ThemThongtinNhap(DauSach ds,SangTac st, XuatBan xb)
+        {
+            dsDao.InsertDauSach(ds,st,xb);
+        }
+
+        public void Update(DauSach ds, SangTac st, XuatBan xb)
+        {
+            dsDao.UpdateDauSach(ds, st, xb);
+        }
+
+        public void Delete(DauSach ds, SangTac st, XuatBan xb)
+        {
+            dsDao.DeleteDauSach(ds, st, xb);
+        }
+
+        public DataTable SearchDS(string TuKhoa, string MucTimKiem)
+        {
+            return dsDao.Search(TuKhoa,MucTimKiem);
+        }
+        
+
         public DataTable LoadListDS()
         {
             return dsDao.LoadDauSach();
         }
+        public DataTable LoadListDSMini()
+        {
+            return dsDao.LoadDauSachMini();
+        }
+
         public DataTable LoadThongTinSach(string MaDauSach)
         {
             return dsDao.GetInfo(MaDauSach);
@@ -206,6 +238,7 @@ namespace LibraryManager.BUS
 
 
         #endregion
+
 
 
 

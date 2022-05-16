@@ -54,7 +54,9 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnLoaiBo = new Guna.UI2.WinForms.Guna2Button();
             this.imageBook = new System.Windows.Forms.PictureBox();
+
             this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
+
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lbMsg = new System.Windows.Forms.Label();
@@ -63,6 +65,7 @@ namespace LibraryManager.Template
             this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
             this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+
             this.dgvInfoBorrow = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bthHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnMuon = new Guna.UI2.WinForms.Guna2Button();
@@ -72,13 +75,16 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
+
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoBorrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+
             this.SuspendLayout();
             // 
             // label1
@@ -99,7 +105,7 @@ namespace LibraryManager.Template
             this.label5.Location = new System.Drawing.Point(22, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 15);
+            this.label5.Size = new System.Drawing.Size(137, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Họ và tên độc giả :";
             // 
@@ -111,7 +117,7 @@ namespace LibraryManager.Template
             this.label4.Location = new System.Drawing.Point(22, 83);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 15);
+            this.label4.Size = new System.Drawing.Size(94, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Ngày mượn:";
             // 
@@ -123,7 +129,7 @@ namespace LibraryManager.Template
             this.label2.Location = new System.Drawing.Point(189, 83);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 15);
+            this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Hạn trả:";
             // 
@@ -169,6 +175,7 @@ namespace LibraryManager.Template
             // 
             // lbNVxuly
             // 
+
             this.lbNVxuly.AutoSize = true;
             this.lbNVxuly.BackColor = System.Drawing.Color.Transparent;
             this.lbNVxuly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,6 +186,7 @@ namespace LibraryManager.Template
             this.lbNVxuly.Size = new System.Drawing.Size(231, 21);
             this.lbNVxuly.TabIndex = 2;
             this.lbNVxuly.Text = "Nhân viên xử lý : Chu Tuấn Kiệt";
+
             // 
             // lbInfoNamXB
             // 
@@ -188,7 +196,7 @@ namespace LibraryManager.Template
             this.lbInfoNamXB.Location = new System.Drawing.Point(116, 207);
             this.lbInfoNamXB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoNamXB.Name = "lbInfoNamXB";
-            this.lbInfoNamXB.Size = new System.Drawing.Size(46, 21);
+            this.lbInfoNamXB.Size = new System.Drawing.Size(56, 28);
             this.lbInfoNamXB.TabIndex = 26;
             this.lbInfoNamXB.Text = "2020";
             // 
@@ -211,7 +219,7 @@ namespace LibraryManager.Template
             this.lbInfoTenTG.Location = new System.Drawing.Point(72, 174);
             this.lbInfoTenTG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoTenTG.Name = "lbInfoTenTG";
-            this.lbInfoTenTG.Size = new System.Drawing.Size(124, 21);
+            this.lbInfoTenTG.Size = new System.Drawing.Size(155, 28);
             this.lbInfoTenTG.TabIndex = 24;
             this.lbInfoTenTG.Text = "Kevin D.Johnson";
             // 
@@ -235,7 +243,7 @@ namespace LibraryManager.Template
             this.label11.Location = new System.Drawing.Point(9, 252);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 21);
+            this.label11.Size = new System.Drawing.Size(82, 28);
             this.label11.TabIndex = 21;
             this.label11.Text = "Mô tả : ";
             // 
@@ -247,7 +255,7 @@ namespace LibraryManager.Template
             this.label10.Location = new System.Drawing.Point(9, 207);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 21);
+            this.label10.Size = new System.Drawing.Size(145, 28);
             this.label10.TabIndex = 20;
             this.label10.Text = "Năm xuất bản:";
             // 
@@ -259,7 +267,7 @@ namespace LibraryManager.Template
             this.label9.Location = new System.Drawing.Point(9, 174);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 21);
+            this.label9.Size = new System.Drawing.Size(84, 28);
             this.label9.TabIndex = 19;
             this.label9.Text = "Tác giả :";
             // 
@@ -330,11 +338,13 @@ namespace LibraryManager.Template
             this.btnLoaiBo.ForeColor = System.Drawing.Color.White;
             this.btnLoaiBo.HoverState.Parent = this.btnLoaiBo;
             this.btnLoaiBo.Image = global::LibraryManager.Properties.Resources.icons8_remove_tag_40px;
+
             this.btnLoaiBo.Location = new System.Drawing.Point(196, 453);
             this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoaiBo.Name = "btnLoaiBo";
             this.btnLoaiBo.ShadowDecoration.Parent = this.btnLoaiBo;
             this.btnLoaiBo.Size = new System.Drawing.Size(119, 36);
+
             this.btnLoaiBo.TabIndex = 1;
             this.btnLoaiBo.Text = "Loại bỏ";
             this.btnLoaiBo.Click += new System.EventHandler(this.btnLoaiBo_Click);
@@ -661,6 +671,7 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn5.HeaderText = "Vị trí sách";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+
             // 
             // PhieuMuon
             // 

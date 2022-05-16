@@ -143,6 +143,7 @@ namespace LibraryManager.Template
 
         }
 
+
         private void btnPreview_Click(object sender, EventArgs e)
         {
             GUI.ThongTinSach newform = new GUI.ThongTinSach(MaDauSachCurrent);
@@ -184,6 +185,7 @@ namespace LibraryManager.Template
                 errorProvider1.SetError(lbMsg, null);
                 txtTenDG.Text = dgBus.LoadTenDG(txtMaDG.Text);
             }
+
         }
     }
 }

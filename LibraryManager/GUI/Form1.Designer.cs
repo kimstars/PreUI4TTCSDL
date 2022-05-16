@@ -39,6 +39,7 @@ namespace LibraryManager
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongtin = new Guna.UI2.WinForms.Guna2Button();
@@ -109,9 +110,11 @@ namespace LibraryManager
             this.PanelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
             this.PanelMenuBar.Controls.Add(this.panelButton);
             this.PanelMenuBar.Controls.Add(this.panel2);
+
             this.PanelMenuBar.Controls.Add(this.panel1);
             this.PanelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenuBar.Location = new System.Drawing.Point(0, 0);
+
             this.PanelMenuBar.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenuBar.MaximumSize = new System.Drawing.Size(190, 708);
             this.PanelMenuBar.MinimumSize = new System.Drawing.Size(58, 750);
@@ -218,6 +221,7 @@ namespace LibraryManager
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button1.Location = new System.Drawing.Point(0, 179);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Padding = new System.Windows.Forms.Padding(1);
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -227,6 +231,7 @@ namespace LibraryManager
             this.guna2Button1.Text = "Tạo Data ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
@@ -249,6 +254,7 @@ namespace LibraryManager
             this.btnDangNhap.Tag = "Đăng nhập";
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+
             // 
             // btnThongtin
             // 
@@ -262,8 +268,10 @@ namespace LibraryManager
             this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_60px;
             this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
+
             this.btnThongtin.Location = new System.Drawing.Point(0, 221);
             this.btnThongtin.Margin = new System.Windows.Forms.Padding(2);
+
             this.btnThongtin.Name = "btnThongtin";
             this.btnThongtin.Padding = new System.Windows.Forms.Padding(1);
             this.btnThongtin.ShadowDecoration.Parent = this.btnThongtin;
@@ -273,6 +281,7 @@ namespace LibraryManager
             this.btnThongtin.Text = "Thông tin";
             this.btnThongtin.Click += new System.EventHandler(this.btnThongtin_Click);
             // 
+
             // btnCaiDat
             // 
             this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
@@ -326,6 +335,7 @@ namespace LibraryManager
             this.btnLoginn.TabIndex = 12;
             this.btnLoginn.Tag = "Đăng nhập";
             this.btnLoginn.Text = "Đăng nhập";
+
             // 
             // panel1
             // 
@@ -333,9 +343,11 @@ namespace LibraryManager
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(190, 67);
+
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -345,7 +357,9 @@ namespace LibraryManager
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::LibraryManager.Properties.Resources.icons8_library_64__2_;
             this.pictureBox2.Location = new System.Drawing.Point(-2, 0);
+
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 63);
             this.pictureBox2.TabIndex = 8;
@@ -396,8 +410,10 @@ namespace LibraryManager
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+
             this.guna2ControlBox3.Location = new System.Drawing.Point(888, 13);
             this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
+
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
@@ -410,13 +426,16 @@ namespace LibraryManager
             this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox4.HoverState.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
+
             this.guna2ControlBox4.Location = new System.Drawing.Point(932, 13);
             this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2);
+
             this.guna2ControlBox4.Name = "guna2ControlBox4";
             this.guna2ControlBox4.ShadowDecoration.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox4.TabIndex = 9;
             // 
+
             // panelShow
             // 
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -424,6 +443,7 @@ namespace LibraryManager
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(974, 673);
             this.panelShow.TabIndex = 13;
+
             // 
             // pictureBox1
             // 
@@ -441,6 +461,7 @@ namespace LibraryManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1164, 715);
             this.Controls.Add(this.panelShow);
             this.Controls.Add(this.Paneltoolbar);
@@ -448,8 +469,9 @@ namespace LibraryManager
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "y";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenuBar.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
@@ -479,6 +501,7 @@ namespace LibraryManager
         private System.Windows.Forms.Timer LoginTick;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+
 
         private System.Windows.Forms.Panel panelShow;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;

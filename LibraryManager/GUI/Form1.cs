@@ -124,7 +124,6 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
         }
-
-        
+	
     }
 }
