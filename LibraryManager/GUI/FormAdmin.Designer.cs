@@ -529,6 +529,7 @@ namespace LibraryManager.Template
             this.btnM_Suadausach.Size = new System.Drawing.Size(190, 37);
             this.btnM_Suadausach.TabIndex = 17;
             this.btnM_Suadausach.Text = "Sửa thông tin sách";
+
             // 
             // panelQLNV
             // 
@@ -536,9 +537,11 @@ namespace LibraryManager.Template
             this.panelQLNV.Controls.Add(this.btnDSNV);
             this.panelQLNV.Controls.Add(this.btnAddNV);
             this.panelQLNV.Dock = System.Windows.Forms.DockStyle.Top;
+
             this.panelQLNV.Location = new System.Drawing.Point(0, 132);
             this.panelQLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelQLNV.MaximumSize = new System.Drawing.Size(190, 128);
+
             this.panelQLNV.MinimumSize = new System.Drawing.Size(190, 46);
             this.panelQLNV.Name = "panelQLNV";
             this.panelQLNV.Size = new System.Drawing.Size(190, 128);
@@ -556,7 +559,9 @@ namespace LibraryManager.Template
             this.btnOpenQLNV.Image = global::LibraryManager.Properties.Resources.icons8_people_30px_2;
             this.btnOpenQLNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOpenQLNV.ImageSize = new System.Drawing.Size(30, 30);
+
             this.btnOpenQLNV.Location = new System.Drawing.Point(0, 2);
+
             this.btnOpenQLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOpenQLNV.Name = "btnOpenQLNV";
             this.btnOpenQLNV.Padding = new System.Windows.Forms.Padding(1);
@@ -601,7 +606,9 @@ namespace LibraryManager.Template
             this.btnAddNV.HoverState.Parent = this.btnAddNV;
             this.btnAddNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddNV.ImageSize = new System.Drawing.Size(30, 30);
+
             this.btnAddNV.Location = new System.Drawing.Point(-2, 86);
+
             this.btnAddNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.ShadowDecoration.Parent = this.btnAddNV;
@@ -615,10 +622,12 @@ namespace LibraryManager.Template
             this.panelHome.Controls.Add(this.btnCaiDat);
             this.panelHome.Controls.Add(this.btnThuNghiem);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
+
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHome.MaximumSize = new System.Drawing.Size(190, 214);
             this.panelHome.MinimumSize = new System.Drawing.Size(190, 45);
+
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(190, 132);
             this.panelHome.TabIndex = 19;
@@ -635,6 +644,7 @@ namespace LibraryManager.Template
             this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_dashboard_30px;
             this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
+
             this.btnThongtin.Location = new System.Drawing.Point(0, 2);
             this.btnThongtin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThongtin.Name = "btnThongtin";
