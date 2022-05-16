@@ -99,10 +99,9 @@ namespace LibraryManager.Template
             PhieuNhap pn = new PhieuNhap();
             ThongTinNhapSach ttns = new ThongTinNhapSach();
             CuonSach cs = new CuonSach();
-            if (csBus.CheckMaSach(txtMaCuonSach.Text) == true) lbCheckMaSach.Visible = true;
+            if (csBus.CheckMaSach(txtMaCuonSach.Text) == true) MessageBox.Show("Mã sách đã tồn tại!");
             else
             {
-                lbCheckMaSach.Visible = false;
                 pn.MaNhanVien = "NV000007";
                 pn.MaPhieuNhap = nsBus.AutoTaoMaNhap();
                 pn.NgayNhap = DateTime.Now;

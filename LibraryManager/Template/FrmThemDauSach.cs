@@ -242,10 +242,9 @@ namespace LibraryManager.Template
             DauSach ds = new DauSach();
             SangTac st = new SangTac();
             XuatBan xb = new XuatBan();
-            if (dsBus.CheckMaDauSach(txtMaDauSach.Text) == true) lbCheckMaDauSach.Visible = true;
+            if (dsBus.CheckMaDauSach(txtMaDauSach.Text) == true) MessageBox.Show("Mã đầu sách đã tồn tại!");
             else
             {
-                lbCheckMaDauSach.Visible = false;
                 ds.MaDauSach = txtMaDauSach.Text;
                 ds.TenDauSach = txtTenDauSach.Text;
                 ds.SoLuong = 0;
@@ -266,7 +265,7 @@ namespace LibraryManager.Template
         {
             DataGridViewRow row = dgvDauSach.Rows[e.RowIndex];
             txtMaDauSach.Text = row.Cells[0].Value.ToString();
-            txtTenDauSach.Text = row.Cells[3].Value.ToString();
+            txtTenDauSach.Text = row.Cells[1].Value.ToString();
             txtNamXuatBan.Text = row.Cells[4].Value.ToString();
             txtLanTaiBan.Text = row.Cells[2].Value.ToString();
             txtGiaTien.Text = row.Cells[5].Value.ToString();
@@ -300,6 +299,16 @@ namespace LibraryManager.Template
                 dgvDauSach.DataSource = dsBus.SearchDS(TuKhoa, "MaDauSach");
             else if (cbLoaiLoc.Text == "Tên đầu sách")
                 dgvDauSach.DataSource = dsBus.SearchDS(TuKhoa, "TenDauSach");
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMoTa_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
