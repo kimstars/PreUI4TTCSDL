@@ -45,7 +45,10 @@ namespace LibraryManager.DAO
         public int GetCheckMaSach(string Ma)
         {
             string sql = "SELECT COUNT(MaSach) FROM dbo.CUONSACH WHERE MaSach = '"+ Ma +"'";
-            return Int32.Parse(ExcuteRetStr(sql));
+            return (int)GetCount(sql);
         }
+
+
+
     }
 }

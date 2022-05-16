@@ -42,7 +42,7 @@ namespace LibraryManager.DAO
         {
             string sql = $"SELECT COUNT(MaPhieuNhap) FROM dbo.PHIEUNHAP ";
 
-            return Int32.Parse(ExcuteRetStr(sql)) ;
+            return (int)GetCount(sql) ;
        
         }
 

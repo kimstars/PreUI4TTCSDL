@@ -135,7 +135,7 @@ namespace LibraryManager
         private void btnTimKiemSach_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.TimKiem4HelloV2());
+            panelShow.Controls.Add(new Template.FrmTimKiemForDG());
         }
 
         private void btnMuonSach_Click(object sender, EventArgs e)

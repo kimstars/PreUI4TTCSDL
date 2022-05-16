@@ -81,6 +81,7 @@ namespace LibraryManager.Template
             this.txtMaDauSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ofdOpenFile = new System.Windows.Forms.OpenFileDialog();
+            this.label11 = new System.Windows.Forms.Label();
             this.panelShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDauSach)).BeginInit();
             this.guna2CustomGradientPanel3.SuspendLayout();
@@ -89,6 +90,7 @@ namespace LibraryManager.Template
             // 
             // panelShow
             // 
+            this.panelShow.Controls.Add(this.label11);
             this.panelShow.Controls.Add(this.cbLoaiLoc);
             this.panelShow.Controls.Add(this.txtTuKhoa);
             this.panelShow.Controls.Add(this.btnBack);
@@ -96,7 +98,7 @@ namespace LibraryManager.Template
             this.panelShow.Controls.Add(this.guna2CustomGradientPanel3);
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(0, 0);
-            this.panelShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(2);
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(1070, 654);
             this.panelShow.TabIndex = 0;
@@ -118,7 +120,7 @@ namespace LibraryManager.Template
             "Tên đầu sách"});
             this.cbLoaiLoc.ItemsAppearance.Parent = this.cbLoaiLoc;
             this.cbLoaiLoc.Location = new System.Drawing.Point(35, 381);
-            this.cbLoaiLoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaiLoc.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiLoc.Name = "cbLoaiLoc";
             this.cbLoaiLoc.ShadowDecoration.Parent = this.cbLoaiLoc;
             this.cbLoaiLoc.Size = new System.Drawing.Size(142, 36);
@@ -144,7 +146,7 @@ namespace LibraryManager.Template
             this.txtTuKhoa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTuKhoa.HoverState.Parent = this.txtTuKhoa;
             this.txtTuKhoa.Location = new System.Drawing.Point(191, 381);
-            this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(5);
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.PasswordChar = '\0';
             this.txtTuKhoa.PlaceholderText = "";
@@ -163,7 +165,7 @@ namespace LibraryManager.Template
             this.btnBack.HoverState.Parent = this.btnBack;
             this.btnBack.Image = global::LibraryManager.Properties.Resources.icons8_back_24px_1;
             this.btnBack.Location = new System.Drawing.Point(35, 15);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
             this.btnBack.Size = new System.Drawing.Size(53, 37);
@@ -426,7 +428,7 @@ namespace LibraryManager.Template
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Location = new System.Drawing.Point(780, 239);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
             this.btnXoa.Size = new System.Drawing.Size(90, 37);
@@ -442,7 +444,7 @@ namespace LibraryManager.Template
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.Parent = this.btnSua;
             this.btnSua.Location = new System.Drawing.Point(653, 239);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
             this.btnSua.Size = new System.Drawing.Size(90, 37);
@@ -458,7 +460,7 @@ namespace LibraryManager.Template
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
             this.btnSubmit.Location = new System.Drawing.Point(532, 239);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
             this.btnSubmit.Size = new System.Drawing.Size(90, 37);
@@ -478,7 +480,7 @@ namespace LibraryManager.Template
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_edit_property_26px;
             this.guna2Button1.Location = new System.Drawing.Point(811, 55);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(102, 42);
@@ -492,7 +494,7 @@ namespace LibraryManager.Template
             this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
             this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imageBook.Location = new System.Drawing.Point(653, 55);
-            this.imageBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imageBook.Margin = new System.Windows.Forms.Padding(2);
             this.imageBook.Name = "imageBook";
             this.imageBook.Size = new System.Drawing.Size(141, 172);
             this.imageBook.TabIndex = 35;
@@ -510,7 +512,7 @@ namespace LibraryManager.Template
             this.btnThemTacGia.HoverState.Parent = this.btnThemTacGia;
             this.btnThemTacGia.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
             this.btnThemTacGia.Location = new System.Drawing.Point(532, 98);
-            this.btnThemTacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemTacGia.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemTacGia.Name = "btnThemTacGia";
             this.btnThemTacGia.ShadowDecoration.Parent = this.btnThemTacGia;
             this.btnThemTacGia.Size = new System.Drawing.Size(67, 32);
@@ -530,7 +532,7 @@ namespace LibraryManager.Template
             this.btnThemTheLoai.HoverState.Parent = this.btnThemTheLoai;
             this.btnThemTheLoai.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
             this.btnThemTheLoai.Location = new System.Drawing.Point(532, 182);
-            this.btnThemTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemTheLoai.Name = "btnThemTheLoai";
             this.btnThemTheLoai.ShadowDecoration.Parent = this.btnThemTheLoai;
             this.btnThemTheLoai.Size = new System.Drawing.Size(67, 32);
@@ -550,7 +552,7 @@ namespace LibraryManager.Template
             this.btnThemNXB.HoverState.Parent = this.btnThemNXB;
             this.btnThemNXB.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
             this.btnThemNXB.Location = new System.Drawing.Point(532, 140);
-            this.btnThemNXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemNXB.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemNXB.Name = "btnThemNXB";
             this.btnThemNXB.ShadowDecoration.Parent = this.btnThemNXB;
             this.btnThemNXB.Size = new System.Drawing.Size(67, 32);
@@ -572,7 +574,7 @@ namespace LibraryManager.Template
             this.cbTenTheLoai.ItemHeight = 30;
             this.cbTenTheLoai.ItemsAppearance.Parent = this.cbTenTheLoai;
             this.cbTenTheLoai.Location = new System.Drawing.Point(126, 182);
-            this.cbTenTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTenTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.cbTenTheLoai.Name = "cbTenTheLoai";
             this.cbTenTheLoai.ShadowDecoration.Parent = this.cbTenTheLoai;
             this.cbTenTheLoai.Size = new System.Drawing.Size(392, 36);
@@ -593,7 +595,7 @@ namespace LibraryManager.Template
             this.cbTenNXB.ItemHeight = 30;
             this.cbTenNXB.ItemsAppearance.Parent = this.cbTenNXB;
             this.cbTenNXB.Location = new System.Drawing.Point(126, 140);
-            this.cbTenNXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTenNXB.Margin = new System.Windows.Forms.Padding(2);
             this.cbTenNXB.Name = "cbTenNXB";
             this.cbTenNXB.ShadowDecoration.Parent = this.cbTenNXB;
             this.cbTenNXB.Size = new System.Drawing.Size(392, 36);
@@ -613,7 +615,7 @@ namespace LibraryManager.Template
             this.cbTenTacGia.ItemHeight = 30;
             this.cbTenTacGia.ItemsAppearance.Parent = this.cbTenTacGia;
             this.cbTenTacGia.Location = new System.Drawing.Point(126, 98);
-            this.cbTenTacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTenTacGia.Margin = new System.Windows.Forms.Padding(2);
             this.cbTenTacGia.Name = "cbTenTacGia";
             this.cbTenTacGia.ShadowDecoration.Parent = this.cbTenTacGia;
             this.cbTenTacGia.Size = new System.Drawing.Size(392, 36);
@@ -640,7 +642,7 @@ namespace LibraryManager.Template
             this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMoTa.HoverState.Parent = this.txtMoTa;
             this.txtMoTa.Location = new System.Drawing.Point(126, 227);
-            this.txtMoTa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(5);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.PasswordChar = '\0';
@@ -671,7 +673,7 @@ namespace LibraryManager.Template
             this.txtGiaTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaTien.HoverState.Parent = this.txtGiaTien;
             this.txtGiaTien.Location = new System.Drawing.Point(550, 14);
-            this.txtGiaTien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtGiaTien.Margin = new System.Windows.Forms.Padding(5);
             this.txtGiaTien.Name = "txtGiaTien";
             this.txtGiaTien.PasswordChar = '\0';
             this.txtGiaTien.PlaceholderText = "";
@@ -700,7 +702,7 @@ namespace LibraryManager.Template
             this.txtNamXuatBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamXuatBan.HoverState.Parent = this.txtNamXuatBan;
             this.txtNamXuatBan.Location = new System.Drawing.Point(374, 14);
-            this.txtNamXuatBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNamXuatBan.Margin = new System.Windows.Forms.Padding(5);
             this.txtNamXuatBan.Name = "txtNamXuatBan";
             this.txtNamXuatBan.PasswordChar = '\0';
             this.txtNamXuatBan.PlaceholderText = "";
@@ -814,7 +816,7 @@ namespace LibraryManager.Template
             this.txtLanTaiBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLanTaiBan.HoverState.Parent = this.txtLanTaiBan;
             this.txtLanTaiBan.Location = new System.Drawing.Point(744, 14);
-            this.txtLanTaiBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtLanTaiBan.Margin = new System.Windows.Forms.Padding(5);
             this.txtLanTaiBan.Name = "txtLanTaiBan";
             this.txtLanTaiBan.PasswordChar = '\0';
             this.txtLanTaiBan.PlaceholderText = "";
@@ -855,7 +857,7 @@ namespace LibraryManager.Template
             this.txtTenDauSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDauSach.HoverState.Parent = this.txtTenDauSach;
             this.txtTenDauSach.Location = new System.Drawing.Point(126, 55);
-            this.txtTenDauSach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenDauSach.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenDauSach.Name = "txtTenDauSach";
             this.txtTenDauSach.PasswordChar = '\0';
             this.txtTenDauSach.PlaceholderText = "";
@@ -896,7 +898,7 @@ namespace LibraryManager.Template
             this.txtMaDauSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDauSach.HoverState.Parent = this.txtMaDauSach;
             this.txtMaDauSach.Location = new System.Drawing.Point(126, 14);
-            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaDauSach.Name = "txtMaDauSach";
             this.txtMaDauSach.PasswordChar = '\0';
             this.txtMaDauSach.PlaceholderText = "";
@@ -922,12 +924,24 @@ namespace LibraryManager.Template
             this.ofdOpenFile.FileName = "openFileDialog1";
             this.ofdOpenFile.FileOk += new System.ComponentModel.CancelEventHandler(this.ofdOpenFile_FileOk);
             // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.label11.Location = new System.Drawing.Point(404, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(333, 43);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "THÊM ĐẦU SÁCH MỚI";
+            // 
             // FrmThemDauSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelShow);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmThemDauSach";
             this.Size = new System.Drawing.Size(1070, 654);
             this.Load += new System.EventHandler(this.FrmThemDauSach_Load);
@@ -991,5 +1005,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.OpenFileDialog ofdOpenFile;
         private Guna.UI2.WinForms.Guna2TextBox txtTuKhoa;
         private Guna.UI2.WinForms.Guna2ComboBox cbLoaiLoc;
+        private System.Windows.Forms.Label label11;
     }
 }

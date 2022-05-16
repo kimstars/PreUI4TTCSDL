@@ -26,7 +26,7 @@ namespace LibraryManager.DAO
         public string GetMaTheLoai(string ten)
         {
             string sql = "SELECT MaTheLoai FROM dbo.THELOAI WHERE TenTheLoai = N'"+ ten +"'";
-            return ExcuteRetStr(sql);
+            return GetString(sql);
         }
 
         

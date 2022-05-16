@@ -30,10 +30,7 @@ namespace LibraryManager.Template
             rbTatCa.Checked = true;
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void lbGioiTinh_Click(object sender, EventArgs e)
         {
@@ -56,11 +53,6 @@ namespace LibraryManager.Template
             ImageConverter objImageConverter = new ImageConverter();
             imageDG.Image = (Image)objImageConverter.ConvertFrom(row.Cells[8].Value);
             imageDG.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void label7_Click(object sender, EventArgs e)

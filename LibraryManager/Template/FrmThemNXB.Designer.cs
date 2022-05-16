@@ -29,13 +29,14 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelShow = new System.Windows.Forms.Panel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemNXB = new Guna.UI2.WinForms.Guna2Button();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,7 +50,6 @@ namespace LibraryManager.Template
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.panelShow.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaXuatBan)).BeginInit();
@@ -63,8 +63,9 @@ namespace LibraryManager.Template
             this.panelShow.Controls.Add(this.dgvNhaXuatBan);
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(0, 0);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(1194, 626);
+            this.panelShow.Size = new System.Drawing.Size(937, 509);
             this.panelShow.TabIndex = 0;
             this.panelShow.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShow_Paint);
             // 
@@ -75,23 +76,26 @@ namespace LibraryManager.Template
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(76, 46);
+            this.btnBack.Image = global::LibraryManager.Properties.Resources.icons8_back_24px_1;
+            this.btnBack.Location = new System.Drawing.Point(57, 14);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
-            this.btnBack.Size = new System.Drawing.Size(180, 45);
+            this.btnBack.Size = new System.Drawing.Size(47, 45);
             this.btnBack.TabIndex = 40;
-            this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(504, 46);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(341, 14);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(225, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(273, 34);
             this.guna2HtmlLabel1.TabIndex = 38;
-            this.guna2HtmlLabel1.Text = "Thêm nhà xuất bản";
+            this.guna2HtmlLabel1.Text = "THÊM NHÀ XUẤT BẢN";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -108,17 +112,36 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(76, 133);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(57, 108);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(434, 378);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(326, 307);
             this.guna2CustomGradientPanel3.TabIndex = 37;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.Transparent;
+            this.btnSua.BorderRadius = 15;
+            this.btnSua.CheckedState.Parent = this.btnSua;
+            this.btnSua.CustomImages.Parent = this.btnSua;
+            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.HoverState.Parent = this.btnSua;
+            this.btnSua.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
+            this.btnSua.Location = new System.Drawing.Point(131, 247);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.ShadowDecoration.Parent = this.btnSua;
+            this.btnSua.Size = new System.Drawing.Size(65, 32);
+            this.btnSua.TabIndex = 12;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 18;
+            this.guna2Button1.BorderRadius = 15;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.Red;
@@ -126,11 +149,11 @@ namespace LibraryManager.Template
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_cancel_48px;
-            this.guna2Button1.Location = new System.Drawing.Point(286, 304);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(231, 247);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(77, 39);
+            this.guna2Button1.Size = new System.Drawing.Size(63, 32);
             this.guna2Button1.TabIndex = 11;
             this.guna2Button1.Text = "Huỷ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
@@ -138,7 +161,7 @@ namespace LibraryManager.Template
             // btnThemNXB
             // 
             this.btnThemNXB.BackColor = System.Drawing.Color.Transparent;
-            this.btnThemNXB.BorderRadius = 18;
+            this.btnThemNXB.BorderRadius = 15;
             this.btnThemNXB.CheckedState.Parent = this.btnThemNXB;
             this.btnThemNXB.CustomImages.Parent = this.btnThemNXB;
             this.btnThemNXB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
@@ -146,11 +169,11 @@ namespace LibraryManager.Template
             this.btnThemNXB.ForeColor = System.Drawing.Color.White;
             this.btnThemNXB.HoverState.Parent = this.btnThemNXB;
             this.btnThemNXB.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnThemNXB.Location = new System.Drawing.Point(40, 304);
-            this.btnThemNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemNXB.Location = new System.Drawing.Point(25, 247);
+            this.btnThemNXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThemNXB.Name = "btnThemNXB";
             this.btnThemNXB.ShadowDecoration.Parent = this.btnThemNXB;
-            this.btnThemNXB.Size = new System.Drawing.Size(77, 39);
+            this.btnThemNXB.Size = new System.Drawing.Size(72, 32);
             this.btnThemNXB.TabIndex = 10;
             this.btnThemNXB.Text = "Thêm";
             this.btnThemNXB.Click += new System.EventHandler(this.btnThemNXB_Click_1);
@@ -174,14 +197,14 @@ namespace LibraryManager.Template
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
-            this.txtDiaChi.Location = new System.Drawing.Point(33, 189);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtDiaChi.Location = new System.Drawing.Point(25, 167);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(359, 79);
+            this.txtDiaChi.Size = new System.Drawing.Size(269, 64);
             this.txtDiaChi.TabIndex = 0;
             // 
             // label2
@@ -189,9 +212,10 @@ namespace LibraryManager.Template
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 163);
+            this.label2.Location = new System.Drawing.Point(27, 147);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "Địa chỉ";
             // 
@@ -214,14 +238,14 @@ namespace LibraryManager.Template
             this.txtTenNhaXuatBan.ForeColor = System.Drawing.Color.Black;
             this.txtTenNhaXuatBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNhaXuatBan.HoverState.Parent = this.txtTenNhaXuatBan;
-            this.txtTenNhaXuatBan.Location = new System.Drawing.Point(33, 115);
-            this.txtTenNhaXuatBan.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtTenNhaXuatBan.Location = new System.Drawing.Point(25, 110);
+            this.txtTenNhaXuatBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTenNhaXuatBan.Name = "txtTenNhaXuatBan";
             this.txtTenNhaXuatBan.PasswordChar = '\0';
             this.txtTenNhaXuatBan.PlaceholderText = "";
             this.txtTenNhaXuatBan.SelectedText = "";
             this.txtTenNhaXuatBan.ShadowDecoration.Parent = this.txtTenNhaXuatBan;
-            this.txtTenNhaXuatBan.Size = new System.Drawing.Size(359, 39);
+            this.txtTenNhaXuatBan.Size = new System.Drawing.Size(269, 32);
             this.txtTenNhaXuatBan.TabIndex = 0;
             // 
             // label1
@@ -229,9 +253,10 @@ namespace LibraryManager.Template
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 89);
+            this.label1.Location = new System.Drawing.Point(22, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 20);
+            this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên nhà xuất bản";
             // 
@@ -254,14 +279,14 @@ namespace LibraryManager.Template
             this.txtMaNhaXuatBan.ForeColor = System.Drawing.Color.Black;
             this.txtMaNhaXuatBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaNhaXuatBan.HoverState.Parent = this.txtMaNhaXuatBan;
-            this.txtMaNhaXuatBan.Location = new System.Drawing.Point(33, 36);
-            this.txtMaNhaXuatBan.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtMaNhaXuatBan.Location = new System.Drawing.Point(25, 46);
+            this.txtMaNhaXuatBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMaNhaXuatBan.Name = "txtMaNhaXuatBan";
             this.txtMaNhaXuatBan.PasswordChar = '\0';
             this.txtMaNhaXuatBan.PlaceholderText = "";
             this.txtMaNhaXuatBan.SelectedText = "";
             this.txtMaNhaXuatBan.ShadowDecoration.Parent = this.txtMaNhaXuatBan;
-            this.txtMaNhaXuatBan.Size = new System.Drawing.Size(359, 39);
+            this.txtMaNhaXuatBan.Size = new System.Drawing.Size(269, 32);
             this.txtMaNhaXuatBan.TabIndex = 0;
             // 
             // label5
@@ -269,31 +294,32 @@ namespace LibraryManager.Template
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 10);
+            this.label5.Location = new System.Drawing.Point(22, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 20);
+            this.label5.Size = new System.Drawing.Size(102, 15);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mã nhà xuất bản :";
             // 
             // dgvNhaXuatBan
             // 
             this.dgvNhaXuatBan.AllowCustomTheming = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dgvNhaXuatBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvNhaXuatBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNhaXuatBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhaXuatBan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvNhaXuatBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvNhaXuatBan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNhaXuatBan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.MediumVioletRed;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhaXuatBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumVioletRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhaXuatBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNhaXuatBan.ColumnHeadersHeight = 40;
             this.dgvNhaXuatBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNhaXuatBan,
@@ -318,28 +344,27 @@ namespace LibraryManager.Template
             this.dgvNhaXuatBan.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvNhaXuatBan.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
             this.dgvNhaXuatBan.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhaXuatBan.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhaXuatBan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNhaXuatBan.EnableHeadersVisualStyles = false;
             this.dgvNhaXuatBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(184)))), ((int)(((byte)(218)))));
             this.dgvNhaXuatBan.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvNhaXuatBan.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvNhaXuatBan.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvNhaXuatBan.Location = new System.Drawing.Point(575, 133);
-            this.dgvNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvNhaXuatBan.Location = new System.Drawing.Point(404, 108);
             this.dgvNhaXuatBan.Name = "dgvNhaXuatBan";
             this.dgvNhaXuatBan.RowHeadersVisible = false;
             this.dgvNhaXuatBan.RowHeadersWidth = 51;
             this.dgvNhaXuatBan.RowTemplate.Height = 40;
             this.dgvNhaXuatBan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNhaXuatBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaXuatBan.Size = new System.Drawing.Size(628, 365);
+            this.dgvNhaXuatBan.Size = new System.Drawing.Size(471, 307);
             this.dgvNhaXuatBan.TabIndex = 39;
             this.dgvNhaXuatBan.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvNhaXuatBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaXuatBan_CellClick_1);
@@ -374,33 +399,14 @@ namespace LibraryManager.Template
             this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.Transparent;
-            this.btnSua.BorderRadius = 18;
-            this.btnSua.CheckedState.Parent = this.btnSua;
-            this.btnSua.CustomImages.Parent = this.btnSua;
-            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.HoverState.Parent = this.btnSua;
-            this.btnSua.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnSua.Location = new System.Drawing.Point(162, 304);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(77, 39);
-            this.btnSua.TabIndex = 12;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // FrmThemNXB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelShow);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmThemNXB";
-            this.Size = new System.Drawing.Size(1194, 626);
+            this.Size = new System.Drawing.Size(937, 509);
             this.Load += new System.EventHandler(this.FrmThemNXB_Load);
             this.panelShow.ResumeLayout(false);
             this.panelShow.PerformLayout();

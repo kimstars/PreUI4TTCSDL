@@ -53,7 +53,7 @@ namespace LibraryManager.DAO
         public int GetCheckMaDauSach(string Ma)
         {
             string sql = "SELECT COUNT(MaDauSach) FROM dbo.DAUSACH WHERE MaDauSach = '" + Ma + "'";
-            return Int32.Parse(ExcuteRetStr(sql));
+            return (int)GetCount(sql);
         }
 
         public void InsertDauSach(DauSach ds, SangTac st, XuatBan xb)
@@ -77,28 +77,14 @@ namespace LibraryManager.DAO
         public DataTable LoadDauSachMini()
         {
             string sqlString = @"
-select DAUSACH.MaDauSach, 
-       TenDauSach, 
-	   SoLuong, 
-	   LanTaiBan, 
-	   NamXuatBan, 
-	   GiaTien, 
-	   MoTa, 
-	   Anh, 
-	   TACGIA.MaTacGia, 
-	   TenTacGia, 
-	   NHAXUATBAN.MaNhaXuatBan, 
-	   TenNhaXuatBan, 
-	   DiaChi,
-	   THELOAI.MaTheLoai,
-	   TenTheLoai
-from DAUSACH, TACGIA, NHAXUATBAN,SANGTAC, XUATBAN, THELOAI
-where 
-       DAUSACH.MaDauSach = SANGTAC.MaDauSach
-       and SANGTAC.MaTacGia = TACGIA.MaTacGia
-       and DAUSACH.MaDauSach = XUATBAN.MaDauSach
-       and XUATBAN.MaNhaXuatBan = NHAXUATBAN.MaNhaXuatBan
-       and DAUSACH.MaTheLoai = THELOAI.MaTheLoai";
+                                select DAUSACH.MaDauSach, TenDauSach, SoLuong,  LanTaiBan,  NamXuatBan,  GiaTien,   MoTa, Anh, TACGIA.MaTacGia, TenTacGia,  NHAXUATBAN.MaNhaXuatBan,  TenNhaXuatBan,  DiaChi,THELOAI.MaTheLoai,  TenTheLoai
+                                from DAUSACH, TACGIA, NHAXUATBAN,SANGTAC, XUATBAN, THELOAI
+                                where 
+                                       DAUSACH.MaDauSach = SANGTAC.MaDauSach
+                                       and SANGTAC.MaTacGia = TACGIA.MaTacGia
+                                       and DAUSACH.MaDauSach = XUATBAN.MaDauSach
+                                       and XUATBAN.MaNhaXuatBan = NHAXUATBAN.MaNhaXuatBan
+                                       and DAUSACH.MaTheLoai = THELOAI.MaTheLoai";
             return GetData(sqlString);
         }
 
