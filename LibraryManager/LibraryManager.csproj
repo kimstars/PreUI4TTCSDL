@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -167,7 +172,7 @@
     <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\NAM 3 KI 2\thực tập csdl\LibraryManager\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationFramework" />
@@ -205,6 +210,7 @@
     <Compile Include="BUS\NhapSach_BUS.cs" />
     <Compile Include="BUS\PhieuMuon_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
+    <Compile Include="BUS\ThongKe_BUS.cs" />
     <Compile Include="CreateDB\addImageDauSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,12 +248,16 @@
     <Compile Include="DAO\NhapSach_DAO.cs" />
     <Compile Include="DAO\PhieuMuon_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />
+
+    <Compile Include="DAO\Thongke_DAO.cs" />
+
     <Compile Include="DS\DSSachMuon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DS\DSSachMuon.Designer.cs">
       <DependentUpon>DSSachMuon.cs</DependentUpon>
     </Compile>
+
     <Compile Include="DTO\BienBanViPham.cs" />
     <Compile Include="DTO\CuonSach.cs" />
     <Compile Include="DTO\DauSach.cs" />
@@ -477,11 +487,31 @@
     <Compile Include="GUI\FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Template\TK_sachmuon_dg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\TK_sachmuon_dg.Designer.cs">
+      <DependentUpon>TK_sachmuon_dg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\tk_sachmuon_nv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\tk_sachmuon_nv.Designer.cs">
+      <DependentUpon>tk_sachmuon_nv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\tk_sachnhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\tk_sachnhap.Designer.cs">
+      <DependentUpon>tk_sachnhap.cs</DependentUpon>
+
     <Compile Include="Template\TimKiem4NV.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Template\TimKiem4NV.Designer.cs">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
+
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="CreateDB\addImageDauSach.resx">
@@ -607,6 +637,19 @@
     <EmbeddedResource Include="Template\TimKiem4NV.resx">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Template\TK_sachmuon_dg.resx">
+      <DependentUpon>TK_sachmuon_dg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\tk_sachmuon_nv.resx">
+      <DependentUpon>tk_sachmuon_nv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\tk_sachnhap.resx">
+      <DependentUpon>tk_sachnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+
+
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

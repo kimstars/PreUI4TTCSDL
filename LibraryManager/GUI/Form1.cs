@@ -124,5 +124,15 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            //tk_sachmuon1.Visible = true;
+            // tk_sachnhap1.Visible = true;
+
+            
+            
+        }
     }
 }
