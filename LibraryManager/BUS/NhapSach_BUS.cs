@@ -26,6 +26,16 @@ namespace LibraryManager.BUS
         {
             nsDAO.InsertPhieuNhap_TTNS(pn, ttns);
         }
+
+        public string AutoTaoMaNhap()
+        {
+            string index = (nsDAO.GetSoLuongPhieuNhap() + 2).ToString();
+            string MaNhap = "PN000000";
+            MaNhap = MaNhap.Substring(0, 8 - index.Length) + index;
+            return MaNhap;
+        }
+
+
     }
 
 }

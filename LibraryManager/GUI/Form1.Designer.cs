@@ -35,6 +35,8 @@ namespace LibraryManager
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PanelMenuBar = new System.Windows.Forms.Panel();
+            this.btnTestForm2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTestForm = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -50,7 +52,6 @@ namespace LibraryManager
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.frminfoDG = new LibraryManager.Template.InfoDG();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -58,10 +59,13 @@ namespace LibraryManager
             this.LoginTick = new System.Windows.Forms.Timer(this.components);
             this.Paneltoolbar = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.frmThongtin = new LibraryManager.Template.Thongtin();
-            this.FrmLogin1 = new LibraryManager.Login();
-            this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelShow = new System.Windows.Forms.Panel();
+            this.FrmLogin1 = new LibraryManager.Login();
+            this.danhSachDG1 = new LibraryManager.Template.DanhSachDG();
+            this.frmThongtin = new LibraryManager.Template.Thongtin();
+            this.formQLInfo = new LibraryManager.Template.QLInfoDocgia();
+            this.frminfoDG = new LibraryManager.Template.InfoDG();
             this.phieuMuon1 = new LibraryManager.Template.PhieuMuon();
             this.PanelMenuBar.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -113,6 +117,8 @@ namespace LibraryManager
             // PanelMenuBar
             // 
             this.PanelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.PanelMenuBar.Controls.Add(this.btnTestForm2);
+            this.PanelMenuBar.Controls.Add(this.btnTestForm);
             this.PanelMenuBar.Controls.Add(this.panel4);
             this.PanelMenuBar.Controls.Add(this.PaneLogin);
             this.PanelMenuBar.Controls.Add(this.panel1);
@@ -123,6 +129,36 @@ namespace LibraryManager
             this.PanelMenuBar.Name = "PanelMenuBar";
             this.PanelMenuBar.Size = new System.Drawing.Size(253, 871);
             this.PanelMenuBar.TabIndex = 6;
+            // 
+            // btnTestForm2
+            // 
+            this.btnTestForm2.CheckedState.Parent = this.btnTestForm2;
+            this.btnTestForm2.CustomImages.Parent = this.btnTestForm2;
+            this.btnTestForm2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTestForm2.ForeColor = System.Drawing.Color.White;
+            this.btnTestForm2.HoverState.Parent = this.btnTestForm2;
+            this.btnTestForm2.Location = new System.Drawing.Point(34, 733);
+            this.btnTestForm2.Name = "btnTestForm2";
+            this.btnTestForm2.ShadowDecoration.Parent = this.btnTestForm2;
+            this.btnTestForm2.Size = new System.Drawing.Size(180, 45);
+            this.btnTestForm2.TabIndex = 18;
+            this.btnTestForm2.Text = "Test Form #2";
+            this.btnTestForm2.Click += new System.EventHandler(this.btnTestForm2_Click);
+            // 
+            // btnTestForm
+            // 
+            this.btnTestForm.CheckedState.Parent = this.btnTestForm;
+            this.btnTestForm.CustomImages.Parent = this.btnTestForm;
+            this.btnTestForm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTestForm.ForeColor = System.Drawing.Color.White;
+            this.btnTestForm.HoverState.Parent = this.btnTestForm;
+            this.btnTestForm.Location = new System.Drawing.Point(34, 659);
+            this.btnTestForm.Name = "btnTestForm";
+            this.btnTestForm.ShadowDecoration.Parent = this.btnTestForm;
+            this.btnTestForm.Size = new System.Drawing.Size(180, 45);
+            this.btnTestForm.TabIndex = 17;
+            this.btnTestForm.Text = "Test Form";
+            this.btnTestForm.Click += new System.EventHandler(this.btnTestForm_Click);
             // 
             // panel4
             // 
@@ -406,19 +442,10 @@ namespace LibraryManager
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 21);
+            this.label2.Size = new System.Drawing.Size(145, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "Thư viện MTA";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // frminfoDG
-            // 
-            this.frminfoDG.Location = new System.Drawing.Point(293, 58);
-            this.frminfoDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.frminfoDG.Name = "frminfoDG";
-            this.frminfoDG.Size = new System.Drawing.Size(824, 729);
-            this.frminfoDG.TabIndex = 13;
-            this.frminfoDG.Visible = false;
             // 
             // guna2Elipse1
             // 
@@ -476,33 +503,6 @@ namespace LibraryManager
             // 
             this.guna2DragControl1.TargetControl = this.Paneltoolbar;
             // 
-            // frmThongtin
-            // 
-            this.frmThongtin.Location = new System.Drawing.Point(423, 58);
-            this.frmThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.frmThongtin.Name = "frmThongtin";
-            this.frmThongtin.Size = new System.Drawing.Size(531, 542);
-            this.frmThongtin.TabIndex = 11;
-            this.frmThongtin.Visible = false;
-            // 
-            // FrmLogin1
-            // 
-            this.FrmLogin1.Location = new System.Drawing.Point(411, 58);
-            this.FrmLogin1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FrmLogin1.Name = "FrmLogin1";
-            this.FrmLogin1.Size = new System.Drawing.Size(517, 532);
-            this.FrmLogin1.TabIndex = 7;
-            // 
-            // formQLInfo
-            // 
-            this.formQLInfo.ID2 = "";
-            this.formQLInfo.Location = new System.Drawing.Point(261, 53);
-            this.formQLInfo.Margin = new System.Windows.Forms.Padding(5);
-            this.formQLInfo.Name = "formQLInfo";
-            this.formQLInfo.Size = new System.Drawing.Size(1337, 815);
-            this.formQLInfo.TabIndex = 14;
-            this.formQLInfo.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -516,10 +516,64 @@ namespace LibraryManager
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panelShow
+            // 
+            this.panelShow.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelShow.Location = new System.Drawing.Point(287, 85);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(1302, 780);
+            this.panelShow.TabIndex = 17;
+            this.panelShow.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShow_Paint);
+            // 
+            // FrmLogin1
+            // 
+            this.FrmLogin1.Location = new System.Drawing.Point(820, 517);
+            this.FrmLogin1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FrmLogin1.Name = "FrmLogin1";
+            this.FrmLogin1.Size = new System.Drawing.Size(517, 532);
+            this.FrmLogin1.TabIndex = 7;
+            // 
+            // danhSachDG1
+            // 
+            this.danhSachDG1.BackColor = System.Drawing.Color.Transparent;
+            this.danhSachDG1.Location = new System.Drawing.Point(513, 480);
+            this.danhSachDG1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.danhSachDG1.Name = "danhSachDG1";
+            this.danhSachDG1.Size = new System.Drawing.Size(1779, 986);
+            this.danhSachDG1.TabIndex = 16;
+            // 
+            // frmThongtin
+            // 
+            this.frmThongtin.Location = new System.Drawing.Point(513, 422);
+            this.frmThongtin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.frmThongtin.Name = "frmThongtin";
+            this.frmThongtin.Size = new System.Drawing.Size(531, 542);
+            this.frmThongtin.TabIndex = 11;
+            this.frmThongtin.Visible = false;
+            // 
+            // formQLInfo
+            // 
+            this.formQLInfo.ID2 = "";
+            this.formQLInfo.Location = new System.Drawing.Point(252, 480);
+            this.formQLInfo.Margin = new System.Windows.Forms.Padding(5);
+            this.formQLInfo.Name = "formQLInfo";
+            this.formQLInfo.Size = new System.Drawing.Size(1337, 815);
+            this.formQLInfo.TabIndex = 14;
+            this.formQLInfo.Visible = false;
+            // 
+            // frminfoDG
+            // 
+            this.frminfoDG.Location = new System.Drawing.Point(513, 566);
+            this.frminfoDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.frminfoDG.Name = "frminfoDG";
+            this.frminfoDG.Size = new System.Drawing.Size(824, 729);
+            this.frminfoDG.TabIndex = 13;
+            this.frminfoDG.Visible = false;
+            // 
             // phieuMuon1
             // 
             this.phieuMuon1.BackColor = System.Drawing.Color.Transparent;
-            this.phieuMuon1.Location = new System.Drawing.Point(253, 58);
+            this.phieuMuon1.Location = new System.Drawing.Point(376, 517);
             this.phieuMuon1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phieuMuon1.Name = "phieuMuon1";
             this.phieuMuon1.Size = new System.Drawing.Size(1333, 801);
@@ -531,18 +585,20 @@ namespace LibraryManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 865);
-            this.Controls.Add(this.phieuMuon1);
+            this.Controls.Add(this.panelShow);
             this.Controls.Add(this.PanelMenuBar);
+            this.Controls.Add(this.Paneltoolbar);
+            this.Controls.Add(this.FrmLogin1);
+            this.Controls.Add(this.danhSachDG1);
+            this.Controls.Add(this.frmThongtin);
             this.Controls.Add(this.formQLInfo);
             this.Controls.Add(this.frminfoDG);
-            this.Controls.Add(this.Paneltoolbar);
-            this.Controls.Add(this.frmThongtin);
-            this.Controls.Add(this.FrmLogin1);
+            this.Controls.Add(this.phieuMuon1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "y";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenuBar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -589,5 +645,9 @@ namespace LibraryManager
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Template.PhieuMuon phieuMuon1;
+        private Template.DanhSachDG danhSachDG1;
+        private Guna.UI2.WinForms.Guna2Button btnTestForm;
+        private Guna.UI2.WinForms.Guna2Button btnTestForm2;
+        private System.Windows.Forms.Panel panelShow;
     }
 }

@@ -88,5 +88,10 @@ namespace LibraryManager.Template
             TinhTienCoc(InfoBorrow);
 
         }
+
+        private void dgvTest_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

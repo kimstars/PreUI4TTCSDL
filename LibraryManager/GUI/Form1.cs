@@ -25,6 +25,8 @@ namespace LibraryManager
             frminfoDG.Visible = false;
             formQLInfo.Visible = false;
             phieuMuon1.Visible = false;
+            
+
 
         }
 
@@ -220,6 +222,33 @@ namespace LibraryManager
         {
             hideChildForm();
             phieuMuon1.Visible = true;
+        }
+
+        private void btnTestForm_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            panelShow.Controls.Clear();
+            UserControl temp = new Template.FrmThemCuonSach();
+            panelShow.Controls.Add(temp);
+        }
+
+        private void frmThongTinDG1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTestForm2_Click(object sender, EventArgs e)
+        {
+            hideChildForm();
+            panelShow.Controls.Clear();
+            UserControl temp = new Template.FrmTimKiemForDG();
+            panelShow.Controls.Add(temp);
+
+        }
+
+        private void panelShow_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

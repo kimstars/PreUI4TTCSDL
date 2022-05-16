@@ -11,7 +11,7 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=TRUNG\SQLEXPRESS;Initial Catalog=THUVIENMTA;Integrated Security=True";
         SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
@@ -95,6 +95,30 @@ namespace LibraryManager.DAO
 
             if (d != null) return d.Value.ToString("yyyy/MM/dd");
             return "";
+
+        }
+
+        public string ExcuteRetStr(string sql)
+        {
+
+
+            string res = "";
+
+            using (SqlCommand command = new SqlCommand(sql, connect))
+            {
+                if (connect.State != ConnectionState.Open)
+                    connect.Open();
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    res = result.ToString();
+                    //MessageBox.Show(res);
+                }
+            }
+
+            connect.Close();
+
+            return res;
 
         }
 

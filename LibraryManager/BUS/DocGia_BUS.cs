@@ -19,6 +19,16 @@ namespace LibraryManager.BUS
         {
             return dgDao.loadDocGia();
         }
+        public DataTable GetListDGInfo()
+        {
+            return dgDao.loadDocGiaInfo();
+        }
+
+        public DataTable GetListDGLoc(string loai)
+        {
+            return dgDao.loadDocGiaLoc(loai);
+        }
+
         public void Xoa(string mDG)
         {
             dgDao.Delete(mDG);
