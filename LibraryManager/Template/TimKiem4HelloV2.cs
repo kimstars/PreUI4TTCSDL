@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using LibraryManager.BUS;
 using LibraryManager.DTO;
 
-namespace LibraryManager.GUI
+namespace LibraryManager.Template
 {
-    public partial class TimKiem4Hello : Form
+    public partial class TimKiem4HelloV2 : UserControl
     {
-        public TimKiem4Hello()
+        public TimKiem4HelloV2()
         {
             InitializeComponent();
         }
@@ -68,15 +68,6 @@ namespace LibraryManager.GUI
         }
 
         DauSach_BUS dsBus = new DauSach_BUS();
-        private void TimKiem4Hello_Load(object sender, EventArgs e)
-        {
-
-
-            DSDauSach = dsBus.LoadMaDauSach();
-            LoadBookFlow();
-            LoadComboBoxTheLoai();
-
-        }
 
         public void LoadComboBoxTheLoai()
         {
@@ -108,7 +99,7 @@ namespace LibraryManager.GUI
                     if (it.selected)
                     {
                         it.HighLightItem();
-                        
+
                     }
 
                 }
@@ -125,11 +116,11 @@ namespace LibraryManager.GUI
 
                     string MaXoa = dgvChooseBook.Rows[e.RowIndex].Cells["MaDauSach"].Value.ToString();
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
-                    foreach(var item in flowLayoutDS.Controls)
+                    foreach (var item in flowLayoutDS.Controls)
                     {
 
                         Template.OneBook it = (Template.OneBook)item;
-                        if(it.MaDauSach == MaXoa && it.selected)
+                        if (it.MaDauSach == MaXoa && it.selected)
                         {
                             it.HighLightItem();
                             break;
@@ -209,12 +200,6 @@ namespace LibraryManager.GUI
 
 
 
-        private void cbTheLoai_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string key = cbTheLoai.Text;
-
-
-        }
 
         private void btnFindAll_Click(object sender, EventArgs e)
         {
@@ -232,33 +217,30 @@ namespace LibraryManager.GUI
 
         public static List<string> dsMuon = new List<string>();
         public static bool DaTim = false;
+        public event EventHandler OnClick = null;
         private void btnCreatePM_Click(object sender, EventArgs e)
         {
 
             dsMuon.Clear();
-            for(int i = 0; i< dgvChooseBook.Rows.Count; i++)
+            for (int i = 0; i < dgvChooseBook.Rows.Count; i++)
             {
                 dsMuon.Add(dgvChooseBook.Rows[i].Cells["MaDauSach"].Value.ToString());
-    
+
             }
             DaTim = true;
 
+            FrmDocGia.listSachMuon = dsMuon;
+            OnClick?.Invoke(this, e);
 
-            openAfterLog();
+
+
         }
 
-        public static void openAfterLog()
+        private void TimKiem4HelloV2_Load(object sender, EventArgs e)
         {
-            if (!Form1.isLogin)
-            {
-                frmLogin newlogin = new frmLogin();
-                newlogin.Show();
-            }
-            else
-            {
-                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr);
-                newdg.Show();
-            }
+            DSDauSach = dsBus.LoadMaDauSach();
+            //LoadBookFlow();
+            LoadComboBoxTheLoai();
         }
     }
 }

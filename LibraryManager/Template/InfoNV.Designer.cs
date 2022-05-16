@@ -654,7 +654,7 @@ namespace LibraryManager.Template
             this.btnChangeImg.Location = new System.Drawing.Point(43, 177);
             this.btnChangeImg.Name = "btnChangeImg";
             this.btnChangeImg.ShadowDecoration.Parent = this.btnChangeImg;
-            this.btnChangeImg.Size = new System.Drawing.Size(149, 42);
+            this.btnChangeImg.Size = new System.Drawing.Size(149, 36);
             this.btnChangeImg.TabIndex = 22;
             this.btnChangeImg.Text = "Thay ảnh";
             // 

@@ -180,7 +180,6 @@ namespace LibraryManager
             this.btnDangKy.Tag = "Đăng ký ";
             this.btnDangKy.Text = "Đăng ký ";
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-
             // 
             // guna2Button5
             // 
@@ -191,7 +190,6 @@ namespace LibraryManager
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.Black;
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
-
             this.guna2Button5.Image = global::LibraryManager.Properties.Resources.icons8_study_64px;
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
@@ -201,12 +199,10 @@ namespace LibraryManager
             this.guna2Button5.Padding = new System.Windows.Forms.Padding(1);
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(190, 39);
-
             this.guna2Button5.TabIndex = 21;
             this.guna2Button5.Tag = "Tìm kiếm sách";
             this.guna2Button5.Text = "Tìm kiếm sách";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
-
             // 
             // guna2Button1
             // 
@@ -220,7 +216,6 @@ namespace LibraryManager
             this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_database_daily_import_40px;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-
             this.guna2Button1.Location = new System.Drawing.Point(0, 179);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
@@ -232,7 +227,6 @@ namespace LibraryManager
             this.guna2Button1.Text = "Tạo Data ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
@@ -255,7 +249,6 @@ namespace LibraryManager
             this.btnDangNhap.Tag = "Đăng nhập";
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-
             // 
             // btnThongtin
             // 
@@ -269,7 +262,6 @@ namespace LibraryManager
             this.btnThongtin.Image = global::LibraryManager.Properties.Resources.icons8_info_60px;
             this.btnThongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongtin.ImageSize = new System.Drawing.Size(30, 30);
-
             this.btnThongtin.Location = new System.Drawing.Point(0, 221);
             this.btnThongtin.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongtin.Name = "btnThongtin";
@@ -334,7 +326,6 @@ namespace LibraryManager
             this.btnLoginn.TabIndex = 12;
             this.btnLoginn.Tag = "Đăng nhập";
             this.btnLoginn.Text = "Đăng nhập";
-
             // 
             // panel1
             // 
@@ -345,7 +336,6 @@ namespace LibraryManager
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(190, 67);
-
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -420,7 +410,6 @@ namespace LibraryManager
             this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox4.HoverState.Parent = this.guna2ControlBox4;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
-
             this.guna2ControlBox4.Location = new System.Drawing.Point(932, 13);
             this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox4.Name = "guna2ControlBox4";
@@ -435,7 +424,6 @@ namespace LibraryManager
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(974, 673);
             this.panelShow.TabIndex = 13;
-
             // 
             // pictureBox1
             // 
@@ -448,31 +436,6 @@ namespace LibraryManager
             this.pictureBox1.Size = new System.Drawing.Size(259, 68);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // tk_sachnhap1
-            // 
-            this.tk_sachnhap1.Location = new System.Drawing.Point(199, 63);
-            this.tk_sachnhap1.Margin = new System.Windows.Forms.Padding(2);
-            this.tk_sachnhap1.Name = "tk_sachnhap1";
-            this.tk_sachnhap1.Size = new System.Drawing.Size(832, 613);
-            this.tk_sachnhap1.TabIndex = 16;
-            // 
-            // tk_sachmuon_nv1
-            // 
-            this.tk_sachmuon_nv1.BackColor = System.Drawing.SystemColors.Control;
-            this.tk_sachmuon_nv1.Location = new System.Drawing.Point(220, 41);
-            this.tk_sachmuon_nv1.Margin = new System.Windows.Forms.Padding(2);
-            this.tk_sachmuon_nv1.Name = "tk_sachmuon_nv1";
-            this.tk_sachmuon_nv1.Size = new System.Drawing.Size(977, 682);
-            this.tk_sachmuon_nv1.TabIndex = 17;
-            // 
-            // tK_sachmuon_dg1
-            // 
-            this.tK_sachmuon_dg1.Location = new System.Drawing.Point(317, 20);
-            this.tK_sachmuon_dg1.Margin = new System.Windows.Forms.Padding(2);
-            this.tK_sachmuon_dg1.Name = "tK_sachmuon_dg1";
-            this.tK_sachmuon_dg1.Size = new System.Drawing.Size(761, 703);
-            this.tK_sachmuon_dg1.TabIndex = 18;
             // 
             // Form1
             // 

@@ -131,15 +131,14 @@ namespace LibraryManager.Template
                 }
 
             }
+            indexCurrent = e.RowIndex;
         }
 
+        int indexCurrent = 1;
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
 
-            listsach.RemoveAll(x => ((string)x) == MaDauSachCurrent);
-
-            InfoBorrow = msBus.LoadTTSachMuon(listsach);
-            dgvInfoBorrow.DataSource = InfoBorrow;
+            dgvInfoBorrow.Controls.RemoveAt(indexCurrent);
             TinhTienCoc(InfoBorrow);
 
         }
@@ -170,16 +169,14 @@ namespace LibraryManager.Template
 
             pmBus.InsertMuon(pmtnew, DSMaSach,isNV);
 
-
-
         }
 
         private void txtMaDG_TextChanged(object sender, EventArgs e)
         {
-            if (!dgBus.checkTonTaiDG(txtMaDG.Text))
+            if (dgBus.checkTonTaiDG(txtMaDG.Text))
             {
                 errorProvider1.SetError(lbMsg, "Tài khoản không tồn tại !");
-                lbMsg.Text = "Tài khoản đã tồn tại !";
+                lbMsg.Text = "Tài khoản không tồn tại !";
             }
             else
             {

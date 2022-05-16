@@ -57,22 +57,21 @@ namespace LibraryManager.Template
             this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbMsg = new System.Windows.Forms.Label();
             this.txtMaDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
             this.DateMuon = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dgvInfoBorrow = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bthHuy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMuon = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remove = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.bthHuy = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMuon = new Guna.UI2.WinForms.Guna2Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbMsg = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -148,7 +147,7 @@ namespace LibraryManager.Template
             this.txtTenDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDG.HoverState.Parent = this.txtTenDG;
             this.txtTenDG.Location = new System.Drawing.Point(22, 34);
-            this.txtTenDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.PasswordChar = '\0';
             this.txtTenDG.PlaceholderText = "";
@@ -332,7 +331,7 @@ namespace LibraryManager.Template
             this.btnLoaiBo.HoverState.Parent = this.btnLoaiBo;
             this.btnLoaiBo.Image = global::LibraryManager.Properties.Resources.icons8_remove_tag_40px;
             this.btnLoaiBo.Location = new System.Drawing.Point(196, 453);
-            this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoaiBo.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoaiBo.Name = "btnLoaiBo";
             this.btnLoaiBo.ShadowDecoration.Parent = this.btnLoaiBo;
             this.btnLoaiBo.Size = new System.Drawing.Size(119, 36);
@@ -346,7 +345,7 @@ namespace LibraryManager.Template
             this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_study_200px;
             this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imageBook.Location = new System.Drawing.Point(11, 37);
-            this.imageBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imageBook.Margin = new System.Windows.Forms.Padding(2);
             this.imageBook.Name = "imageBook";
             this.imageBook.Size = new System.Drawing.Size(108, 117);
             this.imageBook.TabIndex = 3;
@@ -364,7 +363,7 @@ namespace LibraryManager.Template
             this.btnPreview.HoverState.Parent = this.btnPreview;
             this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
             this.btnPreview.Location = new System.Drawing.Point(33, 453);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
             this.btnPreview.Size = new System.Drawing.Size(119, 36);
@@ -407,6 +406,17 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(349, 158);
             this.guna2CustomGradientPanel3.TabIndex = 28;
             // 
+            // lbMsg
+            // 
+            this.lbMsg.AutoSize = true;
+            this.lbMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lbMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbMsg.Location = new System.Drawing.Point(19, 68);
+            this.lbMsg.Name = "lbMsg";
+            this.lbMsg.Size = new System.Drawing.Size(10, 13);
+            this.lbMsg.TabIndex = 19;
+            this.lbMsg.Text = ".";
+            // 
             // txtMaDG
             // 
             this.txtMaDG.BackColor = System.Drawing.Color.Transparent;
@@ -428,7 +438,7 @@ namespace LibraryManager.Template
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.HoverState.Parent = this.txtMaDG;
             this.txtMaDG.Location = new System.Drawing.Point(192, 34);
-            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "";
@@ -461,7 +471,7 @@ namespace LibraryManager.Template
             this.dateHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateHanTra.Location = new System.Drawing.Point(192, 103);
-            this.dateHanTra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateHanTra.Margin = new System.Windows.Forms.Padding(2);
             this.dateHanTra.MinimumSize = new System.Drawing.Size(4, 37);
             this.dateHanTra.Name = "dateHanTra";
             this.dateHanTra.Size = new System.Drawing.Size(138, 37);
@@ -479,7 +489,7 @@ namespace LibraryManager.Template
             this.DateMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateMuon.Location = new System.Drawing.Point(22, 103);
-            this.DateMuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateMuon.Margin = new System.Windows.Forms.Padding(2);
             this.DateMuon.MinimumSize = new System.Drawing.Size(4, 37);
             this.DateMuon.Name = "DateMuon";
             this.DateMuon.Size = new System.Drawing.Size(141, 37);
@@ -526,8 +536,7 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.remove});
+            this.dataGridViewTextBoxColumn5});
             this.dgvInfoBorrow.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
             this.dgvInfoBorrow.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvInfoBorrow.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -571,6 +580,49 @@ namespace LibraryManager.Template
             this.dgvInfoBorrow.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvInfoBorrow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoBorrow_CellClick);
             // 
+            // bthHuy
+            // 
+            this.bthHuy.BackColor = System.Drawing.Color.Transparent;
+            this.bthHuy.BorderRadius = 18;
+            this.bthHuy.CheckedState.Parent = this.bthHuy;
+            this.bthHuy.CustomImages.Parent = this.bthHuy;
+            this.bthHuy.FillColor = System.Drawing.Color.LightCoral;
+            this.bthHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bthHuy.ForeColor = System.Drawing.Color.White;
+            this.bthHuy.HoverState.Parent = this.bthHuy;
+            this.bthHuy.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
+            this.bthHuy.Location = new System.Drawing.Point(846, 45);
+            this.bthHuy.Margin = new System.Windows.Forms.Padding(2);
+            this.bthHuy.Name = "bthHuy";
+            this.bthHuy.ShadowDecoration.Parent = this.bthHuy;
+            this.bthHuy.Size = new System.Drawing.Size(129, 36);
+            this.bthHuy.TabIndex = 33;
+            this.bthHuy.Text = "Hủy bỏ";
+            // 
+            // btnMuon
+            // 
+            this.btnMuon.BackColor = System.Drawing.Color.Transparent;
+            this.btnMuon.BorderRadius = 18;
+            this.btnMuon.CheckedState.Parent = this.btnMuon;
+            this.btnMuon.CustomImages.Parent = this.btnMuon;
+            this.btnMuon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnMuon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMuon.ForeColor = System.Drawing.Color.White;
+            this.btnMuon.HoverState.Parent = this.btnMuon;
+            this.btnMuon.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
+            this.btnMuon.Location = new System.Drawing.Point(643, 45);
+            this.btnMuon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMuon.Name = "btnMuon";
+            this.btnMuon.ShadowDecoration.Parent = this.btnMuon;
+            this.btnMuon.Size = new System.Drawing.Size(179, 36);
+            this.btnMuon.TabIndex = 27;
+            this.btnMuon.Text = "Xác nhận mượn sách";
+            this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this.txtTenDG;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MaSach";
@@ -610,67 +662,6 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // remove
-            // 
-            this.remove.HeaderText = "Bỏ";
-            this.remove.MinimumWidth = 6;
-            this.remove.Name = "remove";
-            this.remove.Text = "Bỏ";
-            // 
-            // bthHuy
-            // 
-            this.bthHuy.BackColor = System.Drawing.Color.Transparent;
-            this.bthHuy.BorderRadius = 18;
-            this.bthHuy.CheckedState.Parent = this.bthHuy;
-            this.bthHuy.CustomImages.Parent = this.bthHuy;
-            this.bthHuy.FillColor = System.Drawing.Color.LightCoral;
-            this.bthHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bthHuy.ForeColor = System.Drawing.Color.White;
-            this.bthHuy.HoverState.Parent = this.bthHuy;
-            this.bthHuy.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
-            this.bthHuy.Location = new System.Drawing.Point(846, 45);
-            this.bthHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bthHuy.Name = "bthHuy";
-            this.bthHuy.ShadowDecoration.Parent = this.bthHuy;
-            this.bthHuy.Size = new System.Drawing.Size(129, 36);
-            this.bthHuy.TabIndex = 33;
-            this.bthHuy.Text = "Hủy bỏ";
-            // 
-            // btnMuon
-            // 
-            this.btnMuon.BackColor = System.Drawing.Color.Transparent;
-            this.btnMuon.BorderRadius = 18;
-            this.btnMuon.CheckedState.Parent = this.btnMuon;
-            this.btnMuon.CustomImages.Parent = this.btnMuon;
-            this.btnMuon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.btnMuon.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMuon.ForeColor = System.Drawing.Color.White;
-            this.btnMuon.HoverState.Parent = this.btnMuon;
-            this.btnMuon.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.btnMuon.Location = new System.Drawing.Point(643, 45);
-            this.btnMuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMuon.Name = "btnMuon";
-            this.btnMuon.ShadowDecoration.Parent = this.btnMuon;
-            this.btnMuon.Size = new System.Drawing.Size(179, 36);
-            this.btnMuon.TabIndex = 27;
-            this.btnMuon.Text = "Xác nhận mượn sách";
-            this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this.txtTenDG;
-            // 
-            // lbMsg
-            // 
-            this.lbMsg.AutoSize = true;
-            this.lbMsg.BackColor = System.Drawing.Color.Transparent;
-            this.lbMsg.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Location = new System.Drawing.Point(19, 68);
-            this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(10, 13);
-            this.lbMsg.TabIndex = 19;
-            this.lbMsg.Text = ".";
-            // 
             // PhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,7 +677,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbMaMuonTra);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PhieuMuon";
             this.Size = new System.Drawing.Size(1000, 651);
             this.Load += new System.EventHandler(this.PhieuMuon_Load);
@@ -737,13 +728,12 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button bthHuy;
         private Guna.UI2.WinForms.Guna2TextBox txtMaDG;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lbMsg;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewButtonColumn remove;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lbMsg;
     }
 }

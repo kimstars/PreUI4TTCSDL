@@ -33,11 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
-    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
-      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
-
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -248,16 +244,13 @@
     <Compile Include="DAO\NhapSach_DAO.cs" />
     <Compile Include="DAO\PhieuMuon_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />
-
     <Compile Include="DAO\Thongke_DAO.cs" />
-
     <Compile Include="DS\DSSachMuon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DS\DSSachMuon.Designer.cs">
       <DependentUpon>DSSachMuon.cs</DependentUpon>
     </Compile>
-
     <Compile Include="DTO\BienBanViPham.cs" />
     <Compile Include="DTO\CuonSach.cs" />
     <Compile Include="DTO\DauSach.cs" />
@@ -487,7 +480,12 @@
     <Compile Include="GUI\FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="Template\TimKiem4HelloV2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\TimKiem4HelloV2.Designer.cs">
+      <DependentUpon>TimKiem4HelloV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\TK_sachmuon_dg.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -505,13 +503,12 @@
     </Compile>
     <Compile Include="Template\tk_sachnhap.Designer.cs">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="Template\TimKiem4NV.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Template\TimKiem4NV.Designer.cs">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
-
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="CreateDB\addImageDauSach.resx">
@@ -634,10 +631,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\TimKiem4HelloV2.resx">
+      <DependentUpon>TimKiem4HelloV2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\TimKiem4NV.resx">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Template\TK_sachmuon_dg.resx">
       <DependentUpon>TK_sachmuon_dg.cs</DependentUpon>
     </EmbeddedResource>
@@ -647,9 +646,6 @@
     <EmbeddedResource Include="Template\tk_sachnhap.resx">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
-
-
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
