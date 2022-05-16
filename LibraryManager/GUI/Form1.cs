@@ -22,7 +22,7 @@ namespace LibraryManager
         {
             sidebartick.Start();
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.InfoNV());
+            panelShow.Controls.Add(new Template.InfoDG());
 
 
         }

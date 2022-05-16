@@ -61,12 +61,12 @@ namespace LibraryManager.Template
             this.Mâ = new System.Windows.Forms.Label();
             this.lbChucvu = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDoiMK = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             this.imageAvt = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnChangeImg = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.lbTenDangNhap = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -587,21 +587,22 @@ namespace LibraryManager.Template
             this.label15.TabIndex = 19;
             this.label15.Text = "Chỉnh sửa thông tin cơ bản:";
             // 
-            // guna2Button1
+            // btnDoiMK
             // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(697, 658);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(153, 45);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Đổi mật khẩu";
+            this.btnDoiMK.BorderRadius = 18;
+            this.btnDoiMK.CheckedState.Parent = this.btnDoiMK;
+            this.btnDoiMK.CustomImages.Parent = this.btnDoiMK;
+            this.btnDoiMK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.btnDoiMK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDoiMK.ForeColor = System.Drawing.Color.White;
+            this.btnDoiMK.HoverState.Parent = this.btnDoiMK;
+            this.btnDoiMK.Location = new System.Drawing.Point(697, 658);
+            this.btnDoiMK.Name = "btnDoiMK";
+            this.btnDoiMK.ShadowDecoration.Parent = this.btnDoiMK;
+            this.btnDoiMK.Size = new System.Drawing.Size(153, 45);
+            this.btnDoiMK.TabIndex = 12;
+            this.btnDoiMK.Text = "Đổi mật khẩu";
+            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
             // errorProvider1
             // 
@@ -656,22 +657,24 @@ namespace LibraryManager.Template
             this.btnChangeImg.Size = new System.Drawing.Size(149, 42);
             this.btnChangeImg.TabIndex = 22;
             this.btnChangeImg.Text = "Thay ảnh";
+            this.btnChangeImg.Click += new System.EventHandler(this.btnChangeImg_Click);
             // 
-            // guna2Button3
+            // btnSave
             // 
-            this.guna2Button3.BorderRadius = 18;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(26, 658);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(184, 45);
-            this.guna2Button3.TabIndex = 23;
-            this.guna2Button3.Text = "Lưu thay đổi";
+            this.btnSave.BorderRadius = 18;
+            this.btnSave.CheckedState.Parent = this.btnSave;
+            this.btnSave.CustomImages.Parent = this.btnSave;
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.HoverState.Parent = this.btnSave;
+            this.btnSave.Location = new System.Drawing.Point(26, 658);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.ShadowDecoration.Parent = this.btnSave;
+            this.btnSave.Size = new System.Drawing.Size(184, 45);
+            this.btnSave.TabIndex = 23;
+            this.btnSave.Text = "Lưu thay đổi";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lbTenDangNhap
             // 
@@ -698,6 +701,7 @@ namespace LibraryManager.Template
             this.btnHuy.Size = new System.Drawing.Size(184, 45);
             this.btnHuy.TabIndex = 24;
             this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label1
             // 
@@ -737,11 +741,11 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnChangeImg);
             this.Controls.Add(this.imageAvt);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lbChucvu);
             this.Controls.Add(this.guna2CustomGradientPanel3);
@@ -800,10 +804,10 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtNewpass2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDoiMK;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2CircleButton btnBack;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnChangeImg;
         private Bunifu.UI.WinForms.BunifuPictureBox imageAvt;
         private System.Windows.Forms.Label lbTenDangNhap;
