@@ -80,6 +80,8 @@ namespace LibraryManager.Template
             this.txtMaDauSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ofdOpenFile = new System.Windows.Forms.OpenFileDialog();
+            this.txtTuKhoa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbLoaiLoc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDauSach)).BeginInit();
             this.guna2CustomGradientPanel3.SuspendLayout();
@@ -88,6 +90,8 @@ namespace LibraryManager.Template
             // 
             // panelShow
             // 
+            this.panelShow.Controls.Add(this.cbLoaiLoc);
+            this.panelShow.Controls.Add(this.txtTuKhoa);
             this.panelShow.Controls.Add(this.btnBack);
             this.panelShow.Controls.Add(this.dgvDauSach);
             this.panelShow.Controls.Add(this.guna2CustomGradientPanel3);
@@ -179,7 +183,7 @@ namespace LibraryManager.Template
             this.dgvDauSach.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvDauSach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDauSach.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDauSach.Location = new System.Drawing.Point(47, 535);
+            this.dgvDauSach.Location = new System.Drawing.Point(47, 625);
             this.dgvDauSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDauSach.Name = "dgvDauSach";
             this.dgvDauSach.RowHeadersVisible = false;
@@ -187,7 +191,7 @@ namespace LibraryManager.Template
             this.dgvDauSach.RowTemplate.Height = 40;
             this.dgvDauSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDauSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDauSach.Size = new System.Drawing.Size(1146, 291);
+            this.dgvDauSach.Size = new System.Drawing.Size(1146, 201);
             this.dgvDauSach.TabIndex = 37;
             this.dgvDauSach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvDauSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDauSach_CellClick_1);
@@ -859,6 +863,58 @@ namespace LibraryManager.Template
             this.ofdOpenFile.FileName = "openFileDialog1";
             this.ofdOpenFile.FileOk += new System.ComponentModel.CancelEventHandler(this.ofdOpenFile_FileOk);
             // 
+            // txtTuKhoa
+            // 
+            this.txtTuKhoa.BackColor = System.Drawing.Color.Transparent;
+            this.txtTuKhoa.BorderColor = System.Drawing.Color.Transparent;
+            this.txtTuKhoa.BorderRadius = 6;
+            this.txtTuKhoa.BorderThickness = 0;
+            this.txtTuKhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTuKhoa.DefaultText = "";
+            this.txtTuKhoa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTuKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTuKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTuKhoa.DisabledState.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTuKhoa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTuKhoa.FocusedState.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTuKhoa.ForeColor = System.Drawing.Color.Black;
+            this.txtTuKhoa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTuKhoa.HoverState.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.Location = new System.Drawing.Point(47, 545);
+            this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtTuKhoa.Name = "txtTuKhoa";
+            this.txtTuKhoa.PasswordChar = '\0';
+            this.txtTuKhoa.PlaceholderText = "";
+            this.txtTuKhoa.SelectedText = "";
+            this.txtTuKhoa.ShadowDecoration.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.Size = new System.Drawing.Size(898, 39);
+            this.txtTuKhoa.TabIndex = 39;
+            this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
+            // 
+            // cbLoaiLoc
+            // 
+            this.cbLoaiLoc.BackColor = System.Drawing.Color.Transparent;
+            this.cbLoaiLoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoaiLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiLoc.FocusedColor = System.Drawing.Color.Empty;
+            this.cbLoaiLoc.FocusedState.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbLoaiLoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLoaiLoc.FormattingEnabled = true;
+            this.cbLoaiLoc.HoverState.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.ItemHeight = 30;
+            this.cbLoaiLoc.Items.AddRange(new object[] {
+            "Mã đầu sách",
+            "Tên đầu sách"});
+            this.cbLoaiLoc.ItemsAppearance.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.Location = new System.Drawing.Point(1005, 548);
+            this.cbLoaiLoc.Name = "cbLoaiLoc";
+            this.cbLoaiLoc.ShadowDecoration.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.Size = new System.Drawing.Size(188, 36);
+            this.cbLoaiLoc.TabIndex = 40;
+            // 
             // FrmThemDauSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -926,5 +982,7 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtMaDauSach;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.OpenFileDialog ofdOpenFile;
+        private Guna.UI2.WinForms.Guna2TextBox txtTuKhoa;
+        private Guna.UI2.WinForms.Guna2ComboBox cbLoaiLoc;
     }
 }

@@ -292,5 +292,14 @@ namespace LibraryManager.Template
            
             dgvDauSach.DataSource = dsBus.LoadListDSMini();
         }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+            string TuKhoa = txtTuKhoa.Text;
+            if (cbLoaiLoc.Text == "Mã đầu sách")
+                dgvDauSach.DataSource = dsBus.SearchDS(TuKhoa, "MaDauSach");
+            else if (cbLoaiLoc.Text == "Tên đầu sách")
+                dgvDauSach.DataSource = dsBus.SearchDS(TuKhoa, "TenDauSach");
+        }
     }
 }
