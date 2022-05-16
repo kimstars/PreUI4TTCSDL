@@ -54,6 +54,10 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
             this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).BeginInit();
@@ -66,10 +70,9 @@ namespace LibraryManager.Template
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label1.Location = new System.Drawing.Point(357, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(476, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 25);
+            this.label1.Size = new System.Drawing.Size(229, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thống kê sách mượn";
             // 
@@ -80,8 +83,8 @@ namespace LibraryManager.Template
             this.charttk.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.charttk.Legends.Add(legend1);
-            this.charttk.Location = new System.Drawing.Point(643, 202);
-            this.charttk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charttk.Location = new System.Drawing.Point(857, 249);
+            this.charttk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.charttk.Name = "charttk";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -89,7 +92,7 @@ namespace LibraryManager.Template
             series1.Name = "Chart1";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.charttk.Series.Add(series1);
-            this.charttk.Size = new System.Drawing.Size(304, 454);
+            this.charttk.Size = new System.Drawing.Size(405, 559);
             this.charttk.TabIndex = 3;
             this.charttk.Text = "chart1";
             title1.Name = "Title1";
@@ -133,6 +136,11 @@ namespace LibraryManager.Template
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_tksachmuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_tksachmuon.ColumnHeadersHeight = 40;
+            this.dgv_tksachmuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -164,14 +172,14 @@ namespace LibraryManager.Template
             this.dgv_tksachmuon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_tksachmuon.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_tksachmuon.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_tksachmuon.Location = new System.Drawing.Point(30, 202);
-            this.dgv_tksachmuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_tksachmuon.Location = new System.Drawing.Point(40, 249);
+            this.dgv_tksachmuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_tksachmuon.Name = "dgv_tksachmuon";
             this.dgv_tksachmuon.RowHeadersVisible = false;
             this.dgv_tksachmuon.RowHeadersWidth = 51;
             this.dgv_tksachmuon.RowTemplate.Height = 40;
             this.dgv_tksachmuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_tksachmuon.Size = new System.Drawing.Size(561, 454);
+            this.dgv_tksachmuon.Size = new System.Drawing.Size(748, 559);
             this.dgv_tksachmuon.TabIndex = 6;
             this.dgv_tksachmuon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -188,11 +196,11 @@ namespace LibraryManager.Template
             this.cmbMadg.HoverState.Parent = this.cmbMadg;
             this.cmbMadg.ItemHeight = 30;
             this.cmbMadg.ItemsAppearance.Parent = this.cmbMadg;
-            this.cmbMadg.Location = new System.Drawing.Point(533, 71);
-            this.cmbMadg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMadg.Location = new System.Drawing.Point(711, 87);
+            this.cmbMadg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbMadg.Name = "cmbMadg";
             this.cmbMadg.ShadowDecoration.Parent = this.cmbMadg;
-            this.cmbMadg.Size = new System.Drawing.Size(126, 36);
+            this.cmbMadg.Size = new System.Drawing.Size(167, 36);
             this.cmbMadg.TabIndex = 13;
             // 
             // label6
@@ -200,10 +208,9 @@ namespace LibraryManager.Template
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label6.Location = new System.Drawing.Point(438, 71);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(584, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
+            this.label6.Size = new System.Drawing.Size(95, 23);
             this.label6.TabIndex = 12;
             this.label6.Text = "Mã độc giả";
             // 
@@ -212,10 +219,10 @@ namespace LibraryManager.Template
             this.rbtnMadocgia.AutoSize = true;
             this.rbtnMadocgia.BackColor = System.Drawing.Color.Transparent;
             this.rbtnMadocgia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.rbtnMadocgia.Location = new System.Drawing.Point(88, 120);
-            this.rbtnMadocgia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnMadocgia.Location = new System.Drawing.Point(117, 148);
+            this.rbtnMadocgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnMadocgia.Name = "rbtnMadocgia";
-            this.rbtnMadocgia.Size = new System.Drawing.Size(95, 23);
+            this.rbtnMadocgia.Size = new System.Drawing.Size(116, 27);
             this.rbtnMadocgia.TabIndex = 11;
             this.rbtnMadocgia.TabStop = true;
             this.rbtnMadocgia.Text = "Mã độc giả";
@@ -227,10 +234,10 @@ namespace LibraryManager.Template
             this.rbtnTrehan.AutoSize = true;
             this.rbtnTrehan.BackColor = System.Drawing.Color.Transparent;
             this.rbtnTrehan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.rbtnTrehan.Location = new System.Drawing.Point(295, 120);
-            this.rbtnTrehan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnTrehan.Location = new System.Drawing.Point(393, 148);
+            this.rbtnTrehan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnTrehan.Name = "rbtnTrehan";
-            this.rbtnTrehan.Size = new System.Drawing.Size(72, 23);
+            this.rbtnTrehan.Size = new System.Drawing.Size(88, 27);
             this.rbtnTrehan.TabIndex = 11;
             this.rbtnTrehan.TabStop = true;
             this.rbtnTrehan.Text = "Trễ hạn";
@@ -241,10 +248,9 @@ namespace LibraryManager.Template
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label3.Location = new System.Drawing.Point(224, 71);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(299, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 19);
+            this.label3.Size = new System.Drawing.Size(81, 23);
             this.label3.TabIndex = 9;
             this.label3.Text = "đến ngày";
             // 
@@ -253,10 +259,9 @@ namespace LibraryManager.Template
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label4.Location = new System.Drawing.Point(25, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(33, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 19);
+            this.label4.Size = new System.Drawing.Size(71, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Từ ngày";
             // 
@@ -270,11 +275,11 @@ namespace LibraryManager.Template
             this.btnTK.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnTK.ForeColor = System.Drawing.Color.White;
             this.btnTK.HoverState.Parent = this.btnTK;
-            this.btnTK.Location = new System.Drawing.Point(696, 71);
-            this.btnTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTK.Location = new System.Drawing.Point(928, 87);
+            this.btnTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTK.Name = "btnTK";
             this.btnTK.ShadowDecoration.Parent = this.btnTK;
-            this.btnTK.Size = new System.Drawing.Size(131, 36);
+            this.btnTK.Size = new System.Drawing.Size(175, 44);
             this.btnTK.TabIndex = 7;
             this.btnTK.Text = "Thống kê";
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
@@ -294,10 +299,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(30, 19);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(40, 23);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(917, 161);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1223, 198);
             this.guna2CustomGradientPanel1.TabIndex = 9;
             // 
             // dateEnd
@@ -306,10 +312,11 @@ namespace LibraryManager.Template
             this.dateEnd.BorderRadius = 0;
             this.dateEnd.BorderSize = 0;
             this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateEnd.Location = new System.Drawing.Point(295, 71);
+            this.dateEnd.Location = new System.Drawing.Point(393, 87);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateEnd.MinimumSize = new System.Drawing.Size(4, 44);
             this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(119, 44);
+            this.dateEnd.Size = new System.Drawing.Size(157, 44);
             this.dateEnd.SkinColor = System.Drawing.Color.DarkCyan;
             this.dateEnd.TabIndex = 15;
             this.dateEnd.TextColor = System.Drawing.Color.White;
@@ -320,25 +327,50 @@ namespace LibraryManager.Template
             this.dateStart.BorderRadius = 0;
             this.dateStart.BorderSize = 0;
             this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateStart.Location = new System.Drawing.Point(88, 71);
+            this.dateStart.Location = new System.Drawing.Point(117, 87);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateStart.MinimumSize = new System.Drawing.Size(4, 44);
             this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(121, 44);
+            this.dateStart.Size = new System.Drawing.Size(160, 44);
             this.dateStart.SkinColor = System.Drawing.Color.DarkCyan;
             this.dateStart.TabIndex = 14;
             this.dateStart.TextColor = System.Drawing.Color.White;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã sách";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên đầu sách";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ngày mượn";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Ngày trả";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
             // tk_sachmuon_nv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dgv_tksachmuon);
             this.Controls.Add(this.charttk);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "tk_sachmuon_nv";
-            this.Size = new System.Drawing.Size(977, 682);
+            this.Size = new System.Drawing.Size(1303, 839);
             this.Load += new System.EventHandler(this.tk_sachmuon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -365,5 +397,9 @@ namespace LibraryManager.Template
         private DateTimePickerKiet dateEnd;
         private DateTimePickerKiet dateStart;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
