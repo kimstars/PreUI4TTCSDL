@@ -20,14 +20,14 @@ namespace LibraryManager.Template
 
         private void tk_sachnhap_Load(object sender, EventArgs e)
         {
-            mtxtNgaynhap.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            mtxtNgayden.Text = DateTime.Now.ToString("dd/MM/yyyy");
+           
         }
 
         private void btnTK_Click(object sender, EventArgs e)
         {
-            dgv_tkSachnhap.DataSource = tk_bus.Load_sach_nhap(mtxtNgaynhap.Text,mtxtNgayden.Text);
-            txtTongso.Text = tk_bus.GetTongso(mtxtNgaynhap.Text, mtxtNgayden.Text).ToString();
+
+            dgv_tkSachnhap.DataSource = tk_bus.Load_sach_nhap(dateStart.Value, dateEnd.Value);
+            txtTongso.Text = tk_bus.GetTongso(dateStart.Value, dateEnd.Value).ToString();
         }
     }
 }

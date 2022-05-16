@@ -12,7 +12,7 @@ namespace LibraryManager.Template
 {
     public partial class TK_sachmuon_dg : UserControl
     {
-        string madg = "";
+        string madg = "DG000001";
         public TK_sachmuon_dg()
         {
             InitializeComponent();
@@ -27,9 +27,9 @@ namespace LibraryManager.Template
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+ 
+        private void btnTK_Click(object sender, EventArgs e)
         {
-           
             if (rbtnDamuon.Checked == true)
             {
                 dgvTK.DataSource = tk_buss.Load_tt_sachmuon_dg(madg);
@@ -43,6 +43,5 @@ namespace LibraryManager.Template
                 dgvTK.DataSource = tk_buss.Load_tt_sach_trehen_dg(madg);
             }
         }
-        
     }
 }

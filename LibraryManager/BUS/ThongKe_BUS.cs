@@ -33,11 +33,11 @@ namespace LibraryManager.BUS
         {
             return tkDao.tk_sach_tre_hen_dg(a);
         }
-        public DataTable Load_sach_nhap(string a, string b)
+        public DataTable Load_sach_nhap(DateTime a, DateTime b)
         {
             return tkDao.tkSachnhap(a,b);
         }
-        public Int64 GetTongso(string ngaybd, string ngaykt)
+        public Int64 GetTongso(DateTime ngaybd, DateTime ngaykt)
         {
             return tkDao.Load_tongso(ngaybd,ngaykt);
         }
@@ -49,11 +49,11 @@ namespace LibraryManager.BUS
         {
             return tkDao.tk_trehan_nv(a);
         }
-        public DataTable Tk_docgia(string a, string b, string c)
+        public DataTable Tk_docgia(string a, DateTime b, DateTime c)
         {
             return tkDao.tk_sachmuonNV_dg(a,b,c);
         }
-        public DataTable TK_theongay(string a, string b)
+        public DataTable TK_theongay(DateTime a, DateTime b)
         {
             return tkDao.TK_Sachmuon_theongay(a, b);
         }
