@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>D:\Download\BunifuCrack-main\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -133,8 +132,6 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated">
       <HintPath>D:\Download\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
-
-		
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
@@ -296,7 +293,6 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.Deprecated">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
-
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
@@ -348,9 +344,7 @@
     <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-
       <HintPath>..\..\..\..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
-
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationFramework" />
@@ -391,11 +385,8 @@
     <Compile Include="BUS\PhieuMuon_BUS.cs" />
     <Compile Include="BUS\TacGia_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
-
     <Compile Include="BUS\TheLoai_BUS.cs" />
-
     <Compile Include="BUS\ThongKe_BUS.cs" />
-
     <Compile Include="BUS\Trasach_Bus.cs" />
     <Compile Include="CreateDB\addImageDauSach.cs">
       <SubType>Form</SubType>
@@ -437,9 +428,7 @@
     <Compile Include="DAO\PhieuMuon_DAO.cs" />
     <Compile Include="DAO\TacGia_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />
-
     <Compile Include="DAO\TheLoai_DAO.cs" />
-
     <Compile Include="DAO\Thongke_DAO.cs" />
     <Compile Include="DS\DSSachMuon.cs">
       <SubType>UserControl</SubType>
@@ -447,7 +436,6 @@
     <Compile Include="DS\DSSachMuon.Designer.cs">
       <DependentUpon>DSSachMuon.cs</DependentUpon>
     </Compile>
-
     <Compile Include="DAO\Trasach_DAO.cs" />
     <Compile Include="DTO\BienBanViPham.cs" />
     <Compile Include="DTO\CuonSach.cs" />
@@ -601,13 +589,6 @@
     <Compile Include="GUI\frmPhieuphat.Designer.cs">
       <DependentUpon>frmPhieuphat.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmVipham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmVipham.Designer.cs">
-      <DependentUpon>frmVipham.cs</DependentUpon>
-    </Compile>
-
     <Compile Include="Template\FrmThemNXB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -650,7 +631,6 @@
     <Compile Include="Template\FrmTimKiemForDG.Designer.cs">
       <DependentUpon>FrmTimKiemForDG.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Template\HomeAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -669,7 +649,6 @@
     <Compile Include="Template\HomeNV.Designer.cs">
       <DependentUpon>HomeNV.cs</DependentUpon>
     </Compile>
-	  
     <Compile Include="Template\InfoDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -848,11 +827,6 @@
     <EmbeddedResource Include="GUI\frmPhieuphat.resx">
       <DependentUpon>frmPhieuphat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmVipham.resx">
-      <DependentUpon>frmVipham.cs</DependentUpon>
-    </EmbeddedResource>
-
-	  
     <EmbeddedResource Include="Template\FrmThemNXB.resx">
       <DependentUpon>FrmThemNXB.cs</DependentUpon>
     </EmbeddedResource>
@@ -874,7 +848,6 @@
     <EmbeddedResource Include="Template\FrmTimKiemForDG.resx">
       <DependentUpon>FrmTimKiemForDG.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Template\HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -883,7 +856,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\HomeNV.resx">
       <DependentUpon>HomeNV.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Template\InfoDG.resx">
       <DependentUpon>InfoDG.cs</DependentUpon>
@@ -932,7 +904,6 @@
     <EmbeddedResource Include="Template\Xu_ly_tra.resx">
       <DependentUpon>Xu_ly_tra.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
