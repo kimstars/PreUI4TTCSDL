@@ -17,18 +17,21 @@ namespace LibraryManager
         public FrmDocGia()
         {
             InitializeComponent();
+            listSachMuon = new List<string>();
+
         }
         public FrmDocGia(string username)
         {
             InitializeComponent();
             user = username;
-
+            listSachMuon = new List<string>();
         }
-        string Madocgia = "";
+        string Madocgia = "DG000001";
         string user = "";
 
         bool sidebarExpand = true;
 
+        public static List<string> listSachMuon;
 
         private void sidebartick_Tick(object sender, EventArgs e)
         {
@@ -118,12 +121,48 @@ namespace LibraryManager
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.InfoDG());
+            panelShow.Controls.Add(new Template.InfoDG(Madocgia));
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
+     
 
+        private void btnTk_Sach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.TK_sachmuon_dg(Madocgia));
+        }
+
+        private void btnTimKiemSach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmTimKiemForDG());
+        }
+
+        private void btnMuonSach_Click(object sender, EventArgs e)
+        {
+            //nếu list sách mượn chưa có sách nào thì cho độc giả tìm sách xong mới mượn
+            if(listSachMuon.Count == 0)
+            {
+                panelShow.Controls.Clear();
+                Template.TimKiem4HelloV2 usertimkiem = new Template.TimKiem4HelloV2();
+
+                usertimkiem.OnClick += (ss, ee) =>
+                {
+                    panelShow.Controls.Clear();
+                    
+                    panelShow.Controls.Add(new Template.PhieuMuon(Madocgia, listSachMuon));
+
+                };
+
+                panelShow.Controls.Add(usertimkiem);
+
+            }
+            else
+            {
+
+                 panelShow.Controls.Add(new Template.PhieuMuon(Madocgia, listSachMuon));
+
+            }
         }
     }
 }

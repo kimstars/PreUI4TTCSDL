@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManager.Template
+namespace LibraryManager.DS
 {
-    public partial class frmVipham : Form
+    public partial class DSSachMuon : UserControl
     {
-        public frmVipham()
+        public DSSachMuon()
         {
             InitializeComponent();
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

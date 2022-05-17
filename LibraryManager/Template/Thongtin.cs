@@ -16,5 +16,10 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+
+        private void Thongtin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,6 @@ namespace LibraryManager.DAO
             string sql = "SELECT MaSach FROM dbo.CUONSACH";
             return GetData(sql);
         }
-       
 
         public string Lastest_MaSach()
         {
@@ -34,6 +33,19 @@ namespace LibraryManager.DAO
         {
             string sql = "SELECT * FROM dbo.CUONSACH";
             return GetData(sql);
+        }
+
+        public void InsertCuonSach(CuonSach cs, PhieuNhap pn)
+        {
+            string sql = $"EXEC PROC_NHAPCUONSACH'{cs.MaSach}','{cs.MaDauSach}','{cs.ViTriSach}','{cs.TinhTrangMoiCu}','{cs.TrangThai}','{pn.MaPhieuNhap}','{pn.MaNhanVien}'";
+
+            Excute(sql);
+        }
+
+        public int GetCheckMaSach(string Ma)
+        {
+            string sql = "SELECT COUNT(MaSach) FROM dbo.CUONSACH WHERE MaSach = '"+ Ma +"'";
+            return (int)GetCount(sql);
         }
 
 

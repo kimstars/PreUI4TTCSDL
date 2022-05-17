@@ -11,13 +11,17 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-        static string provider = @"Data Source=MSI\HOADINH;Initial Catalog=THUVIENMTA;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(provider);
+
+
+        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        protected SqlConnection connect = new SqlConnection(provider);
+
 
         public DataTable GetData(string sql)
         {
             DataTable rs = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
+            rs.Clear();
             adapter.Fill(rs);
             return rs;
         }
@@ -68,7 +72,6 @@ namespace LibraryManager.DAO
             return imgbin ;
         }
 
-
         public Int64 GetCount(string sql)
         {
             if (connect.State != ConnectionState.Open)
@@ -96,6 +99,16 @@ namespace LibraryManager.DAO
             if (d != null) return d.Value.ToString("yyyy/MM/dd");
             return "";
 
+        }
+
+        public DataSet chart(string sql)
+        {
+            connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            SqlDataAdapter ad = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            return ds;
         }
 
     }

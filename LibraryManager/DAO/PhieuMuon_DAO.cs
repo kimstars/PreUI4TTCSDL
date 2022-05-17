@@ -50,16 +50,28 @@ namespace LibraryManager.DAO
 
         #region insertPM
 
-        public void InsertPhieuMuonTra(PhieuMuonTra pm, List<string> dsMaSach)
+        public void InsertPhieuMuonTra(PhieuMuonTra pm, List<string> dsMaSach, bool isNV)
         {
-            string sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, {DateToString(pm.NgayMuon) }, {DateToString(pm.HanTra)},  0 )";
+            string sql;
+            if (isNV)
+            {
+                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', {pm.MaNhanVien}, {DateToString(pm.NgayMuon) }, {DateToString(pm.HanTra)},  1)";
+            }
+            else
+            {
+                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, {DateToString(pm.NgayMuon) }, {DateToString(pm.HanTra)},  0 )";
+
+            }
 
             Excute(sql);
 
-            foreach(var masach in dsMaSach)
+            foreach (var masach in dsMaSach)
             {
-              sql = $"INSERT INTO dbo.THONGTINMUONTRA VALUES('{pm.MaMuonTra}',  '{masach}', NULL)";
+                sql = $"INSERT INTO dbo.THONGTINMUONTRA VALUES('{pm.MaMuonTra}',  '{masach}', NULL)";
             }
+
+            Excute(sql);
+
         }
 
 

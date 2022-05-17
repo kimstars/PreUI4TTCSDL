@@ -39,6 +39,10 @@ namespace LibraryManager.Template
             if (XLViPham)
             {
                 Open_Y(ref panelXLViPham, ref XLViPham);
+            }
+            if (QLDocGiaExpand)
+            {
+                Open_Y(ref panelQLDocGia, ref QLDocGiaExpand);
 
             }
 
@@ -116,11 +120,7 @@ namespace LibraryManager.Template
 
 
 
-        private void btnDSNV_Click(object sender, EventArgs e)
-        {
-            closeYCollapse();
-
-        }
+        
 
 
 
@@ -128,8 +128,6 @@ namespace LibraryManager.Template
         {
             closeYCollapse();
             //infoDG.Visible = true;
-
-
         }
 
         private void btnOpenQLNV_Click(object sender, EventArgs e)
@@ -158,5 +156,40 @@ namespace LibraryManager.Template
         {
             Open_Y(ref panelXLViPham, ref XLViPham);
         }
+
+        bool QLDocGiaExpand = true;
+        private void btnM_QLDG_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelQLDocGia, ref QLDocGiaExpand);
+
+        }
+
+
+        private void btnM_DSDausach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSInfoDauSach());
+        }
+
+        private void btnM_dsSDamuon_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new DS.DSSachMuon());
+
+        }
+
+        private void btnM_Muon_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSPhieuMuonNV());
+        }
+
+        private void btnDSNV_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DanhsachNV());
+        }
+
+       
     }
 }

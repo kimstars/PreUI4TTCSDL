@@ -35,7 +35,19 @@ namespace LibraryManager.Template
             InitializeComponent();
             listsach = dsds;
             MaDocGia = maDG;
+            lbNVxuly.Text = "Phiếu mượn độc giả";
         }
+        public PhieuMuon( List<string> dsds,string maNV)
+        {
+            InitializeComponent();
+            listsach = dsds;
+            MaNhanVien = maNV;
+            lbNVxuly.Text = $"Nhân viên xử lý: {MaNhanVien}";
+            isNV = true;
+        }
+
+        bool isNV = false;
+        string MaNhanVien;
         string MaDocGia;
         List<string> listsach;
 
@@ -119,18 +131,18 @@ namespace LibraryManager.Template
                 }
 
             }
+            indexCurrent = e.RowIndex;
         }
 
+        int indexCurrent = 1;
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
 
-            listsach.RemoveAll(x => ((string)x) == MaDauSachCurrent);
-
-            InfoBorrow = msBus.LoadTTSachMuon(listsach);
-            dgvInfoBorrow.DataSource = InfoBorrow;
+            dgvInfoBorrow.Controls.RemoveAt(indexCurrent);
             TinhTienCoc(InfoBorrow);
 
         }
+
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
@@ -146,6 +158,8 @@ namespace LibraryManager.Template
             pmtnew.NgayMuon = DateMuon.Value;
             pmtnew.HanTra = dateHanTra.Value;
             pmtnew.MaMuonTra = lbMaMuonTra.Text;
+            pmtnew.MaNhanVien = MaNhanVien;
+
 
             List<string> DSMaSach = new List<string>();
             for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
@@ -154,9 +168,23 @@ namespace LibraryManager.Template
                 if(tempmds!="") DSMaSach.Add(tempmds);
             }
 
+            pmBus.InsertMuon(pmtnew, DSMaSach,isNV);
 
-            pmBus.DocGiaMuon(pmtnew, DSMaSach);
+        }
 
+        private void txtMaDG_TextChanged(object sender, EventArgs e)
+        {
+            if (dgBus.checkTonTaiDG(txtMaDG.Text))
+            {
+                errorProvider1.SetError(lbMsg, "Tài khoản không tồn tại !");
+                lbMsg.Text = "Tài khoản không tồn tại !";
+            }
+            else
+            {
+                lbMsg.Text = "";
+                errorProvider1.SetError(lbMsg, null);
+                txtTenDG.Text = dgBus.LoadTenDG(txtMaDG.Text);
+            }
 
         }
     }

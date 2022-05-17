@@ -61,6 +61,7 @@ namespace LibraryManager.CreateDB
 
             string[] filenames = Directory.GetFiles(txtPathFolder.Text).OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f))).ToArray();
 
+            n = filenames.Length;
 
 
 
@@ -94,7 +95,7 @@ namespace LibraryManager.CreateDB
 
             loaddatatable();
 
-            for (int i = 0; i < n; i++ )
+            for (int i = 0; i < n-1; i++ )
             {
                 img.SaveImage(tablename, AutoTaoMa(maid, i), typeid, filenames[i]);
 

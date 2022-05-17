@@ -17,6 +17,18 @@ namespace LibraryManager.BUS
             return sachDao.GetMaSach();
         }
 
+
+        public void ThemThongtinNhap(CuonSach cs, PhieuNhap pn)
+        {
+            sachDao.InsertCuonSach(cs,pn);
+        }
+
+        public bool CheckMaSach(string ma)
+        {
+            if (sachDao.GetCheckMaSach(ma) != 0) return true;
+            else return false;
+        }
+
         public DataTable LoadSach()
         {
             return sachDao.GetAllSach();
@@ -45,6 +57,7 @@ namespace LibraryManager.BUS
         {
             sachDao.InsertCuonSach(MaSach, MaDauSach, ViTri, TinhTrang);
         }
+
 
 
 

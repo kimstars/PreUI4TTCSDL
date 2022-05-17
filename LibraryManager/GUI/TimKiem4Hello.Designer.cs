@@ -127,7 +127,7 @@ namespace LibraryManager.GUI
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(28, 54);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
@@ -308,7 +308,7 @@ namespace LibraryManager.GUI
             this.btnCreatePM.HoverState.Parent = this.btnCreatePM;
             this.btnCreatePM.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
             this.btnCreatePM.Location = new System.Drawing.Point(237, 589);
-            this.btnCreatePM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreatePM.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreatePM.Name = "btnCreatePM";
             this.btnCreatePM.ShadowDecoration.Parent = this.btnCreatePM;
             this.btnCreatePM.Size = new System.Drawing.Size(171, 36);
@@ -328,7 +328,7 @@ namespace LibraryManager.GUI
             this.btnClearAll.HoverState.Parent = this.btnClearAll;
             this.btnClearAll.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
             this.btnClearAll.Location = new System.Drawing.Point(298, 23);
-            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.ShadowDecoration.Parent = this.btnClearAll;
             this.btnClearAll.Size = new System.Drawing.Size(129, 36);
@@ -360,7 +360,7 @@ namespace LibraryManager.GUI
             this.btnPreview.HoverState.Parent = this.btnPreview;
             this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
             this.btnPreview.Location = new System.Drawing.Point(20, 589);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
             this.btnPreview.Size = new System.Drawing.Size(171, 36);
@@ -572,7 +572,7 @@ namespace LibraryManager.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 715);
+            this.ClientSize = new System.Drawing.Size(1156, 761);
             this.Controls.Add(this.lbSLBook);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);

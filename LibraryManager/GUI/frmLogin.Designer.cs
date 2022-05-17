@@ -40,13 +40,15 @@ namespace LibraryManager.GUI
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.btnToggle = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pictureBoxKiet1 = new LibraryManager.Template.PictureBoxKiet();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBoxKiet1 = new LibraryManager.Template.PictureBoxKiet();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKiet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(472, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(698, 12);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -80,7 +82,7 @@ namespace LibraryManager.GUI
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(421, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(647, 12);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
@@ -90,7 +92,7 @@ namespace LibraryManager.GUI
             // 
             this.lbMsg.AutoSize = true;
             this.lbMsg.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Location = new System.Drawing.Point(126, 377);
+            this.lbMsg.Location = new System.Drawing.Point(350, 405);
             this.lbMsg.Name = "lbMsg";
             this.lbMsg.Size = new System.Drawing.Size(11, 16);
             this.lbMsg.TabIndex = 31;
@@ -99,7 +101,7 @@ namespace LibraryManager.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 493);
+            this.label3.Location = new System.Drawing.Point(426, 521);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 16);
             this.label3.TabIndex = 30;
@@ -108,7 +110,7 @@ namespace LibraryManager.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(181, 409);
+            this.label2.Location = new System.Drawing.Point(405, 437);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 16);
             this.label2.TabIndex = 29;
@@ -126,7 +128,7 @@ namespace LibraryManager.GUI
             this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.Color.Black;
             this.btnDangKy.HoverState.Parent = this.btnDangKy;
-            this.btnDangKy.Location = new System.Drawing.Point(129, 522);
+            this.btnDangKy.Location = new System.Drawing.Point(353, 550);
             this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.ShadowDecoration.Parent = this.btnDangKy;
@@ -145,7 +147,7 @@ namespace LibraryManager.GUI
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
-            this.btnSubmit.Location = new System.Drawing.Point(131, 445);
+            this.btnSubmit.Location = new System.Drawing.Point(355, 473);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
@@ -161,7 +163,7 @@ namespace LibraryManager.GUI
             this.btnToggle.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnToggle.CheckedState.Parent = this.btnToggle;
-            this.btnToggle.Location = new System.Drawing.Point(133, 406);
+            this.btnToggle.Location = new System.Drawing.Point(357, 434);
             this.btnToggle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnToggle.Name = "btnToggle";
             this.btnToggle.ShadowDecoration.Parent = this.btnToggle;
@@ -172,6 +174,42 @@ namespace LibraryManager.GUI
             this.btnToggle.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnToggle.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.btnToggle.UncheckedState.Parent = this.btnToggle;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.label1.Location = new System.Drawing.Point(395, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 28);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Đăng nhập";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.label4.Location = new System.Drawing.Point(364, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 28);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "THƯ VIỆN MTA";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::LibraryManager.Properties.Resources.Lifesavers___Bookshelf;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 609);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // txtPassword
             // 
@@ -190,7 +228,7 @@ namespace LibraryManager.GUI
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = global::LibraryManager.Properties.Resources.icons8_password_16px;
-            this.txtPassword.Location = new System.Drawing.Point(133, 321);
+            this.txtPassword.Location = new System.Drawing.Point(357, 349);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -219,7 +257,7 @@ namespace LibraryManager.GUI
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::LibraryManager.Properties.Resources.icons8_user_50px_1;
-            this.txtUsername.Location = new System.Drawing.Point(134, 271);
+            this.txtUsername.Location = new System.Drawing.Point(358, 299);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -230,21 +268,6 @@ namespace LibraryManager.GUI
             this.txtUsername.Size = new System.Drawing.Size(271, 42);
             this.txtUsername.TabIndex = 24;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
-            this.label1.Location = new System.Drawing.Point(171, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 28);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Đăng nhập";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // pictureBoxKiet1
             // 
             this.pictureBoxKiet1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -254,29 +277,19 @@ namespace LibraryManager.GUI
             this.pictureBoxKiet1.BorderSize = 2;
             this.pictureBoxKiet1.GradientAngle = 50F;
             this.pictureBoxKiet1.Image = global::LibraryManager.Properties.Resources.icons8_library_64__2_;
-            this.pictureBoxKiet1.Location = new System.Drawing.Point(176, 97);
+            this.pictureBoxKiet1.Location = new System.Drawing.Point(400, 125);
             this.pictureBoxKiet1.Name = "pictureBoxKiet1";
             this.pictureBoxKiet1.Size = new System.Drawing.Size(166, 166);
             this.pictureBoxKiet1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxKiet1.TabIndex = 32;
             this.pictureBoxKiet1.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
-            this.label4.Location = new System.Drawing.Point(140, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 28);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "THƯ VIỆN MTA";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 633);
+            this.ClientSize = new System.Drawing.Size(755, 633);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBoxKiet1);
             this.Controls.Add(this.lbMsg);
@@ -294,6 +307,7 @@ namespace LibraryManager.GUI
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKiet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,5 +332,6 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Template.PictureBoxKiet pictureBoxKiet1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

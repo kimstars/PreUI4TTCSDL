@@ -19,6 +19,16 @@ namespace LibraryManager.BUS
         {
             return dgDao.loadDocGia();
         }
+        public DataTable GetListDGInfo()
+        {
+            return dgDao.loadDocGiaInfo();
+        }
+
+        public DataTable GetListDGLoc(string loai)
+        {
+            return dgDao.loadDocGiaLoc(loai);
+        }
+
         public void Xoa(string mDG)
         {
             dgDao.Delete(mDG);
@@ -128,5 +138,21 @@ namespace LibraryManager.BUS
         {
             return dgDao.GetMaDG_TaiKhoan(tk);
         }
+
+
+
+
+        #region NhanvienXuly
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            return dgDao.checkTonTaiDG(MaDG);
+        }
+        public string LoadTenDG(string MaDG)
+        {
+            return dgDao.GetTenDocGia(MaDG);
+        }
+
+        #endregion
     }
 }
