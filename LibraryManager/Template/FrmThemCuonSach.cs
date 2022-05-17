@@ -32,6 +32,7 @@ namespace LibraryManager.Template
         {
             hideChildForm();
             dgvChonDauSach.DataSource = dsBus.LoadListDSMini();
+            cbLoaiLoc.Text = "Tên đầu sách";
         }
 
 
@@ -121,6 +122,15 @@ namespace LibraryManager.Template
 
                 //Load lai len dgv
             }
+        }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+            string TuKhoa = txtTuKhoa.Text;
+            if (cbLoaiLoc.Text == "Mã đầu sách")
+                dgvChonDauSach.DataSource = dsBus.SearchDS(TuKhoa, "MaDauSach");
+            else if (cbLoaiLoc.Text == "Tên đầu sách")
+                dgvChonDauSach.DataSource = dsBus.SearchDS(TuKhoa, "TenDauSach");
         }
     }
 }

@@ -61,6 +61,8 @@ namespace LibraryManager.Template
             cbTenTheLoai.DisplayMember = temp.Columns[2].ToString();
             cbTenTheLoai.ValueMember = temp.Columns[1].ToString();
 
+            cbLoaiLoc.Text = "Tên đầu sách";
+
 
 
         }

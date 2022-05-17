@@ -29,9 +29,9 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThemCuonSach));
             this.panelShow = new System.Windows.Forms.Panel();
             this.dgvChonDauSach = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -75,6 +75,8 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaCuonSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbLoaiLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtTuKhoa = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChonDauSach)).BeginInit();
             this.guna2CustomGradientPanel5.SuspendLayout();
@@ -85,6 +87,8 @@ namespace LibraryManager.Template
             // 
             // panelShow
             // 
+            this.panelShow.Controls.Add(this.txtTuKhoa);
+            this.panelShow.Controls.Add(this.cbLoaiLoc);
             this.panelShow.Controls.Add(this.dgvChonDauSach);
             this.panelShow.Controls.Add(this.guna2CustomGradientPanel5);
             this.panelShow.Controls.Add(this.guna2CustomGradientPanel1);
@@ -99,22 +103,22 @@ namespace LibraryManager.Template
             // dgvChonDauSach
             // 
             this.dgvChonDauSach.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvChonDauSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgvChonDauSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvChonDauSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChonDauSach.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvChonDauSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvChonDauSach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvChonDauSach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumVioletRed;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChonDauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.MediumVioletRed;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChonDauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvChonDauSach.ColumnHeadersHeight = 40;
             this.dgvChonDauSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach,
@@ -150,20 +154,20 @@ namespace LibraryManager.Template
             this.dgvChonDauSach.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvChonDauSach.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
             this.dgvChonDauSach.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChonDauSach.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChonDauSach.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvChonDauSach.EnableHeadersVisualStyles = false;
             this.dgvChonDauSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(184)))), ((int)(((byte)(218)))));
             this.dgvChonDauSach.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvChonDauSach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvChonDauSach.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvChonDauSach.Location = new System.Drawing.Point(58, 354);
+            this.dgvChonDauSach.Location = new System.Drawing.Point(58, 377);
             this.dgvChonDauSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChonDauSach.Name = "dgvChonDauSach";
             this.dgvChonDauSach.RowHeadersVisible = false;
@@ -171,7 +175,7 @@ namespace LibraryManager.Template
             this.dgvChonDauSach.RowTemplate.Height = 40;
             this.dgvChonDauSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvChonDauSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChonDauSach.Size = new System.Drawing.Size(792, 420);
+            this.dgvChonDauSach.Size = new System.Drawing.Size(792, 397);
             this.dgvChonDauSach.TabIndex = 36;
             this.dgvChonDauSach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             // 
@@ -682,6 +686,58 @@ namespace LibraryManager.Template
             this.label5.TabIndex = 7;
             this.label5.Text = "Mã cuốn sách mới";
             // 
+            // cbLoaiLoc
+            // 
+            this.cbLoaiLoc.BackColor = System.Drawing.Color.Transparent;
+            this.cbLoaiLoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoaiLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiLoc.FocusedColor = System.Drawing.Color.Empty;
+            this.cbLoaiLoc.FocusedState.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbLoaiLoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLoaiLoc.FormattingEnabled = true;
+            this.cbLoaiLoc.HoverState.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.ItemHeight = 30;
+            this.cbLoaiLoc.Items.AddRange(new object[] {
+            "Mã đầu sách",
+            "Tên đầu sách"});
+            this.cbLoaiLoc.ItemsAppearance.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.Location = new System.Drawing.Point(58, 326);
+            this.cbLoaiLoc.Name = "cbLoaiLoc";
+            this.cbLoaiLoc.ShadowDecoration.Parent = this.cbLoaiLoc;
+            this.cbLoaiLoc.Size = new System.Drawing.Size(188, 36);
+            this.cbLoaiLoc.TabIndex = 41;
+            // 
+            // txtTuKhoa
+            // 
+            this.txtTuKhoa.BackColor = System.Drawing.Color.Transparent;
+            this.txtTuKhoa.BorderColor = System.Drawing.Color.Transparent;
+            this.txtTuKhoa.BorderRadius = 6;
+            this.txtTuKhoa.BorderThickness = 0;
+            this.txtTuKhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTuKhoa.DefaultText = "";
+            this.txtTuKhoa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTuKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTuKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTuKhoa.DisabledState.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTuKhoa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTuKhoa.FocusedState.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTuKhoa.ForeColor = System.Drawing.Color.Black;
+            this.txtTuKhoa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTuKhoa.HoverState.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.Location = new System.Drawing.Point(268, 326);
+            this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtTuKhoa.Name = "txtTuKhoa";
+            this.txtTuKhoa.PasswordChar = '\0';
+            this.txtTuKhoa.PlaceholderText = "";
+            this.txtTuKhoa.SelectedText = "";
+            this.txtTuKhoa.ShadowDecoration.Parent = this.txtTuKhoa;
+            this.txtTuKhoa.Size = new System.Drawing.Size(567, 39);
+            this.txtTuKhoa.TabIndex = 42;
+            this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
+            // 
             // FrmThemCuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -746,5 +802,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtMaCuonSach;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ComboBox cbLoaiLoc;
+        private Guna.UI2.WinForms.Guna2TextBox txtTuKhoa;
     }
 }
