@@ -69,6 +69,7 @@ namespace LibraryManager
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbchucvu = new System.Windows.Forms.Label();
+            this.imgAvt = new LibraryManager.Template.PictureBoxKiet();
             this.lbUsername = new System.Windows.Forms.Label();
             this.imgThuVienMTA = new System.Windows.Forms.PictureBox();
             this.panelDrag = new System.Windows.Forms.Panel();
@@ -84,7 +85,6 @@ namespace LibraryManager
             this.QLDGtick = new System.Windows.Forms.Timer(this.components);
             this.XLViPhamTick = new System.Windows.Forms.Timer(this.components);
             this.CaiDatTick = new System.Windows.Forms.Timer(this.components);
-            this.imgAvt = new LibraryManager.Template.PictureBoxKiet();
             this.PanelMenuBar.SuspendLayout();
             this.panelScroll.SuspendLayout();
             this.panelSetting.SuspendLayout();
@@ -96,9 +96,9 @@ namespace LibraryManager
             this.panel2.SuspendLayout();
             this.panelNameUser.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgThuVienMTA)).BeginInit();
             this.panelDrag.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -831,6 +831,25 @@ namespace LibraryManager
             this.lbchucvu.TabIndex = 13;
             this.lbchucvu.Text = "  Thủ thư  ";
             // 
+            // imgAvt
+            // 
+            this.imgAvt.BackColor = System.Drawing.Color.White;
+            this.imgAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.imgAvt.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.imgAvt.BorderColor2 = System.Drawing.Color.HotPink;
+            this.imgAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.imgAvt.BorderSize = 2;
+            this.imgAvt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgAvt.GradientAngle = 50F;
+            this.imgAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
+            this.imgAvt.Location = new System.Drawing.Point(0, 0);
+            this.imgAvt.Margin = new System.Windows.Forms.Padding(2);
+            this.imgAvt.Name = "imgAvt";
+            this.imgAvt.Size = new System.Drawing.Size(56, 56);
+            this.imgAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAvt.TabIndex = 5;
+            this.imgAvt.TabStop = false;
+            // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
@@ -936,25 +955,6 @@ namespace LibraryManager
             // 
             this.CaiDatTick.Tick += new System.EventHandler(this.CaiDatTick_Tick);
             // 
-            // imgAvt
-            // 
-            this.imgAvt.BackColor = System.Drawing.Color.White;
-            this.imgAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.imgAvt.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.imgAvt.BorderColor2 = System.Drawing.Color.HotPink;
-            this.imgAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgAvt.BorderSize = 2;
-            this.imgAvt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgAvt.GradientAngle = 50F;
-            this.imgAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
-            this.imgAvt.Location = new System.Drawing.Point(0, 0);
-            this.imgAvt.Margin = new System.Windows.Forms.Padding(2);
-            this.imgAvt.Name = "imgAvt";
-            this.imgAvt.Size = new System.Drawing.Size(56, 56);
-            this.imgAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAvt.TabIndex = 5;
-            this.imgAvt.TabStop = false;
-            // 
             // frmNhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -980,9 +980,9 @@ namespace LibraryManager
             this.panelNameUser.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgThuVienMTA)).EndInit();
             this.panelDrag.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).EndInit();
             this.ResumeLayout(false);
 
         }

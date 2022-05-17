@@ -12,12 +12,13 @@ namespace LibraryManager.DAO
     class DataProvider
     {
         static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(provider);
+        protected SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
         {
             DataTable rs = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
+            rs.Clear();
             adapter.Fill(rs);
             return rs;
         }
