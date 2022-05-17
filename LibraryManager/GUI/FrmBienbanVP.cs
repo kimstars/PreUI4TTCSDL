@@ -25,7 +25,7 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
-        public FrmBienbanVP(string madg, string date, List<string> book/*, bool qua */)
+        public FrmBienbanVP(string madg, string date, List<string> book)
         {
             madocgia = madg;
             ngaytra = date;

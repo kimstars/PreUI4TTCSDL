@@ -26,7 +26,7 @@ namespace LibraryManager
             user = username;
             listSachMuon = new List<string>();
         }
-        string Madocgia = "";
+        string Madocgia = "DG000001";
         string user = "";
 
         bool sidebarExpand = true;

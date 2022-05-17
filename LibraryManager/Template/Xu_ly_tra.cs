@@ -73,11 +73,11 @@ namespace LibraryManager.Template
 
             if (cboxVi_pham.Checked == true)
             {
-                dgvDs.Rows.Add(chuanhoa(txtMasach.Text),chuanhoa( txtMadg.Text), DateTime.Now, "Có");
+                dgvDs.Rows.Add(chuanhoa(txtMasach.Text),chuanhoa( txtMadg.Text), DateTime.Now, "Có", "Bỏ");
             }
             else
             {
-                dgvDs.Rows.Add(chuanhoa(txtMasach.Text), chuanhoa(txtMadg.Text), DateTime.Now, "Không");
+                dgvDs.Rows.Add(chuanhoa(txtMasach.Text), chuanhoa(txtMadg.Text), DateTime.Now, "Không", "Bỏ");
             }
 
         }
@@ -100,33 +100,23 @@ namespace LibraryManager.Template
             string madg;
             string ngaytra1;
             int count = 0;
-            int count1 = 0;
-          //  bool tre = false;
+
+            //  bool tre = false;
             for (int i = 0; i < dgvDs.Rows.Count; i++)
-            { 
-                if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có") )
+            {
+                if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có"))
                 {
                     book.Add(dgvDs.Rows[i].Cells[0].Value.ToString());
                     count++;
                 }
-              /*  if (check(dgvDs.Rows[i].Cells[0].Value.ToString()) == true)
-                {
-                    tre = true;
-                    count1++;
-                }*/
-               
 
-            }
-            /*if(count1!=0)
-            {
-                tre = true;
-            }*/
-            if (count != 0)
-            {
-                madg = dgvDs.Rows[0].Cells[1].Value.ToString();
-                ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
-                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/);
-                bbvp.Show();
+                if (count != 0)
+                {
+                    madg = dgvDs.Rows[0].Cells[1].Value.ToString();
+                    ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
+                    FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/);
+                    bbvp.Show();
+                }
             }
         }
        
@@ -156,10 +146,11 @@ namespace LibraryManager.Template
 
         private void btnHoantat_Click(object sender, EventArgs e)
         {
-           for( int  i = 0; i <dgvDs.Rows.Count-1; i++)
+            for( int  i = 0; i <dgvDs.Rows.Count-1; i++)
             {
                 ts_bus.update(dgvDs.Rows[i].Cells[0].Value.ToString());
             }
+            MessageBox.Show("Trả sách thành công!!");
         }
 
         private void txtTK_Validating(object sender, CancelEventArgs e)
