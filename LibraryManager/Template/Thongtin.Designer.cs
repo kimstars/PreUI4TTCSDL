@@ -40,9 +40,8 @@ namespace LibraryManager.Template
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tHUVIENMTADataSet = new LibraryManager.THUVIENMTADataSet();
-            this.dAUSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dAUSACHTableAdapter = new LibraryManager.THUVIENMTADataSetTableAdapters.DAUSACHTableAdapter();
+
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).BeginInit();
@@ -142,19 +141,14 @@ namespace LibraryManager.Template
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // tHUVIENMTADataSet
+
+            // bunifuDragControl1
             // 
-            this.tHUVIENMTADataSet.DataSetName = "THUVIENMTADataSet";
-            this.tHUVIENMTADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dAUSACHBindingSource
-            // 
-            this.dAUSACHBindingSource.DataMember = "DAUSACH";
-            this.dAUSACHBindingSource.DataSource = this.tHUVIENMTADataSet;
-            // 
-            // dAUSACHTableAdapter
-            // 
-            this.dAUSACHTableAdapter.ClearBeforeFill = true;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.Vertical = true;
+
             // 
             // Thongtin
             // 
@@ -171,7 +165,8 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Thongtin";
-            this.Size = new System.Drawing.Size(818, 659);
+            this.Size = new System.Drawing.Size(521, 542);
+            this.Load += new System.EventHandler(this.Thongtin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).EndInit();
@@ -192,8 +187,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.BindingSource dAUSACHBindingSource;
-        private THUVIENMTADataSet tHUVIENMTADataSet;
-        private THUVIENMTADataSetTableAdapters.DAUSACHTableAdapter dAUSACHTableAdapter;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+
     }
 }

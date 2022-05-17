@@ -494,6 +494,7 @@ namespace LibraryManager
             this.btnM_Tra.Size = new System.Drawing.Size(190, 37);
             this.btnM_Tra.TabIndex = 17;
             this.btnM_Tra.Text = "Trả sách";
+            this.btnM_Tra.Click += new System.EventHandler(this.btnM_Tra_Click);
             // 
             // panelQLSachNhap
             // 
@@ -655,6 +656,7 @@ namespace LibraryManager
             this.btnM_dsSDamuon.Size = new System.Drawing.Size(190, 37);
             this.btnM_dsSDamuon.TabIndex = 18;
             this.btnM_dsSDamuon.Text = "DS Sách đã mượn";
+            this.btnM_dsSDamuon.Click += new System.EventHandler(this.btnM_dsSDamuon_Click);
             // 
             // btnM_DSDausach
             // 
