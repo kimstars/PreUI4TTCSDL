@@ -40,7 +40,7 @@ namespace LibraryManager.DAO
         {
             string sqlString = $@"select pmt.mamuontra, tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra  
                 from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where 
-                and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach 
+                pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach 
                 and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and pmt.Madocgia ='{madg}'";
             return GetData(sqlString);
         }

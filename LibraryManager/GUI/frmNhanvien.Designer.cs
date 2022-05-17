@@ -69,6 +69,7 @@ namespace LibraryManager
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbchucvu = new System.Windows.Forms.Label();
+            this.imgAvt = new LibraryManager.Template.PictureBoxKiet();
             this.lbUsername = new System.Windows.Forms.Label();
             this.imgThuVienMTA = new System.Windows.Forms.PictureBox();
             this.panelDrag = new System.Windows.Forms.Panel();
@@ -84,7 +85,7 @@ namespace LibraryManager
             this.QLDGtick = new System.Windows.Forms.Timer(this.components);
             this.XLViPhamTick = new System.Windows.Forms.Timer(this.components);
             this.CaiDatTick = new System.Windows.Forms.Timer(this.components);
-            this.imgAvt = new LibraryManager.Template.PictureBoxKiet();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.PanelMenuBar.SuspendLayout();
             this.panelScroll.SuspendLayout();
             this.panelSetting.SuspendLayout();
@@ -96,9 +97,9 @@ namespace LibraryManager
             this.panel2.SuspendLayout();
             this.panelNameUser.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgThuVienMTA)).BeginInit();
             this.panelDrag.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -141,7 +142,7 @@ namespace LibraryManager
             this.panelSetting.Controls.Add(this.btnM_ChangeInfo);
             this.panelSetting.Controls.Add(this.btnM_Caidat);
             this.panelSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSetting.Location = new System.Drawing.Point(0, 983);
+            this.panelSetting.Location = new System.Drawing.Point(0, 1022);
             this.panelSetting.Margin = new System.Windows.Forms.Padding(2);
             this.panelSetting.MaximumSize = new System.Drawing.Size(190, 131);
             this.panelSetting.MinimumSize = new System.Drawing.Size(190, 45);
@@ -199,7 +200,7 @@ namespace LibraryManager
             this.panelXLViPham.Controls.Add(this.btnM_LapBBvp);
             this.panelXLViPham.Controls.Add(this.btnM_XLViPham);
             this.panelXLViPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelXLViPham.Location = new System.Drawing.Point(0, 852);
+            this.panelXLViPham.Location = new System.Drawing.Point(0, 891);
             this.panelXLViPham.Margin = new System.Windows.Forms.Padding(2);
             this.panelXLViPham.MaximumSize = new System.Drawing.Size(190, 131);
             this.panelXLViPham.MinimumSize = new System.Drawing.Size(190, 45);
@@ -280,7 +281,7 @@ namespace LibraryManager
             this.panelQLDocGia.Controls.Add(this.btnM_DSDG);
             this.panelQLDocGia.Controls.Add(this.btnM_TTDG);
             this.panelQLDocGia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLDocGia.Location = new System.Drawing.Point(0, 602);
+            this.panelQLDocGia.Location = new System.Drawing.Point(0, 641);
             this.panelQLDocGia.Margin = new System.Windows.Forms.Padding(2);
             this.panelQLDocGia.MaximumSize = new System.Drawing.Size(190, 250);
             this.panelQLDocGia.MinimumSize = new System.Drawing.Size(190, 45);
@@ -418,16 +419,17 @@ namespace LibraryManager
             // 
             // panelXLMuontra
             // 
+            this.panelXLMuontra.Controls.Add(this.guna2Button1);
             this.panelXLMuontra.Controls.Add(this.btnM_XLMuonTra);
             this.panelXLMuontra.Controls.Add(this.btnM_Muon);
             this.panelXLMuontra.Controls.Add(this.btnM_Tra);
             this.panelXLMuontra.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelXLMuontra.Location = new System.Drawing.Point(0, 471);
             this.panelXLMuontra.Margin = new System.Windows.Forms.Padding(2);
-            this.panelXLMuontra.MaximumSize = new System.Drawing.Size(190, 131);
+            this.panelXLMuontra.MaximumSize = new System.Drawing.Size(190, 170);
             this.panelXLMuontra.MinimumSize = new System.Drawing.Size(190, 45);
             this.panelXLMuontra.Name = "panelXLMuontra";
-            this.panelXLMuontra.Size = new System.Drawing.Size(190, 131);
+            this.panelXLMuontra.Size = new System.Drawing.Size(190, 170);
             this.panelXLMuontra.TabIndex = 18;
             // 
             // btnM_XLMuonTra
@@ -833,6 +835,25 @@ namespace LibraryManager
             this.lbchucvu.TabIndex = 13;
             this.lbchucvu.Text = "  Thủ thư  ";
             // 
+            // imgAvt
+            // 
+            this.imgAvt.BackColor = System.Drawing.Color.White;
+            this.imgAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.imgAvt.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.imgAvt.BorderColor2 = System.Drawing.Color.HotPink;
+            this.imgAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.imgAvt.BorderSize = 2;
+            this.imgAvt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgAvt.GradientAngle = 50F;
+            this.imgAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
+            this.imgAvt.Location = new System.Drawing.Point(0, 0);
+            this.imgAvt.Margin = new System.Windows.Forms.Padding(2);
+            this.imgAvt.Name = "imgAvt";
+            this.imgAvt.Size = new System.Drawing.Size(56, 56);
+            this.imgAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAvt.TabIndex = 5;
+            this.imgAvt.TabStop = false;
+            // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
@@ -938,24 +959,27 @@ namespace LibraryManager
             // 
             this.CaiDatTick.Tick += new System.EventHandler(this.CaiDatTick_Tick);
             // 
-            // imgAvt
+            // guna2Button1
             // 
-            this.imgAvt.BackColor = System.Drawing.Color.White;
-            this.imgAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.imgAvt.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.imgAvt.BorderColor2 = System.Drawing.Color.HotPink;
-            this.imgAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgAvt.BorderSize = 2;
-            this.imgAvt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgAvt.GradientAngle = 50F;
-            this.imgAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
-            this.imgAvt.Location = new System.Drawing.Point(0, 0);
-            this.imgAvt.Margin = new System.Windows.Forms.Padding(2);
-            this.imgAvt.Name = "imgAvt";
-            this.imgAvt.Size = new System.Drawing.Size(56, 56);
-            this.imgAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAvt.TabIndex = 5;
-            this.imgAvt.TabStop = false;
+            this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 129);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(190, 37);
+            this.guna2Button1.TabIndex = 18;
+            this.guna2Button1.Text = "Quản lý phiếu mượn";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // frmNhanvien
             // 
@@ -982,9 +1006,9 @@ namespace LibraryManager
             this.panelNameUser.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgThuVienMTA)).EndInit();
             this.panelDrag.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1046,5 +1070,6 @@ namespace LibraryManager
         private System.Windows.Forms.Timer CaiDatTick;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnM_DGvipham;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

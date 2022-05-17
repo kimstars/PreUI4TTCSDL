@@ -30,7 +30,7 @@ namespace LibraryManager.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.paneldrag = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbManv = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -46,6 +46,7 @@ namespace LibraryManager.GUI
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.cboxHongsach = new System.Windows.Forms.CheckBox();
             this.cboxKhac = new System.Windows.Forms.CheckBox();
@@ -61,26 +62,30 @@ namespace LibraryManager.GUI
             this.label6 = new System.Windows.Forms.Label();
             this.txtLydo = new System.Windows.Forms.RichTextBox();
             this.lbVP = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panel1.SuspendLayout();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // paneldrag
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.FillColor = System.Drawing.Color.MediumVioletRed;
-            this.panel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.ShadowDecoration.Parent = this.panel1;
-            this.panel1.Size = new System.Drawing.Size(784, 54);
-            this.panel1.TabIndex = 1;
+            this.paneldrag.BackColor = System.Drawing.Color.White;
+            this.paneldrag.Controls.Add(this.guna2ControlBox2);
+            this.paneldrag.Controls.Add(this.guna2ControlBox1);
+            this.paneldrag.Controls.Add(this.label1);
+            this.paneldrag.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneldrag.FillColor = System.Drawing.Color.MediumVioletRed;
+            this.paneldrag.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paneldrag.Location = new System.Drawing.Point(0, 0);
+            this.paneldrag.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.paneldrag.Name = "paneldrag";
+            this.paneldrag.ShadowDecoration.Parent = this.paneldrag;
+            this.paneldrag.Size = new System.Drawing.Size(784, 54);
+            this.paneldrag.TabIndex = 1;
             // 
             // label1
             // 
@@ -111,7 +116,7 @@ namespace LibraryManager.GUI
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 54);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.ShadowDecoration.Parent = this.panel2;
             this.panel2.Size = new System.Drawing.Size(784, 142);
@@ -131,7 +136,7 @@ namespace LibraryManager.GUI
             this.cmbManv.ItemHeight = 30;
             this.cmbManv.ItemsAppearance.Parent = this.cmbManv;
             this.cmbManv.Location = new System.Drawing.Point(137, 57);
-            this.cmbManv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbManv.Margin = new System.Windows.Forms.Padding(2);
             this.cmbManv.Name = "cmbManv";
             this.cmbManv.ShadowDecoration.Parent = this.cmbManv;
             this.cmbManv.Size = new System.Drawing.Size(153, 36);
@@ -350,12 +355,23 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 196);
-            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
             this.guna2GroupBox2.Size = new System.Drawing.Size(784, 400);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(130, 245);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(181, 99);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Độc giả vi phạm 3 lần tự động khóa tài khoản";
             // 
             // guna2Button1
             // 
@@ -363,12 +379,14 @@ namespace LibraryManager.GUI
             this.guna2Button1.BorderRadius = 10;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(464, 271);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_edit_property_26px;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Location = new System.Drawing.Point(476, 271);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(98, 37);
@@ -381,7 +399,7 @@ namespace LibraryManager.GUI
             this.cboxHongsach.AutoSize = true;
             this.cboxHongsach.BackColor = System.Drawing.Color.White;
             this.cboxHongsach.Location = new System.Drawing.Point(139, 101);
-            this.cboxHongsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxHongsach.Margin = new System.Windows.Forms.Padding(2);
             this.cboxHongsach.Name = "cboxHongsach";
             this.cboxHongsach.Size = new System.Drawing.Size(127, 24);
             this.cboxHongsach.TabIndex = 12;
@@ -393,7 +411,7 @@ namespace LibraryManager.GUI
             this.cboxKhac.AutoSize = true;
             this.cboxKhac.BackColor = System.Drawing.Color.White;
             this.cboxKhac.Location = new System.Drawing.Point(139, 147);
-            this.cboxKhac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxKhac.Margin = new System.Windows.Forms.Padding(2);
             this.cboxKhac.Name = "cboxKhac";
             this.cboxKhac.Size = new System.Drawing.Size(97, 24);
             this.cboxKhac.TabIndex = 12;
@@ -406,7 +424,7 @@ namespace LibraryManager.GUI
             this.cboxMatsach.AutoSize = true;
             this.cboxMatsach.BackColor = System.Drawing.Color.White;
             this.cboxMatsach.Location = new System.Drawing.Point(139, 123);
-            this.cboxMatsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxMatsach.Margin = new System.Windows.Forms.Padding(2);
             this.cboxMatsach.Name = "cboxMatsach";
             this.cboxMatsach.Size = new System.Drawing.Size(119, 24);
             this.cboxMatsach.TabIndex = 12;
@@ -418,7 +436,7 @@ namespace LibraryManager.GUI
             this.cboxTrehan.AutoSize = true;
             this.cboxTrehan.BackColor = System.Drawing.Color.White;
             this.cboxTrehan.Location = new System.Drawing.Point(139, 79);
-            this.cboxTrehan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxTrehan.Margin = new System.Windows.Forms.Padding(2);
             this.cboxTrehan.Name = "cboxTrehan";
             this.cboxTrehan.Size = new System.Drawing.Size(131, 24);
             this.cboxTrehan.TabIndex = 12;
@@ -429,7 +447,7 @@ namespace LibraryManager.GUI
             // 
             this.txt_tinhtrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_tinhtrang.Location = new System.Drawing.Point(476, 171);
-            this.txt_tinhtrang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_tinhtrang.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tinhtrang.Name = "txt_tinhtrang";
             this.txt_tinhtrang.Size = new System.Drawing.Size(235, 65);
             this.txt_tinhtrang.TabIndex = 11;
@@ -441,13 +459,13 @@ namespace LibraryManager.GUI
             this.btnHoanthien.BorderRadius = 10;
             this.btnHoanthien.CheckedState.Parent = this.btnHoanthien;
             this.btnHoanthien.CustomImages.Parent = this.btnHoanthien;
-            this.btnHoanthien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnHoanthien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.btnHoanthien.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
             this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
             this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
-            this.btnHoanthien.Location = new System.Drawing.Point(575, 271);
-            this.btnHoanthien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHoanthien.Location = new System.Drawing.Point(582, 271);
+            this.btnHoanthien.Margin = new System.Windows.Forms.Padding(2);
             this.btnHoanthien.Name = "btnHoanthien";
             this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
             this.btnHoanthien.Size = new System.Drawing.Size(129, 37);
@@ -537,7 +555,7 @@ namespace LibraryManager.GUI
             this.txtLydo.BackColor = System.Drawing.Color.White;
             this.txtLydo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLydo.Location = new System.Drawing.Point(476, 77);
-            this.txtLydo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLydo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLydo.Name = "txtLydo";
             this.txtLydo.ReadOnly = true;
             this.txtLydo.Size = new System.Drawing.Size(235, 65);
@@ -555,20 +573,41 @@ namespace LibraryManager.GUI
             this.lbVP.TabIndex = 0;
             this.lbVP.Text = "Lý do vi phạm:";
             // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(109, 247);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(181, 99);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Độc giả vi phạm 3 lần tự động khóa tài khoản";
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.paneldrag;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(727, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 1;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(676, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.TabIndex = 2;
             // 
             // FrmBienbanVP
             // 
@@ -577,14 +616,14 @@ namespace LibraryManager.GUI
             this.ClientSize = new System.Drawing.Size(784, 596);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.paneldrag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmBienbanVP";
             this.Text = "FrmBienbanVP";
             this.Load += new System.EventHandler(this.FrmBienbanVP_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.paneldrag.ResumeLayout(false);
+            this.paneldrag.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
@@ -595,7 +634,7 @@ namespace LibraryManager.GUI
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel paneldrag;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel panel2;
         private Guna.UI2.WinForms.Guna2TextBox txtTendg;
@@ -628,5 +667,8 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

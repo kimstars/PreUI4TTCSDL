@@ -62,6 +62,16 @@ namespace LibraryManager.BUS
 
         #endregion
 
+        #region update ds phieu muon tra
+
+        public void Update_DaXuLy(string MaMuonTra)
+        {
+            pmDao.Update_DaXL_PM(MaMuonTra);
+        }
+
+
+        #endregion
+
 
 
     }

@@ -71,8 +71,8 @@ namespace LibraryManager.Template
             TinhTienCoc(InfoBorrow);
             DateTime date = DateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));
             dateHanTra.Value = date;
-
-            LoadDetailBook("DS000013");
+            
+            LoadDetailBook(listsach[0]);
 
             lbMaMuonTra.Text = pmBus.CreateNext_MaMT();
 
@@ -138,8 +138,9 @@ namespace LibraryManager.Template
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
 
-            dgvInfoBorrow.Controls.RemoveAt(indexCurrent);
-            TinhTienCoc(InfoBorrow);
+            dgvInfoBorrow.Rows.RemoveAt(indexCurrent);
+
+            //TinhTienCoc(InfoBorrow);
 
         }
 
@@ -159,16 +160,17 @@ namespace LibraryManager.Template
             pmtnew.HanTra = dateHanTra.Value;
             pmtnew.MaMuonTra = lbMaMuonTra.Text;
             pmtnew.MaNhanVien = MaNhanVien;
-
+            pmtnew.TienCoc = lbTienCoc.Text;
 
             List<string> DSMaSach = new List<string>();
             for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
             {
-                var tempmds = dgvInfoBorrow.Rows[i].Cells[1].Value.ToString().Trim();
+                var tempmds = dgvInfoBorrow.Rows[i].Cells[0].Value.ToString().Trim();
                 if(tempmds!="") DSMaSach.Add(tempmds);
             }
 
             pmBus.InsertMuon(pmtnew, DSMaSach,isNV);
+
 
         }
 

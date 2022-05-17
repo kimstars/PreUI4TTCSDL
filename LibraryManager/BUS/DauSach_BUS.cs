@@ -198,7 +198,7 @@ namespace LibraryManager.BUS
 
         public List<string> LoadMaDS_onlyTenSach(string TenSach)
         {
-            DataTable temp = dsDao.SearchMaDS_onlyTG(TenSach);
+            DataTable temp = dsDao.SearchMaDS_onlyTenSach(TenSach);
 
             List<string> ds = new List<string>();
 

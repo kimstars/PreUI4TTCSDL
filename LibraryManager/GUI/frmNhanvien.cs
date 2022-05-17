@@ -288,5 +288,11 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.tk_sachmuon_nv());
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSPhieuMuonNV());
+        }
     }
 }

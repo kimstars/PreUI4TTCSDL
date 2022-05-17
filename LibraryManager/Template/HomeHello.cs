@@ -43,5 +43,23 @@ namespace LibraryManager.Template
             int tl1 = Convert.ToInt32(tl);
             lbTongTL.Text = tl1.ToString();
         }
+
+        private void btnTacGia_Click(object sender, EventArgs e)
+        {
+            GUI.Hello_TacGia newform = new GUI.Hello_TacGia();
+            newform.Show();
+        }
+
+        private void btnTheLoai_Click(object sender, EventArgs e)
+        {
+            GUI.Hello_TheLoai newform = new GUI.Hello_TheLoai();
+            newform.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            GUI.TimKiem4Hello newform = new GUI.TimKiem4Hello(txtSearch.Text);
+            newform.Show();
+        }
     }
 }

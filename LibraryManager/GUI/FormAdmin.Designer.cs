@@ -877,7 +877,7 @@ namespace LibraryManager.Template
             this.label3.Location = new System.Drawing.Point(62, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "  Quản lý  ";
             // 
@@ -908,7 +908,7 @@ namespace LibraryManager.Template
             this.nameuser.Location = new System.Drawing.Point(61, 6);
             this.nameuser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameuser.Name = "nameuser";
-            this.nameuser.Size = new System.Drawing.Size(78, 28);
+            this.nameuser.Size = new System.Drawing.Size(64, 21);
             this.nameuser.TabIndex = 12;
             this.nameuser.Text = "ADMIN";
             // 

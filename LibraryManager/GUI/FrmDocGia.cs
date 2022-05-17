@@ -26,6 +26,18 @@ namespace LibraryManager
             user = username;
             listSachMuon = new List<string>();
         }
+
+
+        public FrmDocGia(string username, List<string> lsMuon)
+        {
+            InitializeComponent();
+            user = username;
+            listSachMuon = lsMuon;
+
+            
+
+        }
+
         string Madocgia = "DG000001";
         string user = "";
 
@@ -116,6 +128,18 @@ namespace LibraryManager
                 panelShow.Controls.Add(new Template.PhieuMuon(Madocgia,dsmuon));
                 GUI.TimKiem4Hello.DaTim = false;
             }
+
+            panelShow.Controls.Clear();
+
+            if (listSachMuon.Count > 0)
+            {
+                panelShow.Controls.Add(new Template.PhieuMuon(Madocgia, listSachMuon));
+            }
+            else
+            {
+                panelShow.Controls.Add(new Template.HomeHello());
+            }
+
         }
 
         private void btnCaiDat_Click(object sender, EventArgs e)
@@ -141,9 +165,10 @@ namespace LibraryManager
         private void btnMuonSach_Click(object sender, EventArgs e)
         {
             //nếu list sách mượn chưa có sách nào thì cho độc giả tìm sách xong mới mượn
-            if(listSachMuon.Count == 0)
+            panelShow.Controls.Clear();
+
+            if (listSachMuon.Count == 0)
             {
-                panelShow.Controls.Clear();
                 Template.TimKiem4HelloV2 usertimkiem = new Template.TimKiem4HelloV2();
 
                 usertimkiem.OnClick += (ss, ee) =>
@@ -159,9 +184,7 @@ namespace LibraryManager
             }
             else
             {
-
                  panelShow.Controls.Add(new Template.PhieuMuon(Madocgia, listSachMuon));
-
             }
         }
     }

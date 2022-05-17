@@ -79,18 +79,22 @@ namespace LibraryManager.Template
 
         private void dgvDSPhieumuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string MaPhieuMuon = dgvDSPhieumuon.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
-            string MaDocGia  = dgvDSPhieumuon.Rows[e.RowIndex].Cells["MaDocGia"].Value.ToString().Trim();
-            if (MaPhieuMuon.Contains("MT"))
+            if(e.RowIndex > 0)
             {
-                DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
-                dgvDSDausach.DataSource = temp;
-                MaPhieuMuonCurrent = MaPhieuMuon;
+                string MaPhieuMuon = dgvDSPhieumuon.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
+                string MaDocGia  = dgvDSPhieumuon.Rows[e.RowIndex].Cells["MaDocGia"].Value.ToString().Trim();
+                if (MaPhieuMuon.Contains("MT"))
+                {
+                    DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
+                    dgvDSDausach.DataSource = temp;
+                    MaPhieuMuonCurrent = MaPhieuMuon;
 
-                TinhTienCoc(temp);
+                    TinhTienCoc(temp);
+                }
+                MaDocGiaMuonCurrent = MaDocGia;
+                LoadDetailUser(MaDocGia);
+
             }
-            MaDocGiaMuonCurrent = MaDocGia;
-            LoadDetailUser(MaDocGia);
             
         }
 
@@ -123,6 +127,12 @@ namespace LibraryManager.Template
             {
                 dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon();
             }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            pmBus.Update_DaXuLy(MaPhieuMuonCurrent);
+            MessageBox.Show("Đã xử lý thành công. Lấy sách và giao cho độc giả.");
         }
     }
 }

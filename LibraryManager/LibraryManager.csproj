@@ -577,12 +577,6 @@
     <Compile Include="Template\DSSachCoSan.Designer.cs">
       <DependentUpon>DSSachCoSan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\FrmHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Template\FrmHome.Designer.cs">
-      <DependentUpon>FrmHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmPhieuphat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -820,9 +814,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DSSachCoSan.resx">
       <DependentUpon>DSSachCoSan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Template\FrmHome.resx">
-      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhieuphat.resx">
       <DependentUpon>frmPhieuphat.cs</DependentUpon>

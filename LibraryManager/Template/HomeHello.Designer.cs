@@ -47,16 +47,18 @@ namespace LibraryManager.Template
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.oneBook1 = new LibraryManager.Template.OneBook();
+            this.oneBook2 = new LibraryManager.Template.OneBook();
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTheLoai = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTacGia = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -65,8 +67,6 @@ namespace LibraryManager.Template
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuPictureBox4 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnRegister = new Guna.UI2.WinForms.Guna2Button();
-            this.oneBook1 = new LibraryManager.Template.OneBook();
-            this.oneBook2 = new LibraryManager.Template.OneBook();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
@@ -320,6 +320,30 @@ namespace LibraryManager.Template
             this.flowLayoutPanel1.Size = new System.Drawing.Size(633, 222);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
+            // oneBook1
+            // 
+            this.oneBook1.BackColor = System.Drawing.Color.White;
+            this.oneBook1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.oneBook1.ImageBook = null;
+            this.oneBook1.Location = new System.Drawing.Point(4, 4);
+            this.oneBook1.MaDauSach = "DS000003";
+            this.oneBook1.Margin = new System.Windows.Forms.Padding(4);
+            this.oneBook1.Name = "oneBook1";
+            this.oneBook1.Size = new System.Drawing.Size(309, 214);
+            this.oneBook1.TabIndex = 0;
+            // 
+            // oneBook2
+            // 
+            this.oneBook2.BackColor = System.Drawing.Color.White;
+            this.oneBook2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.oneBook2.ImageBook = null;
+            this.oneBook2.Location = new System.Drawing.Point(4, 226);
+            this.oneBook2.MaDauSach = "DS000003";
+            this.oneBook2.Margin = new System.Windows.Forms.Padding(4);
+            this.oneBook2.Name = "oneBook2";
+            this.oneBook2.Size = new System.Drawing.Size(309, 216);
+            this.oneBook2.TabIndex = 1;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -340,8 +364,8 @@ namespace LibraryManager.Template
             this.bunifuPanel5.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel5.BorderRadius = 30;
             this.bunifuPanel5.BorderThickness = 1;
-            this.bunifuPanel5.Controls.Add(this.btn);
-            this.bunifuPanel5.Controls.Add(this.guna2TextBox1);
+            this.bunifuPanel5.Controls.Add(this.btnSearch);
+            this.bunifuPanel5.Controls.Add(this.txtSearch);
             this.bunifuPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuPanel5.Location = new System.Drawing.Point(50, 243);
             this.bunifuPanel5.Name = "bunifuPanel5";
@@ -349,44 +373,45 @@ namespace LibraryManager.Template
             this.bunifuPanel5.Size = new System.Drawing.Size(991, 79);
             this.bunifuPanel5.TabIndex = 26;
             // 
-            // btn
+            // btnSearch
             // 
-            this.btn.CheckedState.Parent = this.btn;
-            this.btn.CustomImages.Parent = this.btn;
-            this.btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn.ForeColor = System.Drawing.Color.White;
-            this.btn.HoverState.Parent = this.btn;
-            this.btn.Location = new System.Drawing.Point(811, 18);
-            this.btn.Name = "btn";
-            this.btn.ShadowDecoration.Parent = this.btn;
-            this.btn.Size = new System.Drawing.Size(121, 45);
-            this.btn.TabIndex = 1;
-            this.btn.Text = "Tìm kiếm";
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Location = new System.Drawing.Point(811, 18);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(121, 45);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // guna2TextBox1
+            // txtSearch
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(23, 18);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(795, 45);
-            this.guna2TextBox1.TabIndex = 0;
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.Location = new System.Drawing.Point(23, 18);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(795, 45);
+            this.txtSearch.TabIndex = 0;
             // 
             // label11
             // 
@@ -410,8 +435,8 @@ namespace LibraryManager.Template
             this.bunifuPanel6.BorderThickness = 1;
             this.bunifuPanel6.Controls.Add(this.guna2Button6);
             this.bunifuPanel6.Controls.Add(this.guna2Button5);
-            this.bunifuPanel6.Controls.Add(this.guna2Button4);
-            this.bunifuPanel6.Controls.Add(this.guna2Button3);
+            this.bunifuPanel6.Controls.Add(this.btnTheLoai);
+            this.bunifuPanel6.Controls.Add(this.btnTacGia);
             this.bunifuPanel6.Controls.Add(this.guna2Button2);
             this.bunifuPanel6.Controls.Add(this.label12);
             this.bunifuPanel6.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -451,35 +476,37 @@ namespace LibraryManager.Template
             this.guna2Button5.TabIndex = 31;
             this.guna2Button5.Text = "Đầu sách";
             // 
-            // guna2Button4
+            // btnTheLoai
             // 
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(19, 104);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(108, 79);
-            this.guna2Button4.TabIndex = 30;
-            this.guna2Button4.Text = "Thể loại";
+            this.btnTheLoai.CheckedState.Parent = this.btnTheLoai;
+            this.btnTheLoai.CustomImages.Parent = this.btnTheLoai;
+            this.btnTheLoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
+            this.btnTheLoai.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTheLoai.ForeColor = System.Drawing.Color.White;
+            this.btnTheLoai.HoverState.Parent = this.btnTheLoai;
+            this.btnTheLoai.Location = new System.Drawing.Point(19, 104);
+            this.btnTheLoai.Name = "btnTheLoai";
+            this.btnTheLoai.ShadowDecoration.Parent = this.btnTheLoai;
+            this.btnTheLoai.Size = new System.Drawing.Size(108, 79);
+            this.btnTheLoai.TabIndex = 30;
+            this.btnTheLoai.Text = "Thể loại";
+            this.btnTheLoai.Click += new System.EventHandler(this.btnTheLoai_Click);
             // 
-            // guna2Button3
+            // btnTacGia
             // 
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(19, 53);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(82, 45);
-            this.guna2Button3.TabIndex = 29;
-            this.guna2Button3.Text = "Tác giả";
+            this.btnTacGia.CheckedState.Parent = this.btnTacGia;
+            this.btnTacGia.CustomImages.Parent = this.btnTacGia;
+            this.btnTacGia.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnTacGia.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTacGia.ForeColor = System.Drawing.Color.White;
+            this.btnTacGia.HoverState.Parent = this.btnTacGia;
+            this.btnTacGia.Location = new System.Drawing.Point(19, 53);
+            this.btnTacGia.Name = "btnTacGia";
+            this.btnTacGia.ShadowDecoration.Parent = this.btnTacGia;
+            this.btnTacGia.Size = new System.Drawing.Size(82, 45);
+            this.btnTacGia.TabIndex = 29;
+            this.btnTacGia.Text = "Tác giả";
+            this.btnTacGia.Click += new System.EventHandler(this.btnTacGia_Click);
             // 
             // guna2Button2
             // 
@@ -596,30 +623,6 @@ namespace LibraryManager.Template
             this.btnRegister.Text = "ĐĂNG KÝ TÀI KHOẢN ĐỘC GIẢ";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // oneBook1
-            // 
-            this.oneBook1.BackColor = System.Drawing.Color.White;
-            this.oneBook1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oneBook1.ImageBook = null;
-            this.oneBook1.Location = new System.Drawing.Point(4, 4);
-            this.oneBook1.MaDauSach = "DS000003";
-            this.oneBook1.Margin = new System.Windows.Forms.Padding(4);
-            this.oneBook1.Name = "oneBook1";
-            this.oneBook1.Size = new System.Drawing.Size(309, 214);
-            this.oneBook1.TabIndex = 0;
-            // 
-            // oneBook2
-            // 
-            this.oneBook2.BackColor = System.Drawing.Color.White;
-            this.oneBook2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oneBook2.ImageBook = null;
-            this.oneBook2.Location = new System.Drawing.Point(4, 226);
-            this.oneBook2.MaDauSach = "DS000003";
-            this.oneBook2.Margin = new System.Windows.Forms.Padding(4);
-            this.oneBook2.Name = "oneBook2";
-            this.oneBook2.Size = new System.Drawing.Size(309, 216);
-            this.oneBook2.TabIndex = 1;
-            // 
             // HomeHello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,14 +683,14 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
-        private Guna.UI2.WinForms.Guna2Button btn;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label11;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnTheLoai;
+        private Guna.UI2.WinForms.Guna2Button btnTacGia;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label12;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel7;

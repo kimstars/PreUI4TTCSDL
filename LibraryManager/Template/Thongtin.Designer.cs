@@ -43,8 +43,7 @@ namespace LibraryManager.Template
 
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).BeginInit();
+
             this.SuspendLayout();
             // 
             // label1
@@ -168,8 +167,7 @@ namespace LibraryManager.Template
             this.Size = new System.Drawing.Size(521, 542);
             this.Load += new System.EventHandler(this.Thongtin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
