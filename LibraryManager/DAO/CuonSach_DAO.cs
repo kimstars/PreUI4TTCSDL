@@ -17,6 +17,24 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string Lastest_MaSach()
+        {
+            string sql = "SELECT TOP 1 MaSach FROM dbo.CUONSACH ORDER BY MaSach DESC";
+            return GetString(sql);
+        }
+
+        public void InsertCuonSach(string MaSach, string MaDauSach, String ViTri, string TinhTrang)
+        {
+            string sql = $"INSERT INTO dbo.CUONSACH VALUES('{MaSach}','{MaDauSach}','{ViTri}','{TinhTrang}',1)";
+            Excute(sql);
+        }
+
+        public DataTable GetAllSach()
+        {
+            string sql = "SELECT * FROM dbo.CUONSACH";
+            return GetData(sql);
+        }
+
         public void InsertCuonSach(CuonSach cs, PhieuNhap pn)
         {
             string sql = $"EXEC PROC_NHAPCUONSACH'{cs.MaSach}','{cs.MaDauSach}','{cs.ViTriSach}','{cs.TinhTrangMoiCu}','{cs.TrangThai}','{pn.MaPhieuNhap}','{pn.MaNhanVien}'";

@@ -47,13 +47,13 @@ namespace LibraryManager.DAO
         }
 
         // độc giả chọn sách -> bảng ghi thông tin các sách độc giả chọn
-        public DataTable LoadThongTinSachMuon(string [] ListMaSach)
+        public DataTable LoadThongTinSachMuon(List<string> ListMaSach)
         { 
             string sql = "";
 
             DataTable rs = new DataTable();
 
-            foreach (var i in ListMaSach)
+            foreach (string i in ListMaSach)
             {
                 sql = $"SELECT top 1 cs.MaSach, ds.MaDauSach, ds.TenDauSach, cs.ViTriSach, ds.GiaTien FROM dbo.CUONSACH AS cs INNER JOIN dbo.DAUSACH AS ds ON ds.MaDauSach = cs.MaDauSach WHERE cs.MaDauSach = '{i}' AND cs.TrangThai = 1 GROUP BY cs.MaSach, ds.MaDauSach, ds.TenDauSach, cs.ViTriSach, ds.GiaTien";
                 SqlDataAdapter temp = GetDataSet(sql);

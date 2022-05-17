@@ -52,16 +52,6 @@ namespace LibraryManager.Template
             this.label7 = new System.Windows.Forms.Label();
             this.btnEditInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.listViewInfo = new System.Windows.Forms.ListView();
-            this.idDG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.sdt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateReg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmnd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.user = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelInput.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +65,7 @@ namespace LibraryManager.Template
             this.panelInput.Location = new System.Drawing.Point(3, 2);
             this.panelInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(1205, 368);
+            this.panelInput.Size = new System.Drawing.Size(1200, 300);
             this.panelInput.TabIndex = 13;
             // 
             // btnDeleteInfo
@@ -88,7 +78,7 @@ namespace LibraryManager.Template
             this.btnDeleteInfo.ForeColor = System.Drawing.Color.White;
             this.btnDeleteInfo.HoverState.Parent = this.btnDeleteInfo;
             this.btnDeleteInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteInfo.Location = new System.Drawing.Point(631, 243);
+            this.btnDeleteInfo.Location = new System.Drawing.Point(631, 242);
             this.btnDeleteInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteInfo.Name = "btnDeleteInfo";
             this.btnDeleteInfo.ShadowDecoration.Parent = this.btnDeleteInfo;
@@ -123,10 +113,10 @@ namespace LibraryManager.Template
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
             this.guna2Panel1.Location = new System.Drawing.Point(24, 15);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1146, 210);
+            this.guna2Panel1.Size = new System.Drawing.Size(1147, 210);
             this.guna2Panel1.TabIndex = 15;
             // 
             // selectGender
@@ -164,7 +154,7 @@ namespace LibraryManager.Template
             this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngayDKPicker.Location = new System.Drawing.Point(848, 86);
-            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
             this.ngayDKPicker.Name = "ngayDKPicker";
             this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
@@ -220,7 +210,7 @@ namespace LibraryManager.Template
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(475, 144);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "Nhập số CMND";
@@ -257,7 +247,7 @@ namespace LibraryManager.Template
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::LibraryManager.Properties.Resources.icons8_user_50px_1;
             this.txtUsername.Location = new System.Drawing.Point(848, 144);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Tên đăng nhập";
@@ -282,7 +272,7 @@ namespace LibraryManager.Template
             this.txtHoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoten.HoverState.Parent = this.txtHoten;
             this.txtHoten.Location = new System.Drawing.Point(136, 80);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(5);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.PasswordChar = '\0';
             this.txtHoten.PlaceholderText = "Nhập tên độc giả";
@@ -319,7 +309,7 @@ namespace LibraryManager.Template
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.HoverState.Parent = this.txtMaDG;
             this.txtMaDG.Location = new System.Drawing.Point(136, 15);
-            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5);
+            this.txtMaDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "Nhập mã độc giả";
@@ -344,7 +334,7 @@ namespace LibraryManager.Template
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
             this.txtDiachi.Location = new System.Drawing.Point(136, 144);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "Nhập địa chỉ";
@@ -362,7 +352,7 @@ namespace LibraryManager.Template
             this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.birthdayPicker.Location = new System.Drawing.Point(475, 22);
-            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
             this.birthdayPicker.Name = "birthdayPicker";
             this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
@@ -375,7 +365,7 @@ namespace LibraryManager.Template
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 95);
+            this.label8.Location = new System.Drawing.Point(371, 95);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 20);
             this.label8.TabIndex = 13;
@@ -419,7 +409,7 @@ namespace LibraryManager.Template
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(475, 80);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "Nhập số điện thoại";
@@ -449,7 +439,7 @@ namespace LibraryManager.Template
             this.btnEditInfo.ForeColor = System.Drawing.Color.White;
             this.btnEditInfo.HoverState.Parent = this.btnEditInfo;
             this.btnEditInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditInfo.Location = new System.Drawing.Point(339, 243);
+            this.btnEditInfo.Location = new System.Drawing.Point(339, 242);
             this.btnEditInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditInfo.Name = "btnEditInfo";
             this.btnEditInfo.ShadowDecoration.Parent = this.btnEditInfo;
@@ -468,7 +458,7 @@ namespace LibraryManager.Template
             this.btnAddInfo.ForeColor = System.Drawing.Color.White;
             this.btnAddInfo.HoverState.Parent = this.btnAddInfo;
             this.btnAddInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddInfo.Location = new System.Drawing.Point(24, 243);
+            this.btnAddInfo.Location = new System.Drawing.Point(24, 242);
             this.btnAddInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddInfo.Name = "btnAddInfo";
             this.btnAddInfo.ShadowDecoration.Parent = this.btnAddInfo;
@@ -477,96 +467,14 @@ namespace LibraryManager.Template
             this.btnAddInfo.Text = "Thêm thông tin";
             this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
             // 
-            // listViewInfo
-            // 
-            this.listViewInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listViewInfo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.idDG,
-            this.name,
-            this.birthday,
-            this.gender,
-            this.address,
-            this.sdt,
-            this.dateReg,
-            this.cmnd,
-            this.user});
-            this.listViewInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(169)))));
-            this.listViewInfo.FullRowSelect = true;
-            this.listViewInfo.GridLines = true;
-            this.listViewInfo.HideSelection = false;
-            this.listViewInfo.Location = new System.Drawing.Point(6, 312);
-            this.listViewInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listViewInfo.Name = "listViewInfo";
-            this.listViewInfo.Size = new System.Drawing.Size(1207, 374);
-            this.listViewInfo.TabIndex = 14;
-            this.listViewInfo.UseCompatibleStateImageBehavior = false;
-            this.listViewInfo.View = System.Windows.Forms.View.Details;
-            this.listViewInfo.SelectedIndexChanged += new System.EventHandler(this.listViewInfo_SelectedIndexChanged);
-            // 
-            // idDG
-            // 
-            this.idDG.Text = "Mã độc giả";
-            this.idDG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.idDG.Width = 100;
-            // 
-            // name
-            // 
-            this.name.Text = "Họ và tên";
-            this.name.Width = 100;
-            // 
-            // birthday
-            // 
-            this.birthday.Text = "Ngày sinh";
-            this.birthday.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.birthday.Width = 100;
-            // 
-            // gender
-            // 
-            this.gender.Text = "Giới tính";
-            this.gender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gender.Width = 80;
-            // 
-            // address
-            // 
-            this.address.Text = "Địa chỉ";
-            this.address.Width = 140;
-            // 
-            // sdt
-            // 
-            this.sdt.Text = "SĐT";
-            this.sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.sdt.Width = 100;
-            // 
-            // dateReg
-            // 
-            this.dateReg.DisplayIndex = 7;
-            this.dateReg.Text = "Ngày Đ.Kí";
-            this.dateReg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dateReg.Width = 80;
-            // 
-            // cmnd
-            // 
-            this.cmnd.DisplayIndex = 6;
-            this.cmnd.Text = "Số CMND";
-            this.cmnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cmnd.Width = 80;
-            // 
-            // user
-            // 
-            this.user.Text = "Tài khoản ";
-            this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.user.Width = 80;
-            // 
             // QLInfoDocgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listViewInfo);
             this.Controls.Add(this.panelInput);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QLInfoDocgia";
-            this.Size = new System.Drawing.Size(1205, 688);
+            this.Size = new System.Drawing.Size(1229, 727);
             this.panelInput.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -593,21 +501,11 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private System.Windows.Forms.ListView listViewInfo;
-        private System.Windows.Forms.ColumnHeader name;
-        private System.Windows.Forms.ColumnHeader birthday;
-        private System.Windows.Forms.ColumnHeader gender;
-        private System.Windows.Forms.ColumnHeader sdt;
-        private System.Windows.Forms.ColumnHeader dateReg;
         private Guna.UI2.WinForms.Guna2Button btnDeleteInfo;
         private DateTimePickerKiet ngayDKPicker;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnEditInfo;
         private Guna.UI2.WinForms.Guna2Button btnAddInfo;
-        private System.Windows.Forms.ColumnHeader idDG;
-        private System.Windows.Forms.ColumnHeader address;
-        private System.Windows.Forms.ColumnHeader cmnd;
-        private System.Windows.Forms.ColumnHeader user;
         private Guna.UI2.WinForms.Guna2ComboBox selectGender;
     }
 }

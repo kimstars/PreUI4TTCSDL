@@ -20,6 +20,7 @@ namespace LibraryManager.Template
         }
 
         private string MaPhieuMuonCurrent = "";
+        private string MaDocGiaMuonCurrent = "";
 
 
         PhieuMuon_BUS pmBus = new PhieuMuon_BUS();
@@ -34,9 +35,10 @@ namespace LibraryManager.Template
             DataTable temp = pmBus.LoadDSPhieumuon();
 
             dgvDSPhieumuon.DataSource = temp;
-            
 
-
+            //load thông tin độc giả đầu tiên lên
+            string MaDocGia = dgvDSPhieumuon.Rows[0].Cells["MaDocGia"].Value.ToString().Trim();
+            LoadDetailUser(MaDocGia);
         }
 
         private void TinhTienCoc(DataTable InfoBorrow)
@@ -84,10 +86,43 @@ namespace LibraryManager.Template
                 DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
                 dgvDSDausach.DataSource = temp;
                 MaPhieuMuonCurrent = MaPhieuMuon;
+
                 TinhTienCoc(temp);
             }
+            MaDocGiaMuonCurrent = MaDocGia;
             LoadDetailUser(MaDocGia);
             
+        }
+
+        private void btnFilterDate_Click(object sender, EventArgs e)
+        {
+            DateTime start = dateStart.Value;
+            DateTime end = dateEnd.Value;
+
+            dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon(start, end);
+
+        }
+
+        private void btnXemInfoDG_Click(object sender, EventArgs e)
+        {
+            GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia(MaDocGiaMuonCurrent);
+            newform.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text;
+            if (keyword != "")
+            {
+            
+                dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon(keyword);
+
+
+            }
+            else
+            {
+                dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon();
+            }
         }
     }
 }

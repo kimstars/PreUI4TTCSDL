@@ -138,5 +138,11 @@ namespace LibraryManager.CreateDB
                 txtMaMT.Text = Current_Mamuon;
             }
         }
+
+        private void txtMaMT_TextChanged(object sender, EventArgs e)
+        {
+            cbMaDG.Text = dgBus.LoadMaDocGia_PhieuMuon(txtMaMT.Text);
+            cbNV.Text = nvBus.LoadMaNhanVien_PhieuMuon(txtMaMT.Text);
+        }
     }
 }

@@ -51,14 +51,14 @@ namespace LibraryManager.DAO
             Excute("delete from DOCGIA where MaDocGia = '" + mDG + "'");
         }
 
-        public void Update(DocGia dg)
+        public bool Update(DocGia dg)
         {
-            //string sql = string.Format("update DOCGIA set TenDocGia = N'{0}', DiaChi = N'{1}', NgaySinh = '{2}', GioiTinh = N'{3}', SDT = '{5}', CMND = '{6}', NgayDangKi = '{7}', NgayDangKi = '{7} where MaDocGia = '{4}'",
-            //      dg.TenDocGia, dg.DiaChi, dg.NgaySinh, dg.GioiTinh, dg.SDT, dg.CMND, dg.NgayDangKi, dg.Anh, dg.MaDocGia );
-            //Excute(sql);
 
-            //sql = string.Format("update ACCOUNT set TenDangNhap = '{0}' where TenDangNhap = '{1}'", dg.TenDangNhap, dg.MaDocGia);
-            //Excute(sql);
+            string sql = $"update DOCGIA set TenDocGia = N'{dg.TenDocGia}', DiaChi = N'{dg.DiaChi}', NgaySinh = '{DateToString(dg.NgaySinh)}', GioiTinh = N'{dg.GioiTinh}', SDT = '{dg.SDT}', CMND = '{dg.CMND}' where MaDocGia = '{dg.MaDocGia}'";
+            Excute(sql);
+            return true;
+
+        
         }
         public DataTable Search(string _timkiem)
         {
@@ -75,7 +75,7 @@ namespace LibraryManager.DAO
             DocGia dg = new DocGia();
             if (res.Rows.Count == 1)
             {
-                //MessageBox.Show(res.Rows[0][0].ToString());
+                //MessageBox.Show(res.Rows[0][1].ToString());
                 dg.MaDocGia = maDG;
                 dg.TenDocGia = res.Rows[0][2].ToString();
                 dg.DiaChi = res.Rows[0][3].ToString();
@@ -94,8 +94,7 @@ namespace LibraryManager.DAO
 
 
 
-
-        #region get
+        #region get MADOCGIA
 
         public DataTable GetMaDG()
         {
@@ -103,6 +102,118 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string GetMaDG_PhieuMuon(string MaMuonTra)
+        {
+            string sql = $"SELECT MaDocGia FROM dbo.PHIEUMUONTRA WHERE MaMuonTra = '{MaMuonTra}'";
+            return GetString(sql);
+        }
+
+        #endregion
+
+
+        #region HoatDong
+           
+        public string TongSachMuon1Month(string MaDocGia)
+        {
+            DateTime date = DateTime.Today.Subtract(new TimeSpan(30, 0, 0, 0));
+            string start = DateToString(date);
+            string end = DateToString(DateTime.Today);
+            string sql = $"SELECT pm.NgayMuon, COUNT(MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND pm.NgayMuon BETWEEN '{start}' AND '{end}'GROUP BY pm.NgayMuon";
+
+            return GetCount(sql).ToString();
+            
+        }
+
+        public string TongSachTra1Month(string MaDocGia)
+        {
+            DateTime date = DateTime.Today.Subtract(new TimeSpan(30, 0, 0, 0));
+            string start = DateToString(date);
+            string end = DateToString(DateTime.Today);
+            string sql = $"SELECT tt.NgayTra, COUNT(tt.MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN  dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND tt.NgayTra BETWEEN '{start}' AND '{end}' GROUP BY tt.NgayTra";
+
+            return GetCount(sql).ToString();
+        }
+
+        public DataTable LoiViPham(string MaDocGia)
+        {
+            string sql = $"SELECT bb.LyDo, vp.MaSach FROM dbo.VIPHAM vp INNER JOIN dbo.BIENBANVIPHAM AS bb ON bb.MaViPham = vp.MaViPham WHERE bb.MaDocGia = '{MaDocGia}'";
+            return GetData(sql);
+        }
+
+
+        public DataTable SachDenHan(string MaDocGia)
+        {
+            string sql = $"SELECT pm.MaMuonTra,pm.HanTra, COUNT(tt.MaSach) AS soluong FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra WHERE tt.NgayTra IS NULL AND pm.MaDocGia = '{MaDocGia}' AND DATEDIFF(DAY, pm.HanTra, GETDATE()) > 10 GROUP BY pm.MaMuonTra,pm.HanTra";
+            return GetData(sql);
+        }
+
+
+        public DataTable SachDaMuon_Soluong(string MaDocGia)
+        {
+            string sql = $"SELECT COUNT(tt.MaSach) sl, pm.NgayMuon FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' GROUP BY pm.NgayMuon ORDER BY pm.NgayMuon DESC";
+
+
+            return GetData(sql);
+        }
+
+        public int TongSoSachChuaTra(string MaDocGia)
+        {
+            string sql = $"SELECT COUNT(tt.MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}'";
+
+            return (int)GetCount(sql);
+
+        }
+
+        public DataTable TraGanNhat(string MaDocGia)
+        {
+            string sql = $"SELECT COUNT(tt.MaSach) sl, tt.NgayTra FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND tt.NgayTra IS NOT NULL GROUP BY tt.NgayTra ORDER BY tt.NgayTra DESC";
+
+            return GetData(sql);
+        }
+
+
+
+        #endregion
+
+
+
+        #region khoataikhoan
+        
+
+
+        #endregion
+
+
+        public string GetMaDG_TaiKhoan(string TenDangNhap)
+        {
+            string sql = $"SELECT dg.MaDocGia FROM dbo.DOCGIA dg INNER JOIN dbo.TAIKHOAN tk ON  tk.TenDangNhap = dg.TenDangNhap WHERE dg.TenDangNhap = '{TenDangNhap}'";
+            return GetString(sql);
+
+        }
+
+
+
+
+        #region NhanvienXuLy
+        public string GetTenDocGia(string MaDG)
+        {
+            string sql = $"SELECT TenDocGia FROM dbo.DOCGIA WHERE MaDocGia = '{MaDG}'";
+            return GetString(sql);
+        }
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            string ten = GetTenDocGia(MaDG); 
+            if(ten != "")
+            {
+                return false;
+            }
+            return true;
+        }
+
         #endregion
     }
+
+
+
 }

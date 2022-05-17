@@ -11,7 +11,7 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-        static string provider = @"Data Source=TRUNG\SQLEXPRESS;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
         SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
@@ -68,7 +68,6 @@ namespace LibraryManager.DAO
             return imgbin ;
         }
 
-
         public Int64 GetCount(string sql)
         {
             if (connect.State != ConnectionState.Open)
@@ -98,28 +97,14 @@ namespace LibraryManager.DAO
 
         }
 
-        public string ExcuteRetStr(string sql)
+        public DataSet chart(string sql)
         {
-
-
-            string res = "";
-
-            using (SqlCommand command = new SqlCommand(sql, connect))
-            {
-                if (connect.State != ConnectionState.Open)
-                    connect.Open();
-                object result = command.ExecuteScalar();
-                if (result != null)
-                {
-                    res = result.ToString();
-                    //MessageBox.Show(res);
-                }
-            }
-
-            connect.Close();
-
-            return res;
-
+            connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            SqlDataAdapter ad = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            return ds;
         }
 
     }

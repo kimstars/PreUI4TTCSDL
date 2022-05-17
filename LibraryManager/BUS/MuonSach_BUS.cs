@@ -17,7 +17,7 @@ namespace LibraryManager.BUS
         {
             return msDao.LoadPhieuMuon();
         }
-        public DataTable LoadTTSachMuon(string[] Listma) {
+        public DataTable LoadTTSachMuon(List<string> Listma) {
             return msDao.LoadThongTinSachMuon(Listma);
         }
 
