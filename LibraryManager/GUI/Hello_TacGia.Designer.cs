@@ -39,8 +39,6 @@ namespace LibraryManager.GUI
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.dgvDs = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDs)).BeginInit();
@@ -117,6 +115,7 @@ namespace LibraryManager.GUI
             this.btnSearch.Size = new System.Drawing.Size(122, 49);
             this.btnSearch.TabIndex = 38;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvDs
             // 
@@ -139,9 +138,6 @@ namespace LibraryManager.GUI
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDs.ColumnHeadersHeight = 40;
-            this.dgvDs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenTacGia,
-            this.SoLuong});
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -183,20 +179,6 @@ namespace LibraryManager.GUI
             this.dgvDs.TabIndex = 0;
             this.dgvDs.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Navy;
             // 
-            // TenTacGia
-            // 
-            this.TenTacGia.HeaderText = "Tên tác giả";
-            this.TenTacGia.MinimumWidth = 6;
-            this.TenTacGia.Name = "TenTacGia";
-            this.TenTacGia.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng đầu sách";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -213,6 +195,7 @@ namespace LibraryManager.GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Hello_TacGia";
             this.Text = "Hello_TacGia";
+            this.Load += new System.EventHandler(this.Hello_TacGia_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDs)).EndInit();
@@ -228,8 +211,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

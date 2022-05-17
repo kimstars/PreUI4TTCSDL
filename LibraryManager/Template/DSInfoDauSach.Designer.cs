@@ -51,6 +51,7 @@ namespace LibraryManager.Template
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imageBook = new System.Windows.Forms.PictureBox();
@@ -58,6 +59,7 @@ namespace LibraryManager.Template
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDs)).BeginInit();
             this.panelall.SuspendLayout();
@@ -89,7 +91,7 @@ namespace LibraryManager.Template
             this.label1.Location = new System.Drawing.Point(252, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 25);
+            this.label1.Size = new System.Drawing.Size(275, 30);
             this.label1.TabIndex = 39;
             this.label1.Text = "DANH SÁCH ĐẦU SÁCH";
             // 
@@ -132,6 +134,7 @@ namespace LibraryManager.Template
             this.btnSearch.Size = new System.Drawing.Size(123, 49);
             this.btnSearch.TabIndex = 38;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvDs
             // 
@@ -156,6 +159,7 @@ namespace LibraryManager.Template
             this.dgvDs.ColumnHeadersHeight = 40;
             this.dgvDs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach,
+            this.NamXuatBan,
             this.TenDauSach,
             this.SoLuong});
             this.dgvDs.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
@@ -226,12 +230,12 @@ namespace LibraryManager.Template
             this.panelall.Controls.Add(this.guna2Button3);
             this.panelall.Controls.Add(this.guna2Button2);
             this.panelall.Controls.Add(this.guna2Button1);
-            this.panelall.Controls.Add(this.guna2TextBox6);
-            this.panelall.Controls.Add(this.guna2TextBox5);
-            this.panelall.Controls.Add(this.guna2TextBox4);
-            this.panelall.Controls.Add(this.guna2TextBox3);
-            this.panelall.Controls.Add(this.guna2TextBox2);
-            this.panelall.Controls.Add(this.guna2TextBox1);
+            this.panelall.Controls.Add(this.txtMoTa);
+            this.panelall.Controls.Add(this.txtTL);
+            this.panelall.Controls.Add(this.txtGia);
+            this.panelall.Controls.Add(this.txtNXB);
+            this.panelall.Controls.Add(this.txtTG);
+            this.panelall.Controls.Add(this.txtTenSach);
             this.panelall.Controls.Add(this.label4);
             this.panelall.Controls.Add(this.label2);
             this.panelall.Controls.Add(this.imageBook);
@@ -255,7 +259,9 @@ namespace LibraryManager.Template
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(232, 25);
             this.label3.Name = "label3";
+
             this.label3.Size = new System.Drawing.Size(106, 21);
+
             this.label3.TabIndex = 43;
             this.label3.Text = "Tên đầu sách:";
             // 
@@ -445,6 +451,7 @@ namespace LibraryManager.Template
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(207, 113);
             this.guna2TextBox1.TabIndex = 30;
+
             // 
             // label4
             // 
@@ -453,7 +460,7 @@ namespace LibraryManager.Template
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(43, 400);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 21);
+            this.label4.Size = new System.Drawing.Size(89, 28);
             this.label4.TabIndex = 29;
             this.label4.Text = "Thể loại:";
             // 
@@ -464,7 +471,7 @@ namespace LibraryManager.Template
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(43, 340);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
+            this.label2.Size = new System.Drawing.Size(87, 28);
             this.label2.TabIndex = 27;
             this.label2.Text = "Giá tiền:";
             // 
@@ -488,7 +495,7 @@ namespace LibraryManager.Template
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(43, 235);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 21);
+            this.label9.Size = new System.Drawing.Size(84, 28);
             this.label9.TabIndex = 19;
             this.label9.Text = "Tác giả :";
             // 
@@ -499,7 +506,7 @@ namespace LibraryManager.Template
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(45, 289);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 21);
+            this.label10.Size = new System.Drawing.Size(145, 28);
             this.label10.TabIndex = 20;
             this.label10.Text = "Năm xuất bản:";
             // 
@@ -510,7 +517,7 @@ namespace LibraryManager.Template
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(45, 452);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 21);
+            this.label11.Size = new System.Drawing.Size(82, 28);
             this.label11.TabIndex = 21;
             this.label11.Text = "Mô tả : ";
             // 
@@ -523,10 +530,12 @@ namespace LibraryManager.Template
             this.label5.Location = new System.Drawing.Point(899, 5);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(255, 19);
+            this.label5.Size = new System.Drawing.Size(313, 23);
             this.label5.TabIndex = 40;
             this.label5.Text = "CHỈNH SỬA THÔNG TIN ĐẦU SÁCH";
             // 
+
+
             // DSInfoDauSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -562,19 +571,20 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private Guna.UI2.WinForms.Guna2TextBox txtTL;
+        private Guna.UI2.WinForms.Guna2TextBox txtGia;
+        private Guna.UI2.WinForms.Guna2TextBox txtNXB;
+        private Guna.UI2.WinForms.Guna2TextBox txtTG;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenSach;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
     }
 }

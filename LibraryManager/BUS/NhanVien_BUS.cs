@@ -79,6 +79,10 @@ namespace LibraryManager.BUS
 
 
         #endregion
+        public void LuuAnh(string maID, string imgPath)
+        {
+            SaveImage("NhanVien", maID, "MaNhanVien", imgPath);
+        }
     }
 
 }
