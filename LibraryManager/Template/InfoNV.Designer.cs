@@ -66,7 +66,9 @@ namespace LibraryManager.Template
             this.btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             this.imageAvt = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnChangeImg = new Guna.UI2.WinForms.Guna2Button();
+
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
+
             this.lbTenDangNhap = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -603,6 +605,7 @@ namespace LibraryManager.Template
             this.btnDoiMK.Size = new System.Drawing.Size(153, 45);
             this.btnDoiMK.TabIndex = 12;
             this.btnDoiMK.Text = "Đổi mật khẩu";
+
             // 
             // errorProvider1
             // 
@@ -657,6 +660,7 @@ namespace LibraryManager.Template
             this.btnChangeImg.Size = new System.Drawing.Size(149, 36);
             this.btnChangeImg.TabIndex = 22;
             this.btnChangeImg.Text = "Thay ảnh";
+
             // 
             // btnLuu
             // 
@@ -673,6 +677,7 @@ namespace LibraryManager.Template
             this.btnLuu.Size = new System.Drawing.Size(184, 45);
             this.btnLuu.TabIndex = 23;
             this.btnLuu.Text = "Lưu thay đổi";
+
             // 
             // lbTenDangNhap
             // 
@@ -699,6 +704,7 @@ namespace LibraryManager.Template
             this.btnHuy.Size = new System.Drawing.Size(184, 45);
             this.btnHuy.TabIndex = 24;
             this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label1
             // 
@@ -738,7 +744,9 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
+
             this.Controls.Add(this.btnLuu);
+
             this.Controls.Add(this.btnChangeImg);
             this.Controls.Add(this.imageAvt);
             this.Controls.Add(this.btnBack);
@@ -804,7 +812,9 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button btnDoiMK;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2CircleButton btnBack;
+
         private Guna.UI2.WinForms.Guna2Button btnLuu;
+
         private Guna.UI2.WinForms.Guna2Button btnChangeImg;
         private Bunifu.UI.WinForms.BunifuPictureBox imageAvt;
         private System.Windows.Forms.Label lbTenDangNhap;

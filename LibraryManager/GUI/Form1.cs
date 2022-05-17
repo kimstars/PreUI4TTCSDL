@@ -22,7 +22,7 @@ namespace LibraryManager
         {
             sidebartick.Start();
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.HomeHello());
+            panelShow.Controls.Add(new Template.InfoDG());
 
 
         }
@@ -76,7 +76,8 @@ namespace LibraryManager
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            
+            GUI.Hello_TheLoai newform = new GUI.Hello_TheLoai();
+            newform.Show();
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
