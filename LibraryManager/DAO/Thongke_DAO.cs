@@ -13,7 +13,8 @@ namespace LibraryManager.DAO
         public DataTable tk_sachmuon_nv()
         {
             
-            string sqlString ="select * from cuonsach where trangthai ='0'";
+            string sqlString = @" select pmt.MaMuonTra, tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds 
+                                  where pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach ";
             return GetData(sqlString);
         }
         public DataSet Get_chart_tk_sachmuon()
@@ -22,26 +23,25 @@ namespace LibraryManager.DAO
             return chart(sqlString);
             
         }
-        public DataTable tk_sachmuon_dg(string a)
+        public DataTable tk_sachmuon_dg(string madg)
         {
-            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra " +
-                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds " +
-                "where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='" +a + "'";
+            string sqlString = $@"select pmt.mamuontra, tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds 
+                                  where pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and pmt.Madocgia ='{madg}'";
             return GetData(sqlString);
         }
-        public DataTable tk_sachchuatra_dg(string a)
+        public DataTable tk_sachchuatra_dg(string madg)
         {
-            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra " +
-                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds " +
-                "where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and ngaytra is null and dg.Madocgia ='" + a + "'";
+            string sqlString = $@"select pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaymuon, ngaytra 
+                from  PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds
+                where pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and ngaytra is null and pmt.Madocgia ='{madg}'";
             return GetData(sqlString);
         }
-        public DataTable tk_sach_tre_hen_dg(string a)
+        public DataTable tk_sach_tre_hen_dg(string madg)
         {
-            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra ,NgayMuon " +
-                "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia " +
-                "and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach " +
-                "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
+            string sqlString = $@"select pmt.mamuontra, tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra  
+                from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where 
+                and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach 
+                and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and pmt.Madocgia ='{madg}'";
             return GetData(sqlString);
         }
         public DataTable tkSachnhap(DateTime ngaybd, DateTime ngaykt)
@@ -62,21 +62,21 @@ namespace LibraryManager.DAO
 
         public DataTable tk_sachmuonNV_dg(string a, DateTime b, DateTime c)
         {
-            string sqlString = $"select Tendocgia, pmt.Mamuontra, tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='{a}' and ngaymuon between '{DateToString(b)}' and '{DateToString(c)}'";
+            string sqlString = $"select tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='{a}' and ngaymuon between '{DateToString(b)}' and '{DateToString(c)}'";
 
             return GetData(sqlString);
         }
-        public DataTable tk_trehan_nv(string a)
+        public DataTable tk_trehan_nv(string madg)
         {
-            string sqlString = "select dg.madocgia, tendocgia, pmt.mamuontra, tt.MaSach ,ds.TenDauSach, ngaytra ,NgayMuon " +
-       "from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia " +
-       "and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach " +
-       "and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='" + a + "'";
+            string sqlString = $@"select tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra  
+               from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where  
+               pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach 
+               and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='{madg}'";
             return GetData(sqlString);
         }
         public DataTable TK_Sachmuon_theongay(DateTime b, DateTime c)
         {
-           string sqlString = $"select dg.madocgia, tendocgia, pmt.Mamuontra, tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach  and ngaymuon between '{DateToString(b)}' and '{DateToString(c)}'";
+           string sqlString = $"select tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach  and ngaymuon between '{DateToString(b)}' and '{DateToString(c)}'";
             return GetData(sqlString);
         }
     }

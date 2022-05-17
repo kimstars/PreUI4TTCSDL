@@ -11,6 +11,7 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
+
         static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
         protected SqlConnection connect = new SqlConnection(provider);
 

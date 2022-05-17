@@ -99,7 +99,7 @@ namespace LibraryManager.Template
             this.label5.Location = new System.Drawing.Point(22, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 15);
+            this.label5.Size = new System.Drawing.Size(137, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Họ và tên độc giả :";
             // 
@@ -111,7 +111,7 @@ namespace LibraryManager.Template
             this.label4.Location = new System.Drawing.Point(22, 83);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 15);
+            this.label4.Size = new System.Drawing.Size(94, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Ngày mượn:";
             // 
@@ -123,7 +123,7 @@ namespace LibraryManager.Template
             this.label2.Location = new System.Drawing.Point(189, 83);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 15);
+            this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Hạn trả:";
             // 
@@ -188,7 +188,7 @@ namespace LibraryManager.Template
             this.lbInfoNamXB.Location = new System.Drawing.Point(116, 207);
             this.lbInfoNamXB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoNamXB.Name = "lbInfoNamXB";
-            this.lbInfoNamXB.Size = new System.Drawing.Size(46, 21);
+            this.lbInfoNamXB.Size = new System.Drawing.Size(56, 28);
             this.lbInfoNamXB.TabIndex = 26;
             this.lbInfoNamXB.Text = "2020";
             // 
@@ -211,7 +211,7 @@ namespace LibraryManager.Template
             this.lbInfoTenTG.Location = new System.Drawing.Point(72, 174);
             this.lbInfoTenTG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfoTenTG.Name = "lbInfoTenTG";
-            this.lbInfoTenTG.Size = new System.Drawing.Size(124, 21);
+            this.lbInfoTenTG.Size = new System.Drawing.Size(155, 28);
             this.lbInfoTenTG.TabIndex = 24;
             this.lbInfoTenTG.Text = "Kevin D.Johnson";
             // 
@@ -235,7 +235,7 @@ namespace LibraryManager.Template
             this.label11.Location = new System.Drawing.Point(9, 252);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 21);
+            this.label11.Size = new System.Drawing.Size(82, 28);
             this.label11.TabIndex = 21;
             this.label11.Text = "Mô tả : ";
             // 
@@ -247,7 +247,7 @@ namespace LibraryManager.Template
             this.label10.Location = new System.Drawing.Point(9, 207);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 21);
+            this.label10.Size = new System.Drawing.Size(145, 28);
             this.label10.TabIndex = 20;
             this.label10.Text = "Năm xuất bản:";
             // 
@@ -259,7 +259,7 @@ namespace LibraryManager.Template
             this.label9.Location = new System.Drawing.Point(9, 174);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 21);
+            this.label9.Size = new System.Drawing.Size(84, 28);
             this.label9.TabIndex = 19;
             this.label9.Text = "Tác giả :";
             // 

@@ -40,8 +40,11 @@ namespace LibraryManager.Template
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,12 +141,14 @@ namespace LibraryManager.Template
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = null;
             this.bunifuDragControl1.Vertical = true;
+
             // 
             // Thongtin
             // 
@@ -163,6 +168,8 @@ namespace LibraryManager.Template
             this.Size = new System.Drawing.Size(521, 542);
             this.Load += new System.EventHandler(this.Thongtin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHUVIENMTADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dAUSACHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +188,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+
     }
 }
