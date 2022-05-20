@@ -25,7 +25,7 @@ namespace LibraryManager.Template
         }
         private void btnTK_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            if (txtTK.Text != "")
             {
                 if (cmbTKiem.SelectedItem == "Mã độc giả")
                 {
@@ -43,6 +43,10 @@ namespace LibraryManager.Template
                 {
                     dgv_trasach.DataSource = ts_bus.Loadls();
                 }
+            }
+            else
+            {
+                dgv_trasach.DataSource = ts_bus.Loadls();
             }
         }
 
@@ -153,18 +157,19 @@ namespace LibraryManager.Template
             MessageBox.Show("Trả sách thành công!!");
         }
 
-        private void txtTK_Validating(object sender, CancelEventArgs e)
+        private void btnCleardgv_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTK.Text) == true)
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa tất cả?", "Xóa tất cả sách đã chọn?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //e.Cancel = true;
-                txtTK.Focus();
-                error1.SetError(txtTK, "Vui lòng nhập nội dung cần tìm kiếm!!");
-            }else
-            {
-                //e.Cancel = true;
-                error1.SetError(txtTK, null);
+
+                dgvDs.Rows.Clear();
+               
             }
+        }
+
+        private void dgv_trasach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
