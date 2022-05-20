@@ -169,7 +169,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(25, 26);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(955, 135);
@@ -208,30 +208,35 @@ namespace LibraryManager.Template
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "MaMuonTra";
             this.Column1.HeaderText = "Mã mượn trả";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "MaSach";
             this.Column2.HeaderText = "Mã sách";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "TenDauSach";
             this.Column3.HeaderText = "Tên sách";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "NgayMuon";
             this.Column4.HeaderText = "Ngày mượn";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "NgayTra";
             this.Column5.HeaderText = "Ngày trả";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";

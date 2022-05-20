@@ -22,7 +22,7 @@ namespace LibraryManager.Template
         private void btnRegister_Click(object sender, EventArgs e)
         {
             GUI.FrmDangKy newform = new GUI.FrmDangKy();
-
+            newform.Show();
         }
 
         private void HomeHello_Load(object sender, EventArgs e)

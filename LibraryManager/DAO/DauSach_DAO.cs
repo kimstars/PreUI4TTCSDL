@@ -76,8 +76,7 @@ namespace LibraryManager.DAO
 
         public DataTable LoadDauSachMini()
         {
-            string sqlString = @"
-                                select DAUSACH.MaDauSach, TenDauSach, SoLuong,  LanTaiBan,  NamXuatBan,  GiaTien,   MoTa, Anh, TACGIA.MaTacGia, TenTacGia,  NHAXUATBAN.MaNhaXuatBan,  TenNhaXuatBan,  DiaChi,THELOAI.MaTheLoai,  TenTheLoai
+            string sqlString = @"select DAUSACH.MaDauSach, TenDauSach, SoLuong,  LanTaiBan,  NamXuatBan,  GiaTien,   MoTa, Anh, TACGIA.MaTacGia, TenTacGia,  NHAXUATBAN.MaNhaXuatBan,  TenNhaXuatBan,  DiaChi,THELOAI.MaTheLoai,  TenTheLoai
                                 from DAUSACH, TACGIA, NHAXUATBAN,SANGTAC, XUATBAN, THELOAI
                                 where 
                                        DAUSACH.MaDauSach = SANGTAC.MaDauSach

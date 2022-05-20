@@ -38,5 +38,17 @@ namespace LibraryManager.Template
                 dgvNhanvien.DataSource = nvbus.GetList();
             }
         }
+
+        private void dgvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvNhanvien.Rows[e.RowIndex];
+            txtName.Text = row.Cells[2].Value.ToString();
+            txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+            pickerBirthday.Value = DateTime.Parse(row.Cells[4].Value.ToString()); ;
+            cbGioitinh.Text = row.Cells["GioiTinh"].Value.ToString();
+            txtSDT.Text = row.Cells["SDT"].Value.ToString();
+            txtCMND.Text = row.Cells["CMND"].Value.ToString();
+            txtEmail.Text = row.Cells["Email"].Value.ToString();
+        }
     }
 }

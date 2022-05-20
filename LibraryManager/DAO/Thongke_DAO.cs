@@ -62,16 +62,13 @@ namespace LibraryManager.DAO
 
         public DataTable tk_sachmuonNV_dg(string a, DateTime b, DateTime c)
         {
-            string sqlString = $"select tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='{a}' and ngaymuon between '{DateToString(b)}' and '{DateToString(c)}'";
+            string sqlString = $"select tt.MaSach ,ds.TenDauSach,Ngaymuon, Ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds,dbo.DOCGIA dg where dg.MaDocGia = pmt.MaDocGia and pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and dg.Madocgia ='{a}' and ngaymuon between '{DateToString(b)}' and '{DateToString(c)}'";
 
             return GetData(sqlString);
         }
         public DataTable tk_trehan_nv(string madg)
         {
-            string sqlString = $@"select tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra  
-               from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where  
-               pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach 
-               and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='{madg}'";
+            string sqlString = $"select tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra  from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds , dbo.DOCGIA dg WHERE  pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach  and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and dg.Madocgia ='{madg}'";
             return GetData(sqlString);
         }
         public DataTable TK_Sachmuon_theongay(DateTime b, DateTime c)

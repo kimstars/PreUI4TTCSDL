@@ -13,7 +13,7 @@ namespace LibraryManager.DAO
 
         public DataTable GetMaSach()
         {
-            string sql = "SELECT MaSach FROM dbo.CUONSACH";
+            string sql = "SELECT MaSach FROM dbo.CUONSACH  WHERE TrangThai=1";
             return GetData(sql);
         }
 

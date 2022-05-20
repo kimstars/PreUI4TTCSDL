@@ -98,6 +98,9 @@ namespace LibraryManager.Template
             PanelMenuBar.AutoScroll = false;
             closeYCollapse();
 
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeAdmin());
+
         }
 
 
@@ -168,7 +171,7 @@ namespace LibraryManager.Template
         private void btnM_DSDausach_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.DSInfoDauSach());
+            panelShow.Controls.Add(new Template.FrmThemDauSach());
         }
 
         private void btnM_dsSDamuon_Click(object sender, EventArgs e)
@@ -190,6 +193,22 @@ namespace LibraryManager.Template
             panelShow.Controls.Add(new Template.DanhsachNV());
         }
 
-       
+        private void btnM_Nhapsach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.tk_sachnhap());
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeAdmin());
+        }
+
+        private void btnM_SConlai_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachCoSan());
+        }
     }
 }

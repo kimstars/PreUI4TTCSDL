@@ -30,9 +30,9 @@ namespace LibraryManager.DAO
 
             Excute(sql);
 
-            sql = $"UPDATE dbo.CUONSACH SET TrangThai = 0 WHERE MaSach = '{ttmt.MaSach}'";
+            //sql = $"UPDATE dbo.CUONSACH SET TrangThai = 0 WHERE MaSach = '{ttmt.MaSach}'";
 
-            Excute(sql);
+            //Excute(sql);
 
             return true;
 
