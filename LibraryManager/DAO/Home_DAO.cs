@@ -31,10 +31,11 @@ namespace LibraryManager.DAO
             return GetCount(sqlString);
         }
 
-        public DataTable Get2Anh()
+        public DataTable GetTop2_DSNhieuNhat()
         {
-            string sql = "select top 2 madausach, count(tt.masach) sl from thongtinmuontra tt, cuonsach cs where cs.masach = tt.masach group by madausach order by sl desc";
-            return GetData(sql);
+            string sql = "SELECT TOP 2 cs.MaDauSach, COUNT(cs.MaSach) sl FROM dbo.DAUSACH ds INNER JOIN dbo.CUONSACH cs ON cs.MaDauSach = ds.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaSach = cs.MaSach GROUP BY cs.MaDauSach ORDER BY sl DESC ";
+
+            return GetData(sql);    
         }
 
         public DataTable LoadPhieuMuon()

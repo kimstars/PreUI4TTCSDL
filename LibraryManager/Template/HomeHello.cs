@@ -42,6 +42,13 @@ namespace LibraryManager.Template
             long tl = homeHello.GetTongTL();
             int tl1 = Convert.ToInt32(tl);
             lbTongTL.Text = tl1.ToString();
+
+            DataTable temp = homeHello.GetTop2Dausach();
+            foreach(DataRow row in temp.Rows)
+            {
+                string mads = row["MaDauSach"].ToString();
+                flowpanel.Controls.Add(new OneBook(mads));
+            }
         }
 
         private void btnTacGia_Click(object sender, EventArgs e)

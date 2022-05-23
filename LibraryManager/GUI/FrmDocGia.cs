@@ -92,6 +92,10 @@ namespace LibraryManager
 
             }
         }
+        void loadAvt()
+        {
+            pictureAvt.Image = dgBus.LoadAnh(Madocgia);
+        }
 
         private void picIcon_Click(object sender, EventArgs e)
         {
@@ -107,6 +111,7 @@ namespace LibraryManager
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
+            loadAvt();
 
         }
 
@@ -124,7 +129,7 @@ namespace LibraryManager
             {
                 panelShow.Controls.Clear();
                 List<string> dsmuon = GUI.TimKiem4Hello.dsMuon;
-                MessageBox.Show(dsmuon[0]);
+
                 panelShow.Controls.Add(new Template.PhieuMuon(Madocgia,dsmuon));
                 GUI.TimKiem4Hello.DaTim = false;
             }
@@ -144,6 +149,7 @@ namespace LibraryManager
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
+            loadAvt();
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.InfoDG(Madocgia));
         }
@@ -152,18 +158,21 @@ namespace LibraryManager
 
         private void btnTk_Sach_Click(object sender, EventArgs e)
         {
+            loadAvt();
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.TK_sachmuon_dg(Madocgia));
         }
 
         private void btnTimKiemSach_Click(object sender, EventArgs e)
         {
+            loadAvt();
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.FrmTimKiemForDG());
         }
 
         private void btnMuonSach_Click(object sender, EventArgs e)
         {
+            loadAvt();
             //nếu list sách mượn chưa có sách nào thì cho độc giả tìm sách xong mới mượn
             panelShow.Controls.Clear();
 

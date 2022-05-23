@@ -105,7 +105,7 @@ namespace LibraryManager.Template
             this.rbTatCa.CheckedState.InnerOffset = -4;
             this.rbTatCa.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTatCa.Location = new System.Drawing.Point(10, 11);
-            this.rbTatCa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTatCa.Margin = new System.Windows.Forms.Padding(2);
             this.rbTatCa.Name = "rbTatCa";
             this.rbTatCa.Size = new System.Drawing.Size(99, 23);
             this.rbTatCa.TabIndex = 3;
@@ -129,7 +129,7 @@ namespace LibraryManager.Template
             this.rbQuaHan.CheckedState.InnerOffset = -4;
             this.rbQuaHan.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbQuaHan.Location = new System.Drawing.Point(464, 11);
-            this.rbQuaHan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbQuaHan.Margin = new System.Windows.Forms.Padding(2);
             this.rbQuaHan.Name = "rbQuaHan";
             this.rbQuaHan.Size = new System.Drawing.Size(112, 23);
             this.rbQuaHan.TabIndex = 2;
@@ -153,7 +153,7 @@ namespace LibraryManager.Template
             this.rbGanDenHan.CheckedState.InnerOffset = -4;
             this.rbGanDenHan.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbGanDenHan.Location = new System.Drawing.Point(302, 11);
-            this.rbGanDenHan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbGanDenHan.Margin = new System.Windows.Forms.Padding(2);
             this.rbGanDenHan.Name = "rbGanDenHan";
             this.rbGanDenHan.Size = new System.Drawing.Size(134, 23);
             this.rbGanDenHan.TabIndex = 1;
@@ -177,7 +177,7 @@ namespace LibraryManager.Template
             this.rbDangMuon.CheckedState.InnerOffset = -4;
             this.rbDangMuon.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDangMuon.Location = new System.Drawing.Point(123, 11);
-            this.rbDangMuon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDangMuon.Margin = new System.Windows.Forms.Padding(2);
             this.rbDangMuon.Name = "rbDangMuon";
             this.rbDangMuon.Size = new System.Drawing.Size(157, 23);
             this.rbDangMuon.TabIndex = 0;
@@ -527,7 +527,7 @@ namespace LibraryManager.Template
             this.imageDG.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
             this.imageDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imageDG.Location = new System.Drawing.Point(11, 37);
-            this.imageDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imageDG.Margin = new System.Windows.Forms.Padding(2);
             this.imageDG.Name = "imageDG";
             this.imageDG.Size = new System.Drawing.Size(108, 117);
             this.imageDG.TabIndex = 3;
@@ -655,7 +655,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dgvInfoDocGia);
             this.Controls.Add(this.guna2CustomGradientPanel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmThongTinDG";
             this.Size = new System.Drawing.Size(1036, 627);
             this.Load += new System.EventHandler(this.FrmThongTinDG_Load);

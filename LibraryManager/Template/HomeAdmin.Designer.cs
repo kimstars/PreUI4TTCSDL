@@ -30,9 +30,6 @@ namespace LibraryManager.Template
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeAdmin));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,10 +37,6 @@ namespace LibraryManager.Template
             this.label13 = new System.Windows.Forms.Label();
             this.chartDG = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label15 = new System.Windows.Forms.Label();
-            this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.lbTongDS = new System.Windows.Forms.Label();
@@ -59,17 +52,24 @@ namespace LibraryManager.Template
             this.lbTongSach = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.chartSach = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.circleProcessPercent = new Bunifu.UI.WinForms.BunifuCircleProgress();
+            this.lbP_sanco = new System.Windows.Forms.Label();
+            this.lbP_muon = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDG)).BeginInit();
-            this.bunifuPanel4.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartSach)).BeginInit();
+            this.bunifuPanel6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel5
@@ -84,11 +84,11 @@ namespace LibraryManager.Template
             this.bunifuPanel5.Controls.Add(this.chartDG);
             this.bunifuPanel5.Controls.Add(this.label15);
             this.bunifuPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel5.Location = new System.Drawing.Point(95, 316);
+            this.bunifuPanel5.Location = new System.Drawing.Point(95, 267);
             this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
-            this.bunifuPanel5.Size = new System.Drawing.Size(847, 512);
+            this.bunifuPanel5.Size = new System.Drawing.Size(764, 441);
             this.bunifuPanel5.TabIndex = 24;
             // 
             // label13
@@ -106,19 +106,19 @@ namespace LibraryManager.Template
             // 
             // chartDG
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartDG.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartDG.Legends.Add(legend1);
-            this.chartDG.Location = new System.Drawing.Point(39, 96);
+            chartArea2.Name = "ChartArea1";
+            this.chartDG.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartDG.Legends.Add(legend2);
+            this.chartDG.Location = new System.Drawing.Point(38, 52);
             this.chartDG.Margin = new System.Windows.Forms.Padding(4);
             this.chartDG.Name = "chartDG";
-            series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "DocGia";
-            this.chartDG.Series.Add(series1);
-            this.chartDG.Size = new System.Drawing.Size(765, 369);
+            series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "DocGia";
+            this.chartDG.Series.Add(series2);
+            this.chartDG.Size = new System.Drawing.Size(684, 369);
             this.chartDG.TabIndex = 21;
             this.chartDG.Text = "chart1";
             // 
@@ -134,65 +134,6 @@ namespace LibraryManager.Template
             this.label15.Size = new System.Drawing.Size(0, 28);
             this.label15.TabIndex = 20;
             // 
-            // bunifuPanel4
-            // 
-            this.bunifuPanel4.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel4.BackgroundImage")));
-            this.bunifuPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel4.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel4.BorderRadius = 30;
-            this.bunifuPanel4.BorderThickness = 1;
-            this.bunifuPanel4.Controls.Add(this.chartSach);
-            this.bunifuPanel4.Controls.Add(this.label12);
-            this.bunifuPanel4.Controls.Add(this.label11);
-            this.bunifuPanel4.Controls.Add(this.label10);
-            this.bunifuPanel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel4.Location = new System.Drawing.Point(980, 316);
-            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuPanel4.Name = "bunifuPanel4";
-            this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(516, 512);
-            this.bunifuPanel4.TabIndex = 22;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label12.Location = new System.Drawing.Point(327, 140);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 30);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Số sách đã mượn";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label11.Location = new System.Drawing.Point(327, 96);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 30);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Số sách sẵn có";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label10.Location = new System.Drawing.Point(23, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(421, 30);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Biểu đồ số sách còn lại trong thư viện";
-            // 
             // bunifuPanel3
             // 
             this.bunifuPanel3.BackgroundColor = System.Drawing.Color.White;
@@ -201,16 +142,14 @@ namespace LibraryManager.Template
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 30;
             this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.label7);
-            this.bunifuPanel3.Controls.Add(this.lbTongDS);
-            this.bunifuPanel3.Controls.Add(this.label9);
+            this.bunifuPanel3.Controls.Add(this.panel1);
             this.bunifuPanel3.Controls.Add(this.bunifuPictureBox3);
             this.bunifuPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel3.Location = new System.Drawing.Point(1051, 66);
+            this.bunifuPanel3.Location = new System.Drawing.Point(960, 30);
             this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(335, 187);
+            this.bunifuPanel3.Size = new System.Drawing.Size(471, 187);
             this.bunifuPanel3.TabIndex = 21;
             // 
             // label7
@@ -219,7 +158,7 @@ namespace LibraryManager.Template
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(201, 26);
+            this.label7.Location = new System.Drawing.Point(114, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 28);
@@ -232,7 +171,7 @@ namespace LibraryManager.Template
             this.lbTongDS.BackColor = System.Drawing.Color.Transparent;
             this.lbTongDS.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.lbTongDS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.lbTongDS.Location = new System.Drawing.Point(221, 65);
+            this.lbTongDS.Location = new System.Drawing.Point(123, 47);
             this.lbTongDS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTongDS.Name = "lbTongDS";
             this.lbTongDS.Size = new System.Drawing.Size(60, 46);
@@ -245,7 +184,7 @@ namespace LibraryManager.Template
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(180, 123);
+            this.label9.Location = new System.Drawing.Point(96, 105);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 28);
@@ -260,7 +199,7 @@ namespace LibraryManager.Template
             this.bunifuPictureBox3.BorderRadius = 45;
             this.bunifuPictureBox3.Image = global::LibraryManager.Properties.Resources.icons8_moleskine_500px;
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(25, 48);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(44, 48);
             this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
             this.bunifuPictureBox3.Size = new System.Drawing.Size(91, 91);
@@ -282,7 +221,7 @@ namespace LibraryManager.Template
             this.bunifuPanel2.Controls.Add(this.label6);
             this.bunifuPanel2.Controls.Add(this.bunifuPictureBox2);
             this.bunifuPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel2.Location = new System.Drawing.Point(607, 66);
+            this.bunifuPanel2.Location = new System.Drawing.Point(524, 30);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
@@ -358,7 +297,7 @@ namespace LibraryManager.Template
             this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel1.Location = new System.Drawing.Point(95, 66);
+            this.bunifuPanel1.Location = new System.Drawing.Point(95, 30);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
@@ -422,44 +361,164 @@ namespace LibraryManager.Template
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // chartSach
+            // bunifuPanel6
             // 
-            this.chartSach.BorderlineWidth = 5;
-            this.chartSach.BorderSkin.BorderWidth = 2;
-            chartArea2.Name = "ChartArea1";
-            this.chartSach.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartSach.Legends.Add(legend2);
-            this.chartSach.Location = new System.Drawing.Point(19, 96);
-            this.chartSach.Name = "chartSach";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "sach";
-            this.chartSach.Series.Add(series2);
-            this.chartSach.Size = new System.Drawing.Size(309, 356);
-            this.chartSach.TabIndex = 25;
+            this.bunifuPanel6.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel6.BackgroundImage")));
+            this.bunifuPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel6.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel6.BorderRadius = 30;
+            this.bunifuPanel6.BorderThickness = 1;
+            this.bunifuPanel6.Controls.Add(this.guna2CircleButton2);
+            this.bunifuPanel6.Controls.Add(this.guna2CircleButton1);
+            this.bunifuPanel6.Controls.Add(this.circleProcessPercent);
+            this.bunifuPanel6.Controls.Add(this.lbP_sanco);
+            this.bunifuPanel6.Controls.Add(this.lbP_muon);
+            this.bunifuPanel6.Controls.Add(this.label2);
+            this.bunifuPanel6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuPanel6.Location = new System.Drawing.Point(960, 267);
+            this.bunifuPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel6.Name = "bunifuPanel6";
+            this.bunifuPanel6.ShowBorders = true;
+            this.bunifuPanel6.Size = new System.Drawing.Size(471, 441);
+            this.bunifuPanel6.TabIndex = 25;
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.Gray;
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.Location = new System.Drawing.Point(44, 118);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(13, 12);
+            this.guna2CircleButton2.TabIndex = 31;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.DodgerBlue;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(44, 81);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(13, 12);
+            this.guna2CircleButton1.TabIndex = 30;
+            // 
+            // circleProcessPercent
+            // 
+            this.circleProcessPercent.Animated = false;
+            this.circleProcessPercent.AnimationInterval = 1;
+            this.circleProcessPercent.AnimationSpeed = 1;
+            this.circleProcessPercent.BackColor = System.Drawing.Color.Transparent;
+            this.circleProcessPercent.CircleMargin = 10;
+            this.circleProcessPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this.circleProcessPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.circleProcessPercent.IsPercentage = true;
+            this.circleProcessPercent.LineProgressThickness = 10;
+            this.circleProcessPercent.LineThickness = 10;
+            this.circleProcessPercent.Location = new System.Drawing.Point(206, 162);
+            this.circleProcessPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.circleProcessPercent.Name = "circleProcessPercent";
+            this.circleProcessPercent.ProgressAnimationSpeed = 200;
+            this.circleProcessPercent.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.circleProcessPercent.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.circleProcessPercent.ProgressColor2 = System.Drawing.Color.DodgerBlue;
+            this.circleProcessPercent.ProgressEndCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
+            this.circleProcessPercent.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
+            this.circleProcessPercent.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
+            this.circleProcessPercent.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.circleProcessPercent.Size = new System.Drawing.Size(245, 245);
+            this.circleProcessPercent.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circleProcessPercent.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
+            this.circleProcessPercent.SubScriptText = ".00";
+            this.circleProcessPercent.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circleProcessPercent.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
+            this.circleProcessPercent.SuperScriptText = "%";
+            this.circleProcessPercent.TabIndex = 16;
+            this.circleProcessPercent.Text = "30";
+            this.circleProcessPercent.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.circleProcessPercent.Value = 30;
+            this.circleProcessPercent.ValueByTransition = 30;
+            this.circleProcessPercent.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            // 
+            // lbP_sanco
+            // 
+            this.lbP_sanco.AutoSize = true;
+            this.lbP_sanco.BackColor = System.Drawing.Color.Transparent;
+            this.lbP_sanco.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbP_sanco.ForeColor = System.Drawing.Color.DimGray;
+            this.lbP_sanco.Location = new System.Drawing.Point(77, 69);
+            this.lbP_sanco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbP_sanco.Name = "lbP_sanco";
+            this.lbP_sanco.Size = new System.Drawing.Size(139, 25);
+            this.lbP_sanco.TabIndex = 25;
+            this.lbP_sanco.Text = "Số sách sẵn có";
+            // 
+            // lbP_muon
+            // 
+            this.lbP_muon.AutoSize = true;
+            this.lbP_muon.BackColor = System.Drawing.Color.Transparent;
+            this.lbP_muon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbP_muon.ForeColor = System.Drawing.Color.DimGray;
+            this.lbP_muon.Location = new System.Drawing.Point(77, 106);
+            this.lbP_muon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbP_muon.Name = "lbP_muon";
+            this.lbP_muon.Size = new System.Drawing.Size(164, 25);
+            this.lbP_muon.TabIndex = 29;
+            this.lbP_muon.Text = "Số sách đã mượn";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.label2.Location = new System.Drawing.Point(24, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(387, 28);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Biểu đồ số sách còn lại trong thư viện";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.lbTongDS);
+            this.panel1.Location = new System.Drawing.Point(239, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 147);
+            this.panel1.TabIndex = 20;
             // 
             // HomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuPanel6);
             this.Controls.Add(this.bunifuPanel5);
-            this.Controls.Add(this.bunifuPanel4);
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeAdmin";
-            this.Size = new System.Drawing.Size(1572, 890);
+            this.Size = new System.Drawing.Size(1479, 737);
             this.Load += new System.EventHandler(this.HomeAdmin_Load);
             this.bunifuPanel5.ResumeLayout(false);
             this.bunifuPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDG)).EndInit();
-            this.bunifuPanel4.ResumeLayout(false);
-            this.bunifuPanel4.PerformLayout();
             this.bunifuPanel3.ResumeLayout(false);
-            this.bunifuPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
@@ -467,7 +526,10 @@ namespace LibraryManager.Template
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartSach)).EndInit();
+            this.bunifuPanel6.ResumeLayout(false);
+            this.bunifuPanel6.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -489,14 +551,17 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label lbTongDS;
         private System.Windows.Forms.Label label9;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox3;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDG;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartSach;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Bunifu.UI.WinForms.BunifuCircleProgress circleProcessPercent;
+        private System.Windows.Forms.Label lbP_sanco;
+        private System.Windows.Forms.Label lbP_muon;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

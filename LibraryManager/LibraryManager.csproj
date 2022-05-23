@@ -684,6 +684,12 @@
     <Compile Include="Template\QLInfoDocgia.Designer.cs">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\ThongKeNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\ThongKeNV.Designer.cs">
+      <DependentUpon>ThongKeNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Thongtin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -867,6 +873,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\QLInfoDocgia.resx">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\ThongKeNV.resx">
+      <DependentUpon>ThongKeNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\Thongtin.resx">
       <DependentUpon>Thongtin.cs</DependentUpon>

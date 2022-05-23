@@ -43,7 +43,6 @@ namespace LibraryManager.Template
             this.label11 = new System.Windows.Forms.Label();
             this.cbGioitinh = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pickerBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@ namespace LibraryManager.Template
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pickerBirthday = new LibraryManager.Template.DateTimePickerKiet();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -180,7 +180,7 @@ namespace LibraryManager.Template
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::LibraryManager.Properties.Resources.icons8_search_32px;
             this.txtSearch.Location = new System.Drawing.Point(7, 55);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -207,17 +207,18 @@ namespace LibraryManager.Template
             this.btnAddNV.Size = new System.Drawing.Size(115, 46);
             this.btnAddNV.TabIndex = 3;
             this.btnAddNV.Text = "Thêm NV";
+            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Red;
             this.guna2CustomGradientPanel1.BorderRadius = 12;
+            this.guna2CustomGradientPanel1.Controls.Add(this.pickerBirthday);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtEmail);
             this.guna2CustomGradientPanel1.Controls.Add(this.label11);
             this.guna2CustomGradientPanel1.Controls.Add(this.cbGioitinh);
             this.guna2CustomGradientPanel1.Controls.Add(this.label8);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pickerBirthday);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtName);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label5);
@@ -250,7 +251,7 @@ namespace LibraryManager.Template
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
             this.txtEmail.Location = new System.Drawing.Point(129, 229);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -306,24 +307,6 @@ namespace LibraryManager.Template
             this.label8.TabIndex = 8;
             this.label8.Text = "Giới tính:";
             // 
-            // pickerBirthday
-            // 
-            this.pickerBirthday.BackColor = System.Drawing.Color.Transparent;
-            this.pickerBirthday.BorderRadius = 6;
-            this.pickerBirthday.CheckedState.Parent = this.pickerBirthday;
-            this.pickerBirthday.FillColor = System.Drawing.Color.White;
-            this.pickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.pickerBirthday.HoverState.Parent = this.pickerBirthday;
-            this.pickerBirthday.Location = new System.Drawing.Point(21, 134);
-            this.pickerBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pickerBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.pickerBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.ShadowDecoration.Parent = this.pickerBirthday;
-            this.pickerBirthday.Size = new System.Drawing.Size(271, 47);
-            this.pickerBirthday.TabIndex = 7;
-            this.pickerBirthday.Value = new System.DateTime(2022, 3, 9, 8, 29, 20, 514);
-            // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.Transparent;
@@ -343,7 +326,7 @@ namespace LibraryManager.Template
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.IconRight = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
             this.txtName.Location = new System.Drawing.Point(21, 41);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -414,7 +397,7 @@ namespace LibraryManager.Template
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(21, 228);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(5);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
             this.txtCMND.PlaceholderText = "";
@@ -441,7 +424,7 @@ namespace LibraryManager.Template
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
             this.txtDiaChi.Location = new System.Drawing.Point(25, 133);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
@@ -479,7 +462,7 @@ namespace LibraryManager.Template
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(21, 39);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
@@ -509,6 +492,20 @@ namespace LibraryManager.Template
             this.label7.Size = new System.Drawing.Size(92, 19);
             this.label7.TabIndex = 0;
             this.label7.Text = "Số điện thoại:";
+            // 
+            // pickerBirthday
+            // 
+            this.pickerBirthday.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.pickerBirthday.BorderRadius = 6;
+            this.pickerBirthday.BorderSize = 0;
+            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.pickerBirthday.Location = new System.Drawing.Point(21, 141);
+            this.pickerBirthday.MinimumSize = new System.Drawing.Size(0, 44);
+            this.pickerBirthday.Name = "pickerBirthday";
+            this.pickerBirthday.Size = new System.Drawing.Size(271, 44);
+            this.pickerBirthday.SkinColor = System.Drawing.Color.White;
+            this.pickerBirthday.TabIndex = 13;
+            this.pickerBirthday.TextColor = System.Drawing.Color.Black;
             // 
             // DanhsachNV
             // 
@@ -552,7 +549,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2ComboBox cbGioitinh;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2DateTimePicker pickerBirthday;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -563,5 +559,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private DateTimePickerKiet pickerBirthday;
     }
 }

@@ -33,10 +33,10 @@ namespace LibraryManager.BUS
 
             return home.GetTongTL();
         }
-        public DataTable Get2Anh()
+        public DataTable GetTop2Dausach()
         {
 
-            return home.Get2Anh();
+            return home.GetTop2_DSNhieuNhat();
         }
         public DataTable LoadPhieuMuon()
         {

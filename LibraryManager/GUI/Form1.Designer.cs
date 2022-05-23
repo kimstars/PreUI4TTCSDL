@@ -301,7 +301,7 @@ namespace LibraryManager
             this.panel2.Controls.Add(this.btnLoginn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 82);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 2);
             this.panel2.TabIndex = 18;
@@ -421,7 +421,7 @@ namespace LibraryManager
             // 
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(253, 52);
-            this.panelShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(4);
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(1299, 828);
             this.panelShow.TabIndex = 13;

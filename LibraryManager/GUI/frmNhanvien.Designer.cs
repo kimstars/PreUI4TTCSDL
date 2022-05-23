@@ -760,6 +760,7 @@ namespace LibraryManager
             this.btnM_ThongKe.TabIndex = 15;
             this.btnM_ThongKe.Tag = "Thống kê";
             this.btnM_ThongKe.Text = "Thống kê";
+            this.btnM_ThongKe.Click += new System.EventHandler(this.btnM_ThongKe_Click);
             // 
             // btnHome
             // 

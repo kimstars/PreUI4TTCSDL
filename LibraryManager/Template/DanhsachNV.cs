@@ -50,5 +50,10 @@ namespace LibraryManager.Template
             txtCMND.Text = row.Cells["CMND"].Value.ToString();
             txtEmail.Text = row.Cells["Email"].Value.ToString();
         }
+
+        private void btnAddNV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -294,5 +294,10 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.DSPhieuMuonNV());
         }
+
+        private void btnM_ThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
