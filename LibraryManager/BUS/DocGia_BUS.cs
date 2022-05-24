@@ -58,7 +58,7 @@ namespace LibraryManager.BUS
         {
             byte[] img = LoadImageFromTableDB("DocGia", maID, "MaDocGia");
             PictureBox avt = new PictureBox();
-            if (img !=  null)
+            if (img !=  null && img.Length > 0)
             {
                 return Image.FromStream(new MemoryStream(img));
             }
@@ -89,6 +89,10 @@ namespace LibraryManager.BUS
         {
             return dgDao.GetMaDG_PhieuMuon(MaMT);
         }
+
+
+
+
 
         #endregion
 
@@ -154,5 +158,9 @@ namespace LibraryManager.BUS
         }
 
         #endregion
+
+
+
+        
     }
 }

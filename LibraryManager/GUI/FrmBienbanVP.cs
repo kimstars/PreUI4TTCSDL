@@ -25,6 +25,14 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
+
+        string MaNhanVien = "";
+        public FrmBienbanVP(string MaNV)
+        {
+            InitializeComponent();
+            MaNhanVien = MaNV;
+        }
+
         public FrmBienbanVP(string madg, string date, List<string> book)
         {
             madocgia = madg;

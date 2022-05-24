@@ -28,7 +28,7 @@ namespace LibraryManager.Template
         {
             string keyword = txtSearch.Text;
             string type = cbFilterNV.Text;
-            MessageBox.Show(type);
+
             if (keyword != "")
             {
                 dgvNhanvien.DataSource = nvbus.TimKiem(keyword);
@@ -43,16 +43,18 @@ namespace LibraryManager.Template
         {
             DataGridViewRow row = dgvNhanvien.Rows[e.RowIndex];
             txtName.Text = row.Cells[2].Value.ToString();
-            txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+            txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString().Trim();
             pickerBirthday.Value = DateTime.Parse(row.Cells[4].Value.ToString()); ;
-            cbGioitinh.Text = row.Cells["GioiTinh"].Value.ToString();
+            cbGioitinh.SelectedIndex = row.Cells["GioiTinh"].Value.ToString() == "Nam" ? 0 : 1;
             txtSDT.Text = row.Cells["SDT"].Value.ToString();
             txtCMND.Text = row.Cells["CMND"].Value.ToString();
             txtEmail.Text = row.Cells["Email"].Value.ToString();
         }
+       
 
         private void btnAddNV_Click(object sender, EventArgs e)
         {
+           
 
         }
     }

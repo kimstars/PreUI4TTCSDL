@@ -21,11 +21,7 @@ namespace LibraryManager.DAO
             if (GetData("select * from NHANVIEN where MaNhanVien = '" + nv.MaNhanVien + "'").Rows.Count > 0)
                 return false;
 
-            string sql = string.Format("Insert Into ACCOUNT values('{0}', '{1}', '{2}', '{3}')", nv.MaNhanVien, nv.TenDangNhap, "", 1);
-            Excute(sql);
-
-            sql = string.Format("Insert Into NHANVIEN values('{0}','{1}','{2}','{3}','{4}','{5}')",
-                nv.MaNhanVien, nv.TenDangNhap, nv.TenNhanVien, nv.GioiTinh, nv.NgaySinh, nv.DiaChi);
+            string sql = $"INSERT INTO dbo.NHANVIEN VALUES ('{nv.MaNhanVien}',N'{nv.TenNhanVien}',N'{nv.ChucVu}','{DateToString(nv.NgaySinh)}',N'{nv.GioiTinh}',N'{nv.DiaChi}','{nv.Email}','{nv.SDT}','{nv.CMND}','{nv.TenDangNhap}',NULL)";
             Excute(sql);
 
 
@@ -39,17 +35,16 @@ namespace LibraryManager.DAO
 
         public void Update(NhanVien nv)
         {
-            string sql = string.Format("update NHANVIEN set HoTen = N'{0}', GioiTinh = N'{1}', NamSinh = '{2}', DiaChi = N'{3}', TenDangNhap = '{5}' where MaNhanVien = '{4}'",
-                nv.TenNhanVien, nv.GioiTinh, nv.NgaySinh, nv.DiaChi, nv.MaNhanVien, nv.TenDangNhap);
+            string sql = string.Format("update NHANVIEN set TenNhanVien = N'{0}', GioiTinh = N'{1}', NgaySinh = '{2}', DiaChi = N'{3}', TenDangNhap = '{4}' where MaNhanVien = '{5}'",
+                nv.TenNhanVien, nv.GioiTinh, nv.NgaySinh, nv.DiaChi, nv.TenDangNhap, nv.MaNhanVien);
             Excute(sql);
 
-            sql = string.Format("update ACCOUNT set TenDangNhap = '{0}' where MaNhanVien = '{1}'", nv.TenDangNhap, nv.MaNhanVien);
-            Excute(sql);
+           
         }
 
         public DataTable Search(string _timkiem)
         {
-            string sqlString = string.Format("select *  from nhanvien where MaNhanVien like '{0}' or TenNhanVien like N'{0}' or ChucVu like N'{0}' or NgaySinh like '{0}' or GioiTinh like N'{0}' or Email like '{0}' or SDT like '{0}' or CMND like '{0}' or TenDangNhap like '{0}' ", _timkiem);
+            string sqlString = string.Format("select *  from nhanvien where MaNhanVien like '{0}' or TenNhanVien like N'%{0}%' or ChucVu like N'%{0}%' or NgaySinh like '%{0}%' or GioiTinh like N'%{0}%' or Email like '%{0}%' or SDT like '%{0}%' or CMND like '%{0}%' or TenDangNhap like '%{0}%' ", _timkiem);
             
 
             return GetData(sqlString);
@@ -74,6 +69,12 @@ namespace LibraryManager.DAO
         {
             string sql = $"select TenNhanVien,ChucVu,NgaySinh,GioiTinh,DiaChi,Email,SDT,CMND,TenDangNhap from Nhanvien WHERE MaNhanVien = '{MaNV}'";
             return GetData(sql);
+        }
+
+        public string GetLastest_MaNhanVien()
+        {
+            string sql = "SELECT TOP 1 MaNhanVien FROM dbo.NHANVIEN ORDER BY MaNhanVien DESC";
+            return GetString(sql);
         }
 
         #endregion

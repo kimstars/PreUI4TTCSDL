@@ -299,5 +299,10 @@ namespace LibraryManager
         {
 
         }
+
+        private void btnM_LapBBvp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

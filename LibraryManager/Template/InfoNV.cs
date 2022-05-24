@@ -63,9 +63,8 @@ namespace LibraryManager.Template
                 dlg.Title = "Chon anh";
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-
                     imgPath = dlg.FileName.ToString();
-                    imageAvt.BackgroundImage = Image.FromFile(imgPath);
+                    imageAvt.Image = Image.FromFile(imgPath);
                 }
             }
             catch (Exception ex)
@@ -84,6 +83,9 @@ namespace LibraryManager.Template
             nv.DiaChi = txtDiaChi.Text;
             nv.CMND = txtCMND.Text;
             nv.GioiTinh = cbGioitinh.Text;
+            nv.MaNhanVien = lbMaNV.Text;
+            nv.TenDangNhap = lbTenDangNhap.Text;
+
             if (nvBus.Sua(nv))
             {
                 MessageBox.Show("Cập nhật thành công!!");
@@ -130,5 +132,7 @@ namespace LibraryManager.Template
             }
 
         }
+
+   
     }
 }

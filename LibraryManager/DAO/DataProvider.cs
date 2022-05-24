@@ -68,6 +68,10 @@ namespace LibraryManager.DAO
             {
                 imgbin = (byte[])reader[0];
             }
+            else
+            {
+                imgbin = new byte[0];
+            }
             connect.Close();
             return imgbin ;
         }

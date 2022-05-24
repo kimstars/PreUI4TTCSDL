@@ -95,7 +95,7 @@ namespace LibraryManager.Template
             this.panel1.Location = new System.Drawing.Point(3, 57);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1103, 111);
+            this.panel1.Size = new System.Drawing.Size(1122, 111);
             this.panel1.TabIndex = 4;
             // 
             // btnSearchNV
@@ -200,7 +200,7 @@ namespace LibraryManager.Template
             this.btnAddNV.ForeColor = System.Drawing.Color.White;
             this.btnAddNV.HoverState.Parent = this.btnAddNV;
             this.btnAddNV.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnAddNV.Location = new System.Drawing.Point(992, 5);
+            this.btnAddNV.Location = new System.Drawing.Point(1010, 7);
             this.btnAddNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.ShadowDecoration.Parent = this.btnAddNV;
@@ -230,7 +230,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(315, 306);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(333, 306);
             this.guna2CustomGradientPanel1.TabIndex = 15;
             // 
             // txtEmail
@@ -250,14 +250,14 @@ namespace LibraryManager.Template
             this.txtEmail.FocusedState.Parent = this.txtEmail;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(129, 229);
+            this.txtEmail.Location = new System.Drawing.Point(162, 229);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
             this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
-            this.txtEmail.Size = new System.Drawing.Size(164, 47);
+            this.txtEmail.Size = new System.Drawing.Size(152, 47);
             this.txtEmail.TabIndex = 12;
             // 
             // label11
@@ -265,7 +265,7 @@ namespace LibraryManager.Template
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(125, 202);
+            this.label11.Location = new System.Drawing.Point(157, 205);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 19);
             this.label11.TabIndex = 11;
@@ -289,11 +289,11 @@ namespace LibraryManager.Template
             "Nam",
             "Nữ"});
             this.cbGioitinh.ItemsAppearance.Parent = this.cbGioitinh;
-            this.cbGioitinh.Location = new System.Drawing.Point(23, 236);
+            this.cbGioitinh.Location = new System.Drawing.Point(21, 240);
             this.cbGioitinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbGioitinh.Name = "cbGioitinh";
             this.cbGioitinh.ShadowDecoration.Parent = this.cbGioitinh;
-            this.cbGioitinh.Size = new System.Drawing.Size(81, 36);
+            this.cbGioitinh.Size = new System.Drawing.Size(118, 36);
             this.cbGioitinh.TabIndex = 10;
             // 
             // label8
@@ -332,7 +332,7 @@ namespace LibraryManager.Template
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(271, 47);
+            this.txtName.Size = new System.Drawing.Size(293, 47);
             this.txtName.TabIndex = 6;
             // 
             // label4
@@ -376,7 +376,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(315, 306);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(333, 306);
             this.guna2CustomGradientPanel2.TabIndex = 16;
             // 
             // txtCMND
@@ -403,7 +403,7 @@ namespace LibraryManager.Template
             this.txtCMND.PlaceholderText = "";
             this.txtCMND.SelectedText = "";
             this.txtCMND.ShadowDecoration.Parent = this.txtCMND;
-            this.txtCMND.Size = new System.Drawing.Size(271, 47);
+            this.txtCMND.Size = new System.Drawing.Size(294, 47);
             this.txtCMND.TabIndex = 9;
             // 
             // txtDiaChi
@@ -430,7 +430,7 @@ namespace LibraryManager.Template
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(271, 47);
+            this.txtDiaChi.Size = new System.Drawing.Size(294, 47);
             this.txtDiaChi.TabIndex = 7;
             // 
             // label10
@@ -468,7 +468,7 @@ namespace LibraryManager.Template
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
             this.txtSDT.ShadowDecoration.Parent = this.txtSDT;
-            this.txtSDT.Size = new System.Drawing.Size(271, 47);
+            this.txtSDT.Size = new System.Drawing.Size(294, 47);
             this.txtSDT.TabIndex = 6;
             // 
             // label6
@@ -500,9 +500,9 @@ namespace LibraryManager.Template
             this.pickerBirthday.BorderSize = 0;
             this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.pickerBirthday.Location = new System.Drawing.Point(21, 141);
-            this.pickerBirthday.MinimumSize = new System.Drawing.Size(0, 44);
+            this.pickerBirthday.MinimumSize = new System.Drawing.Size(4, 44);
             this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(271, 44);
+            this.pickerBirthday.Size = new System.Drawing.Size(294, 44);
             this.pickerBirthday.SkinColor = System.Drawing.Color.White;
             this.pickerBirthday.TabIndex = 13;
             this.pickerBirthday.TextColor = System.Drawing.Color.Black;
@@ -519,7 +519,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.dgvNhanvien);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DanhsachNV";
-            this.Size = new System.Drawing.Size(1133, 802);
+            this.Size = new System.Drawing.Size(1150, 802);
             this.Load += new System.EventHandler(this.DanhsachNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).EndInit();
             this.panel1.ResumeLayout(false);

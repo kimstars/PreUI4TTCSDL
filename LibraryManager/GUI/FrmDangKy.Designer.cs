@@ -102,7 +102,7 @@ namespace LibraryManager.GUI
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
             this.btnSubmit.Size = new System.Drawing.Size(287, 46);
             this.btnSubmit.TabIndex = 16;
-            this.btnSubmit.Text = "Đăng nhập";
+            this.btnSubmit.Text = "Đăng ký";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtUsername
@@ -151,7 +151,7 @@ namespace LibraryManager.GUI
             this.txtMatkhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatkhau.HoverState.Parent = this.txtMatkhau;
             this.txtMatkhau.IconLeft = global::LibraryManager.Properties.Resources.icons8_password_16px;
-            this.txtMatkhau.Location = new System.Drawing.Point(122, 272);
+            this.txtMatkhau.Location = new System.Drawing.Point(122, 277);
             this.txtMatkhau.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.PasswordChar = '•';
@@ -179,7 +179,7 @@ namespace LibraryManager.GUI
             this.txtMatkhau1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatkhau1.HoverState.Parent = this.txtMatkhau1;
             this.txtMatkhau1.IconLeft = global::LibraryManager.Properties.Resources.icons8_password_16px;
-            this.txtMatkhau1.Location = new System.Drawing.Point(122, 346);
+            this.txtMatkhau1.Location = new System.Drawing.Point(121, 346);
             this.txtMatkhau1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtMatkhau1.Name = "txtMatkhau1";
             this.txtMatkhau1.PasswordChar = '•';
@@ -214,7 +214,7 @@ namespace LibraryManager.GUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(168, 427);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 16);
+            this.label1.Size = new System.Drawing.Size(238, 17);
             this.label1.TabIndex = 23;
             this.label1.Text = "Đồng ý chấp hành Nội quy thư viện?";
             // 
@@ -228,7 +228,7 @@ namespace LibraryManager.GUI
             this.checkShowPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.checkShowPass.Location = new System.Drawing.Point(282, 249);
             this.checkShowPass.Name = "checkShowPass";
-            this.checkShowPass.Size = new System.Drawing.Size(128, 20);
+            this.checkShowPass.Size = new System.Drawing.Size(140, 21);
             this.checkShowPass.TabIndex = 26;
             this.checkShowPass.Text = "Hiển thị mật khẩu";
             this.checkShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -244,7 +244,7 @@ namespace LibraryManager.GUI
             this.lbMsg.ForeColor = System.Drawing.Color.Red;
             this.lbMsg.Location = new System.Drawing.Point(119, 398);
             this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(11, 16);
+            this.lbMsg.Size = new System.Drawing.Size(12, 17);
             this.lbMsg.TabIndex = 28;
             this.lbMsg.Text = ".";
             // 
@@ -258,7 +258,7 @@ namespace LibraryManager.GUI
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(86, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(324, 30);
+            this.label2.Size = new System.Drawing.Size(410, 37);
             this.label2.TabIndex = 29;
             this.label2.Text = "ĐĂNG KÝ TÀI KHOẢN ĐỘC GIẢ";
             // 
@@ -285,7 +285,7 @@ namespace LibraryManager.GUI
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(118, 318);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 24);
+            this.label5.Size = new System.Drawing.Size(207, 24);
             this.label5.TabIndex = 32;
             this.label5.Text = "Xác thực mật khẩu ";
             // 

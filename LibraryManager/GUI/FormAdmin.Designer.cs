@@ -757,6 +757,7 @@ namespace LibraryManager.Template
             this.btnAddNV.Size = new System.Drawing.Size(253, 46);
             this.btnAddNV.TabIndex = 15;
             this.btnAddNV.Text = "Thêm nhân viên";
+            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
             // 
             // panelHome
             // 

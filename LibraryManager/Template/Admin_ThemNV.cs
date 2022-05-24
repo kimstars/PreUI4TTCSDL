@@ -7,34 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LibraryManager.DTO;
 using LibraryManager.BUS;
+using LibraryManager.DTO;
 
 
-namespace LibraryManager.GUI
+namespace LibraryManager.Template
 {
-    public partial class FrmDangKy : Form
+    public partial class Admin_ThemNV : UserControl
     {
-        public FrmDangKy()
+        public Admin_ThemNV()
         {
             InitializeComponent();
         }
 
-        private void checkShowPass_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkShowPass.Checked)
-            {
-                txtMatkhau.PasswordChar = '\0';
-                txtMatkhau1.PasswordChar = '\0';
-            }
-            else
-            {
-                txtMatkhau.PasswordChar = '•';
-                txtMatkhau1.PasswordChar = '•';
-            }
-            
-        }
-
+        TaiKhoan_BUS tkBus = new TaiKhoan_BUS();
         private bool CheckPassword(string passwd)
         {
 
@@ -52,14 +38,13 @@ namespace LibraryManager.GUI
 
             return true;
         }
-        TaiKhoan_BUS tkBus = new TaiKhoan_BUS();
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnThemTK_Click(object sender, EventArgs e)
         {
             string user = txtUsername.Text;
-            string pass = txtMatkhau.Text;
-            string pass1 = txtMatkhau.Text;
-            bool check1, check2, check3,check4;
-            check1 = check2 = check3 = check4 = true;
+            string pass = txtMatKhau.Text;
+            string pass1 = txtMatKhau1.Text;
+            bool check1, check2, check3;
+            check1 = check2 = check3 = true;
             if (user.Trim() == string.Empty)
             {
 
@@ -84,35 +69,33 @@ namespace LibraryManager.GUI
                 errorProvider1.SetError(lbMsg, "Không được để trống!!");
                 check2 = false;
             }
-            else if(pass != pass1)
+            else if (pass != pass1)
             {
                 errorProvider1.SetError(lbMsg, "Mật khẩu không khớp nhau !");
                 lbMsg.Text = "Mật khẩu không khớp nhau !!";
 
                 check3 = false;
 
-            } else 
+            }
+            else
             {
                 lbMsg.Text = "";
                 errorProvider1.SetError(lbMsg, null);
                 check2 = true;
             }
 
-            if (btnToggle.Checked)
-            {
-                check4 = true;
-            }
+            
 
-            if (check1 && check2 && check3 && check4)
+            if (check1 && check2 && check3 )
             {
-                TaiKhoan tk = new TaiKhoan(user,pass);
+                TaiKhoan tk = new TaiKhoan(user, pass);
 
-                if (tkBus.DangKy(tk,false))
+                if (tkBus.DangKy(tk,true))
                 {
-                    MessageBox.Show("Đăng ký thành công !!. Quay trở lại đăng nhập nào!! ");
-                    this.Hide();
-                    frmLogin newlogin = new frmLogin();
-                    newlogin.Show();
+                    MessageBox.Show("Đăng ký thành công !! Hãy điền thông tin nhân viên");
+                    panelThongtin.Show();
+                    txtMatKhau.Text = "";
+                    txtMatKhau1.Text = "";
 
                 }
                 else
@@ -120,22 +103,53 @@ namespace LibraryManager.GUI
                     MessageBox.Show("Vui lòng kiểm tra lại thông tin !");
                 }
 
-                
+
 
             }
         }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
+        NhanVien_BUS nvBus = new NhanVien_BUS();
+        private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (!tkBus.checkTonTaiTK(txtUsername.Text))
+            NhanVien nv1 = new NhanVien();
+            nv1.TenNhanVien = txtTenNV.Text;
+            nv1.MaNhanVien = txtMaNV.Text;
+            nv1.NgaySinh = pickerBirthday.Value;
+            nv1.GioiTinh = cbGioitinh.Text;
+            nv1.Email = txtEmail.Text;
+            nv1.SDT = txtSDT.Text;
+            nv1.DiaChi = txtDiaChi.Text;
+            nv1.CMND = txtCMND.Text;
+            nv1.TenDangNhap = txtUsername.Text;
+            nv1.ChucVu = "nhân viên";
+
+            if (nvBus.Them(nv1))
             {
-                errorProvider1.SetError(lbMsg, "Tài khoản đã tồn tại !");
-                lbMsg.Text = "Tài khoản đã tồn tại !";
+                MessageBox.Show("Thêm thành công một nhân viên");
+                dgvThongTin.DataSource = nvBus.GetList();
             }
             else
             {
-                lbMsg.Text = "";
-                errorProvider1.SetError(lbMsg, null);
+                MessageBox.Show("Thêm thành công một nhân viên");
+            }
+
+
+
+        }
+
+        private void Admin_ThemNV_Load(object sender, EventArgs e)
+        {
+            txtMaNV.Text = nvBus.CreateNext_MaMT();
+
+            dgvThongTin.DataSource = nvBus.GetList();
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+            string cmnd = txtCMND.Text;
+            if(cmnd.Length >= 12)
+            {
+                MessageBox.Show("Số cmnd có độ dài tối đa 12 kí tự!");
+                
             }
         }
     }

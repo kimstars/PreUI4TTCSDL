@@ -55,7 +55,7 @@ namespace LibraryManager.DAO
             string sql;
             if (isNV)
             {
-                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', {pm.MaNhanVien}, '{DateToString(pm.NgayMuon) }', '{DateToString(pm.HanTra)}',  1, '{pm.TienCoc}')";
+                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', '{pm.MaNhanVien}', '{DateToString(pm.NgayMuon) }', '{DateToString(pm.HanTra)}',  1, '{pm.TienCoc}')";
             }
             else
             {

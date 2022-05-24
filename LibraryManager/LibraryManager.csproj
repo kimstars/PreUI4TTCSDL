@@ -546,6 +546,12 @@
     <Compile Include="Report\SachMuon.Designer.cs">
       <DependentUpon>SachMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\Admin_ThemNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\Admin_ThemNV.Designer.cs">
+      <DependentUpon>Admin_ThemNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\DanhSachDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -578,12 +584,6 @@
     </Compile>
     <Compile Include="Template\DSSachCoSan.Designer.cs">
       <DependentUpon>DSSachCoSan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmPhieuphat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmPhieuphat.Designer.cs">
-      <DependentUpon>frmPhieuphat.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\FrmThemNXB.cs">
       <SubType>UserControl</SubType>
@@ -808,6 +808,9 @@
     <EmbeddedResource Include="Report\SachMuon.resx">
       <DependentUpon>SachMuon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\Admin_ThemNV.resx">
+      <DependentUpon>Admin_ThemNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\DanhSachDG.resx">
       <DependentUpon>DanhSachDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -822,9 +825,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DSSachCoSan.resx">
       <DependentUpon>DSSachCoSan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmPhieuphat.resx">
-      <DependentUpon>frmPhieuphat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\FrmThemNXB.resx">
       <DependentUpon>FrmThemNXB.cs</DependentUpon>
