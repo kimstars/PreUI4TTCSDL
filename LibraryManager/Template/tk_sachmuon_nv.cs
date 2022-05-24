@@ -28,37 +28,64 @@ namespace LibraryManager.Template
 
             charttk.Titles.Add("Sách mượn");
             dgv_tksachmuon.DataSource = tkBus.load_tt_sachmuon_nv();
+
+
+
+            dateStart.Value = dateEnd.Value.Subtract(new TimeSpan(180, 0, 0, 0));
         }
 
         private void rbtnMadocgia_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
-                cmbMadg.DataSource = tkBus.get_madg_cmb();
+                filter2.DataSource = tkBus.get_madg_cmb();
                 //cmbMadg.DisplayMember = "Madocgia";
-                cmbMadg.ValueMember = "Madocgia";
+                filter2.ValueMember = "Madocgia";
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Có lỗi khi load dữ liệu!\n", ex.ToString());
             }
-            
 
         }
 
         private void btnTK_Click(object sender, EventArgs e)
         {
-            if (rbtnMadocgia.Checked == true)
+            //nếu filter1 và filter2 trống thì lọc theo mã độc giả
+            // các trường hợp còn lại xử lý tiếp
+        }
+
+        private void filter1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Độc giả
+            //Đầu sách
+            //Thể loại
+            //Nhà xuất bản
+
+            string change = filter1.Text;
+            switch (change)
             {
-                string MaDG = cmbMadg.Text;
-                dgv_tksachmuon.DataSource = tkBus.Tk_docgia(MaDG, dateStart.Value, dateEnd.Value);
-            }
-            else if(rbtnTrehan.Checked == true)
-            {
-                dgv_tksachmuon.DataSource = tkBus.get_trehan(cmbMadg.Text);
-            }else if( rbtnMadocgia.Checked == false && rbtnTrehan.Checked == false)
-            {
-                dgv_tksachmuon.DataSource = tkBus.TK_theongay(dateStart.Value, dateEnd.Value);
+                case "Độc giả":
+                    {
+                        txtSearch.PlaceholderText = "Nhập mã hoặc tên độc giả";
+                        break;
+                    }
+                case "Đầu sách":
+                    {
+                        txtSearch.PlaceholderText = "Nhập mã hoặc tên Đầu sách";
+
+                        break;
+                    }
+                case "Thể loại":
+                    {
+                        txtSearch.PlaceholderText = "Nhập mã hoặc tên Thể loại";
+                        break;
+                    }
+                case "Nhà xuất bản":
+                    {
+                        txtSearch.PlaceholderText = "Nhập mã hoặc tên Nhà xuất bản";
+                        break;
+                    }
             }
         }
     }

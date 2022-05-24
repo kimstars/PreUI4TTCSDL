@@ -631,7 +631,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeNV";
             this.Size = new System.Drawing.Size(1373, 806);
             this.Load += new System.EventHandler(this.HomeNV_Load);
