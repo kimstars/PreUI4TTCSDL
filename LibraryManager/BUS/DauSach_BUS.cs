@@ -99,7 +99,7 @@ namespace LibraryManager.BUS
         {
             byte[] img = LoadImageFromTableDB("DauSach", maID, "MaDauSach");
             PictureBox avt = new PictureBox();
-            if (img != null)
+            if (img.Length > 10)
             {
                 return Image.FromStream(new MemoryStream(img));
             }
@@ -107,7 +107,6 @@ namespace LibraryManager.BUS
             {
                 return Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
             }
-
         }
 
         // -> set

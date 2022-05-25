@@ -217,5 +217,11 @@ namespace LibraryManager.Template
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.Admin_ThemNV());
         }
+
+        private void btnM_DSDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new DanhSachDG());
+        }
     }
 }

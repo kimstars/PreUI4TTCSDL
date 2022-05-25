@@ -443,7 +443,7 @@ namespace LibraryManager.Template
             this.dgvSachMoi.RowHeadersWidth = 51;
             this.dgvSachMoi.RowTemplate.Height = 40;
             this.dgvSachMoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSachMoi.Size = new System.Drawing.Size(415, 258);
+            this.dgvSachMoi.Size = new System.Drawing.Size(436, 258);
             this.dgvSachMoi.TabIndex = 19;
             this.dgvSachMoi.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 

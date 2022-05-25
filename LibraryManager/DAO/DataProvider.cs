@@ -64,7 +64,8 @@ namespace LibraryManager.DAO
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] imgbin = new byte[100000000];
-            if (reader.HasRows)
+
+            if (reader.HasRows && !Convert.IsDBNull(reader[0]))
             {
                 imgbin = (byte[])reader[0];
             }
