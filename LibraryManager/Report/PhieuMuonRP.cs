@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace LibraryManager.Report
 {
-    public partial class SachMuon : DevExpress.XtraReports.UI.XtraReport
+    public partial class PhieuMuonRP : DevExpress.XtraReports.UI.XtraReport
     {
-        public SachMuon()
+        public PhieuMuonRP()
         {
             InitializeComponent();
         }

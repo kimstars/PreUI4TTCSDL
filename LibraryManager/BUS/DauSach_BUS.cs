@@ -238,7 +238,13 @@ namespace LibraryManager.BUS
 
         #endregion
 
+        #region 
+        public DataTable ThongKeSachMuon_DS()
+        {
+            return dsDao.ThongKeSachMuon_DS();
+        }
 
+        #endregion
 
 
     }

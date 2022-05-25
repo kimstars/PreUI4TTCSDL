@@ -72,7 +72,19 @@ namespace LibraryManager.BUS
 
         #endregion
 
+        #region inphieumuon
 
+        public DataTable LoadTTPhieuMuon(string MaMuonTra)
+        {
+            return pmDao.GetTTPM(MaMuonTra);
+        }
+
+        public DataTable LoadMaNV_MaDG_PM(string MaMT)
+        {
+            return pmDao.LoadNVDG_MT(MaMT);
+        }
+
+        #endregion
 
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using LibraryManager.DTO;
+using System.Data.SqlClient;
 
 
 namespace LibraryManager.DAO
@@ -84,6 +85,46 @@ namespace LibraryManager.DAO
             string sql = $"UPDATE dbo.PHIEUMUONTRA SET DaXuLy = 1 WHERE MaMuonTra = '{MaMuonTra}'";
             Excute(sql);
         }
+
+        #endregion
+
+
+        #region in phieu muon
+
+        public DataTable GetTTPM(string MaMT)
+        {
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("TTPhieuMuon", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaMT", MaMT);
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public DataTable LoadNVDG_MT(string MaMT)
+        {
+            string sql = $"SELECT nv.MaNhanVien,dg.MaDocGia FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.NHANVIEN nv ON nv.MaNhanVien = pm.MaNhanVien WHERE pm.MaMuonTra = '{MaMT}' GROUP BY nv.MaNhanVien,dg.MaDocGia";
+
+            return GetData(sql);
+
+
+        }
+
 
         #endregion
 
