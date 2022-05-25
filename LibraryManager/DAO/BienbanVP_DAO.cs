@@ -85,18 +85,6 @@ namespace LibraryManager.DAO
             return GetString(sqlString);
         }
 
-        /*public void vohieuhoa(string madg)
-        {
-            string sqlString = "  update TAIKHOAN set LoaiTK= 'vohieuhoa' where TenDangNhap = (select dg.tendangnhap from DOCGIA dg where MaDocGia = '"+madg+"')";
-            Excute(sqlString);
-        }*/
+
     }
 }
-/* create trigger them_bbvp on bienbanvipham after insert
-  as declare @lydo nvarchar(100) , @ma char(10)
-  begin 
-  select @lydo = LyDo, @ma = MaDocGia from inserted
-  if( select count(mavipham) from BIENBANVIPHAM where LyDo like N'%Trả sách trễ hạn%' and MaDocGia = @ma group by (MaDocGia) )>3
-	update TAIKHOAN set LoaiTK= 'vohieuhoa' where TenDangNhap = (select dg.tendangnhap from DOCGIA dg where MaDocGia = @ma)
-  end
-*/
