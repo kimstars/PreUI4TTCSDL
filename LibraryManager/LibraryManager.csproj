@@ -37,6 +37,7 @@
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
 
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
@@ -505,6 +506,7 @@
     </Compile>
     <Compile Include="Template\tk_sachnhap.Designer.cs">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
+    </Compile>
 
     <Compile Include="Template\TimKiem4NV.cs">
       <SubType>UserControl</SubType>
