@@ -12,7 +12,7 @@ namespace LibraryManager.DAO
     class DataProvider
     {
         static string provider = @"Data Source=MSI\HOADINH;Initial Catalog=THUVIENMTA;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(provider);
+        protected SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
         {

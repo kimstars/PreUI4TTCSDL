@@ -56,7 +56,6 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
             this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
-            this.reportGenerator1 = new DevExpress.XtraReports.ReportGeneration.ReportGenerator(this.components);
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -581,7 +580,7 @@ namespace LibraryManager.Template
         private DateTimePickerKiet dateEnd;
         private DateTimePickerKiet dateStart;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private DevExpress.XtraReports.ReportGeneration.ReportGenerator reportGenerator1;
+
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label6;

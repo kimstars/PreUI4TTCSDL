@@ -136,7 +136,6 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
-
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -544,12 +543,6 @@
     <Compile Include="GUI\Captaikhoan.Designer.cs">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\SachMuon.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\SachMuon.Designer.cs">
-      <DependentUpon>SachMuon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Template\Admin_ThemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -738,7 +731,6 @@
     <Compile Include="Template\tk_sachnhap.Designer.cs">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Template\TimKiem4NV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -810,9 +802,6 @@
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Report\SachMuon.resx">
-      <DependentUpon>SachMuon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Template\Admin_ThemNV.resx">
       <DependentUpon>Admin_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -1160,6 +1149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_study_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
