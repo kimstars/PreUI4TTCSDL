@@ -14,8 +14,8 @@ namespace LibraryManager.DAO
         public DataTable tk_sachmuon_nv()
         {
             
-            string sqlString = @" select pmt.MaMuonTra, tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds 
-                                  where pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach ";
+            string sqlString = @" select  tt.MaSach ,ds.TenDauSach,tendocgia,ngaymuon, ngaytra from PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds , docgia dg
+                                  where pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach and pmt.madocgia= dg.madocgia ";
             return GetData(sqlString);
         }
         public DataSet Get_chart_tk_sachmuon()
@@ -81,27 +81,8 @@ namespace LibraryManager.DAO
         ///////////////////////////////////////////////////////////- Nhân viên
         public DataTable loadtk_all(string ngaybd, string ngaykt)
         {
-            DataTable dt = new DataTable();
-            SqlDataReader rd;
-            try
-            {
-                connect.Open();
-                SqlCommand cmd = new SqlCommand("sach_duoc_muon", connect);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ngaybd", ngaybd);
-                cmd.Parameters.AddWithValue("@ngaykt", ngaykt);
-                rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                return dt;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                connect.Close();
-            }
+            string sqlString = $"EXEC sach_duoc_muon '{ngaybd}', '{ngaykt}'";
+            return GetData(sqlString);
         }
         //thống kê theo tên độc giả hoặc mã độc giả theo hai ngày bắt đầu và kết thúc
         public DataTable loadtk_dg(string ngaybd, string ngaykt, string madg, string tendg)
@@ -123,12 +104,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả
         public DataTable loadtk_trehan(string ngaybd, string ngaykt)
@@ -144,16 +126,17 @@ namespace LibraryManager.DAO
                 cmd.Parameters.AddWithValue("@ngaykt", ngaykt);
                 rd = cmd.ExecuteReader();
                 dt.Load(rd);
-                return dt;
+               // return dt;
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các sách vi phạm trong khoảng thời gian 
         public DataTable loadtk_vipham(string ngaybd, string ngaykt)
@@ -173,12 +156,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         //thống kê các sách đã mượn theo tên độc giả hoặc mã độc giả -- giống với loadtk_dg
 
@@ -202,12 +186,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các sách vi phạm trong khoảng thời gian của độc giả a
         public DataTable loadtk_vipham_dg(string ngaybd, string ngaykt, string madg, string tendg)
@@ -229,12 +214,14 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
+
         }
         //thống kê các sách đã mượn theo tên đầu sách hoặc mã đầu sách
         public DataTable loadtk_dausach(string ngaybd, string ngaykt, string mads, string tends)
@@ -256,12 +243,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các cuốn sách đã trễ hạn có hạn trả ở trong khoảng đó nhưng chưa trả theo tên đầu sách hoặc mã đầu sách
         public DataTable loadtk_trehan_ds(string ngaybd, string ngaykt, string mads, string tends)
@@ -283,12 +271,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các sách vi phạm trong khoảng thời gian theo tên đầu sách hoặc mã đầu sách
         public DataTable loadtk_vipham_ds(string ngaybd, string ngaykt, string mads, string tends)
@@ -310,12 +299,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         //thống kê các sách đã mượn theo tên thể loại hoặc mã thể loại
         public DataTable loadtk_tl(string ngaybd, string ngaykt, string matl, string tentl)
@@ -337,12 +327,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả theo tên thể loại hoặc mã thể loại
         public DataTable loadtk_trehan_tl(string ngaybd, string ngaykt, string matl, string tentl)
@@ -364,12 +355,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các sách vi phạm trong khoảng thời giantheo tên thể loại hoặc mã thể loại
         public DataTable loadtk_vipham_tl(string ngaybd, string ngaykt, string matl, string tentl)
@@ -391,12 +383,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         //thống kê các sách đã mượn theo tên nhà xuất bản hoặc mã xuất bản
         public DataTable loadtk_nxb(string ngaybd, string ngaykt, string manxb, string tennxb)
@@ -418,12 +411,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả theo nhà xuất bản hoặc mã xuất bản
         public DataTable loadtk_trehan_nxb(string ngaybd, string ngaykt, string manxb, string tennxb)
@@ -445,12 +439,13 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
         // thống kê tất cả các sách vi phạm trong khoảng thời giantheo nhà xuất bản hoặc mã xuất bản
         public DataTable loadtk_vipham_nxb(string ngaybd, string ngaykt, string manxb, string tennxb)
@@ -472,15 +467,42 @@ namespace LibraryManager.DAO
             }
             catch (Exception)
             {
-                throw;
+                
             }
             finally
             {
                 connect.Close();
             }
+            return dt;
         }
-        // lấy ra 3 độc giả mượn nhiều sách nhất
+        // lấy ra 3 độc giả mượn nhiều sách nhất trong khoảng thời gian
 
+        public DataTable tk_muonnhieu_dg(string ngaybd, string ngaykt)
+        {
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("dg_muon_max", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ngaybd", ngaybd);
+                cmd.Parameters.AddWithValue("@ngaykt", ngaykt);
+                
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                return dt;
+            }
+            catch (Exception)
+            {
+                
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dt;
+        }
 
     }
 }

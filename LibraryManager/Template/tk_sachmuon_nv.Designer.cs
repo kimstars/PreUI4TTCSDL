@@ -29,7 +29,6 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -54,20 +53,20 @@ namespace LibraryManager.Template
             this.label4 = new System.Windows.Forms.Label();
             this.btnTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
-            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
+            this.filter1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.dgvSachMoi = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label14 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendausach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filter1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
+            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -153,11 +152,11 @@ namespace LibraryManager.Template
             this.dgv_tksachmuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_tksachmuon.ColumnHeadersHeight = 40;
             this.dgv_tksachmuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
+            this.masach,
+            this.tendausach,
             this.TenDocGia,
-            this.Column3,
-            this.Column4});
+            this.NgayMuon,
+            this.NgayTra});
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -286,35 +285,42 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1419, 115);
             this.guna2CustomGradientPanel1.TabIndex = 9;
             // 
-            // dateEnd
+            // filter1
             // 
-            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateEnd.BorderRadius = 0;
-            this.dateEnd.BorderSize = 0;
-            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateEnd.Location = new System.Drawing.Point(967, 40);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 44);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(160, 44);
-            this.dateEnd.SkinColor = System.Drawing.Color.DarkCyan;
-            this.dateEnd.TabIndex = 15;
-            this.dateEnd.TextColor = System.Drawing.Color.White;
+            this.filter1.BackColor = System.Drawing.Color.Transparent;
+            this.filter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.filter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filter1.FocusedColor = System.Drawing.Color.Empty;
+            this.filter1.FocusedState.Parent = this.filter1;
+            this.filter1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.filter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.filter1.FormattingEnabled = true;
+            this.filter1.HoverState.Parent = this.filter1;
+            this.filter1.ItemHeight = 30;
+            this.filter1.Items.AddRange(new object[] {
+            "Độc giả",
+            "Đầu sách",
+            "Thể loại",
+            "Nhà xuất bản"});
+            this.filter1.ItemsAppearance.Parent = this.filter1;
+            this.filter1.Location = new System.Drawing.Point(329, 49);
+            this.filter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filter1.Name = "filter1";
+            this.filter1.ShadowDecoration.Parent = this.filter1;
+            this.filter1.Size = new System.Drawing.Size(135, 36);
+            this.filter1.TabIndex = 18;
+            this.filter1.SelectedIndexChanged += new System.EventHandler(this.filter1_SelectedIndexChanged);
             // 
-            // dateStart
+            // label2
             // 
-            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateStart.BorderRadius = 0;
-            this.dateStart.BorderSize = 0;
-            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateStart.Location = new System.Drawing.Point(704, 40);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
-            this.dateStart.MinimumSize = new System.Drawing.Size(4, 44);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(160, 44);
-            this.dateStart.SkinColor = System.Drawing.Color.DarkCyan;
-            this.dateStart.TabIndex = 14;
-            this.dateStart.TextColor = System.Drawing.Color.White;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.Location = new System.Drawing.Point(37, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 23);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Tìm kiếm";
             // 
             // txtSearch
             // 
@@ -349,17 +355,6 @@ namespace LibraryManager.Template
             this.label6.Size = new System.Drawing.Size(76, 23);
             this.label6.TabIndex = 12;
             this.label6.Text = "Lọc theo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label2.Location = new System.Drawing.Point(37, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 23);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Tìm kiếm";
             // 
             // bunifuPanel5
             // 
@@ -459,65 +454,70 @@ namespace LibraryManager.Template
             this.label14.TabIndex = 18;
             this.label14.Text = "Những độc giả mượn nhiều sách nhất";
             // 
-            // Column1
+            // masach
             // 
-            this.Column1.DataPropertyName = "MaSach";
-            this.Column1.HeaderText = "Mã sách";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.masach.DataPropertyName = "MaSach";
+            this.masach.HeaderText = "Mã sách";
+            this.masach.MinimumWidth = 6;
+            this.masach.Name = "masach";
             // 
-            // Column2
+            // tendausach
             // 
-            this.Column2.DataPropertyName = "TenDauSach";
-            this.Column2.HeaderText = "Tên đầu sách";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.tendausach.DataPropertyName = "TenDauSach";
+            this.tendausach.HeaderText = "Tên đầu sách";
+            this.tendausach.MinimumWidth = 6;
+            this.tendausach.Name = "tendausach";
             // 
             // TenDocGia
             // 
+            this.TenDocGia.DataPropertyName = "TenDocGia";
             this.TenDocGia.HeaderText = "Tên độc giả";
             this.TenDocGia.MinimumWidth = 6;
             this.TenDocGia.Name = "TenDocGia";
             // 
-            // Column3
+            // NgayMuon
             // 
-            this.Column3.DataPropertyName = "NgayMuon";
-            this.Column3.HeaderText = "Ngày mượn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
+            this.NgayMuon.DataPropertyName = "NgayMuon";
+            this.NgayMuon.HeaderText = "Ngày mượn";
+            this.NgayMuon.MinimumWidth = 6;
+            this.NgayMuon.Name = "NgayMuon";
             // 
-            // Column4
+            // NgayTra
             // 
-            this.Column4.DataPropertyName = "NgayTra";
-            this.Column4.HeaderText = "Ngày trả";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.NgayTra.DataPropertyName = "NgayTra";
+            this.NgayTra.HeaderText = "Ngày trả";
+            this.NgayTra.MinimumWidth = 6;
+            this.NgayTra.Name = "NgayTra";
             // 
-            // filter1
+            // dateEnd
             // 
-            this.filter1.BackColor = System.Drawing.Color.Transparent;
-            this.filter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.filter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filter1.FocusedColor = System.Drawing.Color.Empty;
-            this.filter1.FocusedState.Parent = this.filter1;
-            this.filter1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.filter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.filter1.FormattingEnabled = true;
-            this.filter1.HoverState.Parent = this.filter1;
-            this.filter1.ItemHeight = 30;
-            this.filter1.Items.AddRange(new object[] {
-            "Độc giả",
-            "Đầu sách",
-            "Thể loại",
-            "Nhà xuất bản"});
-            this.filter1.ItemsAppearance.Parent = this.filter1;
-            this.filter1.Location = new System.Drawing.Point(329, 49);
-            this.filter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.filter1.Name = "filter1";
-            this.filter1.ShadowDecoration.Parent = this.filter1;
-            this.filter1.Size = new System.Drawing.Size(135, 36);
-            this.filter1.TabIndex = 18;
-            this.filter1.SelectedIndexChanged += new System.EventHandler(this.filter1_SelectedIndexChanged);
+            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateEnd.BorderRadius = 0;
+            this.dateEnd.BorderSize = 0;
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateEnd.Location = new System.Drawing.Point(967, 40);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 44);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(160, 44);
+            this.dateEnd.SkinColor = System.Drawing.Color.DarkCyan;
+            this.dateEnd.TabIndex = 15;
+            this.dateEnd.TextColor = System.Drawing.Color.White;
+            // 
+            // dateStart
+            // 
+            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateStart.BorderRadius = 0;
+            this.dateStart.BorderSize = 0;
+            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateStart.Location = new System.Drawing.Point(704, 40);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
+            this.dateStart.MinimumSize = new System.Drawing.Size(4, 44);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(160, 44);
+            this.dateStart.SkinColor = System.Drawing.Color.DarkCyan;
+            this.dateStart.TabIndex = 14;
+            this.dateStart.TextColor = System.Drawing.Color.White;
             // 
             // MaDocGia
             // 
@@ -535,7 +535,7 @@ namespace LibraryManager.Template
             // 
             // SL
             // 
-            this.SL.DataPropertyName = "soluong";
+            this.SL.DataPropertyName = "sl";
             this.SL.HeaderText = "Số lượng";
             this.SL.MinimumWidth = 6;
             this.SL.Name = "SL";
@@ -586,12 +586,12 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvSachMoi;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Guna.UI2.WinForms.Guna2ComboBox filter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendausach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;

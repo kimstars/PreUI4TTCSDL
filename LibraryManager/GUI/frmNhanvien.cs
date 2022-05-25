@@ -297,7 +297,8 @@ namespace LibraryManager
 
         private void btnM_ThongKe_Click(object sender, EventArgs e)
         {
-
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.tk_sachmuon_nv());
         }
 
         private void btnM_LapBBvp_Click(object sender, EventArgs e)

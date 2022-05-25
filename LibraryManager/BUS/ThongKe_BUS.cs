@@ -132,5 +132,10 @@ namespace LibraryManager.BUS
         {
             return tkDao.loadtk_vipham_nxb(ngaybd, ngaykt,maxb,tennxb);
         }
+        // thống ke 3 người mượn nhiều nhất
+        public DataTable TK_muonnhieu(string ngaybd, string ngaykt)
+        {
+            return tkDao.tk_muonnhieu_dg(ngaybd, ngaykt);
+        }
     }
 }
