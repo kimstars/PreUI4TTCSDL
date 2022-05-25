@@ -53,12 +53,17 @@ namespace LibraryManager.GUI
             txtMadg.Text = madocgia;
             txtNgaytra.Text = ngaytra;
             txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
-            
             cmbManv.DataSource = bbvp_bus.getManv();
             cmbManv.DisplayMember = "manhanvien";
-            
             txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
             AutoTaoMaVP();
+           
+            foreach( string i in book1)
+            {
+                dgvVipham.Rows.Add(i,bbvp_bus.get_tensach(i));
+               
+            }
+            dgvVipham.Show();
            /* if(quahan == true)
             {
                 cboxTrehan.Checked = true;
@@ -170,6 +175,11 @@ namespace LibraryManager.GUI
         {
             if (cboxKhac.Checked == true)
                 txtLydo.ReadOnly = false;
+        }
+
+        private void dgvVipham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }

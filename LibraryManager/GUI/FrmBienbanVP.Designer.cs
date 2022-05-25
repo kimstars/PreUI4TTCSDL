@@ -30,6 +30,9 @@ namespace LibraryManager.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.paneldrag = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -48,6 +51,7 @@ namespace LibraryManager.GUI
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dgvVipham = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.cboxHongsach = new System.Windows.Forms.CheckBox();
@@ -66,9 +70,12 @@ namespace LibraryManager.GUI
             this.lbVP = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVipham)).BeginInit();
             this.SuspendLayout();
             // 
             // paneldrag
@@ -354,6 +361,7 @@ namespace LibraryManager.GUI
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.dgvVipham);
             this.guna2GroupBox2.Controls.Add(this.label11);
             this.guna2GroupBox2.Controls.Add(this.guna2Button1);
             this.guna2GroupBox2.Controls.Add(this.cboxHongsach);
@@ -382,13 +390,77 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
             // 
+            // dgvVipham
+            // 
+            this.dgvVipham.AllowCustomTheming = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvVipham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvVipham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVipham.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvVipham.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvVipham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVipham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvVipham.ColumnHeadersHeight = 40;
+            this.dgvVipham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dgvVipham.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.dgvVipham.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvVipham.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvVipham.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.dgvVipham.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvVipham.CurrentTheme.BackColor = System.Drawing.Color.Teal;
+            this.dgvVipham.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.dgvVipham.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Teal;
+            this.dgvVipham.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvVipham.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvVipham.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.dgvVipham.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvVipham.CurrentTheme.Name = null;
+            this.dgvVipham.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.dgvVipham.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvVipham.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvVipham.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.dgvVipham.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVipham.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvVipham.EnableHeadersVisualStyles = false;
+            this.dgvVipham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.dgvVipham.HeaderBackColor = System.Drawing.Color.Teal;
+            this.dgvVipham.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvVipham.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvVipham.Location = new System.Drawing.Point(428, 57);
+            this.dgvVipham.Name = "dgvVipham";
+            this.dgvVipham.RowHeadersVisible = false;
+            this.dgvVipham.RowHeadersWidth = 51;
+            this.dgvVipham.RowTemplate.Height = 40;
+            this.dgvVipham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVipham.Size = new System.Drawing.Size(590, 339);
+            this.dgvVipham.TabIndex = 15;
+            this.dgvVipham.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
+            this.dgvVipham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVipham_CellContentClick);
+            // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(173, 302);
+            this.label11.Location = new System.Drawing.Point(146, 426);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(241, 122);
+            this.label11.Size = new System.Drawing.Size(241, 58);
             this.label11.TabIndex = 14;
             this.label11.Text = "Độc giả vi phạm 3 lần tự động khóa tài khoản";
             // 
@@ -404,11 +476,11 @@ namespace LibraryManager.GUI
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::LibraryManager.Properties.Resources.icons8_edit_property_26px;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(635, 334);
+            this.guna2Button1.Location = new System.Drawing.Point(548, 426);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(131, 46);
+            this.guna2Button1.Size = new System.Drawing.Size(114, 46);
             this.guna2Button1.TabIndex = 13;
             this.guna2Button1.Text = "Sửa";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -417,7 +489,7 @@ namespace LibraryManager.GUI
             // 
             this.cboxHongsach.AutoSize = true;
             this.cboxHongsach.BackColor = System.Drawing.Color.White;
-            this.cboxHongsach.Location = new System.Drawing.Point(185, 124);
+            this.cboxHongsach.Location = new System.Drawing.Point(165, 84);
             this.cboxHongsach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxHongsach.Name = "cboxHongsach";
             this.cboxHongsach.Size = new System.Drawing.Size(161, 29);
@@ -429,7 +501,7 @@ namespace LibraryManager.GUI
             // 
             this.cboxKhac.AutoSize = true;
             this.cboxKhac.BackColor = System.Drawing.Color.White;
-            this.cboxKhac.Location = new System.Drawing.Point(185, 181);
+            this.cboxKhac.Location = new System.Drawing.Point(165, 141);
             this.cboxKhac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxKhac.Name = "cboxKhac";
             this.cboxKhac.Size = new System.Drawing.Size(122, 29);
@@ -442,7 +514,7 @@ namespace LibraryManager.GUI
             // 
             this.cboxMatsach.AutoSize = true;
             this.cboxMatsach.BackColor = System.Drawing.Color.White;
-            this.cboxMatsach.Location = new System.Drawing.Point(185, 151);
+            this.cboxMatsach.Location = new System.Drawing.Point(165, 111);
             this.cboxMatsach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxMatsach.Name = "cboxMatsach";
             this.cboxMatsach.Size = new System.Drawing.Size(149, 29);
@@ -454,7 +526,7 @@ namespace LibraryManager.GUI
             // 
             this.cboxTrehan.AutoSize = true;
             this.cboxTrehan.BackColor = System.Drawing.Color.White;
-            this.cboxTrehan.Location = new System.Drawing.Point(185, 97);
+            this.cboxTrehan.Location = new System.Drawing.Point(165, 57);
             this.cboxTrehan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxTrehan.Name = "cboxTrehan";
             this.cboxTrehan.Size = new System.Drawing.Size(167, 29);
@@ -465,10 +537,10 @@ namespace LibraryManager.GUI
             // txt_tinhtrang
             // 
             this.txt_tinhtrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tinhtrang.Location = new System.Drawing.Point(635, 210);
+            this.txt_tinhtrang.Location = new System.Drawing.Point(165, 317);
             this.txt_tinhtrang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_tinhtrang.Name = "txt_tinhtrang";
-            this.txt_tinhtrang.Size = new System.Drawing.Size(312, 79);
+            this.txt_tinhtrang.Size = new System.Drawing.Size(236, 79);
             this.txt_tinhtrang.TabIndex = 11;
             this.txt_tinhtrang.Text = "";
             // 
@@ -483,11 +555,11 @@ namespace LibraryManager.GUI
             this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
             this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
             this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
-            this.btnHoanthien.Location = new System.Drawing.Point(776, 334);
+            this.btnHoanthien.Location = new System.Drawing.Point(780, 426);
             this.btnHoanthien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHoanthien.Name = "btnHoanthien";
             this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
-            this.btnHoanthien.Size = new System.Drawing.Size(172, 46);
+            this.btnHoanthien.Size = new System.Drawing.Size(120, 46);
             this.btnHoanthien.TabIndex = 10;
             this.btnHoanthien.Text = "Hoàn tất";
             this.btnHoanthien.Click += new System.EventHandler(this.btnHoanthien_Click);
@@ -497,7 +569,7 @@ namespace LibraryManager.GUI
             this.labelChuY.AutoSize = true;
             this.labelChuY.BackColor = System.Drawing.Color.White;
             this.labelChuY.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChuY.Location = new System.Drawing.Point(48, 303);
+            this.labelChuY.Location = new System.Drawing.Point(48, 426);
             this.labelChuY.Name = "labelChuY";
             this.labelChuY.Size = new System.Drawing.Size(60, 23);
             this.labelChuY.TabIndex = 9;
@@ -516,20 +588,20 @@ namespace LibraryManager.GUI
             this.txtTienphat.FocusedState.Parent = this.txtTienphat;
             this.txtTienphat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienphat.HoverState.Parent = this.txtTienphat;
-            this.txtTienphat.Location = new System.Drawing.Point(179, 219);
+            this.txtTienphat.Location = new System.Drawing.Point(166, 260);
             this.txtTienphat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtTienphat.Name = "txtTienphat";
             this.txtTienphat.PasswordChar = '\0';
             this.txtTienphat.PlaceholderText = "";
             this.txtTienphat.SelectedText = "";
             this.txtTienphat.ShadowDecoration.Parent = this.txtTienphat;
-            this.txtTienphat.Size = new System.Drawing.Size(184, 34);
+            this.txtTienphat.Size = new System.Drawing.Size(235, 34);
             this.txtTienphat.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(180, 98);
+            this.label8.Location = new System.Drawing.Point(160, 58);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 25);
             this.label8.TabIndex = 5;
@@ -538,7 +610,7 @@ namespace LibraryManager.GUI
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(480, 222);
+            this.label9.Location = new System.Drawing.Point(13, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(146, 25);
             this.label9.TabIndex = 4;
@@ -548,7 +620,7 @@ namespace LibraryManager.GUI
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(45, 219);
+            this.label7.Location = new System.Drawing.Point(12, 260);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 4;
@@ -558,7 +630,7 @@ namespace LibraryManager.GUI
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(509, 97);
+            this.label6.Location = new System.Drawing.Point(13, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 25);
             this.label6.TabIndex = 3;
@@ -568,11 +640,11 @@ namespace LibraryManager.GUI
             // 
             this.txtLydo.BackColor = System.Drawing.Color.White;
             this.txtLydo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLydo.Location = new System.Drawing.Point(635, 95);
+            this.txtLydo.Location = new System.Drawing.Point(166, 188);
             this.txtLydo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLydo.Name = "txtLydo";
             this.txtLydo.ReadOnly = true;
-            this.txtLydo.Size = new System.Drawing.Size(312, 79);
+            this.txtLydo.Size = new System.Drawing.Size(184, 52);
             this.txtLydo.TabIndex = 1;
             this.txtLydo.Text = "";
             // 
@@ -580,7 +652,7 @@ namespace LibraryManager.GUI
             // 
             this.lbVP.AutoSize = true;
             this.lbVP.BackColor = System.Drawing.Color.White;
-            this.lbVP.Location = new System.Drawing.Point(45, 97);
+            this.lbVP.Location = new System.Drawing.Point(11, 58);
             this.lbVP.Name = "lbVP";
             this.lbVP.Size = new System.Drawing.Size(132, 25);
             this.lbVP.TabIndex = 0;
@@ -596,6 +668,18 @@ namespace LibraryManager.GUI
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.paneldrag;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã sách";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên sách";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
             // FrmBienbanVP
             // 
@@ -616,6 +700,7 @@ namespace LibraryManager.GUI
             this.panel2.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVipham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -658,5 +743,8 @@ namespace LibraryManager.GUI
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvVipham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

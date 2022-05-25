@@ -43,5 +43,10 @@ namespace LibraryManager.BUS
         {
             bbvp_dao.vohieuhoa(madg);
         }*/
+       public string get_tensach(string masach)
+        {
+            return bbvp_dao.GetTensach(masach);
+        }
     }
 }
+

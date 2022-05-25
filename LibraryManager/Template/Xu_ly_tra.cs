@@ -14,7 +14,7 @@ namespace LibraryManager.Template
     public partial class Xu_ly_tra : UserControl
     {
         Trasach_Bus ts_bus = new Trasach_Bus();
-        
+
         public Xu_ly_tra()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace LibraryManager.Template
                 {
                     dgv_trasach.DataSource = ts_bus.loadtk_masach(chuanhoa(txtTK.Text));
                 }
-                else if (cmbTKiem.SelectedItem =="Tất cả")
+                else if (cmbTKiem.SelectedItem == "Tất cả")
                 {
                     dgv_trasach.DataSource = ts_bus.Loadls();
                 }
@@ -67,40 +67,43 @@ namespace LibraryManager.Template
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-            if(txtMadg.Text == "")
+            if (txtMadg.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mã độc giả");
-            }else if (txtMasach.Text == "")
+            }
+            else if (txtMasach.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mã sách trả");
             }
 
+
+            for (int i = 0; i < dgvDs.Rows.Count; i++)
+            {
+                if (txtMasach.Text == dgvDs.Rows[i].Cells[0].Value.ToString())
+
+                    return;
+
+
+            }
+
+
             if (cboxVi_pham.Checked == true)
             {
-                dgvDs.Rows.Add(chuanhoa(txtMasach.Text),chuanhoa( txtMadg.Text), DateTime.Now, "Có", "Bỏ");
+                dgvDs.Rows.Add(chuanhoa(txtMasach.Text), chuanhoa(txtMadg.Text), DateTime.Now, "Có", "Bỏ");
             }
             else
             {
                 dgvDs.Rows.Add(chuanhoa(txtMasach.Text), chuanhoa(txtMadg.Text), DateTime.Now, "Không", "Bỏ");
             }
 
+
+
+
         }
-       /* public bool check(string sach)
-        {
-            
-            for( int i =0; i <dgv_trasach.Rows.Count; i++)
-            {
-                if (DateTime.Parse(dgv_trasach.Rows[i].Cells[5].Value.ToString()) < DateTime.Today.Date && Equals(dgv_trasach.Rows[i].Cells[7].Value.ToString(), sach))
-                {
-                    return true;
-                }
-                else return false;
-            }
-            return false;
-        }*/
+
         private void btnBbvp_Click(object sender, EventArgs e)
         {
-            List<string> book= new List<string>();
+            List<string> book = new List<string>();
             string madg;
             string ngaytra1;
             int count = 0;
@@ -110,7 +113,7 @@ namespace LibraryManager.Template
             {
                 if (Equals(dgvDs.Rows[i].Cells[3].Value, "Có"))
                 {
-                    book.Add(dgvDs.Rows[i].Cells[0].Value.ToString());
+                    book.Add(dgvDs.Rows[i].Cells[0].Value.ToString().Trim());
                     count++;
                 }
 
@@ -123,22 +126,22 @@ namespace LibraryManager.Template
                 }
             }
         }
-       
-    
+
+
 
         private void dgvDs_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* int i;
-            i = dgvDs.CurrentRow.Index;
-            txtMasach.Text = dgvDs.Rows[i].Cells[0].Value.ToString();
-            txtMadg.Text = dgvDs.Rows[i].Cells[1].Value.ToString();
-            if (dgvDs.Rows[i].Cells[0].Value.ToString() == "Có")
+            /* int i;
+             i = dgvDs.CurrentRow.Index;
+             txtMasach.Text = dgvDs.Rows[i].Cells[0].Value.ToString();
+             txtMadg.Text = dgvDs.Rows[i].Cells[1].Value.ToString();
+             if (dgvDs.Rows[i].Cells[0].Value.ToString() == "Có")
+             {
+                 cboxVi_pham.Checked =true;
+             }*/
+            if (e.ColumnIndex == 4)
             {
-                cboxVi_pham.Checked =true;
-            }*/
-            if(e.ColumnIndex== 4)
-            {
-                
+
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
@@ -150,7 +153,7 @@ namespace LibraryManager.Template
 
         private void btnHoantat_Click(object sender, EventArgs e)
         {
-            for( int  i = 0; i <dgvDs.Rows.Count-1; i++)
+            for (int i = 0; i < dgvDs.Rows.Count - 1; i++)
             {
                 ts_bus.update(dgvDs.Rows[i].Cells[0].Value.ToString());
             }
@@ -163,7 +166,7 @@ namespace LibraryManager.Template
             {
 
                 dgvDs.Rows.Clear();
-               
+
             }
         }
 

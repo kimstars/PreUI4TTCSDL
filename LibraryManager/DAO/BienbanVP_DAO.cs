@@ -78,6 +78,13 @@ namespace LibraryManager.DAO
             string sqlString = "insert into vipham (mavipham, masach ) values ('" + vp.MaViPham + "','" + vp.MaSach + "')";
             Excute(sqlString);
         }
+        // lấy ra tên cuốn sách từ mã cuốn sách
+        public string GetTensach(string masach)
+        {
+            string sqlString = "select tendausach from cuonsach cs, dausach ds where ds.madausach = cs.madausach and cs.masach='" + masach + "'";
+            return GetString(sqlString);
+        }
+
         /*public void vohieuhoa(string madg)
         {
             string sqlString = "  update TAIKHOAN set LoaiTK= 'vohieuhoa' where TenDangNhap = (select dg.tendangnhap from DOCGIA dg where MaDocGia = '"+madg+"')";

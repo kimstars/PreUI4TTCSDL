@@ -540,12 +540,6 @@
     <Compile Include="GUI\Captaikhoan.Designer.cs">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\SachMuon.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\SachMuon.Designer.cs">
-      <DependentUpon>SachMuon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Template\Admin_ThemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -805,9 +799,6 @@
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Report\SachMuon.resx">
-      <DependentUpon>SachMuon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Template\Admin_ThemNV.resx">
       <DependentUpon>Admin_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -1155,6 +1146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_study_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
