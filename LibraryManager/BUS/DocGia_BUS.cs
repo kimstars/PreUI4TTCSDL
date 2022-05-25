@@ -19,6 +19,16 @@ namespace LibraryManager.BUS
         {
             return dgDao.loadDocGia();
         }
+        public DataTable GetListDGInfo()
+        {
+            return dgDao.loadDocGiaInfo();
+        }
+
+        public DataTable GetListDGLoc(string loai)
+        {
+            return dgDao.loadDocGiaLoc(loai);
+        }
+
         public void Xoa(string mDG)
         {
             dgDao.Delete(mDG);
@@ -48,7 +58,7 @@ namespace LibraryManager.BUS
         {
             byte[] img = LoadImageFromTableDB("DocGia", maID, "MaDocGia");
             PictureBox avt = new PictureBox();
-            if (img !=  null)
+            if (img !=  null && img.Length > 0)
             {
                 return Image.FromStream(new MemoryStream(img));
             }
@@ -79,6 +89,10 @@ namespace LibraryManager.BUS
         {
             return dgDao.GetMaDG_PhieuMuon(MaMT);
         }
+
+
+
+
 
         #endregion
 
@@ -144,5 +158,9 @@ namespace LibraryManager.BUS
         }
 
         #endregion
+
+
+
+        
     }
 }

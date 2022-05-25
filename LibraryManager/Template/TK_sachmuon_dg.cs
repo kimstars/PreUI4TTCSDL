@@ -17,6 +17,13 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+
+        public TK_sachmuon_dg(string ma)
+        {
+            InitializeComponent();
+            madg = ma;
+        }
+
         ThongKe_BUS tk_buss = new ThongKe_BUS();
         public string chuanhoa(string a)
         {

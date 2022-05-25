@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class DSInfoDauSach : UserControl
+    public partial class Form1 : Form
     {
-        public DSInfoDauSach()
+        public Form1()
         {
             InitializeComponent();
         }

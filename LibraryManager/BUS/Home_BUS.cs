@@ -33,10 +33,10 @@ namespace LibraryManager.BUS
 
             return home.GetTongTL();
         }
-        public DataTable Get2Anh()
+        public DataTable GetTop2Dausach()
         {
 
-            return home.Get2Anh();
+            return home.GetTop2_DSNhieuNhat();
         }
         public DataTable LoadPhieuMuon()
         {
@@ -66,5 +66,18 @@ namespace LibraryManager.BUS
 
             return home.LoadSLDG();
         }
+        public DataTable TimKiemTL(string _timkiem)
+        {
+            return home.SearchTL(_timkiem);
+        }
+        public DataTable TimKiemTG(string _timkiem)
+        {
+            return home.SearchTG(_timkiem);
+        }
+        public DataTable TimKiemDS(string _timkiem)
+        {
+            return home.SearchDS(_timkiem);
+        }
+
     }
 }

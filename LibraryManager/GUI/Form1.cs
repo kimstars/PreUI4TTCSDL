@@ -124,7 +124,14 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeHello());
         }
+	
+    }
+}
+            //tk_sachmuon1.Visible = true;
+            // tk_sachnhap1.Visible = true;
 
-       
+            
+            
+        }
     }
 }

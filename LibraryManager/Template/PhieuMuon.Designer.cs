@@ -57,6 +57,7 @@ namespace LibraryManager.Template
             this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbMsg = new System.Windows.Forms.Label();
             this.txtMaDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateHanTra = new LibraryManager.Template.DateTimePickerKiet();
@@ -68,11 +69,9 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bthHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnMuon = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbMsg = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -152,7 +151,6 @@ namespace LibraryManager.Template
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.PasswordChar = '\0';
             this.txtTenDG.PlaceholderText = "";
-            this.txtTenDG.ReadOnly = true;
             this.txtTenDG.SelectedText = "";
             this.txtTenDG.ShadowDecoration.Parent = this.txtTenDG;
             this.txtTenDG.Size = new System.Drawing.Size(141, 32);
@@ -407,6 +405,17 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(349, 158);
             this.guna2CustomGradientPanel3.TabIndex = 28;
             // 
+            // lbMsg
+            // 
+            this.lbMsg.AutoSize = true;
+            this.lbMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lbMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbMsg.Location = new System.Drawing.Point(19, 68);
+            this.lbMsg.Name = "lbMsg";
+            this.lbMsg.Size = new System.Drawing.Size(10, 13);
+            this.lbMsg.TabIndex = 19;
+            this.lbMsg.Text = ".";
+            // 
             // txtMaDG
             // 
             this.txtMaDG.BackColor = System.Drawing.Color.Transparent;
@@ -420,7 +429,6 @@ namespace LibraryManager.Template
             this.txtMaDG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaDG.DisabledState.Parent = this.txtMaDG;
             this.txtMaDG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaDG.Enabled = false;
             this.txtMaDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.FocusedState.Parent = this.txtMaDG;
             this.txtMaDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -431,8 +439,8 @@ namespace LibraryManager.Template
             this.txtMaDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
+            this.txtMaDG.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtMaDG.PlaceholderText = "";
-            this.txtMaDG.ReadOnly = true;
             this.txtMaDG.SelectedText = "";
             this.txtMaDG.ShadowDecoration.Parent = this.txtMaDG;
             this.txtMaDG.Size = new System.Drawing.Size(141, 32);
@@ -526,8 +534,7 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.remove});
+            this.dataGridViewTextBoxColumn5});
             this.dgvInfoBorrow.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
             this.dgvInfoBorrow.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvInfoBorrow.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -610,13 +617,6 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // remove
-            // 
-            this.remove.HeaderText = "Bỏ";
-            this.remove.MinimumWidth = 6;
-            this.remove.Name = "remove";
-            this.remove.Text = "Bỏ";
-            // 
             // bthHuy
             // 
             this.bthHuy.BackColor = System.Drawing.Color.Transparent;
@@ -659,17 +659,6 @@ namespace LibraryManager.Template
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this.txtTenDG;
-            // 
-            // lbMsg
-            // 
-            this.lbMsg.AutoSize = true;
-            this.lbMsg.BackColor = System.Drawing.Color.Transparent;
-            this.lbMsg.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Location = new System.Drawing.Point(19, 68);
-            this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(10, 13);
-            this.lbMsg.TabIndex = 19;
-            this.lbMsg.Text = ".";
             // 
             // PhieuMuon
             // 
@@ -737,13 +726,12 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button bthHuy;
         private Guna.UI2.WinForms.Guna2TextBox txtMaDG;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lbMsg;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewButtonColumn remove;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lbMsg;
     }
 }

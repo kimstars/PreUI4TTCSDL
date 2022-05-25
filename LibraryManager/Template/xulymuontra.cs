@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class frmVipham : Form
+    public partial class xulymuontra : UserControl
     {
-        public frmVipham()
+        public xulymuontra()
         {
             InitializeComponent();
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

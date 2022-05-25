@@ -107,7 +107,7 @@ namespace LibraryManager.GUI
             {
                 TaiKhoan tk = new TaiKhoan(user,pass);
 
-                if (tkBus.DangKy(tk))
+                if (tkBus.DangKy(tk,false))
                 {
                     MessageBox.Show("Đăng ký thành công !!. Quay trở lại đăng nhập nào!! ");
                     this.Hide();

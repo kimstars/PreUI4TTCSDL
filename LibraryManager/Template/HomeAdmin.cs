@@ -45,10 +45,17 @@ namespace LibraryManager.Template
 
             long sc = homeAdmin.GetSachCo();
             int sc1 = Convert.ToInt32(sc);
-            chartSach.Series["sach"].Points.AddXY(" ", sc1.ToString());
+
             long sm = homeAdmin.GetSachMuon();
             int sm1 = Convert.ToInt32(sm);
-            chartSach.Series["sach"].Points.AddXY(" ", sm1.ToString());
+            int p = (int)(sc1 * 100 / (sc1 + sm1));
+            circleProcessPercent.ValueByTransition = p;
+
+            lbP_muon.Text += " : " + sm1.ToString();
+            lbP_sanco.Text += " : " + sc1.ToString();
+
+
+
         }
 
         private void bunifuCircleProgress1_ProgressChanged(object sender, Bunifu.UI.WinForms.BunifuCircleProgress.ProgressChangedEventArgs e)

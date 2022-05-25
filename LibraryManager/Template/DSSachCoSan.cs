@@ -17,6 +17,7 @@ namespace LibraryManager.Template
         public DSSachCoSan()
         {
             InitializeComponent();
+
         }
         string MaDSCurrent = "";
 
@@ -156,8 +157,10 @@ namespace LibraryManager.Template
         private void DSSachCoSan_Load(object sender, EventArgs e)
         {
             DSDauSach = dsBus.LoadMaDauSach_SanCo();
+            cbTheLoai.Text = "Tất cả thể loại";
             LoadBookFlow();
             LoadComboBoxTheLoai();
+
         }
     }
 }

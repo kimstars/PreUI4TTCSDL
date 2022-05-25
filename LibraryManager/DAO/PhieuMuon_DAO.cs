@@ -36,7 +36,7 @@ namespace LibraryManager.DAO
 
         public DataTable GetThongtinSachMuon(string MaMuonTra)
         {
-            string sql = $"SELECT cs.MaSach, cs.MaDauSach, ds.TenDauSach, ds.GiaTien,cs.ViTriSach FROM dbo.CUONSACH cs INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt1 ON tt1.MaSach = cs.MaSach WHERE cs.MaDauSach IN(SELECT MaDauSach     FROM dbo.CUONSACH WHERE MaSach IN ( SELECT tt.MaSach   FROM dbo.THONGTINMUONTRA tt        WHERE tt.MaMuonTra = '{MaMuonTra}' )) AND cs.TrangThai = 0 AND tt1.MaMuonTra = '{MaMuonTra}'";
+            string sql = $"SELECT cs.MaSach, cs.MaDauSach, ds.TenDauSach, ds.GiaTien,cs.ViTriSach FROM dbo.CUONSACH cs INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt1 ON tt1.MaSach = cs.MaSach WHERE cs.MaDauSach IN(SELECT MaDauSach  FROM dbo.CUONSACH WHERE MaSach IN ( SELECT tt.MaSach   FROM dbo.THONGTINMUONTRA tt    WHERE tt.MaMuonTra = '{MaMuonTra}' ))  AND tt1.MaMuonTra = '{MaMuonTra}'";
             return GetData(sql);
         }
 
@@ -55,11 +55,11 @@ namespace LibraryManager.DAO
             string sql;
             if (isNV)
             {
-                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', {pm.MaNhanVien}, {DateToString(pm.NgayMuon) }, {DateToString(pm.HanTra)},  1)";
+                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', '{pm.MaNhanVien}', '{DateToString(pm.NgayMuon) }', '{DateToString(pm.HanTra)}',  1, '{pm.TienCoc}')";
             }
             else
             {
-                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, {DateToString(pm.NgayMuon) }, {DateToString(pm.HanTra)},  0 )";
+                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, '{DateToString(pm.NgayMuon) }', '{DateToString(pm.HanTra)}' ,  0, '{pm.TienCoc}' )";
 
             }
 
@@ -68,12 +68,22 @@ namespace LibraryManager.DAO
             foreach (var masach in dsMaSach)
             {
                 sql = $"INSERT INTO dbo.THONGTINMUONTRA VALUES('{pm.MaMuonTra}',  '{masach}', NULL)";
+                Excute(sql);
             }
 
-            Excute(sql);
 
         }
 
+
+        #endregion
+
+        #region update ds phieu muon
+
+        public void Update_DaXL_PM(string MaMuonTra)
+        {
+            string sql = $"UPDATE dbo.PHIEUMUONTRA SET DaXuLy = 1 WHERE MaMuonTra = '{MaMuonTra}'";
+            Excute(sql);
+        }
 
         #endregion
 

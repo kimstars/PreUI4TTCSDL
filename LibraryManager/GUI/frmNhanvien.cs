@@ -204,7 +204,8 @@ namespace LibraryManager
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
             CloseDoc();
-
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeNV());
 
         }
 
@@ -256,6 +257,52 @@ namespace LibraryManager
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.DSSachCoSan());
+        }
+
+        private void btnM_Nhapsach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemCuonSach());
+        }
+
+        private void btnM_DSDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThongTinDG());
+        }
+
+        private void btnM_DSDausach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemDauSach());
+        }
+
+        private void btnM_Tra_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.Xu_ly_tra());
+        }
+
+        private void btnM_dsSDamuon_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.tk_sachmuon_nv());
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSPhieuMuonNV());
+        }
+
+        private void btnM_ThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnM_LapBBvp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

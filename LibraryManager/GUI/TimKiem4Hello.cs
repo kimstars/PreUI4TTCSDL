@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using LibraryManager.BUS;
 using LibraryManager.DTO;
@@ -18,6 +17,15 @@ namespace LibraryManager.GUI
         public TimKiem4Hello()
         {
             InitializeComponent();
+        }
+
+        public TimKiem4Hello(string Keyword)
+        {
+            InitializeComponent();
+            txtSearch.Text = Keyword;
+            cbTheLoai.Text = "Tất cả thể loại";
+            SearchByName();
+            LoadBookFlow();
         }
 
         string MaDSCurrent = "";
@@ -72,9 +80,15 @@ namespace LibraryManager.GUI
         private void TimKiem4Hello_Load(object sender, EventArgs e)
         {
 
+            if(txtSearch.Text == "")
+            {
+                DSDauSach = dsBus.LoadMaDauSach();
+                LoadBookFlow();
+            }
 
-            DSDauSach = dsBus.LoadMaDauSach();
-            LoadBookFlow();
+
+
+            
             LoadComboBoxTheLoai();
 
         }
@@ -257,7 +271,7 @@ namespace LibraryManager.GUI
             }
             else
             {
-                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr);
+                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr,dsMuon);
                 newdg.Show();
             }
         }

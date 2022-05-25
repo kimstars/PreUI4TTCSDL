@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class FrmHome : UserControl
+    public partial class ThongKeNV : UserControl
     {
-        public FrmHome()
+        public ThongKeNV()
         {
             InitializeComponent();
         }

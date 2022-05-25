@@ -22,7 +22,7 @@ namespace LibraryManager.Template
         private void btnRegister_Click(object sender, EventArgs e)
         {
             GUI.FrmDangKy newform = new GUI.FrmDangKy();
-
+            newform.Show();
         }
 
         private void HomeHello_Load(object sender, EventArgs e)
@@ -42,6 +42,31 @@ namespace LibraryManager.Template
             long tl = homeHello.GetTongTL();
             int tl1 = Convert.ToInt32(tl);
             lbTongTL.Text = tl1.ToString();
+
+            DataTable temp = homeHello.GetTop2Dausach();
+            foreach(DataRow row in temp.Rows)
+            {
+                string mads = row["MaDauSach"].ToString();
+                flowpanel.Controls.Add(new OneBook(mads));
+            }
+        }
+
+        private void btnTacGia_Click(object sender, EventArgs e)
+        {
+            GUI.Hello_TacGia newform = new GUI.Hello_TacGia();
+            newform.Show();
+        }
+
+        private void btnTheLoai_Click(object sender, EventArgs e)
+        {
+            GUI.Hello_TheLoai newform = new GUI.Hello_TheLoai();
+            newform.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            GUI.TimKiem4Hello newform = new GUI.TimKiem4Hello(txtSearch.Text);
+            newform.Show();
         }
     }
 }

@@ -31,10 +31,11 @@ namespace LibraryManager.DAO
             return GetCount(sqlString);
         }
 
-        public DataTable Get2Anh()
+        public DataTable GetTop2_DSNhieuNhat()
         {
-            string sql = "select top 2 madausach, count(tt.masach) sl from thongtinmuontra tt, cuonsach cs where cs.masach = tt.masach group by madausach order by sl desc";
-            return GetData(sql);
+            string sql = "SELECT TOP 2 cs.MaDauSach, COUNT(cs.MaSach) sl FROM dbo.DAUSACH ds INNER JOIN dbo.CUONSACH cs ON cs.MaDauSach = ds.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaSach = cs.MaSach GROUP BY cs.MaDauSach ORDER BY sl DESC ";
+
+            return GetData(sql);    
         }
 
         public DataTable LoadPhieuMuon()
@@ -69,6 +70,21 @@ namespace LibraryManager.DAO
             string sql = "SELECT DISTINCT TOP 5 YEAR(NGAYMUON) NAM, COUNT(MADOCGIA) SL FROM PHIEUMUONTRA GROUP BY YEAR(NgayMuon) ORDER BY YEAR(NgayMuon) DESC";
             return GetData(sql);
         }
-        
+
+        public DataTable SearchTL(string _timkiem)
+        {
+            string sqlString = string.Format("SELECT TENTHELOAI N'Tên thể loại', COUNT(MASACH) N'Số lượng cuốn sách' FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
+            return GetData(sqlString);
+        }
+        public DataTable SearchTG(string _timkiem)
+        {
+            string sqlString = string.Format("SELECT TENTACGIA N'Tên tác giả', COUNT(DS.MADAUSACH) N'Số lượng đầu sách' FROM dbo.SANGTAC ST, dbo.TACGIA TG, dbo.DAUSACH DS WHERE ST.MaDauSach = DS.MaDauSach AND TG.MaTacGia = ST.MaTacGia AND TG.TenTacGia LIKE N'%{0}%' GROUP BY TG.TenTacGia", _timkiem);
+            return GetData(sqlString);
+        }
+        public DataTable SearchDS(string _timkiem)
+        {
+            string sqlString = string.Format("SELECT DS.MaDauSach N'Mã đầu sách', DS.TenDauSach N'Tên đầu sách', DS.SoLuong N'Số lượng sách', DS.NamXuatBan, DS.GiaTien, DS.MoTa, TL.TenTheLoai, TG.TenTacGia FROM dbo.DAUSACH DS, dbo.THELOAI TL, dbo.TACGIA TG, dbo.SANGTAC ST WHERE DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai like N'%{0}%' AND DS.MaDauSach = ST.MaDauSach AND ST.MaTacGia = TG.MaTacGia", _timkiem);
+            return GetData(sqlString);
+        }
     }
 }
