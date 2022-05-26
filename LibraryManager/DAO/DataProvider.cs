@@ -58,6 +58,7 @@ namespace LibraryManager.DAO
 
         //còn loại excuteNonQuery nữa nma tí t làm 
 
+
         public void Excute_Proc_NParam(string NameProc, SqlParameter[] listParam)
         {
             try
@@ -83,7 +84,6 @@ namespace LibraryManager.DAO
                 connect.Close();
             }
         }
-
 
 
         public DataTable GetData_Proc_NParam(string NameProc, SqlParameter[] listParam)
@@ -114,6 +114,63 @@ namespace LibraryManager.DAO
                 connect.Close();
             }
         }
+
+        public string GetString_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                string res = (string)cmd.ExecuteScalar();
+                return res;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public int GetINT_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                return (int)count;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
 
         public byte[] LoadImage(string sql)
         {

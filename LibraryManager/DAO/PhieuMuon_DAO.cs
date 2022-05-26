@@ -47,21 +47,33 @@ namespace LibraryManager.DAO
         }
         public DataTable Get_DSphieumuon(DateTime start, DateTime end)
         {
-            string sqlString = $"SELECT pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, COUNT(tt.MaSach) AS SoLuong ,pm.NgayMuon, pm.DaXuLy FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.NgayMuon BETWEEN '{DateToString(start)}' AND '{DateToString(end)}' GROUP BY pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, pm.NgayMuon, pm.DaXuLy";
-            return GetData(sqlString);
+
+            string NameProc = "proc_PM_DSPhieuMuon_Time";
+
+            SqlParameter[] sParams = new SqlParameter[2];
+
+            sParams[0] = new SqlParameter("@start", DateToString(start));
+            sParams[1] = new SqlParameter("@end", DateToString(end));
+
+            return GetData_Proc_NParam(NameProc, sParams);
+
+
         }
 
         public DataTable Search(string _timkiem)
         {
             string sqlString = string.Format("select * from PhieuMuon where MaDocGia like N'%{0}%' or TenDocGia like N'%{0}%'", _timkiem);
+
             return GetData(sqlString);
         }
 
-
+        //proc lấy thông tin sách mượn theo mã mượn trả
         public DataTable GetThongtinSachMuon(string MaMuonTra)
         {
-            string sql = $"SELECT cs.MaSach, cs.MaDauSach, ds.TenDauSach, ds.GiaTien,cs.ViTriSach FROM dbo.CUONSACH cs INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt1 ON tt1.MaSach = cs.MaSach WHERE cs.MaDauSach IN(SELECT MaDauSach  FROM dbo.CUONSACH WHERE MaSach IN ( SELECT tt.MaSach   FROM dbo.THONGTINMUONTRA tt    WHERE tt.MaMuonTra = '{MaMuonTra}' ))  AND tt1.MaMuonTra = '{MaMuonTra}'";
-            return GetData(sql);
+            string NameProc = "proc_PM_TTSachMuon";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMuonTra);
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
         public string GetLastest_MaPhieuMuon()
@@ -95,7 +107,6 @@ namespace LibraryManager.DAO
                 Excute(sql);
             }
 
-
         }
 
 
@@ -103,10 +114,13 @@ namespace LibraryManager.DAO
 
         #region update ds phieu muon
 
+        //proc update trạng thái đã xử lý cho phiếu mượn trả
         public void Update_DaXL_PM(string MaMuonTra)
         {
-            string sql = $"UPDATE dbo.PHIEUMUONTRA SET DaXuLy = 1 WHERE MaMuonTra = '{MaMuonTra}'";
-            Excute(sql);
+            string NameProc = "proc_PM_UpdateDaXuly";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMuonTra);
+            Excute_Proc_NParam(NameProc, sParams);
         }
 
         #endregion
@@ -116,36 +130,19 @@ namespace LibraryManager.DAO
 
         public DataTable GetTTPM(string MaMT)
         {
-            DataTable dt = new DataTable();
-            SqlDataReader rd;
-            try
-            {
-                connect.Open();
-                SqlCommand cmd = new SqlCommand("TTPhieuMuon", connect);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@MaMT", MaMT);
-                rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                return dt;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                connect.Close();
-            }
+            string NameProc = "TTPhieuMuon";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMT);
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
-
+        //proc lấy ra mã nv xử lý và mã độc giả của phiếu mượn có mã
         public DataTable LoadNVDG_MT(string MaMT)
         {
-            string sql = $"SELECT nv.MaNhanVien,dg.MaDocGia FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.NHANVIEN nv ON nv.MaNhanVien = pm.MaNhanVien WHERE pm.MaMuonTra = '{MaMT}' GROUP BY nv.MaNhanVien,dg.MaDocGia";
-
-            return GetData(sql);
-
-
+            string NameProc = "proc_PM_LoadNVDG_MT";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMT);
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
 
