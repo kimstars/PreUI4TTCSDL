@@ -30,9 +30,9 @@ namespace LibraryManager.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.paneldrag = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -52,6 +52,10 @@ namespace LibraryManager.GUI
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvVipham = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lydo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_tinhtrang = new System.Windows.Forms.RichTextBox();
             this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
@@ -59,10 +63,6 @@ namespace LibraryManager.GUI
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lydo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -159,14 +159,14 @@ namespace LibraryManager.GUI
             this.txtManv.FocusedState.Parent = this.txtManv;
             this.txtManv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtManv.HoverState.Parent = this.txtManv;
-            this.txtManv.Location = new System.Drawing.Point(184, 22);
+            this.txtManv.Location = new System.Drawing.Point(178, 11);
             this.txtManv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtManv.Name = "txtManv";
             this.txtManv.PasswordChar = '\0';
             this.txtManv.PlaceholderText = "";
             this.txtManv.SelectedText = "";
             this.txtManv.ShadowDecoration.Parent = this.txtManv;
-            this.txtManv.Size = new System.Drawing.Size(203, 39);
+            this.txtManv.Size = new System.Drawing.Size(247, 43);
             this.txtManv.TabIndex = 11;
             this.txtManv.TextChanged += new System.EventHandler(this.txtManv_TextChanged);
             // 
@@ -194,14 +194,14 @@ namespace LibraryManager.GUI
             this.txtNgaytra.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtNgaytra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNgaytra.HoverState.Parent = this.txtNgaytra;
-            this.txtNgaytra.Location = new System.Drawing.Point(184, 123);
+            this.txtNgaytra.Location = new System.Drawing.Point(178, 112);
             this.txtNgaytra.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNgaytra.Name = "txtNgaytra";
             this.txtNgaytra.PasswordChar = '\0';
             this.txtNgaytra.PlaceholderText = "";
             this.txtNgaytra.SelectedText = "";
             this.txtNgaytra.ShadowDecoration.Parent = this.txtNgaytra;
-            this.txtNgaytra.Size = new System.Drawing.Size(203, 34);
+            this.txtNgaytra.Size = new System.Drawing.Size(247, 43);
             this.txtNgaytra.TabIndex = 10;
             // 
             // txtTendg
@@ -218,7 +218,7 @@ namespace LibraryManager.GUI
             this.txtTendg.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTendg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTendg.HoverState.Parent = this.txtTendg;
-            this.txtTendg.Location = new System.Drawing.Point(636, 27);
+            this.txtTendg.Location = new System.Drawing.Point(636, 64);
             this.txtTendg.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtTendg.Name = "txtTendg";
             this.txtTendg.PasswordChar = '\0';
@@ -226,7 +226,7 @@ namespace LibraryManager.GUI
             this.txtTendg.ReadOnly = true;
             this.txtTendg.SelectedText = "";
             this.txtTendg.ShadowDecoration.Parent = this.txtTendg;
-            this.txtTendg.Size = new System.Drawing.Size(325, 34);
+            this.txtTendg.Size = new System.Drawing.Size(264, 44);
             this.txtTendg.TabIndex = 6;
             // 
             // txtTennv
@@ -243,7 +243,7 @@ namespace LibraryManager.GUI
             this.txtTennv.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTennv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTennv.HoverState.Parent = this.txtTennv;
-            this.txtTennv.Location = new System.Drawing.Point(635, 76);
+            this.txtTennv.Location = new System.Drawing.Point(636, 11);
             this.txtTennv.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtTennv.Name = "txtTennv";
             this.txtTennv.PasswordChar = '\0';
@@ -251,7 +251,7 @@ namespace LibraryManager.GUI
             this.txtTennv.ReadOnly = true;
             this.txtTennv.SelectedText = "";
             this.txtTennv.ShadowDecoration.Parent = this.txtTennv;
-            this.txtTennv.Size = new System.Drawing.Size(328, 32);
+            this.txtTennv.Size = new System.Drawing.Size(264, 44);
             this.txtTennv.TabIndex = 8;
             // 
             // label2
@@ -268,7 +268,7 @@ namespace LibraryManager.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label3.Location = new System.Drawing.Point(513, 32);
+            this.label3.Location = new System.Drawing.Point(513, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 2;
@@ -297,7 +297,7 @@ namespace LibraryManager.GUI
             this.txtMaVP.FocusedState.Parent = this.txtMaVP;
             this.txtMaVP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaVP.HoverState.Parent = this.txtMaVP;
-            this.txtMaVP.Location = new System.Drawing.Point(636, 123);
+            this.txtMaVP.Location = new System.Drawing.Point(636, 112);
             this.txtMaVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMaVP.Name = "txtMaVP";
             this.txtMaVP.PasswordChar = '\0';
@@ -305,7 +305,7 @@ namespace LibraryManager.GUI
             this.txtMaVP.ReadOnly = true;
             this.txtMaVP.SelectedText = "";
             this.txtMaVP.ShadowDecoration.Parent = this.txtMaVP;
-            this.txtMaVP.Size = new System.Drawing.Size(328, 34);
+            this.txtMaVP.Size = new System.Drawing.Size(264, 44);
             this.txtMaVP.TabIndex = 7;
             // 
             // txtMadg
@@ -322,14 +322,14 @@ namespace LibraryManager.GUI
             this.txtMadg.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtMadg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMadg.HoverState.Parent = this.txtMadg;
-            this.txtMadg.Location = new System.Drawing.Point(184, 74);
+            this.txtMadg.Location = new System.Drawing.Point(178, 63);
             this.txtMadg.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMadg.Name = "txtMadg";
             this.txtMadg.PasswordChar = '\0';
             this.txtMadg.PlaceholderText = "";
             this.txtMadg.SelectedText = "";
             this.txtMadg.ShadowDecoration.Parent = this.txtMadg;
-            this.txtMadg.Size = new System.Drawing.Size(203, 34);
+            this.txtMadg.Size = new System.Drawing.Size(247, 43);
             this.txtMadg.TabIndex = 5;
             // 
             // lbMaVP
@@ -337,7 +337,7 @@ namespace LibraryManager.GUI
             this.lbMaVP.AutoSize = true;
             this.lbMaVP.BackColor = System.Drawing.SystemColors.Control;
             this.lbMaVP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbMaVP.Location = new System.Drawing.Point(513, 127);
+            this.lbMaVP.Location = new System.Drawing.Point(513, 123);
             this.lbMaVP.Name = "lbMaVP";
             this.lbMaVP.Size = new System.Drawing.Size(100, 23);
             this.lbMaVP.TabIndex = 6;
@@ -347,7 +347,7 @@ namespace LibraryManager.GUI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label5.Location = new System.Drawing.Point(511, 85);
+            this.label5.Location = new System.Drawing.Point(513, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 23);
             this.label5.TabIndex = 4;
@@ -378,21 +378,21 @@ namespace LibraryManager.GUI
             this.dgvVipham.AllowCustomTheming = false;
             this.dgvVipham.AllowUserToAddRows = false;
             this.dgvVipham.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgvVipham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvVipham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVipham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVipham.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVipham.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvVipham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVipham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVipham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVipham.ColumnHeadersHeight = 40;
             this.dgvVipham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -417,14 +417,14 @@ namespace LibraryManager.GUI
             this.dgvVipham.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvVipham.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.dgvVipham.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVipham.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVipham.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVipham.EnableHeadersVisualStyles = false;
             this.dgvVipham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvVipham.HeaderBackColor = System.Drawing.Color.Teal;
@@ -440,6 +440,31 @@ namespace LibraryManager.GUI
             this.dgvVipham.TabIndex = 15;
             this.dgvVipham.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             this.dgvVipham.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVipham_CellValueChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã sách";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên sách";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Lydo
+            // 
+            this.Lydo.DataPropertyName = "Lydo";
+            this.Lydo.HeaderText = "Lý do VP";
+            this.Lydo.MinimumWidth = 6;
+            this.Lydo.Name = "Lydo";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tiền phạt";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
             // label11
             // 
@@ -513,31 +538,6 @@ namespace LibraryManager.GUI
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.paneldrag;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã sách";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên sách";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Lydo
-            // 
-            this.Lydo.DataPropertyName = "Lydo";
-            this.Lydo.HeaderText = "Lý do VP";
-            this.Lydo.MinimumWidth = 6;
-            this.Lydo.Name = "Lydo";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tiền phạt";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
             // 
             // FrmBienbanVP
             // 
