@@ -14,13 +14,36 @@ namespace LibraryManager.DAO
     {
         public DataTable Get_DSphieumuon()
         {
-            string sqlString = "SELECT pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, COUNT(tt.MaSach) AS SoLuong ,pm.NgayMuon, pm.DaXuLy FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra GROUP BY pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, pm.NgayMuon, pm.DaXuLy";
-            return GetData(sqlString);
+            SqlParameter[] sParams = new SqlParameter[0];
+
+            return GetData_Proc_NParam("proc_PM_DSPhieuMuon",sParams);
+
+            //loại ko tham số
+
+            
         }
+
+
+
+
         public DataTable Get_DSphieumuon(string keyword)
         {
-            string sqlString = $"SELECT pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, COUNT(tt.MaSach) AS SoLuong ,pm.NgayMuon, pm.DaXuLy FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.MaMuonTra = '{keyword}' OR pm.MaDocGia LIKE '{keyword}' OR dg.TenDocGia LIKE N'{keyword}'  GROUP BY pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, pm.NgayMuon, pm.DaXuLy";
-            return GetData(sqlString);
+            //ví dụ cái này có tham số 
+            string NameProc = "proc_PM_DSPhieuMuon_keyword";
+
+            //có hai parameter 
+
+            keyword = $"%{keyword}%";
+
+            SqlParameter[] sParams = new SqlParameter[2];
+
+            sParams[0] = new SqlParameter("@keyMa", keyword);
+            sParams[1] = new SqlParameter("@keyTen", keyword);
+
+            return GetData_Proc_NParam(NameProc,sParams);
+
+            //loại có tham số 
+
         }
         public DataTable Get_DSphieumuon(DateTime start, DateTime end)
         {
