@@ -58,7 +58,31 @@ namespace LibraryManager.DAO
 
         //còn loại excuteNonQuery nữa nma tí t làm 
 
+        public void Excute_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
 
 
 
