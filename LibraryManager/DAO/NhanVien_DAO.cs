@@ -59,6 +59,12 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string GetTenNV(string MaNV)
+        {
+            string sql = $"SELECT TenNhanVien FROM dbo.NHANVIEN WHERE MaNhanVien = '{MaNV}'";
+            return GetString(sql);
+        }
+
         public string GetMaNV_PM(string MaMT)
         {
             string sql = $"SELECT MaNhanVien FROM dbo.PHIEUMUONTRA WHERE MaMuonTra = '{MaMT}'";

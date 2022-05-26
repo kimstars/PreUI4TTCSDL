@@ -180,7 +180,16 @@ namespace LibraryManager.DAO
 
         #endregion
 
+        #region thongke
 
+        public DataTable ThongKeSachMuon_DS()
+        {
+            string sql = $"SELECT ds.MaDauSach, ds.TenDauSach, COUNT(tt.MaSach) soluong FROM dbo.DAUSACH ds INNER JOIN dbo.CUONSACH cs ON cs.MaDauSach = ds.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaSach = cs.MaSach INNER JOIN dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra GROUP BY ds.MaDauSach, ds.TenDauSach";
+            return GetData(sql);
+        }
+
+
+        #endregion
 
 
 

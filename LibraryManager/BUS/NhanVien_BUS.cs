@@ -69,11 +69,16 @@ namespace LibraryManager.BUS
 
         #region load ThongtinNV
 
+
+      
         public DataTable LoadThongTinNV(string MaNV)
         {
             return nvDao.GetThongTinNV(MaNV);
         }
-
+        public string GetName(string maNV)
+        {
+            return nvDao.GetTenNV(maNV);
+        }
 
         #endregion
         public void LuuAnh(string maID, string imgPath)
