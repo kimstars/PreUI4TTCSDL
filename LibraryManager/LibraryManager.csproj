@@ -133,6 +133,9 @@
       <HintPath>D:\Download\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -540,6 +543,7 @@
     <Compile Include="GUI\Captaikhoan.Designer.cs">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Report\PhieuMuonCreator.cs" />
     <Compile Include="Report\PhieuMuonRP.cs">
       <SubType>Component</SubType>
@@ -570,6 +574,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
     </Compile>
+
     <Compile Include="Template\Admin_ThemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -829,12 +834,14 @@
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+
     <EmbeddedResource Include="Report\PhieuMuonRP.resx">
       <DependentUpon>PhieuMuonRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\TKLuotMuonRP.resx">
       <DependentUpon>TKLuotMuonRP.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Template\Admin_ThemNV.resx">
       <DependentUpon>Admin_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -1204,6 +1211,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_study_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -78,6 +78,15 @@ namespace LibraryManager.BUS
         {
             return home.SearchDS(_timkiem);
         }
+        public DataTable LoadSLTL()
+        {
 
+            return home.LoadSLTL();
+        }
+        public DataTable LoadTienCoc()
+        {
+
+            return home.LoadTienCoc();
+        }
     }
 }

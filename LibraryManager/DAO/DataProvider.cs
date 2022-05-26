@@ -12,17 +12,13 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-
-
-        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=MSI\HOADINH;Initial Catalog=THUVIENMTA;Integrated Security=True";
         protected SqlConnection connect = new SqlConnection(provider);
-
 
         public DataTable GetData(string sql)
         {
             DataTable rs = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
-            rs.Clear();
             adapter.Fill(rs);
             return rs;
         }
@@ -181,14 +177,9 @@ namespace LibraryManager.DAO
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] imgbin = new byte[100000000];
-
-            if (reader.HasRows && !Convert.IsDBNull(reader[0]))
+            if (reader.HasRows)
             {
                 imgbin = (byte[])reader[0];
-            }
-            else
-            {
-                imgbin = new byte[0];
             }
             connect.Close();
             return imgbin ;
@@ -222,7 +213,6 @@ namespace LibraryManager.DAO
             return "";
 
         }
-
         public DataSet chart(string sql)
         {
             connect.Open();
@@ -232,6 +222,5 @@ namespace LibraryManager.DAO
             ad.Fill(ds);
             return ds;
         }
-
     }
 }
