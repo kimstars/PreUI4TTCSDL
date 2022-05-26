@@ -66,7 +66,7 @@ namespace LibraryManager.Template
             this.panelHome = new System.Windows.Forms.Panel();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThuNghiem = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.panelNameUser = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelName = new System.Windows.Forms.Panel();
@@ -695,7 +695,7 @@ namespace LibraryManager.Template
             // 
             this.panelHome.Controls.Add(this.btnHome);
             this.panelHome.Controls.Add(this.btnCaiDat);
-            this.panelHome.Controls.Add(this.btnThuNghiem);
+            this.panelHome.Controls.Add(this.btnThongKe);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -748,27 +748,27 @@ namespace LibraryManager.Template
             this.btnCaiDat.TabIndex = 14;
             this.btnCaiDat.Text = "Cài đặt";
             // 
-            // btnThuNghiem
+            // btnThongKe
             // 
-            this.btnThuNghiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnThuNghiem.CheckedState.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.CustomImages.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
-            this.btnThuNghiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThuNghiem.ForeColor = System.Drawing.Color.Black;
-            this.btnThuNghiem.HoverState.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.Image = global::LibraryManager.Properties.Resources.icons8_ab_testing_48px;
-            this.btnThuNghiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThuNghiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThuNghiem.Location = new System.Drawing.Point(0, 111);
-            this.btnThuNghiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThuNghiem.Name = "btnThuNghiem";
-            this.btnThuNghiem.Padding = new System.Windows.Forms.Padding(1);
-            this.btnThuNghiem.ShadowDecoration.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.Size = new System.Drawing.Size(253, 49);
-            this.btnThuNghiem.TabIndex = 15;
-            this.btnThuNghiem.Text = "Thử nghiệm";
-            this.btnThuNghiem.Click += new System.EventHandler(this.btnThuNghiem_Click);
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnThongKe.CheckedState.Parent = this.btnThongKe;
+            this.btnThongKe.CustomImages.Parent = this.btnThongKe;
+            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
+            this.btnThongKe.HoverState.Parent = this.btnThongKe;
+            this.btnThongKe.Image = global::LibraryManager.Properties.Resources.icons8_combo_chart_48px;
+            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 111);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(1);
+            this.btnThongKe.ShadowDecoration.Parent = this.btnThongKe;
+            this.btnThongKe.Size = new System.Drawing.Size(253, 49);
+            this.btnThongKe.TabIndex = 15;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // panelNameUser
             // 
@@ -914,7 +914,7 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Panel PanelMenuBar;
         private System.Windows.Forms.Panel panelAll;
-        private Guna.UI2.WinForms.Guna2Button btnThuNghiem;
+        private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private Guna.UI2.WinForms.Guna2Button btnCaiDat;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private System.Windows.Forms.Panel panelNameUser;

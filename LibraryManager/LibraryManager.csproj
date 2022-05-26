@@ -543,6 +543,38 @@
     <Compile Include="GUI\Captaikhoan.Designer.cs">
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Report\PhieuMuonCreator.cs" />
+    <Compile Include="Report\PhieuMuonRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuMuonRP.Designer.cs">
+      <DependentUpon>PhieuMuonRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuMuon_DataSet.cs">
+      <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuMuon_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TKLuotMuonRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TKLuotMuonRP.Designer.cs">
+      <DependentUpon>TKLuotMuonRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TKLuotMuonCreator.cs" />
+    <Compile Include="Report\TKLuotMuon_Dataset.cs">
+      <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TKLuotMuon_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
+    </Compile>
+
     <Compile Include="Template\Admin_ThemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -675,11 +707,11 @@
     <Compile Include="Template\PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.cs">
+    <Compile Include="Template\ThemDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.Designer.cs">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <Compile Include="Template\ThemDocgia.Designer.cs">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\ThongKeNV.cs">
       <SubType>UserControl</SubType>
@@ -802,6 +834,14 @@
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+
+    <EmbeddedResource Include="Report\PhieuMuonRP.resx">
+      <DependentUpon>PhieuMuonRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TKLuotMuonRP.resx">
+      <DependentUpon>TKLuotMuonRP.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="Template\Admin_ThemNV.resx">
       <DependentUpon>Admin_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -865,8 +905,8 @@
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\QLInfoDocgia.resx">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <EmbeddedResource Include="Template\ThemDocgia.resx">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ThongKeNV.resx">
       <DependentUpon>ThongKeNV.cs</DependentUpon>
@@ -917,6 +957,28 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\PhieuMuon_DataSet.xsc">
+      <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\PhieuMuon_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuMuon_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\PhieuMuon_DataSet.xss">
+      <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\TKLuotMuon_Dataset.xsc">
+      <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Report\TKLuotMuon_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKLuotMuon_Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\TKLuotMuon_Dataset.xss">
+      <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
+    </None>
     <None Include="Resources\icons8-library-64 %282%29.png" />
     <None Include="Resources\icons8_user_50px_1.png" />
     <None Include="Resources\icons8_search_32px.png" />

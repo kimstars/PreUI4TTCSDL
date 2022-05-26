@@ -18,6 +18,7 @@ namespace LibraryManager.DTO
         public string CMND { get; set; }
         public System.DateTime NgayDangKi { get; set; }
         public string TenDangNhap { get; set; }
+        public string MatKhau { get; set; }
         public byte[] Anh { get; set; }
     }
 }

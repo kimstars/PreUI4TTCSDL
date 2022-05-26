@@ -127,7 +127,7 @@ namespace LibraryManager.GUI
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if (!tkBus.checkTonTaiTK(txtUsername.Text))
+            if (tkBus.checkTonTaiTK(txtUsername.Text))
             {
                 errorProvider1.SetError(lbMsg, "Tài khoản đã tồn tại !");
                 lbMsg.Text = "Tài khoản đã tồn tại !";

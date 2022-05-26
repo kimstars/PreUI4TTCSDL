@@ -127,12 +127,6 @@ namespace LibraryManager.Template
 
 
 
-        private void btnThuNghiem_Click(object sender, EventArgs e)
-        {
-            closeYCollapse();
-            //infoDG.Visible = true;
-        }
-
         private void btnOpenQLNV_Click(object sender, EventArgs e)
         {
             Open_Y(ref panelQLNV, ref QLNVTickCollapse);
@@ -222,6 +216,12 @@ namespace LibraryManager.Template
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new DanhSachDG());
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new ThongKeNV());
         }
     }
 }
