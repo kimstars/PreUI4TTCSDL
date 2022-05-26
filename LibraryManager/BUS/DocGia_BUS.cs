@@ -40,13 +40,9 @@ namespace LibraryManager.BUS
             dgDao.Update(dg);
             return true;
         }
-        public int Them(DocGia dg)
+        public bool Them(DocGia dg)
         {
-            if (string.IsNullOrEmpty(dg.MaDocGia))
-                return 0;
-            if (!dgDao.Insert(dg))
-                return -1;
-            return 1;
+           return dgDao.Insert(dg);   
         }
         public DataTable TimKiem(string _timkiem)
         {
@@ -160,7 +156,26 @@ namespace LibraryManager.BUS
         #endregion
 
 
+        #region themdocgia
+        public string GetLastestMaDG()
+        {
+            return dgDao.GetLastest_MaDG();
+        }
 
-        
+        public string CreateNext_MaDG()
+        {
+            string current = GetLastestMaDG();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string maMuon = "DG000000";
+            maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
+
+            return maMuon;
+        }
+
+        #endregion
+
     }
 }

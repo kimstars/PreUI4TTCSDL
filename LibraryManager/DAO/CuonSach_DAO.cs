@@ -17,13 +17,13 @@ namespace LibraryManager.DAO
             string sql = "SELECT MaSach FROM dbo.CUONSACH  WHERE TrangThai=1";
             return GetData(sql);
         }
-
+        //proc lấy ra mã sách lớn nhất
         public string Lastest_MaSach()
         {
 
             string NameProc = "proc_cs_Lastest_MaSach";
             SqlParameter[] sParams = new SqlParameter[0];
-            return GetData_Proc_NParam(NameProc, sParams);
+            return GetString_Proc_NParam(NameProc, sParams);
 
         }
 

@@ -702,11 +702,11 @@
     <Compile Include="Template\PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.cs">
+    <Compile Include="Template\ThemDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.Designer.cs">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <Compile Include="Template\ThemDocgia.Designer.cs">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\ThongKeNV.cs">
       <SubType>UserControl</SubType>
@@ -898,8 +898,8 @@
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\QLInfoDocgia.resx">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <EmbeddedResource Include="Template\ThemDocgia.resx">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ThongKeNV.resx">
       <DependentUpon>ThongKeNV.cs</DependentUpon>

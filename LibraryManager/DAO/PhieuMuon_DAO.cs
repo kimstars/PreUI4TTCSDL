@@ -76,10 +76,13 @@ namespace LibraryManager.DAO
             return GetData_Proc_NParam(NameProc, sParams);
         }
 
+        //proc lấy ra mã phiếu mượn lớn nhất
         public string GetLastest_MaPhieuMuon()
         {
-            string sql = "SELECT TOP 1 MaMuonTra FROM dbo.PHIEUMUONTRA ORDER BY MaMuonTra DESC";
-            return GetString(sql);
+
+            string NameProc = "proc_cs_GetLastest_MaPhieuMuon";
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetString_Proc_NParam(NameProc, sParams);
         }
 
 
