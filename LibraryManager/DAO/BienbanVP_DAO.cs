@@ -34,7 +34,7 @@ namespace LibraryManager.DAO
         }
         public DataTable loadMaSach(string madg)
         {
-            string sqlString = $"select masach from thongtinmuontra ttmt, phieumuontra pmt where pmt.mamuontra= ttmt.mamuontra and madocgia = '{madg}'";
+            string sqlString = $"select masach from thongtinmuontra ttmt, phieumuontra pmt where pmt.mamuontra= ttmt.mamuontra and madocgia = '{madg}' and ngaytra is null";
             return GetData(sqlString);
         }
         public DataTable loadManv()
@@ -49,7 +49,7 @@ namespace LibraryManager.DAO
         }
         public void insert(BienBanViPham bbvp)
         {
-            string sqlString = "insert into bienbanvipham values ('"+bbvp.MaViPham+"','"+bbvp.MaDocGia+"',N'"+bbvp.MaNhanVien+"','"+bbvp.LyDo+"',"+bbvp.TienPhat+",N'"+bbvp.TinhTrangSach+"')";
+            string sqlString = $"insert into bienbanvipham values ('{bbvp.MaViPham}','{bbvp.MaDocGia}',N'{bbvp.MaNhanVien}','{bbvp.LyDo}',{bbvp.TienPhat},N'{bbvp.TinhTrangSach}')";
             Excute(sqlString);
         }
         public void sua(BienBanViPham bbvp)
@@ -80,8 +80,6 @@ namespace LibraryManager.DAO
             {
                 connect.Close();
             }
-            
-
         }
         public void Tao_vp(ViPham vp)
         {
@@ -100,11 +98,63 @@ namespace LibraryManager.DAO
             return GetCount1(sqlString);
 
         }
+        // lấy số lượng ngày mà cuốn sách đã bị mượn quá hạn trả
         public Int64 soluongngay(string masach)
         {
-            string sqlString = $"select datediff(day,getdate(),hantra) songay  from PHIEUMUONTra pmt, THONGTINMUONTRA tt where tt.MaMuonTra=pmt.MaMuonTra and masach='{masach}'";
+            string sqlString = $"select datediff(day,hantra,getdate()) songay  from PHIEUMUONTra pmt, THONGTINMUONTRA tt where tt.MaMuonTra=pmt.MaMuonTra and masach='{masach}'";
             return GetCount(sqlString);
+        }
+        //-- Thủ tục update ngày trả và set trạng thái sách bằng 0
+        public void update__ngaytra_0_BBVP(string masach )
+        {
+            
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("update_BBVP_ngaytra_0", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@macs", masach);
+                
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+        //-- Thủ tục update ngày trả và set trạng thái sách bằng 1
+        public void update__ngaytra_1_BBVP(string masach)
+        {
+
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("update_BBVP_ngaytra_1", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@macs", masach);
+
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
     }
 

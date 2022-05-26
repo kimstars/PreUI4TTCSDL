@@ -63,6 +63,14 @@ namespace LibraryManager.BUS
         {
             return bbvp_dao.soluongngay(masach);
         }
+        public void update0(string masach)
+        {
+            bbvp_dao.update__ngaytra_0_BBVP(masach);
+        }
+        public void update1(string masach)
+        {
+            bbvp_dao.update__ngaytra_1_BBVP(masach);
+        }
     }
 }
 
