@@ -35,7 +35,6 @@ namespace LibraryManager.GUI
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lbMsg = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
@@ -94,25 +93,16 @@ namespace LibraryManager.GUI
             this.lbMsg.ForeColor = System.Drawing.Color.Red;
             this.lbMsg.Location = new System.Drawing.Point(350, 405);
             this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(11, 16);
+            this.lbMsg.Size = new System.Drawing.Size(12, 17);
             this.lbMsg.TabIndex = 31;
             this.lbMsg.Text = ".";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 521);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 16);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Bạn quên mật khẩu ?";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(405, 437);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 16);
+            this.label2.Size = new System.Drawing.Size(238, 17);
             this.label2.TabIndex = 29;
             this.label2.Text = "Đồng ý chấp hành Nội quy thư viện?";
             // 
@@ -147,7 +137,7 @@ namespace LibraryManager.GUI
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
-            this.btnSubmit.Location = new System.Drawing.Point(355, 473);
+            this.btnSubmit.Location = new System.Drawing.Point(353, 488);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
@@ -182,7 +172,7 @@ namespace LibraryManager.GUI
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
             this.label1.Location = new System.Drawing.Point(395, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 28);
+            this.label1.Size = new System.Drawing.Size(169, 34);
             this.label1.TabIndex = 23;
             this.label1.Text = "Đăng nhập";
             // 
@@ -197,7 +187,7 @@ namespace LibraryManager.GUI
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
             this.label4.Location = new System.Drawing.Point(364, 41);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 28);
+            this.label4.Size = new System.Drawing.Size(224, 34);
             this.label4.TabIndex = 33;
             this.label4.Text = "THƯ VIỆN MTA";
             // 
@@ -293,7 +283,6 @@ namespace LibraryManager.GUI
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBoxKiet1);
             this.Controls.Add(this.lbMsg);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnSubmit);
@@ -321,7 +310,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label lbMsg;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnDangKy;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;

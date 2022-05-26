@@ -104,7 +104,6 @@ namespace LibraryManager.GUI
                                 {
                                     FrmDocGia newdg = new FrmDocGia(user);
                                     newdg.Show();
-
                                 }
                                 
                                 break;

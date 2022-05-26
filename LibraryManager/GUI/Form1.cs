@@ -22,8 +22,10 @@ namespace LibraryManager
         {
             sidebartick.Start();
             panelShow.Controls.Clear();
+
             panelShow.Controls.Add(new Template.HomeHello());
          
+
 
         }
 
@@ -129,3 +131,5 @@ namespace LibraryManager
 	
     }
 }
+           
+

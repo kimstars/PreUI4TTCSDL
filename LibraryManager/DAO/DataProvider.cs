@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +12,13 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-
-
-        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=MSI\HOADINH;Initial Catalog=THUVIENMTA;Integrated Security=True";
         protected SqlConnection connect = new SqlConnection(provider);
-
 
         public DataTable GetData(string sql)
         {
             DataTable rs = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
-            rs.Clear();
             adapter.Fill(rs);
             return rs;
         }
@@ -55,6 +52,122 @@ namespace LibraryManager.DAO
             connect.Close();
         }
 
+        //còn loại excuteNonQuery nữa nma tí t làm 
+
+
+        public void Excute_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public DataTable GetData_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+        public string GetString_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                string res = (string)cmd.ExecuteScalar();
+                return res;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public int GetINT_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                return (int)count;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+
         public byte[] LoadImage(string sql)
         {
             
@@ -67,10 +180,6 @@ namespace LibraryManager.DAO
             if (reader.HasRows)
             {
                 imgbin = (byte[])reader[0];
-            }
-            else
-            {
-                imgbin = new byte[0];
             }
             connect.Close();
             return imgbin ;
@@ -113,7 +222,6 @@ namespace LibraryManager.DAO
             return "";
 
         }
-
         public DataSet chart(string sql)
         {
             connect.Open();
@@ -123,6 +231,5 @@ namespace LibraryManager.DAO
             ad.Fill(ds);
             return ds;
         }
-
     }
 }

@@ -450,7 +450,7 @@ namespace LibraryManager
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "y";
+            this.Text = "THƯ VIỆN MTA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenuBar.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);

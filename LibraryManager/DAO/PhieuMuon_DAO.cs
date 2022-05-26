@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using LibraryManager.DTO;
+using System.Data.SqlClient;
 
 
 namespace LibraryManager.DAO
@@ -13,37 +14,75 @@ namespace LibraryManager.DAO
     {
         public DataTable Get_DSphieumuon()
         {
-            string sqlString = "SELECT pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, COUNT(tt.MaSach) AS SoLuong ,pm.NgayMuon, pm.DaXuLy FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra GROUP BY pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, pm.NgayMuon, pm.DaXuLy";
-            return GetData(sqlString);
+            SqlParameter[] sParams = new SqlParameter[0];
+
+            return GetData_Proc_NParam("proc_PM_DSPhieuMuon",sParams);
+
+            //loại ko tham số
+
+            
         }
+
+
+
+
         public DataTable Get_DSphieumuon(string keyword)
         {
-            string sqlString = $"SELECT pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, COUNT(tt.MaSach) AS SoLuong ,pm.NgayMuon, pm.DaXuLy FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.MaMuonTra = '{keyword}' OR pm.MaDocGia LIKE '{keyword}' OR dg.TenDocGia LIKE N'{keyword}'  GROUP BY pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, pm.NgayMuon, pm.DaXuLy";
-            return GetData(sqlString);
+            //ví dụ cái này có tham số 
+            string NameProc = "proc_PM_DSPhieuMuon_keyword";
+
+            //có hai parameter 
+
+            keyword = $"%{keyword}%";
+
+            SqlParameter[] sParams = new SqlParameter[2];
+
+            sParams[0] = new SqlParameter("@keyMa", keyword);
+            sParams[1] = new SqlParameter("@keyTen", keyword);
+
+            return GetData_Proc_NParam(NameProc,sParams);
+
+            //loại có tham số 
+
         }
         public DataTable Get_DSphieumuon(DateTime start, DateTime end)
         {
-            string sqlString = $"SELECT pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, COUNT(tt.MaSach) AS SoLuong ,pm.NgayMuon, pm.DaXuLy FROM dbo.PHIEUMUONTRA pm INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = pm.MaDocGia INNER JOIN dbo.THONGTINMUONTRA tt ON tt.MaMuonTra = pm.MaMuonTra WHERE pm.NgayMuon BETWEEN '{DateToString(start)}' AND '{DateToString(end)}' GROUP BY pm.MaMuonTra, pm.MaDocGia, dg.TenDocGia, pm.NgayMuon, pm.DaXuLy";
-            return GetData(sqlString);
+
+            string NameProc = "proc_PM_DSPhieuMuon_Time";
+
+            SqlParameter[] sParams = new SqlParameter[2];
+
+            sParams[0] = new SqlParameter("@start", DateToString(start));
+            sParams[1] = new SqlParameter("@end", DateToString(end));
+
+            return GetData_Proc_NParam(NameProc, sParams);
+
+
         }
 
         public DataTable Search(string _timkiem)
         {
             string sqlString = string.Format("select * from PhieuMuon where MaDocGia like N'%{0}%' or TenDocGia like N'%{0}%'", _timkiem);
+
             return GetData(sqlString);
         }
 
-
+        //proc lấy thông tin sách mượn theo mã mượn trả
         public DataTable GetThongtinSachMuon(string MaMuonTra)
         {
-            string sql = $"SELECT cs.MaSach, cs.MaDauSach, ds.TenDauSach, ds.GiaTien,cs.ViTriSach FROM dbo.CUONSACH cs INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach INNER JOIN dbo.THONGTINMUONTRA tt1 ON tt1.MaSach = cs.MaSach WHERE cs.MaDauSach IN(SELECT MaDauSach  FROM dbo.CUONSACH WHERE MaSach IN ( SELECT tt.MaSach   FROM dbo.THONGTINMUONTRA tt    WHERE tt.MaMuonTra = '{MaMuonTra}' ))  AND tt1.MaMuonTra = '{MaMuonTra}'";
-            return GetData(sql);
+            string NameProc = "proc_PM_TTSachMuon";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMuonTra);
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
+        //proc lấy ra mã phiếu mượn lớn nhất
         public string GetLastest_MaPhieuMuon()
         {
-            string sql = "SELECT TOP 1 MaMuonTra FROM dbo.PHIEUMUONTRA ORDER BY MaMuonTra DESC";
-            return GetString(sql);
+
+            string NameProc = "proc_cs_GetLastest_MaPhieuMuon";
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetString_Proc_NParam(NameProc, sParams);
         }
 
 
@@ -71,7 +110,6 @@ namespace LibraryManager.DAO
                 Excute(sql);
             }
 
-
         }
 
 
@@ -79,11 +117,37 @@ namespace LibraryManager.DAO
 
         #region update ds phieu muon
 
+        //proc update trạng thái đã xử lý cho phiếu mượn trả
         public void Update_DaXL_PM(string MaMuonTra)
         {
-            string sql = $"UPDATE dbo.PHIEUMUONTRA SET DaXuLy = 1 WHERE MaMuonTra = '{MaMuonTra}'";
-            Excute(sql);
+            string NameProc = "proc_PM_UpdateDaXuly";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMuonTra);
+            Excute_Proc_NParam(NameProc, sParams);
         }
+
+        #endregion
+
+
+        #region in phieu muon
+
+        public DataTable GetTTPM(string MaMT)
+        {
+            string NameProc = "TTPhieuMuon";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMT);
+            return GetData_Proc_NParam(NameProc, sParams);
+        }
+
+        //proc lấy ra mã nv xử lý và mã độc giả của phiếu mượn có mã
+        public DataTable LoadNVDG_MT(string MaMT)
+        {
+            string NameProc = "proc_PM_LoadNVDG_MT";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaMT", MaMT);
+            return GetData_Proc_NParam(NameProc, sParams);
+        }
+
 
         #endregion
 

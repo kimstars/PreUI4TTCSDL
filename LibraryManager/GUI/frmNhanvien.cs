@@ -306,5 +306,12 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.frmLapBBVP(MaNhanVien));
         }
+
+        private void btnM_DangkyDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.ThemDocgia());
+
+        }
     }
 }

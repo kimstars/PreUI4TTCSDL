@@ -70,7 +70,6 @@ namespace LibraryManager.DAO
 
                 rd = cmd.ExecuteReader();
                 dt.Load(rd);
-               
             }
             catch (Exception)
             {

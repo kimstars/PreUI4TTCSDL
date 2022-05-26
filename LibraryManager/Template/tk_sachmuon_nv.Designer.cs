@@ -53,8 +53,13 @@ namespace LibraryManager.Template
             this.label4 = new System.Windows.Forms.Label();
             this.btnTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+
             this.filter1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+
+            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
+            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
+
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -437,7 +442,7 @@ namespace LibraryManager.Template
             this.dgvSachMoi.RowHeadersWidth = 51;
             this.dgvSachMoi.RowTemplate.Height = 40;
             this.dgvSachMoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSachMoi.Size = new System.Drawing.Size(415, 258);
+            this.dgvSachMoi.Size = new System.Drawing.Size(436, 258);
             this.dgvSachMoi.TabIndex = 19;
             this.dgvSachMoi.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 

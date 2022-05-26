@@ -64,5 +64,17 @@ namespace LibraryManager.GUI
             CreateDB.create1000Book newform = new CreateDB.create1000Book();
             newform.Show();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report.TKLuotMuonCreator tkcreator = new Report.TKLuotMuonCreator("NV000003");
+            tkcreator.ShowReportHoaDon();
+        }
+
+        private void btnRPPhieumuon_Click(object sender, EventArgs e)
+        {
+            Report.PhieuMuonCreator tkcreator = new Report.PhieuMuonCreator("MT000009");
+            tkcreator.ShowReportHoaDon();
+        }
     }
 }

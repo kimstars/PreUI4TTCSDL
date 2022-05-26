@@ -86,5 +86,15 @@ namespace LibraryManager.DAO
             string sqlString = string.Format("SELECT DS.MaDauSach N'Mã đầu sách', DS.TenDauSach N'Tên đầu sách', DS.SoLuong N'Số lượng sách', DS.NamXuatBan, DS.GiaTien, DS.MoTa, TL.TenTheLoai, TG.TenTacGia FROM dbo.DAUSACH DS, dbo.THELOAI TL, dbo.TACGIA TG, dbo.SANGTAC ST WHERE DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai like N'%{0}%' AND DS.MaDauSach = ST.MaDauSach AND ST.MaTacGia = TG.MaTacGia", _timkiem);
             return GetData(sqlString);
         }
+        public DataTable LoadTienCoc()
+        {
+            string sql = "SELECT TOP 5 MONTH(NGAYMUON) Thang, YEAR(NgayMuon) Nam, SUM(CAST(TienCoc AS INT)) Tien FROM dbo.PHIEUMUONTRA GROUP BY MONTH(NGAYMUON), YEAR(NgayMuon) ORDER BY YEAR(NGAYMUON) DESC, MONTH(NgayMuon) DESC";
+            return GetData(sql);
+        }
+        public DataTable LoadSLTL()
+        {
+            string sql = "SELECT TOP 5 WITH TIES TL.TenTheLoai, COUNT(MaSach) SL FROM dbo.THELOAI TL, dbo.DAUSACH DS, dbo.CUONSACH CS WHERE DS.MaTheLoai = TL.MaTheLoai AND CS.MaDauSach = DS.MaDauSach GROUP BY TL.TenTheLoai ORDER BY SL DESC";
+            return GetData(sql);
+        }
     }
 }
