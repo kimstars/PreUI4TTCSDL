@@ -116,8 +116,17 @@ namespace LibraryManager.Template
                     ViPham vp = new ViPham();
                     vp.MaSach = dgvSVP.Rows[i].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
-
                     bb.Them_vp(vp);
+                    if (dgvSVP.Rows[i].Cells[0].Value.ToString() == "làm mất sách")
+                    {
+                        //update ngày trả và set trạng thái cuốn sách đó bằng 0
+                        bb.update0(vp.MaSach);
+                    }
+                    else
+                    {
+                        //update ngày trả và set trạng thái cuốn sách đó bằng 1
+                        bb.update1(vp.MaSach);
+                    }
                 }
             }
         }

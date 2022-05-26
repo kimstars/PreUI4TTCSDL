@@ -58,10 +58,7 @@ namespace LibraryManager.Template
 
         private void dgv_trasach_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i;
-            i = dgv_trasach.CurrentRow.Index;
-            txtMasach.Text = dgv_trasach.Rows[i].Cells[3].Value.ToString();
-            txtMadg.Text = dgv_trasach.Rows[i].Cells[0].Value.ToString();
+
 
         }
 
@@ -117,13 +114,14 @@ namespace LibraryManager.Template
                     count++;
                 }
 
-                if (count != 0)
-                {
-                    madg = dgvDs.Rows[0].Cells[1].Value.ToString();
-                    ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
-                    FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/);
-                    bbvp.Show();
-                }
+             
+            }
+            if (count != 0)
+            {
+                madg = dgvDs.Rows[0].Cells[1].Value.ToString();
+                ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
+                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/);
+                bbvp.Show();
             }
         }
 
@@ -155,7 +153,10 @@ namespace LibraryManager.Template
         {
             for (int i = 0; i < dgvDs.Rows.Count - 1; i++)
             {
-                ts_bus.update(dgvDs.Rows[i].Cells[0].Value.ToString());
+                if (dgvDs.Rows[i].Cells[3].Value.ToString() == "Không")// chỉ set những cuốn sách không vi phạm những cuốn sách vi phạm thì sẽ set ở bên vi phạm
+                {
+                    ts_bus.update(dgvDs.Rows[i].Cells[0].Value.ToString());
+                }
             }
             MessageBox.Show("Trả sách thành công!!");
         }
@@ -172,7 +173,10 @@ namespace LibraryManager.Template
 
         private void dgv_trasach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int i;
+            i = dgv_trasach.CurrentRow.Index;
+            txtMasach.Text = dgv_trasach.Rows[i].Cells[3].Value.ToString();
+            txtMadg.Text = dgv_trasach.Rows[i].Cells[0].Value.ToString();
         }
     }
 }
