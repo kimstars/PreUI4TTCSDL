@@ -22,7 +22,9 @@ namespace LibraryManager
         {
             sidebartick.Start();
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.ThongKeNV());
+
+            panelShow.Controls.Add(new Template.HomeHello());
+         
 
 
         }
@@ -76,7 +78,8 @@ namespace LibraryManager
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            
+            Template.Xu_ly_tra xtl = new Template.Xu_ly_tra();
+            xtl.Show();
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
@@ -111,6 +114,7 @@ namespace LibraryManager
         {
             GUI.frmLogin newform = new GUI.frmLogin();
             newform.Show();
+            
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)

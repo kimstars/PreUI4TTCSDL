@@ -465,6 +465,12 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\frmLapBBVP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\frmLapBBVP.Designer.cs">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Hello_TacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -544,6 +550,7 @@
       <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
 
+
     <Compile Include="Report\PhieuMuonCreator.cs" />
     <Compile Include="Report\PhieuMuonRP.cs">
       <SubType>Component</SubType>
@@ -574,6 +581,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
     </Compile>
+
 
     <Compile Include="Template\Admin_ThemNV.cs">
       <SubType>UserControl</SubType>
@@ -794,6 +802,9 @@
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmLapBBVP.resx">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Hello_TacGia.resx">
       <DependentUpon>Hello_TacGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -834,6 +845,7 @@
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+
 
     <EmbeddedResource Include="Report\PhieuMuonRP.resx">
       <DependentUpon>PhieuMuonRP.cs</DependentUpon>

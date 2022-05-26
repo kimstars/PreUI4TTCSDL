@@ -32,6 +32,7 @@ namespace LibraryManager.Template
 
 
             dateStart.Value = dateEnd.Value.Subtract(new TimeSpan(180, 0, 0, 0));
+           // dgvSachMoi.DataSource = tkBus.TK_muonnhieu(dateStart.ToString(), dateEnd.ToString());
         }
 
         private void rbtnMadocgia_CheckedChanged(object sender, EventArgs e)
@@ -52,9 +53,115 @@ namespace LibraryManager.Template
         private void btnTK_Click(object sender, EventArgs e)
         {
             //nếu filter1 và filter2 trống thì lọc theo mã độc giả
-            // các trường hợp còn lại xử lý tiếp
-        }
+            if (filter1.Text == "")
+            {
+                if (filter2.Text == "")
+                {
+                    if (txtSearch.Text == "")
+                    {
+                        // thống kê tất cả
+                        dgv_tksachmuon.DataSource = tkBus.TK_all_nv(dateStart.Value.ToString(), dateEnd.Value.ToString());
+                    }
+                    else
+                    {
+                        //thống kê theo tên độc giả hoặc mã độc giả theo hai ngày bắt đầu và kết thúc
+                        dgv_tksachmuon.DataSource = tkBus.TK_dg_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    }
+                }
+                else if (filter2.Text == "Trễ hạn")
+                {
+                    if (txtSearch.Text == "")
+                    {
+                        dgv_tksachmuon.DataSource = tkBus.TK_trehan(dateStart.Value.ToString(), dateEnd.Value.ToString());
+                    }
+                    else dgv_tksachmuon.DataSource = tkBus.TK_trehan_dg_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả
+                }
+                else if (filter2.Text == "Vi phạm")
+                {
+                    if (txtSearch.Text == "")
+                    {
+                        dgv_tksachmuon.DataSource = tkBus.TK_vipham_nv(dateStart.Value.ToString(), dateEnd.Value.ToString());
+                    }
+                    else dgv_tksachmuon.DataSource = tkBus.TK_vipham_dg_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các sách vi phạm trong khoảng thời gian 
+                }
+            }
+            else if (filter1.Text == "Độc giả")
+            {
+                if (filter2.Text == "")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_dg_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    //thống kê các sách đã mượn theo tên độc giả hoặc mã độc giả
+                }
+                else if (filter2.Text == "Trễ hạn")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_trehan_dg_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả theo tên độc giả hoặc mã độc giả
+                }
+                else if (filter2.Text == "Vi phạm")
+                {
+                    // thống kê tất cả các sách vi phạm trong khoảng thời gian của độc giả a
+                    dgv_tksachmuon.DataSource = tkBus.TK_vipham_dg_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                }
+            }
+            else if (filter1.Text == "Đầu sách")
+            {
+                if (filter2.Text == "")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_ds_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    //thống kê các sách đã mượn theo tên đầu sách hoặc mã đầu sách
+                }
+                else if (filter2.Text == "Trễ hạn")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_trehan_ds_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả theo tên đầu sách hoặc mã đầu sách
+                }
+                else if (filter2.Text == "Vi phạm")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_vipham_ds_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các sách vi phạm trong khoảng thời gian theo tên đầu sách hoặc mã đầu sách
+                }
+            }
+            else if (filter1.Text == "Thể loại")
+            {
+                if (filter2.Text == "")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_theloai_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    //thống kê các sách đã mượn theo tên thể loại hoặc mã thể loại
+                }
+                else if (filter2.Text == "Trễ hạn")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_theloai_trehan_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả theo tên thể loại hoặc mã thể loại
+                }
+                else if (filter2.Text == "Vi phạm")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_vipham_tl_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các sách vi phạm trong khoảng thời giantheo tên thể loại hoặc mã thể loại
+                }
+            }
+            else if (filter1.Text == "Nhà xuất bản")
+            {
+                if (filter2.Text == "")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_nxb_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    //thống kê các sách đã mượn theo tên nhà xuất bản hoặc mã xuất bản
+                }
+                else if (filter2.Text == "Trễ hạn")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_trehan_nxb_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các cuốn sách đã trễ hạn có ngày trả ở trong khoảng đó nhưng chưa trả theo nhà xuất bản hoặc mã xuất bản
+                }
+                else if (filter2.Text == "Vi phạm")
+                {
+                    dgv_tksachmuon.DataSource = tkBus.TK_vipham_nxb_nv(dateStart.Value.ToString(), dateEnd.Value.ToString(), txtSearch.Text.Trim(), txtSearch.Text.Trim());
+                    // thống kê tất cả các sách vi phạm trong khoảng thời giantheo nhà xuất bản hoặc mã xuất bản
+                }
+            }
+            dgvSachMoi.DataSource = tkBus.TK_muonnhieu(dateStart.Value.ToString(), dateEnd.Value.ToString());
 
+        }
         private void filter1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Độc giả

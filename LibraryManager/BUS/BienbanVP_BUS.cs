@@ -43,5 +43,34 @@ namespace LibraryManager.BUS
         {
             bbvp_dao.vohieuhoa(madg);
         }*/
+       public string get_tensach(string masach)
+        {
+            return bbvp_dao.GetTensach(masach);
+        }
+        public DataTable getMadg()
+        {
+            return bbvp_dao.loadMaDg();
+        }
+        public DataTable getMasach(string madg)
+        {
+            return bbvp_dao.loadMaSach(madg);
+        }
+        public Int64 TienPhat(string masach)
+        {
+            return bbvp_dao.Get_Money(masach);
+        }
+        public Int64 Songaytre(string masach)
+        {
+            return bbvp_dao.soluongngay(masach);
+        }
+        public void update0(string masach)
+        {
+            bbvp_dao.update__ngaytra_0_BBVP(masach);
+        }
+        public void update1(string masach)
+        {
+            bbvp_dao.update__ngaytra_1_BBVP(masach);
+        }
     }
 }
+
