@@ -462,6 +462,12 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\frmLapBBVP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\frmLapBBVP.Designer.cs">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Hello_TacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -758,6 +764,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmLapBBVP.resx">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Hello_TacGia.resx">
       <DependentUpon>Hello_TacGia.cs</DependentUpon>

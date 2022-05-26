@@ -53,9 +53,8 @@ namespace LibraryManager.GUI
             txtMadg.Text = madocgia;
             txtNgaytra.Text = ngaytra;
             txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
-            cmbManv.DataSource = bbvp_bus.getManv();
-            cmbManv.DisplayMember = "manhanvien";
-            txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
+            
+            txtTennv.Text = bbvp_bus.Get_tennv(txtManv.Text);
             AutoTaoMaVP();
            
             foreach( string i in book1)
@@ -81,16 +80,16 @@ namespace LibraryManager.GUI
 
         }
 
-        private void cmbManv_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtManv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtTennv.Text = bbvp_bus.Get_tennv(cmbManv.Text);
+            txtTennv.Text = bbvp_bus.Get_tennv(txtManv.Text);
         }
 
         private void btnHoanthien_Click(object sender, EventArgs e)
         {
             BienBanViPham bbvp = new BienBanViPham();
             bbvp.MaDocGia = txtMadg.Text.Trim();
-            bbvp.MaNhanVien = cmbManv.Text.Trim();
+            bbvp.MaNhanVien = txtManv.Text.Trim();
             bbvp.MaViPham = txtMaVP.Text;
             bbvp.TienPhat = Int32.Parse(txtTienphat.Text);
             string a = "";
@@ -126,8 +125,7 @@ namespace LibraryManager.GUI
                     vp.MaViPham = txtMaVP.Text;
 
                     bbvp_bus.Them_vp(vp);
-                    
-                    
+
                 }
                 /*if(cboxTrehan.Checked == true)
                 {

@@ -303,7 +303,8 @@ namespace LibraryManager
 
         private void btnM_LapBBvp_Click(object sender, EventArgs e)
         {
-
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.frmLapBBVP(MaNhanVien));
         }
     }
 }

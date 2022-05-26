@@ -86,7 +86,16 @@ namespace LibraryManager.DAO
             return count;
             
         }
+        public long GetCount1(string sql)
+        {
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            long count = (long)command.ExecuteScalar();
+            connect.Close();
+            return count;
 
+        }
         public string GetString(string sql)
         {
             if (connect.State != ConnectionState.Open)
