@@ -32,6 +32,17 @@ namespace LibraryManager.DAO
             return GetCount(sqlString);
         }
 
+        public Int64 GetSachCo()
+        {
+            string sqlString = "select count(masach) from cuonsach where trangthai = 1";
+            return GetCount(sqlString);
+        }
+        public Int64 GetSachMuon()
+        {
+            string sqlString = "select count(masach) from cuonsach where trangthai = 0";
+            return GetCount(sqlString);
+        }
+
         //proc top 2 đầu sách nhiều nhất
         public DataTable GetTop2_DSNhieuNhat()
         {
@@ -62,16 +73,6 @@ namespace LibraryManager.DAO
             return GetData_Proc_NParam("proc_HOME_LOAD_SachMoi", sParams);
         }
 
-        public Int64 GetSachCo()
-        {
-            string sqlString = "select count(masach) from cuonsach where trangthai = 1";
-            return GetCount(sqlString);
-        }
-        public Int64 GetSachMuon()
-        {
-            string sqlString = "select count(masach) from cuonsach where trangthai = 0";
-            return GetCount(sqlString);
-        }
 
         //proc load so luong doc gia
         public DataTable LoadSLDG()
@@ -80,20 +81,49 @@ namespace LibraryManager.DAO
             return GetData_Proc_NParam("proc_HOME_LOAD_SoDocGia", sParams);
         }
 
+        //proc tim kiem the loai
         public DataTable SearchTL(string _timkiem)
         {
-            string sqlString = string.Format("SELECT TENTHELOAI N'Tên thể loại', COUNT(MASACH) N'Số lượng cuốn sách' FROM dbo.CUONSACH CS, dbo.THELOAI TL, dbo.DAUSACH DS WHERE CS.MaDauSach = DS.MaDauSach AND DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai LIKE N'%{0}%' GROUP BY TL.TenTheLoai", _timkiem);
-            return GetData(sqlString);
+            string NameProc = "proc_HOME_Tim_TL";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@keyword", _timkiem);
+
+            return GetData_Proc_NParam(NameProc, sParams);
         }
+
+        //proc tim kiem tac gia
         public DataTable SearchTG(string _timkiem)
         {
-            string sqlString = string.Format("SELECT TENTACGIA N'Tên tác giả', COUNT(DS.MADAUSACH) N'Số lượng đầu sách' FROM dbo.SANGTAC ST, dbo.TACGIA TG, dbo.DAUSACH DS WHERE ST.MaDauSach = DS.MaDauSach AND TG.MaTacGia = ST.MaTacGia AND TG.TenTacGia LIKE N'%{0}%' GROUP BY TG.TenTacGia", _timkiem);
-            return GetData(sqlString);
+
+            string NameProc = "proc_HOME_Tim_TG";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@keyword", _timkiem);
+
+            return GetData_Proc_NParam(NameProc, sParams);
         }
+
+        //proc tim kiem dau sach
         public DataTable SearchDS(string _timkiem)
         {
-            string sqlString = string.Format("SELECT DS.MaDauSach N'Mã đầu sách', DS.TenDauSach N'Tên đầu sách', DS.SoLuong N'Số lượng sách', DS.NamXuatBan, DS.GiaTien, DS.MoTa, TL.TenTheLoai, TG.TenTacGia FROM dbo.DAUSACH DS, dbo.THELOAI TL, dbo.TACGIA TG, dbo.SANGTAC ST WHERE DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai like N'%{0}%' AND DS.MaDauSach = ST.MaDauSach AND ST.MaTacGia = TG.MaTacGia", _timkiem);
-            return GetData(sqlString);
+            string NameProc = "proc_HOME_Tim_DS";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@keyword", _timkiem);
+
+            return GetData_Proc_NParam(NameProc, sParams);
+        }
+
+        //proc load tien coc
+        public DataTable LoadTienCoc()
+        {
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetData_Proc_NParam("proc_HOME_LOAD_TienCoc", sParams);
+        }
+
+        //proc load so luong sach cac the loai
+        public DataTable LoadSLTL()
+        {
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetData_Proc_NParam("proc_HOME_LOAD_SSTheLoai", sParams);
         }
     }
 }
