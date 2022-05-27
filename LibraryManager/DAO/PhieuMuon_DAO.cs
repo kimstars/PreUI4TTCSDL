@@ -98,7 +98,7 @@ namespace LibraryManager.DAO
             }
             else
             {
-                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, '{DateToString(pm.NgayMuon) }', '{DateToString(pm.HanTra)}' ,  0, '{pm.TienCoc}' )";
+                sql = $"INSERT INTO dbo.PHIEUMUONTRA VALUES ('{pm.MaMuonTra}','{pm.MaDocGia}', NULL, '{DateToString(pm.NgayMuon) }', '{DateToString(pm.HanTra)}' ,  0, '{pm.TienCoc}')";
 
             }
 
@@ -118,11 +118,12 @@ namespace LibraryManager.DAO
         #region update ds phieu muon
 
         //proc update trạng thái đã xử lý cho phiếu mượn trả
-        public void Update_DaXL_PM(string MaMuonTra)
+        public void Update_DaXL_PM(string MaMuonTra,string MaNhanVien)
         {
             string NameProc = "proc_PM_UpdateDaXuly";
-            SqlParameter[] sParams = new SqlParameter[1];
+            SqlParameter[] sParams = new SqlParameter[2];
             sParams[0] = new SqlParameter("@MaMT", MaMuonTra);
+            sParams[1] = new SqlParameter("@MaNV", MaNhanVien);
             Excute_Proc_NParam(NameProc, sParams);
         }
 

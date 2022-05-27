@@ -223,5 +223,10 @@ namespace LibraryManager.Template
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new ThongKeNV());
         }
+
+        private void btnM_Suadausach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

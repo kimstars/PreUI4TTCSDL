@@ -703,6 +703,7 @@ namespace LibraryManager
             this.btnM_Suadausach.Size = new System.Drawing.Size(253, 46);
             this.btnM_Suadausach.TabIndex = 17;
             this.btnM_Suadausach.Text = "Sửa thông tin sách";
+            this.btnM_Suadausach.Click += new System.EventHandler(this.btnM_Suadausach_Click);
             // 
             // panel2
             // 

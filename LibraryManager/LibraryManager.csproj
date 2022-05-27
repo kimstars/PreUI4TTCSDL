@@ -543,14 +543,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Captaikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Captaikhoan.Designer.cs">
-      <DependentUpon>Captaikhoan.cs</DependentUpon>
-    </Compile>
-
-
     <Compile Include="Report\PhieuMuonCreator.cs" />
     <Compile Include="Report\PhieuMuonRP.cs">
       <SubType>Component</SubType>
@@ -581,8 +573,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>
     </Compile>
-
-
     <Compile Include="Template\Admin_ThemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -835,9 +825,6 @@
     <EmbeddedResource Include="GUI\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Captaikhoan.resx">
-      <DependentUpon>Captaikhoan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongTinSach.resx">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -845,15 +832,12 @@
       <DependentUpon>TimKiem4Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-
-
     <EmbeddedResource Include="Report\PhieuMuonRP.resx">
       <DependentUpon>PhieuMuonRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\TKLuotMuonRP.resx">
       <DependentUpon>TKLuotMuonRP.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Template\Admin_ThemNV.resx">
       <DependentUpon>Admin_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -995,7 +979,6 @@
     <None Include="Resources\icons8_user_50px_1.png" />
     <None Include="Resources\icons8_search_32px.png" />
     <None Include="Resources\icons8_home_26px.png" />
-    <None Include="Resources\icons8_delete_48px.png" />
     <None Include="Resources\icons8_book_and_pencil_30px.png" />
     <None Include="Resources\icons8_book_32px.png" />
     <None Include="Resources\icons8_administrator_male_48px.png" />
@@ -1225,7 +1208,10 @@
     <None Include="Resources\icons8_study_64px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Report\" />
+    <None Include="Resources\icons8_Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

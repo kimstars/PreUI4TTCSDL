@@ -73,7 +73,7 @@ namespace LibraryManager.GUI
 
         private void btnRPPhieumuon_Click(object sender, EventArgs e)
         {
-            Report.PhieuMuonCreator tkcreator = new Report.PhieuMuonCreator("MT000009");
+            Report.PhieuMuonCreator tkcreator = new Report.PhieuMuonCreator("MT000009","NV000005");
             tkcreator.ShowReportHoaDon();
         }
     }

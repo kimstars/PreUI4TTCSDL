@@ -292,7 +292,7 @@ namespace LibraryManager
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.DSPhieuMuonNV());
+            panelShow.Controls.Add(new Template.DSPhieuMuonNV(MaNhanVien));
         }
 
         private void btnM_ThongKe_Click(object sender, EventArgs e)
@@ -311,6 +311,11 @@ namespace LibraryManager
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.ThemDocgia());
+
+        }
+
+        private void btnM_Suadausach_Click(object sender, EventArgs e)
+        {
 
         }
     }

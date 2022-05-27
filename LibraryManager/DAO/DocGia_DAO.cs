@@ -61,7 +61,7 @@ namespace LibraryManager.DAO
 
         public void Delete(string mDG)
         {
-            Excute("delete from DOCGIA where MaDocGia = '" + mDG + "'");
+            Excute("Delete from DOCGIA where MaDocGia = '" + mDG + "'");
         }
 
         public bool Update(DocGia dg)

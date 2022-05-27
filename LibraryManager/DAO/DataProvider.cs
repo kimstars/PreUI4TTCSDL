@@ -12,7 +12,7 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-        static string provider = @"Data Source=MSI\HOADINH;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
         protected SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
@@ -177,9 +177,13 @@ namespace LibraryManager.DAO
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] imgbin = new byte[100000000];
-            if (reader.HasRows)
+            if (reader.HasRows && reader[0] != null)
             {
                 imgbin = (byte[])reader[0];
+            }
+            else
+            {
+                imgbin = new byte[0];
             }
             connect.Close();
             return imgbin ;
