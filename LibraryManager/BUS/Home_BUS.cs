@@ -61,6 +61,14 @@ namespace LibraryManager.BUS
         {
             return home.GetSachMuon();
         }
+        public int GetALLSachMuon()
+        {
+            return home.GetALLSachMuon();
+        }
+        public int GetSachChuaTra()
+        {
+            return home.GetSachChuaTra();
+        }
         public DataTable LoadSLDG()
         {
 

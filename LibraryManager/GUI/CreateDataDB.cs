@@ -43,13 +43,13 @@ namespace LibraryManager.GUI
 
         private void btnloginNV_Click(object sender, EventArgs e)
         {
-            frmNhanvien newform = new frmNhanvien();
+            frmNhanvien newform = new frmNhanvien("lehongson");
             newform.Show();
         }
 
         private void btnLoginDG_Click(object sender, EventArgs e)
         {
-            FrmDocGia newform = new FrmDocGia();
+            FrmDocGia newform = new FrmDocGia("huuhiep2");
             newform.Show();
         }
 

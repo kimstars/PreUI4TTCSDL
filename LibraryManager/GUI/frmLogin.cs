@@ -111,7 +111,7 @@ namespace LibraryManager.GUI
                         case "nhanvien":
                             {
                                 this.Hide();
-                                frmNhanvien newnv = new frmNhanvien();
+                                frmNhanvien newnv = new frmNhanvien(user);
                                 newnv.Show();
                                 break;
                             }

@@ -21,7 +21,10 @@ namespace LibraryManager.BUS
         {
             return nvDao.loadNhanVien();
         }
-
+        public string loadMaNV_user(string TenDangNhap)
+        {
+            return nvDao.loadMa_TenDangNhap(TenDangNhap);
+        }
         public void Xoa(string mNV)
         {
             nvDao.Delete(mNV);
@@ -47,9 +50,17 @@ namespace LibraryManager.BUS
         // Xử lý load ảnh lên pictureBox;
         public Image LoadAnh(string maID)
         {
-            byte[] img = LoadImageFromTableDB("NhanVien", maID, "MaNhanVien");
+            Image defaultImg = LibraryManager.Properties.Resources.icons8_user_50px_1;
 
-            return Image.FromStream(new MemoryStream(img));
+            byte[] img = LoadImageFromTableDB("NhanVien", maID, "MaNhanVien");
+            if(img.Length > 0)
+            {
+                return Image.FromStream(new MemoryStream(img));
+            }
+            else
+            {
+                return defaultImg;
+            }
              
         }
 

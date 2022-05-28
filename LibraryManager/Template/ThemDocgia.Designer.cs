@@ -29,9 +29,9 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelInput = new System.Windows.Forms.Panel();
             this.btnClearLoad = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -44,7 +44,6 @@ namespace LibraryManager.Template
             this.btnDeleteInfo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbGender = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ngayDKPicker = new LibraryManager.Template.DateTimePickerKiet();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCMND = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,7 +52,6 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiachi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.birthdayPicker = new LibraryManager.Template.DateTimePickerKiet();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +61,9 @@ namespace LibraryManager.Template
             this.btnAddInfo = new Guna.UI2.WinForms.Guna2Button();
             this.dgvInfo = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label11 = new System.Windows.Forms.Label();
+            this.ngayDKPicker = new LibraryManager.Template.DateTimePickerKiet();
+            this.birthdayPicker = new LibraryManager.Template.DateTimePickerKiet();
+            this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelInput.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -288,25 +289,6 @@ namespace LibraryManager.Template
             this.cbGender.Size = new System.Drawing.Size(180, 36);
             this.cbGender.TabIndex = 18;
             // 
-            // ngayDKPicker
-            // 
-            this.ngayDKPicker.BorderColor = System.Drawing.Color.Transparent;
-            this.ngayDKPicker.BorderRadius = 6;
-            this.ngayDKPicker.BorderSize = 1;
-            this.ngayDKPicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.ngayDKPicker.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ngayDKPicker.CustomFormat = "dd/MM/yyyy";
-            this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngayDKPicker.Location = new System.Drawing.Point(475, 201);
-            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
-            this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
-            this.ngayDKPicker.Name = "ngayDKPicker";
-            this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
-            this.ngayDKPicker.SkinColor = System.Drawing.Color.Transparent;
-            this.ngayDKPicker.TabIndex = 17;
-            this.ngayDKPicker.TextColor = System.Drawing.Color.Black;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -452,23 +434,6 @@ namespace LibraryManager.Template
             this.txtDiachi.Size = new System.Drawing.Size(180, 42);
             this.txtDiachi.TabIndex = 10;
             // 
-            // birthdayPicker
-            // 
-            this.birthdayPicker.BorderColor = System.Drawing.Color.Transparent;
-            this.birthdayPicker.BorderRadius = 6;
-            this.birthdayPicker.BorderSize = 1;
-            this.birthdayPicker.CustomFormat = "dd/MM/yyyy";
-            this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthdayPicker.Location = new System.Drawing.Point(475, 22);
-            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
-            this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
-            this.birthdayPicker.Name = "birthdayPicker";
-            this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
-            this.birthdayPicker.SkinColor = System.Drawing.Color.Transparent;
-            this.birthdayPicker.TabIndex = 7;
-            this.birthdayPicker.TextColor = System.Drawing.Color.Black;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -579,23 +544,25 @@ namespace LibraryManager.Template
             // dgvInfo
             // 
             this.dgvInfo.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfo.BackgroundColor = System.Drawing.Color.White;
             this.dgvInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInfo.ColumnHeadersHeight = 40;
+            this.dgvInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Anh});
             this.dgvInfo.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvInfo.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvInfo.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -614,14 +581,14 @@ namespace LibraryManager.Template
             this.dgvInfo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvInfo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvInfo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInfo.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInfo.EnableHeadersVisualStyles = false;
             this.dgvInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvInfo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -648,6 +615,50 @@ namespace LibraryManager.Template
             this.label11.Size = new System.Drawing.Size(190, 32);
             this.label11.TabIndex = 19;
             this.label11.Text = "THÊM ĐỘC GIẢ";
+            // 
+            // ngayDKPicker
+            // 
+            this.ngayDKPicker.BorderColor = System.Drawing.Color.Transparent;
+            this.ngayDKPicker.BorderRadius = 6;
+            this.ngayDKPicker.BorderSize = 1;
+            this.ngayDKPicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.ngayDKPicker.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ngayDKPicker.CustomFormat = "dd/MM/yyyy";
+            this.ngayDKPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.ngayDKPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngayDKPicker.Location = new System.Drawing.Point(475, 201);
+            this.ngayDKPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.ngayDKPicker.MinimumSize = new System.Drawing.Size(4, 36);
+            this.ngayDKPicker.Name = "ngayDKPicker";
+            this.ngayDKPicker.Size = new System.Drawing.Size(201, 36);
+            this.ngayDKPicker.SkinColor = System.Drawing.Color.Transparent;
+            this.ngayDKPicker.TabIndex = 17;
+            this.ngayDKPicker.TextColor = System.Drawing.Color.Black;
+            // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.BorderColor = System.Drawing.Color.Transparent;
+            this.birthdayPicker.BorderRadius = 6;
+            this.birthdayPicker.BorderSize = 1;
+            this.birthdayPicker.CustomFormat = "dd/MM/yyyy";
+            this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.birthdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthdayPicker.Location = new System.Drawing.Point(475, 22);
+            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 36);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(201, 36);
+            this.birthdayPicker.SkinColor = System.Drawing.Color.Transparent;
+            this.birthdayPicker.TabIndex = 7;
+            this.birthdayPicker.TextColor = System.Drawing.Color.Black;
+            // 
+            // Anh
+            // 
+            this.Anh.DataPropertyName = "Anh";
+            this.Anh.HeaderText = "Anh";
+            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Anh.MinimumWidth = 6;
+            this.Anh.Name = "Anh";
             // 
             // ThemDocgia
             // 
@@ -704,5 +715,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label lbMess;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvInfo;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewImageColumn Anh;
     }
 }

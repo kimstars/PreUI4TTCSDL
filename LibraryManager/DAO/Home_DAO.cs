@@ -65,6 +65,17 @@ namespace LibraryManager.DAO
             string sqlString = "select count(masach) from cuonsach where trangthai = 0";
             return GetCount(sqlString);
         }
+
+        public int GetALLSachMuon()
+        {
+            string sql = "SELECT COUNT(MaSach) FROM dbo.THONGTINMUONTRA";
+            return (int)GetCount(sql);
+        }
+        public int GetSachChuaTra()
+        {
+            string sql = "SELECT COUNT(MaSach) FROM dbo.THONGTINMUONTRA WHERE NgayTra IS NULL ";
+            return (int)GetCount(sql);
+        }
         public DataTable LoadSLDG()
         {
             string sql = "SELECT DISTINCT TOP 5 YEAR(NGAYMUON) NAM, COUNT(MADOCGIA) SL FROM PHIEUMUONTRA GROUP BY YEAR(NgayMuon) ORDER BY YEAR(NgayMuon) DESC";

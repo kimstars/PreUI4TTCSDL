@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LibraryManager.BUS;
 
 namespace LibraryManager
 {
@@ -19,18 +19,20 @@ namespace LibraryManager
         {
             InitializeComponent();
         }
-        public frmNhanvien(string MaNV)
+
+        NhanVien_BUS nvBus = new NhanVien_BUS();
+        public frmNhanvien(string user)
         {
             InitializeComponent();
-            MaNhanVien = MaNV;
+
+            MaNhanVien = nvBus.loadMaNV_user(user);
+            UserName = user;
+
+            
         }
 
-        string MaNhanVien= "NV000003";
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-        }
+        string MaNhanVien;
+        string UserName;
 
         bool sidebarExpand = true; // menubar
         bool QLSachExpand = true;
@@ -207,6 +209,10 @@ namespace LibraryManager
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeNV());
 
+
+            lbUsername.Text = UserName;
+            imgAvatar.Image = nvBus.LoadAnh(MaNhanVien);
+
         }
 
         private void imgThuVienMTA_Click(object sender, EventArgs e)
@@ -298,7 +304,7 @@ namespace LibraryManager
         private void btnM_ThongKe_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Template.tk_sachmuon_nv());
+            panelShow.Controls.Add(new Template.ThongKeNV());
         }
 
         private void btnM_LapBBvp_Click(object sender, EventArgs e)

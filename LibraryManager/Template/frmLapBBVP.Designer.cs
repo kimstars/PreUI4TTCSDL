@@ -39,7 +39,6 @@ namespace LibraryManager.Template
             this.txtTenSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTienphat = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,12 +58,11 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.cmbLydo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtMaNv = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbMaDg = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTenDg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbLydo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVP)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -75,7 +73,7 @@ namespace LibraryManager.Template
             this.lbLapbb.AutoSize = true;
             this.lbLapbb.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLapbb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.lbLapbb.Location = new System.Drawing.Point(363, 13);
+            this.lbLapbb.Location = new System.Drawing.Point(254, -8);
             this.lbLapbb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLapbb.Name = "lbLapbb";
             this.lbLapbb.Size = new System.Drawing.Size(291, 37);
@@ -180,17 +178,6 @@ namespace LibraryManager.Template
             this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = "Lý do vi phạm";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.lbLapbb);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1055, 50);
-            this.guna2Panel1.TabIndex = 7;
             // 
             // label9
             // 
@@ -317,7 +304,7 @@ namespace LibraryManager.Template
             this.dgvSVP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumVioletRed;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -361,13 +348,13 @@ namespace LibraryManager.Template
             this.dgvSVP.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvSVP.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvSVP.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvSVP.Location = new System.Drawing.Point(436, 67);
+            this.dgvSVP.Location = new System.Drawing.Point(427, 32);
             this.dgvSVP.Name = "dgvSVP";
             this.dgvSVP.RowHeadersVisible = false;
             this.dgvSVP.RowHeadersWidth = 51;
             this.dgvSVP.RowTemplate.Height = 40;
             this.dgvSVP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSVP.Size = new System.Drawing.Size(601, 703);
+            this.dgvSVP.Size = new System.Drawing.Size(601, 655);
             this.dgvSVP.TabIndex = 15;
             this.dgvSVP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvSVP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSVP_CellContentClick_1);
@@ -509,36 +496,11 @@ namespace LibraryManager.Template
             this.guna2Panel3.Controls.Add(this.txtTenNV);
             this.guna2Panel3.Controls.Add(this.txtTenDg);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(16, 67);
+            this.guna2Panel3.Location = new System.Drawing.Point(16, 32);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(389, 285);
+            this.guna2Panel3.Size = new System.Drawing.Size(389, 251);
             this.guna2Panel3.TabIndex = 16;
-            // 
-            // cmbLydo
-            // 
-            this.cmbLydo.BackColor = System.Drawing.Color.Transparent;
-            this.cmbLydo.BorderRadius = 6;
-            this.cmbLydo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbLydo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLydo.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbLydo.FocusedState.Parent = this.cmbLydo;
-            this.cmbLydo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbLydo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbLydo.FormattingEnabled = true;
-            this.cmbLydo.HoverState.Parent = this.cmbLydo;
-            this.cmbLydo.ItemHeight = 30;
-            this.cmbLydo.Items.AddRange(new object[] {
-            "trả sách trễ hạn",
-            "làm hỏng sách",
-            "làm mất sách"});
-            this.cmbLydo.ItemsAppearance.Parent = this.cmbLydo;
-            this.cmbLydo.Location = new System.Drawing.Point(156, 157);
-            this.cmbLydo.Name = "cmbLydo";
-            this.cmbLydo.ShadowDecoration.Parent = this.cmbLydo;
-            this.cmbLydo.Size = new System.Drawing.Size(216, 36);
-            this.cmbLydo.TabIndex = 7;
-            this.cmbLydo.SelectedIndexChanged += new System.EventHandler(this.cmbLydo_SelectedIndexChanged_1);
             // 
             // txtMaNv
             // 
@@ -613,6 +575,31 @@ namespace LibraryManager.Template
             this.txtTenDg.Size = new System.Drawing.Size(216, 38);
             this.txtTenDg.TabIndex = 3;
             // 
+            // cmbLydo
+            // 
+            this.cmbLydo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbLydo.BorderRadius = 6;
+            this.cmbLydo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLydo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLydo.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbLydo.FocusedState.Parent = this.cmbLydo;
+            this.cmbLydo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbLydo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbLydo.FormattingEnabled = true;
+            this.cmbLydo.HoverState.Parent = this.cmbLydo;
+            this.cmbLydo.ItemHeight = 30;
+            this.cmbLydo.Items.AddRange(new object[] {
+            "trả sách trễ hạn",
+            "làm hỏng sách",
+            "làm mất sách"});
+            this.cmbLydo.ItemsAppearance.Parent = this.cmbLydo;
+            this.cmbLydo.Location = new System.Drawing.Point(156, 157);
+            this.cmbLydo.Name = "cmbLydo";
+            this.cmbLydo.ShadowDecoration.Parent = this.cmbLydo;
+            this.cmbLydo.Size = new System.Drawing.Size(216, 36);
+            this.cmbLydo.TabIndex = 7;
+            this.cmbLydo.SelectedIndexChanged += new System.EventHandler(this.cmbLydo_SelectedIndexChanged_1);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BorderRadius = 15;
@@ -631,7 +618,7 @@ namespace LibraryManager.Template
             this.guna2Panel2.Controls.Add(this.label7);
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(16, 372);
+            this.guna2Panel2.Location = new System.Drawing.Point(16, 289);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(389, 398);
@@ -641,23 +628,22 @@ namespace LibraryManager.Template
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbLapbb);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.dgvSVP);
-            this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmLapBBVP";
-            this.Size = new System.Drawing.Size(1055, 919);
+            this.Size = new System.Drawing.Size(1689, 1014);
             this.Load += new System.EventHandler(this.frmLapBBVP_Load);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVP)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -673,7 +659,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtTinhtrang;
         private Guna.UI2.WinForms.Guna2TextBox txtTienphat;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvSVP;
         private Guna.UI2.WinForms.Guna2Button btnLapBB;
         private Guna.UI2.WinForms.Guna2Button btnVP;

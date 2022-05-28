@@ -120,7 +120,7 @@ namespace LibraryManager.Template
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1109, 389);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1151, 389);
             this.bunifuPanel1.TabIndex = 23;
             // 
             // chart1
@@ -175,7 +175,7 @@ namespace LibraryManager.Template
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(505, 408);
+            this.bunifuPanel2.Size = new System.Drawing.Size(547, 408);
             this.bunifuPanel2.TabIndex = 23;
             // 
             // guna2CircleButton2
@@ -294,7 +294,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel5);
             this.Name = "ThongKeNV";
-            this.Size = new System.Drawing.Size(1172, 856);
+            this.Size = new System.Drawing.Size(1211, 856);
             this.Load += new System.EventHandler(this.ThongKeNV_Load);
             this.bunifuPanel5.ResumeLayout(false);
             this.bunifuPanel5.PerformLayout();

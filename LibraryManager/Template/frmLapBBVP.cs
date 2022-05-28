@@ -19,6 +19,7 @@ namespace LibraryManager.Template
         public frmLapBBVP(string manv)
         {
             InitializeComponent();
+            MaNV = manv;
         }
         private void AutoTaoMaVP()
         {
@@ -35,14 +36,14 @@ namespace LibraryManager.Template
             cmbMaDg.DataSource = bb.getMadg();
             cmbMaDg.DisplayMember = "madocgia";
             cmbMaDg.ValueMember = "madocgia";
-            
+
             AutoTaoMaVP();
 
         }
 
         private void btnVP_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvSVP.Rows.Count-1; i++)
+            for (int i = 0; i < dgvSVP.Rows.Count - 1; i++)
             {
                 if (cmbMasach.Text.Trim() == dgvSVP.Rows[i].Cells[0].Value.ToString().Trim())
                 {
@@ -50,11 +51,11 @@ namespace LibraryManager.Template
                     return;
                 }
             }
-            dgvSVP.Rows.Add(cmbMasach.Text, bb.get_tensach(cmbMasach.Text),cmbLydo.Text,txtTienphat.Text, "Bỏ");
+            dgvSVP.Rows.Add(cmbMasach.Text, bb.get_tensach(cmbMasach.Text), cmbLydo.Text, txtTienphat.Text, "Bỏ");
         }
         private void dgvSVP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (e.ColumnIndex == 4)
             {
 
@@ -66,11 +67,6 @@ namespace LibraryManager.Template
 
             }
         }
-        private void cmbMasach_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtTenSach.Text = bb.get_tensach(cmbMasach.Text.Trim());
-        }
-
         private void cmbMaDg_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtTenDg.Text = bb.Get_tendg(cmbMaDg.Text);
@@ -94,11 +90,12 @@ namespace LibraryManager.Template
             bbvp.MaNhanVien = txtMaNv.Text;
             bbvp.MaViPham = txtMaVP.Text;
             bbvp.LyDo = cmbLydo.Text;
-            for( int i =0; i <dgvSVP.RowCount; i++)
+            for (int i = 0; i < dgvSVP.RowCount; i++)
             {
                 tienphat += Int32.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
                 lydo += dgvSVP.Rows[i].Cells[2].Value.ToString();
-                if(i!= dgvSVP.RowCount - 1) {
+                if (i != dgvSVP.RowCount - 1)
+                {
                     lydo += ", ";
                 }
             }
@@ -136,7 +133,7 @@ namespace LibraryManager.Template
             txtTenSach.Text = bb.get_tensach(cmbMasach.Text.Trim());
             cmbLydo_SelectedIndexChanged_1(sender, e);
         }
-      
+
         private void cmbLydo_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cmbLydo.Text == "trả sách trễ hạn")
@@ -153,7 +150,7 @@ namespace LibraryManager.Template
             }
             if (cmbLydo.Text == "làm hỏng sách")
             {
-                
+
                 txtTienphat.Text = (bb.TienPhat(cmbMasach.Text) * 0.2).ToString();
             }
             else if (cmbLydo.Text == "làm mất sách")
@@ -174,6 +171,8 @@ namespace LibraryManager.Template
 
             }
         }
+
+ 
     }
-    
+
 }

@@ -18,7 +18,7 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
-
+        Home_BUS homeAdmin = new Home_BUS();
         private void ThongKeNV_Load(object sender, EventArgs e)
         {
             DataTable tiencoc = tknv.LoadTienCoc();
@@ -33,6 +33,21 @@ namespace LibraryManager.Template
 
                 chart1.Series["SoLuong"].Points.AddXY(sl.Rows[i]["TenTheLoai"].ToString(), sl.Rows[i]["SL"]);
             }
+
+
+            //circle process percent
+            long sm =  homeAdmin.GetALLSachMuon();
+            int sm1 = Convert.ToInt32(sm);
+
+            long sct = homeAdmin.GetSachChuaTra();
+            int sc1 = Convert.ToInt32(sct);
+
+            
+            int p = (int)(sc1 * 100 / (sm1));
+            circleProcessPercent.ValueByTransition = p;
+
+            lbP_muon.Text += " : " + sm1.ToString();
+            lbP_sanco.Text += " : " + sc1.ToString();
         }
     }
 }
