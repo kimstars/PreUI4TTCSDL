@@ -37,6 +37,9 @@ namespace LibraryManager.Template
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PanelMenuBar = new System.Windows.Forms.Panel();
             this.panelAll = new System.Windows.Forms.Panel();
+            this.panelThongke = new System.Windows.Forms.Panel();
+            this.btnM_ReportSLDS = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.panelQLDocGia = new System.Windows.Forms.Panel();
             this.btnM_regtkdg = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_QLDG = new Guna.UI2.WinForms.Guna2Button();
@@ -54,11 +57,9 @@ namespace LibraryManager.Template
             this.btnM_Nhapsach = new Guna.UI2.WinForms.Guna2Button();
             this.panelQLsach = new System.Windows.Forms.Panel();
             this.btnM_QLsach = new Guna.UI2.WinForms.Guna2Button();
-            this.btnM_SVipham = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_SConlai = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_dsSDamuon = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_DSDausach = new Guna.UI2.WinForms.Guna2Button();
-            this.btnM_Suadausach = new Guna.UI2.WinForms.Guna2Button();
             this.panelQLNV = new System.Windows.Forms.Panel();
             this.btnOpenQLNV = new Guna.UI2.WinForms.Guna2Button();
             this.btnDSNV = new Guna.UI2.WinForms.Guna2Button();
@@ -66,19 +67,20 @@ namespace LibraryManager.Template
             this.panelHome = new System.Windows.Forms.Panel();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThuNghiem = new Guna.UI2.WinForms.Guna2Button();
             this.panelNameUser = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelName = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.nameuser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.panelShow = new System.Windows.Forms.Panel();
+            this.btnM_tkChung = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.paneldrag.SuspendLayout();
             this.PanelMenuBar.SuspendLayout();
             this.panelAll.SuspendLayout();
+            this.panelThongke.SuspendLayout();
             this.panelQLDocGia.SuspendLayout();
             this.panelXLViPham.SuspendLayout();
             this.panelXLMuontra.SuspendLayout();
@@ -88,8 +90,8 @@ namespace LibraryManager.Template
             this.panelHome.SuspendLayout();
             this.panelNameUser.SuspendLayout();
             this.panelName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -156,6 +158,7 @@ namespace LibraryManager.Template
             // 
             // panelAll
             // 
+            this.panelAll.Controls.Add(this.panelThongke);
             this.panelAll.Controls.Add(this.panelQLDocGia);
             this.panelAll.Controls.Add(this.panelXLViPham);
             this.panelAll.Controls.Add(this.panelXLMuontra);
@@ -170,18 +173,76 @@ namespace LibraryManager.Template
             this.panelAll.Size = new System.Drawing.Size(232, 1564);
             this.panelAll.TabIndex = 11;
             // 
+            // panelThongke
+            // 
+            this.panelThongke.Controls.Add(this.btnM_tkChung);
+            this.panelThongke.Controls.Add(this.btnM_ReportSLDS);
+            this.panelThongke.Controls.Add(this.btnThongKe);
+            this.panelThongke.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelThongke.Location = new System.Drawing.Point(0, 1059);
+            this.panelThongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelThongke.MaximumSize = new System.Drawing.Size(253, 164);
+            this.panelThongke.MinimumSize = new System.Drawing.Size(253, 57);
+            this.panelThongke.Name = "panelThongke";
+            this.panelThongke.Size = new System.Drawing.Size(253, 164);
+            this.panelThongke.TabIndex = 19;
+            // 
+            // btnM_ReportSLDS
+            // 
+            this.btnM_ReportSLDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnM_ReportSLDS.BorderColor = System.Drawing.Color.Transparent;
+            this.btnM_ReportSLDS.BorderThickness = 1;
+            this.btnM_ReportSLDS.CheckedState.Parent = this.btnM_ReportSLDS;
+            this.btnM_ReportSLDS.CustomImages.Parent = this.btnM_ReportSLDS;
+            this.btnM_ReportSLDS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnM_ReportSLDS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnM_ReportSLDS.ForeColor = System.Drawing.Color.Black;
+            this.btnM_ReportSLDS.HoverState.Parent = this.btnM_ReportSLDS;
+            this.btnM_ReportSLDS.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnM_ReportSLDS.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnM_ReportSLDS.Location = new System.Drawing.Point(0, 108);
+            this.btnM_ReportSLDS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_ReportSLDS.Name = "btnM_ReportSLDS";
+            this.btnM_ReportSLDS.ShadowDecoration.Parent = this.btnM_ReportSLDS;
+            this.btnM_ReportSLDS.Size = new System.Drawing.Size(253, 46);
+            this.btnM_ReportSLDS.TabIndex = 16;
+            this.btnM_ReportSLDS.Text = "RP lượt mượn theo đầu sách";
+            this.btnM_ReportSLDS.Click += new System.EventHandler(this.btnM_ReportSLDS_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnThongKe.CheckedState.Parent = this.btnThongKe;
+            this.btnThongKe.CustomImages.Parent = this.btnThongKe;
+            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
+            this.btnThongKe.HoverState.Parent = this.btnThongKe;
+            this.btnThongKe.Image = global::LibraryManager.Properties.Resources.icons8_combo_chart_48px;
+            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThongKe.Location = new System.Drawing.Point(-3, 5);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(1);
+            this.btnThongKe.ShadowDecoration.Parent = this.btnThongKe;
+            this.btnThongKe.Size = new System.Drawing.Size(253, 49);
+            this.btnThongKe.TabIndex = 15;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
             // panelQLDocGia
             // 
             this.panelQLDocGia.Controls.Add(this.btnM_regtkdg);
             this.panelQLDocGia.Controls.Add(this.btnM_QLDG);
             this.panelQLDocGia.Controls.Add(this.btnM_DSDG);
             this.panelQLDocGia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLDocGia.Location = new System.Drawing.Point(0, 1047);
+            this.panelQLDocGia.Location = new System.Drawing.Point(0, 897);
             this.panelQLDocGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQLDocGia.MaximumSize = new System.Drawing.Size(253, 308);
+            this.panelQLDocGia.MaximumSize = new System.Drawing.Size(253, 162);
             this.panelQLDocGia.MinimumSize = new System.Drawing.Size(253, 55);
             this.panelQLDocGia.Name = "panelQLDocGia";
-            this.panelQLDocGia.Size = new System.Drawing.Size(253, 172);
+            this.panelQLDocGia.Size = new System.Drawing.Size(253, 162);
             this.panelQLDocGia.TabIndex = 23;
             // 
             // btnM_regtkdg
@@ -204,6 +265,7 @@ namespace LibraryManager.Template
             this.btnM_regtkdg.Size = new System.Drawing.Size(253, 46);
             this.btnM_regtkdg.TabIndex = 17;
             this.btnM_regtkdg.Text = "Đăng ký tài khoản độc giả";
+            this.btnM_regtkdg.Click += new System.EventHandler(this.btnM_regtkdg_Click);
             // 
             // btnM_QLDG
             // 
@@ -255,7 +317,7 @@ namespace LibraryManager.Template
             this.panelXLViPham.Controls.Add(this.btnM_LapBBvp);
             this.panelXLViPham.Controls.Add(this.btnM_XLViPham);
             this.panelXLViPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelXLViPham.Location = new System.Drawing.Point(0, 887);
+            this.panelXLViPham.Location = new System.Drawing.Point(0, 737);
             this.panelXLViPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelXLViPham.MaximumSize = new System.Drawing.Size(253, 161);
             this.panelXLViPham.MinimumSize = new System.Drawing.Size(253, 55);
@@ -304,6 +366,7 @@ namespace LibraryManager.Template
             this.btnM_LapBBvp.Size = new System.Drawing.Size(253, 46);
             this.btnM_LapBBvp.TabIndex = 18;
             this.btnM_LapBBvp.Text = "Lập biên bản vi phạm";
+            this.btnM_LapBBvp.Click += new System.EventHandler(this.btnM_LapBBvp_Click);
             // 
             // btnM_XLViPham
             // 
@@ -333,7 +396,7 @@ namespace LibraryManager.Template
             this.panelXLMuontra.Controls.Add(this.btnM_Muon);
             this.panelXLMuontra.Controls.Add(this.btnM_Tra);
             this.panelXLMuontra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelXLMuontra.Location = new System.Drawing.Point(0, 728);
+            this.panelXLMuontra.Location = new System.Drawing.Point(0, 578);
             this.panelXLMuontra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelXLMuontra.MaximumSize = new System.Drawing.Size(253, 161);
             this.panelXLMuontra.MinimumSize = new System.Drawing.Size(253, 55);
@@ -405,13 +468,14 @@ namespace LibraryManager.Template
             this.btnM_Tra.Size = new System.Drawing.Size(253, 46);
             this.btnM_Tra.TabIndex = 17;
             this.btnM_Tra.Text = "Trả sách";
+            this.btnM_Tra.Click += new System.EventHandler(this.btnM_Tra_Click);
             // 
             // panelQLSachNhap
             // 
             this.panelQLSachNhap.Controls.Add(this.btnM_QLsachnhap);
             this.panelQLSachNhap.Controls.Add(this.btnM_Nhapsach);
             this.panelQLSachNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLSachNhap.Location = new System.Drawing.Point(0, 625);
+            this.panelQLSachNhap.Location = new System.Drawing.Point(0, 475);
             this.panelQLSachNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQLSachNhap.MaximumSize = new System.Drawing.Size(253, 111);
             this.panelQLSachNhap.MinimumSize = new System.Drawing.Size(253, 55);
@@ -467,18 +531,16 @@ namespace LibraryManager.Template
             // panelQLsach
             // 
             this.panelQLsach.Controls.Add(this.btnM_QLsach);
-            this.panelQLsach.Controls.Add(this.btnM_SVipham);
             this.panelQLsach.Controls.Add(this.btnM_SConlai);
             this.panelQLsach.Controls.Add(this.btnM_dsSDamuon);
             this.panelQLsach.Controls.Add(this.btnM_DSDausach);
-            this.panelQLsach.Controls.Add(this.btnM_Suadausach);
             this.panelQLsach.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLsach.Location = new System.Drawing.Point(0, 320);
+            this.panelQLsach.Location = new System.Drawing.Point(0, 268);
             this.panelQLsach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQLsach.MaximumSize = new System.Drawing.Size(253, 305);
+            this.panelQLsach.MaximumSize = new System.Drawing.Size(253, 207);
             this.panelQLsach.MinimumSize = new System.Drawing.Size(253, 55);
             this.panelQLsach.Name = "panelQLsach";
-            this.panelQLsach.Size = new System.Drawing.Size(253, 305);
+            this.panelQLsach.Size = new System.Drawing.Size(253, 207);
             this.panelQLsach.TabIndex = 20;
             // 
             // btnM_QLsach
@@ -503,27 +565,6 @@ namespace LibraryManager.Template
             this.btnM_QLsach.Text = "Quản lý sách";
             this.btnM_QLsach.Click += new System.EventHandler(this.btnM_QLsach_Click);
             // 
-            // btnM_SVipham
-            // 
-            this.btnM_SVipham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnM_SVipham.BorderColor = System.Drawing.Color.Transparent;
-            this.btnM_SVipham.BorderThickness = 1;
-            this.btnM_SVipham.CheckedState.Parent = this.btnM_SVipham;
-            this.btnM_SVipham.CustomImages.Parent = this.btnM_SVipham;
-            this.btnM_SVipham.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.btnM_SVipham.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnM_SVipham.ForeColor = System.Drawing.Color.Black;
-            this.btnM_SVipham.HoverState.Parent = this.btnM_SVipham;
-            this.btnM_SVipham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnM_SVipham.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_SVipham.Location = new System.Drawing.Point(0, 255);
-            this.btnM_SVipham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnM_SVipham.Name = "btnM_SVipham";
-            this.btnM_SVipham.ShadowDecoration.Parent = this.btnM_SVipham;
-            this.btnM_SVipham.Size = new System.Drawing.Size(253, 46);
-            this.btnM_SVipham.TabIndex = 20;
-            this.btnM_SVipham.Text = "DS Sách bị vi phạm";
-            // 
             // btnM_SConlai
             // 
             this.btnM_SConlai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
@@ -537,7 +578,7 @@ namespace LibraryManager.Template
             this.btnM_SConlai.HoverState.Parent = this.btnM_SConlai;
             this.btnM_SConlai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_SConlai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_SConlai.Location = new System.Drawing.Point(-3, 206);
+            this.btnM_SConlai.Location = new System.Drawing.Point(-3, 155);
             this.btnM_SConlai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnM_SConlai.Name = "btnM_SConlai";
             this.btnM_SConlai.ShadowDecoration.Parent = this.btnM_SConlai;
@@ -559,7 +600,7 @@ namespace LibraryManager.Template
             this.btnM_dsSDamuon.HoverState.Parent = this.btnM_dsSDamuon;
             this.btnM_dsSDamuon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnM_dsSDamuon.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_dsSDamuon.Location = new System.Drawing.Point(0, 155);
+            this.btnM_dsSDamuon.Location = new System.Drawing.Point(-3, 105);
             this.btnM_dsSDamuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnM_dsSDamuon.Name = "btnM_dsSDamuon";
             this.btnM_dsSDamuon.ShadowDecoration.Parent = this.btnM_dsSDamuon;
@@ -587,29 +628,8 @@ namespace LibraryManager.Template
             this.btnM_DSDausach.ShadowDecoration.Parent = this.btnM_DSDausach;
             this.btnM_DSDausach.Size = new System.Drawing.Size(253, 46);
             this.btnM_DSDausach.TabIndex = 16;
-            this.btnM_DSDausach.Text = "Danh sách đầu sách";
+            this.btnM_DSDausach.Text = "Quản lý đầu sách";
             this.btnM_DSDausach.Click += new System.EventHandler(this.btnM_DSDausach_Click);
-            // 
-            // btnM_Suadausach
-            // 
-            this.btnM_Suadausach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnM_Suadausach.BorderColor = System.Drawing.Color.Transparent;
-            this.btnM_Suadausach.BorderThickness = 1;
-            this.btnM_Suadausach.CheckedState.Parent = this.btnM_Suadausach;
-            this.btnM_Suadausach.CustomImages.Parent = this.btnM_Suadausach;
-            this.btnM_Suadausach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.btnM_Suadausach.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnM_Suadausach.ForeColor = System.Drawing.Color.Black;
-            this.btnM_Suadausach.HoverState.Parent = this.btnM_Suadausach;
-            this.btnM_Suadausach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnM_Suadausach.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_Suadausach.Location = new System.Drawing.Point(-3, 105);
-            this.btnM_Suadausach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnM_Suadausach.Name = "btnM_Suadausach";
-            this.btnM_Suadausach.ShadowDecoration.Parent = this.btnM_Suadausach;
-            this.btnM_Suadausach.Size = new System.Drawing.Size(253, 46);
-            this.btnM_Suadausach.TabIndex = 17;
-            this.btnM_Suadausach.Text = "Sửa thông tin sách";
             // 
             // panelQLNV
             // 
@@ -617,7 +637,7 @@ namespace LibraryManager.Template
             this.panelQLNV.Controls.Add(this.btnDSNV);
             this.panelQLNV.Controls.Add(this.btnAddNV);
             this.panelQLNV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLNV.Location = new System.Drawing.Point(0, 162);
+            this.panelQLNV.Location = new System.Drawing.Point(0, 110);
             this.panelQLNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQLNV.MaximumSize = new System.Drawing.Size(253, 158);
             this.panelQLNV.MinimumSize = new System.Drawing.Size(253, 57);
@@ -695,14 +715,13 @@ namespace LibraryManager.Template
             // 
             this.panelHome.Controls.Add(this.btnHome);
             this.panelHome.Controls.Add(this.btnCaiDat);
-            this.panelHome.Controls.Add(this.btnThuNghiem);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHome.MaximumSize = new System.Drawing.Size(253, 263);
             this.panelHome.MinimumSize = new System.Drawing.Size(253, 55);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(253, 162);
+            this.panelHome.Size = new System.Drawing.Size(253, 110);
             this.panelHome.TabIndex = 19;
             // 
             // btnHome
@@ -739,7 +758,7 @@ namespace LibraryManager.Template
             this.btnCaiDat.Image = global::LibraryManager.Properties.Resources.icons8_settings_24px;
             this.btnCaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaiDat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCaiDat.Location = new System.Drawing.Point(-3, 57);
+            this.btnCaiDat.Location = new System.Drawing.Point(1, 56);
             this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(1);
@@ -747,28 +766,6 @@ namespace LibraryManager.Template
             this.btnCaiDat.Size = new System.Drawing.Size(253, 50);
             this.btnCaiDat.TabIndex = 14;
             this.btnCaiDat.Text = "Cài đặt";
-            // 
-            // btnThuNghiem
-            // 
-            this.btnThuNghiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnThuNghiem.CheckedState.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.CustomImages.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(246)))), ((int)(((byte)(197)))));
-            this.btnThuNghiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThuNghiem.ForeColor = System.Drawing.Color.Black;
-            this.btnThuNghiem.HoverState.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.Image = global::LibraryManager.Properties.Resources.icons8_ab_testing_48px;
-            this.btnThuNghiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThuNghiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThuNghiem.Location = new System.Drawing.Point(0, 111);
-            this.btnThuNghiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThuNghiem.Name = "btnThuNghiem";
-            this.btnThuNghiem.Padding = new System.Windows.Forms.Padding(1);
-            this.btnThuNghiem.ShadowDecoration.Parent = this.btnThuNghiem;
-            this.btnThuNghiem.Size = new System.Drawing.Size(253, 49);
-            this.btnThuNghiem.TabIndex = 15;
-            this.btnThuNghiem.Text = "Thử nghiệm";
-            this.btnThuNghiem.Click += new System.EventHandler(this.btnThuNghiem_Click);
             // 
             // panelNameUser
             // 
@@ -818,25 +815,6 @@ namespace LibraryManager.Template
             this.label3.TabIndex = 13;
             this.label3.Text = "  Quản lý  ";
             // 
-            // pictureAvt
-            // 
-            this.pictureAvt.BackColor = System.Drawing.Color.White;
-            this.pictureAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictureAvt.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.pictureAvt.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pictureAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.pictureAvt.BorderSize = 2;
-            this.pictureAvt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureAvt.GradientAngle = 50F;
-            this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
-            this.pictureAvt.Location = new System.Drawing.Point(0, 0);
-            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureAvt.Name = "pictureAvt";
-            this.pictureAvt.Size = new System.Drawing.Size(75, 75);
-            this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureAvt.TabIndex = 5;
-            this.pictureAvt.TabStop = false;
-            // 
             // nameuser
             // 
             this.nameuser.AutoSize = true;
@@ -874,6 +852,47 @@ namespace LibraryManager.Template
             this.panelShow.Size = new System.Drawing.Size(1689, 1014);
             this.panelShow.TabIndex = 8;
             // 
+            // btnM_tkChung
+            // 
+            this.btnM_tkChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnM_tkChung.BorderColor = System.Drawing.Color.Transparent;
+            this.btnM_tkChung.BorderThickness = 1;
+            this.btnM_tkChung.CheckedState.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.CustomImages.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnM_tkChung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnM_tkChung.ForeColor = System.Drawing.Color.Black;
+            this.btnM_tkChung.HoverState.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnM_tkChung.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnM_tkChung.Location = new System.Drawing.Point(0, 58);
+            this.btnM_tkChung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_tkChung.Name = "btnM_tkChung";
+            this.btnM_tkChung.ShadowDecoration.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.Size = new System.Drawing.Size(253, 46);
+            this.btnM_tkChung.TabIndex = 17;
+            this.btnM_tkChung.Text = "Thống kê chung";
+            this.btnM_tkChung.Click += new System.EventHandler(this.btnM_tkChung_Click);
+            // 
+            // pictureAvt
+            // 
+            this.pictureAvt.BackColor = System.Drawing.Color.White;
+            this.pictureAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictureAvt.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pictureAvt.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pictureAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.pictureAvt.BorderSize = 2;
+            this.pictureAvt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureAvt.GradientAngle = 50F;
+            this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
+            this.pictureAvt.Location = new System.Drawing.Point(0, 0);
+            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureAvt.Name = "pictureAvt";
+            this.pictureAvt.Size = new System.Drawing.Size(75, 75);
+            this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureAvt.TabIndex = 5;
+            this.pictureAvt.TabStop = false;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -890,6 +909,7 @@ namespace LibraryManager.Template
             this.paneldrag.ResumeLayout(false);
             this.PanelMenuBar.ResumeLayout(false);
             this.panelAll.ResumeLayout(false);
+            this.panelThongke.ResumeLayout(false);
             this.panelQLDocGia.ResumeLayout(false);
             this.panelXLViPham.ResumeLayout(false);
             this.panelXLMuontra.ResumeLayout(false);
@@ -900,8 +920,8 @@ namespace LibraryManager.Template
             this.panelNameUser.ResumeLayout(false);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -914,7 +934,7 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Panel PanelMenuBar;
         private System.Windows.Forms.Panel panelAll;
-        private Guna.UI2.WinForms.Guna2Button btnThuNghiem;
+        private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private Guna.UI2.WinForms.Guna2Button btnCaiDat;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private System.Windows.Forms.Panel panelNameUser;
@@ -934,11 +954,9 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Panel panelShow;
         private System.Windows.Forms.Panel panelQLsach;
         private Guna.UI2.WinForms.Guna2Button btnM_QLsach;
-        private Guna.UI2.WinForms.Guna2Button btnM_SVipham;
         private Guna.UI2.WinForms.Guna2Button btnM_SConlai;
         private Guna.UI2.WinForms.Guna2Button btnM_dsSDamuon;
         private Guna.UI2.WinForms.Guna2Button btnM_DSDausach;
-        private Guna.UI2.WinForms.Guna2Button btnM_Suadausach;
         private System.Windows.Forms.Panel panelQLSachNhap;
         private Guna.UI2.WinForms.Guna2Button btnM_QLsachnhap;
         private Guna.UI2.WinForms.Guna2Button btnM_Nhapsach;
@@ -954,5 +972,8 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button btnM_regtkdg;
         private Guna.UI2.WinForms.Guna2Button btnM_QLDG;
         private Guna.UI2.WinForms.Guna2Button btnM_DSDG;
+        private System.Windows.Forms.Panel panelThongke;
+        private Guna.UI2.WinForms.Guna2Button btnM_ReportSLDS;
+        private Guna.UI2.WinForms.Guna2Button btnM_tkChung;
     }
 }

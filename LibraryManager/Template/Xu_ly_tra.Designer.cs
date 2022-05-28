@@ -47,17 +47,6 @@ namespace LibraryManager.Template
             this.lbMadg = new System.Windows.Forms.Label();
             this.lbMasach = new System.Windows.Forms.Label();
             this.dgv_trasach = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btnHoantat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBbvp = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dgvDs = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.clmVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNgaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMadg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMasach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCleardgv = new Guna.UI2.WinForms.Guna2Button();
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaMuonTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +54,17 @@ namespace LibraryManager.Template
             this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHoantat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBbvp = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.dgvDs = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.clmMasach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMadg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNgaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnCleardgv = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -76,10 +76,9 @@ namespace LibraryManager.Template
             this.lbMuontra.AutoSize = true;
             this.lbMuontra.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMuontra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.lbMuontra.Location = new System.Drawing.Point(15, 0);
-            this.lbMuontra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbMuontra.Location = new System.Drawing.Point(20, 0);
             this.lbMuontra.Name = "lbMuontra";
-            this.lbMuontra.Size = new System.Drawing.Size(127, 37);
+            this.lbMuontra.Size = new System.Drawing.Size(154, 45);
             this.lbMuontra.TabIndex = 0;
             this.lbMuontra.Text = "Trả sách";
             // 
@@ -100,11 +99,11 @@ namespace LibraryManager.Template
             "Mã sách",
             "Tất cả"});
             this.cmbTKiem.ItemsAppearance.Parent = this.cmbTKiem;
-            this.cmbTKiem.Location = new System.Drawing.Point(235, 17);
-            this.cmbTKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTKiem.Location = new System.Drawing.Point(313, 21);
+            this.cmbTKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTKiem.Name = "cmbTKiem";
             this.cmbTKiem.ShadowDecoration.Parent = this.cmbTKiem;
-            this.cmbTKiem.Size = new System.Drawing.Size(133, 36);
+            this.cmbTKiem.Size = new System.Drawing.Size(176, 36);
             this.cmbTKiem.TabIndex = 6;
             // 
             // btnTK
@@ -118,11 +117,11 @@ namespace LibraryManager.Template
             this.btnTK.ForeColor = System.Drawing.Color.White;
             this.btnTK.HoverState.Parent = this.btnTK;
             this.btnTK.Image = ((System.Drawing.Image)(resources.GetObject("btnTK.Image")));
-            this.btnTK.Location = new System.Drawing.Point(387, 17);
-            this.btnTK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTK.Location = new System.Drawing.Point(516, 21);
+            this.btnTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTK.Name = "btnTK";
             this.btnTK.ShadowDecoration.Parent = this.btnTK;
-            this.btnTK.Size = new System.Drawing.Size(94, 33);
+            this.btnTK.Size = new System.Drawing.Size(125, 41);
             this.btnTK.TabIndex = 5;
             this.btnTK.Text = "Tìm kiếm";
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
@@ -140,13 +139,14 @@ namespace LibraryManager.Template
             this.txtTK.FocusedState.Parent = this.txtTK;
             this.txtTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTK.HoverState.Parent = this.txtTK;
-            this.txtTK.Location = new System.Drawing.Point(15, 17);
+            this.txtTK.Location = new System.Drawing.Point(20, 21);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(5);
             this.txtTK.Name = "txtTK";
             this.txtTK.PasswordChar = '\0';
             this.txtTK.PlaceholderText = "Nhập nội dung tìm kiếm";
             this.txtTK.SelectedText = "";
             this.txtTK.ShadowDecoration.Parent = this.txtTK;
-            this.txtTK.Size = new System.Drawing.Size(215, 33);
+            this.txtTK.Size = new System.Drawing.Size(287, 41);
             this.txtTK.TabIndex = 3;
             // 
             // btnCapnhat
@@ -160,11 +160,11 @@ namespace LibraryManager.Template
             this.btnCapnhat.ForeColor = System.Drawing.Color.White;
             this.btnCapnhat.HoverState.Parent = this.btnCapnhat;
             this.btnCapnhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCapnhat.Location = new System.Drawing.Point(22, 593);
-            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCapnhat.Location = new System.Drawing.Point(29, 730);
+            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.ShadowDecoration.Parent = this.btnCapnhat;
-            this.btnCapnhat.Size = new System.Drawing.Size(496, 37);
+            this.btnCapnhat.Size = new System.Drawing.Size(661, 46);
             this.btnCapnhat.TabIndex = 8;
             this.btnCapnhat.Text = "Trả sách";
             this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
@@ -178,10 +178,10 @@ namespace LibraryManager.Template
             this.cboxVi_pham.CheckedState.BorderThickness = 0;
             this.cboxVi_pham.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboxVi_pham.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboxVi_pham.Location = new System.Drawing.Point(268, 33);
-            this.cboxVi_pham.Margin = new System.Windows.Forms.Padding(2);
+            this.cboxVi_pham.Location = new System.Drawing.Point(357, 41);
+            this.cboxVi_pham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxVi_pham.Name = "cboxVi_pham";
-            this.cboxVi_pham.Size = new System.Drawing.Size(79, 23);
+            this.cboxVi_pham.Size = new System.Drawing.Size(96, 27);
             this.cboxVi_pham.TabIndex = 7;
             this.cboxVi_pham.Text = "Vi phạm";
             this.cboxVi_pham.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -203,13 +203,14 @@ namespace LibraryManager.Template
             this.txtMadg.FocusedState.Parent = this.txtMadg;
             this.txtMadg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMadg.HoverState.Parent = this.txtMadg;
-            this.txtMadg.Location = new System.Drawing.Point(136, 26);
+            this.txtMadg.Location = new System.Drawing.Point(181, 32);
+            this.txtMadg.Margin = new System.Windows.Forms.Padding(5);
             this.txtMadg.Name = "txtMadg";
             this.txtMadg.PasswordChar = '\0';
             this.txtMadg.PlaceholderText = "";
             this.txtMadg.SelectedText = "";
             this.txtMadg.ShadowDecoration.Parent = this.txtMadg;
-            this.txtMadg.Size = new System.Drawing.Size(112, 33);
+            this.txtMadg.Size = new System.Drawing.Size(149, 41);
             this.txtMadg.TabIndex = 5;
             // 
             // txtMasach
@@ -225,13 +226,14 @@ namespace LibraryManager.Template
             this.txtMasach.FocusedState.Parent = this.txtMasach;
             this.txtMasach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMasach.HoverState.Parent = this.txtMasach;
-            this.txtMasach.Location = new System.Drawing.Point(23, 28);
+            this.txtMasach.Location = new System.Drawing.Point(31, 34);
+            this.txtMasach.Margin = new System.Windows.Forms.Padding(5);
             this.txtMasach.Name = "txtMasach";
             this.txtMasach.PasswordChar = '\0';
             this.txtMasach.PlaceholderText = "";
             this.txtMasach.SelectedText = "";
             this.txtMasach.ShadowDecoration.Parent = this.txtMasach;
-            this.txtMasach.Size = new System.Drawing.Size(107, 31);
+            this.txtMasach.Size = new System.Drawing.Size(143, 38);
             this.txtMasach.TabIndex = 4;
             // 
             // lbMadg
@@ -239,10 +241,9 @@ namespace LibraryManager.Template
             this.lbMadg.AutoSize = true;
             this.lbMadg.BackColor = System.Drawing.Color.Transparent;
             this.lbMadg.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMadg.Location = new System.Drawing.Point(132, 4);
-            this.lbMadg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbMadg.Location = new System.Drawing.Point(176, 5);
             this.lbMadg.Name = "lbMadg";
-            this.lbMadg.Size = new System.Drawing.Size(83, 19);
+            this.lbMadg.Size = new System.Drawing.Size(100, 23);
             this.lbMadg.TabIndex = 2;
             this.lbMadg.Text = "Mã độc giả:";
             // 
@@ -251,10 +252,9 @@ namespace LibraryManager.Template
             this.lbMasach.AutoSize = true;
             this.lbMasach.BackColor = System.Drawing.Color.Transparent;
             this.lbMasach.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMasach.Location = new System.Drawing.Point(19, 4);
-            this.lbMasach.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbMasach.Location = new System.Drawing.Point(25, 5);
             this.lbMasach.Name = "lbMasach";
-            this.lbMasach.Size = new System.Drawing.Size(64, 19);
+            this.lbMasach.Size = new System.Drawing.Size(78, 23);
             this.lbMasach.TabIndex = 1;
             this.lbMasach.Text = "Mã sách:";
             // 
@@ -317,18 +317,73 @@ namespace LibraryManager.Template
             this.dgv_trasach.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_trasach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_trasach.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_trasach.Location = new System.Drawing.Point(22, 127);
-            this.dgv_trasach.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_trasach.Location = new System.Drawing.Point(29, 156);
+            this.dgv_trasach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_trasach.Name = "dgv_trasach";
             this.dgv_trasach.RowHeadersVisible = false;
             this.dgv_trasach.RowHeadersWidth = 51;
             this.dgv_trasach.RowTemplate.Height = 40;
             this.dgv_trasach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_trasach.Size = new System.Drawing.Size(496, 441);
+            this.dgv_trasach.Size = new System.Drawing.Size(661, 543);
             this.dgv_trasach.TabIndex = 3;
             this.dgv_trasach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_trasach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_trasach_CellClick);
-            this.dgv_trasach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_trasach_CellContentClick);
+            // 
+            // MaDocGia
+            // 
+            this.MaDocGia.DataPropertyName = "MaDocGia";
+            this.MaDocGia.HeaderText = "Mã độc giả";
+            this.MaDocGia.MinimumWidth = 6;
+            this.MaDocGia.Name = "MaDocGia";
+            this.MaDocGia.ReadOnly = true;
+            // 
+            // TenDocGia
+            // 
+            this.TenDocGia.DataPropertyName = "TenDocGia";
+            this.TenDocGia.HeaderText = "Tên độc giả";
+            this.TenDocGia.MinimumWidth = 6;
+            this.TenDocGia.Name = "TenDocGia";
+            this.TenDocGia.ReadOnly = true;
+            // 
+            // MaMuonTra
+            // 
+            this.MaMuonTra.DataPropertyName = "MaMuonTra";
+            this.MaMuonTra.HeaderText = "Mã mượn trả";
+            this.MaMuonTra.MinimumWidth = 6;
+            this.MaMuonTra.Name = "MaMuonTra";
+            this.MaMuonTra.ReadOnly = true;
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // NgayMuon
+            // 
+            this.NgayMuon.DataPropertyName = "NgayMuon";
+            this.NgayMuon.HeaderText = "Ngày mượn";
+            this.NgayMuon.MinimumWidth = 6;
+            this.NgayMuon.Name = "NgayMuon";
+            this.NgayMuon.ReadOnly = true;
+            // 
+            // HanTra
+            // 
+            this.HanTra.DataPropertyName = "HanTra";
+            this.HanTra.HeaderText = "Hạn trả";
+            this.HanTra.MinimumWidth = 6;
+            this.HanTra.Name = "HanTra";
+            this.HanTra.ReadOnly = true;
+            // 
+            // NgayTra
+            // 
+            this.NgayTra.DataPropertyName = "NgayTra";
+            this.NgayTra.HeaderText = "Ngày trả";
+            this.NgayTra.MinimumWidth = 6;
+            this.NgayTra.Name = "NgayTra";
+            this.NgayTra.ReadOnly = true;
             // 
             // btnHoantat
             // 
@@ -339,11 +394,11 @@ namespace LibraryManager.Template
             this.btnHoantat.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnHoantat.ForeColor = System.Drawing.Color.White;
             this.btnHoantat.HoverState.Parent = this.btnHoantat;
-            this.btnHoantat.Location = new System.Drawing.Point(801, 593);
-            this.btnHoantat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHoantat.Location = new System.Drawing.Point(1068, 730);
+            this.btnHoantat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHoantat.Name = "btnHoantat";
             this.btnHoantat.ShadowDecoration.Parent = this.btnHoantat;
-            this.btnHoantat.Size = new System.Drawing.Size(123, 37);
+            this.btnHoantat.Size = new System.Drawing.Size(164, 46);
             this.btnHoantat.TabIndex = 4;
             this.btnHoantat.Text = "Hoàn tất trả sách";
             this.btnHoantat.Click += new System.EventHandler(this.btnHoantat_Click);
@@ -357,11 +412,11 @@ namespace LibraryManager.Template
             this.btnBbvp.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnBbvp.ForeColor = System.Drawing.Color.White;
             this.btnBbvp.HoverState.Parent = this.btnBbvp;
-            this.btnBbvp.Location = new System.Drawing.Point(550, 593);
-            this.btnBbvp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBbvp.Location = new System.Drawing.Point(733, 730);
+            this.btnBbvp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBbvp.Name = "btnBbvp";
             this.btnBbvp.ShadowDecoration.Parent = this.btnBbvp;
-            this.btnBbvp.Size = new System.Drawing.Size(153, 37);
+            this.btnBbvp.Size = new System.Drawing.Size(204, 46);
             this.btnBbvp.TabIndex = 5;
             this.btnBbvp.Text = "Lập biên bản vi phạm";
             this.btnBbvp.Click += new System.EventHandler(this.btnBbvp_Click);
@@ -376,10 +431,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Controls.Add(this.txtMasach);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(550, 38);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(733, 47);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(374, 67);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(499, 82);
             this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // guna2CustomGradientPanel2
@@ -390,10 +446,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel2.Controls.Add(this.txtTK);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.MediumVioletRed;
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(22, 38);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(29, 47);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(496, 67);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(661, 82);
             this.guna2CustomGradientPanel2.TabIndex = 9;
             // 
             // dgvDs
@@ -454,37 +511,24 @@ namespace LibraryManager.Template
             this.dgvDs.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
             this.dgvDs.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDs.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDs.Location = new System.Drawing.Point(550, 127);
-            this.dgvDs.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDs.Location = new System.Drawing.Point(733, 156);
+            this.dgvDs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDs.Name = "dgvDs";
             this.dgvDs.RowHeadersVisible = false;
             this.dgvDs.RowHeadersWidth = 51;
             this.dgvDs.RowTemplate.Height = 40;
             this.dgvDs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDs.Size = new System.Drawing.Size(374, 441);
+            this.dgvDs.Size = new System.Drawing.Size(499, 543);
             this.dgvDs.TabIndex = 1;
             this.dgvDs.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumSeaGreen;
             this.dgvDs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDs_CellContentClick);
             // 
-            // Column1
+            // clmMasach
             // 
-            this.Column1.HeaderText = "Loại bỏ";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // clmVP
-            // 
-            this.clmVP.DataPropertyName = "clmVP";
-            this.clmVP.HeaderText = "Vi Phạm";
-            this.clmVP.MinimumWidth = 6;
-            this.clmVP.Name = "clmVP";
-            // 
-            // clmNgaytra
-            // 
-            this.clmNgaytra.DataPropertyName = "clmNgaytra";
-            this.clmNgaytra.HeaderText = "Ngày trả";
-            this.clmNgaytra.MinimumWidth = 6;
-            this.clmNgaytra.Name = "clmNgaytra";
+            this.clmMasach.DataPropertyName = "clmMasach";
+            this.clmMasach.HeaderText = "Mã sách";
+            this.clmMasach.MinimumWidth = 6;
+            this.clmMasach.Name = "clmMasach";
             // 
             // clmMadg
             // 
@@ -493,12 +537,25 @@ namespace LibraryManager.Template
             this.clmMadg.MinimumWidth = 6;
             this.clmMadg.Name = "clmMadg";
             // 
-            // clmMasach
+            // clmNgaytra
             // 
-            this.clmMasach.DataPropertyName = "clmMasach";
-            this.clmMasach.HeaderText = "Mã sách";
-            this.clmMasach.MinimumWidth = 6;
-            this.clmMasach.Name = "clmMasach";
+            this.clmNgaytra.DataPropertyName = "clmNgaytra";
+            this.clmNgaytra.HeaderText = "Ngày trả";
+            this.clmNgaytra.MinimumWidth = 6;
+            this.clmNgaytra.Name = "clmNgaytra";
+            // 
+            // clmVP
+            // 
+            this.clmVP.DataPropertyName = "clmVP";
+            this.clmVP.HeaderText = "Vi Phạm";
+            this.clmVP.MinimumWidth = 6;
+            this.clmVP.Name = "clmVP";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Loại bỏ";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
             // btnCleardgv
             // 
@@ -509,67 +566,18 @@ namespace LibraryManager.Template
             this.btnCleardgv.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCleardgv.ForeColor = System.Drawing.Color.White;
             this.btnCleardgv.HoverState.Parent = this.btnCleardgv;
-            this.btnCleardgv.Location = new System.Drawing.Point(707, 593);
-            this.btnCleardgv.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCleardgv.Location = new System.Drawing.Point(943, 730);
+            this.btnCleardgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCleardgv.Name = "btnCleardgv";
             this.btnCleardgv.ShadowDecoration.Parent = this.btnCleardgv;
-            this.btnCleardgv.Size = new System.Drawing.Size(88, 37);
+            this.btnCleardgv.Size = new System.Drawing.Size(117, 46);
             this.btnCleardgv.TabIndex = 10;
             this.btnCleardgv.Text = "Clear all";
             this.btnCleardgv.Click += new System.EventHandler(this.btnCleardgv_Click);
             // 
-            // MaDocGia
-            // 
-            this.MaDocGia.DataPropertyName = "MaDocGia";
-            this.MaDocGia.HeaderText = "Mã độc giả";
-            this.MaDocGia.Name = "MaDocGia";
-            this.MaDocGia.ReadOnly = true;
-            // 
-            // TenDocGia
-            // 
-            this.TenDocGia.DataPropertyName = "TenDocGia";
-            this.TenDocGia.HeaderText = "Tên độc giả";
-            this.TenDocGia.Name = "TenDocGia";
-            this.TenDocGia.ReadOnly = true;
-            // 
-            // MaMuonTra
-            // 
-            this.MaMuonTra.DataPropertyName = "MaMuonTra";
-            this.MaMuonTra.HeaderText = "Mã mượn trả";
-            this.MaMuonTra.Name = "MaMuonTra";
-            this.MaMuonTra.ReadOnly = true;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            // 
-            // NgayMuon
-            // 
-            this.NgayMuon.DataPropertyName = "NgayMuon";
-            this.NgayMuon.HeaderText = "Ngày mượn";
-            this.NgayMuon.Name = "NgayMuon";
-            this.NgayMuon.ReadOnly = true;
-            // 
-            // HanTra
-            // 
-            this.HanTra.DataPropertyName = "HanTra";
-            this.HanTra.HeaderText = "Hạn trả";
-            this.HanTra.Name = "HanTra";
-            this.HanTra.ReadOnly = true;
-            // 
-            // NgayTra
-            // 
-            this.NgayTra.DataPropertyName = "NgayTra";
-            this.NgayTra.HeaderText = "Ngày trả";
-            this.NgayTra.Name = "NgayTra";
-            this.NgayTra.ReadOnly = true;
-            // 
             // Xu_ly_tra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCleardgv);
             this.Controls.Add(this.dgvDs);
@@ -580,9 +588,9 @@ namespace LibraryManager.Template
             this.Controls.Add(this.btnHoantat);
             this.Controls.Add(this.dgv_trasach);
             this.Controls.Add(this.lbMuontra);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Xu_ly_tra";
-            this.Size = new System.Drawing.Size(941, 649);
+            this.Size = new System.Drawing.Size(1255, 799);
             this.Load += new System.EventHandler(this.Xu_ly_tra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);

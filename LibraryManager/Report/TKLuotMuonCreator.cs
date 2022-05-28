@@ -54,9 +54,6 @@ namespace LibraryManager.Report
             }
 
 
-
-
-
             return true;
         }
 

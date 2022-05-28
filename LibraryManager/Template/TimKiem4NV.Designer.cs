@@ -66,9 +66,10 @@ namespace LibraryManager.Template
             this.lbSLBook.BackColor = System.Drawing.Color.Transparent;
             this.lbSLBook.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
             this.lbSLBook.ForeColor = System.Drawing.Color.Red;
-            this.lbSLBook.Location = new System.Drawing.Point(33, 29);
+            this.lbSLBook.Location = new System.Drawing.Point(44, 36);
+            this.lbSLBook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSLBook.Name = "lbSLBook";
-            this.lbSLBook.Size = new System.Drawing.Size(13, 19);
+            this.lbSLBook.Size = new System.Drawing.Size(15, 23);
             this.lbSLBook.TabIndex = 45;
             this.lbSLBook.Text = ".";
             // 
@@ -81,10 +82,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel2.Controls.Add(this.cbTheLoai);
             this.guna2CustomGradientPanel2.Controls.Add(this.flowLayoutDS);
             this.guna2CustomGradientPanel2.Controls.Add(this.btnSearch);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(10, 60);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(13, 74);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(652, 673);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(869, 828);
             this.guna2CustomGradientPanel2.TabIndex = 49;
             // 
             // btnFindByTG
@@ -134,7 +136,8 @@ namespace LibraryManager.Template
             this.btnFindByTG.IdleIconLeftImage = null;
             this.btnFindByTG.IdleIconRightImage = null;
             this.btnFindByTG.IndicateFocus = false;
-            this.btnFindByTG.Location = new System.Drawing.Point(221, 11);
+            this.btnFindByTG.Location = new System.Drawing.Point(295, 14);
+            this.btnFindByTG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFindByTG.Name = "btnFindByTG";
             this.btnFindByTG.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFindByTG.OnDisabledState.BorderRadius = 1;
@@ -168,7 +171,7 @@ namespace LibraryManager.Template
             this.btnFindByTG.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnFindByTG.OnPressedState.IconLeftImage = null;
             this.btnFindByTG.OnPressedState.IconRightImage = null;
-            this.btnFindByTG.Size = new System.Drawing.Size(140, 36);
+            this.btnFindByTG.Size = new System.Drawing.Size(187, 44);
             this.btnFindByTG.TabIndex = 40;
             this.btnFindByTG.Tag = "Tìm theo tên tác giả";
             this.btnFindByTG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,7 +228,8 @@ namespace LibraryManager.Template
             this.btnFindAll.IdleIconLeftImage = null;
             this.btnFindAll.IdleIconRightImage = null;
             this.btnFindAll.IndicateFocus = false;
-            this.btnFindAll.Location = new System.Drawing.Point(367, 11);
+            this.btnFindAll.Location = new System.Drawing.Point(489, 14);
+            this.btnFindAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFindAll.Name = "btnFindAll";
             this.btnFindAll.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFindAll.OnDisabledState.BorderRadius = 1;
@@ -259,7 +263,7 @@ namespace LibraryManager.Template
             this.btnFindAll.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnFindAll.OnPressedState.IconLeftImage = null;
             this.btnFindAll.OnPressedState.IconRightImage = null;
-            this.btnFindAll.Size = new System.Drawing.Size(75, 36);
+            this.btnFindAll.Size = new System.Drawing.Size(100, 44);
             this.btnFindAll.TabIndex = 39;
             this.btnFindAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFindAll.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -282,14 +286,14 @@ namespace LibraryManager.Template
             this.txtSearch.FocusedState.Parent = this.txtSearch;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(15, 53);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(20, 65);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên sách để tôi tìm cho bạn";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(483, 40);
+            this.txtSearch.Size = new System.Drawing.Size(644, 49);
             this.txtSearch.TabIndex = 35;
             // 
             // cbTheLoai
@@ -307,20 +311,22 @@ namespace LibraryManager.Template
             this.cbTheLoai.Items.AddRange(new object[] {
             "Tất cả thể loại"});
             this.cbTheLoai.ItemsAppearance.Parent = this.cbTheLoai;
-            this.cbTheLoai.Location = new System.Drawing.Point(15, 11);
+            this.cbTheLoai.Location = new System.Drawing.Point(20, 14);
+            this.cbTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTheLoai.Name = "cbTheLoai";
             this.cbTheLoai.ShadowDecoration.Parent = this.cbTheLoai;
-            this.cbTheLoai.Size = new System.Drawing.Size(200, 36);
+            this.cbTheLoai.Size = new System.Drawing.Size(265, 36);
             this.cbTheLoai.TabIndex = 37;
             this.cbTheLoai.SelectedIndexChanged += new System.EventHandler(this.cbTheLoai_SelectedIndexChanged);
             // 
             // flowLayoutDS
             // 
             this.flowLayoutDS.AutoScroll = true;
-            this.flowLayoutDS.Location = new System.Drawing.Point(15, 100);
-            this.flowLayoutDS.MaximumSize = new System.Drawing.Size(677, 547);
+            this.flowLayoutDS.Location = new System.Drawing.Point(20, 123);
+            this.flowLayoutDS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutDS.MaximumSize = new System.Drawing.Size(903, 673);
             this.flowLayoutDS.Name = "flowLayoutDS";
-            this.flowLayoutDS.Size = new System.Drawing.Size(617, 547);
+            this.flowLayoutDS.Size = new System.Drawing.Size(823, 673);
             this.flowLayoutDS.TabIndex = 46;
             // 
             // btnSearch
@@ -331,10 +337,11 @@ namespace LibraryManager.Template
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(525, 53);
+            this.btnSearch.Location = new System.Drawing.Point(700, 65);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(107, 40);
+            this.btnSearch.Size = new System.Drawing.Size(143, 49);
             this.btnSearch.TabIndex = 36;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -345,9 +352,10 @@ namespace LibraryManager.Template
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label13.Location = new System.Drawing.Point(15, 14);
+            this.label13.Location = new System.Drawing.Point(20, 17);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 25);
+            this.label13.Size = new System.Drawing.Size(152, 30);
             this.label13.TabIndex = 39;
             this.label13.Text = "Bạn đã chọn:";
             // 
@@ -408,12 +416,14 @@ namespace LibraryManager.Template
             this.dgvChooseBook.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvChooseBook.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvChooseBook.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvChooseBook.Location = new System.Drawing.Point(20, 73);
+            this.dgvChooseBook.Location = new System.Drawing.Point(27, 90);
+            this.dgvChooseBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvChooseBook.Name = "dgvChooseBook";
             this.dgvChooseBook.RowHeadersVisible = false;
+            this.dgvChooseBook.RowHeadersWidth = 51;
             this.dgvChooseBook.RowTemplate.Height = 40;
             this.dgvChooseBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChooseBook.Size = new System.Drawing.Size(407, 426);
+            this.dgvChooseBook.Size = new System.Drawing.Size(543, 524);
             this.dgvChooseBook.TabIndex = 36;
             this.dgvChooseBook.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvChooseBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChooseBook_CellClick);
@@ -421,24 +431,28 @@ namespace LibraryManager.Template
             // MaDauSach
             // 
             this.MaDauSach.HeaderText = "Mã đầu sách";
+            this.MaDauSach.MinimumWidth = 6;
             this.MaDauSach.Name = "MaDauSach";
             this.MaDauSach.ReadOnly = true;
             // 
             // TenDauSach
             // 
             this.TenDauSach.HeaderText = "Tên đầu sách";
+            this.TenDauSach.MinimumWidth = 6;
             this.TenDauSach.Name = "TenDauSach";
             // 
             // ViTri
             // 
             this.ViTri.DataPropertyName = "ViTri";
             this.ViTri.HeaderText = "Vị trí";
+            this.ViTri.MinimumWidth = 6;
             this.ViTri.Name = "ViTri";
             this.ViTri.ReadOnly = true;
             // 
             // Remove
             // 
             this.Remove.HeaderText = "Remove";
+            this.Remove.MinimumWidth = 6;
             this.Remove.Name = "Remove";
             this.Remove.Text = "Loại bỏ";
             // 
@@ -451,10 +465,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Controls.Add(this.label13);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnPreview);
             this.guna2CustomGradientPanel1.Controls.Add(this.dgvChooseBook);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(680, 60);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(907, 74);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(445, 673);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(593, 828);
             this.guna2CustomGradientPanel1.TabIndex = 48;
             // 
             // btnExportExcel
@@ -468,11 +483,11 @@ namespace LibraryManager.Template
             this.btnExportExcel.ForeColor = System.Drawing.Color.White;
             this.btnExportExcel.HoverState.Parent = this.btnExportExcel;
             this.btnExportExcel.Image = global::LibraryManager.Properties.Resources.icons8_file_excel_48px;
-            this.btnExportExcel.Location = new System.Drawing.Point(256, 515);
-            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExportExcel.Location = new System.Drawing.Point(341, 634);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.ShadowDecoration.Parent = this.btnExportExcel;
-            this.btnExportExcel.Size = new System.Drawing.Size(171, 36);
+            this.btnExportExcel.Size = new System.Drawing.Size(228, 44);
             this.btnExportExcel.TabIndex = 42;
             this.btnExportExcel.Text = "Export Excel";
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
@@ -488,11 +503,11 @@ namespace LibraryManager.Template
             this.btnCreatePM.ForeColor = System.Drawing.Color.White;
             this.btnCreatePM.HoverState.Parent = this.btnCreatePM;
             this.btnCreatePM.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnCreatePM.Location = new System.Drawing.Point(256, 589);
-            this.btnCreatePM.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreatePM.Location = new System.Drawing.Point(341, 684);
+            this.btnCreatePM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreatePM.Name = "btnCreatePM";
             this.btnCreatePM.ShadowDecoration.Parent = this.btnCreatePM;
-            this.btnCreatePM.Size = new System.Drawing.Size(171, 36);
+            this.btnCreatePM.Size = new System.Drawing.Size(228, 44);
             this.btnCreatePM.TabIndex = 41;
             this.btnCreatePM.Text = "Tạo phiếu mượn";
             this.btnCreatePM.Click += new System.EventHandler(this.btnCreatePM_Click);
@@ -508,11 +523,11 @@ namespace LibraryManager.Template
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
             this.btnClearAll.HoverState.Parent = this.btnClearAll;
             this.btnClearAll.Image = global::LibraryManager.Properties.Resources.icons8_cross_mark_button_96px;
-            this.btnClearAll.Location = new System.Drawing.Point(298, 23);
-            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearAll.Location = new System.Drawing.Point(397, 28);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.ShadowDecoration.Parent = this.btnClearAll;
-            this.btnClearAll.Size = new System.Drawing.Size(129, 36);
+            this.btnClearAll.Size = new System.Drawing.Size(172, 44);
             this.btnClearAll.TabIndex = 40;
             this.btnClearAll.Text = "Clear all";
             this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
@@ -528,11 +543,11 @@ namespace LibraryManager.Template
             this.btnPreview.ForeColor = System.Drawing.Color.White;
             this.btnPreview.HoverState.Parent = this.btnPreview;
             this.btnPreview.Image = global::LibraryManager.Properties.Resources.icons8_preview_file_64px;
-            this.btnPreview.Location = new System.Drawing.Point(20, 589);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPreview.Location = new System.Drawing.Point(27, 684);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.ShadowDecoration.Parent = this.btnPreview;
-            this.btnPreview.Size = new System.Drawing.Size(171, 36);
+            this.btnPreview.Size = new System.Drawing.Size(228, 44);
             this.btnPreview.TabIndex = 37;
             this.btnPreview.Text = "Xem chi tiết";
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
@@ -543,22 +558,24 @@ namespace LibraryManager.Template
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label1.Location = new System.Drawing.Point(474, 0);
+            this.label1.Location = new System.Drawing.Point(632, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 25);
+            this.label1.Size = new System.Drawing.Size(244, 30);
             this.label1.TabIndex = 36;
             this.label1.Text = "TÌM KIẾM ĐẦU SÁCH";
             // 
             // TimKiem4NV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbSLBook);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TimKiem4NV";
-            this.Size = new System.Drawing.Size(1144, 751);
+            this.Size = new System.Drawing.Size(1525, 924);
             this.Load += new System.EventHandler(this.TimKiem4NV_Load);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseBook)).EndInit();

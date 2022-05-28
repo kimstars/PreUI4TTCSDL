@@ -465,6 +465,12 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\frmLapBBVP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\frmLapBBVP.Designer.cs">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Hello_TacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,12 +542,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Captaikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Captaikhoan.Designer.cs">
-      <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\PhieuMuonCreator.cs" />
     <Compile Include="Report\PhieuMuonRP.cs">
@@ -705,11 +705,11 @@
     <Compile Include="Template\PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.cs">
+    <Compile Include="Template\ThemDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.Designer.cs">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <Compile Include="Template\ThemDocgia.Designer.cs">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\ThongKeNV.cs">
       <SubType>UserControl</SubType>
@@ -792,6 +792,9 @@
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmLapBBVP.resx">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Hello_TacGia.resx">
       <DependentUpon>Hello_TacGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -821,9 +824,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Captaikhoan.resx">
-      <DependentUpon>Captaikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongTinSach.resx">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
@@ -901,8 +901,8 @@
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\QLInfoDocgia.resx">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <EmbeddedResource Include="Template\ThemDocgia.resx">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ThongKeNV.resx">
       <DependentUpon>ThongKeNV.cs</DependentUpon>
@@ -979,7 +979,6 @@
     <None Include="Resources\icons8_user_50px_1.png" />
     <None Include="Resources\icons8_search_32px.png" />
     <None Include="Resources\icons8_home_26px.png" />
-    <None Include="Resources\icons8_delete_48px.png" />
     <None Include="Resources\icons8_book_and_pencil_30px.png" />
     <None Include="Resources\icons8_book_32px.png" />
     <None Include="Resources\icons8_administrator_male_48px.png" />
@@ -1209,7 +1208,10 @@
     <None Include="Resources\icons8_study_64px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Report\" />
+    <None Include="Resources\icons8_Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

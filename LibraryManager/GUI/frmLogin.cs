@@ -104,7 +104,6 @@ namespace LibraryManager.GUI
                                 {
                                     FrmDocGia newdg = new FrmDocGia(user);
                                     newdg.Show();
-
                                 }
                                 
                                 break;
@@ -112,7 +111,7 @@ namespace LibraryManager.GUI
                         case "nhanvien":
                             {
                                 this.Hide();
-                                frmNhanvien newnv = new frmNhanvien();
+                                frmNhanvien newnv = new frmNhanvien(user);
                                 newnv.Show();
                                 break;
                             }

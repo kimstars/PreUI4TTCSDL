@@ -36,6 +36,10 @@ namespace LibraryManager.Template
             listsach = dsds;
             MaDocGia = maDG;
             lbNVxuly.Text = "Phiếu mượn độc giả";
+            isNV = false;
+            txtTenDG.ReadOnly = true;
+            txtMaDG.ReadOnly = true;
+
         }
         public PhieuMuon( List<string> dsds,string maNV)
         {
@@ -44,6 +48,8 @@ namespace LibraryManager.Template
             MaNhanVien = maNV;
             lbNVxuly.Text = $"Nhân viên xử lý: {MaNhanVien}";
             isNV = true;
+            txtTenDG.ReadOnly = false;
+            txtMaDG.ReadOnly = false;
         }
 
         bool isNV = false;
@@ -76,6 +82,8 @@ namespace LibraryManager.Template
 
             lbMaMuonTra.Text = pmBus.CreateNext_MaMT();
 
+
+
         }
         DocGia_BUS dgBus = new DocGia_BUS();
         private void LoadTTDocGia()
@@ -93,7 +101,7 @@ namespace LibraryManager.Template
             }
 
 
-            lbTienCoc.Text = tong.ToString() + " VND";
+            lbTienCoc.Text = tong.ToString();
         }
 
         DauSach_BUS dsBus = new DauSach_BUS();
@@ -170,6 +178,8 @@ namespace LibraryManager.Template
             }
 
             pmBus.InsertMuon(pmtnew, DSMaSach,isNV);
+
+            MessageBox.Show("Tạo phiếu mượn thành công!!\nĐộc giả vui lòng ra quầy để nhân viên tiếp tục xử lý");
 
 
         }

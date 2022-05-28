@@ -37,18 +37,18 @@ namespace LibraryManager.Template
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label14 = new System.Windows.Forms.Label();
             this.chartDG = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label14 = new System.Windows.Forms.Label();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.circleProcessPercent = new Bunifu.UI.WinForms.BunifuCircleProgress();
             this.lbP_sanco = new System.Windows.Forms.Label();
             this.lbP_muon = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bunifuPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDG)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -74,19 +74,6 @@ namespace LibraryManager.Template
             this.bunifuPanel5.Size = new System.Drawing.Size(586, 408);
             this.bunifuPanel5.TabIndex = 21;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label14.Location = new System.Drawing.Point(42, 14);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(328, 30);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Thống kê tiền cọc theo tháng";
-            // 
             // chartDG
             // 
             chartArea1.Name = "ChartArea1";
@@ -99,11 +86,24 @@ namespace LibraryManager.Template
             series1.ChartArea = "ChartArea1";
             series1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
-            series1.Name = "DocGia";
+            series1.Name = "TienCoc";
             this.chartDG.Series.Add(series1);
             this.chartDG.Size = new System.Drawing.Size(501, 319);
             this.chartDG.TabIndex = 22;
             this.chartDG.Text = "chart1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.label14.Location = new System.Drawing.Point(42, 14);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(328, 30);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Thống kê tiền cọc theo tháng";
             // 
             // bunifuPanel1
             // 
@@ -120,7 +120,7 @@ namespace LibraryManager.Template
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1109, 389);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1151, 389);
             this.bunifuPanel1.TabIndex = 23;
             // 
             // chart1
@@ -136,7 +136,7 @@ namespace LibraryManager.Template
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series2.Legend = "Legend1";
-            series2.Name = "DocGia";
+            series2.Name = "SoLuong";
             series2.YValuesPerPoint = 2;
             this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1008, 283);
@@ -175,21 +175,8 @@ namespace LibraryManager.Template
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(505, 408);
+            this.bunifuPanel2.Size = new System.Drawing.Size(547, 408);
             this.bunifuPanel2.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label2.Location = new System.Drawing.Point(24, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(463, 30);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Số sách chưa trả với số sách đã cho mượn";
             // 
             // guna2CircleButton2
             // 
@@ -286,6 +273,19 @@ namespace LibraryManager.Template
             this.lbP_muon.TabIndex = 34;
             this.lbP_muon.Text = "Số sách đã mượn";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.label2.Location = new System.Drawing.Point(24, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(463, 30);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Số sách chưa trả với số sách đã cho mượn";
+            // 
             // ThongKeNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,7 +294,8 @@ namespace LibraryManager.Template
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel5);
             this.Name = "ThongKeNV";
-            this.Size = new System.Drawing.Size(1172, 856);
+            this.Size = new System.Drawing.Size(1211, 856);
+            this.Load += new System.EventHandler(this.ThongKeNV_Load);
             this.bunifuPanel5.ResumeLayout(false);
             this.bunifuPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDG)).EndInit();

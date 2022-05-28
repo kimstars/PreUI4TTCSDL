@@ -16,6 +16,13 @@ namespace LibraryManager.DAO
             return GetData(sqlString);
         }
 
+
+        public string loadMa_TenDangNhap(string TenDangNhap)
+        {
+            string sql = $"select MaNhanVien from NHANVIEN where TenDangNhap = '{TenDangNhap}'";
+
+            return GetString(sql);
+        }
         public bool Insert(NhanVien nv)
         {
             if (GetData("select * from NHANVIEN where MaNhanVien = '" + nv.MaNhanVien + "'").Rows.Count > 0)

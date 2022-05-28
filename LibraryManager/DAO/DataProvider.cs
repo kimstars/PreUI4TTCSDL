@@ -12,7 +12,7 @@ namespace LibraryManager.DAO
 {
     class DataProvider
     {
-        static string provider = @"Data Source=MSI\HOADINH;Initial Catalog=THUVIENMTA;Integrated Security=True";
+        static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
         protected SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
@@ -55,7 +55,31 @@ namespace LibraryManager.DAO
         //còn loại excuteNonQuery nữa nma tí t làm 
 
 
+        public void Excute_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
 
 
         public DataTable GetData_Proc_NParam(string NameProc, SqlParameter[] listParam)
@@ -87,6 +111,63 @@ namespace LibraryManager.DAO
             }
         }
 
+        public string GetString_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                string res = (string)cmd.ExecuteScalar();
+                return res;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public int GetINT_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                return (int)count;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+
         public byte[] LoadImage(string sql)
         {
             
@@ -96,9 +177,13 @@ namespace LibraryManager.DAO
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] imgbin = new byte[100000000];
-            if (reader.HasRows)
+            if (reader.HasRows && reader[0] != null)
             {
                 imgbin = (byte[])reader[0];
+            }
+            else
+            {
+                imgbin = new byte[0];
             }
             connect.Close();
             return imgbin ;
@@ -114,7 +199,16 @@ namespace LibraryManager.DAO
             return count;
             
         }
+        public long GetCount1(string sql)
+        {
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            long count = (long)command.ExecuteScalar();
+            connect.Close();
+            return count;
 
+        }
         public string GetString(string sql)
         {
             if (connect.State != ConnectionState.Open)

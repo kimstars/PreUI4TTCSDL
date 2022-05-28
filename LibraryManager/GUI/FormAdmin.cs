@@ -45,6 +45,11 @@ namespace LibraryManager.Template
                 Open_Y(ref panelQLDocGia, ref QLDocGiaExpand);
 
             }
+            if (thongkeExpand)
+            {
+                Open_Y(ref panelThongke, ref thongkeExpand);
+
+            }
 
         }
 
@@ -127,12 +132,6 @@ namespace LibraryManager.Template
 
 
 
-        private void btnThuNghiem_Click(object sender, EventArgs e)
-        {
-            closeYCollapse();
-            //infoDG.Visible = true;
-        }
-
         private void btnOpenQLNV_Click(object sender, EventArgs e)
         {
             Open_Y(ref panelQLNV, ref QLNVTickCollapse);
@@ -166,6 +165,14 @@ namespace LibraryManager.Template
             Open_Y(ref panelQLDocGia, ref QLDocGiaExpand);
 
         }
+        bool thongkeExpand = true;
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelThongke, ref thongkeExpand);
+        }
+
+
+
 
 
         private void btnM_DSDausach_Click(object sender, EventArgs e)
@@ -222,6 +229,42 @@ namespace LibraryManager.Template
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new DanhSachDG());
+        }
+
+       
+        private void btnM_Suadausach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnM_Tra_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Xu_ly_tra());
+        }
+        string MaQL = "NV000000";
+        private void btnM_ReportSLDS_Click(object sender, EventArgs e)
+        {
+            Report.TKLuotMuonCreator pmCreator = new Report.TKLuotMuonCreator(MaQL);
+            pmCreator.ShowReportHoaDon();
+        }
+
+        private void btnM_tkChung_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new ThongKeNV());
+        }
+
+        private void btnM_LapBBvp_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.frmLapBBVP(MaQL));
+        }
+
+        private void btnM_regtkdg_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new ThemDocgia());
         }
     }
 }

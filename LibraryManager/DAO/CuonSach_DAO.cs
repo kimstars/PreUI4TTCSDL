@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using LibraryManager.DTO;
+using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
@@ -16,11 +17,14 @@ namespace LibraryManager.DAO
             string sql = "SELECT MaSach FROM dbo.CUONSACH  WHERE TrangThai=1";
             return GetData(sql);
         }
-
+        //proc lấy ra mã sách lớn nhất
         public string Lastest_MaSach()
         {
-            string sql = "SELECT TOP 1 MaSach FROM dbo.CUONSACH ORDER BY MaSach DESC";
-            return GetString(sql);
+
+            string NameProc = "proc_cs_Lastest_MaSach";
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetString_Proc_NParam(NameProc, sParams);
+
         }
 
         public void InsertCuonSach(string MaSach, string MaDauSach, String ViTri, string TinhTrang)

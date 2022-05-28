@@ -19,13 +19,13 @@ namespace LibraryManager.Report
         public int sumCoc;
         public string MaNhanVien;
         public string MaDocGia;
-        public PhieuMuonCreator(string MaMT)
+        public PhieuMuonCreator(string MaMT,string MaNV)
         {
             this.MaMuonTra = MaMT;
             this.DS = new PhieuMuon_DataSet();
             this.RP = new PhieuMuonRP();
             this.pmBus = new PhieuMuon_BUS();
-            this.MaNhanVien = "";
+            this.MaNhanVien = MaNV;
             this.MaDocGia = "";
             sumCoc = sumGia = 0;
         }
@@ -41,7 +41,7 @@ namespace LibraryManager.Report
             DataTable tempnvdg = pmBus.LoadMaNV_MaDG_PM(MaMuonTra);
             if(tempnvdg.Rows.Count > 0)
             {
-                MaNhanVien = tempnvdg.Rows[0]["MaNhanVien"].ToString();
+                //MaNhanVien = tempnvdg.Rows[0]["MaNhanVien"].ToString();
                 MaDocGia = tempnvdg.Rows[0]["MaDocGia"].ToString();
 
             }
