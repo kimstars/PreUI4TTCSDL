@@ -28,7 +28,7 @@ namespace LibraryManager
             MaNhanVien = nvBus.loadMaNV_user(user);
             UserName = user;
 
-            
+
         }
 
         string MaNhanVien;
@@ -66,7 +66,7 @@ namespace LibraryManager
                 }
             }
         }
-        private void opencloseBarNgang(ref Panel thisPanel,ref bool thisExpand, ref Timer thisTick)
+        private void opencloseBarNgang(ref Panel thisPanel, ref bool thisExpand, ref Timer thisTick)
         {
             if (thisExpand) // thu vao
             {
@@ -77,7 +77,7 @@ namespace LibraryManager
                     thisExpand = false;
                     thisTick.Stop();
                 }
-               
+
 
                 foreach (var btn in thisPanel.Controls.OfType<Guna2Button>())
                 {
@@ -97,7 +97,7 @@ namespace LibraryManager
                     thisTick.Stop();
 
                 }
-                
+
                 foreach (Guna2Button btn in thisPanel.Controls.OfType<Guna2Button>())
                 {
                     btn.Text = btn.Tag.ToString();
@@ -323,6 +323,13 @@ namespace LibraryManager
         private void btnM_Suadausach_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnM_SVipham_Click(object sender, EventArgs e)
+        {
+
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachVP());
         }
     }
 }

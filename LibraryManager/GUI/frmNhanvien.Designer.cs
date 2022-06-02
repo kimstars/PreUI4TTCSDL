@@ -568,6 +568,7 @@ namespace LibraryManager
             this.btnM_SVipham.Size = new System.Drawing.Size(253, 46);
             this.btnM_SVipham.TabIndex = 20;
             this.btnM_SVipham.Text = "DS Sách bị vi phạm";
+            this.btnM_SVipham.Click += new System.EventHandler(this.btnM_SVipham_Click);
             // 
             // btnM_SConlai
             // 

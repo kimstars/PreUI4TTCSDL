@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class DSSachVipham : Form
+    public partial class DSSachVP : UserControl
     {
-        public DSSachVipham()
+        public DSSachVP()
         {
             InitializeComponent();
         }
