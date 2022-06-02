@@ -83,7 +83,7 @@ namespace LibraryManager.Template
 
         private void btnLapBB_Click(object sender, EventArgs e)
         {
-            int tienphat = 0;
+            
             string lydo = "";
             BienBanViPham bbvp = new BienBanViPham();
             bbvp.MaDocGia = cmbMaDg.Text;
@@ -92,7 +92,7 @@ namespace LibraryManager.Template
             bbvp.LyDo = cmbLydo.Text;
             for (int i = 0; i < dgvSVP.RowCount; i++)
             {
-                tienphat += Int32.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
+               
                 lydo += dgvSVP.Rows[i].Cells[2].Value.ToString();
                 if (i != dgvSVP.RowCount - 1)
                 {
@@ -100,7 +100,7 @@ namespace LibraryManager.Template
                 }
             }
             bbvp.LyDo = lydo;
-            bbvp.TienPhat = tienphat;
+            bbvp.TienPhat = int.Parse(txtTongtienphat.Text);
             bbvp.TinhTrangSach = txtTinhtrang.Text;
 
             DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn lập biên bản này không?", "Hỏi đáp?", MessageBoxButtons.YesNo);
@@ -144,7 +144,7 @@ namespace LibraryManager.Template
                 }
                 else
                 {
-                    long tienphat = bb.Songaytre(cmbMasach.Text) * 2000;// phạt trễ hạn 2000/ngày
+                    long tienphat = bb.Songaytre(cmbMasach.Text) * 1000;// phạt trễ hạn 2000/ngày
                     txtTienphat.Text = tienphat.ToString();
                 }
             }

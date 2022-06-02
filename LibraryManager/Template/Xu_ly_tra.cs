@@ -185,9 +185,19 @@ namespace LibraryManager.Template
         private void dgv_trasach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
+            DateTime res;
             i = dgv_trasach.CurrentRow.Index;
             txtMasach.Text = dgv_trasach.Rows[i].Cells[3].Value.ToString();
             txtMadg.Text = dgv_trasach.Rows[i].Cells[0].Value.ToString();
+            DateTime.TryParse(dgv_trasach.Rows[i].Cells[5].Value.ToString(), out res);
+            if (res < DateTime.Now)
+            {
+                cboxVi_pham.Checked = true;
+            }
+            else
+            {
+                cboxVi_pham.Checked = false;
+            }
         }
     }
 }
