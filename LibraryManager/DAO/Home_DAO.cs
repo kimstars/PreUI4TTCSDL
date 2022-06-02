@@ -11,32 +11,41 @@ namespace LibraryManager.DAO
 {
     class Home_DAO : DataProvider
     {
+        //----đoạn này t chưa làm được kiểu int----
+        //proc load so luong sach
         public Int64 GetTongSach()
         {
             string sqlString = "SELECT COUNT(MASACH) FROM dbo.CUONSACH";
             return GetCount(sqlString);
         }
+        //proc load tong so doc gia
         public Int64 GetTongDG()
         {
             string sqlString = "SELECT COUNT(MADOCGIA) FROM dbo.DOCGIA";
             return GetCount(sqlString);
         }
+        //proc load tong dau sach
         public Int64 GetTongDS()
         {
             string sqlString = "SELECT COUNT(MADAUSACH) FROM dbo.DAUSACH";
             return GetCount(sqlString);
         }
+        //proc load tong the loai
         public Int64 GetTongTL()
         {
             string sqlString = "SELECT COUNT(MATHELOAI) FROM dbo.THELOAI";
             return GetCount(sqlString);
         }
-
+        //proc load tong sach hien co
         public Int64 GetSachCo()
         {
             string sqlString = "select count(masach) from cuonsach where trangthai = 1";
             return GetCount(sqlString);
         }
+        //---đến đây!!!
+
+
+        //proc load tong sach dang muon
         public Int64 GetSachMuon()
         {
             string sqlString = "select count(masach) from cuonsach where trangthai = 0";
@@ -125,5 +134,22 @@ namespace LibraryManager.DAO
             SqlParameter[] sParams = new SqlParameter[0];
             return GetData_Proc_NParam("proc_HOME_LOAD_SSTheLoai", sParams);
         }
+        //proc ds sach vi pham
+        public DataTable LoadSachVP()
+        {
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetData_Proc_NParam("proc_HOME_SachVP", sParams);
+        }
+
+        //proc tim kiem sach vi pham
+        public DataTable SearchSachVP(string _timkiem)
+        {
+            string NameProc = "proc_HOME_SearchSachVP";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@keyword", _timkiem);
+
+            return GetData_Proc_NParam(NameProc, sParams);
+        }
+        
     }
 }

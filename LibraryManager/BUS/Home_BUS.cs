@@ -78,6 +78,15 @@ namespace LibraryManager.BUS
         {
             return home.SearchDS(_timkiem);
         }
+        public DataTable LoadSachVP()
+        {
+
+            return home.LoadSachVP();
+        }
+        public DataTable SearchSachVP(string _timkiem)
+        {
+            return home.SearchSachVP(_timkiem);
+        }
 
     }
 }
