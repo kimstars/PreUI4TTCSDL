@@ -44,7 +44,7 @@ namespace LibraryManager.DAO
         }
         public DataTable loadMaDg()
         {
-            string sqlString = "select distinct(madocgia) from Phieumuontra";
+            string sqlString = "select distinct(madocgia) from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where pmt.MaMuonTra = tt.MaMuonTra and Ngaytra  is null";
             return GetData(sqlString);
         }
         public void insert(BienBanViPham bbvp)

@@ -12,7 +12,7 @@ namespace LibraryManager.DAO
     {
         public DataTable load_trasach()
         {
-            string sqlString = @"select dg.madocgia,dg.TenDocGia,pmt.MaMuonTra,Masach,NgayMuon,HanTra, Ngaytra from PHIEUMUONTRA pmt,THONGTINMUONTRA tt, docgia dg where tt.MaMuonTra =pmt.MaMuonTra and dg.madocgia = pmt.madocgia and ngaytra is null ";
+            string sqlString = @"select dg.madocgia,dg.TenDocGia,pmt.MaMuonTra,Masach,NgayMuon,HanTra from PHIEUMUONTRA pmt,THONGTINMUONTRA tt, docgia dg where tt.MaMuonTra =pmt.MaMuonTra and dg.madocgia = pmt.madocgia and ngaytra is null ";
             return GetData(sqlString);
         }
        

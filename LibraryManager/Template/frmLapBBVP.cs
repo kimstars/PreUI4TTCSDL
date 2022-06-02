@@ -14,7 +14,7 @@ namespace LibraryManager.Template
     public partial class frmLapBBVP : UserControl
     {
         BienbanVP_BUS bb = new BienbanVP_BUS();
-        string MaNV;
+        string MaNV="NV000001";
         string maVP = "";
         public frmLapBBVP(string manv)
         {
@@ -114,7 +114,7 @@ namespace LibraryManager.Template
                     vp.MaSach = dgvSVP.Rows[i].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
                     bb.Them_vp(vp);
-                    if (dgvSVP.Rows[i].Cells[0].Value.ToString() == "làm mất sách")
+                    if (dgvSVP.Rows[i].Cells[0].Value.ToString().Contains("mất"))
                     {
                         //update ngày trả và set trạng thái cuốn sách đó bằng 0
                         bb.update0(vp.MaSach);
@@ -172,7 +172,15 @@ namespace LibraryManager.Template
             }
         }
 
- 
+        private void dgvSVP_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            long tienphat = 0;
+            for( int i =0; i <dgvSVP.RowCount; i++)
+            {
+                tienphat +=int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
+            }
+            txtTongtienphat.Text = tienphat.ToString();
+        }
     }
 
 }
