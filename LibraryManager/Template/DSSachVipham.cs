@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManager.Template
 {
-    public partial class DSDauSachVipham : Form
+    public partial class DSSachVipham : Form
     {
-        public DSDauSachVipham()
+        public DSSachVipham()
         {
             InitializeComponent();
         }

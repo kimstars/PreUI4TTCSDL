@@ -465,11 +465,11 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\DSDauSachVipham.cs">
+    <Compile Include="Template\DSSachVipham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template\DSDauSachVipham.Designer.cs">
-      <DependentUpon>DSDauSachVipham.cs</DependentUpon>
+    <Compile Include="Template\DSSachVipham.Designer.cs">
+      <DependentUpon>DSSachVipham.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\frmLapBBVP.cs">
       <SubType>UserControl</SubType>
@@ -804,8 +804,8 @@
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\DSDauSachVipham.resx">
-      <DependentUpon>DSDauSachVipham.cs</DependentUpon>
+    <EmbeddedResource Include="Template\DSSachVipham.resx">
+      <DependentUpon>DSSachVipham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\frmLapBBVP.resx">
       <DependentUpon>frmLapBBVP.cs</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿
 namespace LibraryManager.Template
 {
-    partial class DSDauSachVipham
+    partial class DSSachVipham
     {
         /// <summary>
         /// Required designer variable.
