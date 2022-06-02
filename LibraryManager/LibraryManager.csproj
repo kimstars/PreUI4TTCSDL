@@ -465,6 +465,12 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\DSSachVP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\DSSachVP.Designer.cs">
+      <DependentUpon>DSSachVP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\frmLapBBVP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -705,6 +711,12 @@
     <Compile Include="Template\PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\testLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\testLogin.Designer.cs">
+      <DependentUpon>testLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\ThemDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -791,6 +803,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DSSachVP.resx">
+      <DependentUpon>DSSachVP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\frmLapBBVP.resx">
       <DependentUpon>frmLapBBVP.cs</DependentUpon>
@@ -900,6 +915,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\testLogin.resx">
+      <DependentUpon>testLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ThemDocgia.resx">
       <DependentUpon>ThemDocgia.cs</DependentUpon>

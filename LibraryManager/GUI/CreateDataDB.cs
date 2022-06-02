@@ -43,7 +43,7 @@ namespace LibraryManager.GUI
 
         private void btnloginNV_Click(object sender, EventArgs e)
         {
-            frmNhanvien newform = new frmNhanvien("lehongson");
+            frmNhanvien newform = new frmNhanvien("vuhatrang");
             newform.Show();
         }
 
@@ -75,6 +75,12 @@ namespace LibraryManager.GUI
         {
             Report.PhieuMuonCreator tkcreator = new Report.PhieuMuonCreator("MT000009","NV000005");
             tkcreator.ShowReportHoaDon();
+        }
+
+        private void btnTrigger_Click(object sender, EventArgs e)
+        {
+            Template.testLogin newform = new Template.testLogin();
+            newform.Show();
         }
     }
 }

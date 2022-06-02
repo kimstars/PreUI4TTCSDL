@@ -32,13 +32,14 @@ namespace LibraryManager.Template
             this.dgvNhanvien = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbFilterNV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddNV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pickerBirthday = new LibraryManager.Template.DateTimePickerKiet();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbGioitinh = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -53,7 +54,6 @@ namespace LibraryManager.Template
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pickerBirthday = new LibraryManager.Template.DateTimePickerKiet();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -62,6 +62,7 @@ namespace LibraryManager.Template
             // 
             // dgvNhanvien
             // 
+            this.dgvNhanvien.AllowUserToAddRows = false;
             this.dgvNhanvien.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanvien.GridColor = System.Drawing.Color.Black;
@@ -87,9 +88,9 @@ namespace LibraryManager.Template
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.btnSearchNV);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.cbFilterNV);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Location = new System.Drawing.Point(3, 57);
@@ -98,9 +99,46 @@ namespace LibraryManager.Template
             this.panel1.Size = new System.Drawing.Size(1122, 111);
             this.panel1.TabIndex = 4;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.BorderRadius = 18;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.Crimson;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Image = global::LibraryManager.Properties.Resources.icons8_Delete_30px;
+            this.btnXoa.Location = new System.Drawing.Point(989, 55);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(130, 44);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BorderRadius = 18;
+            this.btnLuu.CheckedState.Parent = this.btnLuu;
+            this.btnLuu.CustomImages.Parent = this.btnLuu;
+            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.HoverState.Parent = this.btnLuu;
+            this.btnLuu.Image = global::LibraryManager.Properties.Resources.icons8_save_30px;
+            this.btnLuu.Location = new System.Drawing.Point(789, 55);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
+            this.btnLuu.Size = new System.Drawing.Size(166, 44);
+            this.btnLuu.TabIndex = 10;
+            this.btnLuu.Text = "Lưu thay đổi";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // btnSearchNV
             // 
-            this.btnSearchNV.BorderRadius = 18;
             this.btnSearchNV.CheckedState.Parent = this.btnSearchNV;
             this.btnSearchNV.CustomImages.Parent = this.btnSearchNV;
             this.btnSearchNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
@@ -108,52 +146,14 @@ namespace LibraryManager.Template
             this.btnSearchNV.ForeColor = System.Drawing.Color.White;
             this.btnSearchNV.HoverState.Parent = this.btnSearchNV;
             this.btnSearchNV.Image = global::LibraryManager.Properties.Resources.icons8_search_client_80px;
-            this.btnSearchNV.Location = new System.Drawing.Point(877, 55);
+            this.btnSearchNV.Location = new System.Drawing.Point(612, 55);
             this.btnSearchNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchNV.Name = "btnSearchNV";
             this.btnSearchNV.ShadowDecoration.Parent = this.btnSearchNV;
-            this.btnSearchNV.Size = new System.Drawing.Size(159, 44);
+            this.btnSearchNV.Size = new System.Drawing.Size(153, 44);
             this.btnSearchNV.TabIndex = 5;
             this.btnSearchNV.Text = "Tìm kiếm";
             this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(523, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 28);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Bộ lọc";
-            // 
-            // cbFilterNV
-            // 
-            this.cbFilterNV.BackColor = System.Drawing.Color.Transparent;
-            this.cbFilterNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbFilterNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFilterNV.FocusedColor = System.Drawing.Color.Empty;
-            this.cbFilterNV.FocusedState.Parent = this.cbFilterNV;
-            this.cbFilterNV.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbFilterNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbFilterNV.FormattingEnabled = true;
-            this.cbFilterNV.HoverState.Parent = this.cbFilterNV;
-            this.cbFilterNV.ItemHeight = 30;
-            this.cbFilterNV.Items.AddRange(new object[] {
-            "Theo tên",
-            "Theo Mã nhân viên",
-            "Theo Chức vụ",
-            "Theo Email",
-            "Theo SDT",
-            "Theo Tên đăng nhập",
-            "Auto select"});
-            this.cbFilterNV.ItemsAppearance.Parent = this.cbFilterNV;
-            this.cbFilterNV.Location = new System.Drawing.Point(528, 55);
-            this.cbFilterNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbFilterNV.Name = "cbFilterNV";
-            this.cbFilterNV.ShadowDecoration.Parent = this.cbFilterNV;
-            this.cbFilterNV.Size = new System.Drawing.Size(283, 36);
-            this.cbFilterNV.TabIndex = 6;
             // 
             // label2
             // 
@@ -187,7 +187,7 @@ namespace LibraryManager.Template
             this.txtSearch.PlaceholderText = "Nhập nội dung tìm kiếm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(483, 44);
+            this.txtSearch.Size = new System.Drawing.Size(610, 44);
             this.txtSearch.TabIndex = 2;
             // 
             // btnAddNV
@@ -232,6 +232,20 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(333, 306);
             this.guna2CustomGradientPanel1.TabIndex = 15;
+            // 
+            // pickerBirthday
+            // 
+            this.pickerBirthday.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.pickerBirthday.BorderRadius = 6;
+            this.pickerBirthday.BorderSize = 0;
+            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.pickerBirthday.Location = new System.Drawing.Point(21, 141);
+            this.pickerBirthday.MinimumSize = new System.Drawing.Size(4, 44);
+            this.pickerBirthday.Name = "pickerBirthday";
+            this.pickerBirthday.Size = new System.Drawing.Size(294, 44);
+            this.pickerBirthday.SkinColor = System.Drawing.Color.White;
+            this.pickerBirthday.TabIndex = 13;
+            this.pickerBirthday.TextColor = System.Drawing.Color.Black;
             // 
             // txtEmail
             // 
@@ -493,20 +507,6 @@ namespace LibraryManager.Template
             this.label7.TabIndex = 0;
             this.label7.Text = "Số điện thoại:";
             // 
-            // pickerBirthday
-            // 
-            this.pickerBirthday.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.pickerBirthday.BorderRadius = 6;
-            this.pickerBirthday.BorderSize = 0;
-            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.pickerBirthday.Location = new System.Drawing.Point(21, 141);
-            this.pickerBirthday.MinimumSize = new System.Drawing.Size(4, 44);
-            this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(294, 44);
-            this.pickerBirthday.SkinColor = System.Drawing.Color.White;
-            this.pickerBirthday.TabIndex = 13;
-            this.pickerBirthday.TextColor = System.Drawing.Color.Black;
-            // 
             // DanhsachNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,8 +541,6 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2Button btnAddNV;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnSearchNV;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox cbFilterNV;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
@@ -560,5 +558,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private DateTimePickerKiet pickerBirthday;
+        private Guna.UI2.WinForms.Guna2Button btnXoa;
+        private Guna.UI2.WinForms.Guna2Button btnLuu;
     }
 }

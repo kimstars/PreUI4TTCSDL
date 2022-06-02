@@ -31,6 +31,12 @@ namespace LibraryManager.BUS
         {
             return tvDao.LoaiTaiKhoan(username);
         }
-      
+
+        public void ktramatkhau(string user,string pass)
+        {
+            tvDao.ktramatkhau(user, pass);
+        }
+
+
     }
 }

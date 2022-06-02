@@ -49,5 +49,12 @@ namespace LibraryManager.DAO
             string sql = $"SELECT LoaiTK FROM dbo.TAIKHOAN WHERE TenDangNhap = '{username}'";
             return GetString(sql);
         }
+
+
+        public void ktramatkhau(string user, string pass)
+        {
+            string sql = $"INSERT INTO dbo.TAIKHOAN VALUES ('{user}','{pass}','docgia')";
+            validateTest(sql);
+        }
     }
 }

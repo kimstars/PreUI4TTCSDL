@@ -49,7 +49,7 @@ namespace LibraryManager.DAO
         }
         public void insert(BienBanViPham bbvp)
         {
-            string sqlString = $"insert into bienbanvipham values ('{bbvp.MaViPham}','{bbvp.MaDocGia}',N'{bbvp.MaNhanVien}','{bbvp.LyDo}',{bbvp.TienPhat},N'{bbvp.TinhTrangSach}')";
+            string sqlString = $"insert into bienbanvipham values ('{bbvp.MaViPham}','{bbvp.MaDocGia}',N'{bbvp.MaNhanVien}',N'{bbvp.LyDo}',{bbvp.TienPhat},N'{bbvp.TinhTrangSach}')";
             Excute(sqlString);
         }
         public void sua(BienBanViPham bbvp)
@@ -132,30 +132,18 @@ namespace LibraryManager.DAO
         //-- Thủ tục update ngày trả và set trạng thái sách bằng 1
         public void update__ngaytra_1_BBVP(string masach)
         {
+                                   
+            string NameProc = "update_BBVP_ngaytra_1";
 
-            DataTable dt = new DataTable();
-            SqlDataReader rd;
-            try
-            {
-                connect.Open();
-                SqlCommand cmd = new SqlCommand("update_BBVP_ngaytra_1", connect);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@macs", masach);
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@macs", masach);
 
-                rd = cmd.ExecuteReader();
-                dt.Load(rd);
+            Excute_Proc_NParam(NameProc, sParams);
 
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                connect.Close();
-            }
         }
     }
 
     // sử dụng trigger biên bản vi phạm thì tự động thêm vi phạm
+
+
 }

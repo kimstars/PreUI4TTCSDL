@@ -41,6 +41,7 @@ namespace LibraryManager.GUI
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnRPPhieumuon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTrigger = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnloginNV
@@ -283,11 +284,34 @@ namespace LibraryManager.GUI
             this.btnRPPhieumuon.Text = "Tạo phiếu mượn";
             this.btnRPPhieumuon.Click += new System.EventHandler(this.btnRPPhieumuon_Click);
             // 
+            // btnTrigger
+            // 
+            this.btnTrigger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnTrigger.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTrigger.BorderThickness = 1;
+            this.btnTrigger.CheckedState.Parent = this.btnTrigger;
+            this.btnTrigger.CustomImages.Parent = this.btnTrigger;
+            this.btnTrigger.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnTrigger.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrigger.ForeColor = System.Drawing.Color.Black;
+            this.btnTrigger.HoverState.Parent = this.btnTrigger;
+            this.btnTrigger.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTrigger.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnTrigger.Location = new System.Drawing.Point(793, 101);
+            this.btnTrigger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTrigger.Name = "btnTrigger";
+            this.btnTrigger.ShadowDecoration.Parent = this.btnTrigger;
+            this.btnTrigger.Size = new System.Drawing.Size(253, 48);
+            this.btnTrigger.TabIndex = 29;
+            this.btnTrigger.Text = "TestTrigger";
+            this.btnTrigger.Click += new System.EventHandler(this.btnTrigger_Click);
+            // 
             // CreateDataDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 651);
+            this.Controls.Add(this.btnTrigger);
             this.Controls.Add(this.btnRPPhieumuon);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnCuonSach);
@@ -322,5 +346,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2Button btnCuonSach;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button btnRPPhieumuon;
+        private Guna.UI2.WinForms.Guna2Button btnTrigger;
     }
 }
