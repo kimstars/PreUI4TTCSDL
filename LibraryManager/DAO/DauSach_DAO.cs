@@ -193,5 +193,13 @@ namespace LibraryManager.DAO
 
 
 
+
+        public string GetLastest_MaDS()
+        {
+            string sql = $" SELECT TOP 1 MaDauSach FROM dbo.DAUSACH ORDER BY MaDauSach DESC";
+
+            return GetString(sql);
+        }
+
     }
 }
