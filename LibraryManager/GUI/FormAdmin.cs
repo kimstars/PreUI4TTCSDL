@@ -252,7 +252,7 @@ namespace LibraryManager.Template
         private void btnM_tkChung_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new ThongKeNV());
+            panelShow.Controls.Add(new ThongKeNV(MaQL));
         }
 
         private void btnM_LapBBvp_Click(object sender, EventArgs e)

@@ -465,6 +465,12 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\DSDauSachVipham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\DSDauSachVipham.Designer.cs">
+      <DependentUpon>DSDauSachVipham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\frmLapBBVP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -797,6 +803,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DSDauSachVipham.resx">
+      <DependentUpon>DSDauSachVipham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\frmLapBBVP.resx">
       <DependentUpon>frmLapBBVP.cs</DependentUpon>

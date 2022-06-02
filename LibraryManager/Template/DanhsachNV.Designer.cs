@@ -32,6 +32,8 @@ namespace LibraryManager.Template
             this.dgvNhanvien = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchNV = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,8 +54,6 @@ namespace LibraryManager.Template
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -62,6 +62,7 @@ namespace LibraryManager.Template
             // 
             // dgvNhanvien
             // 
+            this.dgvNhanvien.AllowUserToAddRows = false;
             this.dgvNhanvien.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanvien.GridColor = System.Drawing.Color.Black;
@@ -97,6 +98,44 @@ namespace LibraryManager.Template
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1122, 111);
             this.panel1.TabIndex = 4;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BorderRadius = 18;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.Crimson;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Image = global::LibraryManager.Properties.Resources.icons8_Delete_30px;
+            this.btnXoa.Location = new System.Drawing.Point(989, 55);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(130, 44);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BorderRadius = 18;
+            this.btnLuu.CheckedState.Parent = this.btnLuu;
+            this.btnLuu.CustomImages.Parent = this.btnLuu;
+            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.HoverState.Parent = this.btnLuu;
+            this.btnLuu.Image = global::LibraryManager.Properties.Resources.icons8_save_30px;
+            this.btnLuu.Location = new System.Drawing.Point(789, 55);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
+            this.btnLuu.Size = new System.Drawing.Size(166, 44);
+            this.btnLuu.TabIndex = 10;
+            this.btnLuu.Text = "Lưu thay đổi";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSearchNV
             // 
@@ -467,44 +506,6 @@ namespace LibraryManager.Template
             this.label7.Size = new System.Drawing.Size(92, 19);
             this.label7.TabIndex = 0;
             this.label7.Text = "Số điện thoại:";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BorderRadius = 18;
-            this.btnXoa.CheckedState.Parent = this.btnXoa;
-            this.btnXoa.CustomImages.Parent = this.btnXoa;
-            this.btnXoa.FillColor = System.Drawing.Color.Crimson;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.HoverState.Parent = this.btnXoa;
-            this.btnXoa.Image = global::LibraryManager.Properties.Resources.icons8_Delete_30px;
-            this.btnXoa.Location = new System.Drawing.Point(989, 55);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(130, 44);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "Xóa ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BorderRadius = 18;
-            this.btnLuu.CheckedState.Parent = this.btnLuu;
-            this.btnLuu.CustomImages.Parent = this.btnLuu;
-            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(193)))), ((int)(((byte)(140)))));
-            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.HoverState.Parent = this.btnLuu;
-            this.btnLuu.Image = global::LibraryManager.Properties.Resources.icons8_save_30px;
-            this.btnLuu.Location = new System.Drawing.Point(789, 55);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
-            this.btnLuu.Size = new System.Drawing.Size(166, 44);
-            this.btnLuu.TabIndex = 10;
-            this.btnLuu.Text = "Lưu thay đổi";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // DanhsachNV
             // 

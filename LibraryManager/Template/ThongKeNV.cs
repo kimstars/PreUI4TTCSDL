@@ -14,10 +14,12 @@ namespace LibraryManager.Template
     public partial class ThongKeNV : UserControl
     {
         Home_BUS tknv = new Home_BUS();
-        public ThongKeNV()
+        public ThongKeNV(string MaNV)
         {
             InitializeComponent();
+            MaNhanVien = MaNV;
         }
+        string MaNhanVien = "";
         Home_BUS homeAdmin = new Home_BUS();
         private void ThongKeNV_Load(object sender, EventArgs e)
         {
@@ -48,6 +50,12 @@ namespace LibraryManager.Template
 
             lbP_muon.Text += " : " + sm1.ToString();
             lbP_sanco.Text += " : " + sc1.ToString();
+        }
+
+        private void btnRp_Click(object sender, EventArgs e)
+        {
+            Report.TKLuotMuonCreator newreport = new Report.TKLuotMuonCreator(MaNhanVien);
+            newreport.ShowReportHoaDon();
         }
     }
 }
