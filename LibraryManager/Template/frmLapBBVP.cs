@@ -43,7 +43,7 @@ namespace LibraryManager.Template
 
         private void btnVP_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvSVP.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvSVP.Rows.Count; i++)
             {
                 if (cmbMasach.Text.Trim() == dgvSVP.Rows[i].Cells[0].Value.ToString().Trim())
                 {

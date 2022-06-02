@@ -240,7 +240,7 @@ namespace LibraryManager.Template
         private void btnM_Tra_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            panelShow.Controls.Add(new Xu_ly_tra());
+            panelShow.Controls.Add(new Xu_ly_tra(MaQL));
         }
         string MaQL = "NV000000";
         private void btnM_ReportSLDS_Click(object sender, EventArgs e)

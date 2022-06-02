@@ -261,8 +261,10 @@ namespace LibraryManager.DAO
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("sach_duoc_muon_trehan_ds", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ngaybd", ngaybd);
-                cmd.Parameters.AddWithValue("@ngaykt", ngaykt);
+                //cmd.Parameters.AddWithValue("@ngaybd", ngaybd);
+                //cmd.Parameters.AddWithValue("@ngaykt", ngaykt);
+                cmd.Parameters.Add(new SqlParameter("@ngaybd", SqlDbType.DateTime) { Value = ngaybd });
+                cmd.Parameters.Add(new SqlParameter("@ngaykt", SqlDbType.DateTime) { Value = ngaykt });
                 cmd.Parameters.AddWithValue("@ma", mads);
                 cmd.Parameters.AddWithValue("@tends", tends);
                 rd = cmd.ExecuteReader();
@@ -343,7 +345,7 @@ namespace LibraryManager.DAO
             try
             {
                 connect.Open();
-                SqlCommand cmd = new SqlCommand("sach_duoc_muon_trehan_theloai", connect);
+                SqlCommand cmd = new SqlCommand("sach_duoc_muon_trehan_tl", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ngaybd", ngaybd);
                 cmd.Parameters.AddWithValue("@ngaykt", ngaykt);
@@ -371,7 +373,7 @@ namespace LibraryManager.DAO
             try
             {
                 connect.Open();
-                SqlCommand cmd = new SqlCommand("sach_duoc_muon_vipham_theloai", connect);
+                SqlCommand cmd = new SqlCommand("sach_duoc_muon_vipham_tl", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ngaybd", ngaybd);
                 cmd.Parameters.AddWithValue("@ngaykt", ngaykt);

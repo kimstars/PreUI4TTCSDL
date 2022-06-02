@@ -53,28 +53,18 @@ namespace LibraryManager.Template
             this.label4 = new System.Windows.Forms.Label();
             this.btnTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-
             this.filter1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
             this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
-
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.dgvSachMoi = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendausach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
-            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tksachmuon)).BeginInit();
@@ -156,12 +146,6 @@ namespace LibraryManager.Template
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_tksachmuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_tksachmuon.ColumnHeadersHeight = 40;
-            this.dgv_tksachmuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.masach,
-            this.tendausach,
-            this.TenDocGia,
-            this.NgayMuon,
-            this.NgayTra});
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tksachmuon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -218,7 +202,7 @@ namespace LibraryManager.Template
             this.filter2.ItemHeight = 30;
             this.filter2.Items.AddRange(new object[] {
             "Trễ hạn",
-            "Vi Phạm"});
+            "Vi phạm"});
             this.filter2.ItemsAppearance.Parent = this.filter2;
             this.filter2.Location = new System.Drawing.Point(470, 48);
             this.filter2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -350,6 +334,40 @@ namespace LibraryManager.Template
             this.txtSearch.Size = new System.Drawing.Size(266, 44);
             this.txtSearch.TabIndex = 16;
             // 
+            // dateEnd
+            // 
+            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateEnd.BorderRadius = 0;
+            this.dateEnd.BorderSize = 0;
+            this.dateEnd.CustomFormat = "dd/MM/yyyy";
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateEnd.Location = new System.Drawing.Point(967, 40);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 44);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(160, 44);
+            this.dateEnd.SkinColor = System.Drawing.Color.DarkCyan;
+            this.dateEnd.TabIndex = 15;
+            this.dateEnd.TextColor = System.Drawing.Color.White;
+            // 
+            // dateStart
+            // 
+            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateStart.BorderRadius = 0;
+            this.dateStart.BorderSize = 0;
+            this.dateStart.CustomFormat = "dd/MM/yyyy";
+            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateStart.Location = new System.Drawing.Point(704, 40);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
+            this.dateStart.MinimumSize = new System.Drawing.Size(4, 44);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(160, 44);
+            this.dateStart.SkinColor = System.Drawing.Color.DarkCyan;
+            this.dateStart.TabIndex = 14;
+            this.dateStart.TextColor = System.Drawing.Color.White;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -446,84 +464,6 @@ namespace LibraryManager.Template
             this.dgvSachMoi.TabIndex = 19;
             this.dgvSachMoi.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.label14.Location = new System.Drawing.Point(23, 10);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(420, 30);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Những độc giả mượn nhiều sách nhất";
-            // 
-            // masach
-            // 
-            this.masach.DataPropertyName = "MaSach";
-            this.masach.HeaderText = "Mã sách";
-            this.masach.MinimumWidth = 6;
-            this.masach.Name = "masach";
-            // 
-            // tendausach
-            // 
-            this.tendausach.DataPropertyName = "TenDauSach";
-            this.tendausach.HeaderText = "Tên đầu sách";
-            this.tendausach.MinimumWidth = 6;
-            this.tendausach.Name = "tendausach";
-            // 
-            // TenDocGia
-            // 
-            this.TenDocGia.DataPropertyName = "TenDocGia";
-            this.TenDocGia.HeaderText = "Tên độc giả";
-            this.TenDocGia.MinimumWidth = 6;
-            this.TenDocGia.Name = "TenDocGia";
-            // 
-            // NgayMuon
-            // 
-            this.NgayMuon.DataPropertyName = "NgayMuon";
-            this.NgayMuon.HeaderText = "Ngày mượn";
-            this.NgayMuon.MinimumWidth = 6;
-            this.NgayMuon.Name = "NgayMuon";
-            // 
-            // NgayTra
-            // 
-            this.NgayTra.DataPropertyName = "NgayTra";
-            this.NgayTra.HeaderText = "Ngày trả";
-            this.NgayTra.MinimumWidth = 6;
-            this.NgayTra.Name = "NgayTra";
-            // 
-            // dateEnd
-            // 
-            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateEnd.BorderRadius = 0;
-            this.dateEnd.BorderSize = 0;
-            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateEnd.Location = new System.Drawing.Point(967, 40);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 44);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(160, 44);
-            this.dateEnd.SkinColor = System.Drawing.Color.DarkCyan;
-            this.dateEnd.TabIndex = 15;
-            this.dateEnd.TextColor = System.Drawing.Color.White;
-            // 
-            // dateStart
-            // 
-            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateStart.BorderRadius = 0;
-            this.dateStart.BorderSize = 0;
-            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateStart.Location = new System.Drawing.Point(704, 40);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
-            this.dateStart.MinimumSize = new System.Drawing.Size(4, 44);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(160, 44);
-            this.dateStart.SkinColor = System.Drawing.Color.DarkCyan;
-            this.dateStart.TabIndex = 14;
-            this.dateStart.TextColor = System.Drawing.Color.White;
-            // 
             // MaDocGia
             // 
             this.MaDocGia.DataPropertyName = "MaDocGia";
@@ -545,6 +485,19 @@ namespace LibraryManager.Template
             this.SL.MinimumWidth = 6;
             this.SL.Name = "SL";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.label14.Location = new System.Drawing.Point(23, 10);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(420, 30);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Những độc giả mượn nhiều sách nhất";
+            // 
             // tk_sachmuon_nv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -557,7 +510,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "tk_sachmuon_nv";
-            this.Size = new System.Drawing.Size(1493, 904);
+            this.Size = new System.Drawing.Size(1497, 946);
             this.Load += new System.EventHandler(this.tk_sachmuon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.charttk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -592,11 +545,6 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuDataGridView dgvSachMoi;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2ComboBox filter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn masach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tendausach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;

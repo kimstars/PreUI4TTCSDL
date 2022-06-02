@@ -9,7 +9,7 @@ using LibraryManager.DAO;
 
 namespace LibraryManager.BUS
 {
-    class ThongKe_BUS
+    class ThongKe_BUS : DataProvider
     {
         Thongke_DAO tkDao = new Thongke_DAO();
         public DataSet LoadChartSachMuon()
@@ -75,62 +75,62 @@ namespace LibraryManager.BUS
         //thống kê tất cả sách mượn theo một độc giả
         public DataTable TK_dg_nv(string ngaybd, string ngaykt, string madg, string tendg)
         {
-            return tkDao.loadtk_dg(ngaybd, ngaykt,madg,tendg);
+            return tkDao.loadtk_dg(ngaybd, ngaykt,FindLike(madg),FindLike(tendg));
         }
         //thống kê tất cả sách mượn trễ hạn theo một độc giả
         public DataTable TK_trehan_dg_nv(string ngaybd, string ngaykt, string madg, string tendg)
         {
-            return tkDao.loadtk_trehan_dg(ngaybd, ngaykt,madg,tendg);
+            return tkDao.loadtk_trehan_dg(ngaybd, ngaykt,FindLike(madg),FindLike(tendg));
         } 
         //thống kê tất cả sách mượn vi phạm theo một độc giả
         public DataTable TK_vipham_dg_nv(string ngaybd, string ngaykt, string madg, string tendg)
         {
-            return tkDao.loadtk_vipham_dg(ngaybd, ngaykt,madg,tendg);
+            return tkDao.loadtk_vipham_dg(ngaybd, ngaykt,FindLike(madg),FindLike(tendg));
         }
         // Thống kê tất cả sách được mượn theo đầu sách
         public DataTable TK_ds_nv(string ngaybd, string ngaykt, string mads, string tends)
         {
-            return tkDao.loadtk_dausach(ngaybd, ngaykt,mads,tends);
+            return tkDao.loadtk_dausach(ngaybd, ngaykt,FindLike(mads),FindLike(tends));
         }
         // Thống kê tất cả sách được mượn theo đầu sách trễ hạn
         public DataTable TK_trehan_ds_nv(string ngaybd, string ngaykt, string mads, string tends)
         {
-            return tkDao.loadtk_trehan_ds(ngaybd, ngaykt,mads,tends);
+            return tkDao.loadtk_trehan_ds(ngaybd, ngaykt,FindLike(mads),FindLike(tends));
         }
         // Thống kê tất cả sách được mượn theo đầu sách vi phạm
         public DataTable TK_vipham_ds_nv(string ngaybd, string ngaykt, string mads, string tends)
         {
-            return tkDao.loadtk_vipham_ds(ngaybd, ngaykt,mads,tends);
+            return tkDao.loadtk_vipham_ds(ngaybd, ngaykt,FindLike(mads),FindLike(tends));
         }
         // Thống kê tất cả sách mượn theo thể loại 
         public DataTable TK_theloai_nv(string ngaybd, string ngaykt, string matl, string tentl)
         {
-            return tkDao.loadtk_tl(ngaybd, ngaykt,matl,tentl);
+            return tkDao.loadtk_tl(ngaybd, ngaykt,FindLike(matl),FindLike(tentl));
         }
         // Thống kê tất cả sách được mượn theo thể loại trễ hạn
         public DataTable TK_theloai_trehan_nv(string ngaybd, string ngaykt, string matl, string tentl)
         {
-            return tkDao.loadtk_trehan_tl(ngaybd, ngaykt,matl,tentl);
+            return tkDao.loadtk_trehan_tl(ngaybd, ngaykt,FindLike(matl),FindLike(tentl));
         }
         // thống kê tất cả sách được mượn theo thể loại vi phạm
         public DataTable TK_vipham_tl_nv(string ngaybd, string ngaykt, string matl, string tentl)
         {
-            return tkDao.loadtk_vipham_tl(ngaybd, ngaykt,matl,tentl);
+            return tkDao.loadtk_vipham_tl(ngaybd, ngaykt,FindLike(matl),FindLike(tentl));
         }
         // Thống kê tất cả sách mượn theo nhà xuất bản
         public DataTable TK_nxb_nv(string ngaybd, string ngaykt, string maxb, string tennxb)
         {
-            return tkDao.loadtk_nxb(ngaybd, ngaykt,maxb,tennxb);
+            return tkDao.loadtk_nxb(ngaybd, ngaykt,FindLike(maxb),FindLike(tennxb));
         }
         // Thống kê tất cả sách mượn theo nxb trễ hạn
         public DataTable TK_trehan_nxb_nv(string ngaybd, string ngaykt, string maxb, string tennxb)
         {
-            return tkDao.loadtk_trehan_nxb(ngaybd, ngaykt,maxb,tennxb);
+            return tkDao.loadtk_trehan_nxb(ngaybd, ngaykt,FindLike(maxb),FindLike(tennxb));
         }
         // Thống kê tất cả sách mượn theo nxb vi phạm
         public DataTable TK_vipham_nxb_nv(string ngaybd, string ngaykt, string maxb, string tennxb)
         {
-            return tkDao.loadtk_vipham_nxb(ngaybd, ngaykt,maxb,tennxb);
+            return tkDao.loadtk_vipham_nxb(ngaybd, ngaykt,FindLike(maxb),FindLike(tennxb));
         }
         // thống ke 3 người mượn nhiều nhất
         public DataTable TK_muonnhieu(string ngaybd, string ngaykt)

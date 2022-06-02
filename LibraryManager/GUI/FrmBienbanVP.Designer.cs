@@ -51,6 +51,7 @@ namespace LibraryManager.GUI
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dgvVipham = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,8 +64,7 @@ namespace LibraryManager.GUI
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.txtTongtien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbTienPhat = new System.Windows.Forms.Label();
             this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -357,8 +357,8 @@ namespace LibraryManager.GUI
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.lbTienPhat);
             this.guna2GroupBox2.Controls.Add(this.label6);
-            this.guna2GroupBox2.Controls.Add(this.txtTongtien);
             this.guna2GroupBox2.Controls.Add(this.dgvVipham);
             this.guna2GroupBox2.Controls.Add(this.label11);
             this.guna2GroupBox2.Controls.Add(this.txt_tinhtrang);
@@ -376,6 +376,16 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Size = new System.Drawing.Size(1045, 493);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(340, 389);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 25);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Tổng tiền phạt:";
             // 
             // dgvVipham
             // 
@@ -543,38 +553,17 @@ namespace LibraryManager.GUI
             this.bunifuDragControl1.TargetControl = this.paneldrag;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // txtTongtien
+            // lbTienPhat
             // 
-            this.txtTongtien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTongtien.DefaultText = "";
-            this.txtTongtien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTongtien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTongtien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTongtien.DisabledState.Parent = this.txtTongtien;
-            this.txtTongtien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTongtien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTongtien.FocusedState.Parent = this.txtTongtien;
-            this.txtTongtien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTongtien.HoverState.Parent = this.txtTongtien;
-            this.txtTongtien.Location = new System.Drawing.Point(488, 372);
-            this.txtTongtien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtTongtien.Name = "txtTongtien";
-            this.txtTongtien.PasswordChar = '\0';
-            this.txtTongtien.PlaceholderText = "";
-            this.txtTongtien.SelectedText = "";
-            this.txtTongtien.ShadowDecoration.Parent = this.txtTongtien;
-            this.txtTongtien.Size = new System.Drawing.Size(285, 37);
-            this.txtTongtien.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(345, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 25);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Tổng tiền phạt";
+            this.lbTienPhat.AutoSize = true;
+            this.lbTienPhat.BackColor = System.Drawing.Color.Transparent;
+            this.lbTienPhat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lbTienPhat.ForeColor = System.Drawing.Color.Black;
+            this.lbTienPhat.Location = new System.Drawing.Point(495, 379);
+            this.lbTienPhat.Name = "lbTienPhat";
+            this.lbTienPhat.Size = new System.Drawing.Size(33, 37);
+            this.lbTienPhat.TabIndex = 18;
+            this.lbTienPhat.Text = "$";
             // 
             // FrmBienbanVP
             // 
@@ -633,6 +622,6 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Lydo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtTongtien;
+        private System.Windows.Forms.Label lbTienPhat;
     }
 }

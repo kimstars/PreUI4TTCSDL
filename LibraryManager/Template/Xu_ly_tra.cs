@@ -14,10 +14,11 @@ namespace LibraryManager.Template
     public partial class Xu_ly_tra : UserControl
     {
         Trasach_Bus ts_bus = new Trasach_Bus();
-        string manv = "NV000001";
-        public Xu_ly_tra()
+        string MaNhanVien = "";
+        public Xu_ly_tra(string manv)
         {
             InitializeComponent();
+            MaNhanVien = manv;
         }
         public string chuanhoa(string a)
         {
@@ -129,7 +130,7 @@ namespace LibraryManager.Template
             {
                 madg = dgvDs.Rows[0].Cells[1].Value.ToString();
                 ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
-                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/, manv);
+                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/, MaNhanVien);
                 bbvp.Show();
             }
         }

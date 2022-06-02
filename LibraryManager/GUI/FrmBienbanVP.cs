@@ -15,7 +15,7 @@ namespace LibraryManager.GUI
     public partial class FrmBienbanVP : Form
     {
         BienbanVP_BUS bbvp_bus = new BienbanVP_BUS();
-        Xu_ly_tra xlt = new Xu_ly_tra();
+
         string madocgia = "";
         string ngaytra = "";
         string maVP = "";
@@ -40,7 +40,8 @@ namespace LibraryManager.GUI
             book1 = book;
             // quahan = qua;
             InitializeComponent();
-            manv = MaNhanVien;
+            MaNhanVien = manv;
+
         }
         /*private void txtMadg_TextChanged(object sender, EventArgs e)
         {
@@ -53,6 +54,7 @@ namespace LibraryManager.GUI
         {
             txtMadg.Text = madocgia;
             txtNgaytra.Text = ngaytra;
+            txtManv.Text = MaNhanVien;
             txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
 
             txtTennv.Text = bbvp_bus.Get_tennv(txtManv.Text);
@@ -100,7 +102,7 @@ namespace LibraryManager.GUI
                     lydo += ", ";
                 }
             }
-            bbvp.TienPhat = int.Parse(txtTongtien.Text);
+            bbvp.TienPhat = int.Parse(lbTienPhat.Text);
 
             bbvp.LyDo = lydo;
             bbvp.TinhTrangSach = txt_tinhtrang.Text;
@@ -146,75 +148,75 @@ namespace LibraryManager.GUI
 
 
 
+
         private void dgvVipham_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             double tongtien = 0;
-            //int i = e.RowIndex;
+          
+            int y = e.ColumnIndex;
             double tientre = 0;
             double tienhong = 0;
             double tienmat = 0;
+
             double tienphat;
             for (int i = 0; i < dgvVipham.RowCount; i++)
             {
-                string lydo = dgvVipham.Rows[i].Cells["Lydo"].Value.ToString();
-                string Masach = dgvVipham.Rows[i].Cells[0].Value.ToString();
-                tientre = bbvp_bus.Songaytre(Masach) * 1000;
-                tienhong = bbvp_bus.TienPhat(Masach) * 0.2;
-                tienmat = bbvp_bus.TienPhat(Masach) * 1.5;
-                tienphat = 0;
-                if (lydo != "")
-                { 
-                    if (lydo.Contains("trễ") || lydo.Contains("muộn"))
+                if (i >= 0 && y == 2)
+                {
+                    string lydo = dgvVipham.Rows[i].Cells["Lydo"].Value.ToString();
+                    if (lydo != "")
                     {
-                        if (bbvp_bus.Songaytre(Masach) < 0)
+
+                        string Masach = dgvVipham.Rows[i].Cells[0].Value.ToString();
+                        tientre = bbvp_bus.Songaytre(Masach) * 1000;
+                        tienhong = bbvp_bus.TienPhat(Masach) * 0.2;
+                        tienmat = bbvp_bus.TienPhat(Masach) * 1.5;
+                        tienphat = 0;
+
+                        if (lydo.Contains("trễ") || lydo.Contains("muộn"))
                         {
-                            MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                            if (bbvp_bus.Songaytre(Masach) < 0)
+                            {
+                                MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                            }
+                            else
+                            {
+
+                                if (lydo.Contains("hỏng"))
+                                {
+                                    tienphat = Math.Max(tientre, tienhong);
+                                }
+                                else if (lydo.Contains("mất"))
+                                {
+                                    tienphat = Math.Max(tientre, tienmat);
+                                }
+                                else
+                                {
+                                    tienphat = tientre;
+                                }
+
+                            }
                         }
                         else
                         {
-                            tienphat = tientre;
-                            if (lydo.Contains("hỏng") && lydo.Contains("mất"))
+                            if (lydo.Contains("hỏng"))
                             {
-                                tienphat = Math.Max(tientre, tienhong);
-                                tienphat = Math.Max(tienphat, tienmat);
+                                tienphat = tienhong;
                             }
-
-                            ///== ko else nữa    if thui
-                            
-                            if (lydo.Contains("mất") && !lydo.Contains("hỏng"))
+                            else if (lydo.Contains("mất"))
                             {
-                                tienphat = Math.Max(tienphat, tienmat);
+                                tienphat = tienmat;
                             }
-                            
-                            if (lydo.Contains("hỏng") && !lydo.Contains("mất"))
-                            {
-                                tienphat = Math.Max(tienphat, tienmat);
-                            }
-
 
                         }
+                        dgvVipham.Rows[i].Cells[3].Value = tienphat.ToString();
+                        tongtien += tienphat;
                     }
-                    else
-                    {
-                        if ((lydo.Contains("hỏng") && lydo.Contains("mất")) || (lydo.Contains("mất") && !lydo.Contains("hỏng")))
-                        {
-                            tienphat = tienmat;
-                        }
-                        else if (lydo.Contains("hỏng") && !lydo.Contains("mất"){
-                            tienphat = tienhong;
-                        }
 
-                    }
-                    dgvVipham.Rows[i].Cells[3].Value = tienphat.ToString();
-                    tongtien += tienphat;
-                }
-                else
-                {
-                    MessageBox.Show("Nhập vào lý do");
                 }
             }
+            lbTienPhat.Text = tongtien.ToString();
 
-            txtTongtien.Text = tongtien.ToString();
         }
     }
 }

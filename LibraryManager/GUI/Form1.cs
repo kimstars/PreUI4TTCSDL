@@ -78,8 +78,8 @@ namespace LibraryManager
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            Template.Xu_ly_tra xtl = new Template.Xu_ly_tra();
-            xtl.Show();
+            //Template.Xu_ly_tra xtl = new Template.Xu_ly_tra();
+            //xtl.Show();
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
