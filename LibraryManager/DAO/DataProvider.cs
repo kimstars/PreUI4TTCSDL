@@ -23,9 +23,44 @@ namespace LibraryManager.DAO
             return rs;
         }
 
+        public void validateTest(string sql)
+        {
+            string printOutput = "";
+            StringBuilder errorMessages = new StringBuilder();
+
+            SqlCommand command = new SqlCommand(sql, connect);
+
+
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                printOutput += (errorMessages.ToString());
+            }
+            if (printOutput != "")
+            {
+                MessageBox.Show(printOutput);
+            }
+            connect.Close();
+
+            
+
+        }
+
         public SqlDataAdapter GetDataSet(string sql)
         {
-            
+
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
 
             return adapter;
@@ -33,42 +68,119 @@ namespace LibraryManager.DAO
 
         public void Excute(string sql)
         {
-            connect.Open();
+            
             SqlCommand command = new SqlCommand(sql, connect);
-            command.ExecuteNonQuery();
+
+            string printOutput = "";
+            StringBuilder errorMessages = new StringBuilder();
+
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                printOutput += (errorMessages.ToString());
+            }
+
+            if (printOutput != "")
+            {
+                MessageBox.Show(printOutput);
+            }
             connect.Close();
         }
 
-        public void ExcuteWithParam(string sql, SqlParameter[] listParam )
+        public void ExcuteWithParam(string sql, SqlParameter[] listParam)
         {
-            connect.Open();
+            
             SqlCommand command = new SqlCommand(sql, connect);
 
             foreach (var i in listParam)
             {
                 command.Parameters.Add(i);
             }
-            command.ExecuteNonQuery();
-            connect.Close();
+
+            string printOutput = "";
+            StringBuilder errorMessages = new StringBuilder();
+
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                printOutput += (errorMessages.ToString());
+            }
+            finally
+            {
+                connect.Close();
+
+            }
+
+            if (printOutput != "")
+            {
+                MessageBox.Show(printOutput);
+            }
         }
 
-        //còn loại excuteNonQuery nữa nma tí t làm 
 
 
         public void Excute_Proc_NParam(string NameProc, SqlParameter[] listParam)
         {
             try
             {
-                connect.Open();
-                SqlCommand cmd = new SqlCommand(NameProc, connect);
-                cmd.CommandType = CommandType.StoredProcedure;
+                
+                SqlCommand command = new SqlCommand(NameProc, connect);
+                command.CommandType = CommandType.StoredProcedure;
 
                 foreach (var i in listParam)
                 {
-                    cmd.Parameters.Add(i);
+                    command.Parameters.Add(i);
                 }
 
-                cmd.ExecuteNonQuery();
+                string printOutput = "";
+                StringBuilder errorMessages = new StringBuilder();
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" +
+                            "Message: " + ex.Errors[i].Message + "\n" +
+                            "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                            "Source: " + ex.Errors[i].Source + "\n" +
+                            "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    printOutput += (errorMessages.ToString());
+                }
+
+                if (printOutput != "")
+                {
+                    MessageBox.Show(printOutput);
+                }
 
             }
             catch (Exception)
@@ -170,14 +282,14 @@ namespace LibraryManager.DAO
 
         public byte[] LoadImage(string sql)
         {
-            
+
             if (connect.State != ConnectionState.Open)
                 connect.Open();
             SqlCommand command = new SqlCommand(sql, connect);
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] imgbin = new byte[100000000];
-            if (reader.HasRows && reader[0] != null)
+            if (reader.HasRows && !Convert.IsDBNull(reader[0]))
             {
                 imgbin = (byte[])reader[0];
             }
@@ -186,7 +298,7 @@ namespace LibraryManager.DAO
                 imgbin = new byte[0];
             }
             connect.Close();
-            return imgbin ;
+            return imgbin;
         }
 
         public Int64 GetCount(string sql)
@@ -197,7 +309,7 @@ namespace LibraryManager.DAO
             Int32 count = (Int32)command.ExecuteScalar();
             connect.Close();
             return count;
-            
+
         }
         public long GetCount1(string sql)
         {

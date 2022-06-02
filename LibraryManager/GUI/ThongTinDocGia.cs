@@ -45,6 +45,7 @@ namespace LibraryManager.GUI
             imageAvt.Image = dgBus.LoadAnh(MaDocGia);
 
             DataTable muonSL = dgBus.LoadMuon_SL(MaDocGia);
+
             if (muonSL.Rows.Count > 1)
             {
                 DateTime ngayMuon = (DateTime)muonSL.Rows[0]["NgayMuon"];

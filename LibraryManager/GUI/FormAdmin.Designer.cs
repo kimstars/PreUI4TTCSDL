@@ -38,6 +38,7 @@ namespace LibraryManager.Template
             this.PanelMenuBar = new System.Windows.Forms.Panel();
             this.panelAll = new System.Windows.Forms.Panel();
             this.panelThongke = new System.Windows.Forms.Panel();
+            this.btnM_tkChung = new Guna.UI2.WinForms.Guna2Button();
             this.btnM_ReportSLDS = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.panelQLDocGia = new System.Windows.Forms.Panel();
@@ -71,12 +72,11 @@ namespace LibraryManager.Template
             this.label1 = new System.Windows.Forms.Label();
             this.panelName = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.nameuser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebartick = new System.Windows.Forms.Timer(this.components);
             this.panelShow = new System.Windows.Forms.Panel();
-            this.btnM_tkChung = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureAvt = new LibraryManager.Template.PictureBoxKiet();
             this.paneldrag.SuspendLayout();
             this.PanelMenuBar.SuspendLayout();
             this.panelAll.SuspendLayout();
@@ -90,8 +90,8 @@ namespace LibraryManager.Template
             this.panelHome.SuspendLayout();
             this.panelNameUser.SuspendLayout();
             this.panelName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -186,6 +186,28 @@ namespace LibraryManager.Template
             this.panelThongke.Name = "panelThongke";
             this.panelThongke.Size = new System.Drawing.Size(253, 164);
             this.panelThongke.TabIndex = 19;
+            // 
+            // btnM_tkChung
+            // 
+            this.btnM_tkChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
+            this.btnM_tkChung.BorderColor = System.Drawing.Color.Transparent;
+            this.btnM_tkChung.BorderThickness = 1;
+            this.btnM_tkChung.CheckedState.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.CustomImages.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnM_tkChung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnM_tkChung.ForeColor = System.Drawing.Color.Black;
+            this.btnM_tkChung.HoverState.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnM_tkChung.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnM_tkChung.Location = new System.Drawing.Point(0, 58);
+            this.btnM_tkChung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnM_tkChung.Name = "btnM_tkChung";
+            this.btnM_tkChung.ShadowDecoration.Parent = this.btnM_tkChung;
+            this.btnM_tkChung.Size = new System.Drawing.Size(253, 46);
+            this.btnM_tkChung.TabIndex = 17;
+            this.btnM_tkChung.Text = "Thống kê chung";
+            this.btnM_tkChung.Click += new System.EventHandler(this.btnM_tkChung_Click);
             // 
             // btnM_ReportSLDS
             // 
@@ -815,6 +837,25 @@ namespace LibraryManager.Template
             this.label3.TabIndex = 13;
             this.label3.Text = "  Quản lý  ";
             // 
+            // pictureAvt
+            // 
+            this.pictureAvt.BackColor = System.Drawing.Color.White;
+            this.pictureAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictureAvt.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pictureAvt.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pictureAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.pictureAvt.BorderSize = 2;
+            this.pictureAvt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureAvt.GradientAngle = 50F;
+            this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
+            this.pictureAvt.Location = new System.Drawing.Point(0, 0);
+            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureAvt.Name = "pictureAvt";
+            this.pictureAvt.Size = new System.Drawing.Size(75, 75);
+            this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureAvt.TabIndex = 5;
+            this.pictureAvt.TabStop = false;
+            // 
             // nameuser
             // 
             this.nameuser.AutoSize = true;
@@ -852,47 +893,6 @@ namespace LibraryManager.Template
             this.panelShow.Size = new System.Drawing.Size(1689, 1014);
             this.panelShow.TabIndex = 8;
             // 
-            // btnM_tkChung
-            // 
-            this.btnM_tkChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(197)))));
-            this.btnM_tkChung.BorderColor = System.Drawing.Color.Transparent;
-            this.btnM_tkChung.BorderThickness = 1;
-            this.btnM_tkChung.CheckedState.Parent = this.btnM_tkChung;
-            this.btnM_tkChung.CustomImages.Parent = this.btnM_tkChung;
-            this.btnM_tkChung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.btnM_tkChung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnM_tkChung.ForeColor = System.Drawing.Color.Black;
-            this.btnM_tkChung.HoverState.Parent = this.btnM_tkChung;
-            this.btnM_tkChung.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnM_tkChung.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnM_tkChung.Location = new System.Drawing.Point(0, 58);
-            this.btnM_tkChung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnM_tkChung.Name = "btnM_tkChung";
-            this.btnM_tkChung.ShadowDecoration.Parent = this.btnM_tkChung;
-            this.btnM_tkChung.Size = new System.Drawing.Size(253, 46);
-            this.btnM_tkChung.TabIndex = 17;
-            this.btnM_tkChung.Text = "Thống kê chung";
-            this.btnM_tkChung.Click += new System.EventHandler(this.btnM_tkChung_Click);
-            // 
-            // pictureAvt
-            // 
-            this.pictureAvt.BackColor = System.Drawing.Color.White;
-            this.pictureAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictureAvt.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.pictureAvt.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pictureAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.pictureAvt.BorderSize = 2;
-            this.pictureAvt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureAvt.GradientAngle = 50F;
-            this.pictureAvt.Image = global::LibraryManager.Properties.Resources.icons8_manager_100px;
-            this.pictureAvt.Location = new System.Drawing.Point(0, 0);
-            this.pictureAvt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureAvt.Name = "pictureAvt";
-            this.pictureAvt.Size = new System.Drawing.Size(75, 75);
-            this.pictureAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureAvt.TabIndex = 5;
-            this.pictureAvt.TabStop = false;
-            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -920,8 +920,8 @@ namespace LibraryManager.Template
             this.panelNameUser.ResumeLayout(false);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

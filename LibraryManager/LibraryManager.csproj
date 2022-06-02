@@ -705,6 +705,12 @@
     <Compile Include="Template\PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\testLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\testLogin.Designer.cs">
+      <DependentUpon>testLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\ThemDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -900,6 +906,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\testLogin.resx">
+      <DependentUpon>testLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ThemDocgia.resx">
       <DependentUpon>ThemDocgia.cs</DependentUpon>

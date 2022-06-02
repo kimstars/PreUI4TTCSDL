@@ -49,6 +49,7 @@ namespace LibraryManager.Template
             this.lbP_sanco = new System.Windows.Forms.Label();
             this.lbP_muon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDG)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -139,7 +140,7 @@ namespace LibraryManager.Template
             series2.Name = "SoLuong";
             series2.YValuesPerPoint = 2;
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(1008, 283);
+            this.chart1.Size = new System.Drawing.Size(961, 283);
             this.chart1.TabIndex = 22;
             this.chart1.Text = "chart1";
             // 
@@ -286,10 +287,25 @@ namespace LibraryManager.Template
             this.label2.TabIndex = 18;
             this.label2.Text = "Số sách chưa trả với số sách đã cho mượn";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(632, 419);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(548, 37);
+            this.guna2Button1.TabIndex = 23;
+            this.guna2Button1.Text = "Báo cáo thống kê lượt mượn trên mỗi đầu sách";
+            // 
             // ThongKeNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel5);
@@ -323,5 +339,6 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuCircleProgress circleProcessPercent;
         private System.Windows.Forms.Label lbP_sanco;
         private System.Windows.Forms.Label lbP_muon;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
