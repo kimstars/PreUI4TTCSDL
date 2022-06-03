@@ -47,13 +47,6 @@ namespace LibraryManager.Template
             this.lbMadg = new System.Windows.Forms.Label();
             this.lbMasach = new System.Windows.Forms.Label();
             this.dgv_trasach = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaMuonTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHoantat = new Guna.UI2.WinForms.Guna2Button();
             this.btnBbvp = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -65,6 +58,12 @@ namespace LibraryManager.Template
             this.clmVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnCleardgv = new Guna.UI2.WinForms.Guna2Button();
+            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMuonTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_trasach)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -284,8 +283,7 @@ namespace LibraryManager.Template
             this.MaMuonTra,
             this.MaSach,
             this.NgayMuon,
-            this.HanTra,
-            this.NgayTra});
+            this.HanTra});
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_trasach.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -328,62 +326,6 @@ namespace LibraryManager.Template
             this.dgv_trasach.TabIndex = 3;
             this.dgv_trasach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_trasach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_trasach_CellClick);
-            // 
-            // MaDocGia
-            // 
-            this.MaDocGia.DataPropertyName = "MaDocGia";
-            this.MaDocGia.HeaderText = "Mã độc giả";
-            this.MaDocGia.MinimumWidth = 6;
-            this.MaDocGia.Name = "MaDocGia";
-            this.MaDocGia.ReadOnly = true;
-            // 
-            // TenDocGia
-            // 
-            this.TenDocGia.DataPropertyName = "TenDocGia";
-            this.TenDocGia.HeaderText = "Tên độc giả";
-            this.TenDocGia.MinimumWidth = 6;
-            this.TenDocGia.Name = "TenDocGia";
-            this.TenDocGia.ReadOnly = true;
-            // 
-            // MaMuonTra
-            // 
-            this.MaMuonTra.DataPropertyName = "MaMuonTra";
-            this.MaMuonTra.HeaderText = "Mã mượn trả";
-            this.MaMuonTra.MinimumWidth = 6;
-            this.MaMuonTra.Name = "MaMuonTra";
-            this.MaMuonTra.ReadOnly = true;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            // 
-            // NgayMuon
-            // 
-            this.NgayMuon.DataPropertyName = "NgayMuon";
-            this.NgayMuon.HeaderText = "Ngày mượn";
-            this.NgayMuon.MinimumWidth = 6;
-            this.NgayMuon.Name = "NgayMuon";
-            this.NgayMuon.ReadOnly = true;
-            // 
-            // HanTra
-            // 
-            this.HanTra.DataPropertyName = "HanTra";
-            this.HanTra.HeaderText = "Hạn trả";
-            this.HanTra.MinimumWidth = 6;
-            this.HanTra.Name = "HanTra";
-            this.HanTra.ReadOnly = true;
-            // 
-            // NgayTra
-            // 
-            this.NgayTra.DataPropertyName = "NgayTra";
-            this.NgayTra.HeaderText = "Ngày trả";
-            this.NgayTra.MinimumWidth = 6;
-            this.NgayTra.Name = "NgayTra";
-            this.NgayTra.ReadOnly = true;
             // 
             // btnHoantat
             // 
@@ -575,6 +517,54 @@ namespace LibraryManager.Template
             this.btnCleardgv.Text = "Clear all";
             this.btnCleardgv.Click += new System.EventHandler(this.btnCleardgv_Click);
             // 
+            // MaDocGia
+            // 
+            this.MaDocGia.DataPropertyName = "MaDocGia";
+            this.MaDocGia.HeaderText = "Mã độc giả";
+            this.MaDocGia.MinimumWidth = 6;
+            this.MaDocGia.Name = "MaDocGia";
+            this.MaDocGia.ReadOnly = true;
+            // 
+            // TenDocGia
+            // 
+            this.TenDocGia.DataPropertyName = "TenDocGia";
+            this.TenDocGia.HeaderText = "Tên độc giả";
+            this.TenDocGia.MinimumWidth = 6;
+            this.TenDocGia.Name = "TenDocGia";
+            this.TenDocGia.ReadOnly = true;
+            // 
+            // MaMuonTra
+            // 
+            this.MaMuonTra.DataPropertyName = "MaMuonTra";
+            this.MaMuonTra.HeaderText = "Mã mượn trả";
+            this.MaMuonTra.MinimumWidth = 6;
+            this.MaMuonTra.Name = "MaMuonTra";
+            this.MaMuonTra.ReadOnly = true;
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // NgayMuon
+            // 
+            this.NgayMuon.DataPropertyName = "NgayMuon";
+            this.NgayMuon.HeaderText = "Ngày mượn";
+            this.NgayMuon.MinimumWidth = 6;
+            this.NgayMuon.Name = "NgayMuon";
+            this.NgayMuon.ReadOnly = true;
+            // 
+            // HanTra
+            // 
+            this.HanTra.DataPropertyName = "HanTra";
+            this.HanTra.HeaderText = "Hạn trả";
+            this.HanTra.MinimumWidth = 6;
+            this.HanTra.Name = "HanTra";
+            this.HanTra.ReadOnly = true;
+            // 
             // Xu_ly_tra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -632,6 +622,5 @@ namespace LibraryManager.Template
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn HanTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
     }
 }

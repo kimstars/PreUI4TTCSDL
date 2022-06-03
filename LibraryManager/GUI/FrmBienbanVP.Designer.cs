@@ -51,6 +51,7 @@ namespace LibraryManager.GUI
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dgvVipham = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +64,7 @@ namespace LibraryManager.GUI
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.lbTienPhat = new System.Windows.Forms.Label();
             this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -355,6 +357,8 @@ namespace LibraryManager.GUI
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.lbTienPhat);
+            this.guna2GroupBox2.Controls.Add(this.label6);
             this.guna2GroupBox2.Controls.Add(this.dgvVipham);
             this.guna2GroupBox2.Controls.Add(this.label11);
             this.guna2GroupBox2.Controls.Add(this.txt_tinhtrang);
@@ -372,6 +376,16 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Size = new System.Drawing.Size(1045, 493);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(340, 389);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 25);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Tổng tiền phạt:";
             // 
             // dgvVipham
             // 
@@ -498,7 +512,7 @@ namespace LibraryManager.GUI
             this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
             this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
             this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
-            this.btnHoanthien.Location = new System.Drawing.Point(602, 390);
+            this.btnHoanthien.Location = new System.Drawing.Point(869, 368);
             this.btnHoanthien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHoanthien.Name = "btnHoanthien";
             this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
@@ -538,6 +552,18 @@ namespace LibraryManager.GUI
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.paneldrag;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // lbTienPhat
+            // 
+            this.lbTienPhat.AutoSize = true;
+            this.lbTienPhat.BackColor = System.Drawing.Color.Transparent;
+            this.lbTienPhat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lbTienPhat.ForeColor = System.Drawing.Color.Black;
+            this.lbTienPhat.Location = new System.Drawing.Point(495, 379);
+            this.lbTienPhat.Name = "lbTienPhat";
+            this.lbTienPhat.Size = new System.Drawing.Size(33, 37);
+            this.lbTienPhat.TabIndex = 18;
+            this.lbTienPhat.Text = "$";
             // 
             // FrmBienbanVP
             // 
@@ -595,5 +621,7 @@ namespace LibraryManager.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lydo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbTienPhat;
     }
 }

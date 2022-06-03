@@ -15,7 +15,7 @@ namespace LibraryManager.GUI
     public partial class FrmBienbanVP : Form
     {
         BienbanVP_BUS bbvp_bus = new BienbanVP_BUS();
-        Xu_ly_tra xlt = new Xu_ly_tra();
+
         string madocgia = "";
         string ngaytra = "";
         string maVP = "";
@@ -33,13 +33,15 @@ namespace LibraryManager.GUI
             MaNhanVien = MaNV;
         }
 
-        public FrmBienbanVP(string madg, string date, List<string> book)
+        public FrmBienbanVP(string madg, string date, List<string> book, string manv)
         {
             madocgia = madg;
             ngaytra = date;
             book1 = book;
             // quahan = qua;
             InitializeComponent();
+            MaNhanVien = manv;
+
         }
         /*private void txtMadg_TextChanged(object sender, EventArgs e)
         {
@@ -52,6 +54,7 @@ namespace LibraryManager.GUI
         {
             txtMadg.Text = madocgia;
             txtNgaytra.Text = ngaytra;
+            txtManv.Text = MaNhanVien;
             txtTendg.Text = bbvp_bus.Get_tendg(txtMadg.Text);
 
             txtTennv.Text = bbvp_bus.Get_tennv(txtManv.Text);
@@ -59,7 +62,7 @@ namespace LibraryManager.GUI
 
             foreach (string i in book1)
             {
-                dgvVipham.Rows.Add(i, bbvp_bus.get_tensach(i),"","");
+                dgvVipham.Rows.Add(i, bbvp_bus.get_tensach(i), "", "");
 
             }
             dgvVipham.Show();
@@ -92,10 +95,14 @@ namespace LibraryManager.GUI
             string lydo = "";
             for (int i = 0; i < dgvVipham.RowCount; i++)
             {
-                tienphat += int.Parse(dgvVipham.Rows[i].Cells[3].Value.ToString());
+
                 lydo += dgvVipham.Rows[i].Cells[2].Value.ToString();
+                if (i != dgvVipham.RowCount - 1)
+                {
+                    lydo += ", ";
+                }
             }
-            bbvp.TienPhat = tienphat;
+            bbvp.TienPhat = int.Parse(lbTienPhat.Text);
 
             bbvp.LyDo = lydo;
             bbvp.TinhTrangSach = txt_tinhtrang.Text;
@@ -110,7 +117,7 @@ namespace LibraryManager.GUI
                     vp.MaSach = dgvVipham.Rows[k].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
                     bbvp_bus.Them_vp(vp);
-                    if (dgvVipham.Rows[k].Cells[0].Value.ToString() == "làm mất sách")
+                    if (dgvVipham.Rows[k].Cells[0].Value.ToString().Contains("mất"))
                     {
                         //update ngày trả và set trạng thái cuốn sách đó bằng 0
                         bbvp_bus.update0(vp.MaSach);
@@ -122,38 +129,11 @@ namespace LibraryManager.GUI
                     }
 
                 }
-                /*if(cboxTrehan.Checked == true)
-                {
-                    bbvp_bus.update_loaiTK(txtMadg.Text.Trim());
-                }*/
+
             }
-            // bbvp.LyDo = lstBoxLydo.Items.cố
+
 
         }
-
-        /*private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            BienBanViPham bbvp = new BienBanViPham();
-            bbvp.MaViPham = txtMaVP.Text;
-            long tienphat = 0;
-            string lydo = "";
-            for (int i = 0; i < dgvVipham.RowCount; i++)
-            {
-                tienphat += int.Parse(dgvVipham.Rows[i].Cells[3].Value.ToString());
-                lydo += dgvVipham.Rows[i].Cells[2].Value.ToString();
-            }
-            bbvp.TienPhat = tienphat;
-
-            bbvp.LyDo = lydo;
-            bbvp.TinhTrangSach = txt_tinhtrang.Text;
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn sửa biên bản", "Hỏi đáp", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                bbvp_bus.suabb(bbvp);
-
-            }
-        }*/
-
 
 
         private void dgvVipham_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -168,46 +148,75 @@ namespace LibraryManager.GUI
 
 
 
+
         private void dgvVipham_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            //int i = e.RowIndex;
+            double tongtien = 0;
+          
+            int y = e.ColumnIndex;
+            double tientre = 0;
+            double tienhong = 0;
+            double tienmat = 0;
+
+            double tienphat;
             for (int i = 0; i < dgvVipham.RowCount; i++)
             {
-                string lydo = dgvVipham.Rows[i].Cells["Lydo"].Value.ToString();
-                string Masach = dgvVipham.Rows[i].Cells[0].Value.ToString();
-                if (lydo != "")
+                if (i >= 0 && y == 2)
                 {
-                    if (lydo.Contains("trả sách trễ hạn"))
+                    string lydo = dgvVipham.Rows[i].Cells["Lydo"].Value.ToString();
+                    if (lydo != "")
                     {
 
-                        if (bbvp_bus.Songaytre(Masach) < 0)
+                        string Masach = dgvVipham.Rows[i].Cells[0].Value.ToString();
+                        tientre = bbvp_bus.Songaytre(Masach) * 1000;
+                        tienhong = bbvp_bus.TienPhat(Masach) * 0.2;
+                        tienmat = bbvp_bus.TienPhat(Masach) * 1.5;
+                        tienphat = 0;
+
+                        if (lydo.Contains("trễ") || lydo.Contains("muộn"))
                         {
-                            MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                            if (bbvp_bus.Songaytre(Masach) < 0)
+                            {
+                                MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                            }
+                            else
+                            {
+
+                                if (lydo.Contains("hỏng"))
+                                {
+                                    tienphat = Math.Max(tientre, tienhong);
+                                }
+                                else if (lydo.Contains("mất"))
+                                {
+                                    tienphat = Math.Max(tientre, tienmat);
+                                }
+                                else
+                                {
+                                    tienphat = tientre;
+                                }
+
+                            }
                         }
                         else
                         {
-                            long tienphat = bbvp_bus.Songaytre(Masach) * 2000;// phạt trễ hạn 2000/ngày
-                            dgvVipham.Rows[i].Cells[3].Value = tienphat.ToString();
-                            
+                            if (lydo.Contains("hỏng"))
+                            {
+                                tienphat = tienhong;
+                            }
+                            else if (lydo.Contains("mất"))
+                            {
+                                tienphat = tienmat;
+                            }
+
                         }
+                        dgvVipham.Rows[i].Cells[3].Value = tienphat.ToString();
+                        tongtien += tienphat;
                     }
-                    else if (lydo.Contains("làm hỏng sách"))
-                    {
 
-                        dgvVipham.Rows[i].Cells[3].Value = (bbvp_bus.TienPhat(Masach) * 0.2).ToString();
-                        
-
-                    }
-                    else if (lydo.Contains("làm mất sách"))
-                    {
-                        dgvVipham.Rows[i].Cells[3].Value = (bbvp_bus.TienPhat(Masach) * 1.5).ToString();
-
-                    }
                 }
-
-
-
             }
+            lbTienPhat.Text = tongtien.ToString();
+
         }
     }
 }

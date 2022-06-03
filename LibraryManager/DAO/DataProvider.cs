@@ -347,5 +347,18 @@ namespace LibraryManager.DAO
             ad.Fill(ds);
             return ds;
         }
+
+
+        public string FindLike(string sth)
+        {
+            if(sth != "")
+            {
+                return $"%{sth}%";
+
+            }
+
+            return sth;
+        }
+
     }
 }

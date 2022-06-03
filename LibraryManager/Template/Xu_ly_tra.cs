@@ -14,10 +14,11 @@ namespace LibraryManager.Template
     public partial class Xu_ly_tra : UserControl
     {
         Trasach_Bus ts_bus = new Trasach_Bus();
-
-        public Xu_ly_tra()
+        string MaNhanVien = "";
+        public Xu_ly_tra(string manv)
         {
             InitializeComponent();
+            MaNhanVien = manv;
         }
         public string chuanhoa(string a)
         {
@@ -41,12 +42,21 @@ namespace LibraryManager.Template
                 }
                 else if (cmbTKiem.SelectedItem == "Tất cả")
                 {
+                    txtTK.Text = " ";
                     dgv_trasach.DataSource = ts_bus.Loadls();
                 }
             }
             else
             {
-                dgv_trasach.DataSource = ts_bus.Loadls();
+                if(cmbTKiem.SelectedItem == "Tất cả")
+                {
+                    dgv_trasach.DataSource = ts_bus.Loadls();
+                }
+                else if(cmbTKiem.SelectedItem == "Mã sách"|| cmbTKiem.SelectedItem == "Mã độc giả")
+                {
+                    MessageBox.Show("Vui lòng nhập nội dung tìm kiếm");
+                }
+                
             }
         }
 
@@ -72,7 +82,7 @@ namespace LibraryManager.Template
             {
                 MessageBox.Show("Vui lòng nhập mã sách trả");
             }
-
+            
 
             for (int i = 0; i < dgvDs.Rows.Count; i++)
             {
@@ -120,7 +130,7 @@ namespace LibraryManager.Template
             {
                 madg = dgvDs.Rows[0].Cells[1].Value.ToString();
                 ngaytra1 = dgvDs.Rows[0].Cells[2].Value.ToString();
-                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/);
+                FrmBienbanVP bbvp = new FrmBienbanVP(madg, ngaytra1, book/*,tre*/, MaNhanVien);
                 bbvp.Show();
             }
         }
@@ -159,6 +169,8 @@ namespace LibraryManager.Template
                 }
             }
             MessageBox.Show("Trả sách thành công!!");
+            dgvDs.Rows.Clear();
+            dgv_trasach.DataSource = ts_bus.Loadls();
         }
 
         private void btnCleardgv_Click(object sender, EventArgs e)
@@ -174,9 +186,19 @@ namespace LibraryManager.Template
         private void dgv_trasach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
+            DateTime res;
             i = dgv_trasach.CurrentRow.Index;
             txtMasach.Text = dgv_trasach.Rows[i].Cells[3].Value.ToString();
             txtMadg.Text = dgv_trasach.Rows[i].Cells[0].Value.ToString();
+            DateTime.TryParse(dgv_trasach.Rows[i].Cells[5].Value.ToString(), out res);
+            if (res < DateTime.Now)
+            {
+                cboxVi_pham.Checked = true;
+            }
+            else
+            {
+                cboxVi_pham.Checked = false;
+            }
         }
     }
 }

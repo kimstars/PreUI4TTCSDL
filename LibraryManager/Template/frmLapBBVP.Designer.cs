@@ -63,6 +63,8 @@ namespace LibraryManager.Template
             this.txtTenDg = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbLydo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTongtienphat = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVP)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -263,7 +265,7 @@ namespace LibraryManager.Template
             this.btnLapBB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLapBB.ForeColor = System.Drawing.Color.White;
             this.btnLapBB.HoverState.Parent = this.btnLapBB;
-            this.btnLapBB.Location = new System.Drawing.Point(190, 321);
+            this.btnLapBB.Location = new System.Drawing.Point(846, 630);
             this.btnLapBB.Name = "btnLapBB";
             this.btnLapBB.ShadowDecoration.Parent = this.btnLapBB;
             this.btnLapBB.Size = new System.Drawing.Size(182, 45);
@@ -281,7 +283,7 @@ namespace LibraryManager.Template
             this.btnVP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnVP.ForeColor = System.Drawing.Color.White;
             this.btnVP.HoverState.Parent = this.btnVP;
-            this.btnVP.Location = new System.Drawing.Point(26, 321);
+            this.btnVP.Location = new System.Drawing.Point(190, 315);
             this.btnVP.Name = "btnVP";
             this.btnVP.ShadowDecoration.Parent = this.btnVP;
             this.btnVP.Size = new System.Drawing.Size(129, 45);
@@ -354,10 +356,11 @@ namespace LibraryManager.Template
             this.dgvSVP.RowHeadersWidth = 51;
             this.dgvSVP.RowTemplate.Height = 40;
             this.dgvSVP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSVP.Size = new System.Drawing.Size(601, 655);
+            this.dgvSVP.Size = new System.Drawing.Size(601, 584);
             this.dgvSVP.TabIndex = 15;
             this.dgvSVP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvSVP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSVP_CellContentClick_1);
+            this.dgvSVP.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvSVP_RowStateChanged);
             // 
             // Masach
             // 
@@ -604,7 +607,6 @@ namespace LibraryManager.Template
             // 
             this.guna2Panel2.BorderRadius = 15;
             this.guna2Panel2.Controls.Add(this.cmbLydo);
-            this.guna2Panel2.Controls.Add(this.btnLapBB);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.btnVP);
             this.guna2Panel2.Controls.Add(this.txtTienphat);
@@ -621,13 +623,49 @@ namespace LibraryManager.Template
             this.guna2Panel2.Location = new System.Drawing.Point(16, 289);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(389, 398);
+            this.guna2Panel2.Size = new System.Drawing.Size(389, 385);
             this.guna2Panel2.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label11.Location = new System.Drawing.Point(433, 640);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 23);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Tổng tiền phạt";
+            // 
+            // txtTongtienphat
+            // 
+            this.txtTongtienphat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongtienphat.DefaultText = "";
+            this.txtTongtienphat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTongtienphat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTongtienphat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTongtienphat.DisabledState.Parent = this.txtTongtienphat;
+            this.txtTongtienphat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTongtienphat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTongtienphat.FocusedState.Parent = this.txtTongtienphat;
+            this.txtTongtienphat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTongtienphat.HoverState.Parent = this.txtTongtienphat;
+            this.txtTongtienphat.Location = new System.Drawing.Point(563, 630);
+            this.txtTongtienphat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTongtienphat.Name = "txtTongtienphat";
+            this.txtTongtienphat.PasswordChar = '\0';
+            this.txtTongtienphat.PlaceholderText = "";
+            this.txtTongtienphat.SelectedText = "";
+            this.txtTongtienphat.ShadowDecoration.Parent = this.txtTongtienphat;
+            this.txtTongtienphat.Size = new System.Drawing.Size(267, 44);
+            this.txtTongtienphat.TabIndex = 19;
             // 
             // frmLapBBVP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtTongtienphat);
+            this.Controls.Add(this.btnLapBB);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.lbLapbb);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel3);
@@ -635,7 +673,7 @@ namespace LibraryManager.Template
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmLapBBVP";
-            this.Size = new System.Drawing.Size(1689, 1014);
+            this.Size = new System.Drawing.Size(1091, 751);
             this.Load += new System.EventHandler(this.frmLapBBVP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVP)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
@@ -679,5 +717,7 @@ namespace LibraryManager.Template
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbLydo;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2TextBox txtTongtienphat;
     }
 }
