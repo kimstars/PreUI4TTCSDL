@@ -96,5 +96,14 @@ namespace LibraryManager.BUS
 
             return home.LoadTienCoc();
         }
+        public DataTable LoadSachVP()
+        {
+
+            return home.LoadSachVP();
+        }
+        public DataTable SearchSachVP(string _timkiem)
+        {
+            return home.SearchSachVP(_timkiem);
+        }
     }
 }
