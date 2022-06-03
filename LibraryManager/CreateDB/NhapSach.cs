@@ -81,7 +81,7 @@ namespace LibraryManager.CreateDB
             DataGridViewRow row = dgvDauSach.Rows[e.RowIndex];
 
             txtMaDauSach.Text = row.Cells[1].Value.ToString();
-            txtSoluong.Text = nsBus.LoadSLSachChuaNhap(txtMaDauSach.Text);
+            //txtSoluong.Text = nsBus.LoadSLSachChuaNhap(txtMaDauSach.Text);
 
         }
 
@@ -94,9 +94,8 @@ namespace LibraryManager.CreateDB
             pn.MaPhieuNhap = txtMaNhap.Text;
             pn.NgayNhap = dateNhap.Value;
 
-            ttns.MaDauSach = txtMaDauSach.Text.Trim();
+            ttns.MaSach = txtMaDauSach.Text.Trim();
             ttns.MaPhieuNhap = txtMaNhap.Text;
-            ttns.SoLuongSach = int.Parse(txtSoluong.Text);
 
             nsBus.ThemThongtinNhap(pn, ttns);
 

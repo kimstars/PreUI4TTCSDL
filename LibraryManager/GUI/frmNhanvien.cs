@@ -114,6 +114,9 @@ namespace LibraryManager
 
 
 
+      
+
+
         private void sidebarTickTime_Tick(object sender, EventArgs e)
         {
             opencloseBarNgang(ref PanelMenuBar, ref sidebarExpand, ref sidebarTickTime);
@@ -217,6 +220,7 @@ namespace LibraryManager
 
         private void imgThuVienMTA_Click(object sender, EventArgs e)
         {
+            CloseDoc();
             sidebarTickTime.Start();
         }
 

@@ -64,6 +64,7 @@ namespace LibraryManager.Template
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChonDauSach)).BeginInit();
@@ -338,7 +339,8 @@ namespace LibraryManager.Template
             this.TenDocGia,
             this.NgayTra,
             this.LyDo,
-            this.TienPhat});
+            this.TienPhat,
+            this.Anh});
             this.dgvChonDauSach.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
             this.dgvChonDauSach.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvChonDauSach.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -472,6 +474,14 @@ namespace LibraryManager.Template
             this.TienPhat.Name = "TienPhat";
             this.TienPhat.ReadOnly = true;
             // 
+            // Anh
+            // 
+            this.Anh.DataPropertyName = "Anh";
+            this.Anh.HeaderText = "Ảnh";
+            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Anh.MinimumWidth = 6;
+            this.Anh.Name = "Anh";
+            // 
             // DSSachVP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -524,5 +534,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn LyDo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TienPhat;
+        private System.Windows.Forms.DataGridViewImageColumn Anh;
     }
 }

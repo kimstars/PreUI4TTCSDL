@@ -42,8 +42,6 @@ namespace LibraryManager.CreateDB
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSoluong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDauSach = new System.Windows.Forms.DataGridView();
@@ -56,7 +54,7 @@ namespace LibraryManager.CreateDB
             // label7
             // 
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(173, 233);
+            this.label7.Location = new System.Drawing.Point(173, 159);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 21);
@@ -71,7 +69,7 @@ namespace LibraryManager.CreateDB
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
             this.btnSubmit.Location = new System.Drawing.Point(177, 271);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
             this.btnSubmit.Size = new System.Drawing.Size(619, 39);
@@ -100,7 +98,7 @@ namespace LibraryManager.CreateDB
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTTNhap.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTTNhap.Location = new System.Drawing.Point(67, 401);
-            this.dgvTTNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTTNhap.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTTNhap.Name = "dgvTTNhap";
             this.dgvTTNhap.RowHeadersWidth = 51;
             this.dgvTTNhap.Size = new System.Drawing.Size(729, 192);
@@ -121,7 +119,7 @@ namespace LibraryManager.CreateDB
             this.txtMaNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaNhap.HoverState.Parent = this.txtMaNhap;
             this.txtMaNhap.Location = new System.Drawing.Point(177, 15);
-            this.txtMaNhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaNhap.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaNhap.Name = "txtMaNhap";
             this.txtMaNhap.PasswordChar = '\0';
             this.txtMaNhap.PlaceholderText = "";
@@ -132,7 +130,7 @@ namespace LibraryManager.CreateDB
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(16, 106);
+            this.label6.Location = new System.Drawing.Point(432, 32);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 25);
@@ -143,23 +141,23 @@ namespace LibraryManager.CreateDB
             // 
             this.cbNV.FormattingEnabled = true;
             this.cbNV.Location = new System.Drawing.Point(595, 105);
-            this.cbNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbNV.Margin = new System.Windows.Forms.Padding(4);
             this.cbNV.Name = "cbNV";
             this.cbNV.Size = new System.Drawing.Size(201, 24);
             this.cbNV.TabIndex = 21;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(405, 105);
+            this.label5.Location = new System.Drawing.Point(409, 104);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(199, 25);
+            this.label5.Size = new System.Drawing.Size(158, 25);
             this.label5.TabIndex = 20;
             this.label5.Text = "Chọn mã nhân viên";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(16, 185);
+            this.label4.Location = new System.Drawing.Point(16, 111);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 32);
@@ -174,39 +172,6 @@ namespace LibraryManager.CreateDB
             this.label3.Size = new System.Drawing.Size(152, 31);
             this.label3.TabIndex = 17;
             this.label3.Text = "Mã phiếu nhập : ";
-            // 
-            // txtSoluong
-            // 
-            this.txtSoluong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoluong.DefaultText = "";
-            this.txtSoluong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSoluong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSoluong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoluong.DisabledState.Parent = this.txtSoluong;
-            this.txtSoluong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoluong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoluong.FocusedState.Parent = this.txtSoluong;
-            this.txtSoluong.ForeColor = System.Drawing.Color.Black;
-            this.txtSoluong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoluong.HoverState.Parent = this.txtSoluong;
-            this.txtSoluong.Location = new System.Drawing.Point(595, 16);
-            this.txtSoluong.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtSoluong.Name = "txtSoluong";
-            this.txtSoluong.PasswordChar = '\0';
-            this.txtSoluong.PlaceholderText = "";
-            this.txtSoluong.SelectedText = "";
-            this.txtSoluong.ShadowDecoration.Parent = this.txtSoluong;
-            this.txtSoluong.Size = new System.Drawing.Size(201, 44);
-            this.txtSoluong.TabIndex = 32;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(435, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 31);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Số lượng sách :";
             // 
             // label2
             // 
@@ -248,7 +213,7 @@ namespace LibraryManager.CreateDB
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDauSach.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDauSach.Location = new System.Drawing.Point(852, 44);
-            this.dgvDauSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDauSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDauSach.Name = "dgvDauSach";
             this.dgvDauSach.RowHeadersWidth = 51;
             this.dgvDauSach.Size = new System.Drawing.Size(557, 549);
@@ -269,8 +234,8 @@ namespace LibraryManager.CreateDB
             this.txtMaDauSach.ForeColor = System.Drawing.Color.Black;
             this.txtMaDauSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDauSach.HoverState.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.Location = new System.Drawing.Point(179, 89);
-            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaDauSach.Location = new System.Drawing.Point(595, 15);
+            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaDauSach.Name = "txtMaDauSach";
             this.txtMaDauSach.PasswordChar = '\0';
             this.txtMaDauSach.PlaceholderText = "";
@@ -285,7 +250,7 @@ namespace LibraryManager.CreateDB
             this.dateNhap.BorderRadius = 0;
             this.dateNhap.BorderSize = 0;
             this.dateNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateNhap.Location = new System.Drawing.Point(177, 167);
+            this.dateNhap.Location = new System.Drawing.Point(177, 93);
             this.dateNhap.Margin = new System.Windows.Forms.Padding(4);
             this.dateNhap.MinimumSize = new System.Drawing.Size(4, 40);
             this.dateNhap.Name = "dateNhap";
@@ -303,8 +268,6 @@ namespace LibraryManager.CreateDB
             this.Controls.Add(this.dgvDauSach);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSoluong);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dgvTTNhap);
@@ -315,7 +278,7 @@ namespace LibraryManager.CreateDB
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhapSach";
             this.Text = "NhapSach";
             this.Load += new System.EventHandler(this.NhapSach_Load);
@@ -337,8 +300,6 @@ namespace LibraryManager.CreateDB
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtSoluong;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvDauSach;

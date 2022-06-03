@@ -33,7 +33,7 @@ namespace LibraryManager.DAO
 
             Excute(sql);
 
-            sql = $"INSERT INTO dbo.THONGTINNHAPSACH VALUES ('{ttns.MaPhieuNhap}','{ttns.MaDauSach}', {ttns.SoLuongSach})";
+            sql = $"INSERT INTO dbo.THONGTINNHAPSACH VALUES ('{ttns.MaPhieuNhap}','{ttns.MaSach}')";
 
             Excute(sql);
         }
