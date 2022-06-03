@@ -23,7 +23,7 @@ namespace LibraryManager
             sidebartick.Start();
             panelShow.Controls.Clear();
 
-            panelShow.Controls.Add(new Template.DSSachVP());
+            panelShow.Controls.Add(new Template.HomeHello());
          
 
 
