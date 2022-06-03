@@ -48,16 +48,20 @@ namespace LibraryManager.Template
         {
             
             int i = e.RowIndex;
-            //string MaDS = dgvChonDauSach.Rows[i].Cells["MaDauSach"].Value.ToString().Trim();
-            //imageBook.BackgroundImage = dsBus.LoadAnh(MaDS);
-            lbInfoTenSach.Text = dgvChonDauSach.Rows[i].Cells["TenDauSach"].Value.ToString();
-            lbInfoMaDS.Text = dgvChonDauSach.Rows[i].Cells["MaSach"].Value.ToString();
-            lbInfoMaVP.Text = dgvChonDauSach.Rows[i].Cells["MaViPham"].Value.ToString();
-            lbInfoDG.Text = dgvChonDauSach.Rows[i].Cells["TenDocGia"].Value.ToString();
-            lbtenNV.Text = dgvChonDauSach.Rows[i].Cells["TenNhanVien"].Value.ToString();
-            lbInfoNgayTra.Text = dgvChonDauSach.Rows[i].Cells["NgayTra"].Value.ToString();
-            lbInfoLyDo.Text = dgvChonDauSach.Rows[i].Cells["LyDo"].Value.ToString();
-            lbTienPhat.Text = dgvChonDauSach.Rows[i].Cells["TienPhat"].Value.ToString();
+            if (i >= 0)
+            {
+                string MaDS = dgvChonDauSach.Rows[i].Cells["MaDauSach"].Value.ToString().Trim();
+                imageBook.BackgroundImage = dsBus.LoadAnh(MaDS);
+                lbInfoTenSach.Text = dgvChonDauSach.Rows[i].Cells["TenDauSach"].Value.ToString();
+                lbInfoMaDS.Text = dgvChonDauSach.Rows[i].Cells["MaSach"].Value.ToString();
+                lbInfoMaVP.Text = dgvChonDauSach.Rows[i].Cells["MaViPham"].Value.ToString();
+                lbInfoDG.Text = dgvChonDauSach.Rows[i].Cells["TenDocGia"].Value.ToString();
+                lbtenNV.Text = dgvChonDauSach.Rows[i].Cells["TenNhanVien"].Value.ToString();
+                lbInfoNgayTra.Text = dgvChonDauSach.Rows[i].Cells["NgayTra"].Value.ToString();
+                lbInfoLyDo.Text = dgvChonDauSach.Rows[i].Cells["LyDo"].Value.ToString();
+                lbTienPhat.Text = dgvChonDauSach.Rows[i].Cells["TienPhat"].Value.ToString();
+
+            }
 
         }
     }

@@ -410,6 +410,7 @@ namespace LibraryManager.Template
             // 
             // MaDauSach
             // 
+            this.MaDauSach.DataPropertyName = "MaDauSach";
             this.MaDauSach.HeaderText = "Mã đầu sách";
             this.MaDauSach.MinimumWidth = 6;
             this.MaDauSach.Name = "MaDauSach";
