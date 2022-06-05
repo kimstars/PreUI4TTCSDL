@@ -36,8 +36,6 @@ namespace LibraryManager.CreateDB
             this.label7 = new System.Windows.Forms.Label();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTTNhap = new System.Windows.Forms.DataGridView();
-            this.txtMaNhap = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.cbNV = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,8 +43,11 @@ namespace LibraryManager.CreateDB
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDauSach = new System.Windows.Forms.DataGridView();
-            this.txtMaDauSach = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbSoluong = new System.Windows.Forms.Label();
             this.dateNhap = new LibraryManager.Template.DateTimePickerKiet();
+            this.lbPhieunhap = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDauSach)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,7 @@ namespace LibraryManager.CreateDB
             // label7
             // 
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(173, 159);
+            this.label7.Location = new System.Drawing.Point(174, 148);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 21);
@@ -104,39 +105,6 @@ namespace LibraryManager.CreateDB
             this.dgvTTNhap.Size = new System.Drawing.Size(729, 192);
             this.dgvTTNhap.TabIndex = 28;
             // 
-            // txtMaNhap
-            // 
-            this.txtMaNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNhap.DefaultText = "";
-            this.txtMaNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNhap.DisabledState.Parent = this.txtMaNhap;
-            this.txtMaNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNhap.FocusedState.Parent = this.txtMaNhap;
-            this.txtMaNhap.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNhap.HoverState.Parent = this.txtMaNhap;
-            this.txtMaNhap.Location = new System.Drawing.Point(177, 15);
-            this.txtMaNhap.Margin = new System.Windows.Forms.Padding(5);
-            this.txtMaNhap.Name = "txtMaNhap";
-            this.txtMaNhap.PasswordChar = '\0';
-            this.txtMaNhap.PlaceholderText = "";
-            this.txtMaNhap.SelectedText = "";
-            this.txtMaNhap.ShadowDecoration.Parent = this.txtMaNhap;
-            this.txtMaNhap.Size = new System.Drawing.Size(200, 44);
-            this.txtMaNhap.TabIndex = 27;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(432, 32);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 25);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Chọn đầu sách";
-            // 
             // cbNV
             // 
             this.cbNV.FormattingEnabled = true;
@@ -176,7 +144,7 @@ namespace LibraryManager.CreateDB
             // label2
             // 
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(175, 63);
+            this.label2.Location = new System.Drawing.Point(419, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 21);
@@ -185,12 +153,13 @@ namespace LibraryManager.CreateDB
             // 
             // label8
             // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(64, 352);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(448, 26);
             this.label8.TabIndex = 34;
-            this.label8.Text = "Chọn đầu sách đầu tiên rồi nhập các  thông tin khác";
+            this.label8.Text = "Mỗi lần submit tự động nhập 400 cuốn sách";
             // 
             // dgvDauSach
             // 
@@ -220,29 +189,36 @@ namespace LibraryManager.CreateDB
             this.dgvDauSach.TabIndex = 35;
             this.dgvDauSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDauSach_CellClick);
             // 
-            // txtMaDauSach
+            // label1
             // 
-            this.txtMaDauSach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaDauSach.DefaultText = "";
-            this.txtMaDauSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaDauSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaDauSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaDauSach.DisabledState.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaDauSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaDauSach.FocusedState.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.ForeColor = System.Drawing.Color.Black;
-            this.txtMaDauSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaDauSach.HoverState.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.Location = new System.Drawing.Point(595, 15);
-            this.txtMaDauSach.Margin = new System.Windows.Forms.Padding(5);
-            this.txtMaDauSach.Name = "txtMaDauSach";
-            this.txtMaDauSach.PasswordChar = '\0';
-            this.txtMaDauSach.PlaceholderText = "";
-            this.txtMaDauSach.SelectedText = "";
-            this.txtMaDauSach.ShadowDecoration.Parent = this.txtMaDauSach;
-            this.txtMaDauSach.Size = new System.Drawing.Size(201, 44);
-            this.txtMaDauSach.TabIndex = 36;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(592, 148);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 21);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "* auto random";
+            // 
+            // label9
+            // 
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(174, 209);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 29);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Số lượng sách chưa nhập : ";
+            // 
+            // lbSoluong
+            // 
+            this.lbSoluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoluong.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbSoluong.Location = new System.Drawing.Point(364, 198);
+            this.lbSoluong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSoluong.Name = "lbSoluong";
+            this.lbSoluong.Size = new System.Drawing.Size(109, 52);
+            this.lbSoluong.TabIndex = 39;
+            this.lbSoluong.Text = "100";
             // 
             // dateNhap
             // 
@@ -259,20 +235,32 @@ namespace LibraryManager.CreateDB
             this.dateNhap.TabIndex = 22;
             this.dateNhap.TextColor = System.Drawing.Color.White;
             // 
+            // lbPhieunhap
+            // 
+            this.lbPhieunhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhieunhap.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbPhieunhap.Location = new System.Drawing.Point(170, 11);
+            this.lbPhieunhap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPhieunhap.Name = "lbPhieunhap";
+            this.lbPhieunhap.Size = new System.Drawing.Size(221, 52);
+            this.lbPhieunhap.TabIndex = 40;
+            this.lbPhieunhap.Text = "PN000000";
+            // 
             // NhapSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1445, 650);
-            this.Controls.Add(this.txtMaDauSach);
+            this.Controls.Add(this.lbPhieunhap);
+            this.Controls.Add(this.lbSoluong);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDauSach);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dgvTTNhap);
-            this.Controls.Add(this.txtMaNhap);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.dateNhap);
             this.Controls.Add(this.cbNV);
             this.Controls.Add(this.label5);
@@ -280,7 +268,7 @@ namespace LibraryManager.CreateDB
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhapSach";
-            this.Text = "NhapSach";
+            this.Text = "NhapSach OneClick";
             this.Load += new System.EventHandler(this.NhapSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDauSach)).EndInit();
@@ -293,8 +281,6 @@ namespace LibraryManager.CreateDB
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private System.Windows.Forms.DataGridView dgvTTNhap;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaNhap;
-        private System.Windows.Forms.Label label6;
         private Template.DateTimePickerKiet dateNhap;
         private System.Windows.Forms.ComboBox cbNV;
         private System.Windows.Forms.Label label5;
@@ -303,6 +289,9 @@ namespace LibraryManager.CreateDB
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvDauSach;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaDauSach;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbSoluong;
+        private System.Windows.Forms.Label lbPhieunhap;
     }
 }
