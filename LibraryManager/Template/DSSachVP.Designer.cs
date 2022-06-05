@@ -478,7 +478,7 @@ namespace LibraryManager.Template
             // 
             this.Anh.DataPropertyName = "Anh";
             this.Anh.HeaderText = "Ảnh";
-            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Anh.MinimumWidth = 6;
             this.Anh.Name = "Anh";
             // 

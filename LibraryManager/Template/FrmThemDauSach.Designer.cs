@@ -163,7 +163,7 @@ namespace LibraryManager.Template
             this.txtTuKhoa.PlaceholderText = "Tìm kiếm đầu sách";
             this.txtTuKhoa.SelectedText = "";
             this.txtTuKhoa.ShadowDecoration.Parent = this.txtTuKhoa;
-            this.txtTuKhoa.Size = new System.Drawing.Size(1073, 39);
+            this.txtTuKhoa.Size = new System.Drawing.Size(1110, 39);
             this.txtTuKhoa.TabIndex = 39;
             this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
             // 
@@ -258,7 +258,7 @@ namespace LibraryManager.Template
             this.dgvDauSach.RowTemplate.Height = 40;
             this.dgvDauSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDauSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDauSach.Size = new System.Drawing.Size(1281, 283);
+            this.dgvDauSach.Size = new System.Drawing.Size(1318, 283);
             this.dgvDauSach.TabIndex = 37;
             this.dgvDauSach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvDauSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDauSach_CellClick_1);
@@ -428,7 +428,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1281, 372);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1318, 372);
             this.guna2CustomGradientPanel3.TabIndex = 36;
             this.guna2CustomGradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel3_Paint_1);
             // 

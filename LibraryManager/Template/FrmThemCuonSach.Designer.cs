@@ -415,7 +415,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(443, 654);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(467, 687);
             this.guna2CustomGradientPanel1.TabIndex = 35;
             // 
             // label6
