@@ -112,11 +112,12 @@ namespace LibraryManager.DAO
 
         #region in phieu muon
 
-        public DataTable GetTTPM(string MaNV)
+        public DataTable GetTTPM(string MaNV, DateTime NgayLap)
         {
             string NameProc = "TTPhieuNhap";
-            SqlParameter[] sParams = new SqlParameter[1];
+            SqlParameter[] sParams = new SqlParameter[2];
             sParams[0] = new SqlParameter("@MaNV", MaNV);
+            sParams[1] = new SqlParameter("@NgayNhap", DateToString(NgayLap));
             return GetData_Proc_NParam(NameProc, sParams);
         }
 

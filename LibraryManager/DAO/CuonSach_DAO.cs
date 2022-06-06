@@ -23,8 +23,9 @@ namespace LibraryManager.DAO
 
             string NameProc = "proc_cs_Lastest_MaSach";
             SqlParameter[] sParams = new SqlParameter[0];
-            //return GetData_Proc_NParam(NameProc, sParams);
-            return "Thay de chay len thoi";
+            return GetString_Proc_NParam(NameProc, sParams).ToString();
+            
+            
 
         }
 

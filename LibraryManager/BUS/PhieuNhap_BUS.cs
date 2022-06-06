@@ -74,9 +74,9 @@ namespace LibraryManager.BUS
 
         #region inphieunhap
 
-        public DataTable LoadTTPhieuNhap(string MaNV)
+        public DataTable LoadTTPhieuNhap(string MaNV, DateTime NgayLap)
         {
-            return pnDao.GetTTPM(MaNV);
+            return pnDao.GetTTPM(MaNV, NgayLap);
         }
 
         public DataTable LoadTenNV(string MaNV)

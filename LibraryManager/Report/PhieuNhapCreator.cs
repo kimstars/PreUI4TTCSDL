@@ -31,7 +31,7 @@ namespace LibraryManager.Report
         }
         public bool NhapDuLieuVaoDataSet()
         {
-            DataTable tkDS = pnBus.LoadTTPhieuNhap(MaNhanVien);
+            DataTable tkDS = pnBus.LoadTTPhieuNhap(MaNhanVien,NgayLap);
 
 
 
