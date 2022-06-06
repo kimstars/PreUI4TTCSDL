@@ -594,7 +594,9 @@ namespace LibraryManager.Template
             this.cmbLydo.Items.AddRange(new object[] {
             "trả sách trễ hạn",
             "làm hỏng sách",
-            "làm mất sách"});
+            "làm mất sách",
+            "trả sách trễ hạn và làm mất",
+            "trả sách trễ hạn và làm hỏng"});
             this.cmbLydo.ItemsAppearance.Parent = this.cmbLydo;
             this.cmbLydo.Location = new System.Drawing.Point(156, 157);
             this.cmbLydo.Name = "cmbLydo";

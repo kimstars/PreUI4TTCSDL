@@ -153,9 +153,35 @@ namespace LibraryManager.Template
 
                 txtTienphat.Text = (bb.TienPhat(cmbMasach.Text) * 0.2).ToString();
             }
-            else if (cmbLydo.Text == "làm mất sách")
+            if (cmbLydo.Text == "làm mất sách")
                 //{
                 txtTienphat.Text = (bb.TienPhat(cmbMasach.Text) * 1.5).ToString();
+            if(cmbLydo.Text == "trả sách trễ hạn và làm mất")
+            {
+                if (bb.Songaytre(cmbMasach.Text) < 0)
+                {
+                    MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                }
+                else
+                {
+                    long tienphat = bb.Songaytre(cmbMasach.Text) * 1000;// phạt trễ hạn 2000/ngày
+                    double tienmat = bb.TienPhat(cmbMasach.Text) * 1.5;
+                    txtTienphat.Text = Math.Max(tienphat,tienmat).ToString();
+                }
+            }
+            else if( cmbLydo.Text=="trả sách trễ hạn và làm hỏng")
+            {
+                if (bb.Songaytre(cmbMasach.Text) < 0)
+                {
+                    MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                }
+                else
+                {
+                    long tienphat = bb.Songaytre(cmbMasach.Text) * 1000;// phạt trễ hạn 2000/ngày
+                    double tienhong = bb.TienPhat(cmbMasach.Text) * 0.2;
+                    txtTienphat.Text = Math.Max(tienphat, tienhong).ToString();
+                }
+            }
         }
 
         private void dgvSVP_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
