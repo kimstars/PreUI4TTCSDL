@@ -71,6 +71,16 @@ namespace LibraryManager.BUS
         {
             bbvp_dao.update__ngaytra_1_BBVP(masach);
         }
+
+        public DataTable RP_GetDSVP(string MaVP)
+        {
+            return bbvp_dao.GetTT_BBVP(MaVP);
+        }
+        
+        public DataTable RP_GetThongtin_BB(string MaVP)
+        {
+            return bbvp_dao.RP_ThongtinVP(MaVP);
+        }
     }
 }
 

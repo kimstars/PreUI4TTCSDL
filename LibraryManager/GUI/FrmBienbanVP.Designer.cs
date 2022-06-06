@@ -51,6 +51,7 @@ namespace LibraryManager.GUI
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lbTienPhat = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvVipham = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,12 +60,11 @@ namespace LibraryManager.GUI
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_tinhtrang = new System.Windows.Forms.RichTextBox();
-            this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
             this.labelChuY = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lbTienPhat = new System.Windows.Forms.Label();
+            this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
             this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -377,6 +377,18 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
             // 
+            // lbTienPhat
+            // 
+            this.lbTienPhat.AutoSize = true;
+            this.lbTienPhat.BackColor = System.Drawing.Color.Transparent;
+            this.lbTienPhat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lbTienPhat.ForeColor = System.Drawing.Color.Black;
+            this.lbTienPhat.Location = new System.Drawing.Point(495, 379);
+            this.lbTienPhat.Name = "lbTienPhat";
+            this.lbTienPhat.Size = new System.Drawing.Size(33, 37);
+            this.lbTienPhat.TabIndex = 18;
+            this.lbTienPhat.Text = "$";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -401,7 +413,7 @@ namespace LibraryManager.GUI
             this.dgvVipham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -433,7 +445,7 @@ namespace LibraryManager.GUI
             this.dgvVipham.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -444,7 +456,7 @@ namespace LibraryManager.GUI
             this.dgvVipham.HeaderBackColor = System.Drawing.Color.Teal;
             this.dgvVipham.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvVipham.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvVipham.Location = new System.Drawing.Point(345, 45);
+            this.dgvVipham.Location = new System.Drawing.Point(345, 53);
             this.dgvVipham.Name = "dgvVipham";
             this.dgvVipham.RowHeadersVisible = false;
             this.dgvVipham.RowHeadersWidth = 51;
@@ -501,26 +513,6 @@ namespace LibraryManager.GUI
             this.txt_tinhtrang.TabIndex = 11;
             this.txt_tinhtrang.Text = "";
             // 
-            // btnHoanthien
-            // 
-            this.btnHoanthien.BackColor = System.Drawing.Color.Transparent;
-            this.btnHoanthien.BorderRadius = 10;
-            this.btnHoanthien.CheckedState.Parent = this.btnHoanthien;
-            this.btnHoanthien.CustomImages.Parent = this.btnHoanthien;
-            this.btnHoanthien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.btnHoanthien.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
-            this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
-            this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
-            this.btnHoanthien.Location = new System.Drawing.Point(869, 368);
-            this.btnHoanthien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHoanthien.Name = "btnHoanthien";
-            this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
-            this.btnHoanthien.Size = new System.Drawing.Size(120, 46);
-            this.btnHoanthien.TabIndex = 10;
-            this.btnHoanthien.Text = "Hoàn tất";
-            this.btnHoanthien.Click += new System.EventHandler(this.btnHoanthien_Click);
-            // 
             // labelChuY
             // 
             this.labelChuY.AutoSize = true;
@@ -553,17 +545,25 @@ namespace LibraryManager.GUI
             this.bunifuDragControl1.TargetControl = this.paneldrag;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // lbTienPhat
+            // btnHoanthien
             // 
-            this.lbTienPhat.AutoSize = true;
-            this.lbTienPhat.BackColor = System.Drawing.Color.Transparent;
-            this.lbTienPhat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lbTienPhat.ForeColor = System.Drawing.Color.Black;
-            this.lbTienPhat.Location = new System.Drawing.Point(495, 379);
-            this.lbTienPhat.Name = "lbTienPhat";
-            this.lbTienPhat.Size = new System.Drawing.Size(33, 37);
-            this.lbTienPhat.TabIndex = 18;
-            this.lbTienPhat.Text = "$";
+            this.btnHoanthien.BackColor = System.Drawing.Color.Transparent;
+            this.btnHoanthien.BorderRadius = 10;
+            this.btnHoanthien.CheckedState.Parent = this.btnHoanthien;
+            this.btnHoanthien.CustomImages.Parent = this.btnHoanthien;
+            this.btnHoanthien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnHoanthien.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHoanthien.ForeColor = System.Drawing.Color.Black;
+            this.btnHoanthien.HoverState.Parent = this.btnHoanthien;
+            this.btnHoanthien.Image = global::LibraryManager.Properties.Resources.icons8_tick_box_48px;
+            this.btnHoanthien.Location = new System.Drawing.Point(878, 379);
+            this.btnHoanthien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHoanthien.Name = "btnHoanthien";
+            this.btnHoanthien.ShadowDecoration.Parent = this.btnHoanthien;
+            this.btnHoanthien.Size = new System.Drawing.Size(120, 46);
+            this.btnHoanthien.TabIndex = 10;
+            this.btnHoanthien.Text = "Hoàn tất";
+            this.btnHoanthien.Click += new System.EventHandler(this.btnHoanthien_Click);
             // 
             // FrmBienbanVP
             // 

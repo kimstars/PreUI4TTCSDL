@@ -465,6 +465,21 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\BBvipham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BBvipham.Designer.cs">
+      <DependentUpon>BBvipham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBViphamCreator.cs" />
+    <Compile Include="Report\BBVP_DataSet.cs">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBVP_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Template\DSSachVP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -804,6 +819,9 @@
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBvipham.resx">
+      <DependentUpon>BBvipham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\DSSachVP.resx">
       <DependentUpon>DSSachVP.cs</DependentUpon>
     </EmbeddedResource>
@@ -971,6 +989,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\BBVP_DataSet.xsc">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\BBVP_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BBVP_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\BBVP_DataSet.xss">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Report\PhieuMuon_DataSet.xsc">
       <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
     </None>

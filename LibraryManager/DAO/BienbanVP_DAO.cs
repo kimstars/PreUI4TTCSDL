@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
-    class BienbanVP_DAO:DataProvider
+    class BienbanVP_DAO : DataProvider
     {
         //BienBanViPham bbvp = new BienBanViPham();
         public string get_ten_dg(string madocgia)
@@ -141,9 +141,29 @@ namespace LibraryManager.DAO
             Excute_Proc_NParam(NameProc, sParams);
 
         }
+        //lay ra ds cuon sachs cung ly do vi pham
+        public DataTable GetTT_BBVP(string MaVP)
+        {
+            string sql = $"SELECT vp.MaSach, ds.TenDauSach, vp.LyDo FROM dbo.BIENBANVIPHAM  bb INNER JOIN dbo.VIPHAM vp ON vp.MaViPham = bb.MaViPham INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = bb.MaDocGia INNER JOIN dbo.CUONSACH cs ON cs.MaSach = vp.MaSach INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach WHERE bb.MaViPham = '{MaVP}'";
+            return GetData(sql);
+        }
+        //lay ra thong tin bien ban vi pham (ngay tra, ten doc gia vi pham, ten nhan vien lap bien ban)
+
+        public DataTable RP_ThongtinVP(string MaVP)
+        {
+            string procName = "proc_RP_ThongtinVP";
+
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@mavp", MaVP);
+            return GetData_Proc_NParam(procName, sParams);
+        }
+
+
     }
+
 
     // sử dụng trigger biên bản vi phạm thì tự động thêm vi phạm
 
 
+    
 }
