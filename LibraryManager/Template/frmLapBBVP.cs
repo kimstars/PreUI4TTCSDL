@@ -89,17 +89,6 @@ namespace LibraryManager.Template
             bbvp.MaDocGia = cmbMaDg.Text;
             bbvp.MaNhanVien = txtMaNv.Text;
             bbvp.MaViPham = txtMaVP.Text;
-            bbvp.LyDo = cmbLydo.Text;
-            for (int i = 0; i < dgvSVP.RowCount; i++)
-            {
-               
-                lydo += dgvSVP.Rows[i].Cells[2].Value.ToString();
-                if (i != dgvSVP.RowCount - 1)
-                {
-                    lydo += ", ";
-                }
-            }
-            bbvp.LyDo = lydo;
             bbvp.TienPhat = int.Parse(txtTongtienphat.Text);
             bbvp.TinhTrangSach = txtTinhtrang.Text;
 
@@ -113,8 +102,9 @@ namespace LibraryManager.Template
                     ViPham vp = new ViPham();
                     vp.MaSach = dgvSVP.Rows[i].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
+                    vp.Lydo = dgvSVP.Rows[i].Cells[2].Value.ToString();
                     bb.Them_vp(vp);
-                    if (dgvSVP.Rows[i].Cells[0].Value.ToString().Contains("mất"))
+                    if (dgvSVP.Rows[i].Cells[2].Value.ToString().Contains("mất"))
                     {
                         //update ngày trả và set trạng thái cuốn sách đó bằng 0
                         bb.update0(vp.MaSach);
