@@ -52,6 +52,7 @@ namespace LibraryManager.Template
                 }
             }
             dgvSVP.Rows.Add(cmbMasach.Text, bb.get_tensach(cmbMasach.Text), cmbLydo.Text, txtTienphat.Text, "Bỏ");
+            cmbMaDg.Enabled = false;
         }
         private void dgvSVP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -91,7 +92,7 @@ namespace LibraryManager.Template
             bbvp.MaViPham = txtMaVP.Text;
             bbvp.TongTP = 0;
 
-            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn lập biên bản này không?", "Hỏi đáp?", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn lập biên bản này không?", "Thông báo?", MessageBoxButtons.YesNo);
             if (rs == DialogResult.Yes)
             {
                 bb.insertBB(bbvp);
@@ -116,6 +117,11 @@ namespace LibraryManager.Template
                     }
                 }
             }
+
+            MessageBox.Show("Thêm biên bản thành công");
+            dgvSVP.Rows.Clear();
+            txtTongtienphat.Text = "";
+            cmbMaDg.Enabled = true;
         }
 
         private void cmbMasach_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -193,7 +199,7 @@ namespace LibraryManager.Template
             long tienphat = 0;
             for( int i =0; i <dgvSVP.RowCount; i++)
             {
-                tienphat +=int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
+                tienphat += int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
             }
             txtTongtienphat.Text = tienphat.ToString();
         }
