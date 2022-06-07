@@ -87,7 +87,6 @@ namespace LibraryManager.Template
             for (int i = 0; i < dgvDs.Rows.Count; i++)
             {
                 if (txtMasach.Text == dgvDs.Rows[i].Cells[0].Value.ToString())
-
                     return;
 
 

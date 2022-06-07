@@ -29,9 +29,9 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.rbViPham = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbTatCa = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -69,7 +69,7 @@ namespace LibraryManager.Template
             this.label10 = new System.Windows.Forms.Label();
             this.lbNgaySinh = new System.Windows.Forms.Label();
             this.lbTenDocGia = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoDocGia)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -218,22 +218,22 @@ namespace LibraryManager.Template
             // 
             this.dgvInfoDocGia.AllowCustomTheming = false;
             this.dgvInfoDocGia.AllowUserToAddRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.dgvInfoDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvInfoDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInfoDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfoDocGia.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvInfoDocGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoDocGia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInfoDocGia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfoDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfoDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInfoDocGia.ColumnHeadersHeight = 40;
             this.dgvInfoDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDocGia,
@@ -267,14 +267,14 @@ namespace LibraryManager.Template
             this.dgvInfoDocGia.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvInfoDocGia.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
             this.dgvInfoDocGia.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInfoDocGia.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInfoDocGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInfoDocGia.EnableHeadersVisualStyles = false;
             this.dgvInfoDocGia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.dgvInfoDocGia.HeaderBackColor = System.Drawing.Color.Navy;
@@ -435,7 +435,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(443, 555);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(443, 577);
             this.guna2CustomGradientPanel1.TabIndex = 34;
             // 
             // label3
@@ -464,7 +464,7 @@ namespace LibraryManager.Template
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 480);
+            this.label5.Location = new System.Drawing.Point(13, 480);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 28);
             this.label5.TabIndex = 29;
@@ -607,23 +607,23 @@ namespace LibraryManager.Template
             this.lbTenDocGia.Size = new System.Drawing.Size(245, 153);
             this.lbTenDocGia.TabIndex = 23;
             // 
-            // guna2HtmlLabel2
+            // label4
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(549, 11);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(324, 43);
-            this.guna2HtmlLabel2.TabIndex = 50;
-            this.guna2HtmlLabel2.Text = "DANH SÁCH ĐỘC GIẢ";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.label4.Location = new System.Drawing.Point(576, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(339, 41);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "DANH SÁCH ĐỘC GIẢ";
             // 
             // FrmThongTinDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dgvInfoDocGia);
             this.Controls.Add(this.guna2CustomGradientPanel3);
@@ -681,6 +681,6 @@ namespace LibraryManager.Template
         private System.Windows.Forms.Label lbDiaChi;
         private Guna.UI2.WinForms.Guna2RadioButton rbTatCa;
         private Guna.UI2.WinForms.Guna2RadioButton rbViPham;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private System.Windows.Forms.Label label4;
     }
 }

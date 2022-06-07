@@ -274,5 +274,17 @@ namespace LibraryManager.Template
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.QLNhap());
         }
+
+        private void btnM_DSSachVP_Click(object sender, EventArgs e)
+        {
+
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachVP());
+        }
+
+        private void btnM_DGVP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
