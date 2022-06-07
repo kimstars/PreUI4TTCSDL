@@ -91,21 +91,7 @@ namespace LibraryManager.GUI
             bbvp.MaDocGia = txtMadg.Text.Trim();
             bbvp.MaNhanVien = txtManv.Text.Trim();
             bbvp.MaViPham = txtMaVP.Text;
-            long tienphat = 0;
-            string lydo = "";
-            for (int i = 0; i < dgvVipham.RowCount; i++)
-            {
-
-                lydo += dgvVipham.Rows[i].Cells[2].Value.ToString();
-                if (i != dgvVipham.RowCount - 1)
-                {
-                    lydo += ", ";
-                }
-            }
-            bbvp.TienPhat = int.Parse(lbTienPhat.Text);
-
-            bbvp.LyDo = lydo;
-            bbvp.TinhTrangSach = txt_tinhtrang.Text;
+            bbvp.TongTP = 0;
             DialogResult result = MessageBox.Show("Bạn có muốn hoàn tất biên bản", "Hỏi đáp", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -116,8 +102,11 @@ namespace LibraryManager.GUI
                     ViPham vp = new ViPham();
                     vp.MaSach = dgvVipham.Rows[k].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
+                    vp.Lydo = dgvVipham.Rows[k].Cells[2].Value.ToString();
+                    vp.TienPhat = int.Parse(dgvVipham.Rows[k].Cells[3].Value.ToString());
+
                     bbvp_bus.Them_vp(vp);
-                    if (dgvVipham.Rows[k].Cells[0].Value.ToString().Contains("mất"))
+                    if (dgvVipham.Rows[k].Cells[2].Value.ToString().Contains("mất"))
                     {
                         //update ngày trả và set trạng thái cuốn sách đó bằng 0
                         bbvp_bus.update0(vp.MaSach);

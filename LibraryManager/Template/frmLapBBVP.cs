@@ -52,6 +52,7 @@ namespace LibraryManager.Template
                 }
             }
             dgvSVP.Rows.Add(cmbMasach.Text, bb.get_tensach(cmbMasach.Text), cmbLydo.Text, txtTienphat.Text, "Bỏ");
+            cmbMaDg.Enabled = false;
         }
         private void dgvSVP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,21 +90,9 @@ namespace LibraryManager.Template
             bbvp.MaDocGia = cmbMaDg.Text;
             bbvp.MaNhanVien = txtMaNv.Text;
             bbvp.MaViPham = txtMaVP.Text;
-            bbvp.LyDo = cmbLydo.Text;
-            for (int i = 0; i < dgvSVP.RowCount; i++)
-            {
-               
-                lydo += dgvSVP.Rows[i].Cells[2].Value.ToString();
-                if (i != dgvSVP.RowCount - 1)
-                {
-                    lydo += ", ";
-                }
-            }
-            bbvp.LyDo = lydo;
-            bbvp.TienPhat = int.Parse(txtTongtienphat.Text);
-            bbvp.TinhTrangSach = txtTinhtrang.Text;
+            bbvp.TongTP = 0;
 
-            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn lập biên bản này không?", "Hỏi đáp?", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn lập biên bản này không?", "Thông báo?", MessageBoxButtons.YesNo);
             if (rs == DialogResult.Yes)
             {
                 bb.insertBB(bbvp);
@@ -113,8 +102,10 @@ namespace LibraryManager.Template
                     ViPham vp = new ViPham();
                     vp.MaSach = dgvSVP.Rows[i].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
+                    vp.Lydo = dgvSVP.Rows[i].Cells[2].Value.ToString();
+                    vp.TienPhat = int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
                     bb.Them_vp(vp);
-                    if (dgvSVP.Rows[i].Cells[0].Value.ToString().Contains("mất"))
+                    if (dgvSVP.Rows[i].Cells[2].Value.ToString().Contains("mất"))
                     {
                         //update ngày trả và set trạng thái cuốn sách đó bằng 0
                         bb.update0(vp.MaSach);
@@ -126,6 +117,11 @@ namespace LibraryManager.Template
                     }
                 }
             }
+
+            MessageBox.Show("Thêm biên bản thành công");
+            dgvSVP.Rows.Clear();
+            txtTongtienphat.Text = "";
+            cmbMaDg.Enabled = true;
         }
 
         private void cmbMasach_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -153,9 +149,35 @@ namespace LibraryManager.Template
 
                 txtTienphat.Text = (bb.TienPhat(cmbMasach.Text) * 0.2).ToString();
             }
-            else if (cmbLydo.Text == "làm mất sách")
+            if (cmbLydo.Text == "làm mất sách")
                 //{
                 txtTienphat.Text = (bb.TienPhat(cmbMasach.Text) * 1.5).ToString();
+            if(cmbLydo.Text == "trả sách trễ hạn và làm mất")
+            {
+                if (bb.Songaytre(cmbMasach.Text) < 0)
+                {
+                    MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                }
+                else
+                {
+                    long tienphat = bb.Songaytre(cmbMasach.Text) * 1000;// phạt trễ hạn 2000/ngày
+                    double tienmat = bb.TienPhat(cmbMasach.Text) * 1.5;
+                    txtTienphat.Text = Math.Max(tienphat,tienmat).ToString();
+                }
+            }
+            else if( cmbLydo.Text=="trả sách trễ hạn và làm hỏng")
+            {
+                if (bb.Songaytre(cmbMasach.Text) < 0)
+                {
+                    MessageBox.Show("Cuốn sách này chưa đến hạn trả. Vui lòng chọn lý do khác!");
+                }
+                else
+                {
+                    long tienphat = bb.Songaytre(cmbMasach.Text) * 1000;// phạt trễ hạn 2000/ngày
+                    double tienhong = bb.TienPhat(cmbMasach.Text) * 0.2;
+                    txtTienphat.Text = Math.Max(tienphat, tienhong).ToString();
+                }
+            }
         }
 
         private void dgvSVP_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -177,7 +199,7 @@ namespace LibraryManager.Template
             long tienphat = 0;
             for( int i =0; i <dgvSVP.RowCount; i++)
             {
-                tienphat +=int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
+                tienphat += int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
             }
             txtTongtienphat.Text = tienphat.ToString();
         }

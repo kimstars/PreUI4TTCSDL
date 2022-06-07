@@ -40,9 +40,7 @@ namespace LibraryManager.Template
             this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtTienphat = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTinhtrang = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLapBB = new Guna.UI2.WinForms.Guna2Button();
             this.btnVP = new Guna.UI2.WinForms.Guna2Button();
             this.dgvSVP = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -75,10 +73,10 @@ namespace LibraryManager.Template
             this.lbLapbb.AutoSize = true;
             this.lbLapbb.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLapbb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.lbLapbb.Location = new System.Drawing.Point(254, -8);
+            this.lbLapbb.Location = new System.Drawing.Point(256, -1);
             this.lbLapbb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLapbb.Name = "lbLapbb";
-            this.lbLapbb.Size = new System.Drawing.Size(291, 37);
+            this.lbLapbb.Size = new System.Drawing.Size(235, 30);
             this.lbLapbb.TabIndex = 1;
             this.lbLapbb.Text = "Lập biên bản vi phạm";
             // 
@@ -90,7 +88,7 @@ namespace LibraryManager.Template
             this.label2.Location = new System.Drawing.Point(24, 19);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã sách";
             // 
@@ -102,7 +100,7 @@ namespace LibraryManager.Template
             this.label4.Location = new System.Drawing.Point(24, 114);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.Size = new System.Drawing.Size(70, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "Mã vi phạm";
             // 
@@ -114,7 +112,7 @@ namespace LibraryManager.Template
             this.label7.Location = new System.Drawing.Point(24, 70);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 20);
+            this.label7.Size = new System.Drawing.Size(53, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "Tên sách";
             // 
@@ -177,7 +175,7 @@ namespace LibraryManager.Template
             this.label8.Location = new System.Drawing.Point(22, 160);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 20);
+            this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 2;
             this.label8.Text = "Lý do vi phạm";
             // 
@@ -189,21 +187,9 @@ namespace LibraryManager.Template
             this.label9.Location = new System.Drawing.Point(24, 213);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 20);
+            this.label9.Size = new System.Drawing.Size(57, 15);
             this.label9.TabIndex = 2;
             this.label9.Text = "Tiền phạt";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 262);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 20);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Tình trạng sách";
             // 
             // txtTienphat
             // 
@@ -229,31 +215,6 @@ namespace LibraryManager.Template
             this.txtTienphat.ShadowDecoration.Parent = this.txtTienphat;
             this.txtTienphat.Size = new System.Drawing.Size(216, 38);
             this.txtTienphat.TabIndex = 3;
-            // 
-            // txtTinhtrang
-            // 
-            this.txtTinhtrang.BackColor = System.Drawing.Color.Transparent;
-            this.txtTinhtrang.BorderRadius = 6;
-            this.txtTinhtrang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTinhtrang.DefaultText = "";
-            this.txtTinhtrang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTinhtrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTinhtrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTinhtrang.DisabledState.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTinhtrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTinhtrang.FocusedState.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTinhtrang.HoverState.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.Location = new System.Drawing.Point(156, 254);
-            this.txtTinhtrang.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.txtTinhtrang.Name = "txtTinhtrang";
-            this.txtTinhtrang.PasswordChar = '\0';
-            this.txtTinhtrang.PlaceholderText = "";
-            this.txtTinhtrang.SelectedText = "";
-            this.txtTinhtrang.ShadowDecoration.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.Size = new System.Drawing.Size(216, 38);
-            this.txtTinhtrang.TabIndex = 3;
             // 
             // btnLapBB
             // 
@@ -283,7 +244,7 @@ namespace LibraryManager.Template
             this.btnVP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnVP.ForeColor = System.Drawing.Color.White;
             this.btnVP.HoverState.Parent = this.btnVP;
-            this.btnVP.Location = new System.Drawing.Point(190, 315);
+            this.btnVP.Location = new System.Drawing.Point(184, 292);
             this.btnVP.Name = "btnVP";
             this.btnVP.ShadowDecoration.Parent = this.btnVP;
             this.btnVP.Size = new System.Drawing.Size(129, 45);
@@ -421,7 +382,7 @@ namespace LibraryManager.Template
             this.label6.Location = new System.Drawing.Point(24, 35);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
+            this.label6.Size = new System.Drawing.Size(79, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "Mã nhân viên";
             // 
@@ -433,7 +394,7 @@ namespace LibraryManager.Template
             this.label5.Location = new System.Drawing.Point(41, 190);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 20);
+            this.label5.Size = new System.Drawing.Size(68, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "Tên độc giả";
             // 
@@ -471,7 +432,7 @@ namespace LibraryManager.Template
             this.label1.Location = new System.Drawing.Point(43, 136);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã độc giả";
             // 
@@ -483,7 +444,7 @@ namespace LibraryManager.Template
             this.label3.Location = new System.Drawing.Point(22, 84);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
+            this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên nhân viên";
             // 
@@ -594,7 +555,9 @@ namespace LibraryManager.Template
             this.cmbLydo.Items.AddRange(new object[] {
             "trả sách trễ hạn",
             "làm hỏng sách",
-            "làm mất sách"});
+            "làm mất sách",
+            "trả sách trễ hạn và làm mất",
+            "trả sách trễ hạn và làm hỏng"});
             this.cmbLydo.ItemsAppearance.Parent = this.cmbLydo;
             this.cmbLydo.Location = new System.Drawing.Point(156, 157);
             this.cmbLydo.Name = "cmbLydo";
@@ -613,12 +576,10 @@ namespace LibraryManager.Template
             this.guna2Panel2.Controls.Add(this.txtMaVP);
             this.guna2Panel2.Controls.Add(this.cmbMasach);
             this.guna2Panel2.Controls.Add(this.label8);
-            this.guna2Panel2.Controls.Add(this.txtTinhtrang);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label9);
             this.guna2Panel2.Controls.Add(this.txtTenSach);
             this.guna2Panel2.Controls.Add(this.label7);
-            this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2Panel2.Location = new System.Drawing.Point(16, 289);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -632,7 +593,7 @@ namespace LibraryManager.Template
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label11.Location = new System.Drawing.Point(433, 640);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 23);
+            this.label11.Size = new System.Drawing.Size(99, 19);
             this.label11.TabIndex = 18;
             this.label11.Text = "Tổng tiền phạt";
             // 
@@ -661,7 +622,7 @@ namespace LibraryManager.Template
             // 
             // frmLapBBVP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtTongtienphat);
             this.Controls.Add(this.btnLapBB);
@@ -694,9 +655,7 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtMaVP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox txtTinhtrang;
         private Guna.UI2.WinForms.Guna2TextBox txtTienphat;
-        private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvSVP;
         private Guna.UI2.WinForms.Guna2Button btnLapBB;
         private Guna.UI2.WinForms.Guna2Button btnVP;

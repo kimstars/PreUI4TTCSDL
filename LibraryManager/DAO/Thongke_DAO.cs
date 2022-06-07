@@ -39,8 +39,8 @@ namespace LibraryManager.DAO
         }
         public DataTable tk_sach_tre_hen_dg(string madg)
         {
-            string sqlString = $@"select pmt.mamuontra, tt.MaSach ,ds.TenDauSach,ngaymuon, ngaytra  
-                from docgia dg, PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where 
+            string sqlString = $@"select pmt.mamuontra , tt.MaSach,ds.TenDauSach,ngaymuon, ngaytra  
+                from  PHIEUMUONTRA pmt, THONGTINMUONTRA tt,CUONSACH cs,DAUSACH ds where 
                 pmt.MaMuonTra = tt.MaMuonTra and tt.MaSach = cs.MaSach and cs.MaDauSach = ds.MaDauSach 
                 and (ngaytra > hantra or (ngaytra is null and getdate()> hantra)) and pmt.Madocgia ='{madg}'";
             return GetData(sqlString);
