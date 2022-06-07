@@ -33,6 +33,7 @@ namespace LibraryManager.Template
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelShow = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +47,6 @@ namespace LibraryManager.Template
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelShow.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
@@ -60,10 +60,22 @@ namespace LibraryManager.Template
             this.panelShow.Controls.Add(this.btnBack);
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(0, 0);
-            this.panelShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(853, 514);
+            this.panelShow.Size = new System.Drawing.Size(1137, 633);
             this.panelShow.TabIndex = 0;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(452, 36);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(241, 43);
+            this.guna2HtmlLabel2.TabIndex = 49;
+            this.guna2HtmlLabel2.Text = "THÊM THỂ LOẠI";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -78,10 +90,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(50, 136);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(67, 167);
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(293, 297);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(391, 366);
             this.guna2CustomGradientPanel3.TabIndex = 45;
             this.guna2CustomGradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel3_Paint);
             // 
@@ -96,11 +109,11 @@ namespace LibraryManager.Template
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.Parent = this.btnSua;
             this.btnSua.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnSua.Location = new System.Drawing.Point(115, 206);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(153, 254);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(58, 32);
+            this.btnSua.Size = new System.Drawing.Size(77, 39);
             this.btnSua.TabIndex = 12;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -116,13 +129,13 @@ namespace LibraryManager.Template
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Image = global::LibraryManager.Properties.Resources.icons8_cancel_48px;
-            this.btnXoa.Location = new System.Drawing.Point(207, 206);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(276, 254);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(58, 32);
+            this.btnXoa.Size = new System.Drawing.Size(77, 39);
             this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Text = "Huỷ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
@@ -136,11 +149,11 @@ namespace LibraryManager.Template
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.HoverState.Parent = this.btnThem;
             this.btnThem.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnThem.Location = new System.Drawing.Point(25, 206);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(33, 254);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
-            this.btnThem.Size = new System.Drawing.Size(58, 32);
+            this.btnThem.Size = new System.Drawing.Size(77, 39);
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -164,14 +177,14 @@ namespace LibraryManager.Template
             this.txtTenTheLoai.ForeColor = System.Drawing.Color.Black;
             this.txtTenTheLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenTheLoai.HoverState.Parent = this.txtTenTheLoai;
-            this.txtTenTheLoai.Location = new System.Drawing.Point(25, 147);
-            this.txtTenTheLoai.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenTheLoai.Location = new System.Drawing.Point(33, 181);
+            this.txtTenTheLoai.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTenTheLoai.Name = "txtTenTheLoai";
             this.txtTenTheLoai.PasswordChar = '\0';
             this.txtTenTheLoai.PlaceholderText = "";
             this.txtTenTheLoai.SelectedText = "";
             this.txtTenTheLoai.ShadowDecoration.Parent = this.txtTenTheLoai;
-            this.txtTenTheLoai.Size = new System.Drawing.Size(240, 32);
+            this.txtTenTheLoai.Size = new System.Drawing.Size(320, 39);
             this.txtTenTheLoai.TabIndex = 0;
             // 
             // label1
@@ -179,10 +192,9 @@ namespace LibraryManager.Template
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 117);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(29, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 15);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên thể loại";
             // 
@@ -205,14 +217,14 @@ namespace LibraryManager.Template
             this.txtMaTheLoai.ForeColor = System.Drawing.Color.Black;
             this.txtMaTheLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaTheLoai.HoverState.Parent = this.txtMaTheLoai;
-            this.txtMaTheLoai.Location = new System.Drawing.Point(25, 73);
-            this.txtMaTheLoai.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaTheLoai.Location = new System.Drawing.Point(33, 90);
+            this.txtMaTheLoai.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtMaTheLoai.Name = "txtMaTheLoai";
             this.txtMaTheLoai.PasswordChar = '\0';
             this.txtMaTheLoai.PlaceholderText = "";
             this.txtMaTheLoai.SelectedText = "";
             this.txtMaTheLoai.ShadowDecoration.Parent = this.txtMaTheLoai;
-            this.txtMaTheLoai.Size = new System.Drawing.Size(240, 32);
+            this.txtMaTheLoai.Size = new System.Drawing.Size(320, 39);
             this.txtMaTheLoai.TabIndex = 0;
             // 
             // label5
@@ -220,10 +232,9 @@ namespace LibraryManager.Template
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 43);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(29, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 15);
+            this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mã thể loại :";
             // 
@@ -283,14 +294,15 @@ namespace LibraryManager.Template
             this.dgvTheLoai.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvTheLoai.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvTheLoai.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvTheLoai.Location = new System.Drawing.Point(380, 136);
+            this.dgvTheLoai.Location = new System.Drawing.Point(507, 167);
+            this.dgvTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTheLoai.Name = "dgvTheLoai";
             this.dgvTheLoai.RowHeadersVisible = false;
             this.dgvTheLoai.RowHeadersWidth = 51;
             this.dgvTheLoai.RowTemplate.Height = 40;
             this.dgvTheLoai.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvTheLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTheLoai.Size = new System.Drawing.Size(422, 297);
+            this.dgvTheLoai.Size = new System.Drawing.Size(563, 366);
             this.dgvTheLoai.TabIndex = 47;
             this.dgvTheLoai.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvTheLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTheLoai_CellClick_1);
@@ -327,34 +339,22 @@ namespace LibraryManager.Template
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
             this.btnBack.Image = global::LibraryManager.Properties.Resources.icons8_back_24px_1;
-            this.btnBack.Location = new System.Drawing.Point(50, 29);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(67, 36);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
-            this.btnBack.Size = new System.Drawing.Size(47, 45);
+            this.btnBack.Size = new System.Drawing.Size(63, 55);
             this.btnBack.TabIndex = 48;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(339, 29);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(192, 34);
-            this.guna2HtmlLabel2.TabIndex = 49;
-            this.guna2HtmlLabel2.Text = "THÊM THỂ LOẠI";
-            // 
             // FrmThemTheLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelShow);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmThemTheLoai";
-            this.Size = new System.Drawing.Size(853, 514);
+            this.Size = new System.Drawing.Size(1137, 633);
             this.Load += new System.EventHandler(this.FrmThemTheLoai_Load);
             this.panelShow.ResumeLayout(false);
             this.panelShow.PerformLayout();

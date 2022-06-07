@@ -40,6 +40,7 @@ namespace LibraryManager.Template
             hideChildForm();
             dgvChonDauSach.DataSource = dsBus.LoadListDSMini();
             txtMaCuonSach.Text = csBus.CreateNext_MaSach();
+            lbTenNVXL.Text = csBus.Get_tennv(MaNhanVien);
         }
 
 
@@ -98,7 +99,6 @@ namespace LibraryManager.Template
                 MessageBox.Show("Nhập thành công!");
                 txtMaCuonSach.Clear();
                 txtViTriSach.Clear();
-                cbMoiCu.Items.Clear();
                 txtMaCuonSach.Text = csBus.CreateNext_MaSach();
                 //Load lai len dgv
             }

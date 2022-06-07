@@ -95,12 +95,6 @@ namespace LibraryManager.Template
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            TheLoai_BUS tlBus = new TheLoai_BUS();
-            TheLoai tl = new TheLoai();
-            tl.MaTheLoai = txtMaTheLoai.Text;
-            tl.TenTheLoai = txtTenTheLoai.Text;
-            tlBus.Delete(tl);
-            dgvTheLoai.DataSource = tlBus.LoadListTL();
             txtMaTheLoai.Clear();
             txtTenTheLoai.Clear();
         }

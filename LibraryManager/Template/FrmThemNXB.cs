@@ -105,14 +105,6 @@ namespace LibraryManager.Template
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            NhaXuatBan_BUS nxbBus = new NhaXuatBan_BUS();
-            NhaXuatBan nxb = new NhaXuatBan();
-            nxb.MaNhaXuatBan = txtMaNhaXuatBan.Text;
-            nxb.TenNhaXuatBan = txtTenNhaXuatBan.Text;
-            nxb.DiaChi = txtDiaChi.Text;
-            nxbBus.Delete(nxb);
-            //Load lai len dgv
-            dgvNhaXuatBan.DataSource = nxbBus.LoadListNXB();
             txtMaNhaXuatBan.Clear();
             txtTenNhaXuatBan.Clear();
             txtDiaChi.Clear();

@@ -85,13 +85,6 @@ namespace LibraryManager.Template
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            TacGia_BUS tgBus = new TacGia_BUS();
-            TacGia tg = new TacGia();
-            tg.MaTacGia = txtMaTacGia.Text;
-            tg.TenTacGia = txtTenTacGia.Text;
-            tgBus.Delete(tg);
-            //Load lai len dgv
-            dgvTacGia.DataSource = tgBus.LoadListTG();
             txtMaTacGia.Clear();
             txtTenTacGia.Clear();
         }
