@@ -31,6 +31,7 @@ namespace LibraryManager.Template
         private void FrmThemTacGia_Load(object sender, EventArgs e)
         {
             dgvTacGia.DataSource = tgBus.LoadListTG();
+            txtMaTacGia.Text = tgBus.GetLastest_MaTG();
         }
 
         private void dgvTacGia_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -87,6 +88,7 @@ namespace LibraryManager.Template
         {
             txtMaTacGia.Clear();
             txtTenTacGia.Clear();
+            txtMaTacGia.Text = tgBus.GetLastest_MaTG();
         }
 
         private void dgvTacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)

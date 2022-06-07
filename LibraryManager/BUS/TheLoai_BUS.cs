@@ -18,6 +18,23 @@ namespace LibraryManager.BUS
             return tlDao.GetTenTheLoai();
         }
 
+        public string GetLastest_MaTL()
+        {
+            return tlDao.GetLastest_MaTL();
+        }
+
+        public string CreateNextMaTL()
+        {
+            string current = GetLastest_MaTL();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string Ma = "TL000000";
+            Ma = Ma.Substring(0, Ma.Length - index.Length) + index;
+
+            return Ma;
+        }
         public DataTable LoadListTL()
         {
             return tlDao.LoadTheLoai();

@@ -23,6 +23,7 @@ namespace LibraryManager.Template
         private void FrmThemTheLoai_Load(object sender, EventArgs e)
         {
             dgvTheLoai.DataSource = tlBus.LoadListTL();
+            txtMaTheLoai.Text = tlBus.GetLastest_MaTL();
         }
 
         private void dgvTheLoai_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,6 +98,7 @@ namespace LibraryManager.Template
         {
             txtMaTheLoai.Clear();
             txtTenTheLoai.Clear();
+            txtMaTheLoai.Text = tlBus.GetLastest_MaTL();
         }
     }
 }

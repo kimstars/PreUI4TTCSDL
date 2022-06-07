@@ -17,6 +17,23 @@ namespace LibraryManager.BUS
             return tgDao.GetTenTacGia();
         }
 
+        public string GetLastest_MaTG()
+        {
+            return tgDao.GetLastest_MaTG();
+        }
+
+        public string CreateNextMaTG()
+        {
+            string current = GetLastest_MaTG();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string Ma = "TG000000";
+            Ma = Ma.Substring(0, Ma.Length - index.Length) + index;
+
+            return Ma;
+        }
 
         public DataTable LoadListTG()
         {

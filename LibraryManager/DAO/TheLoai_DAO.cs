@@ -17,6 +17,12 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string GetLastest_MaTL()
+        {
+            string sql = $" SELECT TOP 1 MaTheLoai FROM dbo.THELOAI ORDER BY MaTheLoai DESC";
+
+            return GetString(sql);
+        }
         public DataTable LoadTheLoai()
         {
             string sqlString = @"select * from TheLoai";

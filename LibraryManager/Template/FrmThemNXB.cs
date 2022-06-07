@@ -46,6 +46,7 @@ namespace LibraryManager.Template
         private void FrmThemNXB_Load(object sender, EventArgs e)
         {
             dgvNhaXuatBan.DataSource = nxbBus.LoadListNXB();
+            txtMaNhaXuatBan.Text = nxbBus.GetLastest_MaNXB();
         }
 
         private void dgvNhaXuatBan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -108,6 +109,7 @@ namespace LibraryManager.Template
             txtMaNhaXuatBan.Clear();
             txtTenNhaXuatBan.Clear();
             txtDiaChi.Clear();
+            txtMaNhaXuatBan.Text = nxbBus.GetLastest_MaNXB();
         }
     }
 }

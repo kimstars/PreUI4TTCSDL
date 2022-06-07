@@ -265,7 +265,8 @@ namespace LibraryManager.Template
             txtMoTa.Clear();
             imageBook.BackgroundImage = null;
             imageBook.Update();
- 
+            txtMaDauSach.Text = dsBus.CreateNextMaDS();
+
         }
 
         private void txtTuKhoa_TextChanged(object sender, EventArgs e)
