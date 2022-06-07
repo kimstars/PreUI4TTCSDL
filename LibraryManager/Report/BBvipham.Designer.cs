@@ -82,7 +82,7 @@ namespace LibraryManager.Report
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 10.66667F;
+            this.TopMargin.HeightF = 11F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -505,7 +505,7 @@ namespace LibraryManager.Report
             this.bBVP_DataSet});
             this.DataSource = this.BBVP;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(92, 44, 11, 40);
+            this.Margins = new System.Drawing.Printing.Margins(89, 44, 11, 40);
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

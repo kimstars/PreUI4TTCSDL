@@ -16,19 +16,15 @@ namespace LibraryManager.Report
         public BBvipham RP;
         public int sumPhat;
         public int sumSL;
-        public string MaNhanVien;
-        public string MaDocGia;
 
         public BienbanVP_BUS bbBus = new BienbanVP_BUS();
-        public BBViphamCreator(string MaVP, string MaNV)
+        public BBViphamCreator(string MaVP)
         {
             this.MaViPham = MaVP;
             this.DS = new BBVP_DataSet();
 
             this.RP = new BBvipham();
 
-            this.MaNhanVien = MaNV;
-            this.MaDocGia = "";
             sumSL = sumPhat = 0;
         }
 
@@ -40,13 +36,16 @@ namespace LibraryManager.Report
 
 
             DataTable ThongTinBB = bbBus.RP_GetThongtin_BB(MaViPham);
-            DS.TTBienBan.Rows.Add(new object[] {
-                ThongTinBB.Rows[0]["NgayTra"],
-                ThongTinBB.Rows[0]["MaDocGia"],
-                ThongTinBB.Rows[0]["TenDocGia"],
-                ThongTinBB.Rows[0]["TenNhanVien"],
-                MaViPham
-            });
+            if (ThongTinBB.Rows.Count > 0)
+            {
+                DS.TTBienBan.Rows.Add(new object[] {
+                    ThongTinBB.Rows[0]["NgayTra"],
+                    ThongTinBB.Rows[0]["MaDocGia"],
+                    ThongTinBB.Rows[0]["TenDocGia"],
+                    ThongTinBB.Rows[0]["TenNhanVien"],
+                    MaViPham
+                });
+            }
 
             foreach (DataRow row in ChiTietVP_DT.Rows)
             {

@@ -84,5 +84,12 @@ namespace LibraryManager.GUI
             Template.testLogin newform = new Template.testLogin();
             newform.Show();
         }
+
+        private void btnRP_BBVP_Click(object sender, EventArgs e)
+        {
+            Report.BBViphamCreator tkcreator = new Report.BBViphamCreator("VP000000");
+
+            tkcreator.ShowReportHoaDon();
+        }
     }
 }
