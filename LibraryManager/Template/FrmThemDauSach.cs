@@ -240,19 +240,23 @@ namespace LibraryManager.Template
 
         private void dgvDauSach_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgvDauSach.Rows[e.RowIndex];
-            txtMaDauSach.Text = row.Cells[0].Value.ToString();
-            txtTenDauSach.Text = row.Cells[1].Value.ToString();
-            txtNamXuatBan.Text = row.Cells[4].Value.ToString();
-            txtLanTaiBan.Text = row.Cells[2].Value.ToString();
-            txtGiaTien.Text = row.Cells[5].Value.ToString();
-            txtMoTa.Text = row.Cells[6].Value.ToString();
-            cbTenTacGia.Text = row.Cells[9].Value.ToString();
-            cbTenNXB.Text = row.Cells[11].Value.ToString();
-            cbTenTheLoai.Text = row.Cells[14].Value.ToString();
-            ImageConverter objImageConverter = new ImageConverter();
-            imageBook.BackgroundImage = (Image)objImageConverter.ConvertFrom(row.Cells[7].Value);
-            imageBook.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvDauSach.Rows[e.RowIndex];
+                txtMaDauSach.Text = row.Cells[0].Value.ToString();
+                txtTenDauSach.Text = row.Cells[1].Value.ToString();
+                txtNamXuatBan.Text = row.Cells[4].Value.ToString();
+                txtLanTaiBan.Text = row.Cells[2].Value.ToString();
+                txtGiaTien.Text = row.Cells[5].Value.ToString();
+                txtMoTa.Text = row.Cells[6].Value.ToString();
+                cbTenTacGia.Text = row.Cells[9].Value.ToString();
+                cbTenNXB.Text = row.Cells[11].Value.ToString();
+                cbTenTheLoai.Text = row.Cells[14].Value.ToString();
+                ImageConverter objImageConverter = new ImageConverter();
+                imageBook.BackgroundImage = (Image)objImageConverter.ConvertFrom(row.Cells[7].Value);
+                imageBook.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

@@ -87,8 +87,16 @@ namespace LibraryManager.Template
             for (int i = 0; i < dgvDs.Rows.Count; i++)
             {
                 if (txtMasach.Text == dgvDs.Rows[i].Cells[0].Value.ToString())
+                {
+                    MessageBox.Show("Cuốn sách đã được chọn!");
                     return;
+                }
 
+                if(dgvDs.Rows.Count > 0 && dgvDs.Rows[0].Cells["MaDocGia"].Value.ToString() != dgvDs.Rows[i].Cells["MaDocGia"].Value.ToString())
+                {
+                    MessageBox.Show("Hãy trả sách của một độc giả trong một lượt trả!");
+                    return;
+                }
 
             }
 
