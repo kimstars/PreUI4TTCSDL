@@ -19,6 +19,12 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string GetLastest_MaTG()
+        {
+            string sql = $" SELECT TOP 1 MaTacGia FROM dbo.TACGIA ORDER BY MaTacGia DESC";
+
+            return GetString(sql);
+        }
         public DataTable LoadTacGia()
         {
             string sqlString = @"select * from TacGia";

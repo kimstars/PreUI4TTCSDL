@@ -42,7 +42,7 @@ namespace LibraryManager.BUS
         }
         public bool Them(DocGia dg)
         {
-           return dgDao.Insert(dg);   
+            return dgDao.Insert(dg);
         }
         public DataTable TimKiem(string _timkiem)
         {
@@ -54,7 +54,7 @@ namespace LibraryManager.BUS
         {
             byte[] img = LoadImageFromTableDB("DocGia", maID, "MaDocGia");
             PictureBox avt = new PictureBox();
-            if (img !=  null && img.Length > 0)
+            if (img != null && img.Length > 0)
             {
                 return Image.FromStream(new MemoryStream(img));
             }
@@ -62,9 +62,9 @@ namespace LibraryManager.BUS
             {
                 return Properties.Resources.icons8_search_client_80px;
             }
-            
+
         }
-        
+
         // -> set
         public void LuuAnh(string maID, string imgPath)
         {
@@ -193,3 +193,4 @@ namespace LibraryManager.BUS
         #endregion
     }
 }
+#endregion

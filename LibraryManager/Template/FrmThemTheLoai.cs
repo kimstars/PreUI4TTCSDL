@@ -23,6 +23,7 @@ namespace LibraryManager.Template
         private void FrmThemTheLoai_Load(object sender, EventArgs e)
         {
             dgvTheLoai.DataSource = tlBus.LoadListTL();
+            txtMaTheLoai.Text = tlBus.GetLastest_MaTL();
         }
 
         private void dgvTheLoai_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -95,14 +96,9 @@ namespace LibraryManager.Template
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            TheLoai_BUS tlBus = new TheLoai_BUS();
-            TheLoai tl = new TheLoai();
-            tl.MaTheLoai = txtMaTheLoai.Text;
-            tl.TenTheLoai = txtTenTheLoai.Text;
-            tlBus.Delete(tl);
-            dgvTheLoai.DataSource = tlBus.LoadListTL();
             txtMaTheLoai.Clear();
             txtTenTheLoai.Clear();
+            txtMaTheLoai.Text = tlBus.GetLastest_MaTL();
         }
     }
 }

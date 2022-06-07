@@ -17,6 +17,10 @@ namespace LibraryManager.BUS
             return sachDao.GetMaSach();
         }
 
+        public string Get_tennv(string a)
+        {
+            return sachDao.get_ten_nv(a);
+        }
 
         public void ThemThongtinNhap(CuonSach cs, PhieuNhap pn)
         {

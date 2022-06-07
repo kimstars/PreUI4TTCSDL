@@ -18,6 +18,12 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
         //proc lấy ra mã sách lớn nhất
+
+        public string get_ten_nv(string a)
+        {
+            string sqlString = "select tennhanvien from nhanvien where manhanvien = '" + a + "'";
+            return GetString(sqlString);
+        }
         public string Lastest_MaSach()
         {
 

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace LibraryManager.BUS
 {
-    class NhaXuatBan_BUS
+    class NhaXuatBan_BUS 
     {
         NhaXuatBan_DAO nxbDao = new NhaXuatBan_DAO();
         public DataTable LoadTenNXB()
@@ -17,6 +17,25 @@ namespace LibraryManager.BUS
             return nxbDao.GetTenNXB();
         }
 
+        public string GetLastest_MaNXB()
+        {
+            return nxbDao.GetLastest_MaNXB();
+        }
+
+        public string CreateNextMaNXB()
+        {
+            string current = GetLastest_MaNXB();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string Ma = "NXB000000";
+            Ma = Ma.Substring(0, Ma.Length - index.Length) + index;
+
+            return Ma;
+        }
+
+        
         public DataTable LoadListNXB()
         {
             return nxbDao.LoadNhaXuatBan();

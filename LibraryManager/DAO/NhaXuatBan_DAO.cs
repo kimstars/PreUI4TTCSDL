@@ -17,6 +17,12 @@ namespace LibraryManager.DAO
             return GetData(sql);
         }
 
+        public string GetLastest_MaNXB()
+        {
+            string sql = $" SELECT TOP 1 MaNhaXuatBan FROM dbo.NHAXUATBAN ORDER BY MaNhaXuatBan DESC";
+
+            return GetString(sql);
+        }
         public DataTable LoadNhaXuatBan()
         {
             string sqlString = @"select * from NhaXuatBan";

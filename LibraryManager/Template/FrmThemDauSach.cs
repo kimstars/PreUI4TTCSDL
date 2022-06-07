@@ -261,16 +261,16 @@ namespace LibraryManager.Template
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DauSach_BUS dsBus = new DauSach_BUS();
-            DauSach ds = new DauSach();
-            SangTac st = new SangTac();
-            XuatBan xb = new XuatBan();
-            ds.MaDauSach = txtMaDauSach.Text;
-            st.MaTacGia = cbTenTacGia.SelectedValue.ToString();
-            xb.MaNhaXuatBan = cbTenNXB.SelectedValue.ToString();
-            dsBus.Delete(ds, st, xb);
-           
-            dgvDauSach.DataSource = dsBus.LoadListDSMini();
+            txtMaDauSach.Clear();
+            txtTenDauSach.Clear();
+            txtNamXuatBan.Clear();
+            txtLanTaiBan.Clear();
+            txtGiaTien.Clear();
+            txtMoTa.Clear();
+            imageBook.BackgroundImage = null;
+            imageBook.Update();
+            txtMaDauSach.Text = dsBus.CreateNextMaDS();
+
         }
 
         private void txtTuKhoa_TextChanged(object sender, EventArgs e)

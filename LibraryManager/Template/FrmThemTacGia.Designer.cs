@@ -29,10 +29,11 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelShow = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +48,6 @@ namespace LibraryManager.Template
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelShow.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
@@ -61,10 +61,22 @@ namespace LibraryManager.Template
             this.panelShow.Controls.Add(this.btnBack);
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(0, 0);
-            this.panelShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(845, 518);
+            this.panelShow.Size = new System.Drawing.Size(1127, 638);
             this.panelShow.TabIndex = 0;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(444, 54);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(225, 43);
+            this.guna2HtmlLabel2.TabIndex = 44;
+            this.guna2HtmlLabel2.Text = "THÊM TÁC GIẢ";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -79,10 +91,11 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(71, 95);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(95, 117);
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(268, 304);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(357, 374);
             this.guna2CustomGradientPanel3.TabIndex = 40;
             // 
             // btnSua
@@ -96,11 +109,11 @@ namespace LibraryManager.Template
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.Parent = this.btnSua;
             this.btnSua.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnSua.Location = new System.Drawing.Point(100, 206);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(133, 254);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(58, 32);
+            this.btnSua.Size = new System.Drawing.Size(77, 39);
             this.btnSua.TabIndex = 12;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -116,13 +129,13 @@ namespace LibraryManager.Template
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Image = global::LibraryManager.Properties.Resources.icons8_cancel_48px;
-            this.btnXoa.Location = new System.Drawing.Point(180, 206);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(240, 254);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(58, 32);
+            this.btnXoa.Size = new System.Drawing.Size(77, 39);
             this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Text = "Huỷ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThemNXB
@@ -136,11 +149,11 @@ namespace LibraryManager.Template
             this.btnThemNXB.ForeColor = System.Drawing.Color.White;
             this.btnThemNXB.HoverState.Parent = this.btnThemNXB;
             this.btnThemNXB.Image = global::LibraryManager.Properties.Resources.icons8_add_30px;
-            this.btnThemNXB.Location = new System.Drawing.Point(25, 206);
-            this.btnThemNXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemNXB.Location = new System.Drawing.Point(33, 254);
+            this.btnThemNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemNXB.Name = "btnThemNXB";
             this.btnThemNXB.ShadowDecoration.Parent = this.btnThemNXB;
-            this.btnThemNXB.Size = new System.Drawing.Size(58, 32);
+            this.btnThemNXB.Size = new System.Drawing.Size(77, 39);
             this.btnThemNXB.TabIndex = 10;
             this.btnThemNXB.Text = "Thêm";
             this.btnThemNXB.Click += new System.EventHandler(this.btnThemNXB_Click_1);
@@ -164,14 +177,14 @@ namespace LibraryManager.Template
             this.txtTenTacGia.ForeColor = System.Drawing.Color.Black;
             this.txtTenTacGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenTacGia.HoverState.Parent = this.txtTenTacGia;
-            this.txtTenTacGia.Location = new System.Drawing.Point(25, 147);
-            this.txtTenTacGia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenTacGia.Location = new System.Drawing.Point(33, 181);
+            this.txtTenTacGia.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTenTacGia.Name = "txtTenTacGia";
             this.txtTenTacGia.PasswordChar = '\0';
             this.txtTenTacGia.PlaceholderText = "";
             this.txtTenTacGia.SelectedText = "";
             this.txtTenTacGia.ShadowDecoration.Parent = this.txtTenTacGia;
-            this.txtTenTacGia.Size = new System.Drawing.Size(213, 32);
+            this.txtTenTacGia.Size = new System.Drawing.Size(284, 39);
             this.txtTenTacGia.TabIndex = 0;
             // 
             // label1
@@ -179,10 +192,9 @@ namespace LibraryManager.Template
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 117);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(29, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên tác giả";
             // 
@@ -205,14 +217,14 @@ namespace LibraryManager.Template
             this.txtMaTacGia.ForeColor = System.Drawing.Color.Black;
             this.txtMaTacGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaTacGia.HoverState.Parent = this.txtMaTacGia;
-            this.txtMaTacGia.Location = new System.Drawing.Point(25, 73);
-            this.txtMaTacGia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaTacGia.Location = new System.Drawing.Point(33, 90);
+            this.txtMaTacGia.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtMaTacGia.Name = "txtMaTacGia";
             this.txtMaTacGia.PasswordChar = '\0';
             this.txtMaTacGia.PlaceholderText = "";
             this.txtMaTacGia.SelectedText = "";
             this.txtMaTacGia.ShadowDecoration.Parent = this.txtMaTacGia;
-            this.txtMaTacGia.Size = new System.Drawing.Size(213, 32);
+            this.txtMaTacGia.Size = new System.Drawing.Size(284, 39);
             this.txtMaTacGia.TabIndex = 0;
             // 
             // label5
@@ -220,32 +232,31 @@ namespace LibraryManager.Template
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 43);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(29, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 15);
+            this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mã tác giả :";
             // 
             // dgvTacGia
             // 
             this.dgvTacGia.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvTacGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvTacGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTacGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTacGia.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvTacGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTacGia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTacGia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumVioletRed;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTacGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumVioletRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTacGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTacGia.ColumnHeadersHeight = 40;
             this.dgvTacGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTacGia,
@@ -270,27 +281,28 @@ namespace LibraryManager.Template
             this.dgvTacGia.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvTacGia.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
             this.dgvTacGia.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTacGia.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTacGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTacGia.EnableHeadersVisualStyles = false;
             this.dgvTacGia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(184)))), ((int)(((byte)(218)))));
             this.dgvTacGia.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
             this.dgvTacGia.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvTacGia.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvTacGia.Location = new System.Drawing.Point(374, 95);
+            this.dgvTacGia.Location = new System.Drawing.Point(499, 117);
+            this.dgvTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTacGia.Name = "dgvTacGia";
             this.dgvTacGia.RowHeadersVisible = false;
             this.dgvTacGia.RowHeadersWidth = 51;
             this.dgvTacGia.RowTemplate.Height = 40;
             this.dgvTacGia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvTacGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTacGia.Size = new System.Drawing.Size(422, 304);
+            this.dgvTacGia.Size = new System.Drawing.Size(563, 374);
             this.dgvTacGia.TabIndex = 42;
             this.dgvTacGia.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvTacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTacGia_CellClick_1);
@@ -336,34 +348,22 @@ namespace LibraryManager.Template
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
             this.btnBack.Image = global::LibraryManager.Properties.Resources.icons8_back_24px_1;
-            this.btnBack.Location = new System.Drawing.Point(71, 44);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(95, 54);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
-            this.btnBack.Size = new System.Drawing.Size(40, 37);
+            this.btnBack.Size = new System.Drawing.Size(53, 46);
             this.btnBack.TabIndex = 43;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(333, 44);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(179, 34);
-            this.guna2HtmlLabel2.TabIndex = 44;
-            this.guna2HtmlLabel2.Text = "THÊM TÁC GIẢ";
-            // 
             // FrmThemTacGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelShow);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmThemTacGia";
-            this.Size = new System.Drawing.Size(845, 518);
+            this.Size = new System.Drawing.Size(1127, 638);
             this.Load += new System.EventHandler(this.FrmThemTacGia_Load);
             this.panelShow.ResumeLayout(false);
             this.panelShow.PerformLayout();
