@@ -891,7 +891,7 @@ namespace LibraryManager
             this.panelShow.AutoScroll = true;
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(260, 55);
-            this.panelShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(4);
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(1296, 829);
             this.panelShow.TabIndex = 14;
