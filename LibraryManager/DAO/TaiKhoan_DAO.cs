@@ -11,7 +11,7 @@ namespace LibraryManager.DAO
     {
         public bool login(string us, string pw)
         {
-            if (GetData("select* from TaiKhoan where TenDangNhap = '" + us + "' and MatKhau = '" + pw + "'").Rows.Count > 0)
+            if (GetData($"select * from TaiKhoan where TenDangNhap = '{us}' and MatKhau = '{pw}'").Rows.Count > 0)
                 return true;
             return false;
         }
@@ -40,15 +40,21 @@ namespace LibraryManager.DAO
         public bool checkExistTK(string username)
         {
             if (GetData($"select * from TaiKhoan where TenDangNhap = '{username}'").Rows.Count > 0)
-                return false;
+                return true;
 
-            return true;
+            return false;
         }
         public string LoaiTaiKhoan(string username)
         {
             string sql = $"SELECT LoaiTK FROM dbo.TAIKHOAN WHERE TenDangNhap = '{username}'";
-
             return GetString(sql);
+        }
+
+
+        public void ktramatkhau(string user, string pass)
+        {
+            string sql = $"INSERT INTO dbo.TAIKHOAN VALUES ('{user}','{pass}','docgia')";
+            validateTest(sql);
         }
     }
 }

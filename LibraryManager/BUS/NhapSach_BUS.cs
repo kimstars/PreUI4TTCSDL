@@ -29,10 +29,22 @@ namespace LibraryManager.BUS
 
         public string AutoTaoMaNhap()
         {
-            string index = (nsDAO.GetSoLuongPhieuNhap() + 2).ToString();
+            string index = (nsDAO.GetSoLuongPhieuNhap()).ToString();
             string MaNhap = "PN000000";
             MaNhap = MaNhap.Substring(0, 8 - index.Length) + index;
             return MaNhap;
+        }
+
+
+        public void CallProc_Gen_PN(string manv, DateTime ngay)
+        {
+            nsDAO.CallProc_Gen_Phieunhap(manv, ngay);
+        }
+
+
+        public int SoLuongSach_ChuaNhap()
+        {
+            return nsDAO.SLSachchuanhap();
         }
 
 

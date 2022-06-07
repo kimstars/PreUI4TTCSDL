@@ -246,6 +246,24 @@ namespace LibraryManager.BUS
 
         #endregion
 
+        public string GetLastest_MaDS()
+        {
+            return dsDao.GetLastest_MaDS();
+        }
+
+        public string CreateNextMaDS()
+        {
+            string current = GetLastest_MaDS();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string Ma = "DS000000";
+            Ma = Ma.Substring(0, Ma.Length - index.Length) + index;
+
+            return Ma;
+        }
+
 
     }
 }

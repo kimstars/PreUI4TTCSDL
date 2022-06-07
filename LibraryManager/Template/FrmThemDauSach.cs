@@ -62,19 +62,11 @@ namespace LibraryManager.Template
             cbTenTheLoai.ValueMember = temp.Columns[1].ToString();
 
 
+            txtMaDauSach.Text = dsBus.CreateNextMaDS();
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbTenTacGia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnThemTacGia_Click(object sender, EventArgs e)
         {
             hideChildForm();
@@ -124,29 +116,9 @@ namespace LibraryManager.Template
             imageBook.Image = myImage;
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
-        private void frmThemNXB1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmThemNXB1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            hideChildForm();
-            panelShow.Controls.Clear();
-            UserControl temp = new Template.FrmThemCuonSach();
-            panelShow.Controls.Add(temp);
-        }
-
+       
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             hideChildForm();
@@ -184,19 +156,20 @@ namespace LibraryManager.Template
             DauSach ds = new DauSach();
             SangTac st = new SangTac();
             XuatBan xb = new XuatBan();
-                ds.MaDauSach = txtMaDauSach.Text;
-                ds.TenDauSach = txtTenDauSach.Text;
-                ds.SoLuong = 0;
-                ds.LanTaiBan = Int32.Parse(txtLanTaiBan.Text);
-                ds.NamXuatBan = txtNamXuatBan.Text;
-                ds.GiaTien = Int32.Parse(txtGiaTien.Text);
-                ds.MoTa = txtMoTa.Text;
-                ds.MaTheLoai = cbTenTheLoai.SelectedValue.ToString();
-                st.MaTacGia = cbTenTacGia.SelectedValue.ToString();
-                xb.MaNhaXuatBan = cbTenNXB.SelectedValue.ToString();
-                dsBus.Update(ds, st, xb);
-                dsBus.LuuAnh(ds.MaDauSach, ofdOpenFile.FileName);
-                dgvDauSach.DataSource = dsBus.LoadListDSMini();
+
+            ds.MaDauSach = txtMaDauSach.Text;
+            ds.TenDauSach = txtTenDauSach.Text;
+            ds.SoLuong = 0;
+            ds.LanTaiBan = Int32.Parse(txtLanTaiBan.Text);
+            ds.NamXuatBan = txtNamXuatBan.Text;
+            ds.GiaTien = Int32.Parse(txtGiaTien.Text);
+            ds.MoTa = txtMoTa.Text;
+            ds.MaTheLoai = cbTenTheLoai.SelectedValue.ToString();
+            st.MaTacGia = cbTenTacGia.SelectedValue.ToString();
+            xb.MaNhaXuatBan = cbTenNXB.SelectedValue.ToString();
+            dsBus.Update(ds, st, xb);
+            dsBus.LuuAnh(ds.MaDauSach, ofdOpenFile.FileName);
+            dgvDauSach.DataSource = dsBus.LoadListDSMini();
             
             }
 
@@ -233,7 +206,7 @@ namespace LibraryManager.Template
             if (string.IsNullOrEmpty(file))
                 return;
             Image myImage = Image.FromFile(file);
-            imageBook.Image = myImage;
+            imageBook.BackgroundImage = myImage;
         }
 
         private void btnSubmit_Click_1(object sender, EventArgs e)
@@ -257,7 +230,11 @@ namespace LibraryManager.Template
                 xb.MaNhaXuatBan = cbTenNXB.SelectedValue.ToString();
                 dsBus.ThemThongtinNhap(ds,st,xb);
                 dsBus.LuuAnh(ds.MaDauSach, ofdOpenFile.FileName);
+
                 dgvDauSach.DataSource = dsBus.LoadListDSMini();
+
+
+
             }
         }
 
@@ -274,7 +251,7 @@ namespace LibraryManager.Template
             cbTenNXB.Text = row.Cells[11].Value.ToString();
             cbTenTheLoai.Text = row.Cells[14].Value.ToString();
             ImageConverter objImageConverter = new ImageConverter();
-            imageBook.Image = (Image)objImageConverter.ConvertFrom(row.Cells[7].Value);
+            imageBook.BackgroundImage = (Image)objImageConverter.ConvertFrom(row.Cells[7].Value);
             imageBook.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 

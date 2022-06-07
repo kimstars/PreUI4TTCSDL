@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using LibraryManager.DTO;
+using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
@@ -65,6 +66,17 @@ namespace LibraryManager.DAO
             string sqlString = "select count(masach) from cuonsach where trangthai = 0";
             return GetCount(sqlString);
         }
+
+        public int GetALLSachMuon()
+        {
+            string sql = "SELECT COUNT(MaSach) FROM dbo.THONGTINMUONTRA";
+            return (int)GetCount(sql);
+        }
+        public int GetSachChuaTra()
+        {
+            string sql = "SELECT COUNT(MaSach) FROM dbo.THONGTINMUONTRA WHERE NgayTra IS NULL ";
+            return (int)GetCount(sql);
+        }
         public DataTable LoadSLDG()
         {
             string sql = "SELECT DISTINCT TOP 5 YEAR(NGAYMUON) NAM, COUNT(MADOCGIA) SL FROM PHIEUMUONTRA GROUP BY YEAR(NgayMuon) ORDER BY YEAR(NgayMuon) DESC";
@@ -85,6 +97,33 @@ namespace LibraryManager.DAO
         {
             string sqlString = string.Format("SELECT DS.MaDauSach N'Mã đầu sách', DS.TenDauSach N'Tên đầu sách', DS.SoLuong N'Số lượng sách', DS.NamXuatBan, DS.GiaTien, DS.MoTa, TL.TenTheLoai, TG.TenTacGia FROM dbo.DAUSACH DS, dbo.THELOAI TL, dbo.TACGIA TG, dbo.SANGTAC ST WHERE DS.MaTheLoai = TL.MaTheLoai AND TL.TenTheLoai like N'%{0}%' AND DS.MaDauSach = ST.MaDauSach AND ST.MaTacGia = TG.MaTacGia", _timkiem);
             return GetData(sqlString);
+        }
+        public DataTable LoadTienCoc()
+        {
+            string sql = "SELECT TOP 5 MONTH(NGAYMUON) Thang, YEAR(NgayMuon) Nam, SUM(CAST(TienCoc AS INT)) Tien FROM dbo.PHIEUMUONTRA GROUP BY MONTH(NGAYMUON), YEAR(NgayMuon) ORDER BY YEAR(NGAYMUON) DESC, MONTH(NgayMuon) DESC";
+            return GetData(sql);
+        }
+        public DataTable LoadSLTL()
+        {
+            string sql = "SELECT TOP 5 WITH TIES TL.TenTheLoai, COUNT(MaSach) SL FROM dbo.THELOAI TL, dbo.DAUSACH DS, dbo.CUONSACH CS WHERE DS.MaTheLoai = TL.MaTheLoai AND CS.MaDauSach = DS.MaDauSach GROUP BY TL.TenTheLoai ORDER BY SL DESC";
+            return GetData(sql);
+        }
+        
+        //proc ds sach vi pham
+        public DataTable LoadSachVP()
+        {
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetData_Proc_NParam("proc_HOME_SachVP", sParams);
+        }
+
+        //proc tim kiem sach vi pham
+        public DataTable SearchSachVP(string _timkiem)
+        {
+            string NameProc = "proc_HOME_SearchSachVP";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@keyword", _timkiem);
+
+            return GetData_Proc_NParam(NameProc, sParams);
         }
     }
 }

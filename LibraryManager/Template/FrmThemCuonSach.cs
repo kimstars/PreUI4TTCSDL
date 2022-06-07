@@ -83,9 +83,9 @@ namespace LibraryManager.Template
                 pn.MaPhieuNhap = nsBus.AutoTaoMaNhap();
                 pn.NgayNhap = DateTime.Now;
 
-                ttns.MaDauSach = lbInfoMaDS.Text;
+              
                 ttns.MaPhieuNhap = nsBus.AutoTaoMaNhap();
-                ttns.SoLuongSach = 1;
+          
 
                 cs.MaDauSach = lbInfoMaDS.Text;
                 cs.MaSach = txtMaCuonSach.Text;

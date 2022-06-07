@@ -133,6 +133,9 @@
       <HintPath>D:\Download\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\tool\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b">
       <HintPath>..\..\..\thuctapcsdl\BunifuCrack-main\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -464,6 +467,33 @@
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\BBvipham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BBvipham.Designer.cs">
+      <DependentUpon>BBvipham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBViphamCreator.cs" />
+    <Compile Include="Report\BBVP_DataSet.cs">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBVP_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Template\DSSachVP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\DSSachVP.Designer.cs">
+      <DependentUpon>DSSachVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frmLapBBVP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\frmLapBBVP.Designer.cs">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Hello_TacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,12 +565,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Captaikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Captaikhoan.Designer.cs">
-      <DependentUpon>Captaikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\PhieuMuonCreator.cs" />
     <Compile Include="Report\PhieuMuonRP.cs">
@@ -719,11 +743,17 @@
     <Compile Include="Template\PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.cs">
+    <Compile Include="Template\testLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\testLogin.Designer.cs">
+      <DependentUpon>testLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\ThemDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Template\QLInfoDocgia.Designer.cs">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <Compile Include="Template\ThemDocgia.Designer.cs">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\QLNhap.cs">
       <SubType>UserControl</SubType>
@@ -818,6 +848,15 @@
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBvipham.resx">
+      <DependentUpon>BBvipham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DSSachVP.resx">
+      <DependentUpon>DSSachVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmLapBBVP.resx">
+      <DependentUpon>frmLapBBVP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Hello_TacGia.resx">
       <DependentUpon>Hello_TacGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -847,9 +886,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Captaikhoan.resx">
-      <DependentUpon>Captaikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongTinSach.resx">
       <DependentUpon>ThongTinSach.cs</DependentUpon>
@@ -930,8 +966,11 @@
     <EmbeddedResource Include="Template\PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template\QLInfoDocgia.resx">
-      <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    <EmbeddedResource Include="Template\testLogin.resx">
+      <DependentUpon>testLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\ThemDocgia.resx">
+      <DependentUpon>ThemDocgia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\QLNhap.resx">
       <DependentUpon>QLNhap.cs</DependentUpon>
@@ -988,6 +1027,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\BBVP_DataSet.xsc">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\BBVP_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BBVP_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\BBVP_DataSet.xss">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Report\PhieuMuon_DataSet.xsc">
       <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
     </None>
@@ -1025,7 +1075,6 @@
     <None Include="Resources\icons8_user_50px_1.png" />
     <None Include="Resources\icons8_search_32px.png" />
     <None Include="Resources\icons8_home_26px.png" />
-    <None Include="Resources\icons8_delete_48px.png" />
     <None Include="Resources\icons8_book_and_pencil_30px.png" />
     <None Include="Resources\icons8_book_32px.png" />
     <None Include="Resources\icons8_administrator_male_48px.png" />
@@ -1253,6 +1302,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_study_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

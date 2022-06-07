@@ -46,7 +46,7 @@ namespace LibraryManager.DAO
 
         public DataTable Search(string TuKhoa, string MucTimKiem)
         {
-            string sql = $"EXEC TIMKIEMDAUSACH '"+TuKhoa+"','"+MucTimKiem+"'";
+            string sql = $"EXEC TIMKIEMDAUSACH N'{TuKhoa}','{MucTimKiem}'";
             return GetData(sql);
         }
 
@@ -192,6 +192,14 @@ namespace LibraryManager.DAO
         #endregion
 
 
+
+
+        public string GetLastest_MaDS()
+        {
+            string sql = $" SELECT TOP 1 MaDauSach FROM dbo.DAUSACH ORDER BY MaDauSach DESC";
+
+            return GetString(sql);
+        }
 
     }
 }

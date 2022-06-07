@@ -61,6 +61,14 @@ namespace LibraryManager.BUS
         {
             return home.GetSachMuon();
         }
+        public int GetALLSachMuon()
+        {
+            return home.GetALLSachMuon();
+        }
+        public int GetSachChuaTra()
+        {
+            return home.GetSachChuaTra();
+        }
         public DataTable LoadSLDG()
         {
 
@@ -78,6 +86,24 @@ namespace LibraryManager.BUS
         {
             return home.SearchDS(_timkiem);
         }
+        public DataTable LoadSLTL()
+        {
 
+            return home.LoadSLTL();
+        }
+        public DataTable LoadTienCoc()
+        {
+
+            return home.LoadTienCoc();
+        }
+        public DataTable LoadSachVP()
+        {
+
+            return home.LoadSachVP();
+        }
+        public DataTable SearchSachVP(string _timkiem)
+        {
+            return home.SearchSachVP(_timkiem);
+        }
     }
 }

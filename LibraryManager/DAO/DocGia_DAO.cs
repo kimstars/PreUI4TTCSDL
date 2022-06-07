@@ -6,21 +6,34 @@ using System.Threading.Tasks;
 using LibraryManager.DTO;
 using System.Data;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
     class DocGia_DAO : DataProvider
     {
+        //proc lấy ra tất cả thông tin độc giả từ bảng độc giả
         public DataTable loadDocGia()
         {
-            string sqlString = @"select * from DOCGIA";
-            return GetData(sqlString);
+
+            string NameProc = "proc_DG_loadDocGia";
+
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaDG", "");
+
+
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
+        //proc lấy ra thông tin độc giả đã mượn sách
         public DataTable loadDocGiaInfo()
         {
-            string sqlString = @"SELECT DOCGIA.MaDocGia, TenDocGia, DiaChi, NgaySinh, GioiTinh, SDT, CMND, NgayDangKi,Anh, MaMuonTra, NgayMuon, HanTra, TienCoc FROM DOCGIA, PHIEUMUONTRA WHERE DOCGIA.MaDocGia = PHIEUMUONTRA.MaDocGia";
-            return GetData(sqlString);
+
+            string NameProc = "proc_DG_loadDocGiaInfo";
+
+            SqlParameter[] sParams = new SqlParameter[0];
+
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
         // lọc độc giả
@@ -35,43 +48,53 @@ namespace LibraryManager.DAO
             if (GetData("select* from DOCGIA where MaDocGia = '" + dg.MaDocGia + "'").Rows.Count > 0)
                 return false;
 
-            string sql = string.Format("Insert Into TaiKhoan values('{0}', '{1}', '{2}', '{3}')", dg.MaDocGia, dg.TenDangNhap, "", 1);
+            string sql = $"Insert Into TaiKhoan values('{dg.TenDangNhap}', '{dg.MatKhau}', 'docgia')";
+
             Excute(sql);
 
-            sql = string.Format("Insert Into DOCGIA values('{0}','{1}','{2}','{3}','{4}','{5}')",
-                dg.MaDocGia, dg.TenDocGia, dg.DiaChi, dg.NgaySinh, dg.GioiTinh, dg.SDT, dg.CMND, dg.NgayDangKi, dg.TenDangNhap, dg.Anh);
-            Excute(sql);
+            sql = $"Insert Into DOCGIA values('{dg.MaDocGia}',N'{dg.TenDocGia}',N'{dg.DiaChi}','{dg.NgaySinh}',N'{dg.GioiTinh}','{dg.SDT}','{dg.CMND}','{dg.NgayDangKi}','{dg.TenDangNhap}',NULL)";
 
+            Excute(sql);
 
             return true;
         }
 
         public void Delete(string mDG)
         {
-            Excute("delete from DOCGIA where MaDocGia = '" + mDG + "'");
+            Excute("Delete from DOCGIA where MaDocGia = '" + mDG + "'");
         }
 
         public bool Update(DocGia dg)
         {
 
             string sql = $"update DOCGIA set TenDocGia = N'{dg.TenDocGia}', DiaChi = N'{dg.DiaChi}', NgaySinh = '{DateToString(dg.NgaySinh)}', GioiTinh = N'{dg.GioiTinh}', SDT = '{dg.SDT}', CMND = '{dg.CMND}' where MaDocGia = '{dg.MaDocGia}'";
+
             Excute(sql);
             return true;
 
         
         }
-        public DataTable Search(string _timkiem)
+
+        //proc tìm kiếm độc giả theo mã hoặc họ tên từ bảng độcgiả
+        public DataTable Search(string timkiem)
         {
-            string sqlString = string.Format("select * from DOCGIA where MaDocGia like N'%{0}%' or TenDocGia like N'%{0}%'", _timkiem);
-            return GetData(sqlString);
+            string NameProc = "proc_PM_Search";
+            timkiem = $"%{timkiem}%";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@timkiem", timkiem);
+            return GetData_Proc_NParam(NameProc, sParams);
         }
 
 
         public DocGia GetMotDG(string maDG)
         {
 
-            string sql = $"select * from DocGia where MaDocGia = '{maDG}'";
-            DataTable res = GetData(sql);
+            string NameProc = "proc_DG_loadDocGia";
+
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@MaDG", maDG);
+
+            DataTable res = GetData_Proc_NParam(NameProc, sParams);
             DocGia dg = new DocGia();
             if (res.Rows.Count == 1)
             {
@@ -96,6 +119,12 @@ namespace LibraryManager.DAO
 
         #region get MADOCGIA
 
+        public string GetLastest_MaDG()
+        {
+            string sql = "SELECT TOP 1 MaDocGia FROM dbo.DOCGIA ORDER BY MaDocGia DESC";
+            return GetString(sql);
+        }
+
         public DataTable GetMaDG()
         {
             string sql = "SELECT MaDocGia FROM dbo.DOCGIA";
@@ -118,7 +147,9 @@ namespace LibraryManager.DAO
             DateTime date = DateTime.Today.Subtract(new TimeSpan(30, 0, 0, 0));
             string start = DateToString(date);
             string end = DateToString(DateTime.Today);
+
             string sql = $"SELECT pm.NgayMuon, COUNT(MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND pm.NgayMuon BETWEEN '{start}' AND '{end}'GROUP BY pm.NgayMuon";
+
 
             return GetCount(sql).ToString();
             
@@ -129,7 +160,9 @@ namespace LibraryManager.DAO
             DateTime date = DateTime.Today.Subtract(new TimeSpan(30, 0, 0, 0));
             string start = DateToString(date);
             string end = DateToString(DateTime.Today);
+
             string sql = $"SELECT tt.NgayTra, COUNT(tt.MaSach) FROM dbo.THONGTINMUONTRA tt INNER JOIN  dbo.PHIEUMUONTRA pm ON pm.MaMuonTra = tt.MaMuonTra WHERE pm.MaDocGia = '{MaDocGia}' AND tt.NgayTra BETWEEN '{start}' AND '{end}' GROUP BY tt.NgayTra";
+
 
             return GetCount(sql).ToString();
         }

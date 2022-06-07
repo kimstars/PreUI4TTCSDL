@@ -18,6 +18,12 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+        string MaNhanVien;
+        public DSPhieuMuonNV(string manv)
+        {
+            MaNhanVien = manv;
+            InitializeComponent();
+        }
 
         private string MaPhieuMuonCurrent = "";
         private string MaDocGiaMuonCurrent = "";
@@ -77,12 +83,13 @@ namespace LibraryManager.Template
 
         }
 
+        int rowICurrent = 0;
         private void dgvDSPhieumuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > 0)
+            if (e.RowIndex >= 0)
             {
                 string MaPhieuMuon = dgvDSPhieumuon.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
-                string MaDocGia  = dgvDSPhieumuon.Rows[e.RowIndex].Cells["MaDocGia"].Value.ToString().Trim();
+                string MaDocGia = dgvDSPhieumuon.Rows[e.RowIndex].Cells["MaDocGia"].Value.ToString().Trim();
                 if (MaPhieuMuon.Contains("MT"))
                 {
                     DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
@@ -93,9 +100,9 @@ namespace LibraryManager.Template
                 }
                 MaDocGiaMuonCurrent = MaDocGia;
                 LoadDetailUser(MaDocGia);
-
+                rowICurrent = e.RowIndex;
             }
-            
+
         }
 
         private void btnFilterDate_Click(object sender, EventArgs e)
@@ -118,7 +125,7 @@ namespace LibraryManager.Template
             string keyword = txtSearch.Text;
             if (keyword != "")
             {
-            
+
                 dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon(keyword);
 
 
@@ -131,8 +138,26 @@ namespace LibraryManager.Template
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            pmBus.Update_DaXuLy(MaPhieuMuonCurrent);
-            MessageBox.Show("Đã xử lý thành công. Lấy sách và giao cho độc giả.");
+            bool daxuly = dgvDSPhieumuon.Rows[rowICurrent].Cells["DaXuLy"].Value.ToString() == "true";
+            if (!daxuly)
+            {
+
+                pmBus.Update_DaXuLy(MaPhieuMuonCurrent, MaNhanVien);
+                dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon();
+                if (MaNhanVien != "")
+                {
+                    Report.PhieuMuonCreator pmCreator = new Report.PhieuMuonCreator(MaPhieuMuonCurrent, MaNhanVien);
+                    pmCreator.ShowReportHoaDon();
+                }
+                MessageBox.Show("Đã xử lý thành công. Lấy sách và giao cho độc giả.");
+
+            }
+            else
+            {
+                MessageBox.Show("Phiếu mượn đã được xử lý");
+
+            }
+
         }
     }
 }

@@ -112,7 +112,8 @@ namespace LibraryManager.Template
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(444, 53);
             this.label11.TabIndex = 39;
-            this.label11.Text = "THÊM ĐẦU SÁCH MỚI";
+
+            this.label11.Text = "QUẢN LÝ ĐẦU SÁCH";
             // 
             // cbLoaiLoc
             // 
@@ -160,10 +161,12 @@ namespace LibraryManager.Template
             this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.PasswordChar = '\0';
-            this.txtTuKhoa.PlaceholderText = "";
+            this.txtTuKhoa.PlaceholderText = "Tìm kiếm đầu sách";
             this.txtTuKhoa.SelectedText = "";
             this.txtTuKhoa.ShadowDecoration.Parent = this.txtTuKhoa;
-            this.txtTuKhoa.Size = new System.Drawing.Size(1073, 39);
+
+            this.txtTuKhoa.Size = new System.Drawing.Size(1110, 39);
+
             this.txtTuKhoa.TabIndex = 39;
             this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
             // 
@@ -251,18 +254,21 @@ namespace LibraryManager.Template
             this.dgvDauSach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDauSach.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDauSach.Location = new System.Drawing.Point(47, 518);
-            this.dgvDauSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.dgvDauSach.Margin = new System.Windows.Forms.Padding(4);
+
             this.dgvDauSach.Name = "dgvDauSach";
             this.dgvDauSach.RowHeadersVisible = false;
             this.dgvDauSach.RowHeadersWidth = 51;
             this.dgvDauSach.RowTemplate.Height = 40;
             this.dgvDauSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDauSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDauSach.Size = new System.Drawing.Size(1281, 283);
+
+            this.dgvDauSach.Size = new System.Drawing.Size(1318, 283);
+
             this.dgvDauSach.TabIndex = 37;
             this.dgvDauSach.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumVioletRed;
             this.dgvDauSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDauSach_CellClick_1);
-            this.dgvDauSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDauSach_CellContentClick_1);
             // 
             // MaDauSach
             // 
@@ -426,10 +432,12 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(197)))));
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(47, 87);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1281, 372);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1318, 372);
+
             this.guna2CustomGradientPanel3.TabIndex = 36;
             this.guna2CustomGradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel3_Paint_1);
             // 
@@ -504,7 +512,7 @@ namespace LibraryManager.Template
             // imageBook
             // 
             this.imageBook.BackColor = System.Drawing.Color.Transparent;
-            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_circled_user_male_skin_type_6_80px;
+            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_study_200px;
             this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imageBook.Location = new System.Drawing.Point(871, 68);
             this.imageBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

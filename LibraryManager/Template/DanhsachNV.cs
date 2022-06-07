@@ -27,7 +27,7 @@ namespace LibraryManager.Template
         private void btnSearchNV_Click(object sender, EventArgs e)
         {
             string keyword = txtSearch.Text;
-            string type = cbFilterNV.Text;
+
 
             if (keyword != "")
             {
@@ -55,6 +55,16 @@ namespace LibraryManager.Template
         private void btnAddNV_Click(object sender, EventArgs e)
         {
            
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
 
         }
     }
