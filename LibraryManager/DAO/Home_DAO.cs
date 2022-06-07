@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using LibraryManager.DTO;
+using System.Data.SqlClient;
 
 namespace LibraryManager.DAO
 {
@@ -106,6 +107,23 @@ namespace LibraryManager.DAO
         {
             string sql = "SELECT TOP 5 WITH TIES TL.TenTheLoai, COUNT(MaSach) SL FROM dbo.THELOAI TL, dbo.DAUSACH DS, dbo.CUONSACH CS WHERE DS.MaTheLoai = TL.MaTheLoai AND CS.MaDauSach = DS.MaDauSach GROUP BY TL.TenTheLoai ORDER BY SL DESC";
             return GetData(sql);
+        }
+        
+        //proc ds sach vi pham
+        public DataTable LoadSachVP()
+        {
+            SqlParameter[] sParams = new SqlParameter[0];
+            return GetData_Proc_NParam("proc_HOME_SachVP", sParams);
+        }
+
+        //proc tim kiem sach vi pham
+        public DataTable SearchSachVP(string _timkiem)
+        {
+            string NameProc = "proc_HOME_SearchSachVP";
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@keyword", _timkiem);
+
+            return GetData_Proc_NParam(NameProc, sParams);
         }
     }
 }

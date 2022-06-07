@@ -107,5 +107,16 @@ namespace LibraryManager.GUI
         {
             LoadDetailUser();
         }
+
+        private void btnDeactive_Click(object sender, EventArgs e)
+        {
+            dgBus.KhoaTaiKhoan(MaDocGia);
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+            dgBus.MoKhoaTK(MaDocGia);
+
+        }
     }
 }

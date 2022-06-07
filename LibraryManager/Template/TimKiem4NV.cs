@@ -218,13 +218,14 @@ namespace LibraryManager.Template
         private void SearchByName()
         {
             string tl = cbTheLoai.Text.Trim();
+            if (tl == "") tl = "Tất cả thể loại";
             string keysearch = txtSearch.Text.Trim();
 
             if (keysearch != "")
             {
                 if (!isSearchTG)
                 {
-                    if (tl != "Tất cả thể loại")
+                    if (tl != "Tất cả thể loại" )
                     {
                         DSDauSach = dsBus.LoadMaDS_TS_TL(tl, keysearch);
 
@@ -237,7 +238,7 @@ namespace LibraryManager.Template
                 }
                 else
                 {
-                    if (tl != "Tất cả thể loại")
+                    if (tl != "Tất cả thể loại" )
                     {
                         DSDauSach = dsBus.LoadMaDS_TG_TL(tl, keysearch);
                     }

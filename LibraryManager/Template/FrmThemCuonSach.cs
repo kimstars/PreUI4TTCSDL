@@ -83,9 +83,9 @@ namespace LibraryManager.Template
                 pn.MaPhieuNhap = nsBus.AutoTaoMaNhap();
                 pn.NgayNhap = DateTime.Now;
 
-                ttns.MaDauSach = lbInfoMaDS.Text;
+              
                 ttns.MaPhieuNhap = nsBus.AutoTaoMaNhap();
-                ttns.SoLuongSach = 1;
+          
 
                 cs.MaDauSach = lbInfoMaDS.Text;
                 cs.MaSach = txtMaCuonSach.Text;
@@ -96,6 +96,10 @@ namespace LibraryManager.Template
                 csBus.ThemThongtinNhap(cs,pn);
 
                 MessageBox.Show("Nhập thành công!");
+                txtMaCuonSach.Clear();
+                txtViTriSach.Clear();
+                cbMoiCu.Items.Clear();
+                txtMaCuonSach.Text = csBus.CreateNext_MaSach();
                 //Load lai len dgv
             }
         }

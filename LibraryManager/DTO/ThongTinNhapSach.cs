@@ -10,8 +10,8 @@ namespace LibraryManager.DTO
     {
         public int id { get; set; }
         public string MaPhieuNhap { get; set; }
-        public string MaDauSach { get; set; }
-        public int SoLuongSach { get; set; }
+        public string MaSach { get; set; }
+      
 
     }
 }

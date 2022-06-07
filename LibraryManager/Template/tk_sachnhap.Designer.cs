@@ -39,9 +39,11 @@ namespace LibraryManager.Template
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_tkSachnhap = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
-            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
+            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
+            this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tkSachnhap)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +64,6 @@ namespace LibraryManager.Template
             // btnTK
             // 
             this.btnTK.BackColor = System.Drawing.Color.Transparent;
-            this.btnTK.BorderRadius = 15;
             this.btnTK.CheckedState.Parent = this.btnTK;
             this.btnTK.CustomImages.Parent = this.btnTK;
             this.btnTK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
@@ -70,10 +71,10 @@ namespace LibraryManager.Template
             this.btnTK.ForeColor = System.Drawing.Color.White;
             this.btnTK.HoverState.Parent = this.btnTK;
             this.btnTK.Location = new System.Drawing.Point(609, 58);
-            this.btnTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTK.Margin = new System.Windows.Forms.Padding(2);
             this.btnTK.Name = "btnTK";
             this.btnTK.ShadowDecoration.Parent = this.btnTK;
-            this.btnTK.Size = new System.Drawing.Size(127, 44);
+            this.btnTK.Size = new System.Drawing.Size(127, 40);
             this.btnTK.TabIndex = 6;
             this.btnTK.Text = "Thống kê";
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
@@ -81,7 +82,6 @@ namespace LibraryManager.Template
             // txtTongso
             // 
             this.txtTongso.BackColor = System.Drawing.Color.Transparent;
-            this.txtTongso.BorderRadius = 10;
             this.txtTongso.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTongso.DefaultText = "";
             this.txtTongso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -144,7 +144,8 @@ namespace LibraryManager.Template
             // dgv_tkSachnhap
             // 
             this.dgv_tkSachnhap.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))));
+            this.dgv_tkSachnhap.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgv_tkSachnhap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_tkSachnhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -153,47 +154,50 @@ namespace LibraryManager.Template
             this.dgv_tkSachnhap.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_tkSachnhap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(84)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_tkSachnhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_tkSachnhap.ColumnHeadersHeight = 40;
-            this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))));
+            this.dgv_tkSachnhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenDauSach,
+            this.soluong});
+            this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(165)))), ((int)(((byte)(120)))));
-            this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_tkSachnhap.CurrentTheme.BackColor = System.Drawing.Color.Chocolate;
-            this.dgv_tkSachnhap.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(210)))), ((int)(((byte)(187)))));
-            this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Chocolate;
+            this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.dgv_tkSachnhap.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_tkSachnhap.CurrentTheme.BackColor = System.Drawing.Color.Teal;
+            this.dgv_tkSachnhap.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Teal;
             this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(84)))), ((int)(((byte)(24)))));
+            this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.dgv_tkSachnhap.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_tkSachnhap.CurrentTheme.Name = null;
-            this.dgv_tkSachnhap.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(210)))));
+            this.dgv_tkSachnhap.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.dgv_tkSachnhap.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_tkSachnhap.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgv_tkSachnhap.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(165)))), ((int)(((byte)(120)))));
-            this.dgv_tkSachnhap.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_tkSachnhap.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.dgv_tkSachnhap.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(210)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(165)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_tkSachnhap.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_tkSachnhap.EnableHeadersVisualStyles = false;
-            this.dgv_tkSachnhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(210)))), ((int)(((byte)(187)))));
-            this.dgv_tkSachnhap.HeaderBackColor = System.Drawing.Color.Chocolate;
+            this.dgv_tkSachnhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.dgv_tkSachnhap.HeaderBackColor = System.Drawing.Color.Teal;
             this.dgv_tkSachnhap.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_tkSachnhap.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_tkSachnhap.Location = new System.Drawing.Point(38, 158);
-            this.dgv_tkSachnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_tkSachnhap.Location = new System.Drawing.Point(38, 157);
+            this.dgv_tkSachnhap.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_tkSachnhap.Name = "dgv_tkSachnhap";
             this.dgv_tkSachnhap.RowHeadersVisible = false;
             this.dgv_tkSachnhap.RowHeadersWidth = 51;
@@ -201,36 +205,7 @@ namespace LibraryManager.Template
             this.dgv_tkSachnhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_tkSachnhap.Size = new System.Drawing.Size(777, 440);
             this.dgv_tkSachnhap.TabIndex = 2;
-            this.dgv_tkSachnhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Chocolate;
-            // 
-            // dateStart
-            // 
-            this.dateStart.BorderColor = System.Drawing.Color.Transparent;
-            this.dateStart.BorderRadius = 10;
-            this.dateStart.BorderSize = 0;
-            this.dateStart.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateStart.Location = new System.Drawing.Point(69, 58);
-            this.dateStart.MinimumSize = new System.Drawing.Size(0, 44);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(124, 44);
-            this.dateStart.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
-            this.dateStart.TabIndex = 7;
-            this.dateStart.TextColor = System.Drawing.Color.White;
-            // 
-            // dateEnd
-            // 
-            this.dateEnd.BorderColor = System.Drawing.Color.Transparent;
-            this.dateEnd.BorderRadius = 10;
-            this.dateEnd.BorderSize = 0;
-            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateEnd.Location = new System.Drawing.Point(265, 58);
-            this.dateEnd.MinimumSize = new System.Drawing.Size(0, 44);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(124, 44);
-            this.dateEnd.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
-            this.dateEnd.TabIndex = 8;
-            this.dateEnd.TextColor = System.Drawing.Color.White;
+            this.dgv_tkSachnhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -251,13 +226,54 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(777, 129);
             this.guna2CustomGradientPanel1.TabIndex = 3;
             // 
+            // dateEnd
+            // 
+            this.dateEnd.BorderColor = System.Drawing.Color.Transparent;
+            this.dateEnd.BorderRadius = 0;
+            this.dateEnd.BorderSize = 0;
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateEnd.Location = new System.Drawing.Point(265, 58);
+            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 44);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(124, 44);
+            this.dateEnd.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
+            this.dateEnd.TabIndex = 8;
+            this.dateEnd.TextColor = System.Drawing.Color.White;
+            // 
+            // dateStart
+            // 
+            this.dateStart.BorderColor = System.Drawing.Color.Transparent;
+            this.dateStart.BorderRadius = 0;
+            this.dateStart.BorderSize = 0;
+            this.dateStart.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateStart.Location = new System.Drawing.Point(69, 58);
+            this.dateStart.MinimumSize = new System.Drawing.Size(4, 44);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(124, 44);
+            this.dateStart.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(149)))), ((int)(((byte)(79)))));
+            this.dateStart.TabIndex = 7;
+            this.dateStart.TextColor = System.Drawing.Color.White;
+            // 
+            // TenDauSach
+            // 
+            this.TenDauSach.DataPropertyName = "TenDauSach";
+            this.TenDauSach.HeaderText = "Tên đầu sách";
+            this.TenDauSach.Name = "TenDauSach";
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng sách nhập của đầu sách";
+            this.soluong.Name = "soluong";
+            // 
             // tk_sachnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.dgv_tkSachnhap);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tk_sachnhap";
             this.Size = new System.Drawing.Size(856, 652);
             this.Load += new System.EventHandler(this.tk_sachnhap_Load);
@@ -279,5 +295,7 @@ namespace LibraryManager.Template
         private DateTimePickerKiet dateStart;
         private DateTimePickerKiet dateEnd;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
     }
 }

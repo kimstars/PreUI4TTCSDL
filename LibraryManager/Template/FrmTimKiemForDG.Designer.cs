@@ -29,12 +29,13 @@ namespace LibraryManager.Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTimKiemForDG));
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.cbLoaiLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTuKhoa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@ namespace LibraryManager.Template
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.lbInfoMaDS = new System.Windows.Forms.Label();
+            this.imageBook = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lbInfoTenNXB = new System.Windows.Forms.Label();
             this.lbInfoNamXB = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@ namespace LibraryManager.Template
             this.label11 = new System.Windows.Forms.Label();
             this.lbInfoTenTG = new System.Windows.Forms.Label();
             this.lbInfoTenSach = new System.Windows.Forms.Label();
-            this.imageBook = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChonDauSach)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -114,6 +114,25 @@ namespace LibraryManager.Template
             this.cbLoaiLoc.Size = new System.Drawing.Size(188, 36);
             this.cbLoaiLoc.TabIndex = 8;
             this.cbLoaiLoc.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BorderRadius = 18;
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Image = global::LibraryManager.Properties.Resources.icons8_search_64px;
+            this.btnSearch.Location = new System.Drawing.Point(618, 42);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(125, 44);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Tìm kiếm";
             // 
             // label4
             // 
@@ -172,22 +191,22 @@ namespace LibraryManager.Template
             // 
             this.dgvChonDauSach.AllowCustomTheming = false;
             this.dgvChonDauSach.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvChonDauSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvChonDauSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvChonDauSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChonDauSach.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvChonDauSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvChonDauSach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvChonDauSach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumVioletRed;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChonDauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumVioletRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(16)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChonDauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvChonDauSach.ColumnHeadersHeight = 40;
             this.dgvChonDauSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach,
@@ -223,14 +242,14 @@ namespace LibraryManager.Template
             this.dgvChonDauSach.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvChonDauSach.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
             this.dgvChonDauSach.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChonDauSach.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(208)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(114)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChonDauSach.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChonDauSach.EnableHeadersVisualStyles = false;
             this.dgvChonDauSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(184)))), ((int)(((byte)(218)))));
             this.dgvChonDauSach.HeaderBackColor = System.Drawing.Color.MediumVioletRed;
@@ -427,6 +446,18 @@ namespace LibraryManager.Template
             this.lbInfoMaDS.TabIndex = 28;
             this.lbInfoMaDS.Text = "DS000000";
             // 
+            // imageBook
+            // 
+            this.imageBook.BackColor = System.Drawing.Color.Transparent;
+            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_moleskine_500px;
+            this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imageBook.Location = new System.Drawing.Point(15, 46);
+            this.imageBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.imageBook.Name = "imageBook";
+            this.imageBook.Size = new System.Drawing.Size(144, 144);
+            this.imageBook.TabIndex = 3;
+            this.imageBook.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -524,37 +555,6 @@ namespace LibraryManager.Template
             this.lbInfoTenSach.TabIndex = 23;
             this.lbInfoTenSach.Text = "Tư duy doanh nhân- Cách doanh nhân nghĩ, việc doanh nhân làm qua 100 bài học xươn" +
     "g máu";
-            // 
-            // imageBook
-            // 
-            this.imageBook.BackColor = System.Drawing.Color.Transparent;
-            this.imageBook.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_moleskine_500px;
-            this.imageBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imageBook.Location = new System.Drawing.Point(15, 46);
-            this.imageBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.imageBook.Name = "imageBook";
-            this.imageBook.Size = new System.Drawing.Size(144, 144);
-            this.imageBook.TabIndex = 3;
-            this.imageBook.TabStop = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BorderRadius = 18;
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Image = global::LibraryManager.Properties.Resources.icons8_search_64px;
-            this.btnSearch.Location = new System.Drawing.Point(618, 42);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(125, 44);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Tìm kiếm";
             // 
             // FrmTimKiemForDG
             // 

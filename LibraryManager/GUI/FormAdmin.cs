@@ -231,6 +231,7 @@ namespace LibraryManager.Template
             panelShow.Controls.Add(new DanhSachDG());
         }
 
+
        
         private void btnM_Suadausach_Click(object sender, EventArgs e)
         {
@@ -265,6 +266,13 @@ namespace LibraryManager.Template
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new ThemDocgia());
+
+        }
+
+        private void btnQLNhap_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.QLNhap());
         }
     }
 }

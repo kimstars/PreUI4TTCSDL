@@ -84,7 +84,7 @@ namespace LibraryManager.Report
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 41F;
+            this.BottomMargin.HeightF = 41.80573F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -448,7 +448,7 @@ namespace LibraryManager.Report
             this.phieuMuon_DataSet});
             this.DataSource = this.bindingSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(100, 71, 5, 41);
+            this.Margins = new System.Drawing.Printing.Margins(100, 71, 5, 42);
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

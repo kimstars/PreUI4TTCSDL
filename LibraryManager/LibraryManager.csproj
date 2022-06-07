@@ -349,7 +349,7 @@
     <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationFramework" />
@@ -388,6 +388,7 @@
     <Compile Include="BUS\NhapSach_BUS.cs" />
     <Compile Include="BUS\NhaXuatBan_BUS.cs" />
     <Compile Include="BUS\PhieuMuon_BUS.cs" />
+    <Compile Include="BUS\PhieuNhap_BUS.cs" />
     <Compile Include="BUS\TacGia_BUS.cs" />
     <Compile Include="BUS\TaiKhoan_BUS.cs" />
     <Compile Include="BUS\TheLoai_BUS.cs" />
@@ -431,6 +432,7 @@
     <Compile Include="DAO\NhapSach_DAO.cs" />
     <Compile Include="DAO\NhaXuatBan_DAO.cs" />
     <Compile Include="DAO\PhieuMuon_DAO.cs" />
+    <Compile Include="DAO\PhieuNhap_DAO.cs" />
     <Compile Include="DAO\TacGia_DAO.cs" />
     <Compile Include="DAO\TaiKhoan_DAO.cs" />
     <Compile Include="DAO\TheLoai_DAO.cs" />
@@ -464,6 +466,21 @@
     </Compile>
     <Compile Include="GUI\CreateDataDB.Designer.cs">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBvipham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BBvipham.Designer.cs">
+      <DependentUpon>BBvipham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBViphamCreator.cs" />
+    <Compile Include="Report\BBVP_DataSet.cs">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBVP_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Template\DSSachVP.cs">
       <SubType>UserControl</SubType>
@@ -563,6 +580,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuNhapCreator.cs" />
+    <Compile Include="Report\PhieuNhapRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuNhapRP.Designer.cs">
+      <DependentUpon>PhieuNhapRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuNhap_Dataset.cs">
+      <DependentUpon>PhieuNhap_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuNhap_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuNhap_Dataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Report\TKLuotMuonRP.cs">
       <SubType>Component</SubType>
@@ -723,6 +755,12 @@
     <Compile Include="Template\ThemDocgia.Designer.cs">
       <DependentUpon>ThemDocgia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\QLNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\QLNhap.Designer.cs">
+      <DependentUpon>QLNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\ThongKeNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -779,6 +817,12 @@
     <Compile Include="Template\TimKiem4NV.Designer.cs">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Xu_ly_tra.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -803,6 +847,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateDataDB.resx">
       <DependentUpon>CreateDataDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBvipham.resx">
+      <DependentUpon>BBvipham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DSSachVP.resx">
       <DependentUpon>DSSachVP.cs</DependentUpon>
@@ -849,6 +896,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Report\PhieuMuonRP.resx">
       <DependentUpon>PhieuMuonRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuNhapRP.resx">
+      <DependentUpon>PhieuNhapRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\TKLuotMuonRP.resx">
       <DependentUpon>TKLuotMuonRP.cs</DependentUpon>
@@ -922,6 +972,9 @@
     <EmbeddedResource Include="Template\ThemDocgia.resx">
       <DependentUpon>ThemDocgia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\QLNhap.resx">
+      <DependentUpon>QLNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\ThongKeNV.resx">
       <DependentUpon>ThongKeNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -951,6 +1004,9 @@
     <EmbeddedResource Include="Template\tk_sachnhap.resx">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\Xu_ly_tra.resx">
       <DependentUpon>Xu_ly_tra.cs</DependentUpon>
     </EmbeddedResource>
@@ -971,6 +1027,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\BBVP_DataSet.xsc">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\BBVP_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BBVP_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\BBVP_DataSet.xss">
+      <DependentUpon>BBVP_DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Report\PhieuMuon_DataSet.xsc">
       <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
     </None>
@@ -981,6 +1048,17 @@
     </None>
     <None Include="Report\PhieuMuon_DataSet.xss">
       <DependentUpon>PhieuMuon_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\PhieuNhap_Dataset.xsc">
+      <DependentUpon>PhieuNhap_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Report\PhieuNhap_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuNhap_Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\PhieuNhap_Dataset.xss">
+      <DependentUpon>PhieuNhap_Dataset.xsd</DependentUpon>
     </None>
     <None Include="Report\TKLuotMuon_Dataset.xsc">
       <DependentUpon>TKLuotMuon_Dataset.xsd</DependentUpon>

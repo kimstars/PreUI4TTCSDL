@@ -177,5 +177,18 @@ namespace LibraryManager.BUS
 
         #endregion
 
+
+
+        #region khoataikhoan
+
+        public void KhoaTaiKhoan(string MaDocGia)
+        {
+            dgDao.KhoaTaiKhoan(MaDocGia);
+
+        }
+        public void MoKhoaTK(string MaDocGia)
+        {
+            dgDao.KhoaTaiKhoan(MaDocGia);
+        }
     }
 }

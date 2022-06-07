@@ -59,7 +59,9 @@ namespace LibraryManager.GUI
             this.Lydo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
+
             this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
+
             this.labelChuY = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -409,7 +411,7 @@ namespace LibraryManager.GUI
             this.dgvVipham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -441,7 +443,7 @@ namespace LibraryManager.GUI
             this.dgvVipham.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -452,7 +454,7 @@ namespace LibraryManager.GUI
             this.dgvVipham.HeaderBackColor = System.Drawing.Color.Teal;
             this.dgvVipham.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvVipham.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvVipham.Location = new System.Drawing.Point(345, 45);
+            this.dgvVipham.Location = new System.Drawing.Point(345, 53);
             this.dgvVipham.Name = "dgvVipham";
             this.dgvVipham.RowHeadersVisible = false;
             this.dgvVipham.RowHeadersWidth = 51;
@@ -499,6 +501,7 @@ namespace LibraryManager.GUI
             this.label11.Text = "Độc giả vi phạm 3 lần tự động khóa tài khoản\r\nLý do vi phạm:\r\n- trả sách trễ hạn\r" +
     "\n- làm hỏng sách\r\n- làm mất sách\r\n";
             // 
+
             // btnHoanthien
             // 
             this.btnHoanthien.BackColor = System.Drawing.Color.Transparent;
@@ -518,6 +521,7 @@ namespace LibraryManager.GUI
             this.btnHoanthien.TabIndex = 10;
             this.btnHoanthien.Text = "Hoàn tất";
             this.btnHoanthien.Click += new System.EventHandler(this.btnHoanthien_Click);
+
             // 
             // labelChuY
             // 

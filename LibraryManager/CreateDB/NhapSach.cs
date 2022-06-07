@@ -35,27 +35,21 @@ namespace LibraryManager.CreateDB
 
             dgvDauSach.DataSource = dsBus.LoadListDS();
 
+            lbSoluong.Text = nsBus.SoLuongSach_ChuaNhap().ToString();
 
             DataTable temp = new DataTable();
-            
-
 
             temp = nvBus.LoadMaNhanVien();
             cbNV.DataSource = temp;
             cbNV.DisplayMember = temp.Columns[0].ToString();
 
             AutoTaoMa();
+            lbPhieunhap.Text = nsBus.AutoTaoMaNhap();
 
 
         }
-        string MaNhap;
         private void AutoTaoMa()
         {
-            string index = (dgvTTNhap.Rows.Count - 1).ToString();
-            MaNhap = "PN000000";
-            MaNhap = MaNhap.Substring(0, 8 - index.Length) + index;
-            txtMaNhap.Text = MaNhap;
-
 
             dateNhap.Value = randDate.Next();
 
@@ -65,48 +59,44 @@ namespace LibraryManager.CreateDB
         }
 
 
-        private void cbMaSach_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cbMaSach_SelectedValueChanged(object sender, EventArgs e)
-        {
-           
-
-        }
+  
 
         private void dgvDauSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgvDauSach.Rows[e.RowIndex];
 
-            txtMaDauSach.Text = row.Cells[1].Value.ToString();
-            txtSoluong.Text = nsBus.LoadSLSachChuaNhap(txtMaDauSach.Text);
+            //txtSoluong.Text = nsBus.LoadSLSachChuaNhap(txtMaDauSach.Text);
 
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            PhieuNhap pn = new PhieuNhap();
-            ThongTinNhapSach ttns = new ThongTinNhapSach();
 
-            pn.MaNhanVien = cbNV.Text;
-            pn.MaPhieuNhap = txtMaNhap.Text;
-            pn.NgayNhap = dateNhap.Value;
+            for (int i = 0; i < 20; i++)
+            {
+                lbSoluong.Text = nsBus.SoLuongSach_ChuaNhap().ToString();
+                lbPhieunhap.Text = nsBus.AutoTaoMaNhap();
+                nsBus.CallProc_Gen_PN(cbNV.Text, dateNhap.Value);
 
-            ttns.MaDauSach = txtMaDauSach.Text.Trim();
-            ttns.MaPhieuNhap = txtMaNhap.Text;
-            ttns.SoLuongSach = int.Parse(txtSoluong.Text);
 
-            nsBus.ThemThongtinNhap(pn, ttns);
+                RandomCombobox(ref cbNV);
+                AutoTaoMa();
 
+            }
             dgvTTNhap.DataSource = nsBus.LoadTTNhap();
 
-            AutoTaoMa();
+        }
 
 
-           
-
+        private void RandomCombobox(ref ComboBox comboBox)
+        {
+            Random random = new Random();
+            int newSelectedIndex = comboBox.SelectedIndex;
+            while (newSelectedIndex == comboBox.SelectedIndex)
+            {
+                newSelectedIndex = random.Next(0, comboBox.Items.Count);
+            }
+            comboBox.SelectedIndex = newSelectedIndex;
         }
     }
 }

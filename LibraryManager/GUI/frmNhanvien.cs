@@ -217,6 +217,7 @@ namespace LibraryManager
 
         private void imgThuVienMTA_Click(object sender, EventArgs e)
         {
+            CloseDoc();
             sidebarTickTime.Start();
         }
 
@@ -330,6 +331,12 @@ namespace LibraryManager
 
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.DSSachVP());
+        }
+
+        private void btnQLNhap_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.QLNhap());
         }
     }
 }

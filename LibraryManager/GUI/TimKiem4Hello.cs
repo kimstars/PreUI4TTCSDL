@@ -181,6 +181,7 @@ namespace LibraryManager.GUI
         private void SearchByName()
         {
             string tl = cbTheLoai.Text.Trim();
+            if (tl == "") tl = "Tất cả thể loại";
             string keysearch = txtSearch.Text.Trim();
 
             if (keysearch != "")

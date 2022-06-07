@@ -86,6 +86,31 @@ namespace LibraryManager.DAO
         }
 
 
+        #region khoataikhoan
+
+        public void KhoaTaiKhoan(string MaDocGia)
+        {
+            string NameProc = "KhoaTaiKhoan";
+
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@ma", MaDocGia);
+            Excute_Proc_NParam(NameProc,sParams);
+
+        }
+        public void MoKhoaTK(string MaDocGia)
+        {
+            string NameProc = "MoKhoaTaiKhoan";
+
+            SqlParameter[] sParams = new SqlParameter[1];
+            sParams[0] = new SqlParameter("@ma", MaDocGia);
+            Excute_Proc_NParam(NameProc, sParams);
+
+        }
+
+
+
+        #endregion
+
         public DocGia GetMotDG(string maDG)
         {
 

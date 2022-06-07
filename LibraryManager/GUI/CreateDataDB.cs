@@ -73,7 +73,9 @@ namespace LibraryManager.GUI
 
         private void btnRPPhieumuon_Click(object sender, EventArgs e)
         {
+
             Report.PhieuMuonCreator tkcreator = new Report.PhieuMuonCreator("MT000009","NV000005");
+
             tkcreator.ShowReportHoaDon();
         }
 
@@ -81,6 +83,13 @@ namespace LibraryManager.GUI
         {
             Template.testLogin newform = new Template.testLogin();
             newform.Show();
+        }
+
+        private void btnRP_BBVP_Click(object sender, EventArgs e)
+        {
+            Report.BBViphamCreator tkcreator = new Report.BBViphamCreator("VP000000");
+
+            tkcreator.ShowReportHoaDon();
         }
     }
 }

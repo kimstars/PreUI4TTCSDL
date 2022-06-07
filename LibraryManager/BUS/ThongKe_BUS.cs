@@ -37,10 +37,7 @@ namespace LibraryManager.BUS
         {
             return tkDao.tkSachnhap(a,b);
         }
-        public Int64 GetTongso(DateTime ngaybd, DateTime ngaykt)
-        {
-            return tkDao.Load_tongso(ngaybd,ngaykt);
-        }
+
         public DataTable get_madg_cmb()
         {
             return tkDao.load_combobox_docgia();

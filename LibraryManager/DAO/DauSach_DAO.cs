@@ -46,7 +46,7 @@ namespace LibraryManager.DAO
 
         public DataTable Search(string TuKhoa, string MucTimKiem)
         {
-            string sql = $"EXEC TIMKIEMDAUSACH '"+TuKhoa+"','"+MucTimKiem+"'";
+            string sql = $"EXEC TIMKIEMDAUSACH N'{TuKhoa}','{MucTimKiem}'";
             return GetData(sql);
         }
 
