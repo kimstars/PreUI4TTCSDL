@@ -190,5 +190,6 @@ namespace LibraryManager.BUS
         {
             dgDao.KhoaTaiKhoan(MaDocGia);
         }
+        #endregion
     }
 }

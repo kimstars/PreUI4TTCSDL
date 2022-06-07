@@ -87,7 +87,7 @@ namespace LibraryManager.GUI
 
         private void btnRP_BBVP_Click(object sender, EventArgs e)
         {
-            Report.BBViphamCreator tkcreator = new Report.BBViphamCreator("VP000000");
+            Report.BBViphamCreator tkcreator = new Report.BBViphamCreator("VP000004");
 
             tkcreator.ShowReportHoaDon();
         }

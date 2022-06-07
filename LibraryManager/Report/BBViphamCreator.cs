@@ -53,6 +53,7 @@ namespace LibraryManager.Report
                 string TenDs = row["TenDauSach"].ToString();
                 string LyDo = row["LyDo"].ToString();
                 string TienPhat = row["TienPhat"].ToString();
+
                 sumSL++;
                 
                 sumPhat += (int)double.Parse(TienPhat);
@@ -69,7 +70,8 @@ namespace LibraryManager.Report
         DocGia_BUS dgBus = new DocGia_BUS();
         public void ShowReportHoaDon()
         {
-            
+            RP.DataSource = DS;
+        
             NhapDuLieuTK_VaoDataSet();
 
             RP.tbCellSumTienPhat.Text = sumPhat.ToString();

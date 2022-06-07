@@ -14,7 +14,7 @@ namespace LibraryManager.Template
     public partial class frmLapBBVP : UserControl
     {
         BienbanVP_BUS bb = new BienbanVP_BUS();
-        string MaNV="NV000001";
+        string MaNV;
         string maVP = "";
         public frmLapBBVP(string manv)
         {
@@ -23,10 +23,8 @@ namespace LibraryManager.Template
         }
         private void AutoTaoMaVP()
         {
-            string index = (bb.Get_slVP() + 1).ToString();
-            maVP = "VP000000";
-            maVP = maVP.Substring(0, 8 - index.Length) + index;
-            txtMaVP.Text = maVP;
+            
+            txtMaVP.Text = bb.CreateNext_MaVP();
 
         }
         private void frmLapBBVP_Load(object sender, EventArgs e)
@@ -122,6 +120,10 @@ namespace LibraryManager.Template
             dgvSVP.Rows.Clear();
             txtTongtienphat.Text = "";
             cmbMaDg.Enabled = true;
+
+            Report.BBViphamCreator tkcreator = new Report.BBViphamCreator(bbvp.MaViPham);
+
+            tkcreator.ShowReportHoaDon();
         }
 
         private void cmbMasach_SelectedIndexChanged_1(object sender, EventArgs e)
