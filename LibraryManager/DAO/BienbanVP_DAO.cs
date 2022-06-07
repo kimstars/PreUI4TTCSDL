@@ -49,12 +49,12 @@ namespace LibraryManager.DAO
         }
         public void insert(BienBanViPham bbvp)
         {
-            string sqlString = $"insert into bienbanvipham values ('{bbvp.MaViPham}','{bbvp.MaDocGia}',N'{bbvp.MaNhanVien}',{bbvp.TienPhat},N'{bbvp.TinhTrangSach}')";
+            string sqlString = $"insert into bienbanvipham values ('{bbvp.MaViPham}','{bbvp.MaDocGia}',N'{bbvp.MaNhanVien}','{bbvp.TongTP}')";
             Excute(sqlString);
         }
         public void sua(BienBanViPham bbvp)
         {
-            string TinhTrangSach= $"%{bbvp.TinhTrangSach}%";
+            
             DataTable dt = new DataTable();
             SqlDataReader rd;
             try
@@ -62,9 +62,9 @@ namespace LibraryManager.DAO
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("proc_thaydoi_bbvp", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@tien", bbvp.TienPhat);
+              
                 cmd.Parameters.AddWithValue("@mavp", bbvp.MaViPham);
-                cmd.Parameters.AddWithValue("@tinhtrang", bbvp.TinhTrangSach);
+                
 
                 rd = cmd.ExecuteReader();
                 dt.Load(rd);
@@ -80,7 +80,7 @@ namespace LibraryManager.DAO
         }
         public void Tao_vp(ViPham vp)
         {
-            string sqlString = $"insert into vipham (mavipham, masach,lydo ) values ('{vp.MaViPham}','{vp.MaSach}',N'{vp.Lydo}')";
+            string sqlString = $"insert into vipham (mavipham, masach,lydo,tienphat ) values ('{vp.MaViPham}','{vp.MaSach}',N'{vp.Lydo}','{vp.TienPhat}')";
             Excute(sqlString);
         }
         // lấy ra tên cuốn sách từ mã cuốn sách

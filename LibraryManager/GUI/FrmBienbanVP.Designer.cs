@@ -51,6 +51,7 @@ namespace LibraryManager.GUI
             this.lbMaVP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lbTienPhat = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvVipham = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,13 +59,10 @@ namespace LibraryManager.GUI
             this.Lydo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_tinhtrang = new System.Windows.Forms.RichTextBox();
             this.btnHoanthien = new Guna.UI2.WinForms.Guna2Button();
             this.labelChuY = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lbTienPhat = new System.Windows.Forms.Label();
             this.paneldrag.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -361,10 +359,8 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Controls.Add(this.label6);
             this.guna2GroupBox2.Controls.Add(this.dgvVipham);
             this.guna2GroupBox2.Controls.Add(this.label11);
-            this.guna2GroupBox2.Controls.Add(this.txt_tinhtrang);
             this.guna2GroupBox2.Controls.Add(this.btnHoanthien);
             this.guna2GroupBox2.Controls.Add(this.labelChuY);
-            this.guna2GroupBox2.Controls.Add(this.label9);
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 11F);
@@ -376,6 +372,18 @@ namespace LibraryManager.GUI
             this.guna2GroupBox2.Size = new System.Drawing.Size(1045, 493);
             this.guna2GroupBox2.TabIndex = 13;
             this.guna2GroupBox2.Text = "Lỗi vi phạm";
+            // 
+            // lbTienPhat
+            // 
+            this.lbTienPhat.AutoSize = true;
+            this.lbTienPhat.BackColor = System.Drawing.Color.Transparent;
+            this.lbTienPhat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lbTienPhat.ForeColor = System.Drawing.Color.Black;
+            this.lbTienPhat.Location = new System.Drawing.Point(495, 379);
+            this.lbTienPhat.Name = "lbTienPhat";
+            this.lbTienPhat.Size = new System.Drawing.Size(33, 37);
+            this.lbTienPhat.TabIndex = 18;
+            this.lbTienPhat.Text = "$";
             // 
             // label6
             // 
@@ -484,22 +492,12 @@ namespace LibraryManager.GUI
             // 
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(22, 200);
+            this.label11.Location = new System.Drawing.Point(31, 94);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(241, 171);
             this.label11.TabIndex = 14;
             this.label11.Text = "Độc giả vi phạm 3 lần tự động khóa tài khoản\r\nLý do vi phạm:\r\n- trả sách trễ hạn\r" +
     "\n- làm hỏng sách\r\n- làm mất sách\r\n";
-            // 
-            // txt_tinhtrang
-            // 
-            this.txt_tinhtrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tinhtrang.Location = new System.Drawing.Point(17, 87);
-            this.txt_tinhtrang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_tinhtrang.Name = "txt_tinhtrang";
-            this.txt_tinhtrang.Size = new System.Drawing.Size(275, 61);
-            this.txt_tinhtrang.TabIndex = 11;
-            this.txt_tinhtrang.Text = "";
             // 
             // btnHoanthien
             // 
@@ -526,21 +524,11 @@ namespace LibraryManager.GUI
             this.labelChuY.AutoSize = true;
             this.labelChuY.BackColor = System.Drawing.Color.White;
             this.labelChuY.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChuY.Location = new System.Drawing.Point(13, 168);
+            this.labelChuY.Location = new System.Drawing.Point(22, 62);
             this.labelChuY.Name = "labelChuY";
             this.labelChuY.Size = new System.Drawing.Size(60, 23);
             this.labelChuY.TabIndex = 9;
             this.labelChuY.Text = "Chú ý:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(12, 60);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 25);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Tình trạng sách:";
             // 
             // guna2Elipse1
             // 
@@ -552,18 +540,6 @@ namespace LibraryManager.GUI
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.paneldrag;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // lbTienPhat
-            // 
-            this.lbTienPhat.AutoSize = true;
-            this.lbTienPhat.BackColor = System.Drawing.Color.Transparent;
-            this.lbTienPhat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lbTienPhat.ForeColor = System.Drawing.Color.Black;
-            this.lbTienPhat.Location = new System.Drawing.Point(495, 379);
-            this.lbTienPhat.Name = "lbTienPhat";
-            this.lbTienPhat.Size = new System.Drawing.Size(33, 37);
-            this.lbTienPhat.TabIndex = 18;
-            this.lbTienPhat.Text = "$";
             // 
             // FrmBienbanVP
             // 
@@ -615,8 +591,6 @@ namespace LibraryManager.GUI
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvVipham;
         private Guna.UI2.WinForms.Guna2TextBox txtManv;
-        private System.Windows.Forms.RichTextBox txt_tinhtrang;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lydo;

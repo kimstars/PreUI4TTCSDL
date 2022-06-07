@@ -40,9 +40,7 @@ namespace LibraryManager.Template
             this.txtMaVP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtTienphat = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTinhtrang = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLapBB = new Guna.UI2.WinForms.Guna2Button();
             this.btnVP = new Guna.UI2.WinForms.Guna2Button();
             this.dgvSVP = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -193,18 +191,6 @@ namespace LibraryManager.Template
             this.label9.TabIndex = 2;
             this.label9.Text = "Tiền phạt";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 262);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 20);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Tình trạng sách";
-            // 
             // txtTienphat
             // 
             this.txtTienphat.BackColor = System.Drawing.Color.Transparent;
@@ -229,31 +215,6 @@ namespace LibraryManager.Template
             this.txtTienphat.ShadowDecoration.Parent = this.txtTienphat;
             this.txtTienphat.Size = new System.Drawing.Size(216, 38);
             this.txtTienphat.TabIndex = 3;
-            // 
-            // txtTinhtrang
-            // 
-            this.txtTinhtrang.BackColor = System.Drawing.Color.Transparent;
-            this.txtTinhtrang.BorderRadius = 6;
-            this.txtTinhtrang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTinhtrang.DefaultText = "";
-            this.txtTinhtrang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTinhtrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTinhtrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTinhtrang.DisabledState.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTinhtrang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTinhtrang.FocusedState.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTinhtrang.HoverState.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.Location = new System.Drawing.Point(156, 254);
-            this.txtTinhtrang.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.txtTinhtrang.Name = "txtTinhtrang";
-            this.txtTinhtrang.PasswordChar = '\0';
-            this.txtTinhtrang.PlaceholderText = "";
-            this.txtTinhtrang.SelectedText = "";
-            this.txtTinhtrang.ShadowDecoration.Parent = this.txtTinhtrang;
-            this.txtTinhtrang.Size = new System.Drawing.Size(216, 38);
-            this.txtTinhtrang.TabIndex = 3;
             // 
             // btnLapBB
             // 
@@ -283,7 +244,7 @@ namespace LibraryManager.Template
             this.btnVP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnVP.ForeColor = System.Drawing.Color.White;
             this.btnVP.HoverState.Parent = this.btnVP;
-            this.btnVP.Location = new System.Drawing.Point(190, 315);
+            this.btnVP.Location = new System.Drawing.Point(184, 292);
             this.btnVP.Name = "btnVP";
             this.btnVP.ShadowDecoration.Parent = this.btnVP;
             this.btnVP.Size = new System.Drawing.Size(129, 45);
@@ -615,12 +576,10 @@ namespace LibraryManager.Template
             this.guna2Panel2.Controls.Add(this.txtMaVP);
             this.guna2Panel2.Controls.Add(this.cmbMasach);
             this.guna2Panel2.Controls.Add(this.label8);
-            this.guna2Panel2.Controls.Add(this.txtTinhtrang);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label9);
             this.guna2Panel2.Controls.Add(this.txtTenSach);
             this.guna2Panel2.Controls.Add(this.label7);
-            this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(198)))), ((int)(((byte)(165)))));
             this.guna2Panel2.Location = new System.Drawing.Point(16, 289);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -696,9 +655,7 @@ namespace LibraryManager.Template
         private Guna.UI2.WinForms.Guna2TextBox txtMaVP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox txtTinhtrang;
         private Guna.UI2.WinForms.Guna2TextBox txtTienphat;
-        private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvSVP;
         private Guna.UI2.WinForms.Guna2Button btnLapBB;
         private Guna.UI2.WinForms.Guna2Button btnVP;

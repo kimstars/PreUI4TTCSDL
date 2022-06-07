@@ -91,12 +91,7 @@ namespace LibraryManager.GUI
             bbvp.MaDocGia = txtMadg.Text.Trim();
             bbvp.MaNhanVien = txtManv.Text.Trim();
             bbvp.MaViPham = txtMaVP.Text;
-            long tienphat = 0;
-            
-            bbvp.TienPhat = int.Parse(lbTienPhat.Text);
-
-           
-            bbvp.TinhTrangSach = txt_tinhtrang.Text;
+            bbvp.TongTP = 0;
             DialogResult result = MessageBox.Show("Bạn có muốn hoàn tất biên bản", "Hỏi đáp", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -108,6 +103,8 @@ namespace LibraryManager.GUI
                     vp.MaSach = dgvVipham.Rows[k].Cells[0].Value.ToString();
                     vp.MaViPham = txtMaVP.Text;
                     vp.Lydo = dgvVipham.Rows[k].Cells[2].Value.ToString();
+                    vp.TienPhat = int.Parse(dgvVipham.Rows[k].Cells[3].Value.ToString());
+
                     bbvp_bus.Them_vp(vp);
                     if (dgvVipham.Rows[k].Cells[2].Value.ToString().Contains("mất"))
                     {

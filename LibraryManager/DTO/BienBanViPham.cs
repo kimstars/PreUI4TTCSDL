@@ -12,7 +12,8 @@ namespace LibraryManager.DTO
         public string MaViPham { get; set; }
         public string MaDocGia { get; set; }
         public string MaNhanVien { get; set; }
-        public Nullable<long> TienPhat { get; set; }
-        public string TinhTrangSach { get; set; }
+        public Nullable<long> TongTP { get; set; }
+
+
     }
 }
