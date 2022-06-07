@@ -39,6 +39,7 @@ namespace LibraryManager.DAO
             Excute(sql);
         }
 
+
         public void CallProc_Gen_Phieunhap(string MaNhanVien, DateTime NgayNhap)
         {
             string NameProc = "Proc_createDB_NhapSach";

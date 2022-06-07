@@ -96,6 +96,10 @@ namespace LibraryManager.Template
                 csBus.ThemThongtinNhap(cs,pn);
 
                 MessageBox.Show("Nhập thành công!");
+                txtMaCuonSach.Clear();
+                txtViTriSach.Clear();
+                cbMoiCu.Items.Clear();
+                txtMaCuonSach.Text = csBus.CreateNext_MaSach();
                 //Load lai len dgv
             }
         }
