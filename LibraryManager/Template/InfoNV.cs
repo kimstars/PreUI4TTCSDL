@@ -25,7 +25,7 @@ namespace LibraryManager.Template
         }
 
 
-        string MaNhanVien = "NV000001";
+        string MaNhanVien;
         string imgPath = @"";
         NhanVien nv = new NhanVien();
         TaiKhoan tk = new TaiKhoan();

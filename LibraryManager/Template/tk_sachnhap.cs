@@ -20,14 +20,28 @@ namespace LibraryManager.Template
 
         private void tk_sachnhap_Load(object sender, EventArgs e)
         {
-           
+            DateTime date = dateEnd.Value.Subtract(new TimeSpan(30, 0, 0, 0));
+            dateStart.Value = date;
+            TKNhap();
+
         }
 
+
+        private void TKNhap()
+        {
+            dgv_tkSachnhap.DataSource = tk_bus.Load_sach_nhap(dateStart.Value, dateEnd.Value);
+
+            int sum = 0;
+            for (int i = 0; i < dgv_tkSachnhap.RowCount; i++)
+            {
+                sum += int.Parse(dgv_tkSachnhap.Rows[i].Cells["soluong"].Value.ToString());
+            }
+            txtTongso.Text = sum.ToString();
+        }
         private void btnTK_Click(object sender, EventArgs e)
         {
+            TKNhap();
 
-            dgv_tkSachnhap.DataSource = tk_bus.Load_sach_nhap(dateStart.Value, dateEnd.Value);
-            txtTongso.Text = tk_bus.GetTongso(dateStart.Value, dateEnd.Value).ToString();
         }
     }
 }

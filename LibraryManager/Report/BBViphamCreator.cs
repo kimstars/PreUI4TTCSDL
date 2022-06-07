@@ -4,24 +4,28 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.XtraReports.UI;
+using LibraryManager.BUS;
 
 namespace LibraryManager.Report
 {
     class BBViphamCreator
     {
         public string MaViPham;
-        public PhieuMuon_DataSet DS;
+        public BBVP_DataSet DS;
         public BBvipham RP;
         public int sumPhat;
         public int sumSL;
         public string MaNhanVien;
         public string MaDocGia;
+
+        public BienbanVP_BUS bbBus = new BienbanVP_BUS();
         public BBViphamCreator(string MaVP, string MaNV)
         {
             this.MaViPham = MaVP;
-            this.DS = new PhieuMuon_DataSet();
-            this.RP = new BBvipham();
+            this.DS = new BBVP_DataSet();
 
+            this.RP = new BBvipham();
 
             this.MaNhanVien = MaNV;
             this.MaDocGia = "";
@@ -31,33 +35,31 @@ namespace LibraryManager.Report
         public bool NhapDuLieuTK_VaoDataSet()
         {
 
-            DataTable tkDS = pmBus.LoadTTPhieuMuon(MaMuonTra);
+            DataTable ChiTietVP_DT = bbBus.RP_GetDSVP(MaViPham);
 
 
-            //(mã sách, tên sách, vị trí, giá tiền , tiền cọc(10% giá tiền))
 
+            DataTable ThongTinBB = bbBus.RP_GetThongtin_BB(MaViPham);
+            DS.TTBienBan.Rows.Add(new object[] {
+                ThongTinBB.Rows[0]["NgayTra"],
+                ThongTinBB.Rows[0]["MaDocGia"],
+                ThongTinBB.Rows[0]["TenDocGia"],
+                ThongTinBB.Rows[0]["TenNhanVien"],
+                MaViPham
+            });
 
-            DataTable tempnvdg = pmBus.LoadMaNV_MaDG_PM(MaMuonTra);
-            if (tempnvdg.Rows.Count > 0)
-            {
-                //MaNhanVien = tempnvdg.Rows[0]["MaNhanVien"].ToString();
-                MaDocGia = tempnvdg.Rows[0]["MaDocGia"].ToString();
-
-            }
-
-            foreach (DataRow row in tkDS.Rows)
+            foreach (DataRow row in ChiTietVP_DT.Rows)
             {
                 string MaSach = row["MaSach"].ToString();
                 string TenDs = row["TenDauSach"].ToString();
-                string ViTri = row["ViTriSach"].ToString();
-                string GiaTien = row["GiaTien"].ToString();
-                string TienCoc = row["TienCoc"].ToString();
+                string LyDo = row["LyDo"].ToString();
+                string TienPhat = row["TienPhat"].ToString();
+                sumSL++;
+                
+                sumPhat += (int)double.Parse(TienPhat);
 
-                sumGia += int.Parse(GiaTien);
-                sumCoc += (int)double.Parse(TienCoc);
-
-                DS.PhieuMuon_dataset.Rows.Add(new object[] {
-                    MaSach, TenDs,ViTri,GiaTien,TienCoc
+                DS.ChiTietVP.Rows.Add(new object[] {
+                    MaSach, TenDs,LyDo,TienPhat
                 });
             }
 
@@ -68,24 +70,11 @@ namespace LibraryManager.Report
         DocGia_BUS dgBus = new DocGia_BUS();
         public void ShowReportHoaDon()
         {
-            RP.DataSource = DS;
-            RP.DataMember = DS.PhieuMuon_dataset.TableName;
+            
             NhapDuLieuTK_VaoDataSet();
 
-            RP.lbTenNV.Text = nvBus.GetName(MaNhanVien);
-            RP.lbTenNVxl.Text = "Nhân viên xử lý: " + nvBus.GetName(MaNhanVien);
-            RP.tbCellSumGiaTien.Text = sumGia.ToString();
-            RP.tbCellSumTienCoc.Text = sumCoc.ToString();
-            RP.lbMaDG.Text = "Mã độc giả: " + MaDocGia;
-            RP.lbTenDG.Text = "Tên độc giả : " + dgBus.LoadTenDG(MaDocGia);
-            RP.lbMaMT.Text = "Mã mượn trả : " + MaMuonTra;
-
-            RP.xrBarCode1.Text = MaMuonTra;
-            DateTime ngaymuon = DateTime.Now;
-            DateTime hantra = ngaymuon.Add(new TimeSpan(180, 0, 0, 0));
-
-
-            RP.lbNgayLap.Text = $"Ngày mượn : {ngaymuon.ToString("dd/MM/yyyy")}                  Hạn trả : {hantra.ToString("dd/MM/yyyy")}";
+            RP.tbCellSumTienPhat.Text = sumPhat.ToString();
+            RP.tbSLDausach.Text = sumSL.ToString();
 
             ReportPrintTool ViewRP = new ReportPrintTool(RP);
 

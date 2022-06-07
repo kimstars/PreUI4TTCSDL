@@ -47,14 +47,11 @@ namespace LibraryManager.DAO
         }
         public DataTable tkSachnhap(DateTime ngaybd, DateTime ngaykt)
         {
-            string sqlString = $"select ds.TenDauSach,ds.SoLuong from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn WHERE NgayNhap BETWEEN '{DateToString(ngaybd)}' AND '{DateToString(ngaykt)}' AND pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach = ds.MaDauSach";
+            string sqlString = $"SELECT ds.TenDauSach, COUNT(tt.MaSach) soluong FROM dbo.DAUSACH ds INNER JOIN dbo.CUONSACH cs ON cs.MaDauSach = ds.MaDauSach INNER JOIN  dbo.THONGTINNHAPSACH tt ON tt.MaSach = cs.MaSach INNER JOIN dbo.PHIEUNHAP pn ON pn.MaPhieuNhap = tt.MaPhieuNhap WHERE pn.NgayNhap BETWEEN '{DateToString(ngaybd)}' AND '{DateToString(ngaykt)}' GROUP BY ds.TenDauSach";
+
             return GetData(sqlString);
         }
-        public Int64 Load_tongso(DateTime ngaybd, DateTime ngaykt)
-        {
-            string sqlString = $"select isnull(sum(ttns.SoLuongSach),0) from DAUSACH ds,THONGTINNHAPSACH ttns, PHIEUNHAP pn where NgayNhap between '{DateToString(ngaybd)}' and '{DateToString(ngaykt)}' and pn.maphieunhap = ttns.maphieunhap and ttns.MaDauSach= ds.MaDauSach";
-            return GetCount(sqlString);
-        }
+
         public DataTable load_combobox_docgia()
         {
             string sqlString = " select distinct(madocgia) from PHIEUMUONTRA pmt, THONGTINMUONTRA tt where pmt.MaMuonTra = tt.MaMuonTra and tt.NgayTra is null";

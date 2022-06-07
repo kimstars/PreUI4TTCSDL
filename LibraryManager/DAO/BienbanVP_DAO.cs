@@ -144,7 +144,7 @@ namespace LibraryManager.DAO
         //lay ra ds cuon sachs cung ly do vi pham
         public DataTable GetTT_BBVP(string MaVP)
         {
-            string sql = $"SELECT vp.MaSach, ds.TenDauSach, vp.LyDo FROM dbo.BIENBANVIPHAM  bb INNER JOIN dbo.VIPHAM vp ON vp.MaViPham = bb.MaViPham INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = bb.MaDocGia INNER JOIN dbo.CUONSACH cs ON cs.MaSach = vp.MaSach INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach WHERE bb.MaViPham = '{MaVP}'";
+            string sql = $"SELECT vp.MaSach, ds.TenDauSach, vp.LyDo, vp.TienPhat FROM dbo.BIENBANVIPHAM  bb INNER JOIN dbo.VIPHAM vp ON vp.MaViPham = bb.MaViPham INNER JOIN dbo.DOCGIA dg ON dg.MaDocGia = bb.MaDocGia INNER JOIN dbo.CUONSACH cs ON cs.MaSach = vp.MaSach INNER JOIN dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach WHERE bb.MaViPham = '{MaVP}'";
             return GetData(sql);
         }
         //lay ra thong tin bien ban vi pham (ngay tra, ten doc gia vi pham, ten nhan vien lap bien ban)
