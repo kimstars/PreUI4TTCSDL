@@ -205,6 +205,13 @@ namespace LibraryManager.Template
             }
             txtTongtienphat.Text = tienphat.ToString();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cmbMaDg.Enabled = true;
+            dgvSVP.Rows.Clear();
+            txtTongtienphat.Text = "";
+        }
     }
 
 }
