@@ -236,7 +236,6 @@ namespace LibraryManager.Template
             // btnTK
             // 
             this.btnTK.BackColor = System.Drawing.Color.Transparent;
-            this.btnTK.BorderRadius = 15;
             this.btnTK.CheckedState.Parent = this.btnTK;
             this.btnTK.CustomImages.Parent = this.btnTK;
             this.btnTK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));

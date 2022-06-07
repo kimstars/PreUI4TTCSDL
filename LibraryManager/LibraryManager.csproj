@@ -817,12 +817,6 @@
     <Compile Include="Template\TimKiem4NV.Designer.cs">
       <DependentUpon>TimKiem4NV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Template\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Template\Xu_ly_tra.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1003,9 +997,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\tk_sachnhap.resx">
       <DependentUpon>tk_sachnhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Template\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\Xu_ly_tra.resx">
       <DependentUpon>Xu_ly_tra.cs</DependentUpon>

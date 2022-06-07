@@ -81,6 +81,26 @@ namespace LibraryManager.BUS
         {
             return bbvp_dao.RP_ThongtinVP(MaVP);
         }
+
+
+        public string GetLastest_MaVP()
+        {
+            return bbvp_dao.GetLastest_MaVP();
+        }
+
+
+        public string CreateNext_MaVP()
+        {
+            string current = GetLastest_MaVP();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string maMuon = "VP000000";
+            maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
+
+            return maMuon;
+        }
     }
 }
 

@@ -194,7 +194,7 @@ namespace LibraryManager.DAO
 
         public DataTable LoiViPham(string MaDocGia)
         {
-            string sql = $"SELECT bb.LyDo, vp.MaSach FROM dbo.VIPHAM vp INNER JOIN dbo.BIENBANVIPHAM AS bb ON bb.MaViPham = vp.MaViPham WHERE bb.MaDocGia = '{MaDocGia}'";
+            string sql = $"SELECT vp.LyDo, vp.MaSach FROM dbo.VIPHAM vp INNER JOIN dbo.BIENBANVIPHAM AS bb ON bb.MaViPham = vp.MaViPham WHERE bb.MaDocGia = '{MaDocGia}'";
             return GetData(sql);
         }
 

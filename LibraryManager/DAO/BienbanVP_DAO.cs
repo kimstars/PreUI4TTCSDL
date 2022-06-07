@@ -157,11 +157,21 @@ namespace LibraryManager.DAO
         }
 
 
+
+
+
+    // get lastest mavp
+
+    public string GetLastest_MaVP()
+    {
+        string sql = "SELECT TOP 1 MaViPham FROM dbo.BIENBANVIPHAM ORDER BY MaViPham DESC";
+        return GetString(sql);
     }
 
 
     // sử dụng trigger biên bản vi phạm thì tự động thêm vi phạm
 
+    }
 
-    
+
 }
