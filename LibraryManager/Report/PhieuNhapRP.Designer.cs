@@ -47,10 +47,7 @@ namespace LibraryManager.Report
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tbSumSach = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -78,11 +75,12 @@ namespace LibraryManager.Report
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 30F;
+            this.TopMargin.HeightF = 25F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
+            this.BottomMargin.HeightF = 45F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -103,7 +101,7 @@ namespace LibraryManager.Report
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(600F, 25F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(610F, 25F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UseFont = false;
             // 
@@ -156,7 +154,7 @@ namespace LibraryManager.Report
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhieuNhap_Dataset].[TinhTrangMoiCu]")});
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
-            this.xrTableCell10.Weight = 1.2D;
+            this.xrTableCell10.Weight = 1.3D;
             // 
             // ReportFooter
             // 
@@ -164,13 +162,13 @@ namespace LibraryManager.Report
             this.lbTenNVxl,
             this.xrLabel4,
             this.xrTable3});
-            this.ReportFooter.HeightF = 187.5F;
+            this.ReportFooter.HeightF = 250F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // lbTenNVxl
             // 
             this.lbTenNVxl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenNVxl.LocationFloat = new DevExpress.Utils.PointFloat(448.8535F, 124.3334F);
+            this.lbTenNVxl.LocationFloat = new DevExpress.Utils.PointFloat(448.8535F, 146.8334F);
             this.lbTenNVxl.Multiline = true;
             this.lbTenNVxl.Name = "lbTenNVxl";
             this.lbTenNVxl.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -201,7 +199,7 @@ namespace LibraryManager.Report
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(600F, 25F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(610F, 25F);
             this.xrTable3.StylePriority.UseBorders = false;
             this.xrTable3.StylePriority.UseFont = false;
             // 
@@ -209,59 +207,29 @@ namespace LibraryManager.Report
             // 
             this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell11,
-            this.xrTableCell12,
-            this.xrTableCell13,
-            this.xrTableCell14,
-            this.xrTableCell15});
+            this.tbSumSach});
             this.xrTableRow3.Name = "xrTableRow3";
             this.xrTableRow3.Weight = 1D;
             // 
             // xrTableCell11
             // 
-            this.xrTableCell11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhieuNhap_Dataset].[MaPhieuNhap]")});
             this.xrTableCell11.Multiline = true;
             this.xrTableCell11.Name = "xrTableCell11";
+            this.xrTableCell11.Text = "Tổng";
             this.xrTableCell11.Weight = 1.2D;
             // 
-            // xrTableCell12
+            // tbSumSach
             // 
-            this.xrTableCell12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhieuNhap_Dataset].[MaSach]")});
-            this.xrTableCell12.Multiline = true;
-            this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.Weight = 1.2000000000000002D;
-            // 
-            // xrTableCell13
-            // 
-            this.xrTableCell13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhieuNhap_Dataset].[TenDauSach]")});
-            this.xrTableCell13.Multiline = true;
-            this.xrTableCell13.Name = "xrTableCell13";
-            this.xrTableCell13.Weight = 1.2D;
-            // 
-            // xrTableCell14
-            // 
-            this.xrTableCell14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhieuNhap_Dataset].[ViTriSach]")});
-            this.xrTableCell14.Multiline = true;
-            this.xrTableCell14.Name = "xrTableCell14";
-            this.xrTableCell14.Weight = 1.2000000000000002D;
-            // 
-            // xrTableCell15
-            // 
-            this.xrTableCell15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhieuNhap_Dataset].[TinhTrangMoiCu]")});
-            this.xrTableCell15.Multiline = true;
-            this.xrTableCell15.Name = "xrTableCell15";
-            this.xrTableCell15.Weight = 1.2D;
+            this.tbSumSach.Multiline = true;
+            this.tbSumSach.Name = "tbSumSach";
+            this.tbSumSach.Weight = 4.9D;
             // 
             // xrTableCell8
             // 
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Text = "Tình trạng mới cũ";
-            this.xrTableCell8.Weight = 1D;
+            this.xrTableCell8.Weight = 1.0833323160807291D;
             // 
             // xrTableCell7
             // 
@@ -313,7 +281,7 @@ namespace LibraryManager.Report
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(600F, 25F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(609.9999F, 25F);
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseFont = false;
             // 
@@ -381,7 +349,7 @@ namespace LibraryManager.Report
             // lbNgayLap
             // 
             this.lbNgayLap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayLap.LocationFloat = new DevExpress.Utils.PointFloat(204.1666F, 114.1943F);
+            this.lbNgayLap.LocationFloat = new DevExpress.Utils.PointFloat(149.1666F, 115.861F);
             this.lbNgayLap.Name = "lbNgayLap";
             this.lbNgayLap.SizeF = new System.Drawing.SizeF(445.8334F, 24.19434F);
             this.lbNgayLap.StylePriority.UseFont = false;
@@ -392,7 +360,7 @@ namespace LibraryManager.Report
             // lbMaNVnhap
             // 
             this.lbMaNVnhap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaNVnhap.LocationFloat = new DevExpress.Utils.PointFloat(204.1666F, 138.3886F);
+            this.lbMaNVnhap.LocationFloat = new DevExpress.Utils.PointFloat(149.1666F, 140.0553F);
             this.lbMaNVnhap.Name = "lbMaNVnhap";
             this.lbMaNVnhap.SizeF = new System.Drawing.SizeF(445.8334F, 24.19436F);
             this.lbMaNVnhap.StylePriority.UseFont = false;
@@ -403,7 +371,7 @@ namespace LibraryManager.Report
             // lbTenNVnhap
             // 
             this.lbTenNVnhap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenNVnhap.LocationFloat = new DevExpress.Utils.PointFloat(204.1666F, 162.583F);
+            this.lbTenNVnhap.LocationFloat = new DevExpress.Utils.PointFloat(149.1666F, 164.2497F);
             this.lbTenNVnhap.Name = "lbTenNVnhap";
             this.lbTenNVnhap.SizeF = new System.Drawing.SizeF(445.8334F, 24.19434F);
             this.lbTenNVnhap.StylePriority.UseFont = false;
@@ -434,7 +402,7 @@ namespace LibraryManager.Report
             this.phieuNhap_Dataset});
             this.DataSource = this.bindingSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 30, 100);
+            this.Margins = new System.Drawing.Printing.Margins(100, 62, 25, 45);
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
@@ -461,10 +429,7 @@ namespace LibraryManager.Report
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell15;
+        public DevExpress.XtraReports.UI.XRTableCell tbSumSach;
         public DevExpress.XtraReports.UI.XRLabel lbTenNVxl;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;

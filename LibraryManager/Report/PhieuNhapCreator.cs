@@ -29,6 +29,7 @@ namespace LibraryManager.Report
             this.NgayLap = Ngay;
             
         }
+        int sumSach = 0;
         public bool NhapDuLieuVaoDataSet()
         {
             DataTable tkDS = pnBus.LoadTTPhieuNhap(MaNhanVien,NgayLap);
@@ -51,6 +52,7 @@ namespace LibraryManager.Report
                 DS._PhieuNhap_Dataset.Rows.Add(new object[] {
                     MaPhieuNhap,MaSach, TenDs,ViTri,MoiCu,
                 });
+                sumSach++;
             }
 
             return true;
@@ -68,7 +70,7 @@ namespace LibraryManager.Report
             RP.lbTenNVnhap.Text = "Tên nhân viên nhập: " + TenNhanVien;
             RP.lbTenNVxl.Text = TenNhanVien;
 
-
+            RP.tbSumSach.Text = sumSach.ToString();
 
             RP.xrBarCode1.Text = MaNhanVien;
 

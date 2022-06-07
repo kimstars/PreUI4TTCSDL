@@ -725,6 +725,12 @@
     <Compile Include="Template\QLInfoDocgia.Designer.cs">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Template\QLNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\QLNhap.Designer.cs">
+      <DependentUpon>QLNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\ThongKeNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -926,6 +932,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\QLInfoDocgia.resx">
       <DependentUpon>QLInfoDocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\QLNhap.resx">
+      <DependentUpon>QLNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ThongKeNV.resx">
       <DependentUpon>ThongKeNV.cs</DependentUpon>

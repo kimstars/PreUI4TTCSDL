@@ -28,12 +28,6 @@ namespace LibraryManager.BUS
         }
 
 
-        public DataTable Load_Thongtinsachmuon(string MaMuonTra)
-        {
-            return pnDao.GetThongtinSachMuon(MaMuonTra);
-        }
-
-
         public string GetLastest_MaPhieuNhap()
         {
             return pnDao.GetLastest_MaPhieuNhap();
@@ -86,6 +80,22 @@ namespace LibraryManager.BUS
 
         #endregion
 
+
+
+        public DataTable DSPN_LoadList()
+        {
+            return pnDao.DSPN_getDS();
+        }
+
+        public DataTable DSPN_TTPN_Ma(string MaPN)
+        {
+            return pnDao.DSPN_TTphieunhap_Ma(MaPN);
+        }
+
+        public DataTable DSPN_TimKiem(string Keyword)
+        {
+            return pnDao.DSPN_TimKiem(Keyword);
+        }
     }
 }
 

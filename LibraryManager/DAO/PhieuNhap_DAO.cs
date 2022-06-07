@@ -60,21 +60,6 @@ namespace LibraryManager.DAO
 
         }
 
-        public DataTable Search(string _timkiem)
-        {
-            string sqlString = string.Format("select * from PhieuNhap where MaDocGia like N'%{0}%' or TenDocGia like N'%{0}%'", _timkiem);
-
-            return GetData(sqlString);
-        }
-
-        //proc lấy thông tin sách mượn theo mã mượn trả
-        public DataTable GetThongtinSachMuon(string MaMuonTra)
-        {
-            string NameProc = "proc_PM_TTSachMuon";
-            SqlParameter[] sParams = new SqlParameter[1];
-            sParams[0] = new SqlParameter("@MaMT", MaMuonTra);
-            return GetData_Proc_NParam(NameProc, sParams);
-        }
 
         public string GetLastest_MaPhieuNhap()
         {
@@ -110,7 +95,7 @@ namespace LibraryManager.DAO
         #endregion
 
 
-        #region in phieu muon
+        #region in phieu nhap
 
         public DataTable GetTTPM(string MaNV, DateTime NgayLap)
         {
@@ -132,6 +117,24 @@ namespace LibraryManager.DAO
 
 
         #endregion
+        public DataTable DSPN_getDS()
+        {
+            string sql = "SELECT MaPhieuNhap, MaNhanVien, NgayNhap FROM dbo.PHIEUNHAP";
+            return GetData(sql);
+        }
 
+
+        public DataTable DSPN_TTphieunhap_Ma(string MaPhieuNhap)
+        {
+            string sql = $"SELECT cs.MaSach,ds.TenDauSach,cs.ViTriSach FROM dbo.THONGTINNHAPSACH tt INNER JOIN dbo.CUONSACH cs ON cs.MaSach = tt.MaSach INNER JOIN   dbo.DAUSACH ds ON ds.MaDauSach = cs.MaDauSach WHERE tt.MaPhieuNhap = '{MaPhieuNhap}'";
+            return GetData(sql);
+        }
+
+        public DataTable DSPN_TimKiem(string key)
+        {
+            string sql = $"SELECT MaPhieuNhap, MaNhanVien, NgayNhap FROM dbo.PHIEUNHAP WHERE MaPhieuNhap LIKE '%{key}' OR MaNhanVien LIKE '%{key}%' ";
+            return GetData(sql);
+        }
     }
 }
+

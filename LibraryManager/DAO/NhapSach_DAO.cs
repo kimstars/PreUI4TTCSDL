@@ -38,6 +38,11 @@ namespace LibraryManager.DAO
             Excute(sql);
         }
 
+
+
+
+
+
         public int GetSoLuongPhieuNhap()
         {
             string sql = $"SELECT COUNT(MaPhieuNhap) FROM dbo.PHIEUNHAP ";

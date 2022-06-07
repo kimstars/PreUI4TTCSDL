@@ -223,5 +223,11 @@ namespace LibraryManager.Template
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new DanhSachDG());
         }
+
+        private void btnM_QLNhap_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.QLNhap());
+        }
     }
 }
