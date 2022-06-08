@@ -87,7 +87,7 @@ namespace LibraryManager.Template
             this.bunifuPanel6.Controls.Add(this.lbP_muon);
             this.bunifuPanel6.Controls.Add(this.label2);
             this.bunifuPanel6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel6.Location = new System.Drawing.Point(940, 267);
+            this.bunifuPanel6.Location = new System.Drawing.Point(808, 275);
             this.bunifuPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
@@ -214,7 +214,7 @@ namespace LibraryManager.Template
             this.bunifuPanel5.Controls.Add(this.chartDG);
             this.bunifuPanel5.Controls.Add(this.label15);
             this.bunifuPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel5.Location = new System.Drawing.Point(95, 267);
+            this.bunifuPanel5.Location = new System.Drawing.Point(8, 275);
             this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
@@ -275,7 +275,7 @@ namespace LibraryManager.Template
             this.bunifuPanel3.Controls.Add(this.panel1);
             this.bunifuPanel3.Controls.Add(this.bunifuPictureBox3);
             this.bunifuPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel3.Location = new System.Drawing.Point(940, 30);
+            this.bunifuPanel3.Location = new System.Drawing.Point(808, 38);
             this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
@@ -362,7 +362,7 @@ namespace LibraryManager.Template
             this.bunifuPanel2.Controls.Add(this.label6);
             this.bunifuPanel2.Controls.Add(this.bunifuPictureBox2);
             this.bunifuPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel2.Location = new System.Drawing.Point(514, 30);
+            this.bunifuPanel2.Location = new System.Drawing.Point(427, 38);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
@@ -438,7 +438,7 @@ namespace LibraryManager.Template
             this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuPanel1.Location = new System.Drawing.Point(95, 30);
+            this.bunifuPanel1.Location = new System.Drawing.Point(8, 38);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
@@ -513,7 +513,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.bunifuPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeAdmin";
-            this.Size = new System.Drawing.Size(1479, 737);
+            this.Size = new System.Drawing.Size(1348, 737);
             this.Load += new System.EventHandler(this.HomeAdmin_Load);
             this.bunifuPanel6.ResumeLayout(false);
             this.bunifuPanel6.PerformLayout();

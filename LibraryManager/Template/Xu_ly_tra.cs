@@ -92,7 +92,7 @@ namespace LibraryManager.Template
                     return;
                 }
 
-                if(dgvDs.Rows.Count > 0 && dgvDs.Rows[0].Cells["MaDocGia"].Value.ToString() != dgvDs.Rows[i].Cells["MaDocGia"].Value.ToString())
+                if (dgvDs.Rows.Count > 0 && dgvDs.Rows[0].Cells["MaDocGia"].Value.ToString() != dgv_trasach.Rows[i].Cells["MaDocGia"].Value.ToString())
                 {
                     MessageBox.Show("Hãy trả sách của một độc giả trong một lượt trả!");
                     return;

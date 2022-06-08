@@ -189,7 +189,6 @@ namespace LibraryManager.Template
 
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-
                     dgvSVP.Rows.RemoveAt(e.RowIndex);
                 }
 
@@ -204,6 +203,13 @@ namespace LibraryManager.Template
                 tienphat += int.Parse(dgvSVP.Rows[i].Cells[3].Value.ToString());
             }
             txtTongtienphat.Text = tienphat.ToString();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cmbMaDg.Enabled = true;
+            dgvSVP.Rows.Clear();
+            txtTongtienphat.Text = "";
         }
     }
 
