@@ -18,12 +18,18 @@
 
 ## Cài đặt và sử dụng
 ### Yêu cầu :
+* SQL Server
 * Guna UI2 WinForms
 * Bunifu v1.5.3
 * DevExpress v19.2.5
 
 ### Cài đặt database
 * Sử dụng file backup [THUVIENMTA.bak](./THUVIENMTA.bak)
+
+* Chỉnh sửa connection string DataProvider tới SQL Server
+![alt](./img/setdb.png)
+
+
 
 * Hỗ trợ khởi tạo dữ liệu mẫu cho database
 ![alt](./img/anh2.png)
