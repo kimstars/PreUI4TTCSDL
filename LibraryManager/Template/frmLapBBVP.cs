@@ -189,7 +189,6 @@ namespace LibraryManager.Template
 
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-
                     dgvSVP.Rows.RemoveAt(e.RowIndex);
                 }
 
