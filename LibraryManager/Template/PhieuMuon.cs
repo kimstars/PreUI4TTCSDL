@@ -35,7 +35,25 @@ namespace LibraryManager.Template
             InitializeComponent();
             listsach = dsds;
             MaDocGia = maDG;
+            lbNVxuly.Text = "Phiếu mượn độc giả";
+            isNV = false;
+            txtTenDG.ReadOnly = true;
+            txtMaDG.ReadOnly = true;
+
         }
+        public PhieuMuon( List<string> dsds,string maNV)
+        {
+            InitializeComponent();
+            listsach = dsds;
+            MaNhanVien = maNV;
+            lbNVxuly.Text = $"Nhân viên xử lý: {MaNhanVien}";
+            isNV = true;
+            txtTenDG.ReadOnly = false;
+            txtMaDG.ReadOnly = false;
+        }
+
+        bool isNV = false;
+        string MaNhanVien;
         string MaDocGia;
         List<string> listsach;
 
@@ -59,10 +77,12 @@ namespace LibraryManager.Template
             TinhTienCoc(InfoBorrow);
             DateTime date = DateMuon.Value.Add(new TimeSpan(180, 0, 0, 0));
             dateHanTra.Value = date;
-
-            LoadDetailBook("DS000013");
+            
+            LoadDetailBook(listsach[0]);
 
             lbMaMuonTra.Text = pmBus.CreateNext_MaMT();
+
+
 
         }
         DocGia_BUS dgBus = new DocGia_BUS();
@@ -81,7 +101,7 @@ namespace LibraryManager.Template
             }
 
 
-            lbTienCoc.Text = tong.ToString() + " VND";
+            lbTienCoc.Text = tong.ToString();
         }
 
         DauSach_BUS dsBus = new DauSach_BUS();
@@ -108,18 +128,30 @@ namespace LibraryManager.Template
 
             if(MaDauSach.Contains("DS")) LoadDetailBook(MaDauSach);
             MaDauSachCurrent = MaDauSach;
+
+
+            if (e.ColumnIndex == 5)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    dgvInfoBorrow.Rows.RemoveAt(e.RowIndex);
+                }
+
+            }
+            indexCurrent = e.RowIndex;
         }
 
+        int indexCurrent = 1;
         private void btnLoaiBo_Click(object sender, EventArgs e)
         {
 
-            listsach.RemoveAll(x => ((string)x) == MaDauSachCurrent);
+            dgvInfoBorrow.Rows.RemoveAt(indexCurrent);
 
-            InfoBorrow = msBus.LoadTTSachMuon(listsach);
-            dgvInfoBorrow.DataSource = InfoBorrow;
-            TinhTienCoc(InfoBorrow);
+            //TinhTienCoc(InfoBorrow);
 
         }
+
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
@@ -135,6 +167,8 @@ namespace LibraryManager.Template
             pmtnew.NgayMuon = DateMuon.Value;
             pmtnew.HanTra = dateHanTra.Value;
             pmtnew.MaMuonTra = lbMaMuonTra.Text;
+            pmtnew.MaNhanVien = MaNhanVien;
+            pmtnew.TienCoc = lbTienCoc.Text;
 
             List<string> DSMaSach = new List<string>();
             for(int i=0;i < dgvInfoBorrow.Rows.Count; i++)
@@ -143,9 +177,26 @@ namespace LibraryManager.Template
                 if(tempmds!="") DSMaSach.Add(tempmds);
             }
 
+            pmBus.InsertMuon(pmtnew, DSMaSach,isNV);
 
-            pmBus.DocGiaMuon(pmtnew, DSMaSach);
+            MessageBox.Show("Tạo phiếu mượn thành công!!\nĐộc giả vui lòng ra quầy để nhân viên tiếp tục xử lý");
 
+
+        }
+
+        private void txtMaDG_TextChanged(object sender, EventArgs e)
+        {
+            if (dgBus.checkTonTaiDG(txtMaDG.Text))
+            {
+                errorProvider1.SetError(lbMsg, "Tài khoản không tồn tại !");
+                lbMsg.Text = "Tài khoản không tồn tại !";
+            }
+            else
+            {
+                lbMsg.Text = "";
+                errorProvider1.SetError(lbMsg, null);
+                txtTenDG.Text = dgBus.LoadTenDG(txtMaDG.Text);
+            }
 
         }
     }

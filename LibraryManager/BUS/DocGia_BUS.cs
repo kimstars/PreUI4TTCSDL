@@ -19,6 +19,16 @@ namespace LibraryManager.BUS
         {
             return dgDao.loadDocGia();
         }
+        public DataTable GetListDGInfo()
+        {
+            return dgDao.loadDocGiaInfo();
+        }
+
+        public DataTable GetListDGLoc(string loai)
+        {
+            return dgDao.loadDocGiaLoc(loai);
+        }
+
         public void Xoa(string mDG)
         {
             dgDao.Delete(mDG);
@@ -30,13 +40,9 @@ namespace LibraryManager.BUS
             dgDao.Update(dg);
             return true;
         }
-        public int Them(DocGia dg)
+        public bool Them(DocGia dg)
         {
-            if (string.IsNullOrEmpty(dg.MaDocGia))
-                return 0;
-            if (!dgDao.Insert(dg))
-                return -1;
-            return 1;
+            return dgDao.Insert(dg);
         }
         public DataTable TimKiem(string _timkiem)
         {
@@ -48,7 +54,7 @@ namespace LibraryManager.BUS
         {
             byte[] img = LoadImageFromTableDB("DocGia", maID, "MaDocGia");
             PictureBox avt = new PictureBox();
-            if (img !=  null)
+            if (img != null && img.Length > 0)
             {
                 return Image.FromStream(new MemoryStream(img));
             }
@@ -56,9 +62,9 @@ namespace LibraryManager.BUS
             {
                 return Properties.Resources.icons8_search_client_80px;
             }
-            
+
         }
-        
+
         // -> set
         public void LuuAnh(string maID, string imgPath)
         {
@@ -79,6 +85,10 @@ namespace LibraryManager.BUS
         {
             return dgDao.GetMaDG_PhieuMuon(MaMT);
         }
+
+
+
+
 
         #endregion
 
@@ -128,5 +138,58 @@ namespace LibraryManager.BUS
         {
             return dgDao.GetMaDG_TaiKhoan(tk);
         }
+
+
+
+
+        #region NhanvienXuly
+
+        public bool checkTonTaiDG(string MaDG)
+        {
+            return dgDao.checkTonTaiDG(MaDG);
+        }
+        public string LoadTenDG(string MaDG)
+        {
+            return dgDao.GetTenDocGia(MaDG);
+        }
+
+        #endregion
+
+
+        #region themdocgia
+        public string GetLastestMaDG()
+        {
+            return dgDao.GetLastest_MaDG();
+        }
+
+        public string CreateNext_MaDG()
+        {
+            string current = GetLastestMaDG();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string maMuon = "DG000000";
+            maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
+
+            return maMuon;
+        }
+
+        #endregion
+
+
+
+        #region khoataikhoan
+
+        public void KhoaTaiKhoan(string MaDocGia)
+        {
+            dgDao.KhoaTaiKhoan(MaDocGia);
+
+        }
+        public void MoKhoaTK(string MaDocGia)
+        {
+            dgDao.MoKhoaTK(MaDocGia);
+        }
+        #endregion
     }
 }

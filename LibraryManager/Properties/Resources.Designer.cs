@@ -363,6 +363,16 @@ namespace LibraryManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_48px", resourceCulture);
@@ -376,6 +386,16 @@ namespace LibraryManager.Properties {
         internal static System.Drawing.Bitmap icons8_edit_property_26px {
             get {
                 object obj = ResourceManager.GetObject("icons8_edit_property_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_file_excel_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_file_excel_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -693,6 +713,16 @@ namespace LibraryManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_study_64px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_study_64px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_tick_box_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_tick_box_48px", resourceCulture);
@@ -716,6 +746,26 @@ namespace LibraryManager.Properties {
         internal static System.Drawing.Bitmap icons8_user_settings_64px {
             get {
                 object obj = ResourceManager.GetObject("icons8_user_settings_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lifesavers___Bookshelf {
+            get {
+                object obj = ResourceManager.GetObject("Lifesavers - Bookshelf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

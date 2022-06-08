@@ -37,7 +37,7 @@ namespace LibraryManager.GUI
             return true;
         }
 
-        public static string userstr ;
+        public static string userstr;
         TaiKhoan_BUS tkBus = new TaiKhoan_BUS();
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -84,7 +84,6 @@ namespace LibraryManager.GUI
             {
                 if (tkBus.DangNhap(user, pass))
                 {
-                    MessageBox.Show("Đăng nhập thành công !!");
                     Form1.isLogin = true;
 
                     string loaitk = tkBus.LoadLoaiTK(user);
@@ -94,6 +93,7 @@ namespace LibraryManager.GUI
                     {
                         case "docgia":
                             {
+                                MessageBox.Show("Đăng nhập thành công !!");
                                 this.Hide();
                                 userstr = user;
                                 if (GUI.TimKiem4Hello.DaTim)
@@ -104,23 +104,29 @@ namespace LibraryManager.GUI
                                 {
                                     FrmDocGia newdg = new FrmDocGia(user);
                                     newdg.Show();
-
                                 }
-                                
+
                                 break;
                             }
                         case "nhanvien":
                             {
+                                MessageBox.Show("Đăng nhập thành công !!");
                                 this.Hide();
-                                frmNhanvien newnv = new frmNhanvien();
+                                frmNhanvien newnv = new frmNhanvien(user);
                                 newnv.Show();
                                 break;
                             }
                         case "quanly":
                             {
+                                MessageBox.Show("Đăng nhập thành công !!");
                                 this.Hide();
                                 Template.FormAdmin newadmin = new Template.FormAdmin();
                                 newadmin.Show();
+                                break;
+                            }
+                        case "vohieuhoa":
+                            {
+                                MessageBox.Show("Tài khoản của bạn đã bị vô hiệu hóa do vi phạm nhiều lần.");
                                 break;
                             }
                     }

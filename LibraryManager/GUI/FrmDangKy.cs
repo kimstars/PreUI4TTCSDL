@@ -107,7 +107,7 @@ namespace LibraryManager.GUI
             {
                 TaiKhoan tk = new TaiKhoan(user,pass);
 
-                if (tkBus.DangKy(tk))
+                if (tkBus.DangKy(tk,false))
                 {
                     MessageBox.Show("Đăng ký thành công !!. Quay trở lại đăng nhập nào!! ");
                     this.Hide();
@@ -127,7 +127,7 @@ namespace LibraryManager.GUI
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if (!tkBus.checkTonTaiTK(txtUsername.Text))
+            if (tkBus.checkTonTaiTK(txtUsername.Text))
             {
                 errorProvider1.SetError(lbMsg, "Tài khoản đã tồn tại !");
                 lbMsg.Text = "Tài khoản đã tồn tại !";

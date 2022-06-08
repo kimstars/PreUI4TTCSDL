@@ -18,6 +18,9 @@ namespace LibraryManager.GUI
         {
             InitializeComponent();
         }
+
+       
+
         string MaDocGia = "DG000002";
         public ThongTinDocGia(string madg)
         {
@@ -42,6 +45,7 @@ namespace LibraryManager.GUI
             imageAvt.Image = dgBus.LoadAnh(MaDocGia);
 
             DataTable muonSL = dgBus.LoadMuon_SL(MaDocGia);
+
             if (muonSL.Rows.Count > 1)
             {
                 DateTime ngayMuon = (DateTime)muonSL.Rows[0]["NgayMuon"];
@@ -102,6 +106,17 @@ namespace LibraryManager.GUI
         private void ThongTinDocGia_Load(object sender, EventArgs e)
         {
             LoadDetailUser();
+        }
+
+        private void btnDeactive_Click(object sender, EventArgs e)
+        {
+            dgBus.KhoaTaiKhoan(MaDocGia);
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+            dgBus.MoKhoaTK(MaDocGia);
+
         }
     }
 }

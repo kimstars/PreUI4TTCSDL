@@ -22,12 +22,16 @@ namespace LibraryManager
         {
             sidebartick.Start();
             panelShow.Controls.Clear();
+
             panelShow.Controls.Add(new Template.HomeHello());
+         
+
+
         }
 
         public static bool isLogin = false;
 
-        bool sidebarExpand;
+        bool sidebarExpand = true;
         private void sidebartick_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -74,7 +78,8 @@ namespace LibraryManager
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            
+            //Template.Xu_ly_tra xtl = new Template.Xu_ly_tra();
+            //xtl.Show();
         }
 
         private void btnThongtin_Click(object sender, EventArgs e)
@@ -109,6 +114,7 @@ namespace LibraryManager
         {
             GUI.frmLogin newform = new GUI.frmLogin();
             newform.Show();
+            
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -116,5 +122,14 @@ namespace LibraryManager
             GUI.FrmDangKy newform = new GUI.FrmDangKy();
             newform.Show();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeHello());
+        }
+	
     }
 }
+           
+

@@ -17,9 +17,9 @@ namespace LibraryManager.BUS
                 return true;
             return false;
         }
-        public bool DangKy(TaiKhoan _tv)
+        public bool DangKy(TaiKhoan _tv,bool isNV)
         {
-            return tvDao.signup(_tv, false);
+            return tvDao.signup(_tv, isNV);
         }
 
         public bool checkTonTaiTK(string username)
@@ -31,6 +31,12 @@ namespace LibraryManager.BUS
         {
             return tvDao.LoaiTaiKhoan(username);
         }
-      
+
+        public void ktramatkhau(string user,string pass)
+        {
+            tvDao.ktramatkhau(user, pass);
+        }
+
+
     }
 }

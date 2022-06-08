@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using LibraryManager.BUS;
 using LibraryManager.DTO;
@@ -17,8 +16,16 @@ namespace LibraryManager.GUI
     {
         public TimKiem4Hello()
         {
-
             InitializeComponent();
+        }
+
+        public TimKiem4Hello(string Keyword)
+        {
+            InitializeComponent();
+            txtSearch.Text = Keyword;
+            cbTheLoai.Text = "Tất cả thể loại";
+            SearchByName();
+            LoadBookFlow();
         }
 
         string MaDSCurrent = "";
@@ -73,9 +80,15 @@ namespace LibraryManager.GUI
         private void TimKiem4Hello_Load(object sender, EventArgs e)
         {
 
+            if(txtSearch.Text == "")
+            {
+                DSDauSach = dsBus.LoadMaDauSach();
+                LoadBookFlow();
+            }
 
-            DSDauSach = dsBus.LoadMaDauSach();
-            LoadBookFlow();
+
+
+            
             LoadComboBoxTheLoai();
 
         }
@@ -99,7 +112,23 @@ namespace LibraryManager.GUI
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
-            dgvChooseBook.Rows.Clear();
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa tất cả?", "Xóa tất cả sách đã chọn?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                dgvChooseBook.Rows.Clear();
+                foreach (var item in flowLayoutDS.Controls)
+                {
+
+                    Template.OneBook it = (Template.OneBook)item;
+                    if (it.selected)
+                    {
+                        it.HighLightItem();
+                        
+                    }
+
+                }
+
+            }
         }
 
         private void dgvChooseBook_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,7 +138,19 @@ namespace LibraryManager.GUI
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa sách này ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
+                    string MaXoa = dgvChooseBook.Rows[e.RowIndex].Cells["MaDauSach"].Value.ToString();
                     dgvChooseBook.Rows.RemoveAt(e.RowIndex);
+                    foreach(var item in flowLayoutDS.Controls)
+                    {
+
+                        Template.OneBook it = (Template.OneBook)item;
+                        if(it.MaDauSach == MaXoa && it.selected)
+                        {
+                            it.HighLightItem();
+                            break;
+                        }
+
+                    }
                 }
 
             }
@@ -140,6 +181,7 @@ namespace LibraryManager.GUI
         private void SearchByName()
         {
             string tl = cbTheLoai.Text.Trim();
+            if (tl == "") tl = "Tất cả thể loại";
             string keysearch = txtSearch.Text.Trim();
 
             if (keysearch != "")
@@ -230,7 +272,7 @@ namespace LibraryManager.GUI
             }
             else
             {
-                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr);
+                FrmDocGia newdg = new FrmDocGia(GUI.frmLogin.userstr,dsMuon);
                 newdg.Show();
             }
         }

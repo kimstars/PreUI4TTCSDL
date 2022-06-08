@@ -20,14 +20,45 @@ namespace LibraryManager.Template
 
         private void closeYCollapse()
         {
-            if(QLSachTickCollapse) QLSachTick.Start();
-            if (QLNVTickCollapse) QLNVtick.Start();
-            if(QLDGTickCollapse) QLDGtick.Start();
+            if (QLNVTickCollapse)
+            {
+                Open_Y(ref panelQLNV, ref QLNVTickCollapse);
+            }
+            if (QLSachTickCollapse)
+            {
+                Open_Y(ref panelQLsach, ref QLSachTickCollapse);
+            }
+            if (QLSachNhap)
+            {
+                Open_Y(ref panelQLSachNhap, ref QLSachNhap);
+            }
+            if (XLMuonTra)
+            {
+                Open_Y(ref panelXLMuontra, ref XLMuonTra);
+            }
+            if (XLViPham)
+            {
+                Open_Y(ref panelXLViPham, ref XLViPham);
+            }
+            if (QLDocGiaExpand)
+            {
+                Open_Y(ref panelQLDocGia, ref QLDocGiaExpand);
 
+            }
+            if (thongkeExpand)
+            {
+                Open_Y(ref panelThongke, ref thongkeExpand);
+
+            }
 
         }
 
-        bool sidebarExpand;
+        bool sidebarExpand = false;
+        bool QLSachTickCollapse = true;
+        bool QLNVTickCollapse = true;
+        bool QLDGTickCollapse = true;
+
+
         private void sidebartick_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand) // thu vao
@@ -38,8 +69,11 @@ namespace LibraryManager.Template
                 {
                     sidebarExpand = false;
                     sidebartick.Stop();
+
                 }
-                pictureAvt.Size = new Size(40,40);
+                PanelMenuBar.AutoScroll = false;
+
+                pictureAvt.Size = new Size(40, 40);
 
 
             }
@@ -51,7 +85,9 @@ namespace LibraryManager.Template
                     sidebarExpand = true;
                     sidebartick.Stop();
                 }
-                pictureAvt.Size = new Size(60,60);
+                PanelMenuBar.AutoScroll = true;
+
+                pictureAvt.Size = new Size(60, 60);
 
             }
         }
@@ -63,156 +99,191 @@ namespace LibraryManager.Template
 
         private void FormAdmin_Load_1(object sender, EventArgs e)
         {
-            PanelMenuBar.Width = PanelMenuBar.MaximumSize.Width;
+            PanelMenuBar.Width = PanelMenuBar.MinimumSize.Width;
+            PanelMenuBar.AutoScroll = false;
+            closeYCollapse();
 
-
-            hideChildFrm();
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeAdmin());
 
         }
-        #region open_QLsach
 
-        bool QLSachTickCollapse;
 
-        private void QLSachTick_Tick(object sender, EventArgs e)
+
+
+        private void Open_Y(ref Panel thisPanel, ref bool thisCollapse)
         {
-            if (QLSachTickCollapse)
+            if (thisCollapse)
             {
-                PanelQLSach.Height -= 100;
-                if (PanelQLSach.Height == PanelQLSach.MinimumSize.Height)
-                {
-                    QLSachTickCollapse = false;
-                    QLSachTick.Stop();
-                }
+
+                thisPanel.Height = thisPanel.MinimumSize.Height;
+                thisCollapse = false;
             }
             else
             {
-                PanelQLSach.Height += 100;
-                if (PanelQLSach.Height == PanelQLSach.MaximumSize.Height)
-                {
-                    QLSachTickCollapse = true;
-                    QLSachTick.Stop();
-                }
+                thisPanel.Height = thisPanel.MaximumSize.Height;
+                thisCollapse = true;
             }
         }
-        private void btnQLSach_Click(object sender, EventArgs e)
-        {
-            QLSachTick.Start();
-        }
-        #endregion
 
-        #region QLNV
 
-        bool QLNVTickCollapse;
 
-        private void QLNVtick_Tick(object sender, EventArgs e)
-        {
-            if (QLNVTickCollapse)
-            {
-                panelQLNV.Height -= 100;
-                if (panelQLNV.Height == panelQLNV.MinimumSize.Height)
-                {
-                    QLNVTickCollapse = false;
-                    QLNVtick.Stop();
-                }
-            }
-            else
-            {
-                panelQLNV.Height += 100;
-                if (panelQLNV.Height == panelQLNV.MaximumSize.Height)
-                {
-                    QLNVTickCollapse = true;
-                    QLNVtick.Stop();
-                }
-            }
-        }
+        
+
+
+
         private void btnOpenQLNV_Click(object sender, EventArgs e)
         {
-            QLNVtick.Start();
+            Open_Y(ref panelQLNV, ref QLNVTickCollapse);
         }
 
-
-
-        #endregion
-
-        #region QLDG
-        bool QLDGTickCollapse;
-
-        private void QLDGtick_Tick(object sender, EventArgs e)
+        private void btnM_QLsach_Click(object sender, EventArgs e)
         {
-            if (QLDGTickCollapse)
-            {
-                panelQLDocGia.Height -= 100;
-                if (panelQLDocGia.Height == panelQLDocGia.MinimumSize.Height)
-                {
-                    QLDGTickCollapse = false;
-                    QLDGtick.Stop();
-                }
-            }
-            else
-            {
-                panelQLDocGia.Height += 100;
-                if (panelQLDocGia.Height == panelQLDocGia.MaximumSize.Height)
-                {
-                    QLDGTickCollapse = true;
-                    QLDGtick.Stop();
-                }
-            }
+            Open_Y(ref panelQLsach, ref QLSachTickCollapse);
         }
-        private void btnOpenQLDG_Click(object sender, EventArgs e)
+        bool QLSachNhap = true;
+        private void btnM_QLsachnhap_Click(object sender, EventArgs e)
         {
-            QLDGtick.Start();
+            Open_Y(ref panelQLSachNhap, ref QLSachNhap);
         }
+        bool XLMuonTra = true;
 
-
-        #endregion
-
-
-
-        void hideChildFrm()
+        private void btnM_XLMuonTra_Click(object sender, EventArgs e)
         {
-            danhsachNV1.Visible = false;
-            
-            //infoDG.Visible = false;
-            danhSachDG1.Visible = false;
-            dsPhieuMuonNV1.Visible = false;
+            Open_Y(ref panelXLMuontra, ref XLMuonTra);
 
+        }
+        bool XLViPham = true;
+        private void btnM_XLViPham_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelXLViPham, ref XLViPham);
+        }
+
+        bool QLDocGiaExpand = true;
+        private void btnM_QLDG_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelQLDocGia, ref QLDocGiaExpand);
+
+        }
+        bool thongkeExpand = true;
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            Open_Y(ref panelThongke, ref thongkeExpand);
         }
 
 
+
+
+
+        private void btnM_DSDausach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemDauSach());
+        }
+
+        private void btnM_dsSDamuon_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new DS.DSSachMuon());
+
+        }
+
+        private void btnM_Muon_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSPhieuMuonNV());
+        }
+
+       
         private void btnDSNV_Click(object sender, EventArgs e)
         {
-            hideChildFrm();
-            danhsachNV1.Visible = true;
-            danhsachNV1.Dock = DockStyle.Fill;
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DanhsachNV());
         }
 
-        private void btnDSDocGia_ClientSizeChanged(object sender, EventArgs e)
+        private void btnM_Nhapsach_Click(object sender, EventArgs e)
         {
-            
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.tk_sachnhap());
         }
 
-        private void btnThuNghiem_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            hideChildFrm();
-            //infoDG.Visible = true;
-            phieuMuon.Visible = true;
-            phieuMuon.Dock = DockStyle.Fill;
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeAdmin());
+        }
+
+        private void btnM_SConlai_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachCoSan());
+        }
+
+        public void btnAddNV_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.Admin_ThemNV());
+        }
+
+        private void btnM_DSDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new DanhSachDG());
+        }
+
+
+       
+        private void btnM_Suadausach_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void btnDSDocGia_Click(object sender, EventArgs e)
+        private void btnM_Tra_Click(object sender, EventArgs e)
         {
-            hideChildFrm();
-            danhSachDG1.Visible = true;
-            danhSachDG1.Dock = DockStyle.Fill;
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Xu_ly_tra(MaQL));
+        }
+        string MaQL = "NV000000";
+        private void btnM_ReportSLDS_Click(object sender, EventArgs e)
+        {
+            Report.TKLuotMuonCreator pmCreator = new Report.TKLuotMuonCreator(MaQL);
+            pmCreator.ShowReportHoaDon();
+        }
+
+        private void btnM_tkChung_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new ThongKeNV(MaQL));
+        }
+
+        private void btnM_LapBBvp_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.frmLapBBVP(MaQL));
+        }
+
+        private void btnM_regtkdg_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new ThemDocgia());
 
         }
 
-        private void btnPhieumuon_Click(object sender, EventArgs e)
+        private void btnQLNhap_Click(object sender, EventArgs e)
         {
-            hideChildFrm();
-            dsPhieuMuonNV1.Visible = true;
-            dsPhieuMuonNV1.Dock = DockStyle.Fill;
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.QLNhap());
+        }
+
+        private void btnM_DSSachVP_Click(object sender, EventArgs e)
+        {
+
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachVP());
+        }
+
+        private void btnM_DGVP_Click(object sender, EventArgs e)
+        {
 
         }
     }

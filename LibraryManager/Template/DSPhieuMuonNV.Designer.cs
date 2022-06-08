@@ -42,6 +42,8 @@ namespace LibraryManager.Template
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnFilterDate = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
+            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -67,13 +69,11 @@ namespace LibraryManager.Template
             this.label5 = new System.Windows.Forms.Label();
             this.dgvDSPhieumuon = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaXuLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateEnd = new LibraryManager.Template.DateTimePickerKiet();
-            this.dateStart = new LibraryManager.Template.DateTimePickerKiet();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
@@ -138,7 +138,7 @@ namespace LibraryManager.Template
             this.guna2GradientPanel1.Controls.Add(this.txtSearch);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(68, 70);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(699, 191);
@@ -178,12 +178,42 @@ namespace LibraryManager.Template
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // dateEnd
+            // 
+            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateEnd.BorderRadius = 0;
+            this.dateEnd.BorderSize = 0;
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateEnd.Location = new System.Drawing.Point(317, 52);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 36);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(205, 36);
+            this.dateEnd.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.dateEnd.TabIndex = 7;
+            this.dateEnd.TextColor = System.Drawing.Color.White;
+            // 
+            // dateStart
+            // 
+            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateStart.BorderRadius = 0;
+            this.dateStart.BorderSize = 0;
+            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateStart.Location = new System.Drawing.Point(27, 50);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateStart.MinimumSize = new System.Drawing.Size(4, 36);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(205, 36);
+            this.dateStart.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
+            this.dateStart.TabIndex = 1;
+            this.dateStart.TextColor = System.Drawing.Color.White;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::LibraryManager.Properties.Resources.icons8_arrow_64px;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(240, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 36);
             this.pictureBox1.TabIndex = 4;
@@ -204,7 +234,7 @@ namespace LibraryManager.Template
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::LibraryManager.Properties.Resources.icons8_search_32px;
             this.txtSearch.Location = new System.Drawing.Point(27, 135);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -234,7 +264,7 @@ namespace LibraryManager.Template
             this.guna2GradientPanel2.Controls.Add(this.btnXemInfoDG);
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(785, 70);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(629, 718);
@@ -405,7 +435,7 @@ namespace LibraryManager.Template
             this.dgvDSDausach.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSDausach.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSDausach.Location = new System.Drawing.Point(17, 244);
-            this.dgvDSDausach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDSDausach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDSDausach.Name = "dgvDSDausach";
             this.dgvDSDausach.RowHeadersVisible = false;
             this.dgvDSDausach.RowHeadersWidth = 51;
@@ -487,6 +517,7 @@ namespace LibraryManager.Template
             this.btnDone.Size = new System.Drawing.Size(123, 46);
             this.btnDone.TabIndex = 14;
             this.btnDone.Text = "Xử lý xong";
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // btnXemInfoDG
             // 
@@ -538,7 +569,7 @@ namespace LibraryManager.Template
             this.dgvDSPhieumuon.ColumnHeadersHeight = 40;
             this.dgvDSPhieumuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn5,
+            this.DaXuLy,
             this.MaDocGia,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -575,7 +606,7 @@ namespace LibraryManager.Template
             this.dgvDSPhieumuon.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSPhieumuon.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSPhieumuon.Location = new System.Drawing.Point(69, 297);
-            this.dgvDSPhieumuon.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDSPhieumuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDSPhieumuon.Name = "dgvDSPhieumuon";
             this.dgvDSPhieumuon.RowHeadersVisible = false;
             this.dgvDSPhieumuon.RowHeadersWidth = 51;
@@ -594,12 +625,12 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // DaXuLy
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "DaXuLy";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Trạng thái";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.DaXuLy.DataPropertyName = "DaXuLy";
+            this.DaXuLy.HeaderText = "Trạng thái";
+            this.DaXuLy.MinimumWidth = 6;
+            this.DaXuLy.Name = "DaXuLy";
             // 
             // MaDocGia
             // 
@@ -633,36 +664,6 @@ namespace LibraryManager.Template
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dateEnd
-            // 
-            this.dateEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateEnd.BorderRadius = 0;
-            this.dateEnd.BorderSize = 0;
-            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateEnd.Location = new System.Drawing.Point(317, 52);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEnd.MinimumSize = new System.Drawing.Size(4, 36);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(205, 36);
-            this.dateEnd.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.dateEnd.TabIndex = 7;
-            this.dateEnd.TextColor = System.Drawing.Color.White;
-            // 
-            // dateStart
-            // 
-            this.dateStart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateStart.BorderRadius = 0;
-            this.dateStart.BorderSize = 0;
-            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateStart.Location = new System.Drawing.Point(27, 50);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
-            this.dateStart.MinimumSize = new System.Drawing.Size(4, 36);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(205, 36);
-            this.dateStart.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(136)))));
-            this.dateStart.TabIndex = 1;
-            this.dateStart.TextColor = System.Drawing.Color.White;
-            // 
             // DSPhieuMuonNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -672,7 +673,7 @@ namespace LibraryManager.Template
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DSPhieuMuonNV";
             this.Size = new System.Drawing.Size(1433, 814);
             this.Load += new System.EventHandler(this.DSPhieuMuonNV_Load);
@@ -724,7 +725,7 @@ namespace LibraryManager.Template
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDSPhieumuon;
         private Guna.UI2.WinForms.Guna2Button btnFilterDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaXuLy;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

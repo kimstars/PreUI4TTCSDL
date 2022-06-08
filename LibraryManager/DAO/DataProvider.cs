@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace LibraryManager.DAO
     class DataProvider
     {
         static string provider = @"Data Source=CHU-TUAN-KIET;Initial Catalog=THUVIENMTA;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(provider);
+        protected SqlConnection connect = new SqlConnection(provider);
 
         public DataTable GetData(string sql)
         {
@@ -22,9 +23,44 @@ namespace LibraryManager.DAO
             return rs;
         }
 
+        public void validateTest(string sql)
+        {
+            string printOutput = "";
+            StringBuilder errorMessages = new StringBuilder();
+
+            SqlCommand command = new SqlCommand(sql, connect);
+
+
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                printOutput += (errorMessages.ToString());
+            }
+            if (printOutput != "")
+            {
+                MessageBox.Show(printOutput);
+            }
+            connect.Close();
+
+            
+
+        }
+
         public SqlDataAdapter GetDataSet(string sql)
         {
-            
+
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
 
             return adapter;
@@ -32,42 +68,240 @@ namespace LibraryManager.DAO
 
         public void Excute(string sql)
         {
-            connect.Open();
+            
             SqlCommand command = new SqlCommand(sql, connect);
-            command.ExecuteNonQuery();
+
+            string printOutput = "";
+            StringBuilder errorMessages = new StringBuilder();
+
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                printOutput += (errorMessages.ToString());
+            }
+
+            if (printOutput != "")
+            {
+                MessageBox.Show(printOutput);
+            }
             connect.Close();
         }
 
-        public void ExcuteWithParam(string sql, SqlParameter[] listParam )
+        public void ExcuteWithParam(string sql, SqlParameter[] listParam)
         {
-            connect.Open();
+            
             SqlCommand command = new SqlCommand(sql, connect);
 
             foreach (var i in listParam)
             {
                 command.Parameters.Add(i);
             }
-            command.ExecuteNonQuery();
-            connect.Close();
+
+            string printOutput = "";
+            StringBuilder errorMessages = new StringBuilder();
+
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                printOutput += (errorMessages.ToString());
+            }
+            finally
+            {
+                connect.Close();
+
+            }
+
+            if (printOutput != "")
+            {
+                MessageBox.Show(printOutput);
+            }
         }
+
+
+
+        public void Excute_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+            try
+            {
+                
+                SqlCommand command = new SqlCommand(NameProc, connect);
+                command.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    command.Parameters.Add(i);
+                }
+
+                string printOutput = "";
+                StringBuilder errorMessages = new StringBuilder();
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" +
+                            "Message: " + ex.Errors[i].Message + "\n" +
+                            "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                            "Source: " + ex.Errors[i].Source + "\n" +
+                            "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    printOutput += (errorMessages.ToString());
+                }
+
+                if (printOutput != "")
+                {
+                    MessageBox.Show(printOutput);
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public DataTable GetData_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+            DataTable dt = new DataTable();
+            SqlDataReader rd;
+
+       
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+        public string GetString_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                string res = (string)cmd.ExecuteScalar();
+                return res;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
+        public int GetINT_Proc_NParam(string NameProc, SqlParameter[] listParam)
+        {
+
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(NameProc, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                foreach (var i in listParam)
+                {
+                    cmd.Parameters.Add(i);
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                return (int)count;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+
 
         public byte[] LoadImage(string sql)
         {
-            
+
             if (connect.State != ConnectionState.Open)
                 connect.Open();
             SqlCommand command = new SqlCommand(sql, connect);
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] imgbin = new byte[100000000];
-            if (reader.HasRows)
+            if (reader.HasRows && !Convert.IsDBNull(reader[0]))
             {
                 imgbin = (byte[])reader[0];
             }
+            else
+            {
+                imgbin = new byte[0];
+            }
             connect.Close();
-            return imgbin ;
+            return imgbin;
         }
-
 
         public Int64 GetCount(string sql)
         {
@@ -77,9 +311,18 @@ namespace LibraryManager.DAO
             Int32 count = (Int32)command.ExecuteScalar();
             connect.Close();
             return count;
-            
-        }
 
+        }
+        public long GetCount1(string sql)
+        {
+            if (connect.State != ConnectionState.Open)
+                connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            long count = (long)command.ExecuteScalar();
+            connect.Close();
+            return count;
+
+        }
         public string GetString(string sql)
         {
             if (connect.State != ConnectionState.Open)
@@ -96,6 +339,27 @@ namespace LibraryManager.DAO
             if (d != null) return d.Value.ToString("yyyy/MM/dd");
             return "";
 
+        }
+        public DataSet chart(string sql)
+        {
+            connect.Open();
+            SqlCommand command = new SqlCommand(sql, connect);
+            SqlDataAdapter ad = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            return ds;
+        }
+
+
+        public string FindLike(string sth)
+        {
+            if(sth != "")
+            {
+                return $"%{sth}%";
+
+            }
+
+            return sth;
         }
 
     }

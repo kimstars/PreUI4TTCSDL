@@ -29,9 +29,9 @@ namespace LibraryManager.Template
 
         private void imgBook_Click(object sender, EventArgs e)
         {
-            OnSelect?.Invoke(this, e);
-            
             HighLightItem();
+            OnSelect?.Invoke(this, e);
+
         }
 
 
@@ -44,6 +44,7 @@ namespace LibraryManager.Template
         public string TenTacGia;
         public string TheLoai;
         public int SoLuong;
+        public string ViTri;
 
         public bool selected = false;
         public void HighLightItem()
@@ -93,6 +94,7 @@ namespace LibraryManager.Template
                 lbInfoTenTG.Text = TenTacGia;
 
                 TheLoai = dsBus.LoadTenTheLoai(MaDauSach);
+                ViTri = dsBus.LoadViTriAvailable(MaDauSach);
 
                 lbSoLuong.Text = dsBus.LoadSL_SanCo(MaDauSach);
             }

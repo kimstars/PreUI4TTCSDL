@@ -43,13 +43,13 @@ namespace LibraryManager.GUI
 
         private void btnloginNV_Click(object sender, EventArgs e)
         {
-            frmNhanvien newform = new frmNhanvien();
+            frmNhanvien newform = new frmNhanvien("vuhatrang");
             newform.Show();
         }
 
         private void btnLoginDG_Click(object sender, EventArgs e)
         {
-            FrmDocGia newform = new FrmDocGia();
+            FrmDocGia newform = new FrmDocGia("huuhiep2");
             newform.Show();
         }
 
@@ -57,6 +57,39 @@ namespace LibraryManager.GUI
         {
             Template.FormAdmin newform = new Template.FormAdmin();
             newform.Show();
+        }
+
+        private void btnCuonSach_Click(object sender, EventArgs e)
+        {
+            CreateDB.create1000Book newform = new CreateDB.create1000Book();
+            newform.Show();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report.TKLuotMuonCreator tkcreator = new Report.TKLuotMuonCreator("NV000003");
+            tkcreator.ShowReportHoaDon();
+        }
+
+        private void btnRPPhieumuon_Click(object sender, EventArgs e)
+        {
+
+            Report.PhieuMuonCreator tkcreator = new Report.PhieuMuonCreator("MT000009","NV000005");
+
+            tkcreator.ShowReportHoaDon();
+        }
+
+        private void btnTrigger_Click(object sender, EventArgs e)
+        {
+            Template.testLogin newform = new Template.testLogin();
+            newform.Show();
+        }
+
+        private void btnRP_BBVP_Click(object sender, EventArgs e)
+        {
+            Report.BBViphamCreator tkcreator = new Report.BBViphamCreator("VP000004");
+
+            tkcreator.ShowReportHoaDon();
         }
     }
 }

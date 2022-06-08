@@ -53,16 +53,38 @@ namespace LibraryManager.BUS
         }
 
 
-        #region Docgia muon 
+        #region Insert Muon
 
-        public void DocGiaMuon(PhieuMuonTra pm, List<string> dsMaSach)
+        public void InsertMuon(PhieuMuonTra pm, List<string> dsMaSach,bool isNV)
         {
-            pmDao.InsertPhieuMuonTra(pm, dsMaSach);
+            pmDao.InsertPhieuMuonTra(pm, dsMaSach, isNV);
         }
 
         #endregion
 
+        #region update ds phieu muon tra
 
+        public void Update_DaXuLy(string MaMuonTra,string MaNhanVien)
+        {
+            pmDao.Update_DaXL_PM(MaMuonTra, MaNhanVien);
+        }
+
+
+        #endregion
+
+        #region inphieumuon
+
+        public DataTable LoadTTPhieuMuon(string MaMuonTra)
+        {
+            return pmDao.GetTTPM(MaMuonTra);
+        }
+
+        public DataTable LoadMaNV_MaDG_PM(string MaMT)
+        {
+            return pmDao.LoadNVDG_MT(MaMT);
+        }
+
+        #endregion
 
     }
 }

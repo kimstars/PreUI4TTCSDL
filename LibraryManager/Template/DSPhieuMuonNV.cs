@@ -18,8 +18,15 @@ namespace LibraryManager.Template
         {
             InitializeComponent();
         }
+        string MaNhanVien;
+        public DSPhieuMuonNV(string manv)
+        {
+            MaNhanVien = manv;
+            InitializeComponent();
+        }
 
         private string MaPhieuMuonCurrent = "";
+        private string MaDocGiaMuonCurrent = "";
 
 
         PhieuMuon_BUS pmBus = new PhieuMuon_BUS();
@@ -76,19 +83,26 @@ namespace LibraryManager.Template
 
         }
 
+        int rowICurrent = 0;
         private void dgvDSPhieumuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string MaPhieuMuon = dgvDSPhieumuon.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
-            string MaDocGia  = dgvDSPhieumuon.Rows[e.RowIndex].Cells["MaDocGia"].Value.ToString().Trim();
-            if (MaPhieuMuon.Contains("MT"))
+            if (e.RowIndex >= 0)
             {
-                DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
-                dgvDSDausach.DataSource = temp;
-                MaPhieuMuonCurrent = MaPhieuMuon;
-                TinhTienCoc(temp);
+                string MaPhieuMuon = dgvDSPhieumuon.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
+                string MaDocGia = dgvDSPhieumuon.Rows[e.RowIndex].Cells["MaDocGia"].Value.ToString().Trim();
+                if (MaPhieuMuon.Contains("MT"))
+                {
+                    DataTable temp = pmBus.Load_Thongtinsachmuon(MaPhieuMuon);
+                    dgvDSDausach.DataSource = temp;
+                    MaPhieuMuonCurrent = MaPhieuMuon;
+
+                    TinhTienCoc(temp);
+                }
+                MaDocGiaMuonCurrent = MaDocGia;
+                LoadDetailUser(MaDocGia);
+                rowICurrent = e.RowIndex;
             }
-            LoadDetailUser(MaDocGia);
-            
+
         }
 
         private void btnFilterDate_Click(object sender, EventArgs e)
@@ -102,7 +116,8 @@ namespace LibraryManager.Template
 
         private void btnXemInfoDG_Click(object sender, EventArgs e)
         {
-
+            GUI.ThongTinDocGia newform = new GUI.ThongTinDocGia(MaDocGiaMuonCurrent);
+            newform.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -110,7 +125,7 @@ namespace LibraryManager.Template
             string keyword = txtSearch.Text;
             if (keyword != "")
             {
-            
+
                 dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon(keyword);
 
 
@@ -119,6 +134,30 @@ namespace LibraryManager.Template
             {
                 dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon();
             }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            bool daxuly = dgvDSPhieumuon.Rows[rowICurrent].Cells["DaXuLy"].Value.ToString() == "true";
+            if (!daxuly)
+            {
+
+                pmBus.Update_DaXuLy(MaPhieuMuonCurrent, MaNhanVien);
+                dgvDSPhieumuon.DataSource = pmBus.LoadDSPhieumuon();
+                if (MaNhanVien != "")
+                {
+                    Report.PhieuMuonCreator pmCreator = new Report.PhieuMuonCreator(MaPhieuMuonCurrent, MaNhanVien);
+                    pmCreator.ShowReportHoaDon();
+                }
+                MessageBox.Show("Đã xử lý thành công. Lấy sách và giao cho độc giả.");
+
+            }
+            else
+            {
+                MessageBox.Show("Phiếu mượn đã được xử lý");
+
+            }
+
         }
     }
 }

@@ -15,5 +15,8 @@ namespace LibraryManager.DTO
         public System.DateTime NgayMuon { get; set; }
         public System.DateTime HanTra { get; set; }
 
+        public string TienCoc { get; set; }
+
+
     }
 }

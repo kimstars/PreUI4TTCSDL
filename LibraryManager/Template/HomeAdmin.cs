@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryManager.BUS;
 
 namespace LibraryManager.Template
 {
     public partial class HomeAdmin : UserControl
     {
+        Home_BUS homeAdmin = new Home_BUS();
         public HomeAdmin()
         {
             InitializeComponent();
@@ -24,6 +26,35 @@ namespace LibraryManager.Template
 
         private void HomeAdmin_Load(object sender, EventArgs e)
         {
+            long ts = homeAdmin.GetTongSach();
+            int ts1 = Convert.ToInt32(ts);
+            lbTongSach.Text = ts1.ToString();
+            long dg = homeAdmin.GetTongDG();
+            int dg1 = Convert.ToInt32(dg);
+            lbTongDG.Text = dg1.ToString();
+            long ds = homeAdmin.GetTongDS();
+            int ds1 = Convert.ToInt32(ds);
+            lbTongDS.Text = ds1.ToString();
+
+            DataTable sldg = homeAdmin.LoadSLDG();
+            for (int i = 0; i < sldg.Rows.Count; i++)
+            {
+                
+                chartDG.Series["DocGia"].Points.AddXY(sldg.Rows[i]["NAM"].ToString(), sldg.Rows[i]["SL"]);
+            }
+
+            long sc = homeAdmin.GetSachCo();
+            int sc1 = Convert.ToInt32(sc);
+
+            long sm = homeAdmin.GetSachMuon();
+            int sm1 = Convert.ToInt32(sm);
+            int p = (int)(sc1 * 100 / (sc1 + sm1));
+            circleProcessPercent.ValueByTransition = p;
+
+            lbP_muon.Text += " : " + sm1.ToString();
+            lbP_sanco.Text += " : " + sc1.ToString();
+
+
 
         }
 

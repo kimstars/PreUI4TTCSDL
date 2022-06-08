@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LibraryManager.BUS;
 
 namespace LibraryManager
 {
@@ -20,11 +20,19 @@ namespace LibraryManager
             InitializeComponent();
         }
 
-        
-        private void btnLogin_Click(object sender, EventArgs e)
+        NhanVien_BUS nvBus = new NhanVien_BUS();
+        public frmNhanvien(string user)
         {
+            InitializeComponent();
+
+            MaNhanVien = nvBus.loadMaNV_user(user);
+            UserName = user;
+
 
         }
+
+        string MaNhanVien;
+        string UserName;
 
         bool sidebarExpand = true; // menubar
         bool QLSachExpand = true;
@@ -58,7 +66,7 @@ namespace LibraryManager
                 }
             }
         }
-        private void opencloseBarNgang(ref Panel thisPanel,ref bool thisExpand, ref Timer thisTick)
+        private void opencloseBarNgang(ref Panel thisPanel, ref bool thisExpand, ref Timer thisTick)
         {
             if (thisExpand) // thu vao
             {
@@ -69,7 +77,7 @@ namespace LibraryManager
                     thisExpand = false;
                     thisTick.Stop();
                 }
-               
+
 
                 foreach (var btn in thisPanel.Controls.OfType<Guna2Button>())
                 {
@@ -89,7 +97,7 @@ namespace LibraryManager
                     thisTick.Stop();
 
                 }
-                
+
                 foreach (Guna2Button btn in thisPanel.Controls.OfType<Guna2Button>())
                 {
                     btn.Text = btn.Tag.ToString();
@@ -198,12 +206,18 @@ namespace LibraryManager
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
             CloseDoc();
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.HomeNV());
 
+
+            lbUsername.Text = UserName;
+            imgAvatar.Image = nvBus.LoadAnh(MaNhanVien);
 
         }
 
         private void imgThuVienMTA_Click(object sender, EventArgs e)
         {
+            CloseDoc();
             sidebarTickTime.Start();
         }
 
@@ -211,6 +225,118 @@ namespace LibraryManager
         {
             panelShow.Controls.Clear();
             panelShow.Controls.Add(new Template.HomeNV());
+        }
+
+
+        void TimKiem_MuonSach()
+        {
+            panelShow.Controls.Clear();
+            Template.TimKiem4NV usertimkiem = new Template.TimKiem4NV();
+
+            usertimkiem.OnClick += (ss, ee) =>
+            {
+                panelShow.Controls.Clear();
+                List<string> dsds = Template.TimKiem4NV.dsMuon;
+                panelShow.Controls.Add(new Template.PhieuMuon(dsds, MaNhanVien));
+
+            };
+
+
+            panelShow.Controls.Add(usertimkiem);
+        }
+        private void btnM_Muon_Click(object sender, EventArgs e)
+        {
+            TimKiem_MuonSach();
+        }
+
+        private void btnM_search_Click(object sender, EventArgs e)
+        {
+            TimKiem_MuonSach();
+        }
+
+        private void btnM_ChangeInfo_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.InfoNV(MaNhanVien));
+        }
+
+        private void btnM_SConlai_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachCoSan());
+        }
+
+        private void btnM_Nhapsach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemCuonSach());
+        }
+
+        private void btnM_DSDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThongTinDG());
+        }
+
+        private void btnM_DSDausach_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.FrmThemDauSach());
+        }
+
+        private void btnM_Tra_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.Xu_ly_tra(MaNhanVien));
+        }
+
+        private void btnM_dsSDamuon_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.tk_sachmuon_nv());
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSPhieuMuonNV(MaNhanVien));
+        }
+
+        private void btnM_ThongKe_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.ThongKeNV(MaNhanVien));
+        }
+
+        private void btnM_LapBBvp_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.frmLapBBVP(MaNhanVien));
+        }
+
+        private void btnM_DangkyDG_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.ThemDocgia());
+
+        }
+
+        private void btnM_Suadausach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnM_SVipham_Click(object sender, EventArgs e)
+        {
+
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.DSSachVP());
+        }
+
+        private void btnQLNhap_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(new Template.QLNhap());
         }
     }
 }

@@ -21,7 +21,10 @@ namespace LibraryManager.BUS
         {
             return nvDao.loadNhanVien();
         }
-
+        public string loadMaNV_user(string TenDangNhap)
+        {
+            return nvDao.loadMa_TenDangNhap(TenDangNhap);
+        }
         public void Xoa(string mNV)
         {
             nvDao.Delete(mNV);
@@ -33,13 +36,10 @@ namespace LibraryManager.BUS
             nvDao.Update(nv);
             return true;
         }
-        public int Them(NhanVien nv)
+        public bool Them(NhanVien nv)
         {
-            if (string.IsNullOrEmpty(nv.MaNhanVien))
-                return 0;
-            if (!nvDao.Insert(nv))
-                return -1;
-            return 1;
+            return nvDao.Insert(nv);
+        
         }
         public DataTable TimKiem(string _timkiem)
         {
@@ -50,9 +50,17 @@ namespace LibraryManager.BUS
         // Xử lý load ảnh lên pictureBox;
         public Image LoadAnh(string maID)
         {
-            byte[] img = LoadImageFromTableDB("NhanVien", maID, "MaNhanVien");
+            Image defaultImg = LibraryManager.Properties.Resources.icons8_user_50px_1;
 
-            return Image.FromStream(new MemoryStream(img));
+            byte[] img = LoadImageFromTableDB("NhanVien", maID, "MaNhanVien");
+            if(img.Length > 0)
+            {
+                return Image.FromStream(new MemoryStream(img));
+            }
+            else
+            {
+                return defaultImg;
+            }
              
         }
 
@@ -72,12 +80,42 @@ namespace LibraryManager.BUS
 
         #region load ThongtinNV
 
+
+      
         public DataTable LoadThongTinNV(string MaNV)
         {
             return nvDao.GetThongTinNV(MaNV);
         }
+        public string GetName(string maNV)
+        {
+            return nvDao.GetTenNV(maNV);
+        }
+
+        #endregion
+        public void LuuAnh(string maID, string imgPath)
+        {
+            SaveImage("NhanVien", maID, "MaNhanVien", imgPath);
+        }
 
 
+        #region AutoCreate
+        public string GetLastest_MaNhanVien()
+        {
+            return nvDao.GetLastest_MaNhanVien();
+        }
+
+        public string CreateNext_MaMT() // tạo mã phiếu mượn tự động 
+        {
+            string current = GetLastest_MaNhanVien();
+
+            string inc = System.Text.RegularExpressions.Regex.Match(current, @"\d+\.*\d*").Value;
+            string index = (int.Parse(inc) + 1).ToString();
+
+            string maMuon = "NV000000";
+            maMuon = maMuon.Substring(0, maMuon.Length - index.Length) + index;
+
+            return maMuon;
+        }
         #endregion
     }
 

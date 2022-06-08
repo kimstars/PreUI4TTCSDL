@@ -76,8 +76,8 @@ namespace LibraryManager.CreateDB
 
             if (cbNhieuSach.Checked)
             {
-
                 msBus.ThemTTMT(TTMuonTra);
+
             }
             else
             {
@@ -85,8 +85,14 @@ namespace LibraryManager.CreateDB
                 cbNhieuSach.Checked = true;
                 dateMuon.Value = randDate.Next();
                 AutoTaoMa();
-                RandomCombobox(ref cbMaDG);
-                RandomCombobox(ref cbNV);
+
+                DataTable temp = new DataTable();
+                temp = sachBus.LoadMaSach();
+                cbMaSach.DataSource = temp;
+                cbMaSach.DisplayMember = temp.Columns[0].ToString();
+
+
+                
 
             }
 
@@ -130,12 +136,18 @@ namespace LibraryManager.CreateDB
             }
             comboBox.SelectedIndex = newSelectedIndex;
         }
+
         private void cbNhieuSach_CheckedChanged(object sender, EventArgs e)
         {
             AutoTaoMa();
             if (cbNhieuSach.Checked)
             {
                 txtMaMT.Text = Current_Mamuon;
+            }
+            else
+            {
+                RandomCombobox(ref cbMaDG);
+                RandomCombobox(ref cbNV);
             }
         }
 
